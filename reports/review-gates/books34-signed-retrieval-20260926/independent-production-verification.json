@@ -1,0 +1,3515 @@
+{
+  "revision": "books34-signed-retrieval-20260926",
+  "source_files": [
+    "edities/books34-v3/books/book-3/chapters/3.2/3.2.3 manuscript.md",
+    "edities/books34-v3/books/book-3/chapters/3.3/3.3.3 manuscript.md",
+    "edities/books34-v3/books/book-3/chapters/3.1/Antwoorden.md",
+    "edities/books34-v3/books/book-3/chapters/3.2/Antwoorden.md",
+    "edities/books34-v3/books/book-3/chapters/3.3/Antwoorden.md",
+    "edities/books34-v3/books/book-4/chapters/4.1/Antwoorden.md"
+  ],
+  "approved_replacements": 8,
+  "arithmetic": [
+    {
+      "exercise": "3.1 / 9",
+      "Ev": "-1/2",
+      "classification": "prijsinelastisch"
+    },
+    {
+      "exercise": "3.1 / 45",
+      "Ev": "-1/2",
+      "classification": "prijsinelastisch"
+    },
+    {
+      "exercise": "3.2 / 29",
+      "Ev": "-2/5",
+      "classification": "prijsinelastisch"
+    },
+    {
+      "exercise": "3.3 / 30",
+      "Ev": "-1/2",
+      "classification": "prijsinelastisch"
+    },
+    {
+      "exercise": "4.1 / 20b",
+      "Ev": "-3/2",
+      "classification": "prijselastisch"
+    },
+    {
+      "exercise": "4.1 / 44",
+      "Ev": "-2",
+      "classification": "prijselastisch"
+    }
+  ],
+  "target_preservation": {
+    "targets_preserved": 31,
+    "answer_pins": [
+      "3.1.1",
+      "3.1.2",
+      "3.1.3",
+      "3.1.4",
+      "3.1.5",
+      "3.1.6",
+      "3.2.1",
+      "3.2.2",
+      "3.2.3",
+      "3.2.4",
+      "3.3.1",
+      "3.3.2",
+      "3.3.3",
+      "3.3.4",
+      "4.1.1",
+      "4.1.2",
+      "4.1.3",
+      "4.1.4",
+      "4.1.5"
+    ],
+    "manuscript_pins": [
+      "3.2.3",
+      "3.3.3"
+    ]
+  },
+  "publications": [
+    {
+      "path": "books/book-3/chapters/3.1/output/Boek_3_H1_Antwoorden_v3.pdf",
+      "pages": 31,
+      "changed_pages": [
+        6,
+        27
+      ],
+      "unchanged_pixel_pages": null,
+      "navigation_preserved": true,
+      "pixel_comparison": "not_claimed_against_historical_render_environment"
+    },
+    {
+      "path": "books/book-3/chapters/3.2/output/Boek_3_H2_Antwoorden_v3.pdf",
+      "pages": 22,
+      "changed_pages": [
+        17
+      ],
+      "unchanged_pixel_pages": null,
+      "navigation_preserved": true,
+      "pixel_comparison": "not_claimed_against_historical_render_environment"
+    },
+    {
+      "path": "books/book-3/chapters/3.2/output/Boek_3_H2_Leerling_v3.pdf",
+      "pages": 34,
+      "changed_pages": [
+        26
+      ],
+      "unchanged_pixel_pages": null,
+      "navigation_preserved": true,
+      "pixel_comparison": "not_claimed_against_historical_render_environment"
+    },
+    {
+      "path": "books/book-3/chapters/3.2/output/Boek_3_H2_Leerling_v3_bookpages.pdf",
+      "pages": 34,
+      "changed_pages": [
+        26
+      ],
+      "unchanged_pixel_pages": null,
+      "navigation_preserved": true,
+      "pixel_comparison": "not_claimed_against_historical_render_environment"
+    },
+    {
+      "path": "books/book-3/chapters/3.2/paragraph-pdfs/3.2.3-leerling-v3.pdf",
+      "pages": 10,
+      "changed_pages": [
+        10
+      ],
+      "unchanged_pixel_pages": null,
+      "navigation_preserved": true,
+      "pixel_comparison": "not_claimed_against_historical_render_environment"
+    },
+    {
+      "path": "books/book-3/chapters/3.3/output/Boek_3_H3_Antwoorden_v3.pdf",
+      "pages": 17,
+      "changed_pages": [
+        13
+      ],
+      "unchanged_pixel_pages": null,
+      "navigation_preserved": true,
+      "pixel_comparison": "not_claimed_against_historical_render_environment"
+    },
+    {
+      "path": "books/book-3/chapters/3.3/output/Boek_3_H3_Leerling_v3.pdf",
+      "pages": 38,
+      "changed_pages": [
+        30
+      ],
+      "unchanged_pixel_pages": null,
+      "navigation_preserved": true,
+      "pixel_comparison": "not_claimed_against_historical_render_environment"
+    },
+    {
+      "path": "books/book-3/chapters/3.3/output/Boek_3_H3_Leerling_v3_bookpages.pdf",
+      "pages": 38,
+      "changed_pages": [
+        30
+      ],
+      "unchanged_pixel_pages": null,
+      "navigation_preserved": true,
+      "pixel_comparison": "not_claimed_against_historical_render_environment"
+    },
+    {
+      "path": "books/book-3/chapters/3.3/paragraph-pdfs/3.3.3-leerling-v3.pdf",
+      "pages": 10,
+      "changed_pages": [
+        10
+      ],
+      "unchanged_pixel_pages": null,
+      "navigation_preserved": true,
+      "pixel_comparison": "not_claimed_against_historical_render_environment"
+    },
+    {
+      "path": "books/book-3/output/Boek_3_Compleet_Antwoorden_v3.pdf",
+      "pages": 74,
+      "changed_pages": [
+        8,
+        29,
+        51,
+        69
+      ],
+      "unchanged_pixel_pages": null,
+      "navigation_preserved": true,
+      "pixel_comparison": "not_claimed_against_historical_render_environment"
+    },
+    {
+      "path": "books/book-3/output/Boek_3_Compleet_v3.pdf",
+      "pages": 132,
+      "changed_pages": [
+        78,
+        116
+      ],
+      "unchanged_pixel_pages": null,
+      "navigation_preserved": true,
+      "pixel_comparison": "not_claimed_against_historical_render_environment"
+    },
+    {
+      "path": "books/book-4/chapters/4.1/output/Boek_4_H1_Antwoorden_v3.pdf",
+      "pages": 26,
+      "changed_pages": [
+        9,
+        23
+      ],
+      "unchanged_pixel_pages": null,
+      "navigation_preserved": true,
+      "pixel_comparison": "not_claimed_against_historical_render_environment"
+    },
+    {
+      "path": "books/book-4/output/Boek_4_Compleet_Antwoorden_v3.pdf",
+      "pages": 68,
+      "changed_pages": [
+        11,
+        25
+      ],
+      "unchanged_pixel_pages": null,
+      "navigation_preserved": true,
+      "pixel_comparison": "not_claimed_against_historical_render_environment"
+    }
+  ],
+  "comparison_baseline": {
+    "baseline_lesson_commit": "f6518f513d1f22f82922d4a8d3d3842c369b14f7",
+    "receipt_sha256": "79f5511e55e94eddff8776b76e13448badda3d49de125ccd603ee99b5810611e",
+    "output_files": 819,
+    "sources_authenticated": 6,
+    "same_environment": true,
+    "builder_tools_match": true
+  },
+  "same_environment_comparisons": [
+    {
+      "path": "books/book-3/chapters/3.1/output/Boek_3_H1_Antwoorden_v3.pdf",
+      "pages": 31,
+      "changed_pages": [
+        6,
+        27
+      ],
+      "unchanged_pixel_pages": 29,
+      "navigation_preserved": true,
+      "pixel_comparison": "same-environment baseline"
+    },
+    {
+      "path": "books/book-3/chapters/3.2/output/Boek_3_H2_Antwoorden_v3.pdf",
+      "pages": 22,
+      "changed_pages": [
+        17
+      ],
+      "unchanged_pixel_pages": 21,
+      "navigation_preserved": true,
+      "pixel_comparison": "same-environment baseline"
+    },
+    {
+      "path": "books/book-3/chapters/3.2/output/Boek_3_H2_Leerling_v3.pdf",
+      "pages": 34,
+      "changed_pages": [
+        26
+      ],
+      "unchanged_pixel_pages": 33,
+      "navigation_preserved": true,
+      "pixel_comparison": "same-environment baseline"
+    },
+    {
+      "path": "books/book-3/chapters/3.2/output/Boek_3_H2_Leerling_v3_bookpages.pdf",
+      "pages": 34,
+      "changed_pages": [
+        26
+      ],
+      "unchanged_pixel_pages": 33,
+      "navigation_preserved": true,
+      "pixel_comparison": "same-environment baseline"
+    },
+    {
+      "path": "books/book-3/chapters/3.2/paragraph-pdfs/3.2.3-leerling-v3.pdf",
+      "pages": 10,
+      "changed_pages": [
+        10
+      ],
+      "unchanged_pixel_pages": 9,
+      "navigation_preserved": true,
+      "pixel_comparison": "same-environment baseline"
+    },
+    {
+      "path": "books/book-3/chapters/3.3/output/Boek_3_H3_Antwoorden_v3.pdf",
+      "pages": 17,
+      "changed_pages": [
+        13
+      ],
+      "unchanged_pixel_pages": 16,
+      "navigation_preserved": true,
+      "pixel_comparison": "same-environment baseline"
+    },
+    {
+      "path": "books/book-3/chapters/3.3/output/Boek_3_H3_Leerling_v3.pdf",
+      "pages": 38,
+      "changed_pages": [
+        30
+      ],
+      "unchanged_pixel_pages": 37,
+      "navigation_preserved": true,
+      "pixel_comparison": "same-environment baseline"
+    },
+    {
+      "path": "books/book-3/chapters/3.3/output/Boek_3_H3_Leerling_v3_bookpages.pdf",
+      "pages": 38,
+      "changed_pages": [
+        30
+      ],
+      "unchanged_pixel_pages": 37,
+      "navigation_preserved": true,
+      "pixel_comparison": "same-environment baseline"
+    },
+    {
+      "path": "books/book-3/chapters/3.3/paragraph-pdfs/3.3.3-leerling-v3.pdf",
+      "pages": 10,
+      "changed_pages": [
+        10
+      ],
+      "unchanged_pixel_pages": 9,
+      "navigation_preserved": true,
+      "pixel_comparison": "same-environment baseline"
+    },
+    {
+      "path": "books/book-3/output/Boek_3_Compleet_Antwoorden_v3.pdf",
+      "pages": 74,
+      "changed_pages": [
+        8,
+        29,
+        51,
+        69
+      ],
+      "unchanged_pixel_pages": 70,
+      "navigation_preserved": true,
+      "pixel_comparison": "same-environment baseline"
+    },
+    {
+      "path": "books/book-3/output/Boek_3_Compleet_v3.pdf",
+      "pages": 132,
+      "changed_pages": [
+        78,
+        116
+      ],
+      "unchanged_pixel_pages": 130,
+      "navigation_preserved": true,
+      "pixel_comparison": "same-environment baseline"
+    },
+    {
+      "path": "books/book-4/chapters/4.1/output/Boek_4_H1_Antwoorden_v3.pdf",
+      "pages": 26,
+      "changed_pages": [
+        9,
+        23
+      ],
+      "unchanged_pixel_pages": 24,
+      "navigation_preserved": true,
+      "pixel_comparison": "same-environment baseline"
+    },
+    {
+      "path": "books/book-4/output/Boek_4_Compleet_Antwoorden_v3.pdf",
+      "pages": 68,
+      "changed_pages": [
+        11,
+        25
+      ],
+      "unchanged_pixel_pages": 66,
+      "navigation_preserved": true,
+      "pixel_comparison": "same-environment baseline"
+    }
+  ],
+  "paragraph_exports": [
+    {
+      "id": "3.2.3",
+      "pages": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "text_and_pixels_equal": true
+    },
+    {
+      "id": "3.3.3",
+      "pages": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "text_and_pixels_equal": true
+    }
+  ],
+  "assembly": [
+    {
+      "file": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+      "pages": 132,
+      "verified_assembled_body_pages": 120,
+      "pixel_identical_body_pages": 120,
+      "pixel_identical_after_existing_footer_transform": 0,
+      "contents_links_checked": 17
+    },
+    {
+      "file": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_Antwoorden_v3.pdf",
+      "pages": 74,
+      "verified_assembled_body_pages": 70,
+      "pixel_identical_body_pages": 31,
+      "pixel_identical_after_existing_footer_transform": 39,
+      "contents_links_checked": 3
+    },
+    {
+      "file": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_Docenteninformatie_v3.pdf",
+      "pages": 22,
+      "verified_assembled_body_pages": 20,
+      "pixel_identical_body_pages": 17,
+      "pixel_identical_after_existing_footer_transform": 3,
+      "contents_links_checked": 3
+    },
+    {
+      "file": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+      "pages": 166,
+      "verified_assembled_body_pages": 152,
+      "pixel_identical_body_pages": 152,
+      "pixel_identical_after_existing_footer_transform": 0,
+      "contents_links_checked": 20
+    },
+    {
+      "file": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_Antwoorden_v3.pdf",
+      "pages": 68,
+      "verified_assembled_body_pages": 66,
+      "pixel_identical_body_pages": 30,
+      "pixel_identical_after_existing_footer_transform": 36,
+      "contents_links_checked": 3
+    },
+    {
+      "file": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_Docenteninformatie_v3.pdf",
+      "pages": 28,
+      "verified_assembled_body_pages": 24,
+      "pixel_identical_body_pages": 21,
+      "pixel_identical_after_existing_footer_transform": 3,
+      "contents_links_checked": 3
+    }
+  ],
+  "structural": {
+    "scope": "Local author checks of current v3 edition; independent target approval and classroom measurement are not claimed.",
+    "checks": 598,
+    "failures": [],
+    "warnings": [],
+    "questions": 734,
+    "answers": 734,
+    "exercises": 276,
+    "targets": 31,
+    "chapter_counts": {
+      "3.1": {
+        "paragraphs": 6,
+        "questions": 141,
+        "answers": 141
+      },
+      "3.2": {
+        "paragraphs": 4,
+        "questions": 104,
+        "answers": 104
+      },
+      "3.3": {
+        "paragraphs": 4,
+        "questions": 108,
+        "answers": 108
+      },
+      "4.1": {
+        "paragraphs": 5,
+        "questions": 135,
+        "answers": 135
+      },
+      "4.2": {
+        "paragraphs": 7,
+        "questions": 169,
+        "answers": 169
+      },
+      "4.3": {
+        "paragraphs": 5,
+        "questions": 77,
+        "answers": 77
+      }
+    },
+    "results": [
+      {
+        "name": "31 unique populated targets",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 missing_answers",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.1 extra_answers",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.1 duplicate_questions",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.1 duplicate_answers",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.1 missing_assets",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.1 student valid PDF",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 student local HTML anchors resolve",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.1 page ceiling",
+        "pass": true,
+        "detail": [
+          48,
+          50
+        ]
+      },
+      {
+        "name": "3.1 student source endpoint text coverage",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.1 student no raw table markup",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.1 student text within page",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.1 answer valid PDF",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 answer local HTML anchors resolve",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.1 answer source endpoint text coverage",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.1 answer no raw table markup",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.1 answer text within page",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.1 teacher valid PDF",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 teacher local HTML anchors resolve",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.1 teacher source endpoint text coverage",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.1 teacher no raw table markup",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.1 teacher text within page",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.1.1 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.1 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.1 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.1 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.1 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.2 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.2 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.2 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.2 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.2 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.3 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.3 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.3 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.3 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.3 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.4 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.4 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.4 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.4 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.4 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.5 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.5 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.5 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.5 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.5 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.6 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.6 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.6 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.6 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.6 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1.6 facing target pages",
+        "pass": true,
+        "detail": [
+          46,
+          47
+        ]
+      },
+      {
+        "name": "3.2 missing_answers",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.2 extra_answers",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.2 duplicate_questions",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.2 duplicate_answers",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.2 missing_assets",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.2 student valid PDF",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 student local HTML anchors resolve",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.2 page ceiling",
+        "pass": true,
+        "detail": [
+          34,
+          40
+        ]
+      },
+      {
+        "name": "3.2 student source endpoint text coverage",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.2 student no raw table markup",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.2 student text within page",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.2 answer valid PDF",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 answer local HTML anchors resolve",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.2 answer source endpoint text coverage",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.2 answer no raw table markup",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.2 answer text within page",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.2 teacher valid PDF",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 teacher local HTML anchors resolve",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.2 teacher source endpoint text coverage",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.2 teacher no raw table markup",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.2 teacher text within page",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.2.1 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2.1 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2.1 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2.1 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2.1 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2.2 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2.2 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2.2 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2.2 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2.2 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2.3 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2.3 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2.3 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2.3 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2.3 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2.4 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2.4 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2.4 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2.4 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2.4 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2.4 facing target pages",
+        "pass": true,
+        "detail": [
+          30,
+          31
+        ]
+      },
+      {
+        "name": "3.3 missing_answers",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.3 extra_answers",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.3 duplicate_questions",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.3 duplicate_answers",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.3 missing_assets",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.3 student valid PDF",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 student local HTML anchors resolve",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.3 page ceiling",
+        "pass": true,
+        "detail": [
+          38,
+          40
+        ]
+      },
+      {
+        "name": "3.3 student source endpoint text coverage",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.3 student no raw table markup",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.3 student text within page",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.3 answer valid PDF",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 answer local HTML anchors resolve",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.3 answer source endpoint text coverage",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.3 answer no raw table markup",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.3 answer text within page",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.3 teacher valid PDF",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 teacher local HTML anchors resolve",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.3 teacher source endpoint text coverage",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.3 teacher no raw table markup",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.3 teacher text within page",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "3.3.1 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3.1 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3.1 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3.1 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3.1 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3.2 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3.2 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3.2 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3.2 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3.2 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3.3 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3.3 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3.3 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3.3 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3.3 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3.4 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3.4 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3.4 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3.4 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3.4 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3.4 facing target pages",
+        "pass": true,
+        "detail": [
+          34,
+          35
+        ]
+      },
+      {
+        "name": "4.1 missing_answers",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.1 extra_answers",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.1 duplicate_questions",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.1 duplicate_answers",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.1 missing_assets",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.1 student valid PDF",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 student local HTML anchors resolve",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.1 page ceiling",
+        "pass": true,
+        "detail": [
+          48,
+          50
+        ]
+      },
+      {
+        "name": "4.1 student source endpoint text coverage",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.1 student no raw table markup",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.1 student text within page",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.1 answer valid PDF",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 answer local HTML anchors resolve",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.1 answer source endpoint text coverage",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.1 answer no raw table markup",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.1 answer text within page",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.1 teacher valid PDF",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 teacher local HTML anchors resolve",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.1 teacher source endpoint text coverage",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.1 teacher no raw table markup",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.1 teacher text within page",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.1.1 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1.1 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1.1 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1.1 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1.1 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1.2 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1.2 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1.2 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1.2 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1.2 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1.3 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1.3 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1.3 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1.3 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1.3 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1.4 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1.4 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1.4 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1.4 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1.4 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1.5 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1.5 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1.5 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1.5 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1.5 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1.5 facing target pages",
+        "pass": true,
+        "detail": [
+          44,
+          45
+        ]
+      },
+      {
+        "name": "4.2 missing_answers",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.2 extra_answers",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.2 duplicate_questions",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.2 duplicate_answers",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.2 missing_assets",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.2 student valid PDF",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 student local HTML anchors resolve",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.2 page ceiling",
+        "pass": true,
+        "detail": [
+          60,
+          60
+        ]
+      },
+      {
+        "name": "4.2 student source endpoint text coverage",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.2 student no raw table markup",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.2 student text within page",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.2 answer valid PDF",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 answer local HTML anchors resolve",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.2 answer source endpoint text coverage",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.2 answer no raw table markup",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.2 answer text within page",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.2 teacher valid PDF",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 teacher local HTML anchors resolve",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.2 teacher source endpoint text coverage",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.2 teacher no raw table markup",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.2 teacher text within page",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.2.1 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.1 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.1 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.1 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.1 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.2 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.2 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.2 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.2 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.2 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.3 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.3 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.3 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.3 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.3 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.4 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.4 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.4 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.4 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.4 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.5 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.5 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.5 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.5 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.5 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.6 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.6 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.6 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.6 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.6 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.7 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.7 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.7 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.7 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.7 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2.7 facing target pages",
+        "pass": true,
+        "detail": [
+          56,
+          57
+        ]
+      },
+      {
+        "name": "4.3 missing_answers",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.3 extra_answers",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.3 duplicate_questions",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.3 duplicate_answers",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.3 missing_assets",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.3 student valid PDF",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 student local HTML anchors resolve",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.3 page ceiling",
+        "pass": true,
+        "detail": [
+          44,
+          50
+        ]
+      },
+      {
+        "name": "4.3 student source endpoint text coverage",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.3 student no raw table markup",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.3 student text within page",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.3 answer valid PDF",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 answer local HTML anchors resolve",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.3 answer source endpoint text coverage",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.3 answer no raw table markup",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.3 answer text within page",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.3 teacher valid PDF",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 teacher local HTML anchors resolve",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.3 teacher source endpoint text coverage",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.3 teacher no raw table markup",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.3 teacher text within page",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "4.3.1 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3.1 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3.1 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3.1 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3.1 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3.2 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3.2 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3.2 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3.2 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3.2 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3.3 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3.3 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3.3 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3.3 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3.3 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3.4 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3.4 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3.4 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3.4 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3.4 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3.5 target number",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3.5 question membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3.5 manuscript hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3.5 answers hash",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3.5 no fabricated final status",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3.5 facing target pages",
+        "pass": true,
+        "detail": [
+          40,
+          41
+        ]
+      },
+      {
+        "name": "31 IDs agree with records",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Book3 14 / Book4 17",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Book 3 student count",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Book 3 no duplicate contents link rectangles",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Book 3 paragraph bookmarks",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 opens recto",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 1",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 2",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 3",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 4",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 5",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 6",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 7",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 8",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 9",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 10",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 11",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 12",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 13",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 14",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 15",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 16",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 17",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 18",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 19",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 20",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 21",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 22",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 23",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 24",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 25",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 26",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 27",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 28",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 29",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 30",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 31",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 32",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 33",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 34",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 35",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 36",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 37",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 38",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 39",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 40",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 41",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 42",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 43",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 44",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 45",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 46",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 47",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.1 continuous footer 48",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 opens recto",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 1",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 2",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 3",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 4",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 5",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 6",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 7",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 8",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 9",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 10",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 11",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 12",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 13",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 14",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 15",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 16",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 17",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 18",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 19",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 20",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 21",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 22",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 23",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 24",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 25",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 26",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 27",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 28",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 29",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 30",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 31",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 32",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 33",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.2 continuous footer 34",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 opens recto",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 1",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 2",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 3",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 4",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 5",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 6",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 7",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 8",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 9",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 10",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 11",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 12",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 13",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 14",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 15",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 16",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 17",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 18",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 19",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 20",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 21",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 22",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 23",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 24",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 25",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 26",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 27",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 28",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 29",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 30",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 31",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 32",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 33",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 34",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 35",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 36",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 37",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "3.3 continuous footer 38",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Book 3 valid internal link destinations",
+        "pass": true,
+        "detail": 19
+      },
+      {
+        "name": "Book 3 even page count",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Book 4 student count",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Book 4 no duplicate contents link rectangles",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Book 4 paragraph bookmarks",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 opens recto",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 1",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 2",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 3",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 4",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 5",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 6",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 7",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 8",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 9",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 10",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 11",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 12",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 13",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 14",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 15",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 16",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 17",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 18",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 19",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 20",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 21",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 22",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 23",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 24",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 25",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 26",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 27",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 28",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 29",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 30",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 31",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 32",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 33",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 34",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 35",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 36",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 37",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 38",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 39",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 40",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 41",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 42",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 43",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 44",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 45",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 46",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 47",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.1 continuous footer 48",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 opens recto",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 1",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 2",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 3",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 4",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 5",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 6",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 7",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 8",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 9",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 10",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 11",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 12",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 13",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 14",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 15",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 16",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 17",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 18",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 19",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 20",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 21",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 22",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 23",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 24",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 25",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 26",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 27",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 28",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 29",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 30",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 31",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 32",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 33",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 34",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 35",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 36",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 37",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 38",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 39",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 40",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 41",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 42",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 43",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 44",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 45",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 46",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 47",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 48",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 49",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 50",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 51",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 52",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 53",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 54",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 55",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 56",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 57",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 58",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 59",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.2 continuous footer 60",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 opens recto",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 1",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 2",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 3",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 4",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 5",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 6",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 7",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 8",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 9",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 10",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 11",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 12",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 13",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 14",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 15",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 16",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 17",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 18",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 19",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 20",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 21",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 22",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 23",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 24",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 25",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 26",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 27",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 28",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 29",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 30",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 31",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 32",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 33",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 34",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 35",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 36",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 37",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 38",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 39",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 40",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 41",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 42",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 43",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "4.3 continuous footer 44",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Book 4 valid internal link destinations",
+        "pass": true,
+        "detail": 22
+      },
+      {
+        "name": "Book 4 even page count",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Book3 no old three-moment capstone",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "No active labour agreement target",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Labour answer contents describes current 41 exercises",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "New derivatives target has no optimisation request",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Old labour institutional source preserved",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "No font binaries distributed",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Boek_3_Compleet_Antwoorden_v3 no raw emphasis/heading markup",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "Boek_3_Compleet_Antwoorden_v3 all text within physical page",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "Boek_3_Compleet_Docenteninformatie_v3 no raw emphasis/heading markup",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "Boek_3_Compleet_Docenteninformatie_v3 all text within physical page",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "Boek_3_Compleet_v3 no raw emphasis/heading markup",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "Boek_3_Compleet_v3 all text within physical page",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "Boek_4_Compleet_Antwoorden_v3 no raw emphasis/heading markup",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "Boek_4_Compleet_Antwoorden_v3 all text within physical page",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "Boek_4_Compleet_Docenteninformatie_v3 no raw emphasis/heading markup",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "Boek_4_Compleet_Docenteninformatie_v3 all text within physical page",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "Boek_4_Compleet_v3 no raw emphasis/heading markup",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "Boek_4_Compleet_v3 all text within physical page",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "Existing timing conflicts remain explicit",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Theory timing includes guided practice without a false55 certificate",
+        "pass": true,
+        "detail": null
+      }
+    ]
+  },
+  "NAV1": "unchanged, separately open",
+  "TIMING34": "unchanged, separately open",
+  "target_approval": "not_conferred"
+}

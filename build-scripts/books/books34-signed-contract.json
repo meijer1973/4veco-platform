@@ -1,0 +1,301 @@
+{
+  "platform_main": "d88aa106d48ec9a7950a6c7eef6be3ead28c44ff",
+  "lessons_main": "f6518f513d1f22f82922d4a8d3d3842c369b14f7",
+  "source_edits": [
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.3 manuscript.md",
+      "question": "29b",
+      "line": 119,
+      "old": "Is de vraag prijsinelastisch of prijselastisch? Gebruik de absolute waarde.",
+      "new": "Is de vraag prijsinelastisch of prijselastisch? Vergelijk Ev met −1 en 0.",
+      "url": "https://github.com/meijer1973/4veco-lessen/blob/f6518f513d1f22f82922d4a8d3d3842c369b14f7/edities/books34-v3/books/book-3/chapters/3.2/3.2.3%20manuscript.md#L119"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/3.3.3 manuscript.md",
+      "question": "30b",
+      "line": 117,
+      "old": "Is de vraag prijselastisch of prijsinelastisch? Gebruik de absolute waarde van Ev.",
+      "new": "Is de vraag prijselastisch of prijsinelastisch? Vergelijk Ev met −1 en 0.",
+      "url": "https://github.com/meijer1973/4veco-lessen/blob/f6518f513d1f22f82922d4a8d3d3842c369b14f7/edities/books34-v3/books/book-3/chapters/3.3/3.3.3%20manuscript.md#L117"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/Antwoorden.md",
+      "question": "9b",
+      "line": 65,
+      "old": "|Ev| = 0,5 &lt; 1: <b>prijsinelastisch</b>.",
+      "new": "−1 &lt; Ev &lt; 0: <b>prijsinelastisch</b>.",
+      "url": "https://github.com/meijer1973/4veco-lessen/blob/f6518f513d1f22f82922d4a8d3d3842c369b14f7/edities/books34-v3/books/book-3/chapters/3.1/Antwoorden.md#L65"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/Antwoorden.md",
+      "question": "45a, Waarom",
+      "line": 211,
+      "old": "Gebruik het minteken voor de richting en |Ev| voor de sterkte.",
+      "new": "Ev ligt tussen −1 en 0: de hoeveelheid verandert procentueel minder sterk dan de prijs.",
+      "url": "https://github.com/meijer1973/4veco-lessen/blob/f6518f513d1f22f82922d4a8d3d3842c369b14f7/edities/books34-v3/books/book-3/chapters/3.1/Antwoorden.md#L211"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/Antwoorden.md",
+      "question": "29b",
+      "line": 70,
+      "old": "|Ev| = 0,4 &lt; 1, dus de vraag is <b>prijsinelastisch</b>.",
+      "new": "−1 &lt; Ev &lt; 0, dus de vraag is <b>prijsinelastisch</b>.",
+      "url": "https://github.com/meijer1973/4veco-lessen/blob/f6518f513d1f22f82922d4a8d3d3842c369b14f7/edities/books34-v3/books/book-3/chapters/3.2/Antwoorden.md#L70"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/Antwoorden.md",
+      "question": "30b",
+      "line": 66,
+      "old": "|Ev| = 0,5 &lt; 1, dus <b>prijsinelastisch</b>.",
+      "new": "−1 &lt; Ev &lt; 0, dus <b>prijsinelastisch</b>.",
+      "url": "https://github.com/meijer1973/4veco-lessen/blob/f6518f513d1f22f82922d4a8d3d3842c369b14f7/edities/books34-v3/books/book-3/chapters/3.3/Antwoorden.md#L66"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/Antwoorden.md",
+      "question": "20b",
+      "line": 54,
+      "old": "De absolute waarde is 1,5 > 1, dus de vraag is <b>prijselastisch</b>.",
+      "new": "Ev &lt; −1, dus de vraag is <b>prijselastisch</b>.",
+      "url": "https://github.com/meijer1973/4veco-lessen/blob/f6518f513d1f22f82922d4a8d3d3842c369b14f7/edities/books34-v3/books/book-4/chapters/4.1/Antwoorden.md#L54"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/Antwoorden.md",
+      "question": "44a",
+      "line": 169,
+      "old": "|Ev| > 1: de vraag is prijselastisch.",
+      "new": "Ev &lt; −1: de vraag is prijselastisch.",
+      "url": "https://github.com/meijer1973/4veco-lessen/blob/f6518f513d1f22f82922d4a8d3d3842c369b14f7/edities/books34-v3/books/book-4/chapters/4.1/Antwoorden.md#L169"
+    }
+  ],
+  "source_bindings": [
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.3 manuscript.md",
+      "baseline_git_blob": "fc267698158e41270af1691c00bbe5f0bc5f87d7",
+      "baseline_sha256": "b6a7f077dabc309e8db3a98089eb8c57cee6e3ab216a44c70812f0f9f55f22fb",
+      "proposed_sha256": "d46652e4ed48a368246ed70a0f1df0206752d95775e52c6de25df0088167fbd2"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/3.3.3 manuscript.md",
+      "baseline_git_blob": "9e85b0171ef7605aecf6666241cd9bbfa70c1280",
+      "baseline_sha256": "3e0e2a3c92b2ff117c037abb579e36b396d08259de7f7718f0e23397577e5afc",
+      "proposed_sha256": "c2d21ba523488ab555fd9880718d4d986886a93fe938cabafd48c6865488a284"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/Antwoorden.md",
+      "baseline_git_blob": "41caec7397b3969960d8c9db74cf5ab8b097ab83",
+      "baseline_sha256": "6d639e4d56806829462acd76da214f1d3075ec064b024d46a4fe0601cff292dc",
+      "proposed_sha256": "5c22520f978587c47a041723b24d144ed3ec18da3636090b58572a141ac2b288"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/Antwoorden.md",
+      "baseline_git_blob": "67b32be502c9099ca145c3b34b82b7fa6f88edb2",
+      "baseline_sha256": "04f876a77f6bc7d27dfe714052e0c2cfea36441c15d5485b64d3b18f76cf3106",
+      "proposed_sha256": "547b40cd0fdc0c55070185fea163a276daa4e03164fe11d94361c74776b4e51f"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/Antwoorden.md",
+      "baseline_git_blob": "55ca2f6c38b5fefed758f045d3b53491075ee07d",
+      "baseline_sha256": "4dd84fe5767895aaf273bc27e64bd8281305835ca621a0e00be34b3f6942228b",
+      "proposed_sha256": "aec2cc01f5ea47e8ba00df0eb9740701d8c355176044d0796346b6ca31e33c70"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/Antwoorden.md",
+      "baseline_git_blob": "3d3af7d90e22baee5b63f58b0a55e1e6ab738c63",
+      "baseline_sha256": "01a9294bd3ce947ceb5460d588cd3f7ffee5b9f0be3e4334558fde44096f8da1",
+      "proposed_sha256": "4048fa122764663e445145463d63bf4b9b2367b1aa8e34f0e62d1cf5486e394f"
+    }
+  ],
+  "numerical_checks": [
+    {
+      "exercise": "3.1 / 9",
+      "price_percent": "20",
+      "quantity_percent": "-10",
+      "elasticity_exact": "-1/2",
+      "elasticity_decimal": "-0.5",
+      "classification": "prijsinelastisch"
+    },
+    {
+      "exercise": "3.1 / 45",
+      "price_percent": "25",
+      "quantity_percent": "-25/2",
+      "elasticity_exact": "-1/2",
+      "elasticity_decimal": "-0.5",
+      "classification": "prijsinelastisch"
+    },
+    {
+      "exercise": "3.2 / 29",
+      "price_percent": "25",
+      "quantity_percent": "-10",
+      "elasticity_exact": "-2/5",
+      "elasticity_decimal": "-0.4",
+      "classification": "prijsinelastisch"
+    },
+    {
+      "exercise": "3.3 / 30",
+      "price_percent": "20",
+      "quantity_percent": "-10",
+      "elasticity_exact": "-1/2",
+      "elasticity_decimal": "-0.5",
+      "classification": "prijsinelastisch"
+    },
+    {
+      "exercise": "4.1 / 20b",
+      "price_percent": "10",
+      "quantity_percent": "-15",
+      "elasticity_exact": "-3/2",
+      "elasticity_decimal": "-1.5",
+      "classification": "prijselastisch"
+    },
+    {
+      "exercise": "4.1 / 44",
+      "price_percent": "-10",
+      "quantity_percent": "20",
+      "elasticity_exact": "-2",
+      "elasticity_decimal": "-2.0",
+      "classification": "prijselastisch"
+    }
+  ],
+  "content_dependent_publication_derivatives_29": [
+    {
+      "path": "books/book-3/chapters/3.1/output/Boek_3_H1_Antwoorden_v3.html",
+      "current_git_blob": "6f4cf2b26a225867ad77700b0b8ed77ae0d15236"
+    },
+    {
+      "path": "books/book-3/chapters/3.1/output/Boek_3_H1_Antwoorden_v3.pdf",
+      "current_git_blob": "3ffde2e2841916a1e757a945a0998cc182cf78ad"
+    },
+    {
+      "path": "books/book-3/chapters/3.1/output/Boek_3_H1_Antwoorden_v3_page_map.json",
+      "current_git_blob": "b7de501540cfce419f54ca0568bdf10463e96744"
+    },
+    {
+      "path": "books/book-3/chapters/3.2/output/Boek_3_H2_Leerling_v3.html",
+      "current_git_blob": "537855528b63af2425218aa958d44481899151ad"
+    },
+    {
+      "path": "books/book-3/chapters/3.2/output/Boek_3_H2_Leerling_v3.pdf",
+      "current_git_blob": "e9ead1877fd4699aafd81c7ea4995b2903f21247"
+    },
+    {
+      "path": "books/book-3/chapters/3.2/output/Boek_3_H2_Leerling_v3_page_map.json",
+      "current_git_blob": "ad5ba3d64580d9f6297b0701d4fb2bf381ed1727"
+    },
+    {
+      "path": "books/book-3/chapters/3.2/output/Boek_3_H2_Leerling_v3_bookpages.html",
+      "current_git_blob": "0a777869b96506d7aae25b9617a5ff50126ea7cd"
+    },
+    {
+      "path": "books/book-3/chapters/3.2/output/Boek_3_H2_Leerling_v3_bookpages.pdf",
+      "current_git_blob": "4fe894c1417955c5ce553a9f2da39531e1d1b8cd"
+    },
+    {
+      "path": "books/book-3/chapters/3.2/output/Boek_3_H2_Leerling_v3_bookpages_page_map.json",
+      "current_git_blob": "ad5ba3d64580d9f6297b0701d4fb2bf381ed1727"
+    },
+    {
+      "path": "books/book-3/chapters/3.2/output/Boek_3_H2_Antwoorden_v3.html",
+      "current_git_blob": "9701df7772a479e0489effd16aac2c29203ce7b6"
+    },
+    {
+      "path": "books/book-3/chapters/3.2/output/Boek_3_H2_Antwoorden_v3.pdf",
+      "current_git_blob": "3499717b22d81cae7e0455c68dc5780354f36f06"
+    },
+    {
+      "path": "books/book-3/chapters/3.2/output/Boek_3_H2_Antwoorden_v3_page_map.json",
+      "current_git_blob": "5d179a6ee57c6277f4e8b9bc25722b941fe09def"
+    },
+    {
+      "path": "books/book-3/chapters/3.3/output/Boek_3_H3_Leerling_v3.html",
+      "current_git_blob": "ef73e6167fdae938ccd42e5debe33bd22b51a348"
+    },
+    {
+      "path": "books/book-3/chapters/3.3/output/Boek_3_H3_Leerling_v3.pdf",
+      "current_git_blob": "c5d1a5ff3496cbf9bdb4a51377c3025de7e002c9"
+    },
+    {
+      "path": "books/book-3/chapters/3.3/output/Boek_3_H3_Leerling_v3_page_map.json",
+      "current_git_blob": "e96ac19fb7713ff54ea7222d38d2a0a8aaf3da05"
+    },
+    {
+      "path": "books/book-3/chapters/3.3/output/Boek_3_H3_Leerling_v3_bookpages.html",
+      "current_git_blob": "5e36abb7443681bb392367fb26c1f10fbadbd937"
+    },
+    {
+      "path": "books/book-3/chapters/3.3/output/Boek_3_H3_Leerling_v3_bookpages.pdf",
+      "current_git_blob": "ca406c98a2b40aac45c90fa224a4013912ceb7e9"
+    },
+    {
+      "path": "books/book-3/chapters/3.3/output/Boek_3_H3_Leerling_v3_bookpages_page_map.json",
+      "current_git_blob": "e96ac19fb7713ff54ea7222d38d2a0a8aaf3da05"
+    },
+    {
+      "path": "books/book-3/chapters/3.3/output/Boek_3_H3_Antwoorden_v3.html",
+      "current_git_blob": "06b8ec453c3a3c351ae0a924cf1fc53270fe2e37"
+    },
+    {
+      "path": "books/book-3/chapters/3.3/output/Boek_3_H3_Antwoorden_v3.pdf",
+      "current_git_blob": "4a3ec2c3e01c7e67e3ddeed87c0974fbf6e51952"
+    },
+    {
+      "path": "books/book-3/chapters/3.3/output/Boek_3_H3_Antwoorden_v3_page_map.json",
+      "current_git_blob": "67b5a0a8aa776c2861c1b97f7df13aaed515df49"
+    },
+    {
+      "path": "books/book-4/chapters/4.1/output/Boek_4_H1_Antwoorden_v3.html",
+      "current_git_blob": "fe7458a8c2459c6dd1a15485ca92d3cfaf5aa1d3"
+    },
+    {
+      "path": "books/book-4/chapters/4.1/output/Boek_4_H1_Antwoorden_v3.pdf",
+      "current_git_blob": "862197efda17742050ad2c6d81a656579203c26c"
+    },
+    {
+      "path": "books/book-4/chapters/4.1/output/Boek_4_H1_Antwoorden_v3_page_map.json",
+      "current_git_blob": "75f20c3d61268e3de6e58fa240e024eb832e1762"
+    },
+    {
+      "path": "books/book-3/chapters/3.2/paragraph-pdfs/3.2.3-leerling-v3.pdf",
+      "current_git_blob": "48510fe02358bcd12d5507256068d46a6b84b2f3"
+    },
+    {
+      "path": "books/book-3/chapters/3.3/paragraph-pdfs/3.3.3-leerling-v3.pdf",
+      "current_git_blob": "5c4067f3a4ed2342fee7c59b663127f9c0b1d2c9"
+    },
+    {
+      "path": "books/book-3/output/Boek_3_Compleet_v3.pdf",
+      "current_git_blob": "da135eb4ebf40ff5259f8e82c818dd41821dc2f8"
+    },
+    {
+      "path": "books/book-3/output/Boek_3_Compleet_Antwoorden_v3.pdf",
+      "current_git_blob": "ba8fd7a5439f823b8fad44b160958f9c056efedb"
+    },
+    {
+      "path": "books/book-4/output/Boek_4_Compleet_Antwoorden_v3.pdf",
+      "current_git_blob": "86eea0cefedc3a8e5af5fe7e6431ca392e226115"
+    }
+  ],
+  "global_pagination_map_to_recompute": [
+    "curriculum/book-page-map-v3.json"
+  ],
+  "source_pin_records_to_refresh_20": [
+    "curriculum/targets/3.1.1.json",
+    "curriculum/targets/3.1.2.json",
+    "curriculum/targets/3.1.3.json",
+    "curriculum/targets/3.1.4.json",
+    "curriculum/targets/3.1.5.json",
+    "curriculum/targets/3.1.6.json",
+    "curriculum/targets/3.2.1.json",
+    "curriculum/targets/3.2.2.json",
+    "curriculum/targets/3.2.3.json",
+    "curriculum/targets/3.2.4.json",
+    "curriculum/targets/3.3.1.json",
+    "curriculum/targets/3.3.2.json",
+    "curriculum/targets/3.3.3.json",
+    "curriculum/targets/3.3.4.json",
+    "curriculum/targets/4.1.1.json",
+    "curriculum/targets/4.1.2.json",
+    "curriculum/targets/4.1.3.json",
+    "curriculum/targets/4.1.4.json",
+    "curriculum/targets/4.1.5.json",
+    "curriculum/course-target-exercises-books34-v3.json"
+  ]
+}

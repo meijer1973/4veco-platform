@@ -94,7 +94,9 @@ function verify(options = {}) {
       if (!signed && (file.startsWith(m.SNAPSHOT + '/') ? !actual.equals(expected) : m.text(actual) !== m.text(expected))) failures.push('Unexpected migration/amendment output ' + file);
     }
     for (const record of registry.exercises.filter(r => r.module >= 3)) consumeTarget(record, {platformRoot: root});
-    revision = fs.existsSync(path.join(lessons, 'book2-signed-revision.json'))
+    revision = fs.existsSync(path.join(lessons, 'books34-signed-revision.json'))
+      ? require('../books/books34-signed-revision').verify({...options, root, lessons})
+      : fs.existsSync(path.join(lessons, 'book2-signed-revision.json'))
       ? require('../books/book2-signed-revision').verify({...options, root, lessons})
       : require('../books/exercise-route-revision').verify({...options, root, lessons});
     failures.push(...revision.failures);
