@@ -22,6 +22,7 @@ const BOOK2_CHAT_ASSEMBLY_FILES = new Set([
 // The separate revision gate checks actual bytes, closure and the platform pin.
 const EXERCISE_ROUTE_FILES = new Set(require('../books/exercise-route-revision-pin.json').revision_paths.map(p => p.toLowerCase()));
 const BOOK2_SIGNED_FILES = new Set(require('../books/book2-signed-revision-pin.json').revision_paths.map(p => p.toLowerCase()));
+const BOOKS34_SIGNED_FILES = new Set(require('../books/books34-signed-revision-pin.json').revision_paths.map(p => p.toLowerCase()));
 const CATEGORY_LABELS = {
   partA_textbook: 'Part A textbook',
   partB_companion: 'Part B companion',
@@ -180,7 +181,7 @@ function isPartBCompanionPath(filePath) {
 
 function isPartATextbookPath(filePath) {
   const p = normalizedLower(filePath);
-  if (EXERCISE_ROUTE_FILES.has(p) || BOOK2_SIGNED_FILES.has(p)) return true;
+  if (EXERCISE_ROUTE_FILES.has(p) || BOOK2_SIGNED_FILES.has(p) || BOOKS34_SIGNED_FILES.has(p)) return true;
   if (p.startsWith(BOOK2_CHAT_ASSEMBLY)
     && BOOK2_CHAT_ASSEMBLY_FILES.has(p.slice(BOOK2_CHAT_ASSEMBLY.length))) return true;
   const base = basenameLower(filePath).replace(/\u2013/g, '-');

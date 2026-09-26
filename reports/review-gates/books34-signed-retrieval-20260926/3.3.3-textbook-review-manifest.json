@@ -1,0 +1,1123 @@
+{
+  "schema_version": "edition-paragraph-review-v1",
+  "paragraph": "3.3.3",
+  "revision": "books34-signed-retrieval-20260926",
+  "scope": "Bounded signed retrieval revision; not a native paragraph-records.js closure or target approval",
+  "baseline_lesson_commit": "f6518f513d1f22f82922d4a8d3d3842c369b14f7",
+  "edition_manifest_sha256": "bf3d9c7cc804438037f31af618b85bfe4e67e14c74cef264bdd0e1ec8fab18df",
+  "hash_contract": "Lesson edition files: exact bytes; platform inputs: UTF-8 with LF",
+  "platform_inputs": [
+    {
+      "path": "build-scripts/books/books34-signed-contract.json",
+      "sha256_lf": "72f35a475389dfc0abafa7f1f8c4b737fb7ab75d6ba335617eb71624e324c9b6"
+    },
+    {
+      "path": "build-scripts/books/books34-signed-revision.js",
+      "sha256_lf": "c03db5cfb3a0ccd5a7e9bf5d728ffd23010fad2c7deaa1e2018dd148b3dd098d"
+    },
+    {
+      "path": "build-scripts/books/record_books34_signed_revision.js",
+      "sha256_lf": "0b87ce0cd683a9dfae4b19a33f3abb39d6317bc815bd7001af0418bccb171d03"
+    },
+    {
+      "path": "build-scripts/books/books34_signed_common.py",
+      "sha256_lf": "0b3da7cd13ef6b5e20a656b05cecc6dda2623e14a38b4b8419fb89c2baf847dd"
+    },
+    {
+      "path": "build-scripts/books/rebuild_books34_signed.py",
+      "sha256_lf": "244892ff5ca2ea0ab613245ed9e5a9f0d98a98ad83749fb61e7edd7eb57c3476"
+    },
+    {
+      "path": "build-scripts/books/verify_books34_signed.py",
+      "sha256_lf": "1de83b027f09f8ab91379d7a4adfe7421360b7cf7923515c62d9ce4a0aa901f2"
+    },
+    {
+      "path": "build-scripts/books/books34_assemble.py",
+      "sha256_lf": "9eb194599519ad88496738e422a4933fe9be239082d58ac47f57242192856556"
+    },
+    {
+      "path": "build-scripts/books/books34_records.py",
+      "sha256_lf": "023bfaf1ee2c8df9af6aca1cec2df7393f49bfb5255de67e7eee095767aa8ff2"
+    },
+    {
+      "path": "build-scripts/books/books34_verify.py",
+      "sha256_lf": "8aa00a621a76f0cef9f09a4d6d67d50b03135a752be59f21e89afd0ed7ac034e"
+    },
+    {
+      "path": "build-scripts/books/verify_exercise_routes.py",
+      "sha256_lf": "b22f528e88229b8220eb318ca4d514389a4243071fca18e51d3c088aa4e942b3"
+    },
+    {
+      "path": "build-scripts/books/requirements-exercise-routes.txt",
+      "sha256_lf": "e3be02c414ddf3088fc0521c3a62300ae52c55eddf6699036ce58313cb146500"
+    },
+    {
+      "path": "build-scripts/maintenance/check-books34-v3-import.js",
+      "sha256_lf": "d861c55e21d1e40d6af126d5dc81a19f11c898146d19550f06db184c70eb1dc8"
+    }
+  ],
+  "files": [
+    {
+      "path": "edities/books34-v3/SIGNED-RETRIEVAL-2026-09-26.md",
+      "bytes": 3026,
+      "sha256": "daf1a972fe07321d1a8bd80606885fd3bab53dd065ef429b768bfc80df062d46",
+      "baseline_git_blob": null
+    },
+    {
+      "path": "edities/books34-v3/SOURCE_OWNERSHIP.md",
+      "bytes": 4015,
+      "sha256": "e0a667e28f664a82f6503ba24589d888919220a15d6da866841c8ac6e0fcc1b6",
+      "baseline_git_blob": "8346707f066cd8815965a379f572d002d9e12d37"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/back.md",
+      "bytes": 10393,
+      "sha256": "4d6612460a7078a52551aee641f129636beaca46fff54846c80ee0c5c9beaf7b",
+      "baseline_git_blob": "ce65b92edd6ad8c42cc96ad5d6830274c27346b1"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/front.md",
+      "bytes": 5135,
+      "sha256": "dd1b1133f523fd4b8cfdfd9ca1fc13d4342e28a48a2efbd457abe2f0f4653114",
+      "baseline_git_blob": "f52483c90a05a40beac167b1277a81cf78715d80"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/glossary.json",
+      "bytes": 6429,
+      "sha256": "a94c46a97ffabb5783c10c25b945409730765127cc9bb04f639a587191f0894a",
+      "baseline_git_blob": "b9ac72603446aa54b9366c5f0d2dacd92d65dbfe"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/output/back.html",
+      "bytes": 16051,
+      "sha256": "43551ec8b5451066e8ca926f110ef9a14ff63f9c2505d8ff12f177f4e7d9f529",
+      "baseline_git_blob": "c99b7258acf1408a911f3af6c8a026efd74fff0f"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/output/back.pdf",
+      "bytes": 40572,
+      "sha256": "ee666059c6c31cc8be3d874ec0229c77a22e5713fe0a0163b5ae5a7f9377730a",
+      "baseline_git_blob": "e1ef30acfcb9142646e04db9d99d862245607d94"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/output/back_page_map.json",
+      "bytes": 761,
+      "sha256": "2554143d8512a2b475af6834c19163a97e75c0b3e69c1e50d16c769472948355",
+      "baseline_git_blob": "2fe4c3eb0ae91ff887b1463a27112b65dbb96dd0"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/output/front-answer.html",
+      "bytes": 7997,
+      "sha256": "0c5955a43c27caacfa44551ba29b2f64dc9ccef239dc374ecbade8a7fa81675c",
+      "baseline_git_blob": "d35c38f10b11764104121c9871572cb2c7d01aa1"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/output/front-answer.pdf",
+      "bytes": 20440,
+      "sha256": "97d5ab876c823dbc43b9977e4f2ef44ccaeb04b01f6bb0b497a9ec23371eed7f",
+      "baseline_git_blob": "c308d1053f1a53cb97ccd439936b4e65ce82f177"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/output/front-answer_page_map.json",
+      "bytes": 212,
+      "sha256": "630097e1cfd887fd5885f154f3ac38531bd21589b8dce1fedf9629fb62e13f39",
+      "baseline_git_blob": "c0e9b4e5d8eac5d2c1185979212d2046f57d9635"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/output/front-teacher.html",
+      "bytes": 8349,
+      "sha256": "08c41dba46b989a538165159185cba35eeabcf5604c7971066dcfdf5bce8b6f3",
+      "baseline_git_blob": "ac4e7e7f97e1a2b7434cb72a4b81f4eb0a2d65f9"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/output/front-teacher.pdf",
+      "bytes": 21359,
+      "sha256": "efa1e178fca2c46fce23347db640192325abb6187a9a7ebe81ed589cc9d578d4",
+      "baseline_git_blob": "62ac12d3cf1a92f3d87cb1fa2abce64bd7c5381f"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/output/front-teacher_page_map.json",
+      "bytes": 212,
+      "sha256": "630097e1cfd887fd5885f154f3ac38531bd21589b8dce1fedf9629fb62e13f39",
+      "baseline_git_blob": "c0e9b4e5d8eac5d2c1185979212d2046f57d9635"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/output/front.html",
+      "bytes": 10857,
+      "sha256": "c997a0cfceabad9a9114192731c99280f41e00500c61697c40fb5d4472d7c863",
+      "baseline_git_blob": "3ae47800c8caf37ab5731860965eb24f23960d53"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/output/front.pdf",
+      "bytes": 29715,
+      "sha256": "b2d73fbb8df58d9b8f581d1a7e01154072d48ea6a128b436afc65732074b37e3",
+      "baseline_git_blob": "a665ad0d1efe6953ebe6d0e9a686c9053d765871"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/output/front_page_map.json",
+      "bytes": 324,
+      "sha256": "1b2826e6d5245e9558636f8b4789211ee5b18b3959f84440a520f4c6b3ecfe32",
+      "baseline_git_blob": "2a0eec399c6079284d101406717e167f6bfeefa8"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/print.css",
+      "bytes": 5325,
+      "sha256": "e4ade1bb8d5c7dcfefcaf07304b823a3d2d33b0ad99bdb11f990b89b8fdac042",
+      "baseline_git_blob": "0c0278aa2ecf8da62fab9d3a0ccde217d914a241"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/00 Inleiding.md",
+      "bytes": 2277,
+      "sha256": "fe930548853052711596d596d628791a856ef31f18d34a9bc14b1b515e15b9d6",
+      "baseline_git_blob": "2eea6a8127a196c823b7ede6a6fbb4b4a425ea3a"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/05 Overzicht.md",
+      "bytes": 1875,
+      "sha256": "e3ebc7cd23289f0375ec5a81427a372592aab7f9c98423b7f606dc85508004ac",
+      "baseline_git_blob": "2f2ae2111acf0ae818b4895007fe6b706ba330b5"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/3.3.1 manuscript.md",
+      "bytes": 18477,
+      "sha256": "2f8b17f7624ecf6605d8f65a7076aacc95b39f2dabf3a1b4185d421247414a74",
+      "baseline_git_blob": "780cdce963c3b5aca810411a5e3282b7c5dfec70"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/3.3.2 manuscript.md",
+      "bytes": 17857,
+      "sha256": "4098130b9a226b3007e5d2642f32ce47d0aa1667e1589a151fd8380a3efe043e",
+      "baseline_git_blob": "e61af35baa31e388c313f0a79beb086f1d6c4da5"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/3.3.3 manuscript.md",
+      "bytes": 19861,
+      "sha256": "c2d21ba523488ab555fd9880718d4d986886a93fe938cabafd48c6865488a284",
+      "baseline_git_blob": "9e85b0171ef7605aecf6666241cd9bbfa70c1280"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/3.3.4 manuscript.md",
+      "bytes": 14335,
+      "sha256": "35868a050f130381e4dc600fbe4bd399eca23ab6e96d83c72662df9225126faf",
+      "baseline_git_blob": "49be6eefb2abfb266bf2e78ae8d0b1cc0391b431"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/Antwoorden.md",
+      "bytes": 39748,
+      "sha256": "aec2cc01f5ea47e8ba00df0eb9740701d8c355176044d0796346b6ca31e33c70",
+      "baseline_git_blob": "55ca2f6c38b5fefed758f045d3b53491075ee07d"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/Docenteninformatie.md",
+      "bytes": 11720,
+      "sha256": "e59c10b487846d6db293a1d572e9d823e6941f1e7b4d9f10ef60d0f15961ef36",
+      "baseline_git_blob": "c65fee82c041dfa28098a6719ea49e963a3ca1ee"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.1_fig_1.png",
+      "bytes": 33539,
+      "sha256": "c76305f2c5d002b7469a469aa35b27711d2df396d759b5c98d8ac60046bfb6d4",
+      "baseline_git_blob": "5f62ca3e4a1a58224b39ab1078685c5af437bcc8"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.1_fig_1.svg",
+      "bytes": 2503,
+      "sha256": "4f89fb7ebc11e7e5d1c5d37ad17bb068e68e3a68d1b33421975419f575f2a14b",
+      "baseline_git_blob": "5cb89210974ef998cff7ac9707d174b35d1d5f67"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.1_fig_2.png",
+      "bytes": 60242,
+      "sha256": "16425737fa8eab517cae082fb889f4eedadfe8f0d1cc14675cb6297db27f498b",
+      "baseline_git_blob": "8ff712ce967ba950005f98baa9a1dd013d39536c"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.1_fig_2.svg",
+      "bytes": 2356,
+      "sha256": "b2e62eaf9e3b34f7d53268fb63d9757780ba1f7a6d790656d21b9d14baffbe7a",
+      "baseline_git_blob": "9115af03452500c9e50b3410bc6d02d2bab93a75"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.1_fig_3.png",
+      "bytes": 44516,
+      "sha256": "c942377a66e398eb255ff5beb7c2630e6322981836b5a8736e072dbcaa4f6648",
+      "baseline_git_blob": "a35c52a4d9bc6a52f8c18b99394a6c91b17d3905"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.1_fig_3.svg",
+      "bytes": 2716,
+      "sha256": "7e118909d21695757932b1a827f2a14e46609ff33807742a1efb4b4f9a0b01a6",
+      "baseline_git_blob": "5c5b5094e5946abfd36b893e84a14317c62877cc"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.1_fig_4.png",
+      "bytes": 37838,
+      "sha256": "a67fbafe07fe1d7c016333ab45f54ddaa5d1378e74bb84d0f2fbf08d78f89b29",
+      "baseline_git_blob": "e6c142c0407a3e9c84130c74648179ab7e486371"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.1_fig_4.svg",
+      "bytes": 2489,
+      "sha256": "65df2b9f5b6966677bf940f6e5ebdcef43823ec54ab0217156a98c1a04a12df4",
+      "baseline_git_blob": "7f8b4005d1638ec243d2eb3740b75bcea440a0d8"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_ans_14.png",
+      "bytes": 86075,
+      "sha256": "3ab88d6eae5684b9f0055537d8ef5e4c190c0e7a2ae59216b6aa229e1e251908",
+      "baseline_git_blob": "997da8a8a67c2488132e9f93acf34437788b3a6b"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_ans_14.svg",
+      "bytes": 8474,
+      "sha256": "cd0bfab6b25503c6963cc1a455b1e3cc9783c021e11cc3d12d82efae831f653c",
+      "baseline_git_blob": "53a6f877ff661b0fa9a24d0c97b68ed779ba2bc5"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_ans_17.png",
+      "bytes": 97160,
+      "sha256": "0cd843be397d4b3db52ec64a4caa41541e6ea13c92c2a41ec9de314a99187e61",
+      "baseline_git_blob": "c3e4c5a43c121034efc3a8a5576cbaf5ca68c390"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_ans_17.svg",
+      "bytes": 9596,
+      "sha256": "52b827b7d59f9fd182e28922aabdbfbfd134862dbc9e1adf5be5dd9600c12312",
+      "baseline_git_blob": "e713a530eb7527ca224b1b0cbf5dd829f5853fa4"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_ex_1.png",
+      "bytes": 91701,
+      "sha256": "4faee11b36f4ef6cc75cb75d2de7dcccf92af693b26f7ab51a6739ee9cfa8c76",
+      "baseline_git_blob": "8273a032b0e35dc9d4540c8afa405f2f7fcd398d"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_ex_1.svg",
+      "bytes": 6638,
+      "sha256": "832dc2a5ca4ddeeaf35e85383ff201db0b7704f3fb83f081353891b3f0491c6d",
+      "baseline_git_blob": "3d031fb6c0047538cb5270b5a6c71ab8b076da57"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_fig_1.png",
+      "bytes": 46590,
+      "sha256": "bf44e41f12091635c4afd3e03e79823d13bf6b887c73603c1f5d3d22875b410c",
+      "baseline_git_blob": "85cbd043b43cc8f294cc0d0a84fe7d029f32a254"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_fig_1.svg",
+      "bytes": 1979,
+      "sha256": "12a20bf9f3b85b415f9b2d0a48dd79aa49747afe22b6bd4ded14aed68e586185",
+      "baseline_git_blob": "04cbb31b59fb1cca437e09c926ddfbd9d0e60b57"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_fig_2.png",
+      "bytes": 110939,
+      "sha256": "ab80dd98235ed9ebf5cff23760dcd1b9ab11cffab2dbd16fcdff4c9f7ce21f5e",
+      "baseline_git_blob": "ee626a5645e7ca8d80b08ae59431a5454e1fd119"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_fig_2.svg",
+      "bytes": 8471,
+      "sha256": "5083ffc9b65d73a523fe8a4c5c4534a436e49c82184ca0665729bc378a7d3e64",
+      "baseline_git_blob": "f9cc5ed19dc1bb3bc7e743ef54efbf55d6037353"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_fig_3.png",
+      "bytes": 112226,
+      "sha256": "cb97c2a48cdad52e136fed73b9fab740b17725ac9b8983e0cafeaa0ba69109d2",
+      "baseline_git_blob": "3aad7992b56b179515a66f795707412a692fe17c"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_fig_3.svg",
+      "bytes": 8471,
+      "sha256": "4175bdbd312343cff0bfea4613dbf71009d7f0f09a5e5d14d7bd030a2125c992",
+      "baseline_git_blob": "13d320cc2ace2ea890df28c3e5aa79d3c71a5dc1"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_fig_4.png",
+      "bytes": 111694,
+      "sha256": "b50002a873535d2416a15b0db42f8ca94dcefdbd7ea702ebfe969961fbc0ed95",
+      "baseline_git_blob": "0fe7756a2bf1b9c5c1712e4dd679257bb299a345"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_fig_4.svg",
+      "bytes": 13723,
+      "sha256": "b906ca7cc2862e664dca66c53d578a2e9c9d7425b7bd104107902c0fc609d0e9",
+      "baseline_git_blob": "4044b32391e38b11258d8233dd160bdaa75f6ed6"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_target.png",
+      "bytes": 78580,
+      "sha256": "a9ad182da93eb741796e8c606428d3f183be87d271f105d41d3fa2cf35cb0094",
+      "baseline_git_blob": "51c2733b0c343ec083ab99c123a4dbbcf6fb689a"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_target.svg",
+      "bytes": 7737,
+      "sha256": "ac4553729d371b901d2a1fbd87c1c756fa8282fc63ae1f9ff6578fcea52844b0",
+      "baseline_git_blob": "cbd925420c17d4b947592bbac1664762816b6d96"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_we_1.png",
+      "bytes": 87695,
+      "sha256": "7227cd020d879aac7a753ccc3bc4262a14afefc0ea0da12ec9d73cdcc67ce515",
+      "baseline_git_blob": "c702c977efefaf9922aaf1420142e74a741e3adc"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_we_1.svg",
+      "bytes": 9011,
+      "sha256": "6e975e9307d45858476e9d60ba426c62a265ce0ad0fa466dec91289e98075799",
+      "baseline_git_blob": "15631df42aa679ff733e6d53fb6a8422724246cc"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_ans_25.png",
+      "bytes": 100787,
+      "sha256": "dcd7fb859118363ebcbd7c21f25574f511eae4ce1028377b8b88246d054bd5ec",
+      "baseline_git_blob": "205f742a400d007c6917ffa3644b5f988a08d2e4"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_ans_25.svg",
+      "bytes": 10495,
+      "sha256": "9a32cf1860807039718867633024a535ef9d7f90d8516d180fdc639136b50ca1",
+      "baseline_git_blob": "66a9c331dd22174a5fc665fba9e4fa57bdb57626"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_ans_27.png",
+      "bytes": 106170,
+      "sha256": "8f145d0f74af89c126c7f93e02dc8d751965fe471c45a864593972d6da80f54f",
+      "baseline_git_blob": "8cc3601149a2ef6e23c416cfa3c71824e524773d"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_ans_27.svg",
+      "bytes": 9936,
+      "sha256": "17e654b323db912721d95067466a736478efc879d7a36e479b28974bdd4aca7d",
+      "baseline_git_blob": "8d3a07b5495779f9293b78e8e6b592026dc140dc"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_ex_1.png",
+      "bytes": 75385,
+      "sha256": "b58f9250a2365ad7ec90f074f26afdc496448e8328a6ada2963d03f65c6a2101",
+      "baseline_git_blob": "dab9b47ca5c9c574444deff048e820a60d0a31d7"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_ex_1.svg",
+      "bytes": 8612,
+      "sha256": "b52535e1fa2ae338c99b4c4fe528946a6857a0927cc70b0d00a0825df69338c9",
+      "baseline_git_blob": "5dc622fb74e6bb97755db6eb3c1ab5b9d9818495"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_fig_1.png",
+      "bytes": 34598,
+      "sha256": "ba8594f44085864a6eeb0055a1f798c124c61a053fb1da3df201c95756bbfe22",
+      "baseline_git_blob": "79b395190ba4c8a7899c9cab004eebe2198f8d22"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_fig_1.svg",
+      "bytes": 2493,
+      "sha256": "552341dad1bd9793d6ad52d89aa497d4d474e3f67bb90bf66c4a5d95e145956c",
+      "baseline_git_blob": "6b8fa257c9a0e21c73e5ff21df8c294c5f934e07"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_fig_2.png",
+      "bytes": 119681,
+      "sha256": "96fb650a0cb0fa5a27dc641d25db433561febbc3fa60bfcd2a192c3de5b5d2fa",
+      "baseline_git_blob": "fe474bb1d64f851825b996d58c9567638de89c28"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_fig_2.svg",
+      "bytes": 10471,
+      "sha256": "5cdeb395b5a6e7fe50262eefe7dbe81d3da7901df5b77c72b78f8c7d98a149b7",
+      "baseline_git_blob": "a488adcf9b99136032e96dc89338498558c28546"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_fig_3.png",
+      "bytes": 123783,
+      "sha256": "9d96d397e404d49771033979b02a358b2894030b2a4e07a4faa4a10b2b6c9f12",
+      "baseline_git_blob": "0c74abccfd084d4e4050dac3baafca023acc99fd"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_fig_3.svg",
+      "bytes": 10480,
+      "sha256": "bfd34e4acd363815a1785f40fa8ab8214bfc435e5aaee3da2bc51f5a083c17e6",
+      "baseline_git_blob": "ec1686d425efc8a5f8d47c5ed01601faf930a152"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_fig_4.png",
+      "bytes": 102342,
+      "sha256": "129fda3e6c24d5aaf2b3539c114bfd13bcef1b2a224cf621cf5c430f25a361a9",
+      "baseline_git_blob": "9cc52640f679084256dd940f461b2da5ff370e0c"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_fig_4.svg",
+      "bytes": 8104,
+      "sha256": "63f460968ea9b3291ce28306091cac81733e61073726f7d68ab0e5f34bb34cae",
+      "baseline_git_blob": "73eba70dfb841365ff2c46874a3c473c2c2d1657"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_target.png",
+      "bytes": 90245,
+      "sha256": "316cdacc6d7c9d0e4b34cf1bbfe92d1fa9f01b4c21913a2fe7ff6702e76d7379",
+      "baseline_git_blob": "09425e2fa6f170f809d505c06ac4d53c379e1981"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_target.svg",
+      "bytes": 8054,
+      "sha256": "c6cb41a2828fd421d3ec94b1a3e2626b83f886b8ce73953423539a6fcea195a6",
+      "baseline_git_blob": "ca3961aa97b1fbf41274b76f552b339cba7ed863"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.4_ans_35.png",
+      "bytes": 102254,
+      "sha256": "d71195283324f3d882476c1f153b2a571c2d8fce265f4557e472bc382979f142",
+      "baseline_git_blob": "d2b14759e065734809e1cb5801d49d3e0f3ba164"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.4_ans_35.svg",
+      "bytes": 9927,
+      "sha256": "cc2a05d54bfd7dfa630fbbffde5402030dd7cf96e7e2366ca125e490eae2bbd6",
+      "baseline_git_blob": "ea26ff6ea11752fa08b30458ccdf5daf87b07a86"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.4_fig_1.png",
+      "bytes": 33447,
+      "sha256": "38c8b2ca7c6511ebf4b6e523cfa0c503e8ddfddcc5a5db7cba6adf74618485cb",
+      "baseline_git_blob": "57ba4a721df0cc69ff46798f851151b5dcb5b9d0"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.4_fig_1.svg",
+      "bytes": 2480,
+      "sha256": "6188cb76ad2ae7d0bc45ce22e2fde2907f9c9a03e0d2edcb8865f2cad2418cfc",
+      "baseline_git_blob": "c562f8109ac221ff70368ba5108ca8342f90c16f"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.4_fig_2.png",
+      "bytes": 49073,
+      "sha256": "d3b016ca1f4d29f3fc43e45bd19e0fabf5f7d502fcd6f0283d54a773c3060123",
+      "baseline_git_blob": "50539dd8e1dc87c9df096215a4e31acc0caf85bc"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.4_fig_2.svg",
+      "bytes": 2775,
+      "sha256": "c3ff61ad70a29d632dfde0ad0b33b631b1fb84858d28c5af2ef2da76e0f1bf7b",
+      "baseline_git_blob": "363c2068be2da44895a8668a445db7f38485e815"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.4_target.png",
+      "bytes": 92323,
+      "sha256": "cec06f3e2b21ce010cd139baf50b023e3693bc929b3d4fbb230edb1ba3c42260",
+      "baseline_git_blob": "ac8da37be888af82a683be3f3b99fc586edf747d"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.4_target.svg",
+      "bytes": 8043,
+      "sha256": "01402846608a43c01a8e9aff1c049ebbc7055ab76762ec3ffe653d34517b1789",
+      "baseline_git_blob": "d34f0afc62c70b054d06174324304bd890ae7697"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3_overzicht.png",
+      "bytes": 35833,
+      "sha256": "24123f36de0673066dadccb2897ddfc7c47b2e09615f018afbfb70865bfaead9",
+      "baseline_git_blob": "a99155afaf59bad155ef56203e2d3f2936664131"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3_overzicht.svg",
+      "bytes": 2520,
+      "sha256": "c3f5c4aed89c76513df2aa8abef8c444ff2a32ace500b46e2e80790c68d49fed",
+      "baseline_git_blob": "d9b06c411af912de82c2c5356327425afe261441"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3_slot.png",
+      "bytes": 37406,
+      "sha256": "12aa89aa7a3de1e8389241b45b1b2f01f98b09d4c2297ad9b3b67c83709ddb30",
+      "baseline_git_blob": "02c0923b554158eff4091b4d27b620189df29b74"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3_slot.svg",
+      "bytes": 2517,
+      "sha256": "96f05e78187424ccea24790da51b5e69cd9d4013b9cfb17353a6de2d53f36841",
+      "baseline_git_blob": "632f90a37b8249fed16cef481261f3f81d5ae67b"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/chapter-order.json",
+      "bytes": 144,
+      "sha256": "64746bd6d894da1fc68c69bfdc634288504b1691c4fd910f3daead35703c2886",
+      "baseline_git_blob": "05a3d0c689b003db9cd5b0e6b34156363898b674"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/output/Boek_3_H3_Antwoorden_v3.html",
+      "bytes": 115152,
+      "sha256": "56beb4005fb5540c8fcea1b1264af91a54abf506317bdf08c586088002d691f8",
+      "baseline_git_blob": "06b8ec453c3a3c351ae0a924cf1fc53270fe2e37"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/output/Boek_3_H3_Antwoorden_v3.pdf",
+      "bytes": 125092,
+      "sha256": "ce66078b19d03660572a5b4d577ec0c04a2139994db2f699df2d9087ac9eb2d6",
+      "baseline_git_blob": "4a3ec2c3e01c7e67e3ddeed87c0974fbf6e51952"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/output/Boek_3_H3_Antwoorden_v3_page_map.json",
+      "bytes": 1803,
+      "sha256": "b5070f7a960b9ce889a17eb09b780b765518ffa17a6fa3defde0c8bbcbaf2d2e",
+      "baseline_git_blob": "67b5a0a8aa776c2861c1b97f7df13aaed515df49"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/output/Boek_3_H3_Docenteninformatie_v3.html",
+      "bytes": 18430,
+      "sha256": "0ba5f0a74e5cd9bdac9733363a266caef72777bdd08a0118d1954e980a89a5e3",
+      "baseline_git_blob": "5c976ea6e361e7f5f654c731b69423befb043cec"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/output/Boek_3_H3_Docenteninformatie_v3.pdf",
+      "bytes": 39321,
+      "sha256": "c6f5abbf2c9a3f1f19e1194fee19b1b56c86aa6c213bef5250d7ac9d1de29ca2",
+      "baseline_git_blob": "0e8d9ba2bbd10392dc4ad02fbffa470d05cf734f"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/output/Boek_3_H3_Docenteninformatie_v3_page_map.json",
+      "bytes": 628,
+      "sha256": "7d5516b088e660abfeb2f8c621aab3f896bfba60b4bc44169378c1e5c3215dce",
+      "baseline_git_blob": "b4daa3314a58b5063f854749e66341b662116ee0"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/output/Boek_3_H3_Leerling_v3.html",
+      "bytes": 260271,
+      "sha256": "bb8a8cc6f18e18b80267e3f90806b9cd8dda586b83d970d9f279a11b4fb1445f",
+      "baseline_git_blob": "ef73e6167fdae938ccd42e5debe33bd22b51a348"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/output/Boek_3_H3_Leerling_v3.pdf",
+      "bytes": 288151,
+      "sha256": "32947e6adf69f8d7919c2a8b67582bac9270e559b59616b062d29d3154989d66",
+      "baseline_git_blob": "c5d1a5ff3496cbf9bdb4a51377c3025de7e002c9"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/output/Boek_3_H3_Leerling_v3_bookpages.html",
+      "bytes": 260312,
+      "sha256": "2db2c5c4a0d87043fecea278bdd760f6f3c03f84e4cb7590b77c0895f9be1d4d",
+      "baseline_git_blob": "5e36abb7443681bb392367fb26c1f10fbadbd937"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/output/Boek_3_H3_Leerling_v3_bookpages.pdf",
+      "bytes": 288275,
+      "sha256": "7971c301dd77a16313e047d5d21dc632e6d9a934f03016a2d4e1630121452b1c",
+      "baseline_git_blob": "ca406c98a2b40aac45c90fa224a4013912ceb7e9"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/output/Boek_3_H3_Leerling_v3_bookpages_page_map.json",
+      "bytes": 4046,
+      "sha256": "0ef64eb7f274cff6f68a22bbf75f644299e4639e68c163e6213b94043ab3d4c1",
+      "baseline_git_blob": "e96ac19fb7713ff54ea7222d38d2a0a8aaf3da05"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/output/Boek_3_H3_Leerling_v3_page_map.json",
+      "bytes": 4046,
+      "sha256": "0ef64eb7f274cff6f68a22bbf75f644299e4639e68c163e6213b94043ab3d4c1",
+      "baseline_git_blob": "e96ac19fb7713ff54ea7222d38d2a0a8aaf3da05"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.1-leerling-v3.pdf",
+      "bytes": 178848,
+      "sha256": "c91ab3d670f802ef01b89ffb6c7a4c262c312114fe22ad05a4839fa9c0135bd0",
+      "baseline_git_blob": "234f9f25e011dd5da478850d37e1e109fea9c7e4"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.2-leerling-v3.pdf",
+      "bytes": 184466,
+      "sha256": "0ed4140d7a7109256edc1e93cf75a849777640d5a02a2c78e03ecb94f0df90d0",
+      "baseline_git_blob": "59fed01b2b2b151d58a879b616920988b49beaa6"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.3-leerling-v3.pdf",
+      "bytes": 186727,
+      "sha256": "8560c948a04842f2f01a5681ec675015f0af675ebc20a0f9b62b2c4a718164d4",
+      "baseline_git_blob": "5c4067f3a4ed2342fee7c59b663127f9c0b1d2c9"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.4-leerling-v3.pdf",
+      "bytes": 174471,
+      "sha256": "260bec9bd486695d1cb433b96d2f547f920f1fe1f70fe2e7336377a76ad78f55",
+      "baseline_git_blob": "dc0b9db9284e90504f94f023bf7a7cfbdac09ad9"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/print.css",
+      "bytes": 5162,
+      "sha256": "24def5d94efe26e4bfceb65f79ade16b54af83a04f4e8af984126e3791150ecc",
+      "baseline_git_blob": "b9a2bf81e3e46ab2e5639b8b147fcfaa9a9d0f95"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_Antwoorden_v3.pdf",
+      "bytes": 548229,
+      "sha256": "75bdb1e71749e2a981e1a3917a7e3a06e0e0dbc9b4ba398a5c6edebedf359a03",
+      "baseline_git_blob": "ba8fd7a5439f823b8fad44b160958f9c056efedb"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_Docenteninformatie_v3.pdf",
+      "bytes": 159840,
+      "sha256": "228f493f9a0d34e599a9d360b2b0f6282fa819b9d178905e7a55aa5173e78114",
+      "baseline_git_blob": "614cb853840dae6f7cab102ce9ff082185e4ee4c"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+      "bytes": 4381301,
+      "sha256": "f25147e8dca2a44f18415d38540dd75838d91345ace6852e8eae0786865b7a24",
+      "baseline_git_blob": "da135eb4ebf40ff5259f8e82c818dd41821dc2f8"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/blueprint-books34-v3.md",
+      "bytes": 36407,
+      "sha256": "f4d653a936502af9c1a8e13ad54635a9db196ce5cac255db1ec63a4414683c0e",
+      "baseline_git_blob": "965810ef40e7dbafb94de7154cf56cf7c31e7e47"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/book-page-map-v3.json",
+      "bytes": 9777,
+      "sha256": "9271962caf0281f6e0d3207bfc97777252f8803fac11999e719f9a13043af27e",
+      "baseline_git_blob": "5058ae00fdbce0d60beb06ee49aca082ef00aa1d"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/chapter-config.json",
+      "bytes": 2341,
+      "sha256": "88c709537b3bac660b7cc029440ee56b21d5650704113c9233ec0502799ce5f3",
+      "baseline_git_blob": "845b6146c1c427539efd434e710415841b2a17fe"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/course-target-exercises-books34-v3.json",
+      "bytes": 485866,
+      "sha256": "e28c1a30d36519fd8a41ab1cf52cbfeea7e4472ceb79264b6571a5e082f5bc97",
+      "baseline_git_blob": "7259bb5da2597a63ebf956d48802aea008b9e3e7"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/lesson-routes-v3.json",
+      "bytes": 69361,
+      "sha256": "485dfa761daf90c3646bf4df5daabe4bd840c7ad908c930f186608482d46a344",
+      "baseline_git_blob": "0a8b773a93a6b26664d78de4d9bbcd94c34c47b1"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/structure-v3.json",
+      "bytes": 1043,
+      "sha256": "a41d3b4e525b82b08be891c60c3c6965c6922cd6850a277531d86237e80561b3",
+      "baseline_git_blob": "050c26c9c91fb656b3bb1176399bc843d71e1ce5"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-catalog-v3.csv",
+      "bytes": 7250,
+      "sha256": "c0346e2ca91751df134e7890a487aa19900a28028869f180d180fe64a764c9dd",
+      "baseline_git_blob": "087451fc015c5f613f50af871fcdfa2e4873738b"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.1.1.md",
+      "bytes": 3160,
+      "sha256": "bd398de8ca5225b47b9f4cf375cfd9bbd81965ff24b76f168f9bf1359b58551e",
+      "baseline_git_blob": "312f4958cf1951dfd66763fd2fea4dfd8b795c5a"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.1.2.md",
+      "bytes": 3113,
+      "sha256": "0a292451f7edd9bb5b086fe2d5fa02cec79f485b8cd5ed4a0ed56d49d55e0f14",
+      "baseline_git_blob": "33a9d838e26416200365717704fa87b664d81624"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.1.3.md",
+      "bytes": 3069,
+      "sha256": "13eef39b9336f9afec6b1b58cdb1550707b91ca78aa822499fe92e550f05532a",
+      "baseline_git_blob": "544fadd42d66808cd03f79dfe1d3667a0021aea3"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.1.4.md",
+      "bytes": 3049,
+      "sha256": "c8c32bf47d112833f9b161034fa217c914cb3654482437b5700b18aa167594f7",
+      "baseline_git_blob": "945aa5f271e977592441b1bb4f7d9521681b465a"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.1.5.md",
+      "bytes": 3260,
+      "sha256": "7172d948532b2289e94a8c2a47efa1c4f290bc37017214f0c6dec573e02c57c6",
+      "baseline_git_blob": "8daa472a2f40f5212b3e33af67f9fb051da3e655"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.1.6.md",
+      "bytes": 6440,
+      "sha256": "247c77aa1bc8f4f323ab10aa50ba075d3a87a53a897d489dcc1b551090f93f09",
+      "baseline_git_blob": "0dfac6bb30ccf837ef0e254a3539a3adb48455d1"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.2.1.md",
+      "bytes": 3418,
+      "sha256": "c1ccbff1c1af8fc4857e614df492c5abf352dfaedd3ab6df652d4548cedf33fd",
+      "baseline_git_blob": "4b498481d8253d7c941b49ee1e23bd420dc836ee"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.2.2.md",
+      "bytes": 2384,
+      "sha256": "e7a78426b69c1e6863ba1b25e40d1fa54c60e303a6643e4a6385b385ddae1ee2",
+      "baseline_git_blob": "fc39b17ff0165cd17b10940ca91c4eae12f2e9c5"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.2.3.md",
+      "bytes": 3855,
+      "sha256": "60981e9fba38b67743383a6c4a219105ae0c844dd7781f69cb1ca39cee639195",
+      "baseline_git_blob": "3bf91af06577457e48b958d617ae258b515c26b5"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.2.4.md",
+      "bytes": 4853,
+      "sha256": "4daaf4f44aea1571ba826f1e77203bfee35536fc3069d3a1cfc78636a8be75d2",
+      "baseline_git_blob": "84f450a94398e25bd114ee81e29570e0b63474ae"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.3.1.md",
+      "bytes": 3928,
+      "sha256": "173f7d8daad59171c827cfa0c895a0771371257d5cf0a39ef3e4bdf68dcf4c6a",
+      "baseline_git_blob": "5e112b3414318a85f91cd207120c54431dd3841a"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.3.2.md",
+      "bytes": 3583,
+      "sha256": "bba050cfcd9c18260ea29fc397c2b48cf6c7cca567d79ea91977deff4c9dd4ab",
+      "baseline_git_blob": "b10323893d94a317ef0e88d5101705ba96c8e2b4"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.3.3.md",
+      "bytes": 3934,
+      "sha256": "b38e2f13c5ff7b78d35e4c07af0421626910536921b86a77cec28eba0b1a8863",
+      "baseline_git_blob": "98406da21afd739965d231b48c38473790cee8fa"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.3.4.md",
+      "bytes": 6109,
+      "sha256": "3b077730383a6c48cff0beca53aa86438e3b5a85ab1062f4583c527715f16dff",
+      "baseline_git_blob": "6fff985f13855ae4e087c1e596d21d6bef7d914f"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.1.1.md",
+      "bytes": 3743,
+      "sha256": "53cc50486765dd97d205657b06a6163a91c34c467c0efad4505cef34073d3c89",
+      "baseline_git_blob": "331020811b99c4edf3ebb88039b8da73c8a43871"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.1.2.md",
+      "bytes": 3537,
+      "sha256": "51af6d8c7e6407c9c3a8ed4b7f94db319143c1143d89a328718baa028bacdfae",
+      "baseline_git_blob": "75fd695139c32243a3f4d156af38e6c6303a7d50"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.1.3.md",
+      "bytes": 4194,
+      "sha256": "03e1a3a832b8b23aa4459d9d52541aa8a745fa35c5e46dfd15bbbf9c240fffb5",
+      "baseline_git_blob": "1e18ffab141f5a8aed248a0d063012dd58060b46"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.1.4.md",
+      "bytes": 4043,
+      "sha256": "ef6f222ff54915c05499a86cf03ffcdf48ec3782db29c22ab0c8d99111dc8a5d",
+      "baseline_git_blob": "18fbfee65686f64bb8039eca32d79cffa89d2b93"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.1.5.md",
+      "bytes": 5603,
+      "sha256": "afab8a8375ee8fa5dcdc668a691b7a00709f5c857f7fe6ced16f1e432d08581c",
+      "baseline_git_blob": "8a27ee82147447c8b1f7c169f0f477b8a5e08e3b"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.2.1.md",
+      "bytes": 3332,
+      "sha256": "ce1461656f55bfaca1cf098086e7fee5bc6c37f2595c6e0ebad96fd1023dc723",
+      "baseline_git_blob": "1cc2cf4d10422fb2f8d870f3a5e3db0b4f5ca8f1"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.2.2.md",
+      "bytes": 3576,
+      "sha256": "aa272fb057ff7044e001de9cec6243f1c84818b8111fe77215a28534ff63283e",
+      "baseline_git_blob": "fd004bc7ee359fe5ed979393f54204bc4282c417"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.2.3.md",
+      "bytes": 3575,
+      "sha256": "d5739ab9c596eb9834e36f3719af7a7cb329d76922f98b2e3d346cd929930613",
+      "baseline_git_blob": "e249b24b09307ca4ebb0e5e282eb0714ab5a607f"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.2.4.md",
+      "bytes": 3276,
+      "sha256": "7508ec1031dea5ad2136c90b28ea9adf1d612bd891a4dc003f2509a7a2727060",
+      "baseline_git_blob": "5799ded694b0264606d014870656cacd37d2e530"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.2.5.md",
+      "bytes": 3421,
+      "sha256": "e901ed9ea3f8682a33a7aa8bc3ddfef4bb742f5a4d518be882ed74b4169e270e",
+      "baseline_git_blob": "e7c579706ae9dafa0fb7252e1e4f3267bb8aeeef"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.2.6.md",
+      "bytes": 3347,
+      "sha256": "ebf96923b866440453e9a66ce2b885a05e24999f81d7e7a98c3973d10e5799e2",
+      "baseline_git_blob": "754ef2da9110eff6a965db5eb2b1945cddc24c57"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.2.7.md",
+      "bytes": 5322,
+      "sha256": "65cefebb9ca84228b537fa78a57d53282147e3fb34a8e1d63890c9aac71048e5",
+      "baseline_git_blob": "29393f25c7f3d82d0863167051e716346e06c8fe"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.3.1.md",
+      "bytes": 2825,
+      "sha256": "ae2a4dda3ed5fa093f3a71930143202793c2fb9c0cd8f1439135b9bcd3e90918",
+      "baseline_git_blob": "bc2c7e83e4c709cb17d1f8df3b064d281095b670"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.3.2.md",
+      "bytes": 2460,
+      "sha256": "cac237835e5e6d60123a0f2560f513ec9ac3ba81bc81ea0370d30f51342c5881",
+      "baseline_git_blob": "4ded517d9adf44543b753de37d4942d3227721e8"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.3.3.md",
+      "bytes": 2656,
+      "sha256": "002c6429494ad5eb1020814d9e082053f2712b2d9d332fd00345dedf6944e4ac",
+      "baseline_git_blob": "c515f1023b9461319ec6342c58da944c8e69c1e1"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.3.4.md",
+      "bytes": 2958,
+      "sha256": "7db308c5a71e2e0efefbed2a6c1e276b8ca0fd48ec7fa8acf006a7037234b6c0",
+      "baseline_git_blob": "7f6a0d5dc15ccc42624e015df48fad4f4704a33b"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.3.5.md",
+      "bytes": 5601,
+      "sha256": "9abb6682df4cfef41797270c4b51b6eaf25b60552c5c45f06fbf764e011c4399",
+      "baseline_git_blob": "16b0c88d4aba7b200885062a9ff4f16911269d6f"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.1.1.json",
+      "bytes": 13272,
+      "sha256": "3ce35d7a18576ca427d639cd276b07d238e217f7e1eb1e4d28e067ed1af2f61a",
+      "baseline_git_blob": "0b34a591e077bbd2034962326e8fbb0c3542def2"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.1.2.json",
+      "bytes": 12885,
+      "sha256": "a8f3ef556ed3af23030f5605ebc96fe3342af4759ffd5f053ade8b4467d944b1",
+      "baseline_git_blob": "009f459c7f6d9f5f059e81ff94675f3a8cd58e47"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.1.3.json",
+      "bytes": 12731,
+      "sha256": "01d2bb0e91b97095a85d4701bcfb682359f74fd9d1e0c36078fefbe572a4aac2",
+      "baseline_git_blob": "67fd6d9da4334bfc737e177c4701d388a01e81df"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.1.4.json",
+      "bytes": 13168,
+      "sha256": "bbf8bf4d7c751fb1b8595a5841e89b9c7bdae5beb8c115d4b704abff88910fe0",
+      "baseline_git_blob": "617dbabdd6a1a62e3d1594d12bb96b66b44cf1d6"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.1.5.json",
+      "bytes": 13316,
+      "sha256": "ed6a747b77b681a5dea7d1952c356d8e1a7782f1324340d43a13b7b98b650013",
+      "baseline_git_blob": "221e3035d9dc1438c665ef4abd8d05d69ac762c9"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.1.6.json",
+      "bytes": 21064,
+      "sha256": "c15858607f9c9aaa851162357f0d7d1e10745dd33af699c37f1abad2d0d337af",
+      "baseline_git_blob": "50a197c88c8924b52023d6e139b6b35ac05dd114"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.2.1.json",
+      "bytes": 12558,
+      "sha256": "69042d5cab8a36995d43c92475e4111633628d7b513c06890ce4c4b27b483866",
+      "baseline_git_blob": "7b286cce1670410c8270d1726469cb1569f2f89d"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.2.2.json",
+      "bytes": 12467,
+      "sha256": "26d155305c5c4f2867e78f82fcf12a16d02830d9e367d8d414f0373952d5ec5c",
+      "baseline_git_blob": "1f92e4cb9a06caa4119387f6a4e75a580d1b5665"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.2.3.json",
+      "bytes": 14333,
+      "sha256": "8d540bb024bc649deb504d06f8538acc889231270bb2046f0b82542f0ccd7b7c",
+      "baseline_git_blob": "3eb8474ab36dcf4f138edc46131a27f4345bc896"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.2.4.json",
+      "bytes": 16884,
+      "sha256": "5fe43780bd2d8a15ec60d00b199640ae4dcf10635eeb916b538ae2a814171b26",
+      "baseline_git_blob": "89fa3727e6bec3f8b7404270189faa9dd3f03b13"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.3.1.json",
+      "bytes": 15847,
+      "sha256": "82abb1e3338f86b3fa1b872bccf7e0df347a499cced729d7bd514b5d6a0cee82",
+      "baseline_git_blob": "253e296f46df96e0fdcdb25d14e3acbd0f818847"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.3.2.json",
+      "bytes": 14488,
+      "sha256": "1d77fcd8104c7aca25890077c8db88d3d066a515f5c55cde2fbe53d559c1621c",
+      "baseline_git_blob": "384cbdd09e6b9155186b5ca74c18c233cf827d26"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.3.3.json",
+      "bytes": 15478,
+      "sha256": "988772ecbb2f20346adcde88324aba137e3fddb85cde49222276b2e0c3f0bbae",
+      "baseline_git_blob": "f443df8332bf16be8d46b6e11cfe3d4a4eb560dd"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.3.4.json",
+      "bytes": 21095,
+      "sha256": "41516ae4a50ddd704af24d8d21259585b60352232cf6f4b3767be47e6de4fe61",
+      "baseline_git_blob": "c75803cd58a594532bdd60d5262d6a0615f40f8b"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.1.1.json",
+      "bytes": 14830,
+      "sha256": "c31784232b984ef0248f931f96ea8b06fe09b02ae60894830b542ba0d2d4fd92",
+      "baseline_git_blob": "83d6779a398175c36854904f4cac721fa980d900"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.1.2.json",
+      "bytes": 14365,
+      "sha256": "ebbbc9c4b569fdae33fad0f742228d9d56df88d016f10eeefa9866dd97fd77b3",
+      "baseline_git_blob": "5ff144207c2f1e1e33f55dca38a3e56add5a1dfb"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.1.3.json",
+      "bytes": 15448,
+      "sha256": "6782a7debcb89b2ca6bb99c4f3d61323adde66fd80ac942e948b3c53b1766330",
+      "baseline_git_blob": "01f66e336d739799aa5e374e9037e5bb2c4541e2"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.1.4.json",
+      "bytes": 14472,
+      "sha256": "c0b36295f77b8532147e436c847879da55d006083a4fd588096287013bbdc4e2",
+      "baseline_git_blob": "28deda141cf50f42902f0b8163af8788b12e7f83"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.1.5.json",
+      "bytes": 18724,
+      "sha256": "1b2ebede0501754c4d7813c3f4d3b64206b7115fba21c08f2fef8e5ef460d39a",
+      "baseline_git_blob": "dbf7665e3b0c1d577671f9f110f3444698320271"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.2.1.json",
+      "bytes": 13296,
+      "sha256": "8e3a5e41892c485a2d84b2e70b50df85aad5c972411f2a3254e1813cdfcfe01f",
+      "baseline_git_blob": "6f1f3a93a885a0cf8778c8643eaa60d76eeedb9e"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.2.2.json",
+      "bytes": 14528,
+      "sha256": "046ca62dcbb5c23f5bf7269db344b890711015222bc317d099a5db4396104a66",
+      "baseline_git_blob": "c8d9cae64e744a06d4f76b2747c0bd76e3d97c11"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.2.3.json",
+      "bytes": 14152,
+      "sha256": "cee47a44c99e2aed45c872117558078d45d7a39376a498d87a76faf68d46846b",
+      "baseline_git_blob": "a8523bfc2b0b7b625c2042d81f2b5bffca440e30"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.2.4.json",
+      "bytes": 13036,
+      "sha256": "2d66522c9100cf9e21bf42d449568c34f2274568ccc362aa629ffca8e058fd0c",
+      "baseline_git_blob": "b3a5df23627d29e51fc8a8da3eab4b1ed14da35e"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.2.5.json",
+      "bytes": 13108,
+      "sha256": "bcc95ca99daaba13d2eb7e67abe3bb354198095236123d34150b2877ca81a013",
+      "baseline_git_blob": "077490d7a433b34748b6edd7bdbf50ea404df297"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.2.6.json",
+      "bytes": 14379,
+      "sha256": "c26a0bb4698711496e067d4a2cdc5ace8d96305fbe28c65e22ffb47f0ca81a7d",
+      "baseline_git_blob": "64c195b479807f92578a6d6fbe4e628e93a2bf05"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.2.7.json",
+      "bytes": 18210,
+      "sha256": "050aaf1461fa45f305531bda2ba5dd9b17b12d997ea0b1ee9de88242ee4aabc0",
+      "baseline_git_blob": "098ae6f2a836477363c569f5d0912c2d38fd7e44"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.3.1.json",
+      "bytes": 12713,
+      "sha256": "d14d76e143905a16cf09a1bd9b4f28f357902762103ccc7ff022b28749204ca1",
+      "baseline_git_blob": "186e2b68065cb0b9f8830ac1503c4bf4457318e2"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.3.2.json",
+      "bytes": 11686,
+      "sha256": "6aafe42a725648f8d58257bcc65659a7f825371639c88a2f4232dd5709c8d268",
+      "baseline_git_blob": "eae3a0abd5a54b919e4de698153b28413d3602c7"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.3.3.json",
+      "bytes": 12066,
+      "sha256": "17219229243d96e6b53b6367027e9ff1ab787e2003e2323bafacb0db291aab0f",
+      "baseline_git_blob": "95a791b0130006a62b407416daac76a60cec9d78"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.3.4.json",
+      "bytes": 12421,
+      "sha256": "564262ce7058fe4b96143a9fc7d3517bfc42622df31b05574265357cc93c903e",
+      "baseline_git_blob": "fe3cde83c7b10a16e95c01ecfb187daa973ae4ae"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.3.5.json",
+      "bytes": 19339,
+      "sha256": "fcf643a3517a93e24d4af3d8f2e22b7ae8ad7f04bf87317132cb8949af14b7b6",
+      "baseline_git_blob": "8a406ba2151f4c4a547bd5666997c4ea2d0edd6d"
+    },
+    {
+      "path": "edities/books34-v3/outlines/Boek_3_4_Besluit_en_migratie_v3.pdf",
+      "bytes": 22050,
+      "sha256": "873a4b19cf906cfffd778bbd85c3bc0594ef50c989b345e537040ef5fdaaacdc",
+      "baseline_git_blob": "62f7cec1f60021b2a2060fddda2992ed156bf90f"
+    },
+    {
+      "path": "edities/books34-v3/outlines/Boek_3_Boekopzet_v3.pdf",
+      "bytes": 60616,
+      "sha256": "24af2d7aa27bc4c5286d114aa5c7cdc6b84b35ab723cc896fc0a96eaa8ca6d2d",
+      "baseline_git_blob": "a59d5b9c19d4a6c142f8e45127162f515ad6cbec"
+    },
+    {
+      "path": "edities/books34-v3/outlines/Boek_4_Boekopzet_v3.pdf",
+      "bytes": 63186,
+      "sha256": "5df24536c1a2c414ae844e350ab1d02c6d8fa4836b8ce8f6346b9906b2a2868f",
+      "baseline_git_blob": "e033a43d12692a091990e5078cc69991d5db796b"
+    },
+    {
+      "path": "edities/books34-v3/outlines/book-3-outline-v3.md",
+      "bytes": 34354,
+      "sha256": "dbb6f2d2c2ad595509c711afffaef51c563e4054e8bd1cbb62d8dccb06cf1cac",
+      "baseline_git_blob": "647671a5bb3c69a4ee9dd6b3aa95cd6c67b05e49"
+    },
+    {
+      "path": "edities/books34-v3/outlines/book-4-outline-v3.md",
+      "bytes": 35561,
+      "sha256": "8613b9184b07d5fa1aa1f7b6422b9f2e7f4368b18f13fa1e4ceaedc39082e9af",
+      "baseline_git_blob": "bd131b3ac9dd446d8b23febdc18d77b91b380078"
+    },
+    {
+      "path": "edities/books34-v3/outlines/book34-v3-decision-and-migration.md",
+      "bytes": 3673,
+      "sha256": "62193918047f1e67d65b036ba40c659fc97314af9f23f199410db888775bbb82",
+      "baseline_git_blob": "efba91f256471cad9881f69653201e839675c039"
+    },
+    {
+      "path": "edities/books34-v3/outlines/paragraph-migration-v2-to-v3.csv",
+      "bytes": 12549,
+      "sha256": "b95e60cc880b53d4ee543375aca3f8146c4b01dfa413ba841a6a4f80c06ad1a8",
+      "baseline_git_blob": "abacce00cd1ded167b2e2fd3421c81e3da4f6c89"
+    }
+  ]
+}

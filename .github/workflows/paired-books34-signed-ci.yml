@@ -1,0 +1,101 @@
+name: paired-books34-signed-ci
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/paired-books34-signed-ci.yml'
+      - 'build-scripts/books/*books34*'
+      - 'build-scripts/maintenance/check-books34-v3-import.js'
+      - 'reports/review-gates/books34-signed-retrieval-20260926/**'
+  workflow_dispatch:
+    inputs:
+      lesson_sha:
+        description: Exact reviewed lesson revision commit (40 lowercase hex characters)
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  validate-books34-signed-pair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          path: 4veco-platform
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Select the exact paired lesson revision
+        id: pair
+        working-directory: 4veco-platform
+        env:
+          REQUESTED_LESSON_SHA: ${{ inputs.lesson_sha }}
+        run: |
+          node - <<'JS'
+          const fs = require('fs');
+          const sha = process.env.REQUESTED_LESSON_SHA || fs.readFileSync('build-scripts/books/books34-signed-lesson-head.txt','utf8').trim();
+          if (!/^[a-f0-9]{40}$/.test(sha)) throw new Error('Exact lesson SHA required');
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, 'lesson_sha='+sha+'\n');
+          JS
+      - uses: actions/checkout@v6
+        with:
+          repository: meijer1973/4veco-lessen
+          ref: ${{ steps.pair.outputs.lesson_sha }}
+          path: 4veco-lessen
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: 4veco-platform/package-lock.json
+      - name: Install pinned Node dependencies
+        working-directory: 4veco-platform
+        run: npm ci
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - name: Bind the exact repository pair
+        working-directory: 4veco-platform
+        env:
+          LESSON_SHA: ${{ steps.pair.outputs.lesson_sha }}
+          PLATFORM_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          mkdir -p ../signed-ci-evidence
+          node - <<'JS'
+          const fs = require('fs'), {execFileSync} = require('child_process');
+          const git = (cwd, ...args) => execFileSync('git', args, {cwd, encoding:'utf8'}).trim();
+          const expected = process.env.LESSON_SHA;
+          if (!/^[a-f0-9]{40}$/.test(expected) || git('../4veco-lessen','rev-parse','HEAD') !== expected) throw new Error('Exact lesson SHA required');
+          if (git('.','rev-parse','HEAD') !== process.env.PLATFORM_SHA) throw new Error('Unexpected platform checkout');
+          const result = require('./build-scripts/maintenance/check-books34-v3-import').verify({requireTracked:true});
+          if (!result.passed || result.lesson_state !== 'books34-signed-retrieval-20260926') throw new Error(JSON.stringify(result));
+          fs.writeFileSync('../signed-ci-evidence/pair.json', JSON.stringify({platform:process.env.PLATFORM_SHA,lessons:expected,verification:result},null,2)+'\n');
+          JS
+      - name: Install pinned PDF verification dependencies
+        working-directory: 4veco-platform
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq libpango-1.0-0 libpangoft2-1.0-0 libcairo2 poppler-utils
+          python -m pip install -r build-scripts/books/requirements-exercise-routes.txt
+      - name: Verify exercises, current assembly and navigation
+        working-directory: 4veco-platform
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          python -m unittest discover -s build-scripts/books -p test_books34_signed.py -v
+          python -X utf8 build-scripts/books/verify_books34_signed.py --report ../signed-ci-evidence/assembly.json
+          node build-scripts/maintenance/check-books34-v3-import.js --require-tracked
+          npx jest build-scripts/books/books34-signed-revision.test.js build-scripts/workflows/check-paragraph-lane-scope.test.js build-scripts/ci/paired-paragraph-ci.test.js --runInBand
+          node -e "const r=require('./build-scripts/books/books34-signed-revision'),s=require('./build-scripts/workflows/check-paragraph-lane-scope');const result=s.checkLaneScope({lane:'textbook',changedPaths:r.changedPaths('../4veco-lessen')});if(!result.ok)throw Error(JSON.stringify(result));"
+          node build-scripts/books/books34-signed-review.js --check
+      - name: Publish exact-pair evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: books34-signed-pair-evidence
+          path: signed-ci-evidence/
+          if-no-files-found: warn

@@ -13,6 +13,19 @@ const {
 } = require('./check-paragraph-lane-scope');
 
 const FIXTURE_DIR = path.join(__dirname, 'fixtures', 'paragraph-lane-scope');
+test('signed Books 3/4 revision adds only its finite Part A ownership', () => {
+  const files = require('../books/books34-signed-revision-pin.json').revision_paths;
+  expect(checkLaneScope({lane: 'textbook', changedPaths: files}).ok).toBe(true);
+  expect(checkLaneScope({lane: 'companion', changedPaths: files}).ok).toBe(false);
+  for (const file of ['edities/books34-v3/books/book-3/chapters/3.1/other-answer.pdf',
+    'edities/books34-v3/checks/unreviewed.json', 'books34-signed-revision-other.json']) {
+    expect(classifyPath(file).category).toBe('unknown');
+    expect(checkLaneScope({lane: 'textbook', changedPaths: [...files, file]}).ok).toBe(false);
+  }
+  const companion = 'edities/books34-v3/books/book-3/chapters/3.1/3.1.1 - korte-check.html';
+  expect(classifyPath(companion).category).toBe('partB_companion');
+  expect(checkLaneScope({lane: 'textbook', changedPaths: [...files, companion]}).ok).toBe(false);
+});
 test('route revision is finite Part A ownership and leaves the companion boundary intact', () => {
   const files = require('../books/exercise-route-revision-pin.json').revision_paths;
   expect(checkLaneScope({lane: 'textbook', changedPaths: files}).ok).toBe(true);
