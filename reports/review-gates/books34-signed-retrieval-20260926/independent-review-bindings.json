@@ -1,0 +1,315 @@
+{
+  "scope": "Independent bounded signed retrieval review; not native paragraph closure, curriculum or merge approval",
+  "revision": "books34-signed-retrieval-20260926",
+  "baseline_lesson_commit": "f6518f513d1f22f82922d4a8d3d3842c369b14f7",
+  "edition_manifest_sha256": "bf3d9c7cc804438037f31af618b85bfe4e67e14c74cef264bdd0e1ec8fab18df",
+  "inventory_files_independently_hashed": 1477,
+  "paragraphs": [
+    {
+      "paragraph": "3.1.1",
+      "review_manifest_sha256": "e7a2154ead74767db73757bc89185221636e8b6853ae05d51d0e4175f23ded03",
+      "snapshot_file_sha256": "538bae877d8eb4c05553d671ed6eaa435fb808683d2462e9a5a3a8d1d685566f",
+      "review_sha256": "25070435837617f26853d4cc0215a94c54d28aaee07a8ecddf6a0e8c3006db74",
+      "previous_route_review_sha256": "6f5c8e1b5a7c1af0a45bc0e860317098f9ab7a64edaa693d0c51b967620e3761",
+      "pdf_coverage": [
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/output/Boek_3_H1_Antwoorden_v3.pdf",
+          "sha256": "2900ecce4f7b763b885a73e4f99339422bec0d8fdd8fe202d8192f06cf22a286",
+          "changed_pages": [
+            6
+          ],
+          "pages_with_neighbours": [
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_Antwoorden_v3.pdf",
+          "sha256": "75bdb1e71749e2a981e1a3917a7e3a06e0e0dbc9b4ba398a5c6edebedf359a03",
+          "changed_pages": [
+            8
+          ],
+          "pages_with_neighbours": [
+            7,
+            8,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph": "3.1.5",
+      "review_manifest_sha256": "21bb407ec28a6587b737a82a19b3dba3af4f4eae6e5d5ada2c7dbb5775cac698",
+      "snapshot_file_sha256": "6b0d9ee44f1801a924203407679883e2fb1bf6dd142c8124d5e3a60fda4a01cf",
+      "review_sha256": "7c0ba095338df2d3732a3e72ed5c0bec60375aaa9161934e07906ab22868df39",
+      "previous_route_review_sha256": "901ebb589d32c4697839f1a5c815403ad5d61d7ab01cda61ea145576d5c2398b",
+      "pdf_coverage": [
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/output/Boek_3_H1_Antwoorden_v3.pdf",
+          "sha256": "2900ecce4f7b763b885a73e4f99339422bec0d8fdd8fe202d8192f06cf22a286",
+          "changed_pages": [
+            27
+          ],
+          "pages_with_neighbours": [
+            26,
+            27,
+            28
+          ]
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_Antwoorden_v3.pdf",
+          "sha256": "75bdb1e71749e2a981e1a3917a7e3a06e0e0dbc9b4ba398a5c6edebedf359a03",
+          "changed_pages": [
+            29
+          ],
+          "pages_with_neighbours": [
+            28,
+            29,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph": "3.2.3",
+      "review_manifest_sha256": "57c6556b6bf7f68d0bc463a54a0e9e75a7c841a92198140067f4322b4a7584d7",
+      "snapshot_file_sha256": "b424bc59d02ba7e5daa57fd692d77b8cb4d623f772c626d0eaf36b2d6db109f7",
+      "review_sha256": "e296f7db840e52b9a382dd0f8f95d44cfe339d017743df9f32e30e5c9b57a9dd",
+      "previous_route_review_sha256": "50b84851854c4fb664e33e9fb1aa819758e28ac628ffb94559e78af1aa110ebe",
+      "pdf_coverage": [
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/output/Boek_3_H2_Antwoorden_v3.pdf",
+          "sha256": "b1e2d227d21716f33ed62aab49a325744312bc2c23b74091807e2fa889563309",
+          "changed_pages": [
+            17
+          ],
+          "pages_with_neighbours": [
+            16,
+            17,
+            18
+          ]
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/output/Boek_3_H2_Leerling_v3.pdf",
+          "sha256": "c8d1de5d54e63b434a8305c73973887b9a2e1df4fafcadd0637af0ed8cefc3a3",
+          "changed_pages": [
+            26
+          ],
+          "pages_with_neighbours": [
+            25,
+            26,
+            27
+          ]
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/output/Boek_3_H2_Leerling_v3_bookpages.pdf",
+          "sha256": "de98b53b078a3b7af5f068f4595d3d3113d0392cfb5348deefc1595d6455a49a",
+          "changed_pages": [
+            26
+          ],
+          "pages_with_neighbours": [
+            25,
+            26,
+            27
+          ]
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.3-leerling-v3.pdf",
+          "sha256": "36d0686321eae711d06268968508224fe051645127f1b6c4d26106af1157adb0",
+          "changed_pages": [
+            10
+          ],
+          "pages_with_neighbours": [
+            9,
+            10
+          ]
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_Antwoorden_v3.pdf",
+          "sha256": "75bdb1e71749e2a981e1a3917a7e3a06e0e0dbc9b4ba398a5c6edebedf359a03",
+          "changed_pages": [
+            51
+          ],
+          "pages_with_neighbours": [
+            50,
+            51,
+            52
+          ]
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+          "sha256": "f25147e8dca2a44f18415d38540dd75838d91345ace6852e8eae0786865b7a24",
+          "changed_pages": [
+            78
+          ],
+          "pages_with_neighbours": [
+            77,
+            78,
+            79
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph": "3.3.3",
+      "review_manifest_sha256": "ef4221293df10deebe1780f23a9a3882cdbe2be81b2a747d4e321cf1e58440d0",
+      "snapshot_file_sha256": "1d7d74bec2e113bf1d1638fed0a3809b0f32b28efa0eed51e794b758ef3eff0b",
+      "review_sha256": "5479836dec71e57981fa686d095ed739ddda359ac53c04832d97f6eeb746056b",
+      "previous_route_review_sha256": "ac4a707d384bf012415283e2002e90f719a093fc236b90e0ca0e205c4839ec5c",
+      "pdf_coverage": [
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/output/Boek_3_H3_Antwoorden_v3.pdf",
+          "sha256": "ce66078b19d03660572a5b4d577ec0c04a2139994db2f699df2d9087ac9eb2d6",
+          "changed_pages": [
+            13
+          ],
+          "pages_with_neighbours": [
+            12,
+            13,
+            14
+          ]
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/output/Boek_3_H3_Leerling_v3.pdf",
+          "sha256": "32947e6adf69f8d7919c2a8b67582bac9270e559b59616b062d29d3154989d66",
+          "changed_pages": [
+            30
+          ],
+          "pages_with_neighbours": [
+            29,
+            30,
+            31
+          ]
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/output/Boek_3_H3_Leerling_v3_bookpages.pdf",
+          "sha256": "7971c301dd77a16313e047d5d21dc632e6d9a934f03016a2d4e1630121452b1c",
+          "changed_pages": [
+            30
+          ],
+          "pages_with_neighbours": [
+            29,
+            30,
+            31
+          ]
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.3-leerling-v3.pdf",
+          "sha256": "8560c948a04842f2f01a5681ec675015f0af675ebc20a0f9b62b2c4a718164d4",
+          "changed_pages": [
+            10
+          ],
+          "pages_with_neighbours": [
+            9,
+            10
+          ]
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_Antwoorden_v3.pdf",
+          "sha256": "75bdb1e71749e2a981e1a3917a7e3a06e0e0dbc9b4ba398a5c6edebedf359a03",
+          "changed_pages": [
+            69
+          ],
+          "pages_with_neighbours": [
+            68,
+            69,
+            70
+          ]
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+          "sha256": "f25147e8dca2a44f18415d38540dd75838d91345ace6852e8eae0786865b7a24",
+          "changed_pages": [
+            116
+          ],
+          "pages_with_neighbours": [
+            115,
+            116,
+            117
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph": "4.1.2",
+      "review_manifest_sha256": "04e32731e1ba38f05a54ba5134d317571c6f9e570451584ce31abddb3213083d",
+      "snapshot_file_sha256": "a88087159859bec7521ce41920f50878183c701b87dee2c66bc147fe86405d3e",
+      "review_sha256": "9fca32b505dccb9798538f634ae4d3105b694a6e6ae34ae97c6a88375f2e5369",
+      "previous_route_review_sha256": "f1cdd55a674065db847299d72c9152f1be9dcc97c8ba9660a5234db26fc17cda",
+      "pdf_coverage": [
+        {
+          "path": "edities/books34-v3/books/book-4/chapters/4.1/output/Boek_4_H1_Antwoorden_v3.pdf",
+          "sha256": "f0465d985cc69bc7c6473c66465ca3c12ff48e60c540a82fa9f42c62efbb87c8",
+          "changed_pages": [
+            9
+          ],
+          "pages_with_neighbours": [
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_Antwoorden_v3.pdf",
+          "sha256": "b04587ef9f7e1e6916daf0aebdab91525ff13a3da82fc8a8fdadad71fcc6e9d7",
+          "changed_pages": [
+            11
+          ],
+          "pages_with_neighbours": [
+            10,
+            11,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph": "4.1.5",
+      "review_manifest_sha256": "337ef9081dce2d26f11c40b1c34b9670f02181ff3eee879ec2d46caa4c66d88e",
+      "snapshot_file_sha256": "7269837fb3f14ed8cdba23d05db3d78ba19f0a18ece4bea1cc8269d650fa0ddb",
+      "review_sha256": "31e661d6730c75fcdd2a08c4a038418d0cbe48a86133533b647dc8be9e68df61",
+      "previous_route_review_sha256": "f855bcb4a679524daf094d94344859b1c97c3cdc5d87a7f6a4ad0bd8c57a3d43",
+      "pdf_coverage": [
+        {
+          "path": "edities/books34-v3/books/book-4/chapters/4.1/output/Boek_4_H1_Antwoorden_v3.pdf",
+          "sha256": "f0465d985cc69bc7c6473c66465ca3c12ff48e60c540a82fa9f42c62efbb87c8",
+          "changed_pages": [
+            23
+          ],
+          "pages_with_neighbours": [
+            22,
+            23,
+            24
+          ]
+        },
+        {
+          "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_Antwoorden_v3.pdf",
+          "sha256": "b04587ef9f7e1e6916daf0aebdab91525ff13a3da82fc8a8fdadad71fcc6e9d7",
+          "changed_pages": [
+            25
+          ],
+          "pages_with_neighbours": [
+            24,
+            25,
+            26
+          ]
+        }
+      ]
+    }
+  ],
+  "evidence_files": [
+    {
+      "path": "independent-content-bindings.json",
+      "sha256": "3b6754ce1c38b915315420b43bf6f013e242c6dc7d4f4616fdec72673fe2d9bc"
+    },
+    {
+      "path": "independent-production-verification.json",
+      "sha256": "3d192a5001257ac79bbf0b3a928aa71cf859e5abb870e0aa44fab2f8bbfe0bca"
+    },
+    {
+      "path": "independent-render-coverage.json",
+      "sha256": "d62751c1fddbea15b1552030ee573eda5aac66dd31919adcfba5343f026a9312"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Current Books 2–4: exercise-route revision
 
-Book 2 now uses [the native theory/signed build](BOOK2-SIGNED.md), which retains this route contract. The route-only build below remains historical for Book 2 and current for Books 3/4.
+Book 2 now uses [the native theory/signed build](BOOK2-SIGNED.md), which retains this route contract. Books 3/4 use [the bounded signed-retrieval successor](BOOKS34-SIGNED.md) for the eight later wording changes and explicit answer rebuilds. The route-only build below is the predecessor and preserves its original evidence contract.
 
 The owner's 21 September 2026 request changes the Part A pedagogical contract.
 Use [the canonical exercise contract](../../skills/econ-exercise-builder.md#21-the-routes-and-the-constraint)

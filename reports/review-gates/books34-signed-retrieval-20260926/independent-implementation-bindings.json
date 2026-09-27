@@ -1,0 +1,194 @@
+{
+  "result": "PASS WITH FLAGS",
+  "scope": "Bounded signed retrieval implementation/content; no merge or publication approval",
+  "platform_base": "d88aa106d48ec9a7950a6c7eef6be3ead28c44ff",
+  "platform_commit": "pending final author commit",
+  "lesson_commit": "773d72a67baf2f312a961d39247045f6b172adaf",
+  "lesson_worktree_clean": true,
+  "manifest_sha256": "bf3d9c7cc804438037f31af618b85bfe4e67e14c74cef264bdd0e1ec8fab18df",
+  "inventory_files": 1477,
+  "changed_paths": 54,
+  "tracked_gate_passed": true,
+  "textbook_lane_passed": true,
+  "independent_tests": {
+    "python": 9,
+    "finite_inventory_jest": 7,
+    "lane_and_paired_fixture_jest": 33
+  },
+  "independent_verification": {
+    "structural_checks": 598,
+    "failures": 0,
+    "publications": 29,
+    "pdfs": 13,
+    "targets_preserved": 31,
+    "paragraph_export_pages": 20,
+    "assembled_body_pages": 452,
+    "unchanged_baseline_pixel_pages": 514,
+    "changed_pages_visually_reviewed": 20,
+    "pages_with_neighbours_visually_reviewed": 58
+  },
+  "baseline_receipt_sha256": "79f5511e55e94eddff8776b76e13448badda3d49de125ccd603ee99b5810611e",
+  "reviewed_platform_files": [
+    {
+      "path": ".github/workflows/paired-books34-signed-ci.yml",
+      "bytes": 4831,
+      "sha256": "a269e19cec138a4eb35ea968ab60f8ebcdce7b5430852afaf65b6f5ae22d4568",
+      "sha256_lf": "a269e19cec138a4eb35ea968ab60f8ebcdce7b5430852afaf65b6f5ae22d4568"
+    },
+    {
+      "path": "build-scripts/books/BOOKS34-SIGNED.md",
+      "bytes": 4212,
+      "sha256": "cb971960094d746545af9a71741098773b20947353402e9cee764e6573aec32b",
+      "sha256_lf": "cb971960094d746545af9a71741098773b20947353402e9cee764e6573aec32b"
+    },
+    {
+      "path": "build-scripts/books/EXERCISE-ROUTES.md",
+      "bytes": 6073,
+      "sha256": "a5edac346bd9b644a099de27e39d522ece6d827bf6c141c041d0aec30352d063",
+      "sha256_lf": "a5edac346bd9b644a099de27e39d522ece6d827bf6c141c041d0aec30352d063"
+    },
+    {
+      "path": "build-scripts/books/books34-signed-contract.json",
+      "bytes": 12944,
+      "sha256": "72f35a475389dfc0abafa7f1f8c4b737fb7ab75d6ba335617eb71624e324c9b6",
+      "sha256_lf": "72f35a475389dfc0abafa7f1f8c4b737fb7ab75d6ba335617eb71624e324c9b6"
+    },
+    {
+      "path": "build-scripts/books/books34-signed-lesson-head.txt",
+      "bytes": 41,
+      "sha256": "8d1c7d3b7a90be67091bfb0691406abe9c7d1c00e831b5ac531d1fd7532eda4c",
+      "sha256_lf": "8d1c7d3b7a90be67091bfb0691406abe9c7d1c00e831b5ac531d1fd7532eda4c"
+    },
+    {
+      "path": "build-scripts/books/books34-signed-review.js",
+      "bytes": 3182,
+      "sha256": "bca86470f98d78e0bf501cb33fad3ef2690982af128d7065464c76902c9ab459",
+      "sha256_lf": "bca86470f98d78e0bf501cb33fad3ef2690982af128d7065464c76902c9ab459"
+    },
+    {
+      "path": "build-scripts/books/books34-signed-revision-pin.json",
+      "bytes": 3919,
+      "sha256": "b0ea2d18c8e7aa072c24da7118559037f7c2c21c71e117765cc238a3edf68aae",
+      "sha256_lf": "b0ea2d18c8e7aa072c24da7118559037f7c2c21c71e117765cc238a3edf68aae"
+    },
+    {
+      "path": "build-scripts/books/books34-signed-revision.js",
+      "bytes": 10672,
+      "sha256": "c03db5cfb3a0ccd5a7e9bf5d728ffd23010fad2c7deaa1e2018dd148b3dd098d",
+      "sha256_lf": "c03db5cfb3a0ccd5a7e9bf5d728ffd23010fad2c7deaa1e2018dd148b3dd098d"
+    },
+    {
+      "path": "build-scripts/books/books34-signed-revision.test.js",
+      "bytes": 2346,
+      "sha256": "248104378cfafcbd31d95ddd47f09f132f928da5176338e07a85da0305a6fea9",
+      "sha256_lf": "248104378cfafcbd31d95ddd47f09f132f928da5176338e07a85da0305a6fea9"
+    },
+    {
+      "path": "build-scripts/books/books34_signed_common.py",
+      "bytes": 9921,
+      "sha256": "0b3da7cd13ef6b5e20a656b05cecc6dda2623e14a38b4b8419fb89c2baf847dd",
+      "sha256_lf": "0b3da7cd13ef6b5e20a656b05cecc6dda2623e14a38b4b8419fb89c2baf847dd"
+    },
+    {
+      "path": "build-scripts/books/rebuild_books34_signed.py",
+      "bytes": 5176,
+      "sha256": "244892ff5ca2ea0ab613245ed9e5a9f0d98a98ad83749fb61e7edd7eb57c3476",
+      "sha256_lf": "244892ff5ca2ea0ab613245ed9e5a9f0d98a98ad83749fb61e7edd7eb57c3476"
+    },
+    {
+      "path": "build-scripts/books/record_books34_signed_revision.js",
+      "bytes": 2363,
+      "sha256": "0b87ce0cd683a9dfae4b19a33f3abb39d6317bc815bd7001af0418bccb171d03",
+      "sha256_lf": "0b87ce0cd683a9dfae4b19a33f3abb39d6317bc815bd7001af0418bccb171d03"
+    },
+    {
+      "path": "build-scripts/books/test_books34_signed.py",
+      "bytes": 4581,
+      "sha256": "1a4ca7449fb258f3fa939e326ade6c9c1a12d4289eb9f219247329d109407d7b",
+      "sha256_lf": "1a4ca7449fb258f3fa939e326ade6c9c1a12d4289eb9f219247329d109407d7b"
+    },
+    {
+      "path": "build-scripts/books/verify_books34_signed.py",
+      "bytes": 8461,
+      "sha256": "1de83b027f09f8ab91379d7a4adfe7421360b7cf7923515c62d9ce4a0aa901f2",
+      "sha256_lf": "1de83b027f09f8ab91379d7a4adfe7421360b7cf7923515c62d9ce4a0aa901f2"
+    },
+    {
+      "path": "build-scripts/ci/paired-paragraph-ci.test.js",
+      "bytes": 8155,
+      "sha256": "37cf8ec70aed12c6f2a0abfab079b0a0b5526689a182205e785d0ff04306c229",
+      "sha256_lf": "37cf8ec70aed12c6f2a0abfab079b0a0b5526689a182205e785d0ff04306c229"
+    },
+    {
+      "path": "build-scripts/maintenance/check-books34-v3-import.js",
+      "bytes": 8195,
+      "sha256": "d861c55e21d1e40d6af126d5dc81a19f11c898146d19550f06db184c70eb1dc8",
+      "sha256_lf": "d861c55e21d1e40d6af126d5dc81a19f11c898146d19550f06db184c70eb1dc8"
+    },
+    {
+      "path": "build-scripts/workflows/check-paragraph-lane-scope.js",
+      "bytes": 22262,
+      "sha256": "1446153a4fddaedf13baf8336a440fd53152fdb87510c697956830a4ab6dc6c2",
+      "sha256_lf": "1446153a4fddaedf13baf8336a440fd53152fdb87510c697956830a4ab6dc6c2"
+    },
+    {
+      "path": "build-scripts/workflows/check-paragraph-lane-scope.test.js",
+      "bytes": 19830,
+      "sha256": "a78a44b3503061337b2940c947ba0886608473c0820e67ddb12a8c440d674876",
+      "sha256_lf": "a78a44b3503061337b2940c947ba0886608473c0820e67ddb12a8c440d674876"
+    }
+  ],
+  "evidence_files": [
+    {
+      "path": "3.1.1-review.md",
+      "sha256": "25070435837617f26853d4cc0215a94c54d28aaee07a8ecddf6a0e8c3006db74"
+    },
+    {
+      "path": "3.1.5-review.md",
+      "sha256": "7c0ba095338df2d3732a3e72ed5c0bec60375aaa9161934e07906ab22868df39"
+    },
+    {
+      "path": "3.2.3-review.md",
+      "sha256": "e296f7db840e52b9a382dd0f8f95d44cfe339d017743df9f32e30e5c9b57a9dd"
+    },
+    {
+      "path": "3.3.3-review.md",
+      "sha256": "5479836dec71e57981fa686d095ed739ddda359ac53c04832d97f6eeb746056b"
+    },
+    {
+      "path": "4.1.2-review.md",
+      "sha256": "9fca32b505dccb9798538f634ae4d3105b694a6e6ae34ae97c6a88375f2e5369"
+    },
+    {
+      "path": "4.1.5-review.md",
+      "sha256": "31e661d6730c75fcdd2a08c4a038418d0cbe48a86133533b647dc8be9e68df61"
+    },
+    {
+      "path": "independent-content-bindings.json",
+      "sha256": "3b6754ce1c38b915315420b43bf6f013e242c6dc7d4f4616fdec72673fe2d9bc"
+    },
+    {
+      "path": "independent-overall-review.md",
+      "sha256": "43500af2bc05c8705aed71c107cf4417fecc33f8a44b638d307c50f47745601b"
+    },
+    {
+      "path": "independent-production-verification.json",
+      "sha256": "3d192a5001257ac79bbf0b3a928aa71cf859e5abb870e0aa44fab2f8bbfe0bca"
+    },
+    {
+      "path": "independent-render-coverage.json",
+      "sha256": "d62751c1fddbea15b1552030ee573eda5aac66dd31919adcfba5343f026a9312"
+    },
+    {
+      "path": "independent-review-bindings.json",
+      "sha256": "57bd744bb8616ce0b4c671fd7a6a07faa4ba265aa87bc08c49549ecf2c06ef8e"
+    }
+  ],
+  "remaining_limits": [
+    "NAV1 unchanged and separately open",
+    "TIMING34 not newly certified",
+    "Existing Herhaling20/21 heading above exercises29/30 recorded separately",
+    "Final platform commit and remote required/exact-pair CI not yet reviewed"
+  ],
+  "prohibited_inference": "No fresh native paragraph closure, curriculum/target approval, publication or merge authorization"
+}
