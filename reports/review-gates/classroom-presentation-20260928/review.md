@@ -177,3 +177,74 @@ economic/visual correctness. The §2.1.2 saved-deck checker invokes it too.
   run with `test_chart_workbooks.py --pptx <file>` against paired lesson files.
 - Independent review passed the real-deck mutations, §2.1.2 integration and
   inline-text consistency checks without an actionable finding.
+
+## Follow-up B: held-out mixed-exercise cold test
+
+The second major lesson route was tested with exactly:
+
+> Build the PowerPoint for paragraph 2.1.4.
+
+One fresh ephemeral CLI agent started in isolated paired worktrees under
+`C:/wt/ppt/.cold-214-1/`, with platform baseline
+`8271c1fcbcf1b10c35dabad790bdbb6a619cba28` and lessons baseline
+`08d7fd27830b5c42d1dbebc7fcb73b882b4d67a4`. Its thread was
+`01a0e78c-24de-7503-8b1c-542d2dabf7a5`. It received no conversation history,
+previous §2.1.4 presentation, answer plan or follow-up coaching. The task's
+local `protocol.json`, `events.jsonl` and `final.txt` retain the prompt and run.
+The author independently revised its first render to remove unwanted chart
+labels and improve two crowded text areas. Revision 2 passed; there was no
+second cold run or instruction change prompted by this test.
+
+The parent accepted the resulting 24-slide deck against the current manuscript,
+answer model and visually checked printed book pages 29, 32 and 33. The cold
+author and independent reviewers also checked the supplementary page 34.
+
+| Mixed-route requirement | Observed result |
+|---|---|
+| Start with exercise 1 | All three overviews say opgave 1, printed page 29. |
+| Assign the complete actual set | Exercises 1–7, making and checking; bonus 6 and review 7 retain their source labels. |
+| No invented basis/core split | Mixed practice 1–4 and existing target 5 are identified from the book; no guided/basis assignment is introduced. |
+| Brief recap | One approach slide, feedback on the attempted start exercise, one marginal calculation and one graph-reading example; existing operations only. |
+| Representative exercise after practice | Overview 8 starts independent practice; SmoothBox's sources and questions follow on slides 9–14, then solutions on 15–23. |
+
+The recap's scope is appropriately bounded; this is a content judgment, not a
+slide quota or a measured classroom duration. The teacher-confirmed normal
+Book 2 Startopgaven/Begeleide inoefening mapping remains explicit and unchanged.
+
+SmoothBox includes sources A–C and all six original questions before solutions.
+Friday uses TK = 1,200 + 2Q and TO = 5Q, with capacity 1,000 per day. Break-even
+is (400, 2,000), profit at 700 is EUR 900/day and GTK is about EUR 3.71/box.
+Saturday retains only the four supplied table points. MK is 3/3.50/4 and MO is
+5 per extra box; the three additional profits are 200/150/100 per day. The
+positive Friday interval and whole-product quantities are distinguished, and
+profit is shown as a vertical total difference. No unsupported extrapolation
+or optimum is claimed.
+
+Parent inspection covered every one of the 24 final PowerPoint-rendered PNGs.
+Independent reviewer `/root/review_workflow` separately inspected all 24, the
+sources, notes, new source/checker code and mixed-route requirements: PASS,
+no actionable findings. The cold author's own independent reviewer also
+reported PASS. These are artifact/source reviews, not learning-effectiveness
+trials. The parent reviewer did not independently rebuild or reopen PowerPoint;
+the cold author opened, rendered and exported the final file in native
+Microsoft PowerPoint, and tested chart/table editability in a disposable copy.
+
+The final saved-deck checker passes: 24 slides, 24 linked note sections,
+10 native tables, 4 native charts, matching overview text/geometry and all
+6 complete source questions. Workbook consistency passes across 38 references
+and 84 cells. The parent rendered every PDF page and compared it with its
+PowerPoint PNG: maximum mean RGB difference is 2.13/255. Separate visual PDF
+checks of the overview, full questions, dense marginal table and final graph
+found no divergence. The independent reviewer verified every slide text run
+appears on its corresponding PDF page.
+
+| Final mixed cold artifact | SHA-256 |
+|---|---|
+| PPTX | `8602a82f03bf2216dd16cb815db413ece238fff26998fc7715232850976b3896` |
+| PDF | `4b5a5662019313003575e1c4897e69c6168a102ff5963225a8ae622f4625973b` |
+
+Cold source commit `88f22292` and lesson commit `f93c57a` were incorporated
+into the existing paired task PRs, retaining these reviewed artifact bytes.
+The cold agent's draft PRs #262 (platform) and #61 (lessons) served as transfer
+records; the active delivery remains platform #260 and lessons #59. Both
+focused follow-ups pass without redesigning or lengthening the teaching recipe.
