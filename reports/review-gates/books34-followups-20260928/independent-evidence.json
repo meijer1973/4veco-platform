@@ -82,6 +82,10 @@
       "sha256_lf": "ce2a04a96d06a68a1a026353e8c089afc4281dd03febfa91a4de35e60600ac7e"
     },
     {
+      "path": "build-scripts/books/books34-signed-review.js",
+      "sha256_lf": "77378e68423cd1bd6f5a373d1b30006026b1fe90a0985269b1ea0afb153b5bee"
+    },
+    {
       "path": "build-scripts/books/books34_followups_assemble.py",
       "sha256_lf": "c58dc583a44cafe1d17c363cca35e7ec5df471285d68da84e520614588b720d1"
     },
@@ -1070,5 +1074,27 @@
     "No merge/publication permission",
     "Remote CI and final head identities are subsequent closure checks"
   ],
-  "reviewed_lesson_commit": "c20ad77a165e97fe55a3da6ac6666cc151533ee5"
+  "reviewed_lesson_commit": "c20ad77a165e97fe55a3da6ac6666cc151533ee5",
+  "legacy_gate_recheck": {
+    "scope": "Initial historical review gate only; six historical snapshot/verdict/binding checks unchanged",
+    "historical_manifest_preserved": true,
+    "historical_snapshots_preserved": 6,
+    "historical_reviews_preserved": 6,
+    "successor_rejected_by_historical_runner": true,
+    "rejection": "Changed accepted signed inventory",
+    "current_review_still_passes": true,
+    "accepted_commit": "773d72a67baf2f312a961d39247045f6b172adaf",
+    "accepted_merge_commit": "794cd54fe68f9b9a1bb413462373a133a459345c",
+    "identical_tree": "81a06b7faa9de9eebd0207e6d66f434bf0dae87d",
+    "prior_ci": "https://github.com/meijer1973/4veco-platform/actions/runs/36407624766",
+    "prior_ci_verified": [
+      "exact-pair binding succeeded",
+      "importer passed 1477 files",
+      "598 structural checks passed",
+      "41 JavaScript tests passed",
+      "failure isolated to historical review runner stale dispatcher input"
+    ],
+    "direct_positive_new_runner": "Pending rerun on exact accepted tree in CI; no local full checkout constructed",
+    "no_publication_or_manifest_changes": true
+  }
 }

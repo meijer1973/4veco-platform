@@ -8,7 +8,7 @@ Accepted baseline: Platform `1761cb96ef25da67b7830fade96e17d7a4db53ac`; Lessons 
 Review manifest SHA256: `a0109495ab7cae046493a78d18b6c5ad22e4673663675b1232eba9d9aaae1814`
 
 All 1,480 inventory files and lengths, 42 changed lesson paths, 16 manifest-bound platform inputs, final render source hashes and the committed/staged candidate were independently checked. Reviewed lesson commit: `c20ad77a165e97fe55a3da6ac6666cc151533ee5`.
-Implementation/evidence inventory: [independent-evidence.json](independent-evidence.json), SHA256 `1e1e466fee9389e005f6cfbdedff82555e09ffcde194316dde7025d749d9cc7b`. It binds all 20 reviewed new/changed implementation, test, workflow, documentation and exact-pair pin files independently of the publication manifest; final platform commit containment remains the author’s closure check.
+Implementation/evidence inventory: [independent-evidence.json](independent-evidence.json), SHA256 `b8f69d3c64b2b58cd875574192d5b342a1cbdd8023fc240ac016cc8f7ea61bb4`. It binds all 21 reviewed new/changed implementation, test, workflow, documentation and exact-pair pin files independently of the publication manifest; final platform commit containment remains the author’s closure check.
 
 ## 1. Review and evidence
 
@@ -79,6 +79,15 @@ Resolved finding: the initial verifier did not independently reject stale teache
 Independent tests completed: four link Python tests, four teacher-front Python tests, and all 49 affected JavaScript tests (including 15 current/predecessor finite-inventory regressions and the lane/paired fixtures). The importer passed `--require-tracked` with all 1,480 files. The new lane allowance is exactly the finite reviewed path set; unknown adjacent paths and Part B precedence retain negative tests.
 
 The new paired workflow checks out exact platform/lesson heads, uses read-only GitHub permissions and pinned runtime dependencies, requires the follow-up state and committed inventory, runs the semantic assembly/navigation checks and all affected tests, validates actual changed-path lane ownership, and requires the independently authored report binding and all 31 coverage rows. The previous paired workflows/pins remain unchanged. Remote CI and final platform head verification remain the author’s subsequent closure steps; this report does not claim results from unrun remote jobs.
+
+
+### Historical-gate compatibility repair after the first CI run
+
+The first historical signed-pair CI run [36407624766](https://github.com/meijer1973/4veco-platform/actions/runs/36407624766) passed exact-pair binding, the 1,477-file accepted-baseline importer, 598 structural checks and all 41 JavaScript tests, then failed only when the historical review runner invoked its sealed verifier against the intentionally changed current dispatcher. Its precise failure was a stale dispatcher input, not changed lesson material or invalid review snapshots. The reviewer independently inspected that run and confirmed that lesson `773d72a67baf2f312a961d39247045f6b172adaf` and accepted merge `794cd54fe68f9b9a1bb413462373a133a459345c` share tree `81a06b7faa9de9eebd0207e6d66f434bf0dae87d`.
+
+The repair changes only the initial gate in `books34-signed-review.js` to the already-reviewed `acceptedSignedBaseline({root, lessons})` path. It accepts exactly the prior signed inventory and authenticates the historical dispatcher at the accepted Git commit. The subsequent six snapshot, verdict and independent digest checks are unchanged. Independent rechecking confirms all six snapshots/reviews and the old manifest retain their accepted bytes/bindings; running the repaired historical command against the current follow-up edition rejects it with `Changed accepted signed inventory`. The current 31-paragraph review checker still passes. Thus the old review cannot certify the successor publications, and no historical pin, report or snapshot was refreshed to accommodate them.
+
+This narrow compatibility repair is accepted and bound as the 21st implementation file. All 1,480 current publication-inventory hashes were rechecked without a PDF rebuild; manifest and lesson commit remain unchanged. A direct positive invocation of the repaired historical command on its exact historical checkout remains the subsequent CI rerun, rather than an invented local result. No further source or publication change is required by this finding.
 
 ## 2. Verdict
 
