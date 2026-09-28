@@ -1,0 +1,1074 @@
+{
+  "reviewer": "review_b34_followups",
+  "review_date": "2026-09-28",
+  "review_manifest_sha256": "a0109495ab7cae046493a78d18b6c5ad22e4673663675b1232eba9d9aaae1814",
+  "manifest_files_verified": 1480,
+  "revision_paths_verified": [
+    "books34-followups-revision.json",
+    "edities/books34-v3/FOLLOWUPS-2026-09-28.md",
+    "edities/books34-v3/README.md",
+    "edities/books34-v3/SOURCE_OWNERSHIP.md",
+    "edities/books34-v3/books/book-3/book-matter/output/front-teacher.html",
+    "edities/books34-v3/books/book-3/book-matter/output/front-teacher.pdf",
+    "edities/books34-v3/books/book-3/chapters/3.1/Docenteninformatie.md",
+    "edities/books34-v3/books/book-3/chapters/3.1/output/Boek_3_H1_Docenteninformatie_v3.html",
+    "edities/books34-v3/books/book-3/chapters/3.1/output/Boek_3_H1_Docenteninformatie_v3.pdf",
+    "edities/books34-v3/books/book-3/chapters/3.2/Antwoorden.md",
+    "edities/books34-v3/books/book-3/chapters/3.2/Docenteninformatie.md",
+    "edities/books34-v3/books/book-3/chapters/3.2/output/Boek_3_H2_Antwoorden_v3.html",
+    "edities/books34-v3/books/book-3/chapters/3.2/output/Boek_3_H2_Antwoorden_v3.pdf",
+    "edities/books34-v3/books/book-3/chapters/3.2/output/Boek_3_H2_Docenteninformatie_v3.html",
+    "edities/books34-v3/books/book-3/chapters/3.2/output/Boek_3_H2_Docenteninformatie_v3.pdf",
+    "edities/books34-v3/books/book-3/chapters/3.3/Docenteninformatie.md",
+    "edities/books34-v3/books/book-3/chapters/3.3/output/Boek_3_H3_Docenteninformatie_v3.html",
+    "edities/books34-v3/books/book-3/chapters/3.3/output/Boek_3_H3_Docenteninformatie_v3.pdf",
+    "edities/books34-v3/books/book-3/output/Boek_3_Compleet_Antwoorden_v3.pdf",
+    "edities/books34-v3/books/book-3/output/Boek_3_Compleet_Docenteninformatie_v3.pdf",
+    "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+    "edities/books34-v3/books/book-4/book-matter/output/front-teacher.html",
+    "edities/books34-v3/books/book-4/book-matter/output/front-teacher.pdf",
+    "edities/books34-v3/books/book-4/chapters/4.1/Docenteninformatie.md",
+    "edities/books34-v3/books/book-4/chapters/4.1/output/Boek_4_H1_Docenteninformatie_v3.html",
+    "edities/books34-v3/books/book-4/chapters/4.1/output/Boek_4_H1_Docenteninformatie_v3.pdf",
+    "edities/books34-v3/books/book-4/chapters/4.2/Docenteninformatie.md",
+    "edities/books34-v3/books/book-4/chapters/4.2/output/Boek_4_H2_Docenteninformatie_v3.html",
+    "edities/books34-v3/books/book-4/chapters/4.2/output/Boek_4_H2_Docenteninformatie_v3.pdf",
+    "edities/books34-v3/books/book-4/chapters/4.3/Docenteninformatie.md",
+    "edities/books34-v3/books/book-4/chapters/4.3/output/Boek_4_H3_Docenteninformatie_v3.html",
+    "edities/books34-v3/books/book-4/chapters/4.3/output/Boek_4_H3_Docenteninformatie_v3.pdf",
+    "edities/books34-v3/books/book-4/output/Boek_4_Compleet_Docenteninformatie_v3.pdf",
+    "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+    "edities/books34-v3/build/build_all.py",
+    "edities/books34-v3/checks/followups-build.json",
+    "edities/books34-v3/checks/followups-verification.json",
+    "edities/books34-v3/curriculum/course-target-exercises-books34-v3.json",
+    "edities/books34-v3/curriculum/targets/3.2.1.json",
+    "edities/books34-v3/curriculum/targets/3.2.2.json",
+    "edities/books34-v3/curriculum/targets/3.2.3.json",
+    "edities/books34-v3/curriculum/targets/3.2.4.json"
+  ],
+  "platform_inputs_verified": 16,
+  "implementation": [
+    {
+      "path": ".github/workflows/paired-books34-followups-ci.yml",
+      "sha256_lf": "d4fe6c47492c6bbba20486234760956ad417f5414428847af362c5757c8097da"
+    },
+    {
+      "path": "build-scripts/books/BOOKS34-FOLLOWUPS.md",
+      "sha256_lf": "25691dd984c00f88c9882c00c8a7ec9a57558c48ddb15e752b270ff461cdb5f9"
+    },
+    {
+      "path": "build-scripts/books/books34-followups-contract.json",
+      "sha256_lf": "0d24a84336400f62a8ceb1bcbe52fb57f1c954471675802c0fbdb466c1a2024b"
+    },
+    {
+      "path": "build-scripts/books/books34-followups-lesson-head.txt",
+      "sha256_lf": "9fa639122ef10135363978363b1f75248c3c34c6dc01cccc0c87812417462f57"
+    },
+    {
+      "path": "build-scripts/books/books34-followups-review.js",
+      "sha256_lf": "7c68e9c21b0c56029468bd15351652ce3d284212cbac772ebd269aa95650e941"
+    },
+    {
+      "path": "build-scripts/books/books34-followups-revision-pin.json",
+      "sha256_lf": "e3f268ce988e17054db283121f977efcd217f3b9e90ba7a9064bbf543b07fb6f"
+    },
+    {
+      "path": "build-scripts/books/books34-followups-revision.js",
+      "sha256_lf": "4ad02d4f965acf593a4192dc31c60c9af0a539a81d72adf901fc8dd5d8e03708"
+    },
+    {
+      "path": "build-scripts/books/books34-followups-revision.test.js",
+      "sha256_lf": "ce2a04a96d06a68a1a026353e8c089afc4281dd03febfa91a4de35e60600ac7e"
+    },
+    {
+      "path": "build-scripts/books/books34_followups_assemble.py",
+      "sha256_lf": "c58dc583a44cafe1d17c363cca35e7ec5df471285d68da84e520614588b720d1"
+    },
+    {
+      "path": "build-scripts/books/books34_followups_common.py",
+      "sha256_lf": "cf98f2f6ca5aabf96da2d378eb244b8bdce69a75dba4b93f7b11594ebaf251f6"
+    },
+    {
+      "path": "build-scripts/books/books34_links.py",
+      "sha256_lf": "89af5e6a90b3feb757ed6b6fc8fdb08fcaceeb55807bc736bcc5f01f11af0567"
+    },
+    {
+      "path": "build-scripts/books/rebuild_books34_followups.py",
+      "sha256_lf": "df2f0f6df921df2b308652718f9452cb846d742cd0d78252513c5db5f5bb42e6"
+    },
+    {
+      "path": "build-scripts/books/record_books34_followups_revision.js",
+      "sha256_lf": "e7a6f961616d65b444550f3f946e5d4a16431e6c89f3e7c5b287067e521dbd5d"
+    },
+    {
+      "path": "build-scripts/books/test_books34_followups.py",
+      "sha256_lf": "7e312f407a7e595569f4ada6547ad61ca9bbcae25ecb7a3f32a9d855a2fce1b2"
+    },
+    {
+      "path": "build-scripts/books/test_books34_links.py",
+      "sha256_lf": "540961740f18095cdda395bbb85526dbac1d02d8477a31b8dcbc1640386c83de"
+    },
+    {
+      "path": "build-scripts/books/verify_books34_followups.py",
+      "sha256_lf": "7bfce8dd6fe58ec26b7868759c87f4b6b95c19972456130a10fd5eb5bc815916"
+    },
+    {
+      "path": "build-scripts/ci/paired-paragraph-ci.test.js",
+      "sha256_lf": "822fcd96380b7518175e692171a4eaf14d3b1ec6e7aa9ffc2e73cb1c53f0f9b6"
+    },
+    {
+      "path": "build-scripts/maintenance/check-books34-v3-import.js",
+      "sha256_lf": "cf506b3473f1658f24c5b169c70d755a3c265cd9748128949c72e51844948a2b"
+    },
+    {
+      "path": "build-scripts/workflows/check-paragraph-lane-scope.js",
+      "sha256_lf": "d119be6ecf1309883e1699c98c469870ff8d16f0c4e2cf44d3a7ae1e992d3e79"
+    },
+    {
+      "path": "build-scripts/workflows/check-paragraph-lane-scope.test.js",
+      "sha256_lf": "e41b7be53c0c9beba65cc4c8c9ffdd45217667bfd29089b2af6e1581f3fbfb2e"
+    }
+  ],
+  "source_coverage": {
+    "baseline": "794cd54fe68f9b9a1bb413462373a133a459345c",
+    "sources": [
+      {
+        "path": "edities/books34-v3/books/book-3/chapters/3.1/Docenteninformatie.md",
+        "sha256": "46fdda1886adfc0df76f0a11b38182cf934a3040d1dd1976b961ae68a7e13aac"
+      },
+      {
+        "path": "edities/books34-v3/books/book-3/chapters/3.2/Docenteninformatie.md",
+        "sha256": "2e4043cfb28ce503cf37477914a53c3966682fe4604bfd4b91aaed96fe506e04"
+      },
+      {
+        "path": "edities/books34-v3/books/book-3/chapters/3.3/Docenteninformatie.md",
+        "sha256": "4b2951f5db50ba422a424a262d52cbc59b3cf566213c3bd175e71910a9f38c5e"
+      },
+      {
+        "path": "edities/books34-v3/books/book-4/chapters/4.1/Docenteninformatie.md",
+        "sha256": "0dd614ec1357e51a40dd19b6bc0480549e37c912b2de56ca403a31c7cb0e7e92"
+      },
+      {
+        "path": "edities/books34-v3/books/book-4/chapters/4.2/Docenteninformatie.md",
+        "sha256": "b7fed5653f6f8677eeeab66d84fc80f55d11455b84243f80d3f3a6e1d651a2ed"
+      },
+      {
+        "path": "edities/books34-v3/books/book-4/chapters/4.3/Docenteninformatie.md",
+        "sha256": "106f211aec0caa10c693014055874468e74b034a619d077bff30feb3ed1a8f85"
+      }
+    ],
+    "paragraphs": [
+      {
+        "id": "3.1.1",
+        "kind": "theory",
+        "extra_buffer": false,
+        "source_unchanged_except_timing": true,
+        "route_exercises": {
+          "Startopgaven": [
+            "1",
+            "2"
+          ],
+          "Begeleide inoefening": [
+            "3",
+            "4"
+          ],
+          "Zelfstandige oefening": [
+            "5",
+            "6"
+          ],
+          "Doeloefening": [
+            "7"
+          ]
+        },
+        "numeric_budget": null
+      },
+      {
+        "id": "3.1.2",
+        "kind": "theory",
+        "extra_buffer": true,
+        "source_unchanged_except_timing": true,
+        "route_exercises": {
+          "Startopgaven": [
+            "10",
+            "11"
+          ],
+          "Begeleide inoefening": [
+            "12",
+            "13"
+          ],
+          "Zelfstandige oefening": [
+            "14",
+            "15"
+          ],
+          "Doeloefening": [
+            "16"
+          ]
+        },
+        "numeric_budget": null
+      },
+      {
+        "id": "3.1.3",
+        "kind": "theory",
+        "extra_buffer": true,
+        "source_unchanged_except_timing": true,
+        "route_exercises": {
+          "Startopgaven": [
+            "19",
+            "20"
+          ],
+          "Begeleide inoefening": [
+            "21",
+            "22",
+            "22A"
+          ],
+          "Zelfstandige oefening": [
+            "23",
+            "24"
+          ],
+          "Doeloefening": [
+            "25"
+          ]
+        },
+        "numeric_budget": null
+      },
+      {
+        "id": "3.1.4",
+        "kind": "theory",
+        "extra_buffer": false,
+        "source_unchanged_except_timing": true,
+        "route_exercises": {
+          "Startopgaven": [
+            "28",
+            "29"
+          ],
+          "Begeleide inoefening": [
+            "30",
+            "31"
+          ],
+          "Zelfstandige oefening": [
+            "32",
+            "33"
+          ],
+          "Doeloefening": [
+            "34"
+          ]
+        },
+        "numeric_budget": null
+      },
+      {
+        "id": "3.1.5",
+        "kind": "theory",
+        "extra_buffer": true,
+        "source_unchanged_except_timing": true,
+        "route_exercises": {
+          "Startopgaven": [
+            "37",
+            "38"
+          ],
+          "Begeleide inoefening": [
+            "39",
+            "40",
+            "40A"
+          ],
+          "Zelfstandige oefening": [
+            "41",
+            "42"
+          ],
+          "Doeloefening": [
+            "43"
+          ]
+        },
+        "numeric_budget": null
+      },
+      {
+        "id": "3.1.6",
+        "kind": "mixed unchanged",
+        "extra_buffer": false,
+        "source_unchanged_except_timing": true,
+        "route_exercises": null,
+        "numeric_budget": 55
+      },
+      {
+        "id": "3.2.1",
+        "kind": "theory",
+        "extra_buffer": false,
+        "source_unchanged_except_timing": true,
+        "route_exercises": {
+          "Startopgaven": [
+            "1",
+            "2"
+          ],
+          "Begeleide inoefening": [
+            "3",
+            "4"
+          ],
+          "Zelfstandige oefening": [
+            "5",
+            "6"
+          ],
+          "Doeloefening": [
+            "7"
+          ]
+        },
+        "numeric_budget": null
+      },
+      {
+        "id": "3.2.2",
+        "kind": "theory",
+        "extra_buffer": false,
+        "source_unchanged_except_timing": true,
+        "route_exercises": {
+          "Startopgaven": [
+            "11",
+            "12"
+          ],
+          "Begeleide inoefening": [
+            "13",
+            "14"
+          ],
+          "Zelfstandige oefening": [
+            "15",
+            "16"
+          ],
+          "Doeloefening": [
+            "17"
+          ]
+        },
+        "numeric_budget": null
+      },
+      {
+        "id": "3.2.3",
+        "kind": "theory",
+        "extra_buffer": false,
+        "source_unchanged_except_timing": true,
+        "route_exercises": {
+          "Startopgaven": [
+            "20",
+            "21"
+          ],
+          "Begeleide inoefening": [
+            "22",
+            "23",
+            "24"
+          ],
+          "Zelfstandige oefening": [
+            "25",
+            "26"
+          ],
+          "Doeloefening": [
+            "27"
+          ]
+        },
+        "numeric_budget": null
+      },
+      {
+        "id": "3.2.4",
+        "kind": "mixed unchanged",
+        "extra_buffer": false,
+        "source_unchanged_except_timing": true,
+        "route_exercises": null,
+        "numeric_budget": 55
+      },
+      {
+        "id": "3.3.1",
+        "kind": "theory",
+        "extra_buffer": false,
+        "source_unchanged_except_timing": true,
+        "route_exercises": {
+          "Startopgaven": [
+            "1",
+            "2"
+          ],
+          "Begeleide inoefening": [
+            "3",
+            "4"
+          ],
+          "Zelfstandige oefening": [
+            "5",
+            "6"
+          ],
+          "Doeloefening": [
+            "7"
+          ]
+        },
+        "numeric_budget": null
+      },
+      {
+        "id": "3.3.2",
+        "kind": "theory",
+        "extra_buffer": false,
+        "source_unchanged_except_timing": true,
+        "route_exercises": {
+          "Startopgaven": [
+            "11",
+            "12"
+          ],
+          "Begeleide inoefening": [
+            "13",
+            "14"
+          ],
+          "Zelfstandige oefening": [
+            "15",
+            "16"
+          ],
+          "Doeloefening": [
+            "17"
+          ]
+        },
+        "numeric_budget": null
+      },
+      {
+        "id": "3.3.3",
+        "kind": "theory",
+        "extra_buffer": false,
+        "source_unchanged_except_timing": true,
+        "route_exercises": {
+          "Startopgaven": [
+            "21",
+            "22"
+          ],
+          "Begeleide inoefening": [
+            "23",
+            "24"
+          ],
+          "Zelfstandige oefening": [
+            "25",
+            "26"
+          ],
+          "Doeloefening": [
+            "27"
+          ]
+        },
+        "numeric_budget": null
+      },
+      {
+        "id": "3.3.4",
+        "kind": "mixed unchanged",
+        "extra_buffer": false,
+        "source_unchanged_except_timing": true,
+        "route_exercises": null,
+        "numeric_budget": 55
+      },
+      {
+        "id": "4.1.1",
+        "kind": "theory",
+        "extra_buffer": false,
+        "source_unchanged_except_timing": true,
+        "route_exercises": {
+          "Startopgaven": [
+            "1",
+            "2"
+          ],
+          "Begeleide inoefening": [
+            "3",
+            "4"
+          ],
+          "Zelfstandige oefening": [
+            "5",
+            "6"
+          ],
+          "Doeloefening": [
+            "7"
+          ]
+        },
+        "numeric_budget": null
+      },
+      {
+        "id": "4.1.2",
+        "kind": "theory",
+        "extra_buffer": false,
+        "source_unchanged_except_timing": true,
+        "route_exercises": {
+          "Startopgaven": [
+            "11",
+            "12"
+          ],
+          "Begeleide inoefening": [
+            "13",
+            "14",
+            "15"
+          ],
+          "Zelfstandige oefening": [
+            "16",
+            "17"
+          ],
+          "Doeloefening": [
+            "18"
+          ]
+        },
+        "numeric_budget": null
+      },
+      {
+        "id": "4.1.3",
+        "kind": "theory",
+        "extra_buffer": false,
+        "source_unchanged_except_timing": true,
+        "route_exercises": {
+          "Startopgaven": [
+            "21",
+            "22"
+          ],
+          "Begeleide inoefening": [
+            "23",
+            "24",
+            "25"
+          ],
+          "Zelfstandige oefening": [
+            "26",
+            "27"
+          ],
+          "Doeloefening": [
+            "28"
+          ]
+        },
+        "numeric_budget": null
+      },
+      {
+        "id": "4.1.4",
+        "kind": "theory",
+        "extra_buffer": false,
+        "source_unchanged_except_timing": true,
+        "route_exercises": {
+          "Startopgaven": [
+            "31",
+            "32"
+          ],
+          "Begeleide inoefening": [
+            "33",
+            "34",
+            "35"
+          ],
+          "Zelfstandige oefening": [
+            "36",
+            "37"
+          ],
+          "Doeloefening": [
+            "38"
+          ]
+        },
+        "numeric_budget": null
+      },
+      {
+        "id": "4.1.5",
+        "kind": "mixed unchanged",
+        "extra_buffer": false,
+        "source_unchanged_except_timing": true,
+        "route_exercises": null,
+        "numeric_budget": 55
+      },
+      {
+        "id": "4.2.1",
+        "kind": "theory",
+        "extra_buffer": false,
+        "source_unchanged_except_timing": true,
+        "route_exercises": {
+          "Startopgaven": [
+            "1",
+            "2"
+          ],
+          "Begeleide inoefening": [
+            "3",
+            "4"
+          ],
+          "Zelfstandige oefening": [
+            "5",
+            "6"
+          ],
+          "Doeloefening": [
+            "7"
+          ]
+        },
+        "numeric_budget": null
+      },
+      {
+        "id": "4.2.2",
+        "kind": "theory",
+        "extra_buffer": false,
+        "source_unchanged_except_timing": true,
+        "route_exercises": {
+          "Startopgaven": [
+            "10",
+            "11"
+          ],
+          "Begeleide inoefening": [
+            "12",
+            "13"
+          ],
+          "Zelfstandige oefening": [
+            "14",
+            "15"
+          ],
+          "Doeloefening": [
+            "16"
+          ]
+        },
+        "numeric_budget": null
+      },
+      {
+        "id": "4.2.3",
+        "kind": "theory",
+        "extra_buffer": false,
+        "source_unchanged_except_timing": true,
+        "route_exercises": {
+          "Startopgaven": [
+            "19",
+            "20"
+          ],
+          "Begeleide inoefening": [
+            "21",
+            "22"
+          ],
+          "Zelfstandige oefening": [
+            "23",
+            "24"
+          ],
+          "Doeloefening": [
+            "25"
+          ]
+        },
+        "numeric_budget": null
+      },
+      {
+        "id": "4.2.4",
+        "kind": "theory",
+        "extra_buffer": true,
+        "source_unchanged_except_timing": true,
+        "route_exercises": {
+          "Startopgaven": [
+            "28",
+            "29"
+          ],
+          "Begeleide inoefening": [
+            "30",
+            "31"
+          ],
+          "Zelfstandige oefening": [
+            "32",
+            "33"
+          ],
+          "Doeloefening": [
+            "34"
+          ]
+        },
+        "numeric_budget": null
+      },
+      {
+        "id": "4.2.5",
+        "kind": "theory",
+        "extra_buffer": true,
+        "source_unchanged_except_timing": true,
+        "route_exercises": {
+          "Startopgaven": [
+            "37",
+            "38"
+          ],
+          "Begeleide inoefening": [
+            "39",
+            "40"
+          ],
+          "Zelfstandige oefening": [
+            "41",
+            "42"
+          ],
+          "Doeloefening": [
+            "43"
+          ]
+        },
+        "numeric_budget": null
+      },
+      {
+        "id": "4.2.6",
+        "kind": "theory",
+        "extra_buffer": false,
+        "source_unchanged_except_timing": true,
+        "route_exercises": {
+          "Startopgaven": [
+            "46",
+            "47"
+          ],
+          "Begeleide inoefening": [
+            "48",
+            "49"
+          ],
+          "Zelfstandige oefening": [
+            "50",
+            "51"
+          ],
+          "Doeloefening": [
+            "52"
+          ]
+        },
+        "numeric_budget": null
+      },
+      {
+        "id": "4.2.7",
+        "kind": "mixed unchanged",
+        "extra_buffer": false,
+        "source_unchanged_except_timing": true,
+        "route_exercises": null,
+        "numeric_budget": 55
+      },
+      {
+        "id": "4.3.1",
+        "kind": "theory",
+        "extra_buffer": false,
+        "source_unchanged_except_timing": true,
+        "route_exercises": {
+          "Startopgaven": [
+            "1",
+            "2"
+          ],
+          "Begeleide inoefening": [
+            "3",
+            "4"
+          ],
+          "Zelfstandige oefening": [
+            "5",
+            "6"
+          ],
+          "Doeloefening": [
+            "7"
+          ]
+        },
+        "numeric_budget": null
+      },
+      {
+        "id": "4.3.2",
+        "kind": "theory",
+        "extra_buffer": false,
+        "source_unchanged_except_timing": true,
+        "route_exercises": {
+          "Startopgaven": [
+            "10",
+            "11"
+          ],
+          "Begeleide inoefening": [
+            "12",
+            "13"
+          ],
+          "Zelfstandige oefening": [
+            "14",
+            "15"
+          ],
+          "Doeloefening": [
+            "16"
+          ]
+        },
+        "numeric_budget": null
+      },
+      {
+        "id": "4.3.3",
+        "kind": "theory",
+        "extra_buffer": false,
+        "source_unchanged_except_timing": true,
+        "route_exercises": {
+          "Startopgaven": [
+            "19",
+            "20"
+          ],
+          "Begeleide inoefening": [
+            "21",
+            "22"
+          ],
+          "Zelfstandige oefening": [
+            "23",
+            "24"
+          ],
+          "Doeloefening": [
+            "25"
+          ]
+        },
+        "numeric_budget": null
+      },
+      {
+        "id": "4.3.4",
+        "kind": "theory",
+        "extra_buffer": false,
+        "source_unchanged_except_timing": true,
+        "route_exercises": {
+          "Startopgaven": [
+            "28",
+            "29"
+          ],
+          "Begeleide inoefening": [
+            "30",
+            "31"
+          ],
+          "Zelfstandige oefening": [
+            "32",
+            "33"
+          ],
+          "Doeloefening": [
+            "34"
+          ]
+        },
+        "numeric_budget": null
+      },
+      {
+        "id": "4.3.5",
+        "kind": "mixed unchanged",
+        "extra_buffer": false,
+        "source_unchanged_except_timing": true,
+        "route_exercises": null,
+        "numeric_budget": 55
+      }
+    ],
+    "theory": 25,
+    "mixed": 6,
+    "heavy": [
+      "3.1.2",
+      "3.1.3",
+      "3.1.5",
+      "4.2.4",
+      "4.2.5"
+    ],
+    "answer_heading_only": true,
+    "curriculum_routes_unchanged": true
+  },
+  "navigation_and_pixels": {
+    "baseline": "794cd54fe68f9b9a1bb413462373a133a459345c",
+    "method": "pypdf raw annotation /Rect and /XYZ destinations resolved per source document; independent of production resolve_link conversion",
+    "navigation": [
+      {
+        "chapter": "3.1",
+        "opening_page": 5,
+        "old_annotations": 0,
+        "new_annotations": 28,
+        "all_source_annotation_count": 28,
+        "distinct_opening_target_pages": [
+          6,
+          14,
+          23,
+          32,
+          39,
+          48,
+          52
+        ],
+        "raw_pdf_rectangles_and_xyz_preserved": true
+      },
+      {
+        "chapter": "3.2",
+        "opening_page": 53,
+        "old_annotations": 0,
+        "new_annotations": 0,
+        "all_source_annotation_count": 0,
+        "distinct_opening_target_pages": [],
+        "raw_pdf_rectangles_and_xyz_preserved": true
+      },
+      {
+        "chapter": "3.3",
+        "opening_page": 87,
+        "old_annotations": 0,
+        "new_annotations": 19,
+        "all_source_annotation_count": 19,
+        "distinct_opening_target_pages": [
+          88,
+          97,
+          107,
+          117,
+          124
+        ],
+        "raw_pdf_rectangles_and_xyz_preserved": true
+      },
+      {
+        "chapter": "4.1",
+        "opening_page": 5,
+        "old_annotations": 0,
+        "new_annotations": 0,
+        "all_source_annotation_count": 0,
+        "distinct_opening_target_pages": [],
+        "raw_pdf_rectangles_and_xyz_preserved": true
+      },
+      {
+        "chapter": "4.2",
+        "opening_page": 53,
+        "old_annotations": 0,
+        "new_annotations": 28,
+        "all_source_annotation_count": 28,
+        "distinct_opening_target_pages": [
+          55,
+          63,
+          71,
+          77,
+          88,
+          99,
+          105
+        ],
+        "raw_pdf_rectangles_and_xyz_preserved": true
+      },
+      {
+        "chapter": "4.3",
+        "opening_page": 113,
+        "old_annotations": 0,
+        "new_annotations": 24,
+        "all_source_annotation_count": 24,
+        "distinct_opening_target_pages": [
+          114,
+          124,
+          132,
+          141,
+          149,
+          155
+        ],
+        "raw_pdf_rectangles_and_xyz_preserved": true
+      }
+    ],
+    "student_books": [
+      {
+        "book": "3",
+        "pages": 132,
+        "all_text_pixels_equal": true,
+        "all_preexisting_nonchapter_links_equal": true,
+        "bookmarks_equal": true,
+        "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+      },
+      {
+        "book": "4",
+        "pages": 166,
+        "all_text_pixels_equal": true,
+        "all_preexisting_nonchapter_links_equal": true,
+        "bookmarks_equal": true,
+        "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+      }
+    ],
+    "answer": {
+      "pages": 74,
+      "only_changed_page": 51,
+      "other73_pages_pixel_identical": true
+    }
+  },
+  "visual_review": {
+    "renderer": "Poppler pdftoppm 110dpi",
+    "files": [
+      {
+        "id": 1,
+        "path": "books/book-3/output/Boek_3_Compleet_Docenteninformatie_v3.pdf",
+        "sha256": "7b13b7ed57a68c1eb6974c601d74b64ac2743d07c3d38b9ae2519a64ebdca37e",
+        "review_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22
+        ]
+      },
+      {
+        "id": 2,
+        "path": "books/book-4/output/Boek_4_Compleet_Docenteninformatie_v3.pdf",
+        "sha256": "a6d4a5ed399c8dc373cda604db7914a3f82c2a70cc15233ddfe3ae192d4ea5ee",
+        "review_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      },
+      {
+        "id": 3,
+        "path": "books/book-3/output/Boek_3_Compleet_Antwoorden_v3.pdf",
+        "sha256": "99bb148be789986f193b4aa534be62c0c7a91cd15e476660ab8106c0627a5a25",
+        "review_pages": [
+          50,
+          51,
+          52
+        ]
+      },
+      {
+        "id": 4,
+        "path": "books/book-3/chapters/3.2/output/Boek_3_H2_Antwoorden_v3.pdf",
+        "sha256": "c4f246cd3ca1493c2436ab75e5bf3d6933eb64d2380135f11f9c2a5b4ef3000e",
+        "review_pages": [
+          16,
+          17,
+          18
+        ]
+      },
+      {
+        "id": 5,
+        "path": "books/book-3/output/Boek_3_Compleet_v3.pdf",
+        "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39",
+        "review_pages": [
+          5,
+          87
+        ]
+      },
+      {
+        "id": 6,
+        "path": "books/book-4/output/Boek_4_Compleet_v3.pdf",
+        "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8",
+        "review_pages": [
+          53,
+          113
+        ]
+      }
+    ],
+    "pages": 60,
+    "contact_sheets": 10,
+    "full_size_views": [
+      "01-p004.png",
+      "01-p005.png",
+      "01-p006.png",
+      "01-p008.png",
+      "02-p015.png",
+      "02-p016.png",
+      "03-p051.png"
+    ],
+    "external_render_directory": "C:\\wt\\book 2\\b34-signed-20260926\\review\\followups\\renders"
+  },
+  "independent_tests": {
+    "link_python": 4,
+    "teacher_front_python": 4,
+    "finite_javascript": 15,
+    "all_affected_javascript": 49,
+    "structural_checks": 598,
+    "question_answer_mappings": 734
+  },
+  "limitations": [
+    "No empirical timing or full curriculum/target approval",
+    "No merge/publication permission",
+    "Remote CI and final head identities are subsequent closure checks"
+  ],
+  "reviewed_lesson_commit": "c20ad77a165e97fe55a3da6ac6666cc151533ee5"
+}
