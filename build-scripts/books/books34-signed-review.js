@@ -20,7 +20,11 @@ function snapshots(doc,hash){
   });
 }
 function run({check=false,root=r.ROOT,lessons=path.resolve(root,'../4veco-lessen')}={}){
-  const verified=r.verify({root,lessons});if(!verified.passed)throw Error(JSON.stringify(verified));
+  // Reuse these historical bindings only for the exact accepted signed tree.
+  // Its recorded dispatcher bytes are checked at the accepted Git commit;
+  // the current dispatcher has a separately reviewed successor. Never repin
+  // these snapshots or use this command to approve follow-up publications.
+  const verified=require('./books34-followups-revision').acceptedSignedBaseline({root,lessons});if(!verified.passed)throw Error(JSON.stringify(verified));
   const bytes=fs.readFileSync(path.join(lessons,r.MANIFEST)),rows=snapshots(JSON.parse(bytes),prior.sha(bytes)),folder=path.join(root,OUTPUT);
   if(!check)fs.mkdirSync(folder,{recursive:true});
   for(const {id,snapshot,digest} of rows){

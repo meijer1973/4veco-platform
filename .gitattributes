@@ -174,3 +174,10 @@ references/staged/books34-v3/** -text whitespace=-blank-at-eol,-blank-at-eof,-sp
 # ending here; actual trailing spaces and the other whitespace checks remain.
 reports/review-gates/book2-theory-signed-20260921/current-assembly-check.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 reports/review-gates/book2-theory-signed-20260921/reference-proposals.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Historical book acceptance checks compare these exact Git blob bytes.
+# Preserve them at checkout; do not normalize or repin historical evidence.
+build-scripts/books/exercise-route-revision-pin.json -text
+build-scripts/books/book2-signed-revision-pin.json -text
+build-scripts/books/books34-signed-revision-pin.json -text
+references/data/procedure-visual/procedure-templates.json -text

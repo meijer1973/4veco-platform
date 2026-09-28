@@ -21,6 +21,17 @@ test('slide PDF belongs to companion without admitting textbook or arbitrary PDF
   expect(classifyPath(dir + '2.1.1 Kostenstructuren – paragraaf.pdf').category).toBe('partA_textbook');
   expect(classifyPath(dir + 'unreviewed.pdf').category).toBe('unknown');
 });
+test('Books 3/4 follow-ups retain finite textbook ownership and Part B separation', () => {
+  const files = require('../books/books34-followups-revision-pin.json').revision_paths;
+  expect(checkLaneScope({lane: 'textbook', changedPaths: files}).ok).toBe(true);
+  expect(checkLaneScope({lane: 'companion', changedPaths: files}).ok).toBe(false);
+  for (const name of ['books34-followups-unreviewed.json', 'edities/books34-v3/checks/followups-other.json']) {
+    expect(classifyPath(name).category).toBe('unknown');
+  }
+  const companion = 'edities/books34-v3/books/book-3/chapters/3.1/3.1.1 - korte-check.html';
+  expect(classifyPath(companion).category).toBe('partB_companion');
+  expect(checkLaneScope({lane: 'textbook', changedPaths: [...files, companion]}).ok).toBe(false);
+});
 test('signed Books 3/4 revision adds only its finite Part A ownership', () => {
   const files = require('../books/books34-signed-revision-pin.json').revision_paths;
   expect(checkLaneScope({lane: 'textbook', changedPaths: files}).ok).toBe(true);
