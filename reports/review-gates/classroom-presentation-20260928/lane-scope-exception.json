@@ -1,8 +1,0 @@
-{
-  "lane_scope_exception": {
-    "allowed": true,
-    "reason": "The owner explicitly requested integrating the classroom PowerPoint workflow into repository instructions and placing the accepted lesson artifacts in lessons. The lesson diff therefore intentionally combines its AGENTS.md entry with Part B PPTX/slide-PDF output and provenance; no Part A textbook source or generated textbook PDF changes are authorized by this exception.",
-    "review_required": "Independent review of workflow routing and scoped source/output ownership, plus rendered and content review of the lesson presentations; record results in the paired PRs.",
-    "human_visibility": true
-  }
-}
