@@ -106,8 +106,15 @@ with ZipFile(pptx) as z:
             elif name=='Verliesafstand':
                 require(xs==[50,50],'Loss segment must be vertical at Q=50')
                 close(ys[0],p*50); close(ys[1],f+v*50)
-        require('TK' in found and ('TO' in found)==(stage>=2),'Progressive chart sequence incorrect')
-        require(('Winstafstand' in found)==(stage==3),'Premature/missing profit segment')
+        expected = {'TK'}
+        if stage >= 2:
+            expected.update(('TO', 'Break-even'))
+        if stage == 3:
+            expected.add('Winstafstand')
+            if number < 20:
+                expected.add('Verliesafstand')
+        require(set(found) == expected,
+                f'Slide {number}: expected series {sorted(expected)}, found {sorted(found)}')
     table_count=sum(len(r.findall('.//a:tbl',ns)) for r in roots)
     require(table_count==6,'Six editable tables expected')
 
