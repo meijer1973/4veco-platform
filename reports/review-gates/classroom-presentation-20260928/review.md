@@ -126,3 +126,31 @@ while the unchanged delivered deck passes. This changes validation only.
 Publish paired PRs on the task branch. PR/CI status is reported in the PRs and
 task completion rather than duplicated into this evidence with stale commit IDs.
 No merge, deployment, textbook revision or full companion acceptance is included.
+
+## Repository integration repair
+
+The first full CI run exposed an existing Windows checkout problem in the
+signed-edition predecessor check: an unmarked JSON pin was converted to CRLF.
+An isolated checkout reproduced the failure despite the workflow's normalization.
+Exact `-text` attributes for the two historical pins and held PV file preserve
+their committed bytes; no pin, manifest or protected source was changed.
+
+Checking the actual paired lesson checkout also exposed that the closed
+historical receipt rejects additional companion files. The current
+`check-classroom-edition.js` adapter preserves all 1,477 signed files, original
+manifest/pin, predecessor, source, platform-input and staged-byte checks. It
+admits only new, correctly named presentation/PDF/evidence files in an existing
+Book 2 paragraph folder, plus the lesson navigation map. It does not certify
+slide quality or amend the signed book. The sealed import verifier remains
+unchanged for historical audits; the current npm structure command and test
+use the adapter.
+
+Both unchanged lessons at `794cd54fe68f9b9a1bb413462373a133a459345c` and the
+paired lesson branch pass with `requireTracked`, the latter admitting exactly
+six new classroom files. Eighteen adapter tests cover preservation, changed
+or missing textbook files, attempted repinning, unknown additions, staged
+drift, unrelated historical failures and exact Windows checkout bytes.
+The existing signed-inventory and structural tests also pass. An independent
+review found no remaining issue and independently reproduced all three exact
+checkout-byte checks. Presentation source and final artifact bytes are unchanged;
+this repair concerns repository integration after the successful cold build.

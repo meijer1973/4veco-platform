@@ -3,7 +3,7 @@ const fs=require('fs'),path=require('path');
 const {validateStructuralRecords,lookupParagraph}=require('./books34-selected-structure');
 const {TRANSITIONS,acceptsTransition}=require('./books34-authority-transition');
 const {verify,verifyDeliveredFile}=require('../maintenance/check-books34-chat-import');
-const {verify:verifyV3}=require('../maintenance/check-books34-v3-import');
+const {verify:verifyV3}=require('../maintenance/check-classroom-edition');
 const {REVISION}=require('./migrate-books34-v3');
 const root=path.resolve(__dirname,'../..');
 const current=()=>structuredClone(require('../../references/authored/course-target-exercises.json'));

@@ -128,6 +128,19 @@ writes named files without deleting these presentation files. Its generated
 `LEESMIJ.md` must not hold persistent presentation instructions. Link new decks
 from the lesson repository map.
 
+For this signed Book 2 edition, run the following after staging the final lesson files:
+
+```powershell
+node build-scripts/maintenance/check-classroom-edition.js --require-tracked
+```
+
+It admits only these additional slides/PDFs/evidence in an existing paragraph
+and the lesson map, while preserving every signed book file and source hash.
+The original import verifier audits the closed historical receipt; do not repin
+that receipt to include companion files. This compatibility check establishes
+preservation and scope, not slide quality; the rendering/content review below
+remains required. `npm run check:books34-structure` uses this current adapter.
+
 Use the installed presentation skill and its dependency discovery (in Codex,
 `load_workspace_dependencies`). Set `RUNTIME_NODE`, `RUNTIME_NODE_MODULES`,
 `RUNTIME_PYTHON` from that runtime, and `SKILL_DIR` to the installed Presentations
