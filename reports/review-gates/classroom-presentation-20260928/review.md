@@ -154,3 +154,26 @@ The existing signed-inventory and structural tests also pass. An independent
 review found no remaining issue and independently reproduced all three exact
 checkout-byte checks. Presentation source and final artifact bytes are unchanged;
 this repair concerns repository integration after the successful cold build.
+
+## Follow-up A: embedded chart workbook consistency
+
+The external review requested validation hardening, without claiming that any
+existing graph was incorrect. `build-scripts/presentations/chart_workbooks.py`
+now follows each native chart's workbook relationship and A1 references, then
+compares saved numeric/text cache values with the embedded XLSX cells. It
+checks range lengths, missing/duplicate points, worksheet resolution and used
+chart declarations. External sources, unsupported references and formula cells
+fail explicitly; the checker does not evaluate workbook formulas or establish
+economic/visual correctness. The §2.1.2 saved-deck checker invokes it too.
+
+- Accepted §2.1.1: two workbooks, ten references, forty compared cells, PASS.
+- Accepted §2.1.2: six workbooks, thirty-four references, sixty cells, PASS.
+- For each actual deck, a temporary copy with only workbook cell B2 changed
+  fails. A separate copy with only the corresponding chart cache changed fails.
+  Original PPTX bytes and previously recorded hashes remain unchanged.
+- Fourteen Python tests cover both mutations and malformed/unsupported data,
+  shared text categories, references, missing values and declarations. The
+  Jest bridge runs the portable fixture checks in normal CI; actual-deck tests
+  run with `test_chart_workbooks.py --pptx <file>` against paired lesson files.
+- Independent review passed the real-deck mutations, §2.1.2 integration and
+  inline-text consistency checks without an actionable finding.

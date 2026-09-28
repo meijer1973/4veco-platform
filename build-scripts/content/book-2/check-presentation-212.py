@@ -14,6 +14,9 @@ import posixpath
 import re
 import sys
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'presentations'))
+from chart_workbooks import check_presentation
+
 pptx, lessons = Path(sys.argv[1]), Path(sys.argv[2])
 facts = json.loads(Path(__file__).with_name('presentation-212.manifest.json').read_text(encoding='utf-8-sig'))
 ns = {'p':'http://schemas.openxmlformats.org/presentationml/2006/main',
@@ -118,4 +121,6 @@ with ZipFile(pptx) as z:
     table_count=sum(len(r.findall('.//a:tbl',ns)) for r in roots)
     require(table_count==6,'Six editable tables expected')
 
-print(json.dumps({'ok':True,'slides':28,'notes':28,'tables':table_count,'scatterCharts':chart_count,'overviewSlides':[1,14,28],'sourceHashes':len(facts['sourceFiles']),'graphCoordinateTolerance':1e-8,'pptxSha256':hashlib.sha256(pptx.read_bytes()).hexdigest()},indent=2))
+workbook_check = check_presentation(pptx)
+require(workbook_check['charts'] == chart_count, 'Expected every chart workbook to be checked')
+print(json.dumps({'ok':True,'slides':28,'notes':28,'tables':table_count,'scatterCharts':chart_count,'overviewSlides':[1,14,28],'sourceHashes':len(facts['sourceFiles']),'graphCoordinateTolerance':1e-8,'chartWorkbooks':workbook_check,'pptxSha256':hashlib.sha256(pptx.read_bytes()).hexdigest()},indent=2))

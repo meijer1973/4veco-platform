@@ -182,6 +182,12 @@ before-answer order. Verify all three overviews match and tables/charts remain
 native. Export the matching PDF from that final PPTX and check it too. A clean
 package or book-PDF validator alone does not establish slide quality.
 
+Check editable chart data with `python build-scripts/presentations/chart_workbooks.py FINAL.pptx`.
+It compares each chart's cached values with its referenced embedded workbook
+cells. Unsupported references or formula cells fail explicitly; do not claim
+they were checked. This data-consistency check complements the economic and
+visual checks above. The §2.1.2 checker calls it automatically.
+
 The scoped review records source commit/paths/hashes, assignment/page facts,
 target-question/answer checks, notes, native objects, overview parity, visual
 findings, renderer/PowerPoint used and artifact SHA-256 hashes. Keep classroom
