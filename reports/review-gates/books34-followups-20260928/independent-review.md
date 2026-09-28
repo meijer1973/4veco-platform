@@ -8,7 +8,7 @@ Accepted baseline: Platform `1761cb96ef25da67b7830fade96e17d7a4db53ac`; Lessons 
 Review manifest SHA256: `a0109495ab7cae046493a78d18b6c5ad22e4673663675b1232eba9d9aaae1814`
 
 All 1,480 inventory files and lengths, 42 changed lesson paths, 16 manifest-bound platform inputs, final render source hashes and the committed/staged candidate were independently checked. Reviewed lesson commit: `c20ad77a165e97fe55a3da6ac6666cc151533ee5`.
-Implementation/evidence inventory: [independent-evidence.json](independent-evidence.json), SHA256 `b8f69d3c64b2b58cd875574192d5b342a1cbdd8023fc240ac016cc8f7ea61bb4`. It binds all 21 reviewed new/changed implementation, test, workflow, documentation and exact-pair pin files independently of the publication manifest; final platform commit containment remains the author’s closure check.
+Implementation/evidence inventory: [independent-evidence.json](independent-evidence.json), SHA256 `56854e9996212ef0703fbd951b2750a7577177949883144324ff1c94849e4c16`. It binds all 23 reviewed new/changed implementation, test, workflow, documentation and exact-pair pin files independently of the publication manifest; final platform commit containment remains the author’s closure check.
 
 ## 1. Review and evidence
 
@@ -87,7 +87,18 @@ The first historical signed-pair CI run [36407624766](https://github.com/meijer1
 
 The repair changes only the initial gate in `books34-signed-review.js` to the already-reviewed `acceptedSignedBaseline({root, lessons})` path. It accepts exactly the prior signed inventory and authenticates the historical dispatcher at the accepted Git commit. The subsequent six snapshot, verdict and independent digest checks are unchanged. Independent rechecking confirms all six snapshots/reviews and the old manifest retain their accepted bytes/bindings; running the repaired historical command against the current follow-up edition rejects it with `Changed accepted signed inventory`. The current 31-paragraph review checker still passes. Thus the old review cannot certify the successor publications, and no historical pin, report or snapshot was refreshed to accommodate them.
 
-This narrow compatibility repair is accepted and bound as the 21st implementation file. All 1,480 current publication-inventory hashes were rechecked without a PDF rebuild; manifest and lesson commit remain unchanged. A direct positive invocation of the repaired historical command on its exact historical checkout remains the subsequent CI rerun, rather than an invented local result. No further source or publication change is required by this finding.
+This narrow compatibility repair is accepted and bound as the 21st implementation file. All 1,480 current publication-inventory hashes were rechecked without a PDF rebuild; manifest and lesson commit remain unchanged. The direct positive invocation subsequently passed in historical signed CI [36408148207](https://github.com/meijer1973/4veco-platform/actions/runs/36408148207) at platform `4022ab8cee439f1ce2509f6df959cd489b65f689`; the reviewer independently checked this result. No further source or publication change is required by this finding.
+
+
+### Historical-byte checkout repair after Windows CI
+
+Full Windows CI [36408147719](https://github.com/meijer1973/4veco-platform/actions/runs/36408147719) at `4022ab8cee439f1ce2509f6df959cd489b65f689` reported one failure: the current v3 identity test found changed raw bytes for `exercise-route-revision-pin.json`; 2,180 tests passed. All four paired workflows at that head passed, including the repaired historical signed review and the exact current successor pair. The available failure log identifies the mismatched file but does not include its raw runner bytes. Consequently this review does not retrospectively claim to have proved that those unavailable bytes were CRLF.
+
+The narrow repair sets `-text` only on the three historical book acceptance pins and the held procedure-template JSON, whose consumers require exact Git blob bytes. It does not normalize, rewrite or repin them and changes no verifier logic. Independent checks confirm all four working files are still byte-for-byte identical to accepted platform `1761cb96ef25da67b7830fade96e17d7a4db53ac`. The ordinary attributes for other files are unchanged.
+
+The new Git fixture uses the actual four committed blobs, an initial `core.autocrlf=true` checkout, an aged stat-clean index, and the workflow's later `reset --hard` / forced `checkout-index` normalization sequence. Without the four rules it independently reproduces CRLF surviving that sequence; with the rules all four files retain their exact Git blob bytes. Both cases pass, including the assertion that the negative case differs only in line endings. Combined with the unchanged selected-structure suite, all 16 focused tests passed independently. The already-excluded historical Y1 test was not executed or unsealed.
+
+This reproduces and prevents a checkout condition consistent with the observed CI failure; it is deliberately distinguished from proof of the absent failing-runner bytes. The change is accepted as a bounded checkout-integrity repair and adds only two implementation bindings, for a total of 23. All 1,480 publication inventory hashes, the lesson head and the manifest were rechecked unchanged. A full Windows CI rerun on the final patched head remains required to close the observed CI failure; no PDF rebuild or content review repetition is needed.
 
 ## 2. Verdict
 

@@ -50,6 +50,10 @@
   "platform_inputs_verified": 16,
   "implementation": [
     {
+      "path": ".gitattributes",
+      "sha256_lf": "55024b2f65d73bb6d92b717af2fd0597bc502d908922a9b6f16d30fe14ffd057"
+    },
+    {
       "path": ".github/workflows/paired-books34-followups-ci.yml",
       "sha256_lf": "d4fe6c47492c6bbba20486234760956ad417f5414428847af362c5757c8097da"
     },
@@ -80,6 +84,10 @@
     {
       "path": "build-scripts/books/books34-followups-revision.test.js",
       "sha256_lf": "ce2a04a96d06a68a1a026353e8c089afc4281dd03febfa91a4de35e60600ac7e"
+    },
+    {
+      "path": "build-scripts/books/books34-historical-checkout.test.js",
+      "sha256_lf": "2887629ce6ac42093bb6546649c783f1db45654b9a0f7290420a7673960bdcf5"
     },
     {
       "path": "build-scripts/books/books34-signed-review.js",
@@ -1094,7 +1102,58 @@
       "41 JavaScript tests passed",
       "failure isolated to historical review runner stale dispatcher input"
     ],
-    "direct_positive_new_runner": "Pending rerun on exact accepted tree in CI; no local full checkout constructed",
+    "direct_positive_new_runner": {
+      "result": "PASS",
+      "run": "https://github.com/meijer1973/4veco-platform/actions/runs/36408148207",
+      "head": "4022ab8cee439f1ce2509f6df959cd489b65f689"
+    },
     "no_publication_or_manifest_changes": true
+  },
+  "checkout_recheck": {
+    "scope": "Four exact historical paths receive -text checkout attributes; verifier, historical bytes, publication sources and manifest unchanged",
+    "protected_files": [
+      {
+        "path": "build-scripts/books/exercise-route-revision-pin.json",
+        "sha256": "263eedcfa6ed4f8973841db604b1d487d8ff4a780604b3e56d6de587cb7154d1",
+        "bytes": 31601,
+        "exact_accepted_bytes": true
+      },
+      {
+        "path": "build-scripts/books/book2-signed-revision-pin.json",
+        "sha256": "1cdaa5edab22e9f98a00062b291a918f508e86a80aff896c753c66d5e423bd02",
+        "bytes": 46758,
+        "exact_accepted_bytes": true
+      },
+      {
+        "path": "build-scripts/books/books34-signed-revision-pin.json",
+        "sha256": "b0ea2d18c8e7aa072c24da7118559037f7c2c21c71e117765cc238a3edf68aae",
+        "bytes": 3919,
+        "exact_accepted_bytes": true
+      },
+      {
+        "path": "references/data/procedure-visual/procedure-templates.json",
+        "sha256": "b7c1503821c0eb6010f4e3d68eb0713f877795e17eb0bead590a2be0828bb8c4",
+        "bytes": 22594,
+        "exact_accepted_bytes": true
+      }
+    ],
+    "focused_jest_tests_passed": 16,
+    "fixture_positive_cases": 1,
+    "fixture_negative_cases": 1,
+    "fixture_condition": "Actual Git blobs, initial core.autocrlf=true checkout, aged stat-clean index, then current workflow reset/checkout-index normalization",
+    "observed_negative": "CRLF survives normalization without path rules; normalized text equals original",
+    "observed_positive": "All four files remain exact Git blob bytes with path rules",
+    "failed_ci": "https://github.com/meijer1973/4veco-platform/actions/runs/36408147719",
+    "failed_ci_head": "4022ab8cee439f1ce2509f6df959cd489b65f689",
+    "failed_ci_observation": "One failed test: historical exercise-route pin bytes differ; 2180 tests passed",
+    "diagnostic_limit": "Actual failing runner pin bytes were not captured. Reproduced checkout condition supports the fix but does not establish those missing bytes retrospectively.",
+    "unchanged_paired_workflows_passed_at_4022": {
+      "route": 36408147883,
+      "book2_signed": 36408147874,
+      "books34_signed": 36408148207,
+      "followups": 36408147772
+    },
+    "full_windows_ci_after_fix": "Pending",
+    "sealed_y1_test_execution": "No tests ran; excluded by repository Jest configuration; no override attempted"
   }
 }
