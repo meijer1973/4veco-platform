@@ -4,6 +4,13 @@
   "status": "production_policy",
   "derived_from": "references/exemplars/1.1.1-golden-presentation/",
   "surfaces": {
+    "classroom_powerpoint": {
+      "role": "live_teaching_presentation",
+      "description": "Default for a paragraph PowerPoint request: source-grounded teacher slides, editable PPTX and matching PDF, directly generated without a web prerequisite.",
+      "contract": "docs/workflows/classroom-presentation.md",
+      "notes": "teacher_supporting",
+      "navigation": "three_shared_classroom_overviews"
+    },
     "web_first_presentation": {
       "role": "design_source",
       "description": "Semantic web presentation reviewed before derivative exports."
@@ -25,6 +32,7 @@
       "description": "Shows source, generation, rendered output, tests, screenshots, and review evidence."
     }
   },
+  "universal_presentation_duties_scope": "web_first_presentation and its generated web/PPTX derivatives; classroom_powerpoint uses its named contract",
   "universal_presentation_duties": [
     "route_contract",
     "concept_model_development",

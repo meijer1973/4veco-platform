@@ -41,6 +41,7 @@ route below and verify the reviewed commit before any authorized merge.
 | Read-only investigation | Affected files and evidence. [Repository map](RESEARCH_AGENT_MAP.md) for locations; [GitHub access](AGENT_GITHUB_ENTRY.md) for remote reads. |
 | Code, tooling or instruction maintenance | Affected source/tests and [maintenance workflow](docs/review/maintenance-workflow.md): relevant checks, one independent review for meaningful changes, brief PR record. |
 | Textbook paragraph / Part A | [Part A checklist](docs/workflows/part-a-start.md), including existing-edition reproduction. It selects authoring, rendering and review instructions. |
+| PowerPoint / classroom lesson slides for a paragraph | [PowerPoint skill](skills/econ-pptx-templates.md) → [classroom recipe](docs/workflows/classroom-presentation.md). Defaults, source discovery and accepted reference are in the repository; this is scoped Part B output. |
 | Companion paragraph / Part B | [Companion runbook](docs/workflows/web-companion-paragraph-lane.md), [companion skill](skills/econ-companion-artifacts.md) and [companion specifications](https://github.com/meijer1973/4veco-lessen/blob/main/specifications/companion-core-specifications.md). |
 | Chapter/book assembly | [BUILD-CHAPTER.md](BUILD-CHAPTER.md) and the chapter plan. |
 | Complete paragraph verification | [BUILD-PARAGRAPH.md](BUILD-PARAGRAPH.md); `complete` verifies the two lanes together. |

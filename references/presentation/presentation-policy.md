@@ -1,5 +1,14 @@
 # Web-First Presentation Policy
 
+## Classroom scope
+
+An explicitly requested web presentation follows the policy below and
+`references/exemplars/1.1.1-golden-presentation/`. A paragraph PowerPoint request
+defaults to the scoped [classroom recipe](../../docs/workflows/classroom-presentation.md):
+teacher notes, actual exercise discussion, editable PPTX and matching slide PDF.
+Its three classroom overviews replace web navigation; its reviewed source
+directly generates PPTX. It does not claim the full web route is complete.
+
 Status: production-quality policy extracted from `references/exemplars/1.1.1-golden-presentation/`.
 
 ## Core Rule

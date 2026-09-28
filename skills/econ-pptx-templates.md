@@ -1,10 +1,28 @@
 ---
 name: econ-pptx-templates
-description: "Build rich economics PPTX presentations via PptxGenJS. Defines pedagogy mandates (instructional visuals, speaker notes, canonical terminology) and the two non-negotiable technical fixes (LibreOffice round-trip for PowerPoint compatibility; 2-digit-number width rule). Recommends — but does not require — the editorial design system in `build-scripts/lib/lib-pptx.js`. Use whenever building presentaties, slides, lesslides, or any PowerPoint deck for economics VWO/HAVO. Always read the `pptx` skill first for PptxGenJS toolchain basics."
+description: "Build an economics lesson PowerPoint for a paragraph, with teacher notes, editable PPTX and matching slide PDF. Minimal PowerPoint requests use the classroom route and current lesson edition. Explicit web presentation requests use the web derivative route."
 pipeline: "Part B producer"
 ---
 
 # Economics PPTX presentations
+
+## Choose the requested surface
+
+A request such as **Build the PowerPoint for paragraph 2.1.2** defaults to a
+Dutch classroom presentation for 4 vwo economics. Read and follow
+[Classroom PowerPoint](../docs/workflows/classroom-presentation.md). It contains
+the teacher's accepted lesson structure, exercise-selection rules, source
+locations, the §2.1.1 reference, portable build tools and review requirements.
+The repository supplies these defaults; do not ask the teacher to specify them
+again. The installed presentation skill, when available, supplies its current
+tool APIs and finalization. Do not hardcode a retired skill/runtime version.
+
+The remainder of **this file applies only to an explicitly requested web-first
+presentation or its derivative PPTX**. A classroom deck is scoped Part B work;
+it does not require HTML, games, a web model or a historical textbook handoff.
+The classroom recipe takes precedence over this file's web-first sequencing,
+exercise-instruction restriction, font sizes and legacy toolchain advice.
+Neither route by itself establishes full companion-product completeness.
 
 ## Production direction - web first, PPTX second
 

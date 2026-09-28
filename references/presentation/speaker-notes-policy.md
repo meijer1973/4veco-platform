@@ -1,5 +1,14 @@
 # Speaker Notes Policy
 
+## Classroom scope
+
+The policy below retains the web exemplar at
+`references/exemplars/1.1.1-golden-presentation/`. Classroom PowerPoints use
+teacher-supporting notes as specified in the
+[classroom recipe](../../docs/workflows/classroom-presentation.md): explanation,
+question, misconception, transition and source on every slide. Student-facing
+web explanations and semantic-model fields are required only for web output.
+
 Status: student-facing notes policy for web-first presentations.
 
 Derived from `references/exemplars/1.1.1-golden-presentation/`.

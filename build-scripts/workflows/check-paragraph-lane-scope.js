@@ -95,6 +95,7 @@ const COMPANION_SUFFIXES = [
   'uitleg voorkennis.html',
   'uitleg voorkennis.docx',
   'presentatie.pptx',
+  'presentatie.pdf',
   'presentatie.html',
   'uitleg vaardigheden.html',
   'uitleg vaardigheden.docx',
