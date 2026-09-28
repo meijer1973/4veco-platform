@@ -55,6 +55,26 @@ with ZipFile(pptx) as z:
             require(phrase in texts[number-1], f'Overview missing {phrase}')
     require(overview[0] == overview[1] == overview[2], 'Overview text/geometry mismatch')
 
+    # Provenance and role checks complement content review; matching numbers or
+    # business names alone cannot establish whether assigned answers leak.
+    example = facts['teachingExample']
+    require(example['role'] == 'teaching-example' and example['origin'] == 'teacher-authored',
+            'Explanation must be identified as an authored teaching example')
+    require(example['bookExercise'] is None and example['bookPage'] is None,
+            'Authored example must not claim a book exercise or page')
+    require(example['slides'] == [3, 4, 5, 6, 7], 'Review changed explanation sequence')
+    require(facts['discussion'] == {'role': 'assigned-textbook-exercise', 'exercise': 5,
+                                   'startsAfterPractice': True}, 'Keep the real discussion after practice')
+    for number in example['slides']:
+        require(example['label'] in texts[number-1], f'Slide {number}: missing authored-example label')
+    for number, phrases in {3:['FietsWas', '€ 36 per dag', '€ 2 per fiets', '€ 5 per fiets', '0 ≤ Q ≤ 40'],
+                            4:['€ 76 per dag', '€ 100 per dag', '€ 24 per dag', '€ 3,80 per fiets'],
+                            5:['5Q = 36 + 2Q', '3Q = 36', 'Q = 36 / 3 = 12', '€ 60 per dag'],
+                            6:['(86 − 76) / (25 − 20) = € 2', '(125 − 100) / (25 − 20) = € 5', '5 extra fietsen'],
+                            7:['(12; 60)', '€ 24', '40 fietsen per dag']}.items():
+        for phrase in phrases:
+            require(phrase in texts[number-1], f'Slide {number}: missing FietsWas operation {phrase}')
+
     src = (lessons / facts['sourceEdition'] / 'bronnen/H1/manuscript/2.1.4 Gemengde opgaven – opgaven.md').read_text(encoding='utf-8')
     target = src.split('<b>Opgave 5 · SmoothBox — vervolg</b>')[1].split('</div>')[0]
     questions = re.findall(r'(?m)^([a-f])\) (.+)$', target)
@@ -79,6 +99,12 @@ with ZipFile(pptx) as z:
             require(label in content(root), f'{name}: missing {label}')
         for run in root.findall('.//a:rPr', ns):
             require(int(run.get('sz', '1400')) >= 1400, f'{name}: small notes')
+    for number in example['slides']:
+        note = content(E.fromstring(z.read(f'ppt/notesSlides/notesSlide{number}.xml')))
+        require('Bron: Zelfgemaakt uitlegvoorbeeld FietsWas, niet uit het boek.' in note,
+                f'Slide {number}: invented context needs honest provenance')
+    require('bereken je MK opnieuw voor iedere stap' in content(E.fromstring(z.read('ppt/notesSlides/notesSlide6.xml'))),
+            'Explain that other cost tables require recalculating each interval')
     table_count = sum(len(r.findall('.//a:tbl', ns)) for r in roots)
     require(table_count == 10, f'Expected 10 native tables, found {table_count}')
     for root in roots:
@@ -96,7 +122,7 @@ with ZipFile(pptx) as z:
         require(scatter is not None, 'Numeric horizontal axis requires XY chart')
         for axis in root.findall('.//c:valAx', ns):
             horizontal = axis.find('c:axPos', ns).get('val') == 'b'
-            maxima = (150, 800) if number == 7 else (1200, 5500)
+            maxima = (50, 220) if number == 7 else (1200, 5500)
             require(float(axis.find('c:scaling/c:min', ns).get('val')) == 0, 'Axis zero changed')
             require(float(axis.find('c:scaling/c:max', ns).get('val')) == maxima[0 if horizontal else 1], 'Axis scale mismatch')
         found = {}
@@ -115,7 +141,10 @@ with ZipFile(pptx) as z:
                     else:
                         require(label.find('c:showSerName', ns).get('val') == '1', 'Missing endpoint label')
         if number == 7:
-            require(found == {'TO':([0,120],[0,720]),'TK':([0,120],[240,480]),'Winstafstand':([90,90],[420,540])}, 'FotoFun coordinates do not match its functions and €120 segment')
+            require(found == {'TO':([0,40],[0,200]),'TK':([0,40],[36,116]),
+                              'Break-even':([12],[60]),'Hulplijn Q':([12,12],[0,60]),
+                              'Hulplijn bedrag':([0,12],[60,60]),'Winstafstand':([20,20],[76,100])},
+                    'FietsWas: check capacity, break-even, guides and vertical €24 profit')
         else:
             require(found['TO'] == ([0,1000],[0,5000]), 'TO = 5Q must stop at capacity')
             require(found['TK vrijdag'] == ([0,1000],[1200,3200]), 'Friday TK = 1200 + 2Q incorrect')
@@ -131,6 +160,7 @@ with ZipFile(pptx) as z:
 
 workbooks = check_presentation(pptx)
 require(workbooks['ok'], 'Chart/workbook inconsistency')
+require(workbooks['charts'] == chart_count, 'Unexpected chart outside reviewed slides')
 print(json.dumps({'ok': True, 'slides': 24, 'notes': 24, 'nativeTables': table_count,
                   'nativeCharts': chart_count, 'sourceSubquestions': len(questions),
                   'overviewParity': True, 'workbooks': workbooks}, indent=2))

@@ -22,8 +22,10 @@ edition, lesson commit, source paths/hashes, paragraph title and type (theory
 or gemengde opgaven), goals, start/page, basis, independent, target and homework.
 Plan instruction backwards from the actual target operations, using the book's
 notation, terminology and assumptions. Read its full question and answer model.
-Missing/conflicting sources must be reported; never invent an exercise, answer
-or page. A textbook error needs a named source repair, not a silent slide rewrite.
+Missing/conflicting sources must be reported; never fabricate a purported
+textbook exercise, source, answer model or page reference. A textbook error
+needs a named source repair, not a silent slide rewrite. An authored teaching
+example is allowed and must be identified separately in the manifest and notes.
 
 ### Exercise mapping: durable teacher preference
 
@@ -48,9 +50,15 @@ support, without inventing new theory or treating it as a theory paragraph.
 ## Fixed lesson sequence
 
 1. **Deze les** overview, left on screen during the start assignment.
-2. Learning goals and necessary instruction. Use a worked example from the
-   paragraph that prepares the target; withhold the target solution until after
-   practice. A short understanding check can show its prompt, then its answer.
+2. Learning goals and necessary instruction. Demonstrate the required operations
+   with a short, separate teaching example using its own context and data,
+   aligned with the paragraph's method, terminology and difficulty. Label an
+   authored example `Uitlegvoorbeeld — niet uit het boek`; give it no fabricated
+   book number or page. Do not work out assigned practice questions as the
+   default explanation, including non-target questions. Teacher-chosen feedback
+   on an already attempted start assignment is optional and separate from this
+   example. A short understanding check may use the example, without adding
+   homework. Keep this recap particularly brief for mixed exercises.
 3. The **same overview** during independent practice.
 4. Discuss the **actual target exercise**. First show its complete context,
    data/visuals and **every subquestion without solutions**, splitting across
@@ -107,7 +115,9 @@ new paragraph. Do not copy old numbers or content by search-and-replace.
   thresholds from feasible whole products and within-capacity conclusions from
   extrapolation. Give both the calculation and the economic explanation.
 - Every slide has teacher notes: explanation, question, misconception,
-  transition and source (edition, printed page, source link). Put caveats and
+  transition and source (edition, printed page, source link). For an authored
+  example identify its authored context/data and cite the book only for the
+  underlying methods, without attributing invented data to a book page. Put caveats and
   checks in notes. Notes text is at least 14 pt in the saved PPTX.
 - Do not claim the whole exercise route fits one lesson without timing
   evidence. Homework can complete it; never drop basis work to make it fit.
@@ -181,6 +191,12 @@ chart labels, table cells, units, arithmetic, full target coverage and question-
 before-answer order. Verify all three overviews match and tables/charts remain
 native. Export the matching PDF from that final PPTX and check it too. A clean
 package or book-PDF validator alone does not establish slide quality.
+
+Review the explanation against the assigned work: does it reveal a worked
+answer pupils still need to produce independently? Use the manifest's teaching-
+example versus assigned-exercise distinction and a content review; a ban on
+repeated numbers or business names cannot establish this. The later discussion
+must still use the complete, actual textbook exercise.
 
 Check editable chart data with `python build-scripts/presentations/chart_workbooks.py FINAL.pptx`.
 It compares each chart's cached values with its referenced embedded workbook

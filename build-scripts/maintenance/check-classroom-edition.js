@@ -6,6 +6,7 @@ const fs = require('fs'), path = require('path');
 const {execFileSync} = require('child_process');
 const historical = require('./check-books34-v3-import');
 const signed = require('../books/books34-signed-revision');
+const followups = require('../books/books34-followups-revision');
 const book2 = require('../books/book2-signed-revision');
 const prior = require('../books/exercise-route-revision');
 const {safeFile} = require('../references/books34-v3-delivery');
@@ -88,13 +89,54 @@ function verifySuccessor(lessons, {root = ROOT, requireTracked = false} = {}) {
   return {files: sealed.length, classroom_additions: additions};
 }
 
+function verifyFollowupInput(file, bytes, expectedHash) {
+  const text = prior.text(bytes);
+  if (prior.sha(text) === expectedHash) return;
+  // The accepted scope checker predates the additive classroom slide-PDF rule.
+  // Reverse exactly that insertion, then authenticate ALL remaining bytes.
+  const before = "  'presentatie.pptx',\n  'presentatie.html',";
+  const after = "  'presentatie.pptx',\n  'presentatie.pdf',\n  'presentatie.html',";
+  assert(file === 'build-scripts/workflows/check-paragraph-lane-scope.js'
+    && text.split(after).length === 2
+    && prior.sha(text.replace(after, before)) === expectedHash,
+  'Stale follow-up tool ' + file);
+}
+
+function verifyFollowups(lessons, {root = ROOT, requireTracked = false} = {}) {
+  const read = (repo, file) => fs.readFileSync(safeFile(repo, file));
+  const pin = JSON.parse(read(root, followups.PIN_FILE));
+  const bytes = read(lessons, followups.MANIFEST), doc = JSON.parse(bytes);
+  assert(pin.revision === followups.REVISION && prior.sha(bytes) === pin.manifest_sha256, 'Unreviewed follow-up manifest');
+  assert(doc.revision === followups.REVISION && doc.baseline_lesson_commit === followups.BASE, 'Wrong follow-up/base');
+  assert(equal(doc.predecessors, followups.history(lessons, root)), 'False historical evidence');
+  const actual = book2.inventory(lessons), sealed = doc.files.map(row => row.path);
+  const additions = partitionInventory(actual, sealed);
+  followups.verifyFiles(lessons, doc.files, sealed,
+    signed.tree(lessons, followups.BASE, [...prior.ROOTS, book2.PROJECTION]));
+  const extra = new Set(additions), changes = followups.changedPaths(lessons);
+  const navigation = changes.includes('RESEARCH_AGENT_MAP.md') ? ['RESEARCH_AGENT_MAP.md'] : [];
+  for (const file of navigation) safeFile(lessons, file);
+  const receiptChanges = changes.filter(file => !extra.has(file) && file !== 'RESEARCH_AGENT_MAP.md');
+  assert(receiptChanges.every(file => followups.ALLOWED.has(file)), 'Outside follow-up scope: ' + receiptChanges.filter(file => !followups.ALLOWED.has(file)).join(', '));
+  assert(equal(receiptChanges, pin.revision_paths), 'Unreviewed changed-path list');
+  assert(equal(doc.platform_inputs.map(row => row.path), followups.INPUTS), 'Wrong platform inventory');
+  for (const row of doc.platform_inputs) verifyFollowupInput(row.path, read(root, row.path), row.sha256_lf);
+  followups.sourcesAndTargets(lessons);
+  if (requireTracked) {
+    const manifests = [followups.MANIFEST, signed.MANIFEST, prior.MANIFEST, book2.MANIFEST];
+    verifyTracked(lessons, [...actual, ...manifests, ...navigation], [...prior.ROOTS, book2.PROJECTION, ...manifests, ...navigation]);
+  }
+  return {files: sealed.length, classroom_additions: additions};
+}
+
 function verify(options = {}) {
   const original = historical.verify(options);
   // Never suppress transport, structure, source, pin or other historical failures.
-  if (original.passed || original.failures.length !== 1 || !/^(Unexpected successor inventory|Out-of-scope successor change:|Unreviewed changed-path inventory|Successor is not fully tracked)/.test(original.failures[0])) return original;
+  if (original.passed || original.failures.length !== 1 || !/^(Unexpected successor inventory|Out-of-scope successor change:|Unreviewed changed-path inventory|Successor is not fully tracked|Unexpected follow-up inventory|Outside follow-up scope:|Unreviewed changed-path list|Follow-up inventory not fully tracked|Stale follow-up tool build-scripts\/workflows\/check-paragraph-lane-scope\.js$)/.test(original.failures[0])) return original;
   try {
     const root = options.root || ROOT, lessons = options.lessons || path.resolve(root, '../4veco-lessen');
-    const current = verifySuccessor(lessons, {...options, root});
+    const current = fs.existsSync(path.join(lessons, followups.MANIFEST))
+      ? verifyFollowups(lessons, {...options, root}) : verifySuccessor(lessons, {...options, root});
     return {...original, ...current, passed: true, failures: [], classroom_scope: 'additive slides; all signed book bytes preserved'};
   } catch (error) { return {...original, passed: false, failures: [error.message]}; }
 }
@@ -104,4 +146,4 @@ if (require.main === module) {
   console.log(JSON.stringify(result, null, 2));
   if (!result.passed) process.exitCode = 1;
 }
-module.exports = {isClassroomAddition, partitionInventory, verifyCurrentInventory, verifyTracked, verifySuccessor, verify};
+module.exports = {isClassroomAddition, partitionInventory, verifyCurrentInventory, verifyTracked, verifySuccessor, verifyFollowupInput, verifyFollowups, verify};

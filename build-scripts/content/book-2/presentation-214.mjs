@@ -17,6 +17,10 @@ const FONT='Arial', tables=[], charts=[], slides=[], overviews=[], graphContract
 const source=`https://github.com/meijer1973/4veco-lessen/blob/${facts.sourceCommit}/${facts.sourceEdition.split('/').map(encodeURIComponent).join('/')}/`;
 const title='§2.1.4 Gemengde opgaven';
 const targetFooter=title+' · Opgave 5 · Boekpagina 32–33';
+const exampleFooter=title+' · '+facts.teachingExample.label;
+function exampleNotes(s,explanation,question,pitfall,transition){
+ s.speakerNotes.textFrame.setText(`Vraag: ${question}\n\nUitleg: ${explanation}\n\nMisvatting: ${pitfall}\n\nOvergang: ${transition}\n\nBron: Zelfgemaakt uitlegvoorbeeld FietsWas, niet uit het boek. Context en getallen zijn voor deze uitleg gekozen en vormen geen boekopgave of huiswerk. De onderliggende methoden sluiten aan bij Boek 2, chatuitgave 2026, §2.1.1–2.1.3: kostenfuncties, totale/gemiddelde bedragen, break-even en marginale veranderingen. ${source}boek/Boek_2_Compleet.pdf`);
+}
 function text(s,str,x,y,w,h,size=36,{bold=false,color=C.ink,align='left',name}={}){
  const q=s.shapes.add({geometry:'textbox',name:name||str.slice(0,60),position:{left:x,top:y,width:w,height:h},fill:'none',line:{fill:'none',width:0}});
  q.text=str;q.text.style={typeface:FONT,fontSize:size,bold,color,alignment:align,verticalAlignment:'top',autoFit:'none',wrap:'square',insets:{left:0,right:0,top:0,bottom:0}};return q;
@@ -77,39 +81,39 @@ overview('Startopdracht',2);
  const s=slide('De aanpak bij gemengde opgaven');
  const rows=[['Gegevens kiezen','Welke dag, hoeveelheid, periode en eenheid?'],['Bewerking kiezen','Totaal, per product of per extra product?'],['Tabel en grafiek','Tabelwaarden en lijnhoogten beschrijven dezelfde bedragen.'],['Uitspraak beoordelen','Berekening, economische betekenis en conclusie.']];
  rows.forEach((r,i)=>{let y=205+i*148;text(s,r[0],60,y,550,62,39,{bold:true,color:C.blue});text(s,r[1],675,y,860,107,36);if(i<3)rule(s,60,y+119,1480);});
- notes(s,'29–33','Er komt geen nieuwe theorie bij. Haal de aanpak uit de voorgaande paragrafen terug. Bij SmoothBox kies je straks per vraag de juiste dag en bron. Een verklaring moet zeggen wat de berekende verandering betekent. De lesdoelen zijn relevante gegevens kiezen, kosten en opbrengsten combineren, een tabel met een grafiek verbinden en een uitspraak onderbouwen.','Hoe zie je of een vraag een totaal of een bedrag per product verlangt?','Dezelfde formule op alle vragen toepassen werkt niet.','Gebruik de startopgave als kort uitgewerkt voorbeeld.');
+ notes(s,'29–33','Er komt geen nieuwe theorie bij. Haal de aanpak uit de voorgaande paragrafen terug. Bij SmoothBox kies je straks per vraag de juiste dag en bron. Een verklaring moet zeggen wat de berekende verandering betekent. De lesdoelen zijn relevante gegevens kiezen, kosten en opbrengsten combineren, een tabel met een grafiek verbinden en een uitspraak onderbouwen.','Hoe zie je of een vraag een totaal of een bedrag per product verlangt?','Dezelfde formule op alle vragen toepassen werkt niet.','Demonstreer de aanpak met het aparte FietsWas-voorbeeld. Eventuele feedback op de al gemaakte startopdracht kiest de docent afzonderlijk.');
 }
 {
- const s=slide('ShirtSprint: gegevens en functies');
- text(s,'Opgave 1 · Eén schoolfeest, maximaal 300 shirts',60,188,1480,60,36,{bold:true,color:C.blue});
- table(s,[['Gegeven uit de bron','Bewerking'],['Kraam € 480 + vergunning € 120','TCK = € 600 voor het schoolfeest'],['Shirt € 4 + bedrukking/verpakking € 1','€ 5 per shirt'],['Verkoopprijs € 11 per shirt','TO = 11Q']],60,292,1480,338,[780,700],32);
- text(s,'TK = 600 + 5Q',60,674,700,74,45,{bold:true,color:C.orange});
- text(s,'TO = 11Q',850,674,690,74,45,{bold:true,color:C.blue});
- text(s,'600 bezoekers is geen gegarandeerde afzet.',60,782,1480,54,34);
- notes(s,'29','Na de startopdracht: tel de vaste bedragen en de variabele bedragen per shirt apart op. Q is het aantal gemaakte én verkochte shirts voor dit feest. TK en TO staan in euro voor het schoolfeest, geldig tot en met 300 shirts. De bezoekverwachting heb je niet nodig om de functies te maken.','Welke bedragen veranderen in totaal als er meer shirts komen?','Een vast bedrag per shirt betekent geen constante totale kosten.','Vul de gevraagde hoeveelheid in.');
+ const s=slide('FietsWas: gegevens en functies',exampleFooter);
+ text(s,'Fietsen wassen · Maximaal 40 fietsen per dag',60,188,1480,60,36,{bold:true,color:C.blue});
+ table(s,[['Gegeven in dit uitlegvoorbeeld','Betekenis'],['Vaste kosten: € 36 per dag','TCK blijft € 36 per dag'],['Variabele kosten: € 2 per fiets','TVK = 2Q per dag'],['Prijs: € 5 per fiets','Elke gewassen fiets wordt betaald']],60,292,1480,338,[780,700],32);
+ text(s,'TK = 36 + 2Q',60,674,700,74,45,{bold:true,color:C.orange});
+ text(s,'TO = 5Q',850,674,690,74,45,{bold:true,color:C.blue});
+ text(s,'Q: fietsen per dag · 0 ≤ Q ≤ 40 · Totalen: € per dag',60,782,1480,54,34);
+ exampleNotes(s,'FietsWas is een apart, zelfgemaakt voorbeeld. De constante kosten zijn 36 euro per dag. De variabele kosten zijn 2 euro per gewassen fiets. Alle gewassen fietsen worden betaald tegen 5 euro. Daardoor zijn TK = 36 + 2Q en TO = 5Q, binnen maximaal 40 fietsen per dag.','Welk totaal verandert als er meer fietsen worden gewassen?','Een vast bedrag per fiets betekent geen constante totale kosten.','Vergelijk totale winst en gemiddelde kosten bij twintig fietsen.');
 }
 {
- const s=slide('ShirtSprint: totaal en per shirt');
- text(s,'Bij Q = 150 shirts',60,198,1480,60,38,{bold:true,color:C.blue});
- table(s,[['Grootheid','Berekening','Uitkomst'],['TK','600 + 5 × 150','€ 1.350 voor het feest'],['TO','11 × 150','€ 1.650 voor het feest'],['Winst = TO − TK','1.650 − 1.350','€ 300 voor het feest'],['GTK = TK / Q','1.350 / 150','€ 9 per shirt']],60,299,1480,407,[480,470,530],32);
- text(s,'Winst is een totaalverschil. GTK is een bedrag per shirt.',60,766,1480,67,37,{bold:true});
- notes(s,'29','Werk steeds via formule, invullen en uitkomst met eenheid. De winst van 300 euro hoort bij alle 150 shirts samen. De gemiddelde totale kosten verdelen 1350 euro over 150 shirts.','Waarom deel je bij GTK wel door 150 en bij winst niet?','Eenheid euro per shirt hoort niet bij totale winst.','Zoek vervolgens waar de totale opbrengst alle kosten dekt.');
+ const s=slide('FietsWas: totaal en per fiets',exampleFooter);
+ text(s,'Bij Q = 20 fietsen per dag',60,198,1480,60,38,{bold:true,color:C.blue});
+ table(s,[['Grootheid','Berekening','Uitkomst'],['TK','36 + 2 × 20','€ 76 per dag'],['TO','5 × 20','€ 100 per dag'],['Winst = TO − TK','100 − 76','€ 24 per dag'],['GTK = TK / Q','76 / 20','€ 3,80 per fiets']],60,299,1480,407,[480,470,530],32);
+ text(s,'Winst: verschil tussen totalen. GTK: kosten per fiets.',60,766,1480,67,37,{bold:true});
+ exampleNotes(s,'Trek twee totalen af om de winst van 24 euro per dag te vinden. Deel de totale kosten van 76 euro door twintig fietsen om GTK van 3,80 euro per fiets te vinden. Benoem het verschil in bewerking en eenheid.','Waarom deel je bij GTK door twintig en bij winst niet?','24 euro is de totale dagwinst, niet de winst per fiets.','Zoek waar de totale opbrengst precies alle kosten dekt.');
 }
 {
- const s=slide('ShirtSprint: break-even');
- const rows=[['TO = TK','Opbrengst dekt alle kosten'],['11Q = 600 + 5Q','Functies invullen'],['6Q = 600','Aan beide kanten 5Q aftrekken'],['Q = 600 / 6 = 100 shirts','Delen door 6']];
+ const s=slide('FietsWas: break-even',exampleFooter);
+ const rows=[['TO = TK','Opbrengst dekt alle kosten'],['5Q = 36 + 2Q','Functies invullen'],['3Q = 36','Aan beide kanten 2Q aftrekken'],['Q = 36 / 3 = 12','Fietsen per dag']];
  rows.forEach((r,i)=>{let y=204+i*131;text(s,r[0],60,y,950,82,42,{bold:true,color:i===3?C.green:C.ink});text(s,r[1],1060,y+7,480,90,32);});
- text(s,'Controle: TO = TK = € 1.100 voor het feest. Winst = € 0.',60,766,1480,70,36,{bold:true,color:C.blue});
- notes(s,'29','Bij 100 shirts: TO = 11 × 100 = 1100; TK = 600 + 5 × 100 = 1100 euro. De uitkomst past binnen 300 shirts capaciteit. De kassa is niet leeg: er is 1100 euro verkoopopbrengst, maar die dekt precies de kosten.','Is break-even hetzelfde als geen verkoopopbrengst?','Winst nul betekent niet dat TO nul is.','Herhaal kort de marginale rekenstap uit een tabel.');
+ text(s,'Controle: TO = TK = € 60 per dag. Winst = € 0.',60,766,1480,70,36,{bold:true,color:C.blue});
+ exampleNotes(s,'Bij twaalf fietsen: TO = 5 × 12 = 60 en TK = 36 + 2 × 12 = 60 euro per dag. Twaalf is een geheel aantal binnen de capaciteit. Het grafiekpunt wordt (12; 60). Winst nul betekent dat de opbrengst de kosten precies dekt.','Welke coördinaten horen bij dit break-evenpunt?','Twaalf is een hoeveelheid fietsen, zestig is een totaalbedrag in euro per dag.','Bereken nu de verandering als er vijf fietsen bijkomen.');
 }
 {
- const s=slide('Marginale bedragen: verschillen delen');
- text(s,'SkateService · Opgave 4 · Eén stap uit de tabel',60,188,1480,61,36,{bold:true,color:C.blue});
- table(s,[['Q (beurten per week)','TK (€ per week)','TO (€ per week)'],['10','260','400'],['20','320','800']],60,276,1480,228,[520,480,480],32);
- text(s,'MK = ΔTK / ΔQ = (320 − 260) / (20 − 10) = € 6',60,561,1480,64,38,{bold:true,color:C.orange});
- text(s,'MO = ΔTO / ΔQ = (800 − 400) / (20 − 10) = € 40',60,657,1480,64,38,{bold:true,color:C.blue});
- text(s,'Beide bedragen zijn per extra onderhoudsbeurt.',60,774,1480,54,36);
- notes(s,'31','De teller is het verschil tussen de totale bedragen, de noemer het verschil tussen de hoeveelheden. Δ betekent verandering. Bij een groep van tien gaat het om het gemiddelde extra bedrag per extra beurt binnen die stap. Dit is korte herhaling van §2.1.3 met één echte tabelstap, geen nieuwe theorie. De capaciteit van SkateService is 30 beurten per week.','Waarom deel je door tien en niet door twintig?','MK is niet TK / Q. Dat laatste is GTK.','Verbind vervolgens totalen met een grafiek.');
+ const s=slide('FietsWas: marginale bedragen',exampleFooter);
+ text(s,'Van 20 naar 25 fietsen per dag',60,188,1480,61,36,{bold:true,color:C.blue});
+ table(s,[['Q (fietsen per dag)','TK (€ per dag)','TO (€ per dag)'],['20','76','100'],['25','86','125']],60,276,1480,228,[520,480,480],32);
+ text(s,'MK = ΔTK / ΔQ = (86 − 76) / (25 − 20) = € 2',60,561,1480,64,38,{bold:true,color:C.orange});
+ text(s,'MO = ΔTO / ΔQ = (125 − 100) / (25 − 20) = € 5',60,657,1480,64,38,{bold:true,color:C.blue});
+ text(s,'Deel door de 5 extra fietsen. Bedragen: € per extra fiets.',60,774,1480,54,34);
+ exampleNotes(s,'De extra kosten zijn 10 euro en de extra opbrengst 25 euro voor vijf extra fietsen. Deel elk verschil door ΔQ = 5. In dit voorbeeld blijft MK gelijk door de functie TK = 36 + 2Q. Bij een andere kostentabel bereken je MK opnieuw voor iedere stap; neem niet automatisch een vast bedrag aan.','Waarom deel je door vijf en niet door vijfentwintig?','MK is ΔTK / ΔQ. GTK is TK / Q. Dat zijn andere vragen.','Verbind de eerder berekende totalen met de grafiek.');
 }
 function line(name,xs,ys,color,width=4,style='solid',symbol='none',label=true){
  return {name,xValues:xs,values:ys,line:{fill:color,width,style},marker:{symbol,size:9,fill:color,line:{fill:color,width:1}},
@@ -124,13 +128,13 @@ function chart(s,series,{xmax=1200,xstep=200,ymax=5500,ystep=1000,unit='lunchbox
  return ch;
 }
 {
- const s=slide('FotoFun: winst is een verticale afstand');
- chart(s,[line('TO',[0,120],[0,720],C.blue),line('TK',[0,120],[240,480],C.orange,4,'dashed'),line('Winstafstand',[90,90],[420,540],C.green,7,'solid','none',false)],{xmax:150,xstep:30,ymax:800,ystep:200,unit:'foto’s per feest',period:'feest'});
- text(s,'Bij Q = 90',1190,233,350,60,35,{bold:true});
- text(s,'TO = € 540\nTK = € 420',1190,341,350,132,34);
- text(s,'Winst = € 120\nper feest',1190,509,350,130,36,{bold:true,color:C.green});
- text(s,'Dezelfde Q,\ntwee lijnhoogten.',1190,709,350,96,31);
- notes(s,'30','Dit is de grafiek van FotoFun uit opgave 2 met het verticale antwoordlijnstuk bij Q = 90. De volledige TK-lijn loopt van (0; 240) tot (120; 480), TO van (0; 0) tot (120; 720). De capaciteit is 120 foto’s. Lees bij dezelfde Q twee hoogten: 540 en 420 euro. Hun verschil is 120 euro winst. Dit bereidt de grafiekbewerking van SmoothBox voor.','Waarom kun je hier geen driehoek als winst inkleuren?','De verticale as bevat al totale eurobedragen. Een oppervlakte vermenigvuldigt ook met hoeveelheid.','Laat het overzicht staan tijdens zelfstandig werken.');
+ const s=slide('FietsWas: break-even en winst in de grafiek',exampleFooter);
+ chart(s,[line('TO',[0,40],[0,200],C.blue),line('TK',[0,40],[36,116],C.orange,4,'dashed'),line('Break-even',[12],[60],C.ink,0,'solid','diamond',false),line('Hulplijn Q',[12,12],[0,60],C.muted,2,'dashed','none',false),line('Hulplijn bedrag',[0,12],[60,60],C.muted,2,'dashed','none',false),line('Winstafstand',[20,20],[76,100],C.green,7,'solid','none',false)],{xmax:50,xstep:10,ymax:220,ystep:40,unit:'fietsen per dag',period:'dag'});
+ text(s,'Break-even:\n(12; 60)',1190,233,350,106,35,{bold:true});
+ text(s,'Bij Q = 20:\nTO = € 100\nTK = € 76',1190,376,350,155,34);
+ text(s,'Winst = € 24\nper dag',1190,568,350,116,36,{bold:true,color:C.green});
+ text(s,'Capaciteit:\n40 fietsen per dag',1190,726,350,92,31);
+ exampleNotes(s,'Het break-evenpunt ligt bij (12; 60). De hulplijnen wijzen naar dezelfde aswaarden. Bij Q = 20 loopt het verticale winstlijnstuk van 76 naar 100 euro per dag: 24 euro. Beide functielijnen stoppen bij de capaciteit van veertig fietsen per dag. De verdere asruimte is voor leesbare labels.','Waarom is winst hier een verticale afstand?','De verticale as geeft al totale bedragen. Lees twee lijnhoogten bij dezelfde hoeveelheid; een oppervlakte is hier geen winst.','Laat nu het overzicht staan. Leerlingen kiezen en gebruiken de methoden zelf bij de toegewezen boekopgaven.');
 }
 overview('Zelfstandig werken',4);
 {

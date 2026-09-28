@@ -1,5 +1,9 @@
 # Classroom PowerPoint workflow integration
 
+The current §2.1.4 teaching revision is recorded under Follow-up C below.
+Earlier cold-run hashes and verdicts remain historical evidence of their
+then-current instructions, not the current FietsWas artifact identity.
+
 Owner request: retain the useful instructions and accepted §2.1.1 presentation
 in the repositories, then test a fresh agent with only a §2.1.2 build request.
 Prepare paired pull requests after content/visual satisfaction; no merge requested.
@@ -248,3 +252,101 @@ into the existing paired task PRs, retaining these reviewed artifact bytes.
 The cold agent's draft PRs #262 (platform) and #61 (lessons) served as transfer
 records; the active delivery remains platform #260 and lessons #59. Both
 focused follow-ups pass without redesigning or lengthening the teaching recipe.
+
+## Follow-up C: separate explanation from assigned work
+
+The teacher's next source-level review accepted the technical work but clarified
+the teaching contract: the default explanation must not work out assigned
+practice answers, including non-target exercises. Feedback on an already
+attempted start assignment can be teacher-selected and separate. The previous
+cold run correctly followed its then-current recipe; it did not establish this
+new distinction. Its historical PASS and artifacts above are retained as such.
+
+The recipe now distinguishes a short authored teaching example from the actual
+post-practice textbook discussion. It requires the visible label
+`Uitlegvoorbeeld — niet uit het boek`, honest note provenance and a small
+manifest role distinction. The prohibition concerns fabricated textbook sources
+and page references; it does not prohibit legitimate teaching examples. Content
+review checks whether assigned answers are exposed, without banning repeated
+numbers or business names. Mixed recall stays brief without a slide quota.
+
+The delivered §2.1.4 source replaces the five pre-practice worked slides with
+the teacher-proposed FietsWas example. Fixed costs are EUR 36/day, variable costs
+EUR 2/bicycle and price EUR 5/bicycle, with capacity 40/day and every washed
+bicycle paid for. At 20 bicycles, TK = 76, TO = 100, profit = EUR 24/day and
+GTK = EUR 3.80/bicycle. The 20-to-25 step gives MK = 10/5 = 2 and MO = 25/5 = 5
+per extra bicycle. Notes explicitly distinguish this constant MK from intervals
+in other cost tables. Break-even is (12, 60); the native graph has correct guides,
+capacity endpoints and the vertical 76-to-100 profit segment at Q = 20.
+
+Every example slide identifies authored data and has no book exercise/page
+attribution. The other 19 slides, including all homework, SmoothBox sources,
+complete questions and answers after practice, have unchanged content/geometry.
+Only notes 2–7 change. Their source and source-hash checks remain intact.
+
+The saved checker now verifies the example's role, disclosure, provenance,
+calculations and graph, while retaining the existing question-order, overview,
+source, note and SmoothBox checks. The revised file passes; the old deck fails
+the new disclosure check, as does a copy with the authored label removed. This
+does not automate the semantic judgment about revealing assigned answers.
+
+The revised saved PPTX opened and rendered all 24 slides in native Microsoft
+PowerPoint; PDF was exported from that same file. Parent and independent
+reviewer `/root/review_workflow` each inspected all five changed slides and
+their PDF pages. The other 19 PDF pages are pixel-identical to the previously
+inspected version. Saved slide trees match there after ignoring generated
+creation/relationship IDs; all three SmoothBox charts retain identical semantic
+content and geometry. The reviewer verified every slide text run in the PDF.
+All 24 PDF pages were rendered/compared against PowerPoint PNGs; maximum mean
+RGB difference is 2.13/255. No clipping, arithmetic or graph findings remain.
+
+Saved-file checks pass: 24 slides and notes, 10 native tables, 4 native charts,
+44 workbook references and 94 compared cells. All 14 workbook tests pass,
+including separate real-deck workbook-only and cache-only mutations. Independent
+review: PASS, no actionable findings. Classroom timing remains unmeasured.
+
+| Current §2.1.4 artifact | SHA-256 |
+|---|---|
+| PPTX | `7731c6d7a1840431404dd967e6515c88cf9d3a7c121dce9be2bcd960abf9bae7` |
+| PDF | `b32ae5f042ccd580ec5206ab48bf5657c60d00b95062069645ac4020dff3b09e` |
+
+### Compatibility with the newly merged book follow-up
+
+During this revision, main gained the accepted Books 3/4 follow-up (#261/#60).
+Both task branches incorporate it; the one scope-test conflict retains both
+independent tests. The classroom adapter now authenticates the new 1,480-file
+receipt using its existing history, file, source, target and staged-byte checks.
+It excludes only the same bounded Book 2 classroom additions and navigation
+from the exact changed-path comparison. Historical verifiers, pins and receipts
+remain unmodified by this task.
+
+The new receipt also seals the scope checker before the classroom slide-PDF
+rule. The adapter permits only the exact anchored `presentatie.pdf` insertion
+between the existing PPTX and HTML suffixes; reversing that insertion must
+reproduce the authenticated full-file hash. All other tool changes fail.
+Sixty-two focused tests pass. Independent mutations rejected additional,
+moved, duplicated and broadened scope rules, changes to all 15 unrelated pinned
+inputs, protected-source edits, coordinated source/manifest/pin repinning and
+unstaged slide bytes. The real paired checkout passes with 1,480 protected
+files and nine classroom additions; the final staged check is part of delivery.
+
+### Fresh regression cold-test protocol
+
+The revised generic recipe is also tested without the FietsWas implementation.
+An isolated pair under `C:/wt/ppt/.cold-214-2/` starts from platform seed
+`9162bd0599733ceaa2a6aaeb8aadac841988b28c` and lessons
+`08d7fd27830b5c42d1dbebc7fcb73b882b4d67a4`. The seed is the original pre-§2.1.4
+baseline `8271c1fc` plus only the revised classroom recipe. It contains neither
+prior §2.1.4 output nor FietsWas source/data. This isolates the teaching rule
+from the unrelated newly merged Books 3/4 follow-up. Root released the seed
+worktree claim before starting the author.
+
+Fresh ephemeral thread `01a0e806-07d0-7272-98d9-ac8fb7496987` receives exactly
+`Build the PowerPoint for paragraph 2.1.4.` with no parent conversation or
+follow-up coaching. Local `protocol.json`, `events.jsonl` and the final handoff
+retain the run. Its output is a regression artifact, separate from the requested
+FietsWas revision. The completed outcome, artifact hashes and available CI are
+recorded in the active platform PR #260 rather than adding status-only commits
+to this report. Passing requires a separate honest teaching example, no worked
+assigned answers before practice, the full mixed assignment, complete later
+SmoothBox discussion and the existing saved-file/render review.

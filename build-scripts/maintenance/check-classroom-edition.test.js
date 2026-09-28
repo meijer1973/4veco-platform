@@ -94,3 +94,26 @@ test('an inventory error accompanied by another error is never suppressed', () =
   jest.spyOn(historical, 'verify').mockReturnValue(result);
   expect(current.verify()).toBe(result);
 });
+
+test('follow-up receipt authenticates the exact classroom scope insertion only', () => {
+  const file = 'build-scripts/workflows/check-paragraph-lane-scope.js';
+  const before = "header\n  'presentatie.pptx',\n  'presentatie.html',\nfooter\n";
+  const after = before.replace("  'presentatie.html',", "  'presentatie.pdf',\n  'presentatie.html',");
+  const hash = prior.sha(before);
+  expect(() => current.verifyFollowupInput(file, Buffer.from(before), hash)).not.toThrow();
+  expect(() => current.verifyFollowupInput(file, Buffer.from(after), hash)).not.toThrow();
+  expect(() => current.verifyFollowupInput(file, Buffer.from(after.replaceAll('\n', '\r\n')), hash)).not.toThrow();
+  for (const altered of [after + 'other edit', after.replace('header', 'changed'),
+    after.replace("  'presentatie.pdf',", "  'presentatie.pdf',\n  'presentatie.pdf',"),
+    before + "  'presentatie.pdf',\n", after.replace('presentatie.pdf', 'anything.pdf')]) {
+    expect(() => current.verifyFollowupInput(file, Buffer.from(altered), hash)).toThrow(/Stale follow-up tool/);
+  }
+  expect(() => current.verifyFollowupInput('another-tool.js', Buffer.from(after), hash)).toThrow(/Stale follow-up tool/);
+});
+
+test.each(['Stale follow-up bytes x', 'Protected predecessor changed x', 'Stale follow-up tool another-tool.js',
+  'Unreviewed follow-up manifest', 'False historical evidence'])('unrelated follow-up failure is never suppressed: %s', message => {
+  const result = {passed: false, failures: [message]};
+  jest.spyOn(historical, 'verify').mockReturnValue(result);
+  expect(current.verify()).toBe(result);
+});
