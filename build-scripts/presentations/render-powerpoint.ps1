@@ -12,10 +12,12 @@ if ((Test-Path -LiteralPath $RenderDir) -and (Get-ChildItem -LiteralPath $Render
  throw "Use an empty render directory: $RenderDir"
 }
 New-Item -ItemType Directory -Path (Split-Path -Parent $Pdf), $RenderDir -Force | Out-Null
+$powerPointWasRunning = $null -ne (Get-Process -Name POWERPNT -ErrorAction SilentlyContinue | Select-Object -First 1)
 $app = New-Object -ComObject PowerPoint.Application
-$app.DisplayAlerts = 1
+$previousAlerts = $app.DisplayAlerts
 $deck = $null
 try {
+ $app.DisplayAlerts = 1
  $deck = $app.Presentations.Open($Pptx, $true, $false, $false)
  Write-Output "PowerPoint opened $($deck.Slides.Count) slides."
  $qa = @()
@@ -39,6 +41,9 @@ try {
  Write-Output "Rendered $($deck.Slides.Count) slides and exported PDF. Inspect table cells and chart labels visually too."
 } finally {
  if ($null -ne $deck) { $deck.Close(); [Runtime.InteropServices.Marshal]::ReleaseComObject($deck) | Out-Null }
- $app.Quit()
+ $app.DisplayAlerts = $previousAlerts
+ # PowerPoint automation can attach to an existing shared application instance.
+ # Close only our deck; preserve an existing app or presentations opened meanwhile.
+ if (-not $powerPointWasRunning -and $app.Presentations.Count -eq 0) { $app.Quit() }
  [Runtime.InteropServices.Marshal]::ReleaseComObject($app) | Out-Null
 }
