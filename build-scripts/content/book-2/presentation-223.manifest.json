@@ -1,0 +1,86 @@
+{
+  "paragraph": "2.2.3",
+  "title": "Inkomenselasticiteit en kruislingse elasticiteit",
+  "type": "theory",
+  "sourceEdition": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026",
+  "sourceCommit": "f2660032cf7e4e3bbab96cf32863d06a38bd74bc",
+  "platformCommit": "7ed2500f53fbd29bd0863dfd84b4fd6df57dc34f",
+  "sourceFiles": {
+    "bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md": "40440809dc4e3d4261ff15d15e05bf8b5396ec346be1f59df3037c4d71984cea",
+    "bronnen/H2/2.2 Elasticiteit – antwoorden.md": "db35c4ad3af0e49d79b6fec45cb5312f28e043cd875840b33d853c1d28fa07f9",
+    "bronnen/H2/Docenten_en_bouwverantwoording.md": "eedc86d6a46f1271e338195c92a63977b5523030fee9ee9a7d02b26a5e74b7f5",
+    "bronnen/H2/paragrafen/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – antwoorden.md": "42c5c2ee0307608db246f7eda9c658c8e3cebe84a61963434d9ed5709f6699fc",
+    "boek/Boek_2_Compleet.pdf": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493"
+  },
+  "sourcePrintedPages": {
+    "theory": [
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58
+    ],
+    "start": 59,
+    "basis": [
+      59,
+      60
+    ],
+    "independent": 61,
+    "target": 62,
+    "verification": "Complete student PDF: printed footers 59-62 are physical pages 61-64, visually inspected."
+  },
+  "assignment": {
+    "start": [
+      1,
+      2
+    ],
+    "basis": [
+      3,
+      4,
+      5
+    ],
+    "independent": [
+      6,
+      7
+    ],
+    "target": 8,
+    "homework": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "homeworkInstruction": "Maken en nakijken",
+    "extra": [
+      9,
+      10,
+      11
+    ]
+  },
+  "goals": [
+    "Ei berekenen en goederen volgens de boekindeling classificeren.",
+    "Ek berekenen, beide goederen noemen en substituten/complementen onderscheiden.",
+    "Een vraagfunctie invullen en een-factor-scenario’s berekenen met oude waarden als percentagebasis.",
+    "Prijzen of inkomen gelijk houden, eerdere wijzigingen terugzetten en de richting verklaren."
+  ],
+  "targetOperations": {
+    "a": "Ei maaltijdpakketten +1,6; budgetnoedels -0,6.",
+    "b": "Luxegoed en inferieur goed; begrensd tot meting.",
+    "c": "Thee/koffie +0,4 substituten; koffiefilters/koffie -0,6 complementen.",
+    "d": "Qx 390 en 420 per maand; +7,692307...%; Y +10%; Ei circa +0,77 normaal; Px 10 en Pz 20 gelijk.",
+    "e": "Y terug op 30.000; Pz 24; Qx 392; positief verband; Px 10 en Y 30.000 gelijk."
+  },
+  "authoredTeachingExamples": {
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "income": "Fictieve meting: Y +8%; theaterkaarten +12%, tijdschriften +2%, budgetmaaltijden -4%; Ei +1,5, +0,25, -0,5.",
+    "cross": "Afzonderlijke fictieve metingen: huurautoprijs -8%; taxiritten -4%, bijpassende kinderzitjes +12%; Ek +0,5 en -1,5.",
+    "function": "TaalClub X: Qx = 160 - 4Px + 2Pz + 0,02Y. Px 15; Pz 25; Y 15.000. Qx 450. Y 18.000 gives Qx 510; Ei 2/3. Reset Y; Pz 30 gives Qx 460.",
+    "integrity": "Own contexts and data; no assigned practice question is worked before independent practice. Book methods only are cited on explanation slides."
+  },
+  "timing": "No measured one-lesson claim; complete route may require additional lessons or homework.",
+  "sourceConflicts": []
+}
