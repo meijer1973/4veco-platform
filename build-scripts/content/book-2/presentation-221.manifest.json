@@ -1,0 +1,312 @@
+{
+  "paragraph": "2.2.1",
+  "title": "Prijselasticiteit",
+  "type": "theory",
+  "sourceEdition": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026",
+  "sourceCommit": "f2660032cf7e4e3bbab96cf32863d06a38bd74bc",
+  "platformBaselineCommit": "17abbe86731a60efa8d7936180d0478bf6e58831",
+  "sourceFiles": {
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md": "c79150a148e39ad1609ad77712c0f26cc032a83a40106e4aa0096e8af1dbb07b",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/2.2 Elasticiteit – antwoorden.md": "db35c4ad3af0e49d79b6fec45cb5312f28e043cd875840b33d853c1d28fa07f9",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/Docenten_en_bouwverantwoording.md": "eedc86d6a46f1271e338195c92a63977b5523030fee9ee9a7d02b26a5e74b7f5",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet.pdf": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet_Antwoorden.pdf": "7bf9f43e801592b3632063b0720ae38b8a1776831bfaa90703a8ae95e5329bc2",
+    "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – paragraaf.md": "c1449aa3fce3cda67bd7f0beb5a72a2340c149ecc3ce7dc797d2b9f1beea16a2",
+    "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – paragraaf.md": "ae7d4b978ccea654260c8b72a8bc661aab89ef7194b80d702a8b87b48e3d7393"
+  },
+  "goals": [
+    "Procentuele veranderingen en Ev met teken berekenen",
+    "Prijselastisch, unitair en prijsinelastisch indelen",
+    "Relatieve prijsgevoeligheid vergelijken en in woorden duiden",
+    "Een plausibele verklaring onderscheiden van een bewezen oorzaak"
+  ],
+  "sourcePrintedPages": {
+    "theory": [
+      36,
+      37,
+      38
+    ],
+    "workedExample": 39,
+    "start": 40,
+    "basis": [
+      40,
+      41
+    ],
+    "independent": 41,
+    "target": 42,
+    "extra": 43
+  },
+  "pdfPhysicalPageOffset": 2,
+  "assignment": {
+    "start": [
+      1,
+      2
+    ],
+    "basis": [
+      3,
+      4
+    ],
+    "independent": [
+      5,
+      6
+    ],
+    "target": 7,
+    "homework": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "extraNotAssigned": [
+      8,
+      9,
+      10
+    ],
+    "homeworkInstruction": "Maken en nakijken"
+  },
+  "startSupport": {
+    "1": "Retrieval of Book 1 §1.1.2. Old value and sign briefly refreshed in slide 4.",
+    "2": "New formal Ev classification/comparison. Opening overview explicitly says: 2: verkennen met theorie p. 38. Pupils use the classification table and explanation under the number line, without assuming mastery. Return after instruction on slide 12."
+  },
+  "prerequisiteTrace": [
+    {
+      "operation": "Old/new numbers to signed percentage, positive old denominator",
+      "neededBy": "1, 3a-b, 4a-b, 5a, 6a, 7a",
+      "earlierTeaching": "Book 1 §1.1.2, Theorie / Procentuele verandering / four-step procedure and smartphone worked example",
+      "lessonTeaching": "slide 4 refresh; slide 10 price decrease; book p. 37"
+    },
+    {
+      "operation": "Own price changes with other demand factors fixed",
+      "neededBy": "3–7 interpretation",
+      "earlierTeaching": "Book 1 §1.2.2, De vraaglijn als startpunt and Beweging langs de vraaglijn",
+      "lessonTeaching": "slide 3 explicitly holds other demand factors fixed; book p. 36"
+    },
+    {
+      "operation": "Two percentages to signed dimensionless Ev",
+      "neededBy": "3c, 4a-b, 5a, 6a-b, 7a",
+      "earlierTeaching": null,
+      "lessonTeaching": "slides 5–6; price-decrease case 10–11; book p. 37–39"
+    },
+    {
+      "operation": "Signed Ev to classification, relative strength and meaning",
+      "neededBy": "start 2, 3c-d, 4c-d, 5b, 6a-b, 7b-c",
+      "earlierTeaching": null,
+      "lessonTeaching": "opening exploration p. 38; slides 7–8 and 11; return to start 2 on slide 12"
+    },
+    {
+      "operation": "Context to plausible explanation, without causal proof or other elasticity",
+      "neededBy": "3e, 5c, 7d",
+      "earlierTeaching": "Book 1 §1.2.2, substituten definition supports meaning of alternatives only, not this new inference task",
+      "lessonTeaching": "slide 9 demonstrates possible mechanism and evidential limit; book p. 38–39"
+    },
+    {
+      "operation": "Compare proportional responses without inferring absolute customer losses",
+      "neededBy": "3d, 4c, 5b, 7c",
+      "earlierTeaching": null,
+      "lessonTeaching": "slides 5 and 8; book p. 39"
+    }
+  ],
+  "authoredTeachingExamples": [
+    {
+      "name": "Keramiekcafé and Fotoworkshop",
+      "status": "Uitlegvoorbeeld — niet uit het boek",
+      "data": {
+        "Keramiekcafé": {
+          "Pold": 24,
+          "Pnew": 27,
+          "unitP": "euro per bezoek",
+          "Qold": 160,
+          "Qnew": 148,
+          "unitQ": "bezoeken per week",
+          "pctP": 12.5,
+          "pctQ": -7.5,
+          "Ev": -0.6
+        },
+        "Fotoworkshop": {
+          "Ev": -1.8
+        }
+      },
+      "assumptions": "Other demand factors constant in each measurement. Fotoworkshop measured in a separate price change. Its old/new P and Q are not supplied.",
+      "methodSource": "Book 2 pp. 36–39",
+      "slides": [
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "name": "BoekBox",
+      "status": "Uitlegvoorbeeld — niet uit het boek",
+      "data": {
+        "Pold": 16,
+        "Pnew": 14,
+        "unitP": "euro per abonnement per maand",
+        "Qold": 80,
+        "Qnew": 92,
+        "unitQ": "abonnementen per maand",
+        "pctP": -12.5,
+        "pctQ": 15,
+        "Ev": -1.2
+      },
+      "assumptions": "Separate new scenario; all other demand factors fixed. Not a reversal of Keramiekcafé.",
+      "methodSource": "Book 2 pp. 37–38, negative Ev for price fall",
+      "slides": [
+        10,
+        11
+      ]
+    }
+  ],
+  "target": {
+    "exercise": 7,
+    "title": "Bioscoop Nova en StreamNow",
+    "printedPage": 42,
+    "questionSlides": [
+      14,
+      15,
+      16
+    ],
+    "answerSlides": [
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "answers": {
+      "a": {
+        "pctP": 20,
+        "pctQ": -16,
+        "Ev": -0.8
+      },
+      "b": "Prijsinelastisch; 16% hoeveelheidsdaling tegenover 20% prijsstijging in deze meting.",
+      "c": "StreamNow Ev −2: prijselastisch en relatief prijsgevoeliger. Absolute klantenaantallen onbekend.",
+      "d": "Streamingabonnement mogelijk makkelijker op te zeggen/vervangen. Plausibele contextverklaring, geen bewezen oorzaak of inkomenselasticiteit."
+    }
+  },
+  "overviewSlides": [
+    1,
+    13,
+    24
+  ],
+  "sourceConflicts": [],
+  "scope": "Classroom PPTX and slide PDF only; no full companion acceptance, no classroom timing or mastery claim.",
+  "slides": [
+    {
+      "number": 1,
+      "title": "Deze les: §2.2.1 Prijselasticiteit"
+    },
+    {
+      "number": 2,
+      "title": "Wat kun je na deze les?"
+    },
+    {
+      "number": 3,
+      "title": "Een hogere prijs bij het Keramiekcafé"
+    },
+    {
+      "number": 4,
+      "title": "Procenten met de oude waarde als basis"
+    },
+    {
+      "number": 5,
+      "title": "De hoeveelheid reageert procentueel minder sterk"
+    },
+    {
+      "number": 6,
+      "title": "Ev: hoeveelheidsreactie gedeeld door prijsverandering"
+    },
+    {
+      "number": 7,
+      "title": "De vraag indelen met Ev"
+    },
+    {
+      "number": 8,
+      "title": "Prijsgevoeligheid vergelijken"
+    },
+    {
+      "number": 9,
+      "title": "Een mogelijke verklaring voor het verschil"
+    },
+    {
+      "number": 10,
+      "title": "Een prijsdaling in een nieuwe situatie"
+    },
+    {
+      "number": 11,
+      "title": "Een negatieve Ev bij een stijgende hoeveelheid"
+    },
+    {
+      "number": 12,
+      "title": "Terug naar startopgave 2"
+    },
+    {
+      "number": 13,
+      "title": "Deze les: §2.2.1 Prijselasticiteit"
+    },
+    {
+      "number": 14,
+      "title": "Opgave 7: Bioscoop Nova en StreamNow"
+    },
+    {
+      "number": 15,
+      "title": "Opgave 7: deelvragen a en b"
+    },
+    {
+      "number": 16,
+      "title": "Opgave 7: deelvragen c en d"
+    },
+    {
+      "number": 17,
+      "title": "Opgave 7a: de procentuele prijsverandering"
+    },
+    {
+      "number": 18,
+      "title": "Opgave 7a: de procentuele hoeveelheidsverandering"
+    },
+    {
+      "number": 19,
+      "title": "Opgave 7a: de elasticiteit van Nova"
+    },
+    {
+      "number": 20,
+      "title": "Opgave 7b: prijsinelastische vraag"
+    },
+    {
+      "number": 21,
+      "title": "Opgave 7c: StreamNow is prijsgevoeliger"
+    },
+    {
+      "number": 22,
+      "title": "Opgave 7d: een plausibele contextverklaring"
+    },
+    {
+      "number": 23,
+      "title": "Antwoordcontrole bij opgave 7"
+    },
+    {
+      "number": 24,
+      "title": "Deze les: §2.2.1 Prijselasticiteit"
+    }
+  ],
+  "nativeTableSlides": [
+    3,
+    7,
+    8,
+    10,
+    14,
+    20,
+    21
+  ],
+  "nativeChartSlides": [
+    5
+  ],
+  "outputHashes": {
+    "pptx": "fa46600ade32cb54259657a6c96e7fc0f20eba1a633e12ecac0529303b1b8e35",
+    "pdf": "10bbbe089572259d212a9af7aae9a71f974b9daba990c491466dbe14d6cde02e"
+  }
+}
