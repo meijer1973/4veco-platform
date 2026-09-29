@@ -8,7 +8,7 @@
       "slides": 23,
       "notes": 23,
       "nativeTables": 9,
-      "nativeCharts": 0,
+      "nativeCharts": 2,
       "allSlideTextRunsInCorrespondingPdfPage": true,
       "artifacts": {
         "pptx": {
@@ -27,7 +27,7 @@
       "slides": 28,
       "notes": 28,
       "nativeTables": 6,
-      "nativeCharts": 0,
+      "nativeCharts": 6,
       "allSlideTextRunsInCorrespondingPdfPage": true,
       "artifacts": {
         "pptx": {
@@ -65,7 +65,7 @@
       "slides": 24,
       "notes": 24,
       "nativeTables": 10,
-      "nativeCharts": 0,
+      "nativeCharts": 4,
       "allSlideTextRunsInCorrespondingPdfPage": true,
       "artifacts": {
         "pptx": {
@@ -84,7 +84,7 @@
       "slides": 24,
       "notes": 24,
       "nativeTables": 7,
-      "nativeCharts": 0,
+      "nativeCharts": 1,
       "allSlideTextRunsInCorrespondingPdfPage": true,
       "artifacts": {
         "pptx": {
@@ -103,7 +103,7 @@
       "slides": 26,
       "notes": 26,
       "nativeTables": 14,
-      "nativeCharts": 0,
+      "nativeCharts": 2,
       "allSlideTextRunsInCorrespondingPdfPage": true,
       "artifacts": {
         "pptx": {
