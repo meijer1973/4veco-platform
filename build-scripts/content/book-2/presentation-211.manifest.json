@@ -140,5 +140,17 @@
   "acceptedOutputHashes": {
     "pptx": "e0891d1e0ff4aa507ecb869670f904b80a5486b019f0d66f6434857296992bfe",
     "pdf": "fa168c03745b5d08a16a7b3bf8782da175ec6e7234a477b87da07cedc67981ec"
+  },
+  "startPrerequisites": {
+    "reviewDate": "2026-09-29",
+    "priorTeaching": "Opgave 1 haalt invullen in een gegeven formule en verdelen op; de formule en betekenissen staan in de opgave.",
+    "exploration": {
+      "item": "2",
+      "supportPrintedPages": "2–4",
+      "reason": "Kostenindeling en vooral TCK tegenover GCK zijn nieuw. Lees bij opgave 2 eerst de uitleg over constante en variabele kosten op p. 2 en over gemiddelde kosten op p. 4.",
+      "instruction": "dia 3–9",
+      "returnBeforePractice": "dia 12"
+    },
+    "deliveryRevision": "Opening overview and teacher notes repaired after serialized review; assignment numbers retained."
   }
 }

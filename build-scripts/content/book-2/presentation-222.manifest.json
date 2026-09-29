@@ -131,5 +131,17 @@
     }
   ],
   "teachingBoundary": "These authored examples precede independent practice. Assigned exercises 3–7 are not solved during instruction. All target questions are shown before answers in later discussion.",
-  "timing": "No measured one-lesson timing claim. Homework can complete the full route."
+  "timing": "No measured one-lesson timing claim. Homework can complete the full route.",
+  "startPrerequisites": {
+    "reviewDate": "2026-09-29",
+    "priorTeaching": "Opgave 1 gebruikt TO uit §2.1.2, dia 3, en Ev uit §2.2.1. Opgave 2b gebruikt het onderscheid omzet/winst uit §2.1.2, dia 4.",
+    "exploration": {
+      "item": "2a",
+      "supportPrintedPages": "45",
+      "reason": "De lokale omzetregel in opgave 2a is nieuw. Zoek de uitleg en voorwaarden op p. 45 op. Opgave 2b kan het eerdere onderscheid tussen omzet en winst ophalen.",
+      "instruction": "dia 3–12, lokale regel op dia 10",
+      "returnBeforePractice": "dia 15"
+    },
+    "deliveryRevision": "Opening overview and teacher notes repaired after serialized review; assignment numbers retained."
+  }
 }

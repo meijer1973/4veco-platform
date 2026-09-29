@@ -1,0 +1,181 @@
+{
+  "runs": [
+    {
+      "paragraph": "2.1.3",
+      "prompt": "Build the PowerPoint for paragraph 2.1.3.",
+      "baselines": {
+        "platform": "7ed2500f53fbd29bd0863dfd84b4fd6df57dc34f",
+        "lessons": "f2660032cf7e4e3bbab96cf32863d06a38bd74bc"
+      },
+      "startedAt": "2026-09-29T10:32:22.600439+00:00",
+      "isolation": "Fresh ephemeral CLI thread; isolated paired worktrees; no parent history, content coaching, or peer output supplied.",
+      "parallelism": "Up to three concurrent cold authors, all seeded before production from the same immutable repository pair.",
+      "model": "User-configured default; no override",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-09-29T10:55:59.530924+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "d654ad5d3992ff64d41899bf3ef792c8bbb62ed5",
+          "files": {
+            "build-scripts/content/book-2/presentation-213.manifest.json": "86c59a32c76c110338ed06d20722556dd277897034666086527cea8b8c9a3caf",
+            "build-scripts/content/book-2/presentation-213.mjs": "66ce8be906bf2d32a97c1d10d3da3a48fb98c7206085f4c1bf541f64af2c2234"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "b393c27679b01312383487570a1343a8a6266e5a",
+          "files": {
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – presentatie.pdf": "3a1541df0059221d6f0695c1b076b518988052f7ee9cc2b62078148936fd298f",
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – presentatie.pptx": "47ce000d970ba880927f97a633807fc40b20792ec5fe0d9aca27e4d53b9993c2",
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/evidence/2.1.3-presentation.md": "287304a71a6481c31116ff05626e7d365604d818ecfc441702f8eddafde7aaee",
+            "RESEARCH_AGENT_MAP.md": "09308ced2b7cc7947db4a118fe9940471ff7c85135653b2ac77387ad47a421b5"
+          }
+        }
+      },
+      "processLogSha256": "36ace2e908f7f76e673e8d6d2dd3e37e1fa88ae298f564ddc70f77a6b5fa6284"
+    },
+    {
+      "paragraph": "2.2.1",
+      "prompt": "Build the PowerPoint for paragraph 2.2.1.",
+      "baselines": {
+        "platform": "7ed2500f53fbd29bd0863dfd84b4fd6df57dc34f",
+        "lessons": "f2660032cf7e4e3bbab96cf32863d06a38bd74bc"
+      },
+      "startedAt": "2026-09-29T10:32:23.108489+00:00",
+      "isolation": "Fresh ephemeral CLI thread; isolated paired worktrees; no parent history, content coaching, or peer output supplied.",
+      "parallelism": "Up to three concurrent cold authors, all seeded before production from the same immutable repository pair.",
+      "model": "User-configured default; no override",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-09-29T10:51:03.777771+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "b1fb8dd38292ee7e7b7ddd6ce5af887d383f1a66",
+          "files": {
+            "build-scripts/content/book-2/presentation-221.manifest.json": "36718a735669e4181ba41a52dde53d74412faa82d13669d01c6eafa4fdc97509",
+            "build-scripts/content/book-2/presentation-221.mjs": "1a8f57d4e6dc5b7a7aa01a967771d1834d795f0d1d07ed2a528328c32d56d196"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "db4815eb444f0a471d5a75477f41026d78699e2c",
+          "files": {
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – presentatie.pdf": "933af172e1fda06c7dc60cc53f24c3923854ae7b0ee3e9d5cda1f44e240d50aa",
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – presentatie.pptx": "a049e3b7efa7cd8b59feec3dbd7d9534e84d8525b5757e205ebbab8787fa5379",
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.1 Prijselasticiteit/evidence/2.2.1-presentation.md": "f5e97547db1fe54dbeeb6334ed0f7c14a4222d6dda03e3565447ba352bd0e74b",
+            "RESEARCH_AGENT_MAP.md": "e12efa24c6ef61fe6fdddb6077490951e0fd78484149dbea8cf53db4be518b1d"
+          }
+        }
+      },
+      "processLogSha256": "33807f487e248909bb560bbc4672101a62bc81908f3b29a92dad715941bd5516"
+    },
+    {
+      "paragraph": "2.2.2",
+      "prompt": "Build the PowerPoint for paragraph 2.2.2.",
+      "baselines": {
+        "platform": "7ed2500f53fbd29bd0863dfd84b4fd6df57dc34f",
+        "lessons": "f2660032cf7e4e3bbab96cf32863d06a38bd74bc"
+      },
+      "startedAt": "2026-09-29T10:32:23.645563+00:00",
+      "isolation": "Fresh ephemeral CLI thread; isolated paired worktrees; no parent history, content coaching, or peer output supplied.",
+      "parallelism": "Up to three concurrent cold authors, all seeded before production from the same immutable repository pair.",
+      "model": "User-configured default; no override",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-09-29T10:53:09.195183+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "c58ca0b07a99b2a46cb2f88446362d79fa378545",
+          "files": {
+            "build-scripts/content/book-2/presentation-222-chart-geometry.py": "6e01a6fd543116f72bd41adda656af5b682ba3ef182330c3a3d1104f08f1e6e4",
+            "build-scripts/content/book-2/presentation-222.manifest.json": "b246b6f581862a995b4766a2bb3522e4460b0a8d838111d0457c0cb0dd3d1c2e",
+            "build-scripts/content/book-2/presentation-222.mjs": "2e640f5cf6cdbe90295e08a2783cc57d82954bf2736b05b6a967758ea5fc5a70"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "52cf5dd8190f54ccedfd64f302be6baa7653730b",
+          "files": {
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – presentatie.pdf": "70d4d238ee90c08c2ec25cb08cefd095d1d767d34c5c5c4b9f9dda1e49c375de",
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – presentatie.pptx": "f6d042fd3c2d66dbbab8e8f03ece4c5befbdafa991aa7e173153133b705f8759",
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.2 Elasticiteit en omzet/evidence/2.2.2-presentation.md": "dbfeb0ee52aff0d0d0eb398817bde58527ffb6fd746ed2339c86fdd62f61418c",
+            "RESEARCH_AGENT_MAP.md": "11092e7d8f3de178e432337ccf4f84b3687df6ae64fc88c92dd93b15651d8e58"
+          }
+        }
+      },
+      "processLogSha256": "63526d6b27bac6ae7e742270de466889eb3719c00c94dcf8ddc89338e316b825"
+    },
+    {
+      "paragraph": "2.2.3",
+      "prompt": "Build the PowerPoint for paragraph 2.2.3.",
+      "baselines": {
+        "platform": "7ed2500f53fbd29bd0863dfd84b4fd6df57dc34f",
+        "lessons": "f2660032cf7e4e3bbab96cf32863d06a38bd74bc"
+      },
+      "startedAt": "2026-09-29T10:51:09.166584+00:00",
+      "isolation": "Fresh ephemeral CLI thread; isolated paired worktrees; no parent history, content coaching, or peer output supplied.",
+      "parallelism": "Up to three concurrent cold authors, all seeded before production from the same immutable repository pair.",
+      "model": "User-configured default; no override",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-09-29T11:14:24.721151+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "6722d9e62a03454a37aee9c179302e90b739abb5",
+          "files": {
+            "build-scripts/content/book-2/check-presentation-223.py": "5c9a43ec03d24908480951c3a8943e0dc9722339627a1a2e868d81e48ac2dbce",
+            "build-scripts/content/book-2/presentation-223.manifest.json": "1032233edd08edbab6b98db4f681e57a7c02b1728e70b3b31add3039b8b48a4c",
+            "build-scripts/content/book-2/presentation-223.mjs": "2376d8951b5872bc22cbde4d7e37df7cf8eafbc384e60cc3df190d13c24fb783"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "29e1829f5fe19e3c66de40c1bcc2da5cb3295eb9",
+          "files": {
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – presentatie.pdf": "34c1c41ecd9d32e5ac1a6ca12dc173f8908d99465702b4756bd5c41b7f9e89d9",
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – presentatie.pptx": "527f6ecb12d20881d037b953c71ce69935693fd8ef17f63a572025403d9f47bf",
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit/evidence/2.2.3-presentation.md": "3ab57c7b28e457d1cc764f92347551a7b0733aee4280c2544700629c086e5f6a",
+            "RESEARCH_AGENT_MAP.md": "c8017131f4729136316850582408774eb835e6f3242f3b194b66a73720bab67b"
+          }
+        }
+      },
+      "processLogSha256": "4d1bb7540c03dcd4d493e42008b2b051ced9f5b7e0479bca8844cdf8ed384af7"
+    },
+    {
+      "paragraph": "2.2.4",
+      "prompt": "Build the PowerPoint for paragraph 2.2.4.",
+      "baselines": {
+        "platform": "7ed2500f53fbd29bd0863dfd84b4fd6df57dc34f",
+        "lessons": "f2660032cf7e4e3bbab96cf32863d06a38bd74bc"
+      },
+      "startedAt": "2026-09-29T10:53:14.495526+00:00",
+      "isolation": "Fresh ephemeral CLI thread; isolated paired worktrees; no parent history, content coaching, or peer output supplied.",
+      "parallelism": "Up to three concurrent cold authors, all seeded before production from the same immutable repository pair.",
+      "model": "User-configured default; no override",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-09-29T11:11:19.660739+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "8d1de44bd599708d70389e391ef9059e3340aee4",
+          "files": {
+            "build-scripts/content/book-2/presentation-224.manifest.json": "705d2faabfa6cdb1fb12077b64c287f7e832f8de35fb02bb19f39427302d94da",
+            "build-scripts/content/book-2/presentation-224.mjs": "14a4805d96086c3e4f564b7ae9150ead41d38da8b8e3eba98ba6065d1044e2ba"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "af87b4fb5c94a20f85d96002a6a35fa2ce7c54ef",
+          "files": {
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.4 Gemengde opgaven/2.2.4 Gemengde opgaven – presentatie.pdf": "207072891553d406a542549fe9c27ba01e4643f7a894a21b26eec697750da325",
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.4 Gemengde opgaven/2.2.4 Gemengde opgaven – presentatie.pptx": "40b58dd23408a0d0dae6dc0517520360b4326b9836fc5e024a3f2735fb697900",
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.4 Gemengde opgaven/evidence/2.2.4-presentation.md": "6e9136f361d6b55b5d711cc1e3801ddef28e138f7a6ac6a6100d8b8f195c8197",
+            "RESEARCH_AGENT_MAP.md": "ad84f6fd07158453227910138b1c0ac531f9e5de4b8c5a7b003f3b7216f74c64"
+          }
+        }
+      },
+      "processLogSha256": "7f4b374f1f3670023673d47c65ac6148cc490c32718f838c321152fa68d0cd21"
+    }
+  ]
+}

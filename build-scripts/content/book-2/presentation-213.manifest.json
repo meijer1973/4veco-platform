@@ -102,5 +102,17 @@
     "d": "Alle drie MK-berekeningen Curva; eerste MO-berekening en alle marginale cellen.",
     "e": "MK-patronen vergelijken; extra bedragen per extra product binnen de hele stap uitleggen; geen winstmaximum."
   },
-  "scope": "Part B classroom PPTX/PDF only; no Part A or full companion completeness claim"
+  "scope": "Part B classroom PPTX/PDF only; no Part A or full companion completeness claim",
+  "startPrerequisites": {
+    "reviewDate": "2026-09-29",
+    "priorTeaching": "Opgave 1 gebruikt TK en GTK uit §2.1.1, dia 4 en 7–9, en winst uit §2.1.2, dia 4.",
+    "exploration": {
+      "item": "2",
+      "supportPrintedPages": "19–20",
+      "reason": "MK en delen door de verandering in Q zijn nieuw. Lees bij opgave 2 de definitie en tabelstappen op p. 19–20.",
+      "instruction": "dia 3–11",
+      "returnBeforePractice": "dia 14"
+    },
+    "deliveryRevision": "Opening overview and teacher notes repaired after serialized review; assignment numbers retained."
+  }
 }
