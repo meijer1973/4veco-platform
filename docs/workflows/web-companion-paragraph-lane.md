@@ -1,5 +1,12 @@
 # Web Companion Paragraph Lane
 
+For a request for only a classroom PowerPoint, follow the
+[classroom presentation recipe](classroom-presentation.md) through the
+[PowerPoint skill](../../skills/econ-pptx-templates.md). It is scoped Part B
+work using the actual current textbook/answers/teacher sources, without the
+full web-output set or historical handoff required below. Its matching slide
+PDF (`– presentatie.pdf`) also belongs to Part B; textbook PDFs remain Part A.
+
 Also called: Part B, companion lane, or student-web companion lane. These are
 aliases for the same lane; do not treat them as separate lanes. See
 `docs/workflows/paragraph-lane-vocabulary.md`.

@@ -1,0 +1,144 @@
+{
+  "slides": [
+    {
+      "number": 1,
+      "title": "Deze les: Â§2.1.1 Kostenstructuren"
+    },
+    {
+      "number": 2,
+      "title": "Wat kun je na deze les?"
+    },
+    {
+      "number": 3,
+      "title": "Constante en variabele kosten"
+    },
+    {
+      "number": 4,
+      "title": "Van kostenpost naar kostenfunctie"
+    },
+    {
+      "number": 5,
+      "title": "Kosten in een grafiek"
+    },
+    {
+      "number": 6,
+      "title": "Totale kosten zijn de som van beide"
+    },
+    {
+      "number": 7,
+      "title": "Gemiddelde kosten: het bedrag per product"
+    },
+    {
+      "number": 8,
+      "title": "Gemiddelde kosten bij 200 flessen"
+    },
+    {
+      "number": 9,
+      "title": "Meer flessen, lagere kosten per fles"
+    },
+    {
+      "number": 10,
+      "title": "Korte controle"
+    },
+    {
+      "number": 11,
+      "title": "Korte controle"
+    },
+    {
+      "number": 12,
+      "title": "Deze les: Â§2.1.1 Kostenstructuren"
+    },
+    {
+      "number": 13,
+      "title": "Opgave 7 Â· Bakkerij De Korenaar"
+    },
+    {
+      "number": 14,
+      "title": "Opgave 7 Â· Deelvragen a en b"
+    },
+    {
+      "number": 15,
+      "title": "Opgave 7 Â· Deelvragen c, d en e"
+    },
+    {
+      "number": 16,
+      "title": "Opgave 7a Â· Kosten indelen"
+    },
+    {
+      "number": 17,
+      "title": "Opgave 7b Â· De kostenfuncties"
+    },
+    {
+      "number": 18,
+      "title": "Opgave 7c Â· 500 broden"
+    },
+    {
+      "number": 19,
+      "title": "Opgave 7d Â· 1.000 broden"
+    },
+    {
+      "number": 20,
+      "title": "Opgave 7e Â· Eerst de totalen vergelijken"
+    },
+    {
+      "number": 21,
+      "title": "Opgave 7e Â· Waarom halveert GTK niet?"
+    },
+    {
+      "number": 22,
+      "title": "Antwoordcontrole bij opgave 7"
+    },
+    {
+      "number": 23,
+      "title": "Deze les: Â§2.1.1 Kostenstructuren"
+    }
+  ],
+  "overviewSlides": [
+    1,
+    12,
+    23
+  ],
+  "sourceCommit": "f6518f513d1f22f82922d4a8d3d3842c369b14f7",
+  "sourcePrintedPages": {
+    "start": 6,
+    "basis": [
+      6,
+      7
+    ],
+    "independent": 7,
+    "target": 8
+  },
+  "assignment": {
+    "start": [
+      1,
+      2
+    ],
+    "basis": [
+      3,
+      4
+    ],
+    "independent": [
+      5,
+      6
+    ],
+    "target": 7,
+    "homework": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "sourceEdition": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026",
+  "sourceFiles": {
+    "bronnen/H1/manuscript/2.1.1 Kostenstructuren – paragraaf.md": "7d1c31299783c3172cd89bd146c26e2af090b1e41de67d914835c616502a69d0",
+    "bronnen/H1/2.1 Kosten en opbrengsten – antwoorden.md": "380e73aa8c666604171a0fc4d52a39ce5ddde4d79175d339eae0f0051dde9eb2",
+    "boek/Boek_2_Compleet.pdf": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493"
+  },
+  "type": "theory",
+  "acceptedOutputHashes": {
+    "pptx": "e0891d1e0ff4aa507ecb869670f904b80a5486b019f0d66f6434857296992bfe",
+    "pdf": "fa168c03745b5d08a16a7b3bf8782da175ec6e7234a477b87da07cedc67981ec"
+  }
+}

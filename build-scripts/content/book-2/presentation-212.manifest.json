@@ -1,0 +1,73 @@
+{
+  "paragraph": "2.1.2",
+  "title": "Opbrengsten, winst en break-even",
+  "type": "theory",
+  "sourceEdition": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026",
+  "sourceCommit": "ba79232a2c59d28b9013c9ac53661b0613e8027f",
+  "platformCommit": "825cab04e7f6db7406476cfefdf9a7773305e2f0",
+  "sourceFiles": {
+    "bronnen/H1/manuscript/2.1.2 Opbrengsten, winst en break-even – paragraaf.md": "33c07c4327027feca0d09f82227ab30851b70519f42d5bc5f8fcdf0c0318be43",
+    "bronnen/H1/2.1 Kosten en opbrengsten – antwoorden.md": "380e73aa8c666604171a0fc4d52a39ce5ddde4d79175d339eae0f0051dde9eb2",
+    "bronnen/H1/Docenten_en_bouwverantwoording.md": "ed69ff51ef4dc9b73d359f5560ced6a190af82f200d79fb87222d0327f082b9e",
+    "boek/Boek_2_Compleet.pdf": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493",
+    "bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.md": "a6f0ad9724ee7c6249a1582278a095cd5a42fbfc6e9596164c3c565bcd712909"
+  },
+  "sourcePrintedPages": {
+    "start": 14,
+    "target": 17,
+    "basis": [
+      14,
+      15,
+      16
+    ],
+    "independent": 16,
+    "theory": [
+      10,
+      11,
+      12,
+      13
+    ]
+  },
+  "assignment": {
+    "target": 8,
+    "extra": [
+      9,
+      10,
+      11
+    ],
+    "basis": [
+      3,
+      4,
+      5
+    ],
+    "independent": [
+      6,
+      7
+    ],
+    "homeworkInstruction": "Maken en nakijken",
+    "homework": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "start": [
+      1,
+      2
+    ]
+  },
+  "goals": [
+    "TO, GO en winst berekenen en GO = P bij een vaste prijs verklaren.",
+    "Break-even algebraïsch bepalen en vertalen naar hele producten binnen de capaciteit.",
+    "TK en TO tekenen, het snijpunt markeren en winst of verlies als verticale afstand aangeven."
+  ],
+  "workedExample": "WafelWagen, gedrukte pagina 10–13",
+  "targetOperations": {
+    "b": "Winst bij 500 en 1.000 broden berekenen",
+    "d": "Assen, lijnen, snijpunt en winst/verlies tekenen, € 200 verticale afstand bij Q = 1.000",
+    "a": "TO opstellen en GO = P verklaren bij Q > 0",
+    "c": "TO = TK algebraïsch oplossen, exacte grens en eerste gehele aantal onderscheiden"
+  }
+}

@@ -1,5 +1,12 @@
 # Build Scripts
 
+## Classroom lesson presentations
+
+For a paragraph PowerPoint use the [classroom recipe](../docs/workflows/classroom-presentation.md).
+Reusable tools live in `presentations/`, editable paragraph sources in
+`content/book-N/`, and final PPTX/slide-PDF files beside lesson paragraph exports.
+The accepted §2.1.1 source is `content/book-2/presentation-211.mjs`.
+
 This folder contains all production scripts used to turn source material into the rich paragraph outputs that appear in lesson targets.
 
 For textbook work start with the [Part A checklist](../docs/workflows/part-a-start.md); for companion work use the [Part B runbook](../docs/workflows/web-companion-paragraph-lane.md). [BUILD-PARAGRAPH.md](../BUILD-PARAGRAPH.md) covers complete cross-lane verification.

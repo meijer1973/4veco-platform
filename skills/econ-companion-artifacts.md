@@ -6,6 +6,15 @@ pipeline: "Part B producer (umbrella; per-format Part B skills inherit; if a per
 
 # Companion Learning Artifacts Skill
 
+**Scoped classroom PowerPoint:** a request for only a paragraph PowerPoint or
+lespresentatie uses [econ-pptx-templates](econ-pptx-templates.md) and its
+[classroom recipe](../docs/workflows/classroom-presentation.md). That recipe
+governs its teaching sequence, actual exercise instructions, teacher notes,
+PPTX/slide-PDF output and review. The web-first/14-file/handoff requirements
+below apply to the full web companion scope, not to this narrower assignment.
+Use the delivered current textbook, answers and teacher sources; do not invent
+a missing legacy handoff or imply a complete product route. This remains Part B.
+
 General authoring + regeneration recipe for **student-facing companion
 artifacts**. Keep these three scopes distinct.
 
@@ -36,7 +45,7 @@ differentiated basis/midden/verrijking exercise handouts. Review those exports
 only when that profile is explicitly in scope; they are not default
 `student-web` files.
 
-Paragraph PDF output and `build_pdf.py` belong to Part A textbook production,
+Textbook paragraph PDF output and `build_pdf.py` belong to Part A textbook production,
 not the Part B companion lane.
 
 This skill encodes the platform-wide standard. Companion-specific builders (`econ-explainer-docs` for voorkennis/vaardigheden DOCX, `econ-exercise-builder` for fading-exercise handouts, `econ-pptx-templates` for slide companions, etc.) inherit these rules; if a builder skill conflicts with this skill, this skill wins for student-facing rules and the builder skill should be updated.

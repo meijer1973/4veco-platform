@@ -13,6 +13,14 @@ const {
 } = require('./check-paragraph-lane-scope');
 
 const FIXTURE_DIR = path.join(__dirname, 'fixtures', 'paragraph-lane-scope');
+test('slide PDF belongs to companion without admitting textbook or arbitrary PDFs', () => {
+  const dir = 'Boek 2/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/';
+  const slidePdf = dir + '2.1.1 Kostenstructuren – presentatie.pdf';
+  expect(checkLaneScope({lane: 'companion', changedPaths: [slidePdf]}).ok).toBe(true);
+  expect(checkLaneScope({lane: 'textbook', changedPaths: [slidePdf]}).ok).toBe(false);
+  expect(classifyPath(dir + '2.1.1 Kostenstructuren – paragraaf.pdf').category).toBe('partA_textbook');
+  expect(classifyPath(dir + 'unreviewed.pdf').category).toBe('unknown');
+});
 test('Books 3/4 follow-ups retain finite textbook ownership and Part B separation', () => {
   const files = require('../books/books34-followups-revision-pin.json').revision_paths;
   expect(checkLaneScope({lane: 'textbook', changedPaths: files}).ok).toBe(true);

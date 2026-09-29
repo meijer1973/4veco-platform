@@ -1,5 +1,15 @@
 # PowerPoint Derivative Policy
 
+## Classroom scope
+
+The web-derivative requirements below, based on
+`references/exemplars/1.1.1-golden-presentation/`, apply when web output is
+requested. A standalone classroom PowerPoint follows the
+[classroom recipe](../../docs/workflows/classroom-presentation.md), including
+actual exercise instructions, native editable objects and saved-file QA.
+Use the current installed authoring tool; no web model or unconditional
+LibreOffice conversion is required for that surface.
+
 Status: guidance for PPTX exports after web-first review.
 
 Derived from `references/exemplars/1.1.1-golden-presentation/`.
