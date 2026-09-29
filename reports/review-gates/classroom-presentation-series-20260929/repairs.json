@@ -221,8 +221,8 @@
     {
       "paragraph": "2.1.3",
       "beforePptx": "47ce000d970ba880927f97a633807fc40b20792ec5fe0d9aca27e4d53b9993c2",
-      "afterPptx": "958bad71543afc06d18420d1a20c6e0ce8e8948aeb74acf76484392fc9aeffed",
-      "afterPdf": "9525fb79e4f9a97e0ff67228c22d91eb2a92deeb3fd6e664163c8a08986c0862",
+      "afterPptx": "1d975d886afea3ca2ebbcfc6bac6133f841962f6f4384e650f163a8e29bc6fd0",
+      "afterPdf": "f4f78ec14282b277747c3a83ec36bdb4805623fd606f5bf5484a354de174282b",
       "changedSlideAndNoteParts": [
         "ppt/slides/slide1.xml",
         "ppt/notesSlides/notesSlide1.xml",
@@ -331,13 +331,14 @@
           "meanAbsolutePixelDifference": 0.0
         }
       ],
-      "visualReview": "Changed overviews inspected individually in native PowerPoint renders. Separate series content review required."
+      "visualReview": "Changed overviews inspected individually in native PowerPoint renders. Separate series content review required.",
+      "independentTraceCorrection": "Corrected description of exercise 1 prerequisites in notes/manifest; every PDF page remains pixel-identical to the preceding support revision."
     },
     {
       "paragraph": "2.2.2",
       "beforePptx": "f6d042fd3c2d66dbbab8e8f03ece4c5befbdafa991aa7e173153133b705f8759",
-      "afterPptx": "82b7c9c5ad2dcada235871c038a5884072f67941d6c9ebfcf5d8a632e363d652",
-      "afterPdf": "bda75054245fe54efd58cb64cfe05dae05a5abbf2c319cf1c09b5e4a956b6061",
+      "afterPptx": "8e9f5f5217d061a76b0a98c7e84459e6d3951ee46dc2bcbf00add162ab2dbc27",
+      "afterPdf": "07b667bac12a95a90441a8789dde4f0545ae7cbd38115b12c1fa79f8549af2ee",
       "changedSlideAndNoteParts": [
         "ppt/slides/slide1.xml",
         "ppt/notesSlides/notesSlide1.xml",
@@ -442,7 +443,8 @@
           "meanAbsolutePixelDifference": 0.0
         }
       ],
-      "visualReview": "Changed overviews inspected individually in native PowerPoint renders. Separate series content review required."
+      "visualReview": "Changed overviews inspected individually in native PowerPoint renders. Separate series content review required.",
+      "independentTraceCorrection": "Corrected description of exercise 1 prerequisites in notes/manifest; every PDF page remains pixel-identical to the preceding support revision."
     }
   ]
 }

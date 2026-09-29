@@ -1,0 +1,324 @@
+{
+  "passed": true,
+  "note": "All declared hashes match immutable lesson source commits. All current textbook source bytes also match. The historical 211 visual reference used by original 222 remains bound to its source commit; the final repaired 211 is separately identified in final-artifacts.json.",
+  "manifests": [
+    {
+      "manifest": "build-scripts/content/book-2/presentation-211.manifest.json",
+      "sourceCommit": "f6518f513d1f22f82922d4a8d3d3842c369b14f7",
+      "verifiedSources": [
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.1 Kostenstructuren – paragraaf.md",
+          "sha256": "7d1c31299783c3172cd89bd146c26e2af090b1e41de67d914835c616502a69d0",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/2.1 Kosten en opbrengsten – antwoorden.md",
+          "sha256": "380e73aa8c666604171a0fc4d52a39ce5ddde4d79175d339eae0f0051dde9eb2",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet.pdf",
+          "sha256": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        }
+      ]
+    },
+    {
+      "manifest": "build-scripts/content/book-2/presentation-212.manifest.json",
+      "sourceCommit": "ba79232a2c59d28b9013c9ac53661b0613e8027f",
+      "verifiedSources": [
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+          "sha256": "33c07c4327027feca0d09f82227ab30851b70519f42d5bc5f8fcdf0c0318be43",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/2.1 Kosten en opbrengsten – antwoorden.md",
+          "sha256": "380e73aa8c666604171a0fc4d52a39ce5ddde4d79175d339eae0f0051dde9eb2",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/Docenten_en_bouwverantwoording.md",
+          "sha256": "ed69ff51ef4dc9b73d359f5560ced6a190af82f200d79fb87222d0327f082b9e",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet.pdf",
+          "sha256": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.md",
+          "sha256": "a6f0ad9724ee7c6249a1582278a095cd5a42fbfc6e9596164c3c565bcd712909",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        }
+      ]
+    },
+    {
+      "manifest": "build-scripts/content/book-2/presentation-213.manifest.json",
+      "sourceCommit": "f2660032cf7e4e3bbab96cf32863d06a38bd74bc",
+      "verifiedSources": [
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+          "sha256": "8cee4de8cc847b58d5c29c3f9bee3df6f4634cd16bed1dc8d45017529ef997d6",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/2.1 Kosten en opbrengsten – antwoorden.md",
+          "sha256": "380e73aa8c666604171a0fc4d52a39ce5ddde4d79175d339eae0f0051dde9eb2",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/Docenten_en_bouwverantwoording.md",
+          "sha256": "ed69ff51ef4dc9b73d359f5560ced6a190af82f200d79fb87222d0327f082b9e",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet.pdf",
+          "sha256": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md",
+          "sha256": "eec81a6c96f5ff1061ba1f301c749d794feada3ad3b32361c90aa57e333aee0f",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md",
+          "sha256": "e197a06a3b954be16b31fceaaed8335de95d09ac69611d7e1ebcbba78e7d28cc",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        }
+      ]
+    },
+    {
+      "manifest": "build-scripts/content/book-2/presentation-214.manifest.json",
+      "sourceCommit": "08d7fd27830b5c42d1dbebc7fcb73b882b4d67a4",
+      "verifiedSources": [
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.4 Gemengde opgaven – opgaven.md",
+          "sha256": "124bee60e526b1ef69693637ab02198215ab83367d1ffecbca6d27640b62dbf3",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/2.1 Kosten en opbrengsten – antwoorden.md",
+          "sha256": "380e73aa8c666604171a0fc4d52a39ce5ddde4d79175d339eae0f0051dde9eb2",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/Docenten_en_bouwverantwoording.md",
+          "sha256": "ed69ff51ef4dc9b73d359f5560ced6a190af82f200d79fb87222d0327f082b9e",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.4_ex_1.svg",
+          "sha256": "57f0e4916cd485873dbd39140d53a79128404e6f50b78014fb7550d282a00eff",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.4_ex_2.svg",
+          "sha256": "d69abaab8e4de3477de418ec447fa59de1ebfb71c02aafeb70e302a4ca7732ec",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.4_ex_3.svg",
+          "sha256": "9c9edcf06307a18062d0d67b2c1257adfd647a43902d115bb79897a2294cbe09",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet.pdf",
+          "sha256": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        }
+      ]
+    },
+    {
+      "manifest": "build-scripts/content/book-2/presentation-221.manifest.json",
+      "sourceCommit": "f2660032cf7e4e3bbab96cf32863d06a38bd74bc",
+      "verifiedSources": [
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md",
+          "sha256": "c79150a148e39ad1609ad77712c0f26cc032a83a40106e4aa0096e8af1dbb07b",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/2.2 Elasticiteit – antwoorden.md",
+          "sha256": "db35c4ad3af0e49d79b6fec45cb5312f28e043cd875840b33d853c1d28fa07f9",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/Docenten_en_bouwverantwoording.md",
+          "sha256": "eedc86d6a46f1271e338195c92a63977b5523030fee9ee9a7d02b26a5e74b7f5",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet.pdf",
+          "sha256": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet_Antwoorden.pdf",
+          "sha256": "7bf9f43e801592b3632063b0720ae38b8a1776831bfaa90703a8ae95e5329bc2",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – paragraaf.md",
+          "sha256": "c1449aa3fce3cda67bd7f0beb5a72a2340c149ecc3ce7dc797d2b9f1beea16a2",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – paragraaf.md",
+          "sha256": "ae7d4b978ccea654260c8b72a8bc661aab89ef7194b80d702a8b87b48e3d7393",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        }
+      ]
+    },
+    {
+      "manifest": "build-scripts/content/book-2/presentation-222.manifest.json",
+      "sourceCommit": "f2660032cf7e4e3bbab96cf32863d06a38bd74bc",
+      "verifiedSources": [
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.2 Elasticiteit en omzet – paragraaf.md",
+          "sha256": "dd5aec29637a494da80ad7264f08c7d7ecc7081d9ca23f0e963385127f8166f3",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/2.2 Elasticiteit – antwoorden.md",
+          "sha256": "db35c4ad3af0e49d79b6fec45cb5312f28e043cd875840b33d853c1d28fa07f9",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/Docenten_en_bouwverantwoording.md",
+          "sha256": "eedc86d6a46f1271e338195c92a63977b5523030fee9ee9a7d02b26a5e74b7f5",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.md",
+          "sha256": "a4e7912f27083ba136fbb3ede6e43db78ff8af3867264465456d6b13adb3d986",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet.pdf",
+          "sha256": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet_Antwoorden.pdf",
+          "sha256": "7bf9f43e801592b3632063b0720ae38b8a1776831bfaa90703a8ae95e5329bc2",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – presentatie.pptx",
+          "sha256": "e0891d1e0ff4aa507ecb869670f904b80a5486b019f0d66f6434857296992bfe",
+          "currentBytesMatch": false,
+          "role": "historical visual reference at source commit"
+        }
+      ]
+    },
+    {
+      "manifest": "build-scripts/content/book-2/presentation-223.manifest.json",
+      "sourceCommit": "f2660032cf7e4e3bbab96cf32863d06a38bd74bc",
+      "verifiedSources": [
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md",
+          "sha256": "40440809dc4e3d4261ff15d15e05bf8b5396ec346be1f59df3037c4d71984cea",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md",
+          "sha256": "c79150a148e39ad1609ad77712c0f26cc032a83a40106e4aa0096e8af1dbb07b",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/2.2 Elasticiteit – antwoorden.md",
+          "sha256": "db35c4ad3af0e49d79b6fec45cb5312f28e043cd875840b33d853c1d28fa07f9",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/Docenten_en_bouwverantwoording.md",
+          "sha256": "eedc86d6a46f1271e338195c92a63977b5523030fee9ee9a7d02b26a5e74b7f5",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet.pdf",
+          "sha256": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        }
+      ]
+    },
+    {
+      "manifest": "build-scripts/content/book-2/presentation-224.manifest.json",
+      "sourceCommit": "f2660032cf7e4e3bbab96cf32863d06a38bd74bc",
+      "verifiedSources": [
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.4 Gemengde opgaven – opgaven.md",
+          "sha256": "d68304f2ba0eb15a30f74f458ff9dfd50b2ffb781f5b10b3ead5807ec934d82f",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/2.2 Elasticiteit – antwoorden.md",
+          "sha256": "db35c4ad3af0e49d79b6fec45cb5312f28e043cd875840b33d853c1d28fa07f9",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/Docenten_en_bouwverantwoording.md",
+          "sha256": "eedc86d6a46f1271e338195c92a63977b5523030fee9ee9a7d02b26a5e74b7f5",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet.pdf",
+          "sha256": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.4 Gemengde opgaven/2.2.4 Gemengde opgaven – antwoorden.md",
+          "sha256": "2f9668595d624764e7ce8477f88c3f317772531b5988c5a800580e2777d036b4",
+          "currentBytesMatch": true,
+          "role": "textbook source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,7 +1,9 @@
 # Book 2 classroom presentation series — 29 September 2026
 
-Status: production and review in progress. The initial batch is preserved;
-the fresh regression and final assembled-series verdict are not yet complete.
+Status: **PASS for the final artifacts and instructional continuity.** The
+first batch exposed a shared opening-support defect; the repaired recipe and
+two fresh cold regressions now pass. Publication and exact-head CI status are
+recorded in the paired PRs; this review grants no merge authority.
 
 ## Question and experiment
 
@@ -23,7 +25,7 @@ immutable commits before production, including the later scheduling wave:
 
 [Initial run records](initial-runs.json) preserve exact prompts, times, source
 baselines, output commits and SHA-256 hashes. Original commits remain available
-through their draft PRs. Child author reviews are evidence for the individual
+through their original PRs. Child author reviews are evidence for the individual
 deck, not substitutes for the subsequent serial review.
 
 | Initial paragraph | Slides | Platform PR | Lessons PR | Initial serial finding |
@@ -31,8 +33,12 @@ deck, not substitutes for the subsequent serial review.
 | 2.1.3 | 27 | [265](https://github.com/meijer1973/4veco-platform/pull/265) | [64](https://github.com/meijer1973/4veco-lessen/pull/64) | New MK required at start before instruction; no exploration support |
 | 2.2.1 | 22 | [263](https://github.com/meijer1973/4veco-platform/pull/263) | [62](https://github.com/meijer1973/4veco-lessen/pull/62) | New Ev classification required at start before instruction |
 | 2.2.2 | 26 | [264](https://github.com/meijer1973/4veco-platform/pull/264) | [63](https://github.com/meijer1973/4veco-lessen/pull/63) | New local revenue rule labelled retrieval at start |
-| 2.2.3 | 28 | [267](https://github.com/meijer1973/4veco-platform/pull/267) | [66](https://github.com/meijer1973/4veco-lessen/pull/66) | Independent serial review pending |
-| 2.2.4 | 23 | [266](https://github.com/meijer1973/4veco-platform/pull/266) | [65](https://github.com/meijer1973/4veco-lessen/pull/65) | Root content review finds complete recall and synthesis; independent serial review pending |
+| 2.2.3 | 28 | [267](https://github.com/meijer1973/4veco-platform/pull/267) | [66](https://github.com/meijer1973/4veco-lessen/pull/66) | New Ei/Ek and scenario operations required at start without visible support |
+| 2.2.4 | 23 | [266](https://github.com/meijer1973/4veco-platform/pull/266) | [65](https://github.com/meijer1973/4veco-lessen/pull/65) | PASS: complete recall and synthesis, with no unsupported prerequisite |
+
+The initial cohort therefore needs revision: four theory openings need support;
+the mixed lesson passes. The [independent 223/224 review](initial-223-224-review.md)
+records all 51 slides and 51 PDF pages, source checks and exact hashes.
 
 ## Finding and attribution
 
@@ -69,7 +75,7 @@ review in teaching order, with gaps traced to the workflow or textbook.
 
 ## Representative cold regression
 
-Two fresh authors receive exactly `Build the PowerPoint for paragraph 2.2.1.`
+Two fresh authors received exactly `Build the PowerPoint for paragraph 2.2.1.`
 and `Build the PowerPoint for paragraph 2.2.3.`. Both use platform
 `17abbe86731a60efa8d7936180d0478bf6e58831` (only the reusable instruction repair
 over the original baseline) and the original lessons commit. None of the five
@@ -78,9 +84,27 @@ no feedback. This tests a first elasticity definition and a more demanding
 lesson with income/cross elasticity and multiple-variable functions. It is a
 representative regression, not a claim of exhaustive paragraph coverage.
 
-Results and final output selection: pending.
+[Regression run records](regression-runs.json) preserve both completed runs.
+The fresh §2.2.1 has 24 slides; its [independent acceptance](regression-221-review.md)
+passes content, notes, all native slides and all PDF pages. It visibly marks
+start 2 as exploration with p.38 and returns to it on slide 12 before practice.
+The fresh §2.2.3 has 30 slides, theory support p.53–56 and an explicit return
+on slide 15. Its [independent review](regression-223-review.md) passes all 30
+native slides, 30 PDF pages, saved notes and the final §221–§224 continuity.
+Neither author received paragraph coaching or another author's new output.
 
-## Instructional continuity to verify in the final assembly
+The original §223-specific checker was tied to its superseded 28-slide source
+and examples; it is omitted from the final change rather than presented as
+proof of the new 30-slide deck. The scoped saved-package, source, target,
+arithmetic and visual reviews apply to the actual replacement. A small
+[manifest-only encoding correction](223-metadata-correction.json) makes 25
+§223 metadata titles match the actual saved titles. Its builder, PPTX and PDF
+remain byte-identical to the cold handoff. The same inherited title encoding
+in the §211 reference manifest is corrected; current and original reference
+artifact identities are explicitly separate. These are metadata repairs,
+not additional successful cold-production claims.
+
+## Instructional continuity in the assembled sequence
 
 | Teaching step | Earlier teaching / first formal explanation | Later use and relevant boundary |
 |---|---|---|
@@ -88,10 +112,50 @@ Results and final output selection: pending.
 | Revenue and profit | 2.1.2 slides 3–4 | 2.1.3/2.1.4 and 2.2.2: TO=P×Q; profit requires subtracting TK |
 | Break-even and graphs | 2.1.2 slides 5–11 | 2.1.4 synthesis; 2.2.2 changes from TO/Q vertical distance to P/Q revenue area and explicitly identifies the axes |
 | Marginal operations | 2.1.3 slides 3–11, checks 12–13 | 2.1.4 slides 6/18/21–22: unequal ΔQ, interval average, rising MK, no profit-maximization claim |
-| Signed Ev and percentages | 2.2.1 final slide anchors pending | 2.2.2–2.2.4: old-value denominator, unitless signed ratio, relative magnitude, bounded measurement |
+| Signed Ev and percentages | Fresh 2.2.1 slides 3–11; return to start 12; practice 13 | 2.2.2–2.2.4: old-value denominator, unitless signed ratio, relative magnitude, bounded measurement |
 | Revenue response | 2.2.2 slides 3–12, check 13–14 | 2.2.4: exact before/after TO, finite changes multiply factors, local rule is not a universal finite-step guarantee |
-| Ei/Ek and demand functions | 2.2.3 final slide anchors pending | 2.2.4: distinguish denominators/sign meanings, name both goods, keep annual-income units, isolate/reset scenarios |
+| Ei/Ek and demand functions | Fresh 2.2.3 slides 2–8 ratios/categories; 9–13 substitution/units/reset; 14 separate-study limits; return 15; practice 16 | 2.2.4: distinguish denominators/sign meanings, name both goods, keep annual-income units, isolate/reset scenarios |
 | Multi-source advice | Book 2.2.4 practice 4; deck 2.2.4 slides 2–5 recall/support | Target 5 combines at least two sources, one supported conclusion and exactly two unsupported conclusions; regional D stays separate from A |
+
+The final sources/notes were read in this order, with each later demand checked
+against the earlier explanation. §221's percentage bars are not demand curves;
+§222 explicitly introduces P/Q axes and revenue as area, after §212 used TO/Q
+axes and profit as a vertical distance. §223 connects the familiar ratio to
+new denominators and does not transfer the negative-Ev labels to Ei/Ek. It
+refreshes simple substitution before introducing the full function, then shows
+why Y must be reset before the separate Pz scenario. §224 retrieves these
+operations before asking pupils to combine evidence in the actual target.
+
+Book 1 uses “normal” broadly for a positive income response; this Book 2
+chapter explicitly uses the narrower `0 < Ei < 1` category. §223 slide 6 says
+“Categorie in dit boek”, and the notes explain the convention and boundaries.
+The serialized review checks this as an explicit convention, not a silent
+change in meaning or a claim that the broader definition is wrong. No missing
+textbook explanation or unresolved contradiction was found in the reviewed
+target operations. This does not assert mastery in a particular class.
+
+## Final delivery selection
+
+[Final artifact identities](final-artifacts.json) bind all eight PPTX/PDF
+pairs, slide counts, notes and native objects. There are **205 slides** in the
+assembled sequence, including **130 slides in the five newly supplied lessons**.
+
+| Paragraph | Slides | Selected revision |
+|---|---:|---|
+| 2.1.1 | 23 | Existing reference with scoped opening/notes repair |
+| 2.1.2 | 28 | Existing accepted deck with scoped opening/notes repair |
+| 2.1.3 | 27 | Initial cold deck with scoped opening/notes repair |
+| 2.1.4 | 24 | Previously accepted FietsWas deck, unchanged |
+| 2.2.1 | 24 | Fresh cold regression, artifact bytes unchanged |
+| 2.2.2 | 26 | Initial cold deck with scoped opening/notes repair |
+| 2.2.3 | 30 | Fresh cold regression, artifact bytes unchanged; manifest titles corrected |
+| 2.2.4 | 23 | Initial cold deck, artifact bytes unchanged |
+
+All files live beside their paragraph's other materials in the lesson edition;
+the lesson repository map links them in teaching order. First-cohort outcomes
+remain separately identifiable; a repaired delivery is not called a first-run
+pass. The two fresh tests provide representative evidence for the repaired
+rule, not a guarantee for every paragraph or unlimited parallel production.
 
 ## Source-level repairs and artifact checks
 
@@ -111,6 +175,13 @@ was inspected individually at readable size. No clipping or overlap was found.
 The actual saved notes contain the support/return instructions at the 14 pt
 floor. Finalizer package, geometry, native objects and reimport checks passed.
 
+The independent reviewer accepted these repairs. Two minor prerequisite-trace
+wording errors in the parent's first revision were corrected and rechecked
+against the saved notes: §213 start 1 uses TK, TO and profit; §222 start 1 uses
+TO and its percentage change. The [dated narrow closure](initial-223-224-review.md#narrow-repair-closure--later-on-2026-09-29)
+binds the final §213/§222 hashes. Those corrections changed notes only; their
+PDF pages are pixel-identical to the preceding visually accepted repair.
+
 The root reviewer inspected every original 2.1.3 native slide (27), every
 original 2.2.1 PDF page (22) and every original 2.2.2 native slide (26), read all
 their text/notes and checked target arithmetic against the manuscript and
@@ -125,5 +196,22 @@ Chart workbook checks on the four repaired decks passed: 211 has 2 charts/
 overview checker and 222 rectangle geometry checker also passed. Zero-chart
 results establish absence, not chart-data validation.
 
-Final series outcome, edition preservation, lane checks, publication and CI:
-pending. No classroom timing/learning trial or merge authorization is claimed.
+The final assembled series passes the scoped review. The
+[source binding check](source-bindings.json) verifies all 45 declared sources
+across eight manifests against immutable source commits. Current textbook
+source bytes also match; the older visual reference used by the initial §222
+author stays bound to its recorded commit, not confused with the repaired §211.
+Every visible text run in all 205 saved slides is present on its corresponding
+PDF page. Source syntax, skill mirror and diff hygiene pass. The tracked-byte
+edition adapter passes with all **1,480 signed files preserved** and 24 bounded
+classroom additions (eight existing/new PPTX/PDF/evidence sets relative to the
+sealed edition). Final lane checks and hosted CI are recorded with publication.
+
+Paired integration worktrees: `C:/wt/ppt/4veco-platform` and
+`C:/wt/ppt/4veco-lessen`; branch `codex/ppt-series-20260929`; task owner
+`ppt-series-20260929` / `codex-ppt-series`. The original five draft PR pairs are
+superseded by one consolidated pair after preserving their exact outcomes.
+The two regression branches remain pushed without separate PRs. No merge,
+deployment, full companion acceptance, measured classroom timing or learning
+effectiveness is claimed. Temporary author/review outputs remain outside the
+repositories; automatic approval review blocked requested scratch cleanup.

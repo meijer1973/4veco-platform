@@ -1,0 +1,158 @@
+{
+  "scope": "Exact delivered classroom files. Mechanical checks complement, not replace, the individual and serial content/visual review.",
+  "totalSlides": 205,
+  "series": [
+    {
+      "paragraph": "2.1.1",
+      "provenance": "Earlier delivery with later scoped source repair: three overview slides and notes only.",
+      "slides": 23,
+      "notes": 23,
+      "nativeTables": 9,
+      "nativeCharts": 0,
+      "allSlideTextRunsInCorrespondingPdfPage": true,
+      "artifacts": {
+        "pptx": {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – presentatie.pptx",
+          "sha256": "c89759165a2ecf24fbfadcff12eeab5c3b1b96eee5821e8ecf099bb93b225c84"
+        },
+        "pdf": {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – presentatie.pdf",
+          "sha256": "e522d85d3b9636351c43bab21a6107943327f134a74329d89a7c821585d4c100"
+        }
+      }
+    },
+    {
+      "paragraph": "2.1.2",
+      "provenance": "Earlier delivery with later scoped source repair: three overview slides and notes only.",
+      "slides": 28,
+      "notes": 28,
+      "nativeTables": 6,
+      "nativeCharts": 0,
+      "allSlideTextRunsInCorrespondingPdfPage": true,
+      "artifacts": {
+        "pptx": {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – presentatie.pptx",
+          "sha256": "692d573ac67f647e5455f21908ba38544f2020f5ccfd40170dd76c54d3c890b8"
+        },
+        "pdf": {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – presentatie.pdf",
+          "sha256": "477a9702b22be5fefd6638cee1c8a066167c9d222313e4a058ddce099e9e6a04"
+        }
+      }
+    },
+    {
+      "paragraph": "2.1.3",
+      "provenance": "Earlier delivery with later scoped source repair: three overview slides and notes only.",
+      "slides": 27,
+      "notes": 27,
+      "nativeTables": 16,
+      "nativeCharts": 0,
+      "allSlideTextRunsInCorrespondingPdfPage": true,
+      "artifacts": {
+        "pptx": {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – presentatie.pptx",
+          "sha256": "1d975d886afea3ca2ebbcfc6bac6133f841962f6f4384e650f163a8e29bc6fd0"
+        },
+        "pdf": {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – presentatie.pdf",
+          "sha256": "f4f78ec14282b277747c3a83ec36bdb4805623fd606f5bf5484a354de174282b"
+        }
+      }
+    },
+    {
+      "paragraph": "2.1.4",
+      "provenance": "Previously accepted FietsWas delivery; bytes unchanged.",
+      "slides": 24,
+      "notes": 24,
+      "nativeTables": 10,
+      "nativeCharts": 0,
+      "allSlideTextRunsInCorrespondingPdfPage": true,
+      "artifacts": {
+        "pptx": {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – presentatie.pptx",
+          "sha256": "7731c6d7a1840431404dd967e6515c88cf9d3a7c121dce9be2bcd960abf9bae7"
+        },
+        "pdf": {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – presentatie.pdf",
+          "sha256": "b32ae5f042ccd580ec5206ab48bf5657c60d00b95062069645ac4020dff3b09e"
+        }
+      }
+    },
+    {
+      "paragraph": "2.2.1",
+      "provenance": "Fresh cold regression; delivered PPTX/PDF bytes unchanged after the author handoff.",
+      "slides": 24,
+      "notes": 24,
+      "nativeTables": 7,
+      "nativeCharts": 0,
+      "allSlideTextRunsInCorrespondingPdfPage": true,
+      "artifacts": {
+        "pptx": {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – presentatie.pptx",
+          "sha256": "fa46600ade32cb54259657a6c96e7fc0f20eba1a633e12ecac0529303b1b8e35"
+        },
+        "pdf": {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – presentatie.pdf",
+          "sha256": "10bbbe089572259d212a9af7aae9a71f974b9daba990c491466dbe14d6cde02e"
+        }
+      }
+    },
+    {
+      "paragraph": "2.2.2",
+      "provenance": "Earlier delivery with later scoped source repair: three overview slides and notes only.",
+      "slides": 26,
+      "notes": 26,
+      "nativeTables": 14,
+      "nativeCharts": 0,
+      "allSlideTextRunsInCorrespondingPdfPage": true,
+      "artifacts": {
+        "pptx": {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – presentatie.pptx",
+          "sha256": "8e9f5f5217d061a76b0a98c7e84459e6d3951ee46dc2bcbf00add162ab2dbc27"
+        },
+        "pdf": {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – presentatie.pdf",
+          "sha256": "07b667bac12a95a90441a8789dde4f0545ae7cbd38115b12c1fa79f8549af2ee"
+        }
+      }
+    },
+    {
+      "paragraph": "2.2.3",
+      "provenance": "Fresh cold regression; delivered PPTX/PDF bytes unchanged after the author handoff.",
+      "slides": 30,
+      "notes": 30,
+      "nativeTables": 14,
+      "nativeCharts": 0,
+      "allSlideTextRunsInCorrespondingPdfPage": true,
+      "artifacts": {
+        "pptx": {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – presentatie.pptx",
+          "sha256": "da543a769dfd24005f1f325fa073cc6496049c090c83ac8daa8f9cf7667ed6f0"
+        },
+        "pdf": {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – presentatie.pdf",
+          "sha256": "6c3a7813afe7395199223113534fe4a829dcfc7f78c7799e74fdca4115944392"
+        }
+      }
+    },
+    {
+      "paragraph": "2.2.4",
+      "provenance": "Original cold cohort; delivered PPTX/PDF bytes unchanged.",
+      "slides": 23,
+      "notes": 23,
+      "nativeTables": 11,
+      "nativeCharts": 0,
+      "allSlideTextRunsInCorrespondingPdfPage": true,
+      "artifacts": {
+        "pptx": {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.4 Gemengde opgaven/2.2.4 Gemengde opgaven – presentatie.pptx",
+          "sha256": "40b58dd23408a0d0dae6dc0517520360b4326b9836fc5e024a3f2735fb697900"
+        },
+        "pdf": {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.4 Gemengde opgaven/2.2.4 Gemengde opgaven – presentatie.pdf",
+          "sha256": "207072891553d406a542549fe9c27ba01e4643f7a894a21b26eec697750da325"
+        }
+      }
+    }
+  ]
+}
