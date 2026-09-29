@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-21T15:25:25.774Z
+Generated: 2026-09-29T13:25:36.000Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/book2-theory-signed-20260921`
-Source commit: `55bca26c14ea6680e9b062f1a87cb01cc27dd52e`
-Files indexed: 8715
+Source branch: `codex/ppt-series-20260929`
+Source commit: `df18edbcfaee380141e220b8b7193a3e86753766`
+Files indexed: 8829
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1150,7 +1150,7 @@ Count: 90
 
 ## build scripts
 
-Count: 811
+Count: 870
 
 - build-scripts/archive/README.md
 - build-scripts/archive/roundtrip-pptx.py
@@ -1162,6 +1162,7 @@ Count: 811
 - build-scripts/books/book-toolchain.json
 - build-scripts/books/book2_native_checks.py
 - build-scripts/books/book2_native_theory.py
+- build-scripts/books/book2_print.py
 - build-scripts/books/book2_signed_exports.py
 - build-scripts/books/BOOK2-CHAT.md
 - build-scripts/books/book2-signed-lesson-head.txt
@@ -1170,9 +1171,28 @@ Count: 811
 - build-scripts/books/book2-signed-revision.test.js
 - build-scripts/books/BOOK2-SIGNED.md
 - build-scripts/books/books34_assemble.py
+- build-scripts/books/books34_followups_assemble.py
+- build-scripts/books/books34_followups_common.py
+- build-scripts/books/books34_links.py
 - build-scripts/books/books34_outlines.py
 - build-scripts/books/books34_records.py
+- build-scripts/books/books34_signed_common.py
 - build-scripts/books/books34_verify.py
+- build-scripts/books/books34-followups-contract.json
+- build-scripts/books/books34-followups-lesson-head.txt
+- build-scripts/books/books34-followups-review.js
+- build-scripts/books/books34-followups-revision-pin.json
+- build-scripts/books/books34-followups-revision.js
+- build-scripts/books/books34-followups-revision.test.js
+- build-scripts/books/BOOKS34-FOLLOWUPS.md
+- build-scripts/books/books34-historical-checkout.test.js
+- build-scripts/books/books34-signed-contract.json
+- build-scripts/books/books34-signed-lesson-head.txt
+- build-scripts/books/books34-signed-review.js
+- build-scripts/books/books34-signed-revision-pin.json
+- build-scripts/books/books34-signed-revision.js
+- build-scripts/books/books34-signed-revision.test.js
+- build-scripts/books/BOOKS34-SIGNED.md
 - build-scripts/books/build_book2_chat.py
 - build-scripts/books/build-book.py
 - build-scripts/books/exercise-route-lesson-head.txt
@@ -1186,17 +1206,26 @@ Count: 811
 - build-scripts/books/project_book2_signed_authority.js
 - build-scripts/books/README.md
 - build-scripts/books/rebuild_book2_signed.py
+- build-scripts/books/rebuild_books34_followups.py
+- build-scripts/books/rebuild_books34_signed.py
 - build-scripts/books/rebuild_exercise_routes.py
 - build-scripts/books/record_book2_signed_revision.js
+- build-scripts/books/record_books34_followups_revision.js
+- build-scripts/books/record_books34_signed_revision.js
 - build-scripts/books/record_exercise_route_revision.js
 - build-scripts/books/requirements-book2-chat.txt
 - build-scripts/books/requirements-exercise-routes.txt
 - build-scripts/books/test_book2_chat.py
 - build-scripts/books/test_book2_native.py
+- build-scripts/books/test_books34_followups.py
+- build-scripts/books/test_books34_links.py
+- build-scripts/books/test_books34_signed.py
 - build-scripts/books/test_lib_book.py
 - build-scripts/books/verify_book2_chat.py
 - build-scripts/books/verify_book2_figures.py
 - build-scripts/books/verify_book2_signed.py
+- build-scripts/books/verify_books34_followups.py
+- build-scripts/books/verify_books34_signed.py
 - build-scripts/books/verify_exercise_routes.py
 - build-scripts/ci/check-agent-branch-safety.js
 - build-scripts/ci/check-agent-branch-safety.test.js
@@ -1241,6 +1270,28 @@ Count: 811
 - build-scripts/content/book-1/build-presentation-v2.js
 - build-scripts/content/book-1/presentation-v2-registry.js
 - build-scripts/content/book-1/README.md
+- build-scripts/content/book-2/check-presentation-212.py
+- build-scripts/content/book-2/check-presentation-214.py
+- build-scripts/content/book-2/presentation-211.manifest.json
+- build-scripts/content/book-2/presentation-211.mjs
+- build-scripts/content/book-2/presentation-212-chart-labels.py
+- build-scripts/content/book-2/presentation-212.manifest.json
+- build-scripts/content/book-2/presentation-212.mjs
+- build-scripts/content/book-2/presentation-213.manifest.json
+- build-scripts/content/book-2/presentation-213.mjs
+- build-scripts/content/book-2/presentation-214-chart-labels.py
+- build-scripts/content/book-2/presentation-214.manifest.json
+- build-scripts/content/book-2/presentation-214.mjs
+- build-scripts/content/book-2/presentation-221.manifest.json
+- build-scripts/content/book-2/presentation-221.mjs
+- build-scripts/content/book-2/presentation-222-chart-geometry.py
+- build-scripts/content/book-2/presentation-222.manifest.json
+- build-scripts/content/book-2/presentation-222.mjs
+- build-scripts/content/book-2/presentation-223.manifest.json
+- build-scripts/content/book-2/presentation-223.mjs
+- build-scripts/content/book-2/presentation-224.manifest.json
+- build-scripts/content/book-2/presentation-224.mjs
+- build-scripts/content/book-2/test-presentation-212-checker.py
 - build-scripts/content/legacy-target/build-311-basisopgaven.js
 - build-scripts/content/legacy-target/build-infographic-311.js
 - build-scripts/content/legacy-target/inoefening-351-afsluiting.js
@@ -1359,6 +1410,8 @@ Count: 811
 - build-scripts/maintenance/check-book2-chat-import.test.js
 - build-scripts/maintenance/check-books34-chat-import.js
 - build-scripts/maintenance/check-books34-v3-import.js
+- build-scripts/maintenance/check-classroom-edition.js
+- build-scripts/maintenance/check-classroom-edition.test.js
 - build-scripts/maintenance/import-books34-delivery.py
 - build-scripts/maintenance/test_import_books34.py
 - build-scripts/maintenance/verify-books34-delivery.py
@@ -1377,6 +1430,12 @@ Count: 811
 - build-scripts/platform/check-paragraph-landing-v2.js
 - build-scripts/platform/generate-quiz-shells.js
 - build-scripts/platform/reskin-vaardigheden.js
+- build-scripts/presentations/chart_workbooks.py
+- build-scripts/presentations/chart-workbooks.test.js
+- build-scripts/presentations/notes-font.py
+- build-scripts/presentations/render-powerpoint.ps1
+- build-scripts/presentations/runtime.mjs
+- build-scripts/presentations/test_chart_workbooks.py
 - build-scripts/rag/build-chunks.js
 - build-scripts/rag/query.js
 - build-scripts/rag/run-retrieval-evals.js
@@ -1997,7 +2056,7 @@ Count: 26
 
 ## validators
 
-Count: 648
+Count: 652
 
 - build-scripts/ci/check-agent-branch-safety.js
 - build-scripts/ci/check-agent-branch-safety.test.js
@@ -2009,6 +2068,8 @@ Count: 648
 - build-scripts/ci/check-evidence-line-endings.test.js
 - build-scripts/ci/check-y1-product-evidence.js
 - build-scripts/ci/check-y1-product-evidence.test.js
+- build-scripts/content/book-2/check-presentation-212.py
+- build-scripts/content/book-2/check-presentation-214.py
 - build-scripts/exemplars/check-reasoning-golden-exemplars.js
 - build-scripts/inspection/check-bounded-source-refresh-packet.js
 - build-scripts/inspection/check-bounded-source-refresh-packet.test.js
@@ -2049,6 +2110,8 @@ Count: 648
 - build-scripts/maintenance/check-book2-chat-import.test.js
 - build-scripts/maintenance/check-books34-chat-import.js
 - build-scripts/maintenance/check-books34-v3-import.js
+- build-scripts/maintenance/check-classroom-edition.js
+- build-scripts/maintenance/check-classroom-edition.test.js
 - build-scripts/platform/check-book-landing-v2.js
 - build-scripts/platform/check-chapter-landing-v2.js
 - build-scripts/platform/check-news-detective-v2.js
@@ -4408,7 +4471,7 @@ Count: 1753
 
 ## reports
 
-Count: 4853
+Count: 4905
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5839,6 +5902,25 @@ Count: 4853
 - reports/review-gates/BLUEPRINT-V6-AUTHORITY-PROMOTION-1/review-packet.json
 - reports/review-gates/BOOK1-TEXTBOOK-RENEWAL-20260825/plan.md
 - reports/review-gates/BOOK1-TEXTBOOK-RENEWAL-20260825/rendered-proof.md
+- reports/review-gates/book2-print-review-20260921/assembly.json
+- reports/review-gates/book2-print-review-20260921/figures.json
+- reports/review-gates/book2-print-review-20260921/independent-b2-r1-browser-proof.json
+- reports/review-gates/book2-print-review-20260921/independent-b2-r1-exact-bindings.json
+- reports/review-gates/book2-print-review-20260921/independent-b2-r1-exact-proof.json
+- reports/review-gates/book2-print-review-20260921/independent-b2-r1-exact-review.md
+- reports/review-gates/book2-print-review-20260921/independent-b2-r1-exact-tests.json
+- reports/review-gates/book2-print-review-20260921/independent-b2-r1-first-pass.json
+- reports/review-gates/book2-print-review-20260921/independent-b2-r1-first-pass.md
+- reports/review-gates/book2-print-review-20260921/independent-doc1-review.json
+- reports/review-gates/book2-print-review-20260921/independent-doc1-review.md
+- reports/review-gates/book2-print-review-20260921/independent-print-bindings.json
+- reports/review-gates/book2-print-review-20260921/independent-print-comparison.json
+- reports/review-gates/book2-print-review-20260921/independent-print-map-probe.json
+- reports/review-gates/book2-print-review-20260921/independent-print-render-coverage.json
+- reports/review-gates/book2-print-review-20260921/independent-print-review.md
+- reports/review-gates/book2-print-review-20260921/independent-print-verification.json
+- reports/review-gates/book2-print-review-20260921/navigation-delta.json
+- reports/review-gates/book2-print-review-20260921/README.md
 - reports/review-gates/book2-theory-signed-20260921/accepted-navigation-comparison.json
 - reports/review-gates/book2-theory-signed-20260921/actual-native-edit-proof.json
 - reports/review-gates/book2-theory-signed-20260921/actual-native-edit-proof/evidence.json
@@ -5878,6 +5960,39 @@ Count: 4853
 - reports/review-gates/book2-theory-signed-20260921/protected-packet-compatibility.md
 - reports/review-gates/book2-theory-signed-20260921/README.md
 - reports/review-gates/book2-theory-signed-20260921/reference-proposals.json
+- reports/review-gates/books34-followups-20260928/independent-evidence.json
+- reports/review-gates/books34-followups-20260928/independent-review.md
+- reports/review-gates/books34-signed-retrieval-20260926/3.1.1-review.md
+- reports/review-gates/books34-signed-retrieval-20260926/3.1.1-textbook-review-manifest.json
+- reports/review-gates/books34-signed-retrieval-20260926/3.1.5-review.md
+- reports/review-gates/books34-signed-retrieval-20260926/3.1.5-textbook-review-manifest.json
+- reports/review-gates/books34-signed-retrieval-20260926/3.2.3-review.md
+- reports/review-gates/books34-signed-retrieval-20260926/3.2.3-textbook-review-manifest.json
+- reports/review-gates/books34-signed-retrieval-20260926/3.3.3-review.md
+- reports/review-gates/books34-signed-retrieval-20260926/3.3.3-textbook-review-manifest.json
+- reports/review-gates/books34-signed-retrieval-20260926/4.1.2-review.md
+- reports/review-gates/books34-signed-retrieval-20260926/4.1.2-textbook-review-manifest.json
+- reports/review-gates/books34-signed-retrieval-20260926/4.1.5-review.md
+- reports/review-gates/books34-signed-retrieval-20260926/4.1.5-textbook-review-manifest.json
+- reports/review-gates/books34-signed-retrieval-20260926/implementation-record.md
+- reports/review-gates/books34-signed-retrieval-20260926/independent-content-bindings.json
+- reports/review-gates/books34-signed-retrieval-20260926/independent-implementation-bindings.json
+- reports/review-gates/books34-signed-retrieval-20260926/independent-overall-review.md
+- reports/review-gates/books34-signed-retrieval-20260926/independent-production-verification.json
+- reports/review-gates/books34-signed-retrieval-20260926/independent-render-coverage.json
+- reports/review-gates/books34-signed-retrieval-20260926/independent-review-bindings.json
+- reports/review-gates/books34-signed-retrieval-20260926/review-manifest-index.json
+- reports/review-gates/classroom-presentation-20260928/review.md
+- reports/review-gates/classroom-presentation-series-20260929/223-metadata-correction.json
+- reports/review-gates/classroom-presentation-series-20260929/final-artifacts.json
+- reports/review-gates/classroom-presentation-series-20260929/initial-223-224-review.md
+- reports/review-gates/classroom-presentation-series-20260929/initial-runs.json
+- reports/review-gates/classroom-presentation-series-20260929/regression-221-review.md
+- reports/review-gates/classroom-presentation-series-20260929/regression-223-review.md
+- reports/review-gates/classroom-presentation-series-20260929/regression-runs.json
+- reports/review-gates/classroom-presentation-series-20260929/repairs.json
+- reports/review-gates/classroom-presentation-series-20260929/review.md
+- reports/review-gates/classroom-presentation-series-20260929/source-bindings.json
 - reports/review-gates/EXAM-ANCHOR-ATOMIC-CLOSURE-BUNDLE-1/review-packet.json
 - reports/review-gates/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1/review-packet.json
 - reports/review-gates/EXAM-OPERATION-SPINE-ANCHOR-1/review-packet.json
@@ -9348,7 +9463,7 @@ Count: 33
 
 ## other
 
-Count: 158
+Count: 161
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -9356,6 +9471,8 @@ Count: 158
 - .github/workflows/authorized-pr-integration.yml
 - .github/workflows/cross-repo-bundle-compatibility.yml
 - .github/workflows/paired-book2-signed-ci.yml
+- .github/workflows/paired-books34-followups-ci.yml
+- .github/workflows/paired-books34-signed-ci.yml
 - .github/workflows/paired-exercise-route-ci.yml
 - .github/workflows/paired-paragraph-ci.yml
 - .github/workflows/paragraph-renderer-tests.yml
@@ -9435,6 +9552,7 @@ Count: 158
 - docs/sprints/PV-G4-plan.md
 - docs/sprints/README.md
 - docs/sprints/S7-plan.md
+- docs/workflows/classroom-presentation.md
 - docs/workflows/legacy-full-companion-profile.md
 - docs/workflows/paired-paragraph-ci.md
 - docs/workflows/paragraph-lane-vocabulary.md
