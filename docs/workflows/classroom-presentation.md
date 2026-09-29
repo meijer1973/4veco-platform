@@ -27,6 +27,14 @@ textbook exercise, source, answer model or page reference. A textbook error
 needs a named source repair, not a silent slide rewrite. An authored teaching
 example is allowed and must be identified separately in the manifest and notes.
 
+Read the chapter's prerequisite guidance and relevant preceding paragraphs as
+well. In the manifest, trace each operation needed by the start assignment and
+later practice to either earlier teaching (with a source anchor) or instruction
+in this lesson. Include changes of representation and assumptions, not only
+concept names. A previous paragraph's title or an exercise that asks for an
+operation is not evidence that it taught that operation. Refresh fragile prior
+knowledge briefly; do not require pupils to infer a new procedure unaided.
+
 ### Exercise mapping: durable teacher preference
 
 In the current Book 2 edition, **Startopgaven** are the start assignment,
@@ -36,6 +44,19 @@ Homework is basis + independent + target, explicitly numbered, **Maken en
 nakijken**. Bonus and Herhaling are extra unless assigned. The teacher confirmed
 §2.1.1: start 1–2, basis 3–4, independent 5–6, target 7, homework 3–7. Derive
 each new paragraph's numbers from its own headings and teacher route.
+
+**A book's Startopgaven are not necessarily retrieval before instruction.**
+Inspect their actual demands and the book's reading order. In this edition the
+theory and worked example precede Startopgaven in print. Preserve the teacher's
+assigned start numbers, but distinguish retrieval from first encounters. When a
+start item uses new content, make its status and support visible on the opening
+overview: for example, `2: verkennen met de theorie, p. …`, using verified printed
+pages. Notes identify the new operation, how pupils can find/use that support,
+and a return to the item after instruction before independent practice. Treat
+that attempt as exploration, not assumed mastery or an unaided retrieval test.
+This is conditional on the actual item; do not hardcode exercise 2 as always new
+or supply its worked answer in the opening slide. The support line belongs to
+the shared overview source and must remain readable.
 
 For older editions without those headings, the original default is the first
 two Herhaling exercises as start, Startoefeningen as basis, Zelfstandig + Doel
@@ -217,3 +238,25 @@ answer plan or extra paragraph-specific prompt. Independently inspect its conten
 notes and every slide. If it fails, improve reusable instructions/tooling and
 repeat in a fresh checkout without the previous test's paragraph output. Record
 the exact prompt, baseline commits, output hashes, findings and outcome.
+
+### A chapter or parallel production run
+
+For a requested cold batch test, seed separate paired checkouts from the same
+immutable repository commits and give each author only the paragraph prompt
+above. Preserve the initial outputs and findings before repairs. Authors must
+derive continuity from the textbook and repository instructions; do not feed
+them another author's new deck or a bespoke answer plan.
+
+After individual review, read the decks in teaching order, including existing
+predecessors and the mixed exercises. Record where each required operation is
+introduced, demonstrated and first used independently, with actual slide and
+book anchors. Check notation, units, scenario resets, changes of representation,
+and the scope of rules across lesson boundaries. Distinguish what was taught
+from what pupils have demonstrably mastered; file review proves only the former.
+
+Trace a gap to its source before fixing it: omitted or reordered slide teaching
+calls for a classroom-workflow repair; absent or contradictory textbook teaching
+needs a named textbook finding and its source-authorized repair route. Do not
+silently patch the textbook through slides. Retest a workflow repair with fresh
+minimal-prompt authors, then review the assembled series again. Record which
+final artifacts are untouched cold outputs and which received later revisions.
