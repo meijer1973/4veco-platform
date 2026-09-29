@@ -1,0 +1,306 @@
+{
+  "paragraph": "2.2.3",
+  "title": "Inkomenselasticiteit en kruislingse elasticiteit",
+  "type": "theory",
+  "sourceEdition": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026",
+  "sourceCommit": "f2660032cf7e4e3bbab96cf32863d06a38bd74bc",
+  "platformBaseline": "17abbe86731a60efa8d7936180d0478bf6e58831",
+  "sourceFiles": {
+    "bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md": "40440809dc4e3d4261ff15d15e05bf8b5396ec346be1f59df3037c4d71984cea",
+    "bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md": "c79150a148e39ad1609ad77712c0f26cc032a83a40106e4aa0096e8af1dbb07b",
+    "bronnen/H2/2.2 Elasticiteit – antwoorden.md": "db35c4ad3af0e49d79b6fec45cb5312f28e043cd875840b33d853c1d28fa07f9",
+    "bronnen/H2/Docenten_en_bouwverantwoording.md": "eedc86d6a46f1271e338195c92a63977b5523030fee9ee9a7d02b26a5e74b7f5",
+    "boek/Boek_2_Compleet.pdf": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493"
+  },
+  "sourcePrintedPages": {
+    "theory": [
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58
+    ],
+    "start": 59,
+    "basis": [
+      59,
+      60
+    ],
+    "independent": 61,
+    "target": 62,
+    "verification": "Complete book: printed p. 52–62 = physical pages 54–64; rendered printed footers inspected."
+  },
+  "assignment": {
+    "start": [
+      1,
+      2
+    ],
+    "basis": [
+      3,
+      4,
+      5
+    ],
+    "independent": [
+      6,
+      7
+    ],
+    "target": 8,
+    "homework": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "homeworkInstruction": "Maken en nakijken",
+    "extra": [
+      9,
+      10,
+      11
+    ]
+  },
+  "goals": [
+    "Ei en Ek berekenen en hun teken uitleggen",
+    "Inferieur, normaal, luxe; substituten en complementen onderscheiden",
+    "Bij Ek vraaggoed en prijsgoed noemen",
+    "Functie invullen met gegeven eenheden; één factor wijzigen en vorige verandering terugzetten"
+  ],
+  "startSupport": {
+    "1": "Retrieval of percentages and simple substitution. Fragile knowledge: offer old-value formula and substitute-before-multiplication scaffold if needed. Chapter teacher guide lists Book 1 origin; §2.2.1 p. 37 demonstrates percentages. Re-teach both operations in slides 3–4 with authored data.",
+    "2": "First encounter with formal Ei, Ek and multi-variable ceteris paribus. Shared overview explicitly points to theory p. 53–56; notes direct 2a to definitions p. 53–54, 2b to scenarios p. 55–56. Return after teaching and before independent practice."
+  },
+  "prerequisiteTrace": [
+    {
+      "operation": "Old-value percentage calculation, keep sign",
+      "neededBy": "1a,4b,7b,8d",
+      "anchor": "§2.2.1 p. 37: same percentage formula and worked price/quantity calculation; chapter guide Samehang en voorkennis",
+      "lessonSupport": "Slide 3 refresh, slides 12 and 27 apply to function output"
+    },
+    {
+      "operation": "Substitute and multiply before adding signed terms",
+      "neededBy": "1b,4a,7a,8d",
+      "anchor": "Chapter guide identifies basic substitution from Book 1; no claim of demonstrated mastery",
+      "lessonSupport": "Slide 4 explicitly refreshes one-variable substitution; slides 9–10 introduce multi-variable substitution and units"
+    },
+    {
+      "operation": "Choose denominator, retain signs and classify Ei/Ek",
+      "neededBy": "2a,3,5ab,6,8abc",
+      "anchor": "New in §2.2.3 p. 52–54; previous §2.2.1 p. 36–38 teaches Ev only",
+      "lessonSupport": "Slides 2,5–8 explicitly teach Ei categories, boundaries, both Ek signs and a falling other price"
+    },
+    {
+      "operation": "Change Y only, translate Q to percentages, calculate Ei",
+      "neededBy": "2b,4b,7b,8d",
+      "anchor": "New formal scenario procedure §2.2.3 p. 55–56 and p. 58",
+      "lessonSupport": "Slides 9–12; declared annual income remains annual; coefficients are not elasticities"
+    },
+    {
+      "operation": "Reset Y before changing Pz; identify fixed variables and direction",
+      "neededBy": "4c,7c,8e",
+      "anchor": "§2.2.3 p. 56 and p. 58 reset explicitly",
+      "lessonSupport": "Slide 13 reset to original row, hold Px/Y, calculate new Q"
+    },
+    {
+      "operation": "Separate studies cannot establish exact combined effect",
+      "neededBy": "5cd",
+      "anchor": "Chapter teacher guide §2.2.3; p. 52 ceteris paribus and p. 56 single-factor warning",
+      "lessonSupport": "Slide 14 separate authored studies with opposing directions, exact combined response not inferred"
+    }
+  ],
+  "authoredExamples": {
+    "percentage": "Illustrative annual income €24,000 to €25,200; +5%.",
+    "substitution": "Illustrative lending visits Qv=460−12P; P=15 gives 280 visits/week.",
+    "income": "Fictional music-shop study: income +8%; concert packages +12%, sheet music +4%, budget CDs −4%; Ei +1.5,+0.5,−0.5.",
+    "cross": "Fictional separate e-reader studies: price +20%, paper novels +6%, matching covers −8%; later separate price −20%, novels −6%, covers +8%; Ek +0.3 and −0.4.",
+    "function": "LeesClub X: Qx=160−4Px+2Pz+0.01Y, Px=15,Pz=20,Y=26000; Q0=400. Y=28600 gives Q=426,Ei=.65. Reset Y=26000; Pz=25 gives Q=410.",
+    "combined": "Separate fictional studies: paper-book price +10% and e-reader demand +4%; matching-cover price +20% and e-reader demand −3%; no joint model."
+  },
+  "targetCoverage": {
+    "exercise": 8,
+    "page": 62,
+    "questions": "Complete preamble, all three sources, all subquestions a–e and points shown before first solution. Answers follow textbook model.",
+    "answers": {
+      "a": [
+        1.6,
+        -0.6
+      ],
+      "b": [
+        "luxegoed",
+        "inferieur goed"
+      ],
+      "c": [
+        0.4,
+        -0.6
+      ],
+      "d": {
+        "Qold": 390,
+        "Qnew": 420,
+        "pctQ": "7.692307…%",
+        "pctY": "10%",
+        "Ei": "0.769230… ≈ 0.77",
+        "category": "normaal goed",
+        "fixed": "Px=10,Pz=20"
+      },
+      "e": {
+        "Qnew": 392,
+        "reset": "Y=30000",
+        "fixed": "Px=10,Y=30000",
+        "relation": "Pz rises, Qx rises"
+      }
+    }
+  },
+  "scope": "Classroom PPTX + matching PDF only; scoped Part B, not full companion completeness.",
+  "timing": "No measured single-lesson claim; teacher guide allows extra time, especially §2.2.3.",
+  "slides": [
+    {
+      "number": 1,
+      "title": "Deze les: Â§2.2.3 Inkomenselasticiteit\nen kruislingse elasticiteit",
+      "role": "overview"
+    },
+    {
+      "number": 2,
+      "title": "Lesdoelen Â· De veranderde factor bepaalt de noemer"
+    },
+    {
+      "number": 3,
+      "title": "Procenten Â· De oude waarde is de basis"
+    },
+    {
+      "number": 4,
+      "title": "Een functie invullen"
+    },
+    {
+      "number": 5,
+      "title": "Inkomenselasticiteit Â· Vraagreactie op inkomen"
+    },
+    {
+      "number": 6,
+      "title": "Ei Â· Eerst het teken, dan de grootte"
+    },
+    {
+      "number": 7,
+      "title": "Ek Â· Vraag naar X, prijs van Z"
+    },
+    {
+      "number": 8,
+      "title": "Ook bij een prijsdaling blijft het teken betekenisvol"
+    },
+    {
+      "number": 9,
+      "title": "LeesClub X Â· De betekenis van de variabelen"
+    },
+    {
+      "number": 10,
+      "title": "LeesClub X Â· De beginhoeveelheid"
+    },
+    {
+      "number": 11,
+      "title": "LeesClub X Â· Alleen het inkomen verandert"
+    },
+    {
+      "number": 12,
+      "title": "LeesClub X Â· Van hoeveelheden naar Ei"
+    },
+    {
+      "number": 13,
+      "title": "LeesClub X Â· Terug naar het begin"
+    },
+    {
+      "number": 14,
+      "title": "Twee factoren tegelijk"
+    },
+    {
+      "number": 15,
+      "title": "Terug naar startopgave 2"
+    },
+    {
+      "number": 16,
+      "title": "Deze les: Â§2.2.3 Inkomenselasticiteit\nen kruislingse elasticiteit",
+      "role": "overview"
+    },
+    {
+      "number": 17,
+      "title": "Opgave 8 Â· Inkomen, koffie en fitness"
+    },
+    {
+      "number": 18,
+      "title": "Opgave 8 Â· Bron inkomen en vragen aâ€“b"
+    },
+    {
+      "number": 19,
+      "title": "Opgave 8 Â· Bron koffie en vraag c"
+    },
+    {
+      "number": 20,
+      "title": "Opgave 8 Â· Bron functie"
+    },
+    {
+      "number": 21,
+      "title": "Opgave 8 Â· Vragen dâ€“e"
+    },
+    {
+      "number": 22,
+      "title": "Opgave 8aâ€“b Â· Ei berekenen en goederen indelen"
+    },
+    {
+      "number": 23,
+      "title": "Opgave 8c Â· Thee ten opzichte van koffie"
+    },
+    {
+      "number": 24,
+      "title": "Opgave 8c Â· Koffiefilters ten opzichte van koffie"
+    },
+    {
+      "number": 25,
+      "title": "Opgave 8d Â· Fitness in de beginsituatie"
+    },
+    {
+      "number": 26,
+      "title": "Opgave 8d Â· Alleen Y stijgt naar 33.000"
+    },
+    {
+      "number": 27,
+      "title": "Opgave 8d Â· Procenten, Ei en betekenis"
+    },
+    {
+      "number": 28,
+      "title": "Opgave 8e Â· Y terug, alleen Pz omhoog"
+    },
+    {
+      "number": 29,
+      "title": "Controle van je antwoord op opgave 8"
+    },
+    {
+      "number": 30,
+      "title": "Deze les: Â§2.2.3 Inkomenselasticiteit\nen kruislingse elasticiteit",
+      "role": "overview"
+    }
+  ],
+  "overviewSlides": [
+    1,
+    16,
+    30
+  ],
+  "nativeTableSlides": [
+    2,
+    5,
+    6,
+    7,
+    8,
+    9,
+    11,
+    13,
+    14,
+    20,
+    22,
+    23,
+    24,
+    28
+  ],
+  "acceptedOutputHashes": {
+    "pptx": "da543a769dfd24005f1f325fa073cc6496049c090c83ac8daa8f9cf7667ed6f0",
+    "pdf": "6c3a7813afe7395199223113534fe4a829dcfc7f78c7799e74fdca4115944392"
+  }
+}
