@@ -1,0 +1,135 @@
+{
+  "paragraph": "2.2.2",
+  "title": "Elasticiteit en omzet",
+  "type": "theory",
+  "edition": "chat-2026, revised theory 20260921",
+  "lessonCommit": "f2660032cf7e4e3bbab96cf32863d06a38bd74bc",
+  "platformBaseline": "7ed2500f53fbd29bd0863dfd84b4fd6df57dc34f",
+  "sources": [
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.2 Elasticiteit en omzet – paragraaf.md",
+      "sha256": "dd5aec29637a494da80ad7264f08c7d7ecc7081d9ca23f0e963385127f8166f3"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/2.2 Elasticiteit – antwoorden.md",
+      "sha256": "db35c4ad3af0e49d79b6fec45cb5312f28e043cd875840b33d853c1d28fa07f9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/Docenten_en_bouwverantwoording.md",
+      "sha256": "eedc86d6a46f1271e338195c92a63977b5523030fee9ee9a7d02b26a5e74b7f5"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.md",
+      "sha256": "a4e7912f27083ba136fbb3ede6e43db78ff8af3867264465456d6b13adb3d986"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet.pdf",
+      "sha256": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet_Antwoorden.pdf",
+      "sha256": "7bf9f43e801592b3632063b0720ae38b8a1776831bfaa90703a8ae95e5329bc2"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – presentatie.pptx",
+      "sha256": "e0891d1e0ff4aa507ecb869670f904b80a5486b019f0d66f6434857296992bfe"
+    }
+  ],
+  "printedPages": {
+    "theory": [
+      44,
+      45,
+      46,
+      47
+    ],
+    "start": 48,
+    "basis": [
+      48,
+      49
+    ],
+    "independent": 49,
+    "target": 50,
+    "extra": 51
+  },
+  "physicalPdfPages": {
+    "start": 50,
+    "target": 52
+  },
+  "assignment": {
+    "start": [
+      1,
+      2
+    ],
+    "basis": [
+      3,
+      4
+    ],
+    "independent": [
+      5,
+      6
+    ],
+    "target": 7,
+    "homework": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "homeworkAction": "Maken en nakijken",
+    "extras": [
+      8,
+      9,
+      10
+    ]
+  },
+  "target": "Bioscoop Nova en StreamNow, all subquestions a–f",
+  "goals": [
+    "TO vóór en na berekenen",
+    "Procentuele omzetverandering berekenen en met Ev verbinden",
+    "Lokale omzetregel onderscheiden van eindige vergelijking",
+    "Omzet en winst onderscheiden"
+  ],
+  "teachingExamples": [
+    {
+      "authored": true,
+      "label": "Uitlegvoorbeeld — niet uit het boek",
+      "context": "KeramiekStudio, verkochte workshopplaatsen per maand",
+      "P": [
+        30,
+        33
+      ],
+      "Q": [
+        160,
+        152
+      ],
+      "Ev": -0.5,
+      "TO": [
+        4800,
+        5016
+      ],
+      "changePct": 4.5
+    },
+    {
+      "authored": true,
+      "label": "Uitlegvoorbeeld — niet uit het boek",
+      "context": "KajakStek, verhuringen per week",
+      "P": [
+        25,
+        30
+      ],
+      "Q": [
+        200,
+        140
+      ],
+      "Ev": -1.5,
+      "TO": [
+        5000,
+        4200
+      ],
+      "changePct": -16
+    }
+  ],
+  "teachingBoundary": "These authored examples precede independent practice. Assigned exercises 3–7 are not solved during instruction. All target questions are shown before answers in later discussion.",
+  "timing": "No measured one-lesson timing claim. Homework can complete the full route."
+}
