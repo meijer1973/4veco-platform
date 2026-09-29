@@ -69,5 +69,17 @@
     "d": "Assen, lijnen, snijpunt en winst/verlies tekenen, € 200 verticale afstand bij Q = 1.000",
     "a": "TO opstellen en GO = P verklaren bij Q > 0",
     "c": "TO = TK algebraïsch oplossen, exacte grens en eerste gehele aantal onderscheiden"
+  },
+  "startPrerequisites": {
+    "reviewDate": "2026-09-29",
+    "priorTeaching": "Opgave 1 gebruikt de kostenfuncties en gemiddelde kosten uit §2.1.1, dia 4 en 7–9.",
+    "exploration": {
+      "item": "2",
+      "supportPrintedPages": "10–11",
+      "reason": "TO, GO en winst zijn nieuwe formele begrippen. Lees voor opgave 2 de betekenis en formules op p. 10–11.",
+      "instruction": "dia 3–4",
+      "returnBeforePractice": "dia 14"
+    },
+    "deliveryRevision": "Opening overview and teacher notes repaired after serialized review; assignment numbers retained."
   }
 }

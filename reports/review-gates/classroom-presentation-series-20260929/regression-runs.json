@@ -1,0 +1,74 @@
+{
+  "runs": [
+    {
+      "paragraph": "2.2.1",
+      "prompt": "Build the PowerPoint for paragraph 2.2.1.",
+      "baselines": {
+        "platform": "17abbe86731a60efa8d7936180d0478bf6e58831",
+        "lessons": "f2660032cf7e4e3bbab96cf32863d06a38bd74bc"
+      },
+      "startedAt": "2026-09-29T11:05:23.659424+00:00",
+      "isolation": "Fresh ephemeral CLI thread; isolated paired worktrees; no parent history, content coaching, or peer output supplied.",
+      "parallelism": "Two representative cold regression authors from the same instruction-only candidate and original lesson baseline; initial paragraph outputs and review findings absent. Global concurrency capped at three authors.",
+      "model": "User-configured default; no override",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-09-29T11:29:09.161779+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "1cca13647f5152bd30735c685996dbcf271062bf",
+          "files": {
+            "build-scripts/content/book-2/presentation-221.manifest.json": "cf852b73dfd71915208fda0e916fdced7e17edc21f119a0d6e751de8c27af7a4",
+            "build-scripts/content/book-2/presentation-221.mjs": "253bc11abc547f9349255f261843b889a0571d9a55d6732701f8271ba8c2d11a"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "2a3e475d13483b7a9c55ba8b7bafe75fe4228408",
+          "files": {
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – presentatie.pdf": "10bbbe089572259d212a9af7aae9a71f974b9daba990c491466dbe14d6cde02e",
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – presentatie.pptx": "fa46600ade32cb54259657a6c96e7fc0f20eba1a633e12ecac0529303b1b8e35",
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.1 Prijselasticiteit/evidence/2.2.1-presentation.md": "526cbaff74eec4f26a858f36431d4f92f253f1bbb1a7f23a36b0f8f4d6499145",
+            "RESEARCH_AGENT_MAP.md": "b60c823d928219eb13f212209fb35ecba03d307220f8cb9070e25435f8407bcc"
+          }
+        }
+      },
+      "processLogSha256": "75efd2f7e4dccf9cf08b4de95674e162dbfdd125b93476ad42acad424eb0c0b7"
+    },
+    {
+      "paragraph": "2.2.3",
+      "prompt": "Build the PowerPoint for paragraph 2.2.3.",
+      "baselines": {
+        "platform": "17abbe86731a60efa8d7936180d0478bf6e58831",
+        "lessons": "f2660032cf7e4e3bbab96cf32863d06a38bd74bc"
+      },
+      "startedAt": "2026-09-29T11:11:24.010021+00:00",
+      "isolation": "Fresh ephemeral CLI thread; isolated paired worktrees; no parent history, content coaching, or peer output supplied.",
+      "parallelism": "Two representative cold regression authors from the same instruction-only candidate and original lesson baseline; initial paragraph outputs and review findings absent. Global concurrency capped at three authors.",
+      "model": "User-configured default; no override",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-09-29T11:32:19.230240+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "9dac902b6705dfa17933d0fc29aee4dadae9be88",
+          "files": {
+            "build-scripts/content/book-2/presentation-223.manifest.json": "ec136d9263871be8032f93cc40efe076e8205cb8a1ccb73933f4f00855212f64",
+            "build-scripts/content/book-2/presentation-223.mjs": "f8055230924f2af352ef8695f0058a0f970694361f861deb1ac48756800edaed"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "852bdbe9d986aec2c6df45940097dcec4a98bd44",
+          "files": {
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – presentatie.pdf": "6c3a7813afe7395199223113534fe4a829dcfc7f78c7799e74fdca4115944392",
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – presentatie.pptx": "da543a769dfd24005f1f325fa073cc6496049c090c83ac8daa8f9cf7667ed6f0",
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit/evidence/2.2.3-presentation.md": "da03ed3d45a4137a4d9ddf7c103e9b3078508761eadcdd3c608a7169bd74b3f3",
+            "RESEARCH_AGENT_MAP.md": "61a75fffe459ca22227da8d893f2206d6904b9b2dc971292a59562b649514a41"
+          }
+        }
+      },
+      "processLogSha256": "7ce07d2c752dd51ee4c77828f7f45ccb3ade43574ec52e1b651f04373f5a51f5"
+    }
+  ]
+}

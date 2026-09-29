@@ -1,0 +1,155 @@
+{
+  "paragraph": "2.2.4",
+  "title": "Gemengde opgaven",
+  "type": "mixed exercises",
+  "sourceEdition": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026",
+  "sourceCommit": "f2660032cf7e4e3bbab96cf32863d06a38bd74bc",
+  "platformBaseline": "7ed2500f53fbd29bd0863dfd84b4fd6df57dc34f",
+  "sourceFiles": {
+    "bronnen/H2/manuscript/2.2.4 Gemengde opgaven – opgaven.md": "d68304f2ba0eb15a30f74f458ff9dfd50b2ffb781f5b10b3ead5807ec934d82f",
+    "bronnen/H2/2.2 Elasticiteit – antwoorden.md": "db35c4ad3af0e49d79b6fec45cb5312f28e043cd875840b33d853c1d28fa07f9",
+    "bronnen/H2/Docenten_en_bouwverantwoording.md": "eedc86d6a46f1271e338195c92a63977b5523030fee9ee9a7d02b26a5e74b7f5",
+    "boek/Boek_2_Compleet.pdf": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493",
+    "bronnen/H2/paragrafen/2.2.4 Gemengde opgaven/2.2.4 Gemengde opgaven – antwoorden.md": "2f9668595d624764e7ce8477f88c3f317772531b5988c5a800580e2777d036b4"
+  },
+  "goals": [
+    "Relevante brongegevens kiezen",
+    "Ev, Ei en Ek berekenen en indelen",
+    "Maandomzet vergelijken",
+    "Eén variabele in de regionale vraagfunctie veranderen",
+    "Een advies uit minstens twee bronnen met precies twee niet-bewezen conclusies"
+  ],
+  "sourcePrintedPages": {
+    "bonus": 68,
+    "practice": [
+      64,
+      65
+    ],
+    "chapterCheck": 69,
+    "target": [
+      66,
+      67
+    ],
+    "start": 64
+  },
+  "printedToPhysicalPdfOffset": 2,
+  "assignment": {
+    "homeworkInstruction": "Maken en nakijken",
+    "homework": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "targetName": "StreamPlus",
+    "target": 5,
+    "start": [
+      1
+    ],
+    "basis": [],
+    "independent": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "labels": {
+      "7": "Hoofdstukcheck",
+      "6": "Denkertje / Bonusopgave"
+    },
+    "basisReason": "Geen afzonderlijke begeleide sectie bij deze gemengde paragraaf"
+  },
+  "selectionReason": "De echte doeloefening combineert bronselectie, Ev, Ei, Ek, maandomzet, een één-factor-scenario en begrensd bronadvies.",
+  "scope": "Classroom PowerPoint only; scoped Part B",
+  "reference": "Accepted 2.1.1 slide PDF, inspected slides 1 and 18; native editable visual family",
+  "teachingExample": {
+    "bookPage": null,
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "context": "Klimwand verkoopt dagkaarten; A, B, C en D zijn afzonderlijke onderzoeken.",
+    "bookExercise": null,
+    "methodReferences": [
+      "2.2.1 Prijselasticiteit",
+      "2.2.2 Elasticiteit en omzet",
+      "2.2.3 Inkomenselasticiteit en kruislingse elasticiteit"
+    ],
+    "id": "klimwand",
+    "slides": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "data": {
+      "A": {
+        "otherDemandFactors": "constant",
+        "soldTicketsPerMonth": [
+          400,
+          360
+        ],
+        "price": [
+          25,
+          30
+        ]
+      },
+      "C": {
+        "competitorPriceChangePercent": 12,
+        "klimwandDemandChangePercent": 3
+      },
+      "D": {
+        "formula": "Q = 200 - 2P + 0.01Y + 3Pc",
+        "Q": [
+          510,
+          516
+        ],
+        "units": "Q dagkaarten/maand, P en Pc euro/dagkaart, Y euro/jaar",
+        "Pc": 20,
+        "P": 25,
+        "Y": [
+          30000,
+          30600
+        ]
+      },
+      "B": {
+        "basicDemandChangePercent": -3,
+        "incomeChangePercent": 6,
+        "plusDemandChangePercent": 9
+      }
+    },
+    "origin": "authored for this presentation",
+    "role": "teaching-example"
+  },
+  "discussion": {
+    "questionSlides": [
+      10,
+      11,
+      12
+    ],
+    "exercise": 5,
+    "sourceSlides": [
+      7,
+      8,
+      9
+    ],
+    "startsAfterPractice": true,
+    "answerSlides": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "role": "assigned-textbook-exercise"
+  },
+  "overviewSlides": [
+    1,
+    6,
+    23
+  ]
+}

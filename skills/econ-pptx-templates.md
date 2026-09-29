@@ -13,6 +13,8 @@ Dutch classroom presentation for 4 vwo economics. Read and follow
 [Classroom PowerPoint](../docs/workflows/classroom-presentation.md). It contains
 the teacher's accepted lesson structure, exercise-selection rules, source
 locations, the §2.1.1 reference, portable build tools and review requirements.
+It also covers prerequisite tracing, supported exploration in start assignments,
+and review of parallel-produced decks as a teaching series.
 The repository supplies these defaults; do not ask the teacher to specify them
 again. The installed presentation skill, when available, supplies its current
 tool APIs and finalization. Do not hardcode a retired skill/runtime version.

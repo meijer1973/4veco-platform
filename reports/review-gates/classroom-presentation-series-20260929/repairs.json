@@ -1,0 +1,450 @@
+{
+  "repairs": [
+    {
+      "paragraph": "2.1.1",
+      "beforePptx": "e0891d1e0ff4aa507ecb869670f904b80a5486b019f0d66f6434857296992bfe",
+      "afterPptx": "c89759165a2ecf24fbfadcff12eeab5c3b1b96eee5821e8ecf099bb93b225c84",
+      "afterPdf": "e522d85d3b9636351c43bab21a6107943327f134a74329d89a7c821585d4c100",
+      "changedSlideAndNoteParts": [
+        "ppt/slides/slide1.xml",
+        "ppt/notesSlides/notesSlide1.xml",
+        "ppt/slides/slide12.xml",
+        "ppt/notesSlides/notesSlide12.xml",
+        "ppt/slides/slide23.xml",
+        "ppt/notesSlides/notesSlide23.xml"
+      ],
+      "comparisonException": "Regenerated drawing/slide creation IDs normalized; relationship IDs compared by their resolved type/target/mode. Other XML contents retained.",
+      "missingPdfText": [],
+      "unchangedPdfPages": [
+        {
+          "slide": 2,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 3,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 4,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 5,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 6,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 7,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 8,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 9,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 10,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 11,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 13,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 14,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 15,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 16,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 17,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 18,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 19,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 20,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 21,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 22,
+          "meanAbsolutePixelDifference": 0.0
+        }
+      ],
+      "visualReview": "Changed overviews inspected individually in native PowerPoint renders. Separate series content review required."
+    },
+    {
+      "paragraph": "2.1.2",
+      "beforePptx": "a680e3fcd05c107318a2a22c231f204b919325bcf25d01fa461da814899d6e8f",
+      "afterPptx": "692d573ac67f647e5455f21908ba38544f2020f5ccfd40170dd76c54d3c890b8",
+      "afterPdf": "477a9702b22be5fefd6638cee1c8a066167c9d222313e4a058ddce099e9e6a04",
+      "changedSlideAndNoteParts": [
+        "ppt/slides/slide1.xml",
+        "ppt/notesSlides/notesSlide1.xml",
+        "ppt/slides/slide14.xml",
+        "ppt/notesSlides/notesSlide14.xml",
+        "ppt/slides/slide28.xml",
+        "ppt/notesSlides/notesSlide28.xml"
+      ],
+      "comparisonException": "Regenerated drawing/slide creation IDs normalized; relationship IDs compared by their resolved type/target/mode. Other XML contents retained.",
+      "missingPdfText": [],
+      "unchangedPdfPages": [
+        {
+          "slide": 2,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 3,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 4,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 5,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 6,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 7,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 8,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 9,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 10,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 11,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 12,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 13,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 15,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 16,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 17,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 18,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 19,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 20,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 21,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 22,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 23,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 24,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 25,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 26,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 27,
+          "meanAbsolutePixelDifference": 0.0
+        }
+      ],
+      "visualReview": "Changed overviews inspected individually in native PowerPoint renders. Separate series content review required."
+    },
+    {
+      "paragraph": "2.1.3",
+      "beforePptx": "47ce000d970ba880927f97a633807fc40b20792ec5fe0d9aca27e4d53b9993c2",
+      "afterPptx": "1d975d886afea3ca2ebbcfc6bac6133f841962f6f4384e650f163a8e29bc6fd0",
+      "afterPdf": "f4f78ec14282b277747c3a83ec36bdb4805623fd606f5bf5484a354de174282b",
+      "changedSlideAndNoteParts": [
+        "ppt/slides/slide1.xml",
+        "ppt/notesSlides/notesSlide1.xml",
+        "ppt/slides/slide14.xml",
+        "ppt/notesSlides/notesSlide14.xml",
+        "ppt/slides/slide27.xml",
+        "ppt/notesSlides/notesSlide27.xml"
+      ],
+      "comparisonException": "Regenerated drawing/slide creation IDs normalized; relationship IDs compared by their resolved type/target/mode. Other XML contents retained.",
+      "missingPdfText": [],
+      "unchangedPdfPages": [
+        {
+          "slide": 2,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 3,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 4,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 5,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 6,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 7,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 8,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 9,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 10,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 11,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 12,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 13,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 15,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 16,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 17,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 18,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 19,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 20,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 21,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 22,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 23,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 24,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 25,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 26,
+          "meanAbsolutePixelDifference": 0.0
+        }
+      ],
+      "visualReview": "Changed overviews inspected individually in native PowerPoint renders. Separate series content review required.",
+      "independentTraceCorrection": "Corrected description of exercise 1 prerequisites in notes/manifest; every PDF page remains pixel-identical to the preceding support revision."
+    },
+    {
+      "paragraph": "2.2.2",
+      "beforePptx": "f6d042fd3c2d66dbbab8e8f03ece4c5befbdafa991aa7e173153133b705f8759",
+      "afterPptx": "8e9f5f5217d061a76b0a98c7e84459e6d3951ee46dc2bcbf00add162ab2dbc27",
+      "afterPdf": "07b667bac12a95a90441a8789dde4f0545ae7cbd38115b12c1fa79f8549af2ee",
+      "changedSlideAndNoteParts": [
+        "ppt/slides/slide1.xml",
+        "ppt/notesSlides/notesSlide1.xml",
+        "ppt/slides/slide15.xml",
+        "ppt/notesSlides/notesSlide15.xml",
+        "ppt/slides/slide26.xml",
+        "ppt/notesSlides/notesSlide26.xml"
+      ],
+      "comparisonException": "Regenerated drawing/slide creation IDs normalized; relationship IDs compared by their resolved type/target/mode. Other XML contents retained.",
+      "missingPdfText": [],
+      "unchangedPdfPages": [
+        {
+          "slide": 2,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 3,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 4,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 5,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 6,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 7,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 8,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 9,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 10,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 11,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 12,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 13,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 14,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 16,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 17,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 18,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 19,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 20,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 21,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 22,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 23,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 24,
+          "meanAbsolutePixelDifference": 0.0
+        },
+        {
+          "slide": 25,
+          "meanAbsolutePixelDifference": 0.0
+        }
+      ],
+      "visualReview": "Changed overviews inspected individually in native PowerPoint renders. Separate series content review required.",
+      "independentTraceCorrection": "Corrected description of exercise 1 prerequisites in notes/manifest; every PDF page remains pixel-identical to the preceding support revision."
+    }
+  ]
+}
