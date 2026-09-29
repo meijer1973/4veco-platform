@@ -1,0 +1,110 @@
+{
+  "paragraph": "2.2.1",
+  "title": "Prijselasticiteit",
+  "type": "theory",
+  "sourceEdition": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026",
+  "sourceCommit": "f2660032cf7e4e3bbab96cf32863d06a38bd74bc",
+  "platformCommit": "7ed2500f53fbd29bd0863dfd84b4fd6df57dc34f",
+  "sourceFiles": {
+    "bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md": "c79150a148e39ad1609ad77712c0f26cc032a83a40106e4aa0096e8af1dbb07b",
+    "bronnen/H2/2.2 Elasticiteit – antwoorden.md": "db35c4ad3af0e49d79b6fec45cb5312f28e043cd875840b33d853c1d28fa07f9",
+    "bronnen/H2/Docenten_en_bouwverantwoording.md": "eedc86d6a46f1271e338195c92a63977b5523030fee9ee9a7d02b26a5e74b7f5",
+    "boek/Boek_2_Compleet.pdf": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493"
+  },
+  "sourcePrintedPages": {
+    "theory": [
+      36,
+      37,
+      38,
+      39
+    ],
+    "start": 40,
+    "basis": [
+      40,
+      41
+    ],
+    "independent": 41,
+    "target": 42
+  },
+  "sourcePhysicalPdfPages": {
+    "start": 42,
+    "target": 44
+  },
+  "assignment": {
+    "start": [
+      1,
+      2
+    ],
+    "basis": [
+      3,
+      4
+    ],
+    "independent": [
+      5,
+      6
+    ],
+    "target": 7,
+    "homework": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "homeworkInstruction": "Maken en nakijken",
+    "extra": [
+      8,
+      9,
+      10
+    ]
+  },
+  "goals": [
+    "Procentuele veranderingen met de oude waarde als basis en Ev berekenen.",
+    "Het negatieve teken uitleggen en de vraag met −1 en 0 indelen.",
+    "Relatieve prijsgevoeligheid vergelijken zonder absolute aantallen te veronderstellen.",
+    "Een mogelijke contextverklaring onderscheiden van een bewezen oorzaak."
+  ],
+  "teachingExample": {
+    "origin": "Authored for this presentation; not a textbook exercise or dataset.",
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "context": "KleiKamer verkoopt bezoeken aan een keramiekatelier. P stijgt van € 40 naar € 44 per bezoek, Qv daalt van 300 naar 282 bezoeken per maand. Andere vraagfactoren blijven gelijk.",
+    "expected": {
+      "pricePercent": 10,
+      "quantityPercent": -6,
+      "Ev": -0.6
+    },
+    "comparison": "FotoFlex: fictieve meting Ev = −1,4 bij een andere prijsverhoging; geen beginhoeveelheid gegeven.",
+    "priceDecreaseScenario": "Afzonderlijk scenario vanuit dezelfde beginsituatie: P van € 40 naar € 36, Qv van 300 naar 345 per maand; %ΔP = −10%, %ΔQv = +15%, Ev = −1,5. Geen terugrekening van het eerste scenario.",
+    "methodsSourcePrintedPages": [
+      36,
+      37,
+      38,
+      39
+    ]
+  },
+  "targetOperations": {
+    "a": "Nova: (12−10)/10×100%=+20%; (420−500)/500×100%=−16%; Ev=−0,8.",
+    "b": "−1 < −0,8 < 0: prijsinelastisch; procentuele hoeveelheidsdaling 0,8 maal prijsstijging in deze meting.",
+    "c": "StreamNow: −2 < −1, prijselastisch; relatief sterker dan Nova, geen absolute klantenaantallen afleiden.",
+    "d": "Plausibele verklaring via overstappen, uitstellen of beschikbare alternatieven, als mogelijkheid en zonder andere elasticiteitssoort."
+  },
+  "targetQuestionSlides": [
+    13,
+    14,
+    15
+  ],
+  "targetAnswerSlides": [
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "overviewSlides": [
+    1,
+    12,
+    22
+  ],
+  "scope": "Part B classroom PPTX and matching PDF only; no full companion completeness or lesson timing claim."
+}
