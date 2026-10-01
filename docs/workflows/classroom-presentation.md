@@ -147,6 +147,10 @@ new paragraph. Do not copy old numbers or content by search-and-replace.
   straight XY series, preserve explicit per-series `c:smooth val="0"` in the
   saved package when the exporter otherwise introduces smoothing. Check direct
   curve/area labels too; remove unintended automatic value labels.
+  On a tax/subsidy curve-shift introduction, include the horizontal shift arrow
+  required by `skills/economic-graph.md`, at a common price in an uncluttered
+  region. Explain that comparison separately from the vertical price wedge at
+  a common quantity; check both arrow endpoints against the actual functions.
 - State quantities, periods and units. Distinguish totals from averages, exact
   thresholds from feasible whole products and within-capacity conclusions from
   extrapolation. Give both the calculation and the economic explanation.
