@@ -1,0 +1,213 @@
+{
+  "passed": true,
+  "manifests": [
+    {
+      "paragraph": "2.3.1",
+      "manifest": "build-scripts/content/book-2/presentation-231.manifest.json",
+      "sourceCommit": "d53080f38ebbdbba319e6d9b89dcba86067a72be",
+      "verifiedSources": [
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md",
+          "sha256": "79abbe55782b3bd3a2ac38f14213654cef38a0111c93a27ab4d95d4394f2ad35",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/2.3 Surplus en welvaart – antwoorden.md",
+          "sha256": "9f5ebbbf133c5d0d50a0d55251546e957207cc3867b1d843842b271780b9b116",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/2.3 Docenteninformatie.md",
+          "sha256": "95fef222ef377353c0f3986319707fe85838276e2dd59947aa764c6102437d93",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet.pdf",
+          "sha256": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet_Antwoorden.pdf",
+          "sha256": "7bf9f43e801592b3632063b0720ae38b8a1776831bfaa90703a8ae95e5329bc2",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md",
+          "sha256": "c79150a148e39ad1609ad77712c0f26cc032a83a40106e4aa0096e8af1dbb07b",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.md",
+          "sha256": "b38720605f513e42a37cb64ebf843fd27817c6f26dfc87cd327491cdc54ff42d",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.md",
+          "sha256": "e4e2717d088b20c3cbfc9c7944311a0b0bfdcf75a492335da5c3b0d0c027e898",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – presentatie.pptx",
+          "sha256": "c89759165a2ecf24fbfadcff12eeab5c3b1b96eee5821e8ecf099bb93b225c84",
+          "currentBytesMatch": true
+        }
+      ]
+    },
+    {
+      "paragraph": "2.3.2",
+      "manifest": "build-scripts/content/book-2/presentation-232.manifest.json",
+      "sourceCommit": "d53080f38ebbdbba319e6d9b89dcba86067a72be",
+      "verifiedSources": [
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+          "sha256": "77d485b2078bba0b3faffcb6d0e78d4ce8e55f4ab59de63d470c9214aff92745",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md",
+          "sha256": "79abbe55782b3bd3a2ac38f14213654cef38a0111c93a27ab4d95d4394f2ad35",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+          "sha256": "8cee4de8cc847b58d5c29c3f9bee3df6f4634cd16bed1dc8d45017529ef997d6",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/2.3 Docenteninformatie.md",
+          "sha256": "95fef222ef377353c0f3986319707fe85838276e2dd59947aa764c6102437d93",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/2.3 Surplus en welvaart – antwoorden.md",
+          "sha256": "9f5ebbbf133c5d0d50a0d55251546e957207cc3867b1d843842b271780b9b116",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet.pdf",
+          "sha256": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.md",
+          "sha256": "e4e2717d088b20c3cbfc9c7944311a0b0bfdcf75a492335da5c3b0d0c027e898",
+          "currentBytesMatch": true
+        }
+      ]
+    },
+    {
+      "paragraph": "2.3.3",
+      "manifest": "build-scripts/content/book-2/presentation-233.manifest.json",
+      "sourceCommit": "d53080f38ebbdbba319e6d9b89dcba86067a72be",
+      "verifiedSources": [
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md",
+          "sha256": "79abbe55782b3bd3a2ac38f14213654cef38a0111c93a27ab4d95d4394f2ad35",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+          "sha256": "77d485b2078bba0b3faffcb6d0e78d4ce8e55f4ab59de63d470c9214aff92745",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md",
+          "sha256": "73f8bdb4f9ef2b7e7e997a7eef54657d9a2944bb8b65505fefbb5bf33e1bf69d",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/2.3 Docenteninformatie.md",
+          "sha256": "95fef222ef377353c0f3986319707fe85838276e2dd59947aa764c6102437d93",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/2.3 Surplus en welvaart – antwoorden.md",
+          "sha256": "9f5ebbbf133c5d0d50a0d55251546e957207cc3867b1d843842b271780b9b116",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet.pdf",
+          "sha256": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/_assets/2.3.3_ex_4.svg",
+          "sha256": "6c57b3ab0eb56de517319cf387e718231891fee0009161e44b1651d280ac78bf",
+          "currentBytesMatch": true
+        }
+      ]
+    },
+    {
+      "paragraph": "2.3.4",
+      "manifest": "build-scripts/content/book-2/presentation-234.manifest.json",
+      "sourceCommit": "d53080f38ebbdbba319e6d9b89dcba86067a72be",
+      "verifiedSources": [
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.4 Gemengde opgaven – opgaven.md",
+          "sha256": "21eb878c0bdfef67199b193224b3665fdf9247b5fbb2d96d07f8d710ac8f180f",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/2.3.4 Gemengde opgaven – antwoorden.md",
+          "sha256": "4bf1e5cd4018a98f0231524e07003cf45aac383197dd1b6d4842bc2615c29d72",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/2.3 Surplus en welvaart – antwoorden.md",
+          "sha256": "9f5ebbbf133c5d0d50a0d55251546e957207cc3867b1d843842b271780b9b116",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/2.3 Docenteninformatie.md",
+          "sha256": "95fef222ef377353c0f3986319707fe85838276e2dd59947aa764c6102437d93",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md",
+          "sha256": "79abbe55782b3bd3a2ac38f14213654cef38a0111c93a27ab4d95d4394f2ad35",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+          "sha256": "77d485b2078bba0b3faffcb6d0e78d4ce8e55f4ab59de63d470c9214aff92745",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md",
+          "sha256": "73f8bdb4f9ef2b7e7e997a7eef54657d9a2944bb8b65505fefbb5bf33e1bf69d",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/_assets/2.3.4_ex_2.svg",
+          "sha256": "fcf0b258b472dafe53b7d8c7d9e318456a8d92653261563c64dfaef8d928fc79",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/_assets/2.3.4_ans_3.svg",
+          "sha256": "ad0179af400463384951d691f87c20bcfa350cb3ee42d40e557a4a8408c6ce1c",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet.pdf",
+          "sha256": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+          "sha256": "33c07c4327027feca0d09f82227ab30851b70519f42d5bc5f8fcdf0c0318be43",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md",
+          "sha256": "c79150a148e39ad1609ad77712c0f26cc032a83a40106e4aa0096e8af1dbb07b",
+          "currentBytesMatch": true
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.2 Elasticiteit en omzet – paragraaf.md",
+          "sha256": "dd5aec29637a494da80ad7264f08c7d7ecc7081d9ca23f0e963385127f8166f3",
+          "currentBytesMatch": true
+        }
+      ]
+    }
+  ]
+}

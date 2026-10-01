@@ -1,0 +1,81 @@
+{
+  "scope": "Independent exact-rational recalculation of source target examples, before comparing slides. Areas use rectangles and triangles. Point gains do not assert exact finite-interval integrals.",
+  "targets": {
+    "231": {
+      "givenP": 20,
+      "Q": 60,
+      "CS": 900,
+      "demandIntercepts": [
+        [
+          0,
+          50
+        ],
+        [
+          100,
+          0
+        ]
+      ],
+      "CSvertices": [
+        [
+          0,
+          20
+        ],
+        [
+          0,
+          50
+        ],
+        [
+          60,
+          20
+        ]
+      ],
+      "equilibriumCalculated": false
+    },
+    "232": {
+      "Q": 60.0,
+      "P": 20.0,
+      "CS": 900.0,
+      "PS": 450.0,
+      "TS": 1350.0
+    },
+    "233": {
+      "Qd": 50.0,
+      "Qs": 80.0,
+      "Q": 40.0,
+      "P": 25.0,
+      "CS": 600.0,
+      "PS": 600.0,
+      "TS": 1200.0,
+      "loss": 150.0,
+      "lossTriangle": 150.0,
+      "nextWTP": 29.5,
+      "nextMK": 15.25,
+      "nextBuyerGain": 4.5,
+      "nextSellerGain": 9.75
+    },
+    "234": {
+      "free": {
+        "Q": 40.0,
+        "P": 40.0,
+        "CS": 800.0,
+        "PS": 400.0,
+        "TS": 1200.0
+      },
+      "restricted": {
+        "Qd": 35.0,
+        "Qs": 50.0,
+        "Q": 30.0,
+        "P": 45.0,
+        "CS": 600.0,
+        "PS": 525.0,
+        "TS": 1125.0,
+        "loss": 75.0,
+        "lossTriangle": 75.0,
+        "nextWTP": 49.0,
+        "nextMK": 35.5,
+        "nextBuyerGain": 4.0,
+        "nextSellerGain": 9.5
+      }
+    }
+  }
+}

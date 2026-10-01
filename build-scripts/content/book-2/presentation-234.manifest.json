@@ -1,0 +1,194 @@
+{
+  "paragraph": "2.3.4",
+  "title": "Gemengde opgaven",
+  "type": "mixed exercises",
+  "sourceEdition": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026",
+  "sourceCommit": "d53080f38ebbdbba319e6d9b89dcba86067a72be",
+  "platformBaseline": "d561b3e283dc05e377cebffd80d082f05518ad23",
+  "sourceFiles": {
+    "bronnen/H3/manuscript/2.3.4 Gemengde opgaven – opgaven.md": "21eb878c0bdfef67199b193224b3665fdf9247b5fbb2d96d07f8d710ac8f180f",
+    "bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/2.3.4 Gemengde opgaven – antwoorden.md": "4bf1e5cd4018a98f0231524e07003cf45aac383197dd1b6d4842bc2615c29d72",
+    "bronnen/H3/2.3 Surplus en welvaart – antwoorden.md": "9f5ebbbf133c5d0d50a0d55251546e957207cc3867b1d843842b271780b9b116",
+    "bronnen/H3/2.3 Docenteninformatie.md": "95fef222ef377353c0f3986319707fe85838276e2dd59947aa764c6102437d93",
+    "bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md": "79abbe55782b3bd3a2ac38f14213654cef38a0111c93a27ab4d95d4394f2ad35",
+    "bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md": "77d485b2078bba0b3faffcb6d0e78d4ce8e55f4ab59de63d470c9214aff92745",
+    "bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md": "73f8bdb4f9ef2b7e7e997a7eef54657d9a2944bb8b65505fefbb5bf33e1bf69d",
+    "bronnen/H3/_assets/2.3.4_ex_2.svg": "fcf0b258b472dafe53b7d8c7d9e318456a8d92653261563c64dfaef8d928fc79",
+    "bronnen/H3/_assets/2.3.4_ans_3.svg": "ad0179af400463384951d691f87c20bcfa350cb3ee42d40e557a4a8408c6ce1c",
+    "boek/Boek_2_Compleet.pdf": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493",
+    "bronnen/H1/manuscript/2.1.2 Opbrengsten, winst en break-even – paragraaf.md": "33c07c4327027feca0d09f82227ab30851b70519f42d5bc5f8fcdf0c0318be43",
+    "bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md": "c79150a148e39ad1609ad77712c0f26cc032a83a40106e4aa0096e8af1dbb07b",
+    "bronnen/H2/manuscript/2.2.2 Elasticiteit en omzet – paragraaf.md": "dd5aec29637a494da80ad7264f08c7d7ecc7081d9ca23f0e963385127f8166f3"
+  },
+  "goals": [
+    "Evenwicht en surplussen berekenen uit bronnen",
+    "Werkelijk aantal en toewijzing gebruiken",
+    "Welvaartsverlies berekenen en arceren",
+    "Pareto-efficiëntie en eerlijkheid onderscheiden"
+  ],
+  "sourcePrintedPages": {
+    "start": 101,
+    "practice": [
+      102,
+      103
+    ],
+    "target": [
+      104,
+      105
+    ],
+    "bonusAndReview": 106
+  },
+  "printedToPhysicalPdfOffset": 2,
+  "pageVerification": "Rendered complete student PDF physical 103, 106, 107, 108; printed footers 101, 104, 105, 106.",
+  "assignment": {
+    "start": [
+      1
+    ],
+    "basis": null,
+    "independent": null,
+    "practice": [
+      2
+    ],
+    "target": 3,
+    "targetName": "Huurfietsen op een eiland",
+    "bonus": [
+      4
+    ],
+    "review": [
+      5,
+      6,
+      7
+    ],
+    "homework": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "homeworkInstruction": "Maken en nakijken",
+    "routeNote": "Mixed paragraph has no distinct basis/independent sections. Classroom recipe assigns all mixed exercises, preserving bonus label, although book differentiates bonus and review."
+  },
+  "prerequisites": [
+    {
+      "operation": "Select functions, solve equilibrium, substitute and check units",
+      "earlierTeaching": "§2.3.2 p. 82 and worked notitieboeken example p. 83–84",
+      "usedBy": "start 1a–b; practice 2a; target 3.1",
+      "refreshSlides": [
+        2,
+        3
+      ]
+    },
+    {
+      "operation": "CS and PS as areas; change from individual benefits to continuous areas",
+      "earlierTeaching": "§2.3.1 p. 72–74 individual/discrete/continuous CS; §2.3.2 p. 80–82 A = MK, PS and TS",
+      "usedBy": "start 1c; practice 2a,c; target 3.2–3",
+      "refreshSlides": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "operation": "Compare willingness to pay and MK before/beyond equilibrium; total surplus versus equality",
+      "earlierTeaching": "§2.3.2 p. 82 marginal table and model scope, p. 84 worked example",
+      "usedBy": "start 1d–e",
+      "refreshSlides": [
+        2,
+        5
+      ]
+    },
+    {
+      "operation": "Qd/Qs/actual transactions and highest-willingness/lowest-MK allocation",
+      "earlierTeaching": "§2.3.3 p. 90 calculation table and allocation, p. 94 worked example",
+      "usedBy": "practice 2b–c; target 3.3; bonus 4",
+      "refreshSlides": [
+        2,
+        4
+      ]
+    },
+    {
+      "operation": "Read boundary heights and partition truncated surplus into rectangle plus triangle",
+      "earlierTeaching": "§2.3.3 p. 91 figure 2 and worked sums, p. 94 workshop",
+      "usedBy": "practice 2c; target 3.3",
+      "refreshSlides": [
+        4
+      ]
+    },
+    {
+      "operation": "Difference in TS and triangle with quantity/price-unit factors",
+      "earlierTeaching": "§2.3.3 p. 92 figure 3 and both methods; p. 95 example",
+      "usedBy": "practice 2d; target 3.4; review 7a",
+      "refreshSlides": [
+        5
+      ]
+    },
+    {
+      "operation": "Concrete feasible Pareto improvement, unchanged existing trade, value judgement",
+      "earlierTeaching": "§2.3.3 p. 93 definitions and three-part proof, p. 95 worked example",
+      "usedBy": "practice 2e–f; target 3.5–6; review 7b",
+      "refreshSlides": [
+        5
+      ]
+    },
+    {
+      "operation": "Old-base percentage changes, Ev and direct revenue comparison",
+      "earlierTeaching": "§2.2.1 p. 36–39 percentage route and calculation; §2.2.2 p. 45–46 direct revenue comparison",
+      "usedBy": "review 5",
+      "support": "Previously taught route remains available on the cited book pages. No new elasticity instruction is claimed for this mixed surplus lesson."
+    },
+    {
+      "operation": "PS versus profit; subtract variable and fixed costs",
+      "earlierTeaching": "§2.1.2 p. 13–14 TO, TK and winst; §2.3.2 p. 81 explicitly says constant costs not deducted from PS",
+      "usedBy": "review 6",
+      "support": "PS discussion slide 17 notes distinguish fixed costs and profit."
+    }
+  ],
+  "teachingExample": {
+    "authored": true,
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "context": "Kanoplaatsen in één boekingsronde",
+    "demand": "P = 42 − 2Q",
+    "supply": "P = 6 + Q",
+    "equilibrium": {
+      "Q": 12,
+      "P": 18,
+      "CS": 144,
+      "PS": 72,
+      "TS": 216
+    },
+    "restriction": {
+      "Q": 8,
+      "P": 20,
+      "Qd": 11,
+      "Qs": 14,
+      "boundaryWTP": 26,
+      "boundaryMC": 14,
+      "CS": 112,
+      "PS": 80,
+      "TS": 192,
+      "loss": 24
+    },
+    "possibleNinth": {
+      "WTP": 24,
+      "MC": 15,
+      "buyerBenefit": 4,
+      "sellerBenefit": 5
+    },
+    "assumptions": [
+      "A = MK",
+      "Highest WTP / lowest MK allocation",
+      "Technical capacity at least 12",
+      "Costless relaxation",
+      "Price and existing trade unchanged",
+      "No extra trade costs or external effects"
+    ],
+    "separation": "Different context/functions/data from all assigned exercises. Full textbook target only after practice."
+  },
+  "reviewLimits": [
+    "No measured classroom timing or demonstrated learner mastery",
+    "Scoped Part B PowerPoint; does not establish complete companion product"
+  ]
+}

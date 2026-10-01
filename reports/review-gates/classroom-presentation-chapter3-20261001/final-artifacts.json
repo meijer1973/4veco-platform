@@ -1,0 +1,90 @@
+{
+  "scope": "Exact new chapter delivery bytes; mechanical facts complement individual visual/content and serialized review.",
+  "totalSlides": 104,
+  "series": [
+    {
+      "paragraph": "2.3.1",
+      "provenance": "Original completed cold author PPTX/PDF and builder bytes unchanged during chapter assembly. Manifest and individual evidence also unchanged.",
+      "slides": 25,
+      "notes": 25,
+      "minimumExplicitNoteFontPt": 14.0,
+      "nativeTables": 7,
+      "nativeCharts": 5,
+      "overviewContentAndGeometryParity": true,
+      "allSlideTextRunsInCorrespondingPdfPage": true,
+      "artifacts": {
+        "pptx": {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – presentatie.pptx",
+          "sha256": "4bc9c938de81c3f94d09783a9fb9ec7c6462ae62e01243608b86d8578053df4a"
+        },
+        "pdf": {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – presentatie.pdf",
+          "sha256": "25b91fa2302cc71f3af839ffee596a2b4910beb9454f7fddc2d36eb45a97085a"
+        }
+      }
+    },
+    {
+      "paragraph": "2.3.2",
+      "provenance": "Original completed cold author PPTX/PDF and builder bytes unchanged during chapter assembly. Manifest and individual evidence also unchanged.",
+      "slides": 27,
+      "notes": 27,
+      "minimumExplicitNoteFontPt": 14.0,
+      "nativeTables": 7,
+      "nativeCharts": 5,
+      "overviewContentAndGeometryParity": true,
+      "allSlideTextRunsInCorrespondingPdfPage": true,
+      "artifacts": {
+        "pptx": {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – presentatie.pptx",
+          "sha256": "04c2bc7a11b774dc6d1bbffa91bf6a96e1e276fb49504e8580639c4a036fb4a9"
+        },
+        "pdf": {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – presentatie.pdf",
+          "sha256": "b613c73fbe27bd24cb03fa20fa6c7615d70dce84ab8ac62c6c00d3c471583593"
+        }
+      }
+    },
+    {
+      "paragraph": "2.3.3",
+      "provenance": "Original completed cold author PPTX/PDF and builder bytes unchanged during chapter assembly. Manifest and individual evidence also unchanged.",
+      "slides": 30,
+      "notes": 30,
+      "minimumExplicitNoteFontPt": 14.0,
+      "nativeTables": 8,
+      "nativeCharts": 10,
+      "overviewContentAndGeometryParity": true,
+      "allSlideTextRunsInCorrespondingPdfPage": true,
+      "artifacts": {
+        "pptx": {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/2.3.3 Pareto-efficiëntie en welvaartsverlies – presentatie.pptx",
+          "sha256": "395df262431dc1c9765a6e4691bfc91856da40f054076409c89149c9c4be8045"
+        },
+        "pdf": {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/2.3.3 Pareto-efficiëntie en welvaartsverlies – presentatie.pdf",
+          "sha256": "a91de8bcd1d37e9ec916cc0861e0e4289e83eb802be67481f80b5925327dce24"
+        }
+      }
+    },
+    {
+      "paragraph": "2.3.4",
+      "provenance": "Original completed cold author PPTX/PDF and builder bytes unchanged during chapter assembly. Manifest and individual evidence also unchanged.",
+      "slides": 22,
+      "notes": 22,
+      "minimumExplicitNoteFontPt": 14.0,
+      "nativeTables": 9,
+      "nativeCharts": 6,
+      "overviewContentAndGeometryParity": true,
+      "allSlideTextRunsInCorrespondingPdfPage": true,
+      "artifacts": {
+        "pptx": {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/2.3.4 Gemengde opgaven – presentatie.pptx",
+          "sha256": "84a14b4a01ec1067961eccc2282a42bf583a63b8f2e5d2e2fe293dd932a51fae"
+        },
+        "pdf": {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/2.3.4 Gemengde opgaven – presentatie.pdf",
+          "sha256": "5fe6a18408a7b2fc97f361e0afb697bd7af51cbbc3e6434abbb17913c4694e9a"
+        }
+      }
+    }
+  ]
+}
