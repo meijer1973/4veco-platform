@@ -1,0 +1,153 @@
+{
+  "paragraph": "3.2.4",
+  "title": "Gemengde opgaven: de prijsnemende onderneming",
+  "type": "gemengde opgaven",
+  "edition": "books34-v3",
+  "sourceCommit": "9b8304d5031cafac936a56281e144573a25fbbc9",
+  "platformBaseline": "2b263cfd2bd5ea4b2ea172a7687a87a469bc73d7",
+  "sourceEditionPath": "edities/books34-v3/books/book-3",
+  "goals": [
+    "Van marktverandering naar ondernemingsbeslissing rekenen",
+    "Keuze onderbouwen met MO, MK, capaciteit en winst",
+    "Q en q en de twee momenten onderscheiden"
+  ],
+  "assignment": {
+    "start": [
+      31
+    ],
+    "startPrintedPage": 79,
+    "basis": null,
+    "independent": null,
+    "structure": "Geen aparte begeleide of zelfstandige sectie; voorbereiding 31–34, doel 35.",
+    "preparation": [
+      31,
+      32,
+      33,
+      34
+    ],
+    "discussionTarget": 35,
+    "targetPrintedPages": [
+      82,
+      83
+    ],
+    "homework": [
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37
+    ],
+    "homeworkLabels": {
+      "36": "bonus",
+      "37": "herhaling"
+    },
+    "homeworkInstruction": "Maken en nakijken",
+    "rationale": "Classroom mixed-exercise route assigns all actual exercises, retaining the printed bonus/herhaling labels. Target 35 combines both market moments, marginal choice, feasibility, profit geometry and percentages."
+  },
+  "printedPageVerification": "Complete student PDF physical pages 79,82,83 have printed footers 79,82,83; visually checked. Teacher guide pages 27–32 are chapter-local, not complete-book page references.",
+  "prerequisiteTrace": [
+    {
+      "operations": "31a,35a/b: solve Qv(P)=Qa(P), substitute price and check quantities",
+      "anchor": "Book 1 §1.3.2 theory: equilibrium calculation steps; Book 3 §3.2.1 Eerst de markt, dan de onderneming, p.55",
+      "lessonSupport": "Recap slide 2 explicitly refreshes the algebra using separate data."
+    },
+    {
+      "operations": "31b/c,35: price-taking, TO=Pq, P=GO=MO, Q versus q",
+      "anchor": "§3.2.1 theory and worked example, printed pp.54–56",
+      "lessonSupport": "Opening overview points to recall pp.54–56; slides 2–3 distinguish market and firm."
+    },
+    {
+      "operations": "32,34,35c: derive MK from quadratic TK; distinguish point derivative and finite differences in 37",
+      "anchor": "§3.2.2 Van een grote stap naar een kleine verandering / Van TK naar MK / Uitgewerkt voorbeeld, pp.62–64",
+      "lessonSupport": "Slide 3 refreshes derivative term by term; notes retain point-versus-step distinction."
+    },
+    {
+      "operations": "32a/d,33,34,35c,36: rising MK crossing MO, capacity and q=0, fixed costs versus marginal choice",
+      "anchor": "§3.2.3 Vergelijk links én rechts van het snijpunt, p.70; Check je werkwijze, p.76",
+      "lessonSupport": "Recap slide 3 compares both sides and q=0; slide 5 changes capacity and checks the boundary. No rule that every MO=MK gives a maximum."
+    },
+    {
+      "operations": "32b/c,34b,35d,37a: TO,TK,GTK, profit rectangle at same q, totals versus per-kg axes",
+      "anchor": "§3.2.3 Eerst winst per kg, dan totale winst and Zo lees je de rechthoek, p.71; worked example p.72",
+      "lessonSupport": "Slide 4 demonstrates a separate editable graph and (P−GTK)q. Target reveals calculations before drawing its rectangle."
+    },
+    {
+      "operations": "34/35: price change leaves cost technique unchanged; two short-term moments with fixed firm count",
+      "anchor": "§3.2.4 source A/B and chapter teacher guidance",
+      "lessonSupport": "Sources displayed fully; discussion maintains Qa0 and TK. Zero initial profit is a calculation, no long-run inference."
+    },
+    {
+      "operations": "35e: percentage changes and distinct quantity objects",
+      "anchor": "§3.2.1 pp.55–56 for Q versus q; percentage-change arithmetic refreshed here",
+      "lessonSupport": "Recap slide 2 includes (nieuw−oud)/oud ×100% as a method cue; final answer substitutes each distinct baseline."
+    }
+  ],
+  "teachingExample": {
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "context": "Fictief glasgranulaat, één week, homogeen product, veel kleine prijsnemers en bekende prijzen",
+    "data": {
+      "Qv": "9000−500P",
+      "Qa": "1000P",
+      "TK": "0.025q²+2q+90",
+      "capacity": 100,
+      "alternativeCapacity": 70
+    },
+    "answers": {
+      "P": 6,
+      "Q": 6000,
+      "MK": "0.05q+2",
+      "q": 80,
+      "TO": 480,
+      "TK": 410,
+      "profit": 70,
+      "GTK": 5.125
+    },
+    "assumptions": "Small firm can sell all output at P; constant costs unavoidable this week; divisible kg. Capacity variant changes only capacity.",
+    "separation": "No assigned exercise's context, formula set or worked answer used in recap. Book citations concern methods only."
+  },
+  "scope": "Classroom Part B PPTX/PDF only; no textbook mutation or full companion completeness claim.",
+  "sources": [
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.1 manuscript.md",
+      "sha256": "c13b390b105beaf18a7d3e83cb52fb04792f3927d207efe5616b01a3ce8fc366"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.2 manuscript.md",
+      "sha256": "992f1f64ee131c8c7a6c85dd517fc87724be5f825a1f9e497cd01f699645fdce"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.3 manuscript.md",
+      "sha256": "d46652e4ed48a368246ed70a0f1df0206752d95775e52c6de25df0088167fbd2"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.4 manuscript.md",
+      "sha256": "08387dcdc8857346ddc877b1ef537a02cee235ec85f2766afc74bf30e04d8112"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/Antwoorden.md",
+      "sha256": "5be2192b7c07dd09153130ff8e691cc161e0c6d0413ea740a696fbe5189b4115"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/Docenteninformatie.md",
+      "sha256": "2e4043cfb28ce503cf37477914a53c3966682fe4604bfd4b91aaed96fe506e04"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/00 Inleiding.md",
+      "sha256": "22db4eb96b9a1ab9c0e686914d515fec58eb5d32d4349e63df5b3dd55ba235c9"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/_assets/3.2.4_target.svg",
+      "sha256": "7dc71d0349969a107f8dbb9d9bcb9dc1ae223e0ea3b57da150c32474fab286a8"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+      "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.md",
+      "sha256": "e4e2717d088b20c3cbfc9c7944311a0b0bfdcf75a492335da5c3b0d0c027e898"
+    }
+  ]
+}
