@@ -1,0 +1,174 @@
+{
+  "paragraph": "3.2.3",
+  "title": "Winstmaximalisatie bij volkomen concurrentie",
+  "type": "theory",
+  "edition": "book34-lesson-balance-v3-20260915, current selected v3; r1-r5 delivery",
+  "platformCommit": "34464fb6091f721f7a87e8d1bb3165f758770799",
+  "lessonCommit": "9b8304d5031cafac936a56281e144573a25fbbc9",
+  "sources": [
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.3 manuscript.md",
+      "sha256": "d46652e4ed48a368246ed70a0f1df0206752d95775e52c6de25df0088167fbd2"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.2 manuscript.md",
+      "sha256": "992f1f64ee131c8c7a6c85dd517fc87724be5f825a1f9e497cd01f699645fdce"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.1 manuscript.md",
+      "sha256": "c13b390b105beaf18a7d3e83cb52fb04792f3927d207efe5616b01a3ce8fc366"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/Docenteninformatie.md",
+      "sha256": "2e4043cfb28ce503cf37477914a53c3966682fe4604bfd4b91aaed96fe506e04"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/Antwoorden.md",
+      "sha256": "5be2192b7c07dd09153130ff8e691cc161e0c6d0413ea740a696fbe5189b4115"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_target.svg",
+      "sha256": "90309bbff4b650e814e8383e1b3a6c53a503b2689ca735de019e40db2607de05"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_ans_3.svg",
+      "sha256": "49abb61c0654f1f8660a16fca967ebf380488c3d00723e984e75048a9ce9fc01"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+      "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_Antwoorden_v3.pdf",
+      "sha256": "99bb148be789986f193b4aa534be62c0c7a91cd15e476660ab8106c0627a5a25"
+    },
+    {
+      "path": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/README.md",
+      "sha256": "e71e661f24e39c59d372da5bac5b375161ab427354fda205a14f13a763bbad8c"
+    }
+  ],
+  "assignment": {
+    "start": [
+      20,
+      21
+    ],
+    "basis": [
+      22,
+      23,
+      24
+    ],
+    "independent": [
+      25,
+      26
+    ],
+    "target": 27,
+    "homework": [
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "homeworkInstruction": "Maken en nakijken",
+    "extra": [
+      28,
+      29,
+      30
+    ]
+  },
+  "printedPages": {
+    "theory": [
+      69,
+      70,
+      71,
+      72
+    ],
+    "start": 73,
+    "basis": [
+      73,
+      74
+    ],
+    "independent": [
+      75,
+      76
+    ],
+    "target": 77,
+    "verification": "Complete selected v3 book printed footers equal physical indices here; chapter-local17–25 = book69–77."
+  },
+  "goals": [
+    "Choose feasible profit-maximizing q using marginal reasoning",
+    "Check both sides of MO=MK, capacity and q=0",
+    "Calculate TO−TK and GTK at the chosen q",
+    "Represent profit as width q times height P−GTK"
+  ],
+  "prerequisites": [
+    {
+      "operation": "TO=Pq,GO=MO=P; price taking",
+      "anchor": "3.2.1 manuscript Eerst de markt / Uitgewerkt voorbeeld, book54–56",
+      "use": "start20 and all choices",
+      "support": "price-taking reminder in own example"
+    },
+    {
+      "operation": "Derivative aq²+bq+c; finite table step ΔTK/Δq distinguished from point derivative",
+      "anchor": "3.2.2 manuscript Van een grote stap / Van TK naar MK, book62–64",
+      "use": "start20b and basis22; target27a",
+      "support": "brief derivative retrieval; no new calculus course"
+    },
+    {
+      "operation": "Marginal economic choice, rising MK, maximum, capacity",
+      "anchor": "NEW 3.2.3 theory book69–70",
+      "use": "start21 and basis22–24, independent25–26,target27b/f",
+      "support": "start21 visibly exploratory with p70; revisit after instruction; own table/graph/capacity contrast"
+    },
+    {
+      "operation": "GTK and profit rectangle; same chosen q; per-kg to euro/week units",
+      "anchor": "NEW representation in 3.2.3 book71–72",
+      "use": "basis23,independent25,target27d",
+      "support": "own worked totals, GTK calculation, editable hatched rectangle"
+    },
+    {
+      "operation": "Unavoidable costs at q=0; fixed cost change vs MK",
+      "anchor": "3.2.2 book63–64; 3.2.3 book70,72",
+      "use": "basis24, independent26,target27e/f",
+      "support": "own q0 comparison and isolated price/fixed-cost changes"
+    }
+  ],
+  "authoredTeachingExample": {
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "context": "Havervlokken, price-taker, divisible kg/week, all output sold",
+    "TK": "0.04q^2+2q+100",
+    "P": 8,
+    "capacity": 100,
+    "fixedCostsUnavoidable": 100,
+    "q": 75,
+    "TO": 600,
+    "TKatOptimum": 475,
+    "profit": 125,
+    "GTK": "475/75",
+    "profitHeight": "8−475/75",
+    "capacityContrast": {
+      "capacity": 60,
+      "q": 60,
+      "MK": 6.8
+    },
+    "fixedCostContrast": {
+      "newConstant": 180,
+      "sameMK": "0.08q+2",
+      "sameQ": 75,
+      "profit": 45
+    },
+    "priceContrast": {
+      "P": 10,
+      "q": 100
+    },
+    "minimumGTKContrast": {
+      "q": 50,
+      "GTK": 6,
+      "profit": 100
+    }
+  },
+  "sourceIssues": [],
+  "timing": "Teacher guidance tentatively reserves two55min lessons; no measured fit claimed. All basis preserved.",
+  "editionCorrection": "An initial scratch-only draft used historical v2. It was discarded after rootBook3 README verification. Only selected-v3 artifacts are delivered."
+}

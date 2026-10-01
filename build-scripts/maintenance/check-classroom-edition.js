@@ -18,6 +18,19 @@ const git = (repo, args) => execFileSync('git', args, {cwd: repo, maxBuffer: 256
 
 function isClassroomAddition(file, sealedPaths) {
   if (sealedPaths.has(file)) return false;
+  const v3Prefix = prior.ROOTS[1] + '/books/';
+  if (file.startsWith(v3Prefix)) {
+    const match = file.slice(v3Prefix.length).match(/^book-([34])\/chapters\/([34])\.([1-3])\/paragraph-pdfs\/(.+)$/);
+    if (!match || match[1] !== match[2]) return false;
+    const [, book, , chapter, leaf] = match;
+    const chapterFolder = v3Prefix + `book-${book}/chapters/${book}.${chapter}/`;
+    const artifact = leaf.match(/^([34]\.[1-3]\.[1-9]\d*) [^/]+ – presentatie\.(pptx|pdf)$/);
+    const evidence = leaf.match(/^evidence\/([34]\.[1-3]\.[1-9]\d*)-presentation\.md$/);
+    const id = artifact?.[1] || evidence?.[1];
+    return Boolean(id && id.startsWith(`${book}.${chapter}.`)
+      && sealedPaths.has(chapterFolder + `${id} manuscript.md`)
+      && sealedPaths.has(chapterFolder + `paragraph-pdfs/${id}-leerling-v3.pdf`));
+  }
   const prefix = prior.ROOTS[0] + '/bronnen/';
   if (!file.startsWith(prefix)) return false;
   const match = file.slice(prefix.length).match(/^H([1-3])\/paragrafen\/(2\.([1-3])\.[1-9]\d* [^/]+)\/(.+)$/);

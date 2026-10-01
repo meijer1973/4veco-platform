@@ -54,6 +54,52 @@ test.each([
 test('an already sealed presentation never becomes an exempt addition', () => {
   expect(current.isClassroomAddition(slides, new Set([textbook, slides]))).toBe(false);
 });
+
+describe('selected Books 3/4 classroom additions', () => {
+  const chapter = prior.ROOTS[1] + '/books/book-3/chapters/3.2/';
+  const manuscript = chapter + '3.2.3 manuscript.md';
+  const student = chapter + 'paragraph-pdfs/3.2.3-leerling-v3.pdf';
+  const deck = chapter + 'paragraph-pdfs/3.2.3 Winstmaximalisatie bij volkomen concurrentie – presentatie.pptx';
+  const slidePdf = deck.replace(/pptx$/, 'pdf');
+  const review = chapter + 'paragraph-pdfs/evidence/3.2.3-presentation.md';
+  const sealed = [manuscript, student].sort();
+  test('admits only slides/PDF/evidence beside an existing signed paragraph', () => {
+    expect(current.partitionInventory([...sealed, deck, slidePdf, review].sort(), sealed))
+      .toEqual([deck, slidePdf, review].sort());
+    expect(current.isClassroomAddition(deck, new Set([...sealed, deck]))).toBe(false);
+    expect(current.isClassroomAddition(deck, new Set([student]))).toBe(false);
+    expect(current.isClassroomAddition(deck, new Set([manuscript]))).toBe(false);
+    const book4 = value => value.replaceAll('book-3', 'book-4').replaceAll('3.2', '4.2');
+    expect(current.isClassroomAddition(book4(deck), new Set(sealed.map(book4)))).toBe(true);
+  });
+  test.each([
+    deck.replace('3.2.3 Winst', '3.2.4 Winst'),
+    deck.replace('/book-3/', '/book-4/'), deck.replace('/chapters/3.2/', '/chapters/3.1/'),
+    deck.replace('3.2.3 Winst', '4.2.3 Winst'), deck.replace('books34-v3', 'books34-v2'),
+    deck.replace('presentatie.pptx', 'leerling.pdf'), deck.replace('presentatie.pptx', 'presentatie.html'),
+    deck.replace('/paragraph-pdfs/', '/paragraph-pdfs/extra/'),
+    review.replace('3.2.3-presentation.md', 'approval.json'),
+    review.replace('3.2.3-presentation.md', '3.2.4-presentation.md'),
+  ])('rejects additions outside the exact paragraph artifact surface: %s', file => {
+    expect(() => current.partitionInventory([...sealed, file].sort(), sealed)).toThrow(/Unknown classroom addition/);
+  });
+  test('v3 slides cannot hide changed or deleted signed files', () => {
+    const rows = sealed.map(file => {
+      const bytes = Buffer.from('signed v3 ' + file);
+      fs.mkdirSync(path.dirname(path.join(temp, file)), {recursive: true});
+      fs.writeFileSync(path.join(temp, file), bytes);
+      return {path: file, bytes: bytes.length, sha256: prior.sha(bytes), baseline_git_blob: gitBlob(bytes)};
+    });
+    const base = new Map(rows.map(row => [row.path, row.baseline_git_blob]));
+    const actual = [...sealed, deck].sort();
+    const verify = () => current.verifyCurrentInventory(temp, rows, actual, base);
+    expect(verify()).toEqual([deck]);
+    const altered = Buffer.from('altered manuscript');
+    fs.writeFileSync(path.join(temp, manuscript), altered);
+    expect(verify).toThrow(/Stale successor file/);
+    expect(() => current.partitionInventory([deck, student].sort(), sealed)).toThrow(/Signed edition file missing/);
+  });
+});
 test('presentation additions must be staged with their exact saved bytes', () => {
   const git = (...args) => execFileSync('git', args, {cwd: temp, stdio: 'pipe'});
   git('init', '-q'); git('config', 'core.autocrlf', 'false');
