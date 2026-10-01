@@ -1,0 +1,245 @@
+{
+  "paragraph": "4.3.3",
+  "title": "Werkloosheid en veranderingen op de arbeidsmarkt",
+  "type": "theory",
+  "edition": "book34-lesson-balance-v3-20260915",
+  "platformBaseCommit": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+  "lessonCommit": "e734532a42b27732ac25ce990fc9448b12309d28",
+  "sources": [
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/4.3.1 manuscript.md",
+      "sha256": "12f46259c226c4be4e651dd9a1fbe140a33c137756eca860482e19f41b49bfb7"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/4.3.2 manuscript.md",
+      "sha256": "64323fd7ca261d025bb5944f65032d72b6d7a97d124f1ded9a2abeeea5dd89e7"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/4.3.3 manuscript.md",
+      "sha256": "4e16bc85b0ebef225cd588575d73adec0aa563795ead3f20d3642540ff7eaaee"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/Antwoorden.md",
+      "sha256": "e602feba92be7245eeb349393f6787a2eac044e8c12a956712f3ac507f658f9f"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/Docenteninformatie.md",
+      "sha256": "106f211aec0caa10c693014055874468e74b034a619d077bff30feb3ed1a8f85"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/shift_target.svg",
+      "sha256": "a164a3f20e193ef1a44d41d5880e7f95ddb31140435a4755b0ea718a23b37062"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/shift_target_answer.svg",
+      "sha256": "cbd259477588d22d8677081155e6bfb76c72b656da9cb93f0704b4c923056c3e"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+      "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+    }
+  ],
+  "printedPages": {
+    "theory": [
+      132,
+      133,
+      134,
+      135,
+      136
+    ],
+    "start": 137,
+    "basis": [
+      137,
+      138
+    ],
+    "independent": 138,
+    "target": 139,
+    "extra": 140,
+    "chapterToBookOffset": 112
+  },
+  "assignment": {
+    "start": [
+      19,
+      20
+    ],
+    "basis": [
+      21,
+      22
+    ],
+    "independent": [
+      23,
+      24
+    ],
+    "target": 25,
+    "homework": [
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "homeworkInstruction": "Maken en nakijken",
+    "extraBonus": [
+      26
+    ],
+    "extraRetrieval": [
+      27
+    ]
+  },
+  "startSupport": {
+    "19": "Retrieval: beroepsbevolking and bruto-participatie taught in 4.3.2, book p.124-125.",
+    "20a": "Exploration: use book p.132 for the new unemployment denominator; return after instruction before 21.",
+    "20b": "Exploration: use book p.133 for frictional unemployment; return after instruction before 21."
+  },
+  "goals": [
+    "Bereken werkloosheid met de beroepsbevolking als noemer.",
+    "Onderbouw conjuncturele of structurele werkloosheid met een mechanisme.",
+    "Verwerk een vraagverschuiving bij flexibel en vast loon.",
+    "Scheid modeluitkomsten van waargenomen regionale werkloosheid."
+  ],
+  "prerequisites": [
+    {
+      "operation": "Define working, unemployed, non-participant; compute labour force and participation",
+      "source": "4.3.2 manuscript, sections Wie doet mee and Participatie, book p.124-125",
+      "instructionSlides": [
+        3
+      ]
+    },
+    {
+      "operation": "Employers demand labour; wage movement versus demand shift",
+      "source": "4.3.1 manuscript: actors p.114; Het loon zelf verandert / Een andere omstandigheid verandert p.117 (verified printed footers).",
+      "instructionSlides": [
+        7,
+        8,
+        9,
+        11
+      ]
+    },
+    {
+      "operation": "Equate labour supply and demand, substitute and check, read (L;w)",
+      "source": "4.3.2 manuscript, Evenwicht and Uitgewerkt voorbeeld, book p.126-127",
+      "instructionSlides": [
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "operation": "Unemployment denominator and vacancy non-subtraction for 20a,21,23,25a",
+      "source": "4.3.3 manuscript book p.132 and p.136",
+      "instructionSlides": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "operation": "Unemployment cause including friction for 20b,22,23,25b",
+      "source": "4.3.3 manuscript book p.133",
+      "instructionSlides": [
+        6,
+        9
+      ]
+    },
+    {
+      "operation": "Shift demand, compare flexible/fixed wage, movement along unchanged supply for 22,24,25b-c",
+      "source": "4.3.3 manuscript book p.134-136",
+      "instructionSlides": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    }
+  ],
+  "authoredExample": {
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "context": "Heuvelregio, plus a separate bike-repair sector",
+    "regionalData": {
+      "working": 1380,
+      "unemployed": 120,
+      "vacancies": 75,
+      "labourForce": 1500,
+      "ratePercent": 8
+    },
+    "sector": {
+      "oldDemand": "220 - 10w",
+      "newDemand": "180 - 10w",
+      "supply": "-20 + 10w",
+      "domainW": [
+        2,
+        18
+      ],
+      "onePersonOneJob": true,
+      "hoursPerWeek": 20,
+      "noVacanciesOrSearchProblems": true,
+      "oldEquilibrium": [
+        100,
+        12
+      ],
+      "newEquilibrium": [
+        80,
+        10
+      ],
+      "fixedWage": 12,
+      "fixedDemand": 60,
+      "fixedSupply": 100,
+      "fixedSurplus": 40
+    },
+    "assignedSolutionsBeforePractice": false
+  },
+  "targetCoverage": {
+    "questionSlides": [
+      17,
+      18,
+      19,
+      20
+    ],
+    "answerSlides": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "allSubquestions": [
+      "25a",
+      "25b",
+      "25c"
+    ],
+    "answers": {
+      "25a": "3000; 10%; 2820 demand; 180 is 300 minus 120 vacancies, not unemployment",
+      "25b": "Conjunctureel; w=13 euro/hour; L=66 persons",
+      "25c": "E0=(84;16); E1=(66;13); at 16 demand48 supply84 surplus36"
+    }
+  },
+  "sourceFinding": {
+    "id": "B4-433-FIG16-DOMAIN",
+    "path": "chapters/4.3/_assets/shift_target.svg",
+    "finding": "Book figure extends old demand and supply to wage 30 although source B states 2 <= w <= 24. Required equilibria remain correct. Native slide reconstruction clips lines to the explicit valid domain and retains the original axis scales.",
+    "followup": "Owning textbook route should reconcile figure extrapolation with source domain; sealed textbook unchanged.",
+    "blocking": false
+  },
+  "timing": "Teacher guide provisional two 55-minute lessons, unmeasured; full normal route preserved.",
+  "finalArtifact": {
+    "slides": 28,
+    "overviews": [
+      1,
+      16,
+      28
+    ],
+    "nativeTables": 8,
+    "nativeCharts": 7,
+    "pptxSha256": "68432489e8021d049ffea929140e387fa47947b21774522dc8ecc7f148724ed7",
+    "pdfSha256": "4394b8376c3afdb38136a45802d21b16f13f1a9c868de42a9229bf6e8660e01b",
+    "renderer": "Microsoft PowerPoint",
+    "independentReview": "PASS, /root/review_433; graph label proximity and prerequisite citation repaired"
+  }
+}
