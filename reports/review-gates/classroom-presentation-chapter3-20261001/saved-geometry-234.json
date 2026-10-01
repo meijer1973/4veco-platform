@@ -1,0 +1,68 @@
+{
+  "ok": true,
+  "slides": 22,
+  "notes": 22,
+  "overviewSlides": [
+    1,
+    6,
+    22
+  ],
+  "targetQuestions": 6,
+  "sourceHashes": 13,
+  "chartSlides": [
+    9,
+    13,
+    14,
+    16,
+    17,
+    19
+  ],
+  "tableSlides": [
+    3,
+    4,
+    5,
+    8,
+    10,
+    15,
+    18,
+    20,
+    21
+  ],
+  "actualPolygonAreas": [
+    {
+      "slide": 14,
+      "shape": "area-CS",
+      "area_euro": 800.0
+    },
+    {
+      "slide": 14,
+      "shape": "area-PS",
+      "area_euro": 400.0
+    },
+    {
+      "slide": 16,
+      "shape": "area-CS-rectangle",
+      "area_euro": 150.000267
+    },
+    {
+      "slide": 16,
+      "shape": "area-CS-triangle",
+      "area_euro": 450.0
+    },
+    {
+      "slide": 17,
+      "shape": "area-PS-rectangle",
+      "area_euro": 300.0
+    },
+    {
+      "slide": 17,
+      "shape": "area-PS-triangle",
+      "area_euro": 225.000133
+    },
+    {
+      "slide": 19,
+      "shape": "area-loss",
+      "area_euro": 75.000044
+    }
+  ]
+}

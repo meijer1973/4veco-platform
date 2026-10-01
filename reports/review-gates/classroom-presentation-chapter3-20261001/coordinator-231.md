@@ -1,0 +1,14 @@
+# §2.3.1 additional coordinator review
+
+Reviewed PPTX SHA-256: `4bc9c938de81c3f94d09783a9fb9ec7c6462ae62e01243608b86d8578053df4a`.
+Reviewed PDF SHA-256: `25b91fa2302cc71f3af839ffee596a2b4910beb9454f7fddc2d36eb45a97085a`.
+
+Read all 25 slides and substantive notes, including the full opening/practice notes, compared the complete target with its student question and answer model, and inspected every individual PDF page render at 1560 × 878 pixels. This is additional coordinator PDF inspection, alongside the author's native PowerPoint rendering. Final assembly must verify unchanged hashes.
+
+No required correction found. Overviews 1,15,25 use the same source and retain start 1–2 p.76, basis 3–5, independent 6–7, target 8 and homework 3–8. The opening visibly offers formal-CS exploration p.72 and calculation/drawing support p.74. Notes identify new start 2, explain how to use the support and return to both start items after instruction before basis work. Slide 14's transition repeats that return. No unsupported claim of mastery or lesson duration.
+
+Slides 3–4 teach individual advantage and sum the actual purchases in the separate Filmavond example: 13+6=19, the nonbuyer receives zero rather than negative surplus. Slide 5 explicitly resets to a different continuous market; the three individual buyers are not silently made into a straight demand curve. Theatermiddag uses P=40−0.5Q at P16, with sufficient supply and allocation to highest valuations. Slides 6–11 demonstrate inverse-function algebra, ordered (Q;P) coordinates, intercepts, axes and units, horizontal price, traded Q48, surplus boundaries and triangle576. Slide 12 distinguishes surplus from payment768; slides 13–14 check the height. The prior revenue-area interpretation in §2.2.2 is not transferred to surplus without teaching. Given price is consistently distinguished from a calculated supply-demand equilibrium.
+
+Target 8's complete concert context and all a–e questions are on 16–18 before solutions 19–24. All operations are performed, including actual drawing and hatching. Results match independent source recalculation: Q60, intercepts (0,50)/(100,0), price intersection (60,20), CS triangle vertices (0,20)/(0,50)/(60,20), area900 and payment1200. The last answer gives the group meaning rather than merely repeating the definition.
+
+All five editable XY chart slides (8–10,21–22) show correct zero, scale, intercepts, price height, intersection and boundaries. Label-only series use offset positions with invisible markers; these are label placement coordinates, not additional economic observations. Hatching stays inside the CS triangle and the same scenario keeps its axis scale. Native tables are legible, including complete context/target lines. No clipping, collisions or misleading geometry found. Calm white/Arial family retained. This is file and teaching-sequence evidence, not measured classroom effectiveness.

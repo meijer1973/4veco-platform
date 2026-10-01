@@ -1,0 +1,146 @@
+{
+  "runs": [
+    {
+      "paragraph": "2.3.1",
+      "prompt": "Build the PowerPoint for paragraph 2.3.1.",
+      "baselines": {
+        "platform": "d561b3e283dc05e377cebffd80d082f05518ad23",
+        "lessons": "d53080f38ebbdbba319e6d9b89dcba86067a72be"
+      },
+      "startedAt": "2026-10-01T06:01:33.998397+00:00",
+      "isolation": "Fresh ephemeral CLI thread; isolated paired worktrees; no parent history, content coaching, or peer output supplied.",
+      "parallelism": "Up to three concurrent cold authors, all seeded before production from the same immutable repository pair.",
+      "model": "User-configured default; no override",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T06:29:50.940878+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "ecae4ce25b277a9a93ae6fd939e6fbac040f4909",
+          "files": {
+            "build-scripts/content/book-2/presentation-231.manifest.json": "727d601f8f6c2419f62427d0c14576c12ca641eec175cfae4a3dc867dba44e1e",
+            "build-scripts/content/book-2/presentation-231.mjs": "6b5b303931df73c01006b439835836c9d03e4b54363287796b0e5db886d6349b"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "8eb1a6124854c37301512fd8237c417b3363fc16",
+          "files": {
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – presentatie.pdf": "25b91fa2302cc71f3af839ffee596a2b4910beb9454f7fddc2d36eb45a97085a",
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – presentatie.pptx": "4bc9c938de81c3f94d09783a9fb9ec7c6462ae62e01243608b86d8578053df4a",
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/evidence/2.3.1-presentation.md": "74ca8eae756b439f5fe5cae4a95c603bc90e27ba9ef8e50421dbf6c1e8fbf2bb",
+            "RESEARCH_AGENT_MAP.md": "17a662640619fe236eb0125f9005d0d5a12d0bb1d4a19eb7b19c0a183a83c4a6"
+          }
+        }
+      },
+      "processLogSha256": "953bf5cfbb4548167dd4fda8d0c8457f809d56bd28a05c208344c17b48bd29fd"
+    },
+    {
+      "paragraph": "2.3.2",
+      "prompt": "Build the PowerPoint for paragraph 2.3.2.",
+      "baselines": {
+        "platform": "d561b3e283dc05e377cebffd80d082f05518ad23",
+        "lessons": "d53080f38ebbdbba319e6d9b89dcba86067a72be"
+      },
+      "startedAt": "2026-10-01T06:01:34.328151+00:00",
+      "isolation": "Fresh ephemeral CLI thread; isolated paired worktrees; no parent history, content coaching, or peer output supplied.",
+      "parallelism": "Up to three concurrent cold authors, all seeded before production from the same immutable repository pair.",
+      "model": "User-configured default; no override",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T06:25:20.108508+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "16bfb9abb705a64ac2f9b51f707cfa3696849066",
+          "files": {
+            "build-scripts/content/book-2/presentation-232.manifest.json": "f56c559a2166ef0afac7ddeb3a902b067b46988685a7d53ff9bf1733eaf6ae84",
+            "build-scripts/content/book-2/presentation-232.mjs": "86a729c0f87b5596f7aeadd0e141bc7ba41223c1105c0d55cb8e711ee0e13d23"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "09126e0b7b12f173091e071e86caf8e28469a96b",
+          "files": {
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – presentatie.pdf": "b613c73fbe27bd24cb03fa20fa6c7615d70dce84ab8ac62c6c00d3c471583593",
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – presentatie.pptx": "04c2bc7a11b774dc6d1bbffa91bf6a96e1e276fb49504e8580639c4a036fb4a9",
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/evidence/2.3.2-presentation.md": "d1958541b9dcf7e5ab09591e3a9b508b991aa465bd96dc83d69b0ea661c38e4a",
+            "RESEARCH_AGENT_MAP.md": "e7c16ff2ccaca75d6a2ae60662e7f7169e98df48b3c14586193ae2fc5dac3a5d"
+          }
+        }
+      },
+      "processLogSha256": "c374283c2c4eb8b0abbf87766895b83c29a3ed18e0709714966d487530205864"
+    },
+    {
+      "paragraph": "2.3.3",
+      "prompt": "Build the PowerPoint for paragraph 2.3.3.",
+      "baselines": {
+        "platform": "d561b3e283dc05e377cebffd80d082f05518ad23",
+        "lessons": "d53080f38ebbdbba319e6d9b89dcba86067a72be"
+      },
+      "startedAt": "2026-10-01T06:01:34.658247+00:00",
+      "isolation": "Fresh ephemeral CLI thread; isolated paired worktrees; no parent history, content coaching, or peer output supplied.",
+      "parallelism": "Up to three concurrent cold authors, all seeded before production from the same immutable repository pair.",
+      "model": "User-configured default; no override",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T06:29:15.929286+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "f024ed8383b1db1cff17d1806461989b3c9af3b7",
+          "files": {
+            "build-scripts/content/book-2/presentation-233-chart-layout.py": "75146076ef35968527e23b99402448f72835be4e27ae9bd6b1251694b4e07012",
+            "build-scripts/content/book-2/presentation-233.manifest.json": "c48e63e51b72ffdd1a455b1ecf425b244f96954f7625b318af51078b97eae634",
+            "build-scripts/content/book-2/presentation-233.mjs": "77a0654203c55254b1af9355c267490b55f6aa13361deab0172b46571e7f607a"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "8f1f918804a9131e265ad407449127a512a0d0ff",
+          "files": {
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/2.3.3 Pareto-efficiëntie en welvaartsverlies – presentatie.pdf": "a91de8bcd1d37e9ec916cc0861e0e4289e83eb802be67481f80b5925327dce24",
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/2.3.3 Pareto-efficiëntie en welvaartsverlies – presentatie.pptx": "395df262431dc1c9765a6e4691bfc91856da40f054076409c89149c9c4be8045",
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/evidence/2.3.3-presentation.md": "224505cdc20d2b632e0c9f0ec19fcbdd06ff5eb13ce1d87d24fe66d93541ed4f",
+            "RESEARCH_AGENT_MAP.md": "59f88fa0164016dfaaee29b7227db588ebac86e4c2f67936820937785d0d7097"
+          }
+        }
+      },
+      "processLogSha256": "0e9dbb696788c18f40b598c9d610d7580b050077f82776c587bd73b6d41e78f3"
+    },
+    {
+      "paragraph": "2.3.4",
+      "prompt": "Build the PowerPoint for paragraph 2.3.4.",
+      "baselines": {
+        "platform": "d561b3e283dc05e377cebffd80d082f05518ad23",
+        "lessons": "d53080f38ebbdbba319e6d9b89dcba86067a72be"
+      },
+      "startedAt": "2026-10-01T06:25:25.844235+00:00",
+      "isolation": "Fresh ephemeral CLI thread; isolated paired worktrees; no parent history, content coaching, or peer output supplied.",
+      "parallelism": "Up to three concurrent cold authors, all seeded before production from the same immutable repository pair.",
+      "model": "User-configured default; no override",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T06:51:06.278372+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "12218ed907b2cce899b67a7323c590d992935c59",
+          "files": {
+            "build-scripts/content/book-2/check-presentation-234.py": "14c075bfff3ce32fa94b2aabe0d53f0aabc63a285560031dbc45c531106965bc",
+            "build-scripts/content/book-2/presentation-234.manifest.json": "c2207cc2f779eb630e9fece7de30a8b26bbded7696f1e9d4473dfbdb1dad7a61",
+            "build-scripts/content/book-2/presentation-234.mjs": "3eef4aee6baed6f45b162866ba46bcf149d85c20286deae3b5d7537f8c320552"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "79c421ed986d4466b9ecca2a460d16694782fc5d",
+          "files": {
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/2.3.4 Gemengde opgaven – presentatie.pdf": "5fe6a18408a7b2fc97f361e0afb697bd7af51cbbc3e6434abbb17913c4694e9a",
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/2.3.4 Gemengde opgaven – presentatie.pptx": "84a14b4a01ec1067961eccc2282a42bf583a63b8f2e5d2e2fe293dd932a51fae",
+            "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/evidence/2.3.4-presentation.md": "5b96b91bb1b05bff8ef14a6b65584513b37d82401fd7cefc3d47f347c50c543d",
+            "RESEARCH_AGENT_MAP.md": "a5aa34093c57caacdf1b81b80d108834046016bf2c39c7becfc6f33ad4302c88"
+          }
+        }
+      },
+      "processLogSha256": "3b7a3df92ea4d61f1cab72efd22fed6ddf65e39f82bd349aa71ee9970d2f1e81"
+    }
+  ]
+}
