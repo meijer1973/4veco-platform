@@ -17,11 +17,12 @@ Verify page references against **printed book footers**, not physical PDF indice
 or standalone paragraph page indices. In the §2.1.1 reference, printed page 6 is
 physical PDF page 8; verify the relevant pages anew for another paragraph/edition.
 
-For current Book 3 use `edities/books34-v3/books/book-3/`, not the historical
-v2 materials under the old `Boek 3 - ...` directory. Each `chapters/3.M/` holds
-the paragraph's `3.M.K manuscript.md`, chapter-wide `Antwoorden.md` and
-`Docenteninformatie.md`, and figures in `_assets/`. The complete student PDF
-is `output/Boek_3_Compleet_v3.pdf`. A target's context or source blocks can
+For current Books 3 and 4 use `edities/books34-v3/books/book-N/`, where N is
+3 or 4, not the historical v2 materials under the old `Boek N - ...` directory.
+Each `chapters/N.M/` holds the paragraph's `N.M.K manuscript.md`, chapter-wide
+`Antwoorden.md` and `Docenteninformatie.md`, and figures in `_assets/`.
+The complete student PDF is `output/Boek_N_Compleet_v3.pdf` (substitute the
+actual book number). A target's context or source blocks can
 precede its exercise container; read the complete manuscript and printed
 target pages. Use the actual current edition map for subsequent books too.
 
@@ -181,13 +182,13 @@ writes named files without deleting these presentation files. Its generated
 `LEESMIJ.md` must not hold persistent presentation instructions. Link new decks
 from the lesson repository map.
 
-For current Book 3 the existing paragraph PDFs share
-`edities/books34-v3/books/book-3/chapters/3.M/paragraph-pdfs/`. Put each named
+For current Books 3 and 4 the existing paragraph PDFs share
+`edities/books34-v3/books/book-N/chapters/N.M/paragraph-pdfs/`. Put each named
 presentation and matching slide PDF there, with its evidence under that
-folder's `evidence/3.M.K-presentation.md`. Keep the paragraph identifier in
-every filename; do not move or replace the existing `3.M.K-leerling-v3.pdf`.
+folder's `evidence/N.M.K-presentation.md`. Keep the paragraph identifier in
+every filename; do not move or replace the existing `N.M.K-leerling-v3.pdf`.
 
-For current Book 2 and Book 3 classroom additions, run the following after
+For current Books 2, 3 and 4 classroom additions, run the following after
 staging the final lesson files:
 
 ```powershell
@@ -196,8 +197,9 @@ node build-scripts/maintenance/check-classroom-edition.js --require-tracked
 
 It admits only these additional slides/PDFs/evidence for an existing sealed
 paragraph and the lesson map, while preserving every signed book file and
-source hash. Book 3's paragraph must have its sealed student PDF in the same
-chapter's `paragraph-pdfs/` folder. This does not admit Book 4 additions.
+source hash. A Book 3 or 4 paragraph must have its sealed student PDF in the
+same book and chapter's `paragraph-pdfs/` folder. It admits no other book or
+new paragraph without an existing sealed student export.
 The original import verifier audits the closed historical receipt; do not repin
 that receipt to include companion files. This compatibility check establishes
 preservation and scope, not slide quality; the rendering/content review below

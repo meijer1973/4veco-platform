@@ -85,6 +85,43 @@ test('presentation additions must be staged with their exact saved bytes', () =>
   fs.writeFileSync(path.join(temp, pdf), 'untracked PDF');
   expect(() => current.verifyTracked(temp, [textbook, slides, pdf], [prior.ROOTS[0]])).toThrow(/not fully tracked/);
 });
+test('Book 4 companions require a sealed export in the matching book, chapter and paragraph', () => {
+  const dir = 'edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/';
+  const source = dir + '4.2.4-leerling-v3.pdf';
+  const deck = dir + '4.2.4 Negatieve externe effecten – presentatie.pptx';
+  const sealed = new Set([source]);
+  for (const file of [deck, deck.replace('.pptx', '.pdf'), dir + 'evidence/4.2.4-presentation.md']) {
+    expect(current.isClassroomAddition(file, sealed)).toBe(true);
+    expect(current.isClassroomAddition(file, new Set([...sealed, file]))).toBe(false);
+  }
+  for (const file of [deck.replace('book-4', 'book-3'), deck.replace('/4.2/', '/4.1/'),
+    deck.replace('4.2.4 Negatieve', '4.2.5 Negatieve'), deck.replace('presentatie.pptx', 'leerling-v3.pdf'),
+    dir + 'evidence/4.2.4-approval.json', deck.replace('book-4', 'book-5')]) {
+    expect(current.isClassroomAddition(file, sealed)).toBe(false);
+  }
+  const crossed = deck.replace('book-4', 'book-3');
+  expect(current.isClassroomAddition(crossed, new Set([source.replace('book-4', 'book-3')]))).toBe(false);
+  const nonexistentChapter = deck.replaceAll('4.2', '4.4');
+  expect(current.isClassroomAddition(nonexistentChapter, new Set([source.replaceAll('4.2', '4.4')]))).toBe(false);
+});
+
+test('Book 4 additions cannot conceal an edited, repinned or deleted sealed student PDF', () => {
+  const dir = 'edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/';
+  const source = dir + '4.1.1-leerling-v3.pdf';
+  const deck = dir + '4.1.1 Langetermijnevenwicht – presentatie.pptx';
+  const bytes = Buffer.from('sealed Book 4 student PDF');
+  fs.mkdirSync(path.dirname(path.join(temp, source)), {recursive: true});
+  fs.writeFileSync(path.join(temp, source), bytes);
+  const row = {path: source, bytes: bytes.length, sha256: prior.sha(bytes), baseline_git_blob: gitBlob(bytes)};
+  files.push(row); baseline.set(source, row.baseline_git_blob);
+  expect(check([textbook, source, deck])).toEqual([deck]);
+  const changed = Buffer.from('changed student content'); fs.writeFileSync(path.join(temp, source), changed);
+  expect(() => check([textbook, source, deck])).toThrow(/Stale successor file/);
+  row.bytes = changed.length; row.sha256 = prior.sha(changed);
+  expect(() => check([textbook, source, deck])).toThrow(/Protected predecessor changed/);
+  expect(() => check([textbook, deck])).toThrow(/Signed edition file missing/);
+});
+
 test('Windows checkout preserves the exact historical pin and PV bytes', () => {
   const platform = path.resolve(__dirname, '../..');
   const git = (...args) => execFileSync('git', args, {cwd: temp, stdio: 'pipe'});
