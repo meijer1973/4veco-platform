@@ -1,0 +1,262 @@
+{
+  "paragraph": "3.3.1",
+  "title": "Waarom landen handelen: specialisatie en concurrentiepositie",
+  "type": "theory",
+  "edition": "books34-v3",
+  "structureRevision": "book34-lesson-balance-v3-20260915",
+  "lessonSourceCommit": "9b8304d5031cafac936a56281e144573a25fbbc9",
+  "platformBaselineCommit": "34464fb6091f721f7a87e8d1bb3165f758770799",
+  "sourceFiles": [
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/3.3.1 manuscript.md",
+      "sha256": "2f8b17f7624ecf6605d8f65a7076aacc95b39f2dabf3a1b4185d421247414a74"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/Antwoorden.md",
+      "sha256": "aec2cc01f5ea47e8ba00df0eb9740701d8c355176044d0796346b6ca31e33c70"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/Docenteninformatie.md",
+      "sha256": "4b2951f5db50ba422a424a262d52cbc59b3cf566213c3bd175e71910a9f38c5e"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/00 Inleiding.md",
+      "sha256": "fe930548853052711596d596d628791a856ef31f18d34a9bc14b1b515e15b9d6"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.3 manuscript.md",
+      "sha256": "d46652e4ed48a368246ed70a0f1df0206752d95775e52c6de25df0088167fbd2"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+      "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.3.1.json",
+      "sha256": "82abb1e3338f86b3fa1b872bccf7e0df347a499cced729d7bd514b5d6a0cee82"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – paragraaf.md",
+      "sha256": "194363ea71e44c4d65100be36b05d52c7f8b07d4904bfad27f3bd659be072b1e"
+    }
+  ],
+  "assignment": {
+    "start": [
+      1,
+      2
+    ],
+    "basis": [
+      3,
+      4
+    ],
+    "independent": [
+      5,
+      6
+    ],
+    "target": 7,
+    "homework": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "homeworkAction": "Maken en nakijken",
+    "extraOnly": [
+      8,
+      9,
+      10
+    ]
+  },
+  "printedBookPages": {
+    "theory": [
+      88,
+      89,
+      90,
+      91
+    ],
+    "start": 92,
+    "basis": [
+      92,
+      93
+    ],
+    "independent": 94,
+    "target": 95,
+    "extra": 96
+  },
+  "pageVerification": "Complete student PDF footers visually checked at physical PDF pages 88, 89, 90, 92, 95. Complete book physical and printed numbers coincide here. Chapter-local pages 2–10 correspond to book pages 88–96.",
+  "goals": [
+    "Import en export vanuit beide landen benoemen",
+    "Absoluut en comparatief voordeel kwalitatief onderscheiden",
+    "Specialisatie en mogelijke wederzijdse handelswinst verklaren",
+    "Concurrentiepositie brongebonden verklaren",
+    "Algemene claims over handelsvoordeel per groep beoordelen"
+  ],
+  "prerequisiteTrace": [
+    {
+      "operation": "Beste niet-gekozen mogelijkheid herkennen; transfer lokaal naar productiemiddelen",
+      "anchor": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – paragraaf.md # Alternatieve kosten, paragraphs on best alternative and worked agricultural choice",
+      "use": "start 1a–b",
+      "treatment": "Retrieval plus brief qualitative refresh on slide 3; no invented money amount"
+    },
+    {
+      "operation": "Verkoop en koop over landsgrens vanuit twee landen benoemen; goederen tegenover geld",
+      "anchor": "edities/books34-v3/books/book-3/chapters/3.3/3.3.1 manuscript.md p. 88 Eén grens, twee gezichtspunten",
+      "use": "start 2a, independent 5c, target 7c",
+      "treatment": "New in this lesson, supported exploration p. 88; taught slide 4, return to start on 14"
+    },
+    {
+      "operation": "Middelen per product vergelijken bij dezelfde kwaliteit",
+      "anchor": "edities/books34-v3/books/book-3/chapters/3.3/3.3.1 manuscript.md p. 89 Eerst het absolute voordeel",
+      "use": "basis 3a, independent 5a, target 7a",
+      "treatment": "Taught with own data on slide 5"
+    },
+    {
+      "operation": "Opgegeven andere productie vergelijken; absolute inferiority does not exclude comparative advantage",
+      "anchor": "edities/books34-v3/books/book-3/chapters/3.3/3.3.1 manuscript.md p. 89 Dan de vergelijking tussen activiteiten",
+      "use": "start 2b, basis 3b–c and 4d, independent 5b–d, target 7b",
+      "treatment": "Start 2 explores theory p. 89–90, taught slide 6, checked 12–13, return to start on 14; no production-ratio calculation"
+    },
+    {
+      "operation": "Relatief voordeel naar specialisatierichting en ruilvoorwaarde vertalen",
+      "anchor": "edities/books34-v3/books/book-3/chapters/3.3/3.3.1 manuscript.md p. 90 Meer van wat relatief gunstig is; p. 91 worked method steps 2–3",
+      "use": "basis 3c, independent 5b–d, target 7c–d",
+      "treatment": "Taught with own example slides 7–8"
+    },
+    {
+      "operation": "Bronfeit naar concurrentiepositie via klantcriterium; tegengestelde effecten wegen",
+      "anchor": "edities/books34-v3/books/book-3/chapters/3.3/3.3.1 manuscript.md p. 90 Concurrentiepositie; p. 93 Van bronfeit naar conclusie",
+      "use": "basis 4a–d, independent 6a, target 7d",
+      "treatment": "Taught slides 9–10 with own quality increase and price increase, separate from basis 4 material saving and worse delivery"
+    },
+    {
+      "operation": "Conclusie begrenzen met concrete groep; geen algemeen banenresultaat afleiden",
+      "anchor": "edities/books34-v3/books/book-3/chapters/3.3/3.3.1 manuscript.md p. 90 Voordeel voor een land; p. 91 method step 4",
+      "use": "independent 6b, target 7e",
+      "treatment": "Taught slide 11 and source-reasoning slide 10"
+    },
+    {
+      "operation": "Preceding chapter model boundary",
+      "anchor": "edities/books34-v3/books/book-3/chapters/3.2/3.2.3 manuscript.md chapter-local pages 17–18",
+      "use": "Do not treat marginal-cost profit maximization from 3.2.3 as comparative advantage",
+      "treatment": "No unsupported assumption of earlier comparative-advantage teaching; new qualitative model explicitly taught here"
+    }
+  ],
+  "authoredExample": {
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "slides": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "countries": [
+      "Elara",
+      "Vesta"
+    ],
+    "products": [
+      "meubels",
+      "speelgoed"
+    ],
+    "qualitativeFacts": [
+      "same quality for country productivity comparison",
+      "Elara uses fewer means for both goods; larger advantage in furniture",
+      "Vesta gives up relatively fewer furniture units for additional toys",
+      "both want both goods; mutually attractive trade terms required",
+      "separate seller scenario: better finish but higher price, so buyer preferences decide",
+      "toy makers in Elara can lose customers to toy imports"
+    ],
+    "practiceSeparation": "No Sol/Terra worked explanation (basis 3), Canto (basis 4), Riva/Sora (5), tentdoek (6) or Aster/Brin (7) solution is given before independent practice. The later actual Aster/Brin discussion remains complete."
+  },
+  "target": {
+    "exercise": 7,
+    "sourceSlides": [
+      15,
+      16
+    ],
+    "questionSlides": [
+      17,
+      18
+    ],
+    "answerSlides": {
+      "a": [
+        19
+      ],
+      "b": [
+        20
+      ],
+      "c": [
+        21
+      ],
+      "d": [
+        22,
+        23
+      ],
+      "e": [
+        24
+      ]
+    },
+    "checkSlide": 25,
+    "questions": [
+      {
+        "label": "a",
+        "points": 2,
+        "prompt": "Welk land heeft een absoluut voordeel bij beide producten? Noem het brongegeven waarop je dat baseert.",
+        "observable_operation": "Welk land heeft een absoluut voordeel bij beide producten? Noem het brongegeven waarop je dat baseert.",
+        "source_question_id": "7a"
+      },
+      {
+        "label": "b",
+        "points": 3,
+        "prompt": "Leg uit bij welk product elk land een comparatief voordeel heeft. Gebruik het begrip alternatieve kosten.",
+        "observable_operation": "Leg uit bij welk product elk land een comparatief voordeel heeft. Gebruik het begrip alternatieve kosten.",
+        "source_question_id": "7b"
+      },
+      {
+        "label": "c",
+        "points": 2,
+        "prompt": "Beschrijf een passende richting van specialisatie en een bijbehorende handelsstroom. Benoem import en export vanuit de twee landen.",
+        "observable_operation": "Beschrijf een passende richting van specialisatie en een bijbehorende handelsstroom. Benoem import en export vanuit de twee landen.",
+        "source_question_id": "7c"
+      },
+      {
+        "label": "d",
+        "points": 2,
+        "prompt": "Leg uit onder welke voorwaarde de ruil beide landen voordeel kan opleveren. Gebruik daarnaast één bronfeit om Asters concurrentiepositie bij pompen te verklaren.",
+        "observable_operation": "Leg uit onder welke voorwaarde de ruil beide landen voordeel kan opleveren. Gebruik daarnaast één bronfeit om Asters concurrentiepositie bij pompen te verklaren.",
+        "source_question_id": "7d"
+      },
+      {
+        "label": "e",
+        "points": 2,
+        "prompt": "Een adviseur zegt: “Aster produceert beide goederen efficiënter, dus handel maakt alle inwoners van Aster beter af.” Beoordeel de uitspraak met een concrete groep uit de bron.",
+        "observable_operation": "Een adviseur zegt: “Aster produceert beide goederen efficiënter, dus handel maakt alle inwoners van Aster beter af.” Beoordeel de uitspraak met een concrete groep uit de bron.",
+        "source_question_id": "7e"
+      }
+    ]
+  },
+  "overviewSlides": [
+    1,
+    14,
+    26
+  ],
+  "overviewSource": "overview() shared data and geometry; only phase and active-step emphasis and slide number vary",
+  "outputDirectory": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/",
+  "filenameStem": "3.3.1 Waarom landen handelen – presentatie",
+  "scope": "Scoped Part B classroom PPTX and matching slide PDF; no complete web companion or Part A rewrite",
+  "timing": "Teacher guide reserves provisionally two 55-minute lessons. No measured classroom timing or learning-effectiveness claim.",
+  "targetStatus": "candidate_review_ready; slide review does not confer formal target approval",
+  "sourceFindings": [
+    {
+      "id": "B3-331-PRINT-HEADING",
+      "description": "Complete book pp. 88–90 contains literal ### in several run-in headings. Source markdown has these intended headings. Presentation preserves substantive text and has normal slide headings. Textbook render repair belongs to Part A and is not performed here."
+    }
+  ]
+}
