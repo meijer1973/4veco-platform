@@ -51,7 +51,7 @@ const route=[
  'Zet je huiswerk in je agenda.'
 ];
 function overview(phase,active){
- const s=slide('Deze les: '+TITLE);overviewSlides.push(p.slides.items.length);
+ const s=slide('Deze les: '+TITLE+': kenmerken');overviewSlides.push(p.slides.items.length);
  text(s,'Nu: '+phase,60,112,1450,43,30,{bold:true,color:C.blue,name:'phase'});
  text(s,'Lesroute',60,185,835,45,35,{bold:true});
  const ys=[244,336,390,446,636,716,774],hs=[80,45,45,177,73,50,52];
