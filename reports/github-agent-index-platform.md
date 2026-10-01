@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-29T13:25:36.000Z
+Generated: 2026-10-01T08:11:33.000Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/ppt-series-20260929`
-Source commit: `df18edbcfaee380141e220b8b7193a3e86753766`
-Files indexed: 8829
+Source branch: `codex/ppt-chapter3-20261001`
+Source commit: `415043c67e72cd88bc15b87bea35840514f6b0f4`
+Files indexed: 8852
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1150,7 +1150,7 @@ Count: 90
 
 ## build scripts
 
-Count: 870
+Count: 880
 
 - build-scripts/archive/README.md
 - build-scripts/archive/roundtrip-pptx.py
@@ -1272,6 +1272,7 @@ Count: 870
 - build-scripts/content/book-1/README.md
 - build-scripts/content/book-2/check-presentation-212.py
 - build-scripts/content/book-2/check-presentation-214.py
+- build-scripts/content/book-2/check-presentation-234.py
 - build-scripts/content/book-2/presentation-211.manifest.json
 - build-scripts/content/book-2/presentation-211.mjs
 - build-scripts/content/book-2/presentation-212-chart-labels.py
@@ -1291,6 +1292,15 @@ Count: 870
 - build-scripts/content/book-2/presentation-223.mjs
 - build-scripts/content/book-2/presentation-224.manifest.json
 - build-scripts/content/book-2/presentation-224.mjs
+- build-scripts/content/book-2/presentation-231.manifest.json
+- build-scripts/content/book-2/presentation-231.mjs
+- build-scripts/content/book-2/presentation-232.manifest.json
+- build-scripts/content/book-2/presentation-232.mjs
+- build-scripts/content/book-2/presentation-233-chart-layout.py
+- build-scripts/content/book-2/presentation-233.manifest.json
+- build-scripts/content/book-2/presentation-233.mjs
+- build-scripts/content/book-2/presentation-234.manifest.json
+- build-scripts/content/book-2/presentation-234.mjs
 - build-scripts/content/book-2/test-presentation-212-checker.py
 - build-scripts/content/legacy-target/build-311-basisopgaven.js
 - build-scripts/content/legacy-target/build-infographic-311.js
@@ -2056,7 +2066,7 @@ Count: 26
 
 ## validators
 
-Count: 652
+Count: 653
 
 - build-scripts/ci/check-agent-branch-safety.js
 - build-scripts/ci/check-agent-branch-safety.test.js
@@ -2070,6 +2080,7 @@ Count: 652
 - build-scripts/ci/check-y1-product-evidence.test.js
 - build-scripts/content/book-2/check-presentation-212.py
 - build-scripts/content/book-2/check-presentation-214.py
+- build-scripts/content/book-2/check-presentation-234.py
 - build-scripts/exemplars/check-reasoning-golden-exemplars.js
 - build-scripts/inspection/check-bounded-source-refresh-packet.js
 - build-scripts/inspection/check-bounded-source-refresh-packet.test.js
@@ -4471,7 +4482,7 @@ Count: 1753
 
 ## reports
 
-Count: 4905
+Count: 4918
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5983,6 +5994,19 @@ Count: 4905
 - reports/review-gates/books34-signed-retrieval-20260926/independent-review-bindings.json
 - reports/review-gates/books34-signed-retrieval-20260926/review-manifest-index.json
 - reports/review-gates/classroom-presentation-20260928/review.md
+- reports/review-gates/classroom-presentation-chapter3-20261001/chart-workbooks.json
+- reports/review-gates/classroom-presentation-chapter3-20261001/coordinator-231.md
+- reports/review-gates/classroom-presentation-chapter3-20261001/coordinator-232.md
+- reports/review-gates/classroom-presentation-chapter3-20261001/coordinator-233.md
+- reports/review-gates/classroom-presentation-chapter3-20261001/coordinator-234.md
+- reports/review-gates/classroom-presentation-chapter3-20261001/final-artifacts.json
+- reports/review-gates/classroom-presentation-chapter3-20261001/independent-series-review.md
+- reports/review-gates/classroom-presentation-chapter3-20261001/initial-runs.json
+- reports/review-gates/classroom-presentation-chapter3-20261001/paired-preservation.json
+- reports/review-gates/classroom-presentation-chapter3-20261001/review.md
+- reports/review-gates/classroom-presentation-chapter3-20261001/saved-geometry-234.json
+- reports/review-gates/classroom-presentation-chapter3-20261001/source-bindings.json
+- reports/review-gates/classroom-presentation-chapter3-20261001/target-recalculation.json
 - reports/review-gates/classroom-presentation-series-20260929/223-metadata-correction.json
 - reports/review-gates/classroom-presentation-series-20260929/final-artifacts.json
 - reports/review-gates/classroom-presentation-series-20260929/initial-223-224-review.md
