@@ -1,0 +1,145 @@
+{
+  "paragraph": "4.2.5",
+  "title": "Positieve externe effecten",
+  "manuscriptHeading": "Wie profiteert zonder te betalen?",
+  "type": "theory",
+  "edition": "books34-v3",
+  "lessonCommit": "e734532a42b27732ac25ce990fc9448b12309d28",
+  "platformBaseline": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+  "sources": [
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.5 manuscript.md",
+      "sha256": "552967cbfcda43b2865f19417298dadee472081e67282182fe963fa55672e82b"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/Antwoorden.md",
+      "sha256": "b77880f5e0c3e9252002c502b1cd101d4181773fa9968ea37d63e3d04cdf80f9"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/Docenteninformatie.md",
+      "sha256": "b7fed5653f6f8677eeeab66d84fc80f55d11455b84243f80d3f3a6e1d651a2ed"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.4 manuscript.md",
+      "sha256": "4589774bbf4209f36c852ef55be55e77c40d58395dd824502dbb8e5bb675647a"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/_assets/425_target.svg",
+      "sha256": "36d4350c10c67eadeacf5234778b6d52cb6b734742f87628cb2249343b39b4d8"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/_assets/425_answer43.svg",
+      "sha256": "1cdfa9c9b75a5a550c2115063875c91a97a043307bbea079af520d6056774c04"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.3 manuscript.md",
+      "sha256": "a9bfe97a56a9cf77feff4602dce945ea69af2c14bcd14cbcbcb1d2b35cbe94da"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+      "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+    }
+  ],
+  "printedPages": {
+    "theory": [
+      88,
+      89,
+      90,
+      91,
+      92,
+      93
+    ],
+    "start": 94,
+    "basis": [
+      94,
+      95
+    ],
+    "independent": [
+      95,
+      96
+    ],
+    "target": 97,
+    "extra": 98,
+    "chapterToBookOffset": 52,
+    "verified": "Printed footers in complete book PDF; physical pages 88,94,97 visually inspected."
+  },
+  "assignment": {
+    "start": [
+      37,
+      38
+    ],
+    "basis": [
+      39,
+      40
+    ],
+    "independent": [
+      41,
+      42
+    ],
+    "target": 43,
+    "homework": [
+      39,
+      40,
+      41,
+      42,
+      43
+    ],
+    "homeworkInstruction": "Maken en nakijken",
+    "extra": [
+      44,
+      45
+    ]
+  },
+  "goals": [
+    "Private en externe voordelen onderscheiden",
+    "Subsidie-uitkomst en overheidsuitgaven berekenen",
+    "Maatschappelijk surplus en efficiënte hoeveelheid bepalen en grafisch verklaren"
+  ],
+  "teachingExample": {
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "name": "Dakgroen",
+    "context": "Fictieve concurrerende markt voor gestandaardiseerde groene-dakdiensten. De bron neemt onbetaalde verkoeling voor omwonenden aan.",
+    "data": {
+      "demand": "Pc = 44 − 0,5Q",
+      "supply": "Pp = 8 + 0,5Q",
+      "externalBenefit": 12,
+      "subsidy": 12,
+      "lowerSubsidy": 6,
+      "units": "Q dakdiensten per maand; P euro per dakdienst",
+      "domain": [
+        0,
+        80
+      ]
+    },
+    "assumptions": "Veel aanbieders, verder gelijke omstandigheden, geen andere externe effecten, vaste kosten, financierings- of uitvoeringskosten. Waarderingen zijn verzonnen onderwijsdata.",
+    "separation": "Context, functies en uitkomsten verschillen van alle toegewezen opgaven. Geen start-, basis-, zelfstandige of doelopgave wordt tijdens de uitleg uitgewerkt."
+  },
+  "prerequisites": [
+    {
+      "operation": "Subsidiewig Pp = Pc + s, invullen in vraag en oorspronkelijk aanbod, U over alle verkochte eenheden",
+      "anchor": "Book 3 §3.1.3 manuscript theory and worked example, chapter pages 19–22 (book 23–26)",
+      "use": "Start 37; refresh through Dakgroen before practice."
+    },
+    {
+      "operation": "Derden onderscheiden van koper en verkoper; maatschappelijke grens",
+      "anchor": "Book 4 §4.2.4 manuscript paragraphs Een derde partij krijgt de rekening and Kijk breder dan CS + PS, chapter 25–27 (book 77–79)",
+      "use": "Start 38 supported exploration: positive benefit is new. Read book p.88 and return after instruction."
+    },
+    {
+      "operation": "Private benefit plus external benefit, maatschappelijke-batenlijn, simultaneous changes of both components",
+      "anchor": "§4.2.5 p.88–89; new teaching and separate change example in this deck",
+      "use": "38,39,41,42c,43a/d/e"
+    },
+    {
+      "operation": "Efficient quantity and original loss triangle bounded by social benefits and MK",
+      "anchor": "§4.2.5 p.89,91,93; demonstrated with Dakgroen",
+      "use": "39c,42c,43d"
+    },
+    {
+      "operation": "CS at Pc, PS at Pp, subtract U and add total external benefits; unequal subsidy and benefit",
+      "anchor": "Book 3 §3.1.3 worked example; §4.2.5 p.90–93; separate lower subsidy €6 vs benefit €12",
+      "use": "40,42b,43c/e"
+    }
+  ],
+  "timing": "Chapter teacher guidance provisionally reserves two 55-minute lessons plus possible overflow; no measured fit or mastery claim."
+}
