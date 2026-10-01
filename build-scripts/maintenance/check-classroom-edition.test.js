@@ -54,6 +54,41 @@ test.each([
 test('an already sealed presentation never becomes an exempt addition', () => {
   expect(current.isClassroomAddition(slides, new Set([textbook, slides]))).toBe(false);
 });
+test('v3 classroom artifacts require a signed paragraph PDF and manuscript in the matching book/chapter', () => {
+  const chapter = 'edities/books34-v3/books/book-3/chapters/3.3/';
+  const dir = chapter + 'paragraph-pdfs/';
+  const sealed = [chapter + '3.3.2 manuscript.md', dir + '3.3.2-leerling-v3.pdf'].sort();
+  const extras = [dir + '3.3.2 Wereldmarktprijs, import, export en welvaart – presentatie.pptx',
+    dir + '3.3.2 Wereldmarktprijs, import, export en welvaart – presentatie.pdf',
+    dir + 'evidence/3.3.2-presentation.md'];
+  expect(current.partitionInventory([...sealed, ...extras].sort(), sealed)).toEqual([...extras].sort());
+  for (const file of extras) {
+    expect(current.isClassroomAddition(file, new Set(sealed.slice(0, 1)))).toBe(false);
+    expect(current.isClassroomAddition(file, new Set(sealed.slice(1)))).toBe(false);
+    expect(current.isClassroomAddition(file, new Set([...sealed, file]))).toBe(false);
+  }
+  for (const file of [extras[0].replace('book-3', 'book-4'), extras[0].replace('/3.3/', '/3.2/'),
+    extras[0].replace('3.3.2 Wereld', '3.3.9 Wereld'), extras[0].replace('.pptx', '.js'),
+    dir + 'arbitrary.pdf', dir + 'evidence/3.3.2-approval.json', dir + 'evidence/3.3.3-presentation.md']) {
+    expect(() => current.partitionInventory([...sealed, file].sort(), sealed)).toThrow(/Unknown classroom addition/);
+  }
+});
+test('v3 additions preserve byte verification and cannot conceal a textbook mutation', () => {
+  const dir = 'edities/books34-v3/books/book-3/chapters/3.3/';
+  const originals = [dir + '3.3.2 manuscript.md', dir + 'paragraph-pdfs/3.3.2-leerling-v3.pdf'].sort();
+  const rows = originals.map(file => {
+    const bytes = Buffer.from('signed v3 content ' + file);
+    fs.mkdirSync(path.dirname(path.join(temp, file)), {recursive:true});
+    fs.writeFileSync(path.join(temp, file), bytes);
+    return {path:file, bytes:bytes.length, sha256:prior.sha(bytes), baseline_git_blob:gitBlob(bytes)};
+  });
+  const base = new Map(rows.map(row => [row.path,row.baseline_git_blob]));
+  const addition = dir + 'paragraph-pdfs/3.3.2 Wereldmarktprijs – presentatie.pdf';
+  const actual = [...originals,addition].sort();
+  expect(current.verifyCurrentInventory(temp,rows,actual,base)).toEqual([addition]);
+  fs.writeFileSync(path.join(temp,originals[0]),'changed source');
+  expect(() => current.verifyCurrentInventory(temp,rows,actual,base)).toThrow(/Stale successor file/);
+});
 test('presentation additions must be staged with their exact saved bytes', () => {
   const git = (...args) => execFileSync('git', args, {cwd: temp, stdio: 'pipe'});
   git('init', '-q'); git('config', 'core.autocrlf', 'false');

@@ -18,6 +18,19 @@ const git = (repo, args) => execFileSync('git', args, {cwd: repo, maxBuffer: 256
 
 function isClassroomAddition(file, sealedPaths) {
   if (sealedPaths.has(file)) return false;
+  // V3 keeps current paragraph exports together in the chapter's paragraph-pdfs
+  // directory. Admit companion artifacts only for an already signed paragraph.
+  const v3 = file.match(/^edities\/books34-v3\/books\/book-([34])\/chapters\/([34])\.([1-3])\/paragraph-pdfs\/(.+)$/);
+  if (v3 && v3[1] === v3[2]) {
+    const folder = file.slice(0, file.length - v3[4].length);
+    const leaf = v3[4];
+    const artifact = leaf.match(/^([34]\.[1-3]\.[1-9]\d*) [^/]+ – presentatie\.(pptx|pdf)$/)
+      || leaf.match(/^evidence\/([34]\.[1-3]\.[1-9]\d*)-presentation\.md$/);
+    if (!artifact || !artifact[1].startsWith(`${v3[1]}.${v3[3]}.`)) return false;
+    const id = artifact[1];
+    return sealedPaths.has(folder + id + '-leerling-v3.pdf')
+      && sealedPaths.has(folder.replace(/paragraph-pdfs\/$/, '') + id + ' manuscript.md');
+  }
   const prefix = prior.ROOTS[0] + '/bronnen/';
   if (!file.startsWith(prefix)) return false;
   const match = file.slice(prefix.length).match(/^H([1-3])\/paragrafen\/(2\.([1-3])\.[1-9]\d* [^/]+)\/(.+)$/);
