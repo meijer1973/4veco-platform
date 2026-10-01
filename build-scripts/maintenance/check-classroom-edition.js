@@ -18,6 +18,14 @@ const git = (repo, args) => execFileSync('git', args, {cwd: repo, maxBuffer: 256
 
 function isClassroomAddition(file, sealedPaths) {
   if (sealedPaths.has(file)) return false;
+  // Book 3 v3 keeps the existing paragraph exports together in paragraph-pdfs/.
+  // Admit only companion slides/evidence for a paragraph present in the receipt.
+  const book3 = file.match(/^(edities\/books34-v3\/books\/book-3\/chapters\/(3\.[1-3])\/paragraph-pdfs\/)(?:(3\.[1-3]\.[1-9]\d*) [^/]+ – presentatie\.(?:pptx|pdf)|evidence\/(3\.[1-3]\.[1-9]\d*)-presentation\.md)$/);
+  if (book3) {
+    const [, folder, chapter, slideId, evidenceId] = book3;
+    const id = slideId || evidenceId;
+    return id.startsWith(chapter + '.') && sealedPaths.has(folder + id + '-leerling-v3.pdf');
+  }
   const prefix = prior.ROOTS[0] + '/bronnen/';
   if (!file.startsWith(prefix)) return false;
   const match = file.slice(prefix.length).match(/^H([1-3])\/paragrafen\/(2\.([1-3])\.[1-9]\d* [^/]+)\/(.+)$/);

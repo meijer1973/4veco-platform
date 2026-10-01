@@ -1,0 +1,273 @@
+{
+  "paragraph": "3.1.1",
+  "title": "Belastingen: wig en nieuw evenwicht",
+  "type": "theory",
+  "language": "nl-NL",
+  "audience": "4 vwo economie",
+  "edition": "Books 3/4 v3; current follow-ups through 2026-09-28",
+  "lesson_commit": "9b8304d5031cafac936a56281e144573a25fbbc9",
+  "platform_baseline": "34464fb6091f721f7a87e8d1bb3165f758770799",
+  "source_files": [
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.1 manuscript.md",
+      "sha256": "938160312edc425888dd54b3207c932e0aa396c59411a30e6679865eb14fded8"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/Antwoorden.md",
+      "sha256": "5c22520f978587c47a041723b24d144ed3ec18da3636090b58572a141ac2b288"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/Docenteninformatie.md",
+      "sha256": "46fdda1886adfc0df76f0a11b38182cf934a3040d1dd1976b961ae68a7e13aac"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/00 Inleiding.md",
+      "sha256": "6da13a58afc3fdd6105fba2cad3468f60a395cff332c6f59c40cda392f709c7a"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_target.svg",
+      "sha256": "913b34e601af2ea9463fb1b207b54fb1f0b27ca3dde6db0fec02b23f0db5253c"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+      "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_Antwoorden_v3.pdf",
+      "sha256": "99bb148be789986f193b4aa534be62c0c7a91cd15e476660ab8106c0627a5a25"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_Docenteninformatie_v3.pdf",
+      "sha256": "7b13b7ed57a68c1eb6974c601d74b64ac2743d07c3d38b9ae2519a64ebdca37e"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+      "sha256": "77d485b2078bba0b3faffcb6d0e78d4ce8e55f4ab59de63d470c9214aff92745"
+    }
+  ],
+  "goals": [
+    "Vrij evenwicht berekenen",
+    "Aanbod in kopersprijzen afleiden en Qt, Pc en Pp berekenen",
+    "Belastingwig tekenen bij dezelfde Qt",
+    "Afdragen onderscheiden van de economische last met de oude prijs"
+  ],
+  "assignments": {
+    "start": [
+      1,
+      2
+    ],
+    "basis": [
+      3,
+      4
+    ],
+    "independent": [
+      5,
+      6
+    ],
+    "target": 7,
+    "homework": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "homework_instruction": "Maken en nakijken",
+    "unassigned_extras": [
+      8,
+      9
+    ]
+  },
+  "printed_complete_book_pages": {
+    "theory": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "start": 9,
+    "basis": 10,
+    "independent": 11,
+    "target": 12,
+    "extras": 13,
+    "pdf_index_offset": 0,
+    "verification": "Complete PDF extracted footer and rendered pages 9 and 12; chapter-local pages are four lower."
+  },
+  "start_support": {
+    "1": "Retrieval: equate linear inverse functions; solve for Q and substitute. Refreshed in slides 4–5.",
+    "2": "New encounter: read Pc, Pp and wig on book p6, comparison with old price p9. Visible support on each overview; return after slide13 before practice. No assigned answers in opening slide."
+  },
+  "prerequisite_trace": [
+    {
+      "operation": "Equal inverse price functions, solve and substitute; read (Q,P)",
+      "earlier_teaching": "Book 2 §2.3.2, Bereken eerst het marktevenwicht (printed p82) and Voorbeeld: evenwicht, CS, PS en TS (p83); explicit P=40−Q and P=10+0.5Q solve, and notitieboeken worked example.",
+      "lesson_refresh_slides": [
+        4,
+        5
+      ],
+      "used_by": [
+        "1a",
+        "1b",
+        "4b",
+        "5a",
+        "7a"
+      ]
+    },
+    {
+      "operation": "Distinguish payment, receipt and profit",
+      "earlier_teaching": "Book 2 §2.3.2 p80: Waarom is producentensurplus nog geen winst? Tax-specific Pc/Pp are new here.",
+      "new_teaching": "Book 3 p6; slides2–3,9",
+      "used_by": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7c",
+        "7e"
+      ]
+    },
+    {
+      "operation": "Transform Pp=a+bQ into Pc=a+t+bQ at fixed Q; original A versus A+t",
+      "new_teaching": "Book 3 p7–9; slides6–7 derive receipt+tax, graph; slides8–10 solve and mark.",
+      "used_by": [
+        "3b",
+        "3c",
+        "4a",
+        "4b",
+        "4c",
+        "5b",
+        "5c",
+        "7b",
+        "7d"
+      ]
+    },
+    {
+      "operation": "Two prices at one quantity; vertical wedge, same scales and units",
+      "new_teaching": "Book 3 p7–9; slides5,7,10 show progression; slides9–10 substitute in original V/A.",
+      "used_by": [
+        "3a",
+        "4c",
+        "4d",
+        "5c",
+        "7c",
+        "7d"
+      ]
+    },
+    {
+      "operation": "Burden = price change from P0; remittance is a payment action",
+      "new_teaching": "Book 3 p9; slide11 computes both changes, slides12–13 reject old price plus whole tax; return to start2.",
+      "used_by": [
+        "2b",
+        "3c",
+        "4d",
+        "5d",
+        "6",
+        "7e"
+      ]
+    },
+    {
+      "operation": "Model conditions: many price takers, same product, unchanged other conditions, sold quantity same on both sides",
+      "new_teaching": "Book 3 p7 model box; slide2 notes, slide3 example and slide15 actual target reset.",
+      "used_by": [
+        "4",
+        "5",
+        "7"
+      ]
+    }
+  ],
+  "authored_teaching_example": {
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "context": "Houten puzzels",
+    "Q_unit": "puzzels per week",
+    "prices_unit": "euro per puzzel",
+    "demand": "Pc=26−0.20Q",
+    "supply": "Pp=2+0.10Q",
+    "tax_per_unit": 6,
+    "solution": {
+      "Q0": 80,
+      "P0": 10,
+      "Qt": 60,
+      "Pc": 14,
+      "Pp": 8,
+      "buyer_burden": 4,
+      "seller_burden": 2
+    },
+    "slides": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "source_attribution": "Authored context/data; book p6–9 only supplies the method. Assigned practice 1–7 is not worked during instruction."
+  },
+  "actual_target": {
+    "exercise": 7,
+    "name": "Bedrukte tassen",
+    "source_page": 12,
+    "questions_slides": [
+      15,
+      16,
+      17
+    ],
+    "answer_slides": {
+      "a": [
+        18
+      ],
+      "b": [
+        19
+      ],
+      "c": [
+        20
+      ],
+      "d": [
+        21,
+        22
+      ],
+      "e": [
+        23
+      ]
+    },
+    "solution": {
+      "Q0": 60,
+      "P0": 8,
+      "Qt": 50,
+      "Pc": 10,
+      "Pp": 7,
+      "tax": 3,
+      "buyer_burden": 2,
+      "seller_burden": 1
+    }
+  },
+  "overview_slides": [
+    1,
+    14,
+    24
+  ],
+  "native_table_slides": [
+    2,
+    3,
+    11,
+    15,
+    23
+  ],
+  "native_chart_slides": [
+    5,
+    7,
+    10,
+    17,
+    21,
+    22
+  ],
+  "destination_directory": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/",
+  "output_stem": "3.1.1 Belastingen – wig en nieuw evenwicht – presentatie",
+  "timing": "Teacher source provisionally reserves two 55-minute lessons; neither 55 nor 110 minutes is measured. Flexible boundary and homework retain full route.",
+  "scope": "Classroom Part B PPTX/PDF only. Candidate targets remain candidate_review_ready; no full companion or independent target acceptance claim."
+}
