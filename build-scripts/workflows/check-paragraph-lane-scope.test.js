@@ -142,6 +142,23 @@ describe('check-paragraph-lane-scope', () => {
     expect(classifyPath('reports/review-gates/PR200/packet.pdf').category).toBe('unknown');
   });
 
+  test('bounds classroom visual-review crops without allowing evidence-only or source changes', () => {
+    const prefix = 'reports/review-gates/classroom-presentations-book4-20261001/review/';
+    const crops = ['independent-434-v2-crop-9.png', 'independent-retest-422-v2-crop-21.png'].map(name => prefix + name);
+    for (const file of crops) expect(classifyPath(file).category).toBe('review_evidence');
+    const tool = 'build-scripts/workflows/check-paragraph-lane-scope.js';
+    expect(checkLaneScope({ lane: 'shared', changedPaths: [tool, ...crops] }).ok).toBe(true);
+    expect(checkLaneScope({ lane: 'shared', changedPaths: crops }).ok).toBe(false);
+    for (const file of [prefix + 'slide.png', prefix + 'crop-9.js', prefix + 'nested/x-crop-9.png',
+      'reports/review-gates/other/review/x-crop-9.png', 'unclassified/x-crop-9.png']) {
+      expect(classifyPath(file).category).toBe('unknown');
+      expect(checkLaneScope({ lane: 'shared', changedPaths: [tool, file] }).ok).toBe(false);
+    }
+    const textbookFigure = 'Boek 4/_assets/labour_fig_demand.png';
+    expect(classifyPath(textbookFigure).category).toBe('partA_textbook');
+    expect(checkLaneScope({ lane: 'shared', changedPaths: [tool, ...crops, textbookFigure] }).ok).toBe(false);
+  });
+
   test('classifies only the canonical internal-dashboard outputs as generated indexes', () => {
     const canonicalPaths = [
       'reports/internal-dashboard/index.html',

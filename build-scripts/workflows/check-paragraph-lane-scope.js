@@ -152,6 +152,8 @@ function isGeneratedIndexPath(filePath) {
 
 function isReviewEvidencePath(filePath) {
   const p = normalizedLower(filePath);
+  // Classroom review crops document rendered findings; this is ownership only.
+  if (/^reports\/review-gates\/classroom-presentations-[^/]+\/review\/[^/]+-crop-\d+\.png$/.test(p)) return true;
   if (p === 'reports/reference-planning/blueprint-change-review-book34-chat-20260914.md') return true;
   if (p === 'reports/reference-planning/blueprint-change-review-book34-v3-20260917.md') return true;
   if (
