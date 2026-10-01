@@ -169,6 +169,11 @@ in the consolidated PRs after this evidence commit, not inferred from author CI.
 
 ## Evidence
 
+The first required CI run exposed a Python interpreter mismatch in the new
+graph-repair test. The [runtime repair and negative control](ci-runtime-repair.md)
+record the narrow fix; presentation bytes are unchanged. Final CI and independent
+binding on the PR apply to the repaired commit, not the failed earlier head.
+
 - [Original protocol and preflight](preflight.json), [completed original runs](initial-runs.json), [fresh retests](retests.json), [selected runs](selected-runs.json).
 - Original coordinator verdicts are retained as `original-XXX.json`, fresh-test
   verdicts as `retest-XXX.json`, and final selected verdicts as `coordinator-XXX.json`.
