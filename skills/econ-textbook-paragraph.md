@@ -206,6 +206,15 @@ layout and construction method that communicate these teaching requirements.
 
 ### 3.4 Misconceptions and recall
 
+Introduce a new calculation with its word formula before abbreviating it with
+symbols (for marginal amounts: extra amount divided by the number of extra
+products, then Δ notation). Typeset numerator and denominator as a real fraction.
+Keep independent cost, revenue and surplus formulas on separate lines, in separate
+columns or in clearly distinct boxes; a separator must not resemble a calculation
+step. Use Dutch economic notation consistently, including Qv and Qa. Retain
+ordinary terms such as break-even. Student retrieval headings can use “Herhaling
+en combineren”; the exercise-builder skill remains the authority for route roles.
+
 For an applicable misconception, place a short warning box beside the triggering
 concept. Explain the tempting error and correct reasoning, normally in 3–4
 lines; ensure practice confronts it. Keep forward references brief. Recall boxes
