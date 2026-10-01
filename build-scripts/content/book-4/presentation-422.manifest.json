@@ -1,0 +1,25 @@
+{
+  "paragraph": "4.2.2",
+  "title": "Prijsdiscriminatie",
+  "type": "theory",
+  "edition": "books34-v3",
+  "lessonCommit": "e734532a42b27732ac25ce990fc9448b12309d28",
+  "platformBaseline": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+  "sourceRoot": "edities/books34-v3/books/book-4/",
+  "sources": ["chapters/4.2/4.2.2 manuscript.md", "chapters/4.2/Antwoorden.md", "chapters/4.2/Docenteninformatie.md", "chapters/4.2/_assets/422_target.svg", "chapters/4.2/4.2.1 manuscript.md", "chapters/4.1/4.1.4 manuscript.md", "output/Boek_4_Compleet_v3.pdf"],
+  "printedPages": {"theory": [63,64,65,68], "start":66, "basis":[66,67], "independent":[67,68], "target":69},
+  "pageVerification": "Complete book physical pages 66 and 69 visibly bear printed footers 66 and 69. Chapter-only numbers 14 and 17 are not used as book pages.",
+  "assignment": {"start":[10,11],"basis":[12,13],"independent":[14,15],"target":16,"homework":[12,13,14,15,16],"extras":[17,18]},
+  "goals": ["Prijsdiscriminatie herkennen en voorwaarden uitleggen", "Per groep MO = MK toepassen en de prijs op de eigen vraag aflezen", "TO, TK en winst vergelijken", "Gevolgen voor groepen, CS, PS en TS beoordelen en begrenzen"],
+  "prerequisites": [
+    {"operation":"TO = P × Q; TK en winst; perioden en eenheden", "anchor":"4.1.4 manuscript: Stap 3: bereken de winst; complete book p. 34", "use":"10a and all later calculations", "lessonSupport":"Worked example sums both revenues and quantities before subtracting one joint TCK."},
+    {"operation":"Recognize two groups as one firm; one shared TCK", "anchor":"4.2.2 manuscript: Constante kosten tel je eenmaal, p. 64", "use":"10b, 13, 14b, 16b", "lessonSupport":"Start 10 is supported exploration for this new grouping; overview refers to p. 64 and returns before practice."},
+    {"operation":"Distinguish different prices from different services/costs", "anchor":"4.2.2 manuscript: definition and warning, p. 63", "use":"11 and 16c", "lessonSupport":"Start 11 is supported exploration with p. 63; recognition and conditions slides; return before practice."},
+    {"operation":"Linear demand → TO → MO; solve MO = MK; check sign and capacity; read P on demand", "anchor":"4.1.4 manuscript: Stap 1 and Stap 2, p. 32–33; 4.2.1: Eerst de keuze van de monopolist, p. 56", "use":"12,14a,16a", "lessonSupport":"Refresh explicitly with a separate authored example; expand to two groups only under constant shared MK and sufficient capacity."},
+    {"operation":"CS area; PS = TO − TVK; winst = PS − TCK; TS = CS + PS", "anchor":"4.2.1 manuscript: Dezelfde markt, twee verschillende vragen and De gebieden uit elkaar houden, p. 55–57", "use":"15 and 16d", "lessonSupport":"Numerical comparison and separate CS/PS/TS slides before practice; source-supplied CS retained for FilmLab."},
+    {"operation":"Explain differences by group and limit a welfare conclusion to given assumptions", "anchor":"4.2.1 manuscript: Welvaart is niet hetzelfde als een eerlijke verdeling, p. 55; 4.2.2: Gebruik prijsgevoeligheid als verklaring, p. 68", "use":"15d and 16c/e", "lessonSupport":"Explicit group comparison, evidence-based sensitivity explanation and conditional conclusion."}
+  ],
+  "teachingExample": {"authored":true,"label":"Uitlegvoorbeeld — niet uit het boek","context":"Sterrenkoepel, same visit with controlled personal passes", "demandA":"P_A = 54 − 2Q_A", "demandB":"P_B = 30 − 2Q_B", "MK":6,"TCK":72,"capacity":42,"uniformPriceGiven":24,"units":"P and MK: euro per visit; Q: visits per week; totals: euro per week", "noExternalEffects":true,"distinctFromAssignedExercises":"No assigned problem is used as the initial worked example; FilmLab appears only after independent practice."},
+  "timing":"Teacher guidance reserves two lessons of 55 minutes provisionally; neither 55 nor 110 minute fit is measured.",
+  "outputStem":"4.2.2 Prijsdiscriminatie – presentatie"
+}
