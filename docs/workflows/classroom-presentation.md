@@ -26,6 +26,12 @@ actual book number). A target's context or source blocks can
 precede its exercise container; read the complete manuscript and printed
 target pages. Use the actual current edition map for subsequent books too.
 
+Verify **every cited page**, including prerequisite references in notes and the
+manifest, against the complete-book PDF. Chapter-local metadata is not a printed
+complete-book page. A reference into another chapter needs that chapter's own
+mapping; do not reuse the target chapter's offset. Confirm that the cited page
+actually teaches the named operation, rather than only containing an exercise.
+
 Before authoring, record a small source/assignment manifest containing the
 edition, lesson commit, source paths/hashes, paragraph title and type (theory
 or gemengde opgaven), goals, start/page, basis, independent, target and homework.
@@ -151,6 +157,9 @@ new paragraph. Do not copy old numbers or content by search-and-replace.
   labels such as E into clear whitespace: a correct coordinate does not make a
   label readable when adjacent curves cross its letters. Recheck every repeated
   graph after changing shared label placement.
+  In side-by-side panels, inspect wrapped labels and each price guide separately:
+  a clear first line does not guarantee that the second line clears a curve.
+  Use shorter tags with an explicit key when direct labels cannot fit clearly.
   On a tax/subsidy curve-shift introduction, include the horizontal shift arrow
   required by `skills/economic-graph.md`, at a common price in an uncluttered
   region. Explain that comparison separately from the vertical price wedge at
@@ -158,6 +167,11 @@ new paragraph. Do not copy old numbers or content by search-and-replace.
 - State quantities, periods and units. Distinguish totals from averages, exact
   thresholds from feasible whole products and within-capacity conclusions from
   extrapolation. Give both the calculation and the economic explanation.
+- Keep linked representations mathematically consistent. When a market graph
+  aggregates identical firms, check it against their marginal costs, number and
+  capacity on the displayed domain. Distinguish a drawing task's tolerance for
+  a schematic answer from freedom in the economic model: a request for a
+  "passende" curve does not by itself make its slope or parameters arbitrary.
 - Every slide has teacher notes: explanation, question, misconception,
   transition and source (edition, printed page, source link). For an authored
   example identify its authored context/data and cite the book only for the
