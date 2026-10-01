@@ -1,0 +1,467 @@
+{
+  "scope": "Final independent binding of all14 selected artifact/source/evidence files, with declared assembly overrides; native visual inspection remains bounded as documented in independent-series-review.md.",
+  "artifacts": [
+    {
+      "id": "311",
+      "state": "selected",
+      "folder": "C:\\wt\\ppt\\.book3\\review\\retest-311-repaired",
+      "pptxSha256": "a478cc17fd25fdf98234a6ea049f71ad5ed0a08415f72b2258327d7a26e52156",
+      "pdfSha256": "33b7c4b2eb539294775a1e0033f1460a6a736b1e02f70798610b4ebe7d931d7e",
+      "workbooks": {
+        "ok": true,
+        "charts": 6,
+        "references": 114,
+        "cellsCompared": 186,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx"
+        ]
+      },
+      "slides": 27,
+      "pdfTextMissing": [],
+      "assemblyBinding": "PASS",
+      "finalParagraphChecker": {
+        "ok": true,
+        "slides": 27,
+        "notes": 27,
+        "tables": 8,
+        "charts": 6,
+        "sourceHashes": 7,
+        "targetQuestions": 5,
+        "overviewParity": true,
+        "geometry": [
+          {
+            "slide": 6,
+            "stage": "free",
+            "model": 0,
+            "axes": [
+              [
+                "32",
+                "0"
+              ],
+              [
+                "160",
+                "0"
+              ]
+            ]
+          },
+          {
+            "slide": 9,
+            "stage": "shift",
+            "model": 0,
+            "axes": [
+              [
+                "32",
+                "0"
+              ],
+              [
+                "160",
+                "0"
+              ]
+            ]
+          },
+          {
+            "slide": 12,
+            "stage": "wedge",
+            "model": 0,
+            "axes": [
+              [
+                "32",
+                "0"
+              ],
+              [
+                "160",
+                "0"
+              ]
+            ]
+          },
+          {
+            "slide": 19,
+            "stage": "base",
+            "model": 1,
+            "axes": [
+              [
+                "22",
+                "0"
+              ],
+              [
+                "100",
+                "0"
+              ]
+            ]
+          },
+          {
+            "slide": 24,
+            "stage": "shift",
+            "model": 1,
+            "axes": [
+              [
+                "22",
+                "0"
+              ],
+              [
+                "100",
+                "0"
+              ]
+            ]
+          },
+          {
+            "slide": 25,
+            "stage": "wedge",
+            "model": 1,
+            "axes": [
+              [
+                "22",
+                "0"
+              ],
+              [
+                "100",
+                "0"
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "312",
+      "state": "selected",
+      "folder": "C:\\wt\\ppt\\.book3\\review\\312",
+      "pptxSha256": "69ce8b56965aa27bfa212b6bf3fe4f4736df0a5fe695397798988cd693844880",
+      "pdfSha256": "23f5b363f4693fd803db0e142ebf4cfa3798c5dfc664f84c0657a79bf2acbc50",
+      "workbooks": {
+        "ok": true,
+        "charts": 10,
+        "references": 732,
+        "cellsCompared": 1496,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx",
+          "ppt/embeddings/chart-data-snapshot-007.xlsx",
+          "ppt/embeddings/chart-data-snapshot-008.xlsx",
+          "ppt/embeddings/chart-data-snapshot-009.xlsx",
+          "ppt/embeddings/chart-data-snapshot-010.xlsx"
+        ]
+      },
+      "assemblyBinding": "PASS",
+      "slides": 29,
+      "pdfTextMissing": []
+    },
+    {
+      "id": "313",
+      "state": "selected",
+      "folder": "C:\\wt\\ppt\\.book3\\review\\313",
+      "pptxSha256": "0a021437b110af79268df39ef1ceccccc0f5eda3874008552458305b9da71444",
+      "pdfSha256": "719e5c07b3163073302913d2f50301f7f222c274a78ec0efc66a1a06297f5903",
+      "workbooks": {
+        "ok": true,
+        "charts": 9,
+        "references": 164,
+        "cellsCompared": 1602,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx",
+          "ppt/embeddings/chart-data-snapshot-007.xlsx",
+          "ppt/embeddings/chart-data-snapshot-008.xlsx",
+          "ppt/embeddings/chart-data-snapshot-009.xlsx"
+        ]
+      },
+      "assemblyBinding": "PASS",
+      "slides": 29,
+      "pdfTextMissing": []
+    },
+    {
+      "id": "314",
+      "state": "selected",
+      "folder": "C:\\wt\\ppt\\.book3\\review\\314",
+      "pptxSha256": "db91b3c26e9d262bb01771c21fc1ffde0988543cddf8e4ecc93f1ee80a3a71dc",
+      "pdfSha256": "6ea83bf77f90800b0c02ae4085de814a8cc1da3d6a51f278b8a821cb10cff969",
+      "workbooks": {
+        "ok": true,
+        "charts": 5,
+        "references": 58,
+        "cellsCompared": 124,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx"
+        ]
+      },
+      "assemblyBinding": "PASS",
+      "slides": 24,
+      "pdfTextMissing": []
+    },
+    {
+      "id": "315",
+      "state": "selected",
+      "folder": "C:\\wt\\ppt\\.book3\\review\\315",
+      "pptxSha256": "df0195e9819f0e1aeba85447aab91a987a719b16b4dcaa009023405e6c932e24",
+      "pdfSha256": "33b14102a577cb940b1a1fad916d0212a0c8b3783229fa731515ac4908761458",
+      "workbooks": {
+        "ok": true,
+        "charts": 7,
+        "references": 118,
+        "cellsCompared": 250,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx",
+          "ppt/embeddings/chart-data-snapshot-007.xlsx"
+        ]
+      },
+      "assemblyBinding": "PASS",
+      "slides": 25,
+      "pdfTextMissing": []
+    },
+    {
+      "id": "316",
+      "state": "selected",
+      "folder": "C:\\wt\\ppt\\.book3\\review\\316",
+      "pptxSha256": "dbe1a8f91790ee624bacb3b5745167f7bc3a4f87900c550ffffbeb0737a7bcab",
+      "pdfSha256": "b33ff53975c81715de8346cf880334235c935ab07e71c956b85eeb38550634c0",
+      "workbooks": {
+        "ok": true,
+        "charts": 4,
+        "references": 52,
+        "cellsCompared": 104,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx"
+        ]
+      },
+      "assemblyBinding": "PASS",
+      "slides": 22,
+      "pdfTextMissing": []
+    },
+    {
+      "id": "321",
+      "state": "selected",
+      "folder": "C:\\wt\\ppt\\.book3\\review\\321-repaired",
+      "pptxSha256": "a50e5915a895dd850add3b55c52713b99e196f3f8758cc0fd5a8e38702058b0c",
+      "pdfSha256": "fb46b868b4b4002d9122f7325fe166495725bd0a7282217a3126be437cf23697",
+      "workbooks": {
+        "ok": true,
+        "charts": 11,
+        "references": 58,
+        "cellsCompared": 138,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx",
+          "ppt/embeddings/chart-data-snapshot-007.xlsx",
+          "ppt/embeddings/chart-data-snapshot-008.xlsx",
+          "ppt/embeddings/chart-data-snapshot-009.xlsx",
+          "ppt/embeddings/chart-data-snapshot-010.xlsx",
+          "ppt/embeddings/chart-data-snapshot-011.xlsx"
+        ]
+      },
+      "assemblyBinding": "PASS",
+      "slides": 25,
+      "pdfTextMissing": []
+    },
+    {
+      "id": "322",
+      "state": "selected",
+      "folder": "C:\\wt\\ppt\\.book3\\review\\322",
+      "pptxSha256": "368153f3f8c8b87a52908eb16153ada8cbaa4bf5d9f82c4e0c45c709b4d8d610",
+      "pdfSha256": "5137dbcf55874fefdf47c13619fa7b24736e2a5f9a1d5fc044f2c725a290c762",
+      "workbooks": {
+        "ok": true,
+        "charts": 0,
+        "references": 0,
+        "cellsCompared": 0,
+        "workbooks": []
+      },
+      "assemblyBinding": "PASS",
+      "slides": 24,
+      "pdfTextMissing": []
+    },
+    {
+      "id": "323",
+      "state": "selected",
+      "folder": "C:\\wt\\ppt\\.book3\\review\\retest-323",
+      "pptxSha256": "b91cff8a32a3b54dce83d39bbb1bf4c48363ff5d754174b87e32d73ea3b2534a",
+      "pdfSha256": "65e2cf7b285efdbf14db0a1bc96bf541d5c9c4a5aa4fcf7ff2c0514a7603f1be",
+      "workbooks": {
+        "ok": true,
+        "charts": 9,
+        "references": 138,
+        "cellsCompared": 1442,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx",
+          "ppt/embeddings/chart-data-snapshot-007.xlsx",
+          "ppt/embeddings/chart-data-snapshot-008.xlsx",
+          "ppt/embeddings/chart-data-snapshot-009.xlsx"
+        ]
+      },
+      "slides": 27,
+      "pdfTextMissing": [],
+      "assemblyBinding": "PASS"
+    },
+    {
+      "id": "324",
+      "state": "selected",
+      "folder": "C:\\wt\\ppt\\.book3\\review\\retest-324",
+      "pptxSha256": "8f897b27a3d821f2dcaf231e6d1759fbad8a67f19216034b7a6632dc9e1a1ce9",
+      "pdfSha256": "5eff53005d23c8e130e3f2704849405e08bcd62b4eb7a34c4d1f89be8606f909",
+      "workbooks": {
+        "ok": true,
+        "charts": 6,
+        "references": 166,
+        "cellsCompared": 1436,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx"
+        ]
+      },
+      "assemblyBinding": "PASS",
+      "slides": 22,
+      "pdfTextMissing": []
+    },
+    {
+      "id": "331",
+      "state": "selected",
+      "folder": "C:\\wt\\ppt\\.book3\\review\\331",
+      "pptxSha256": "ba077e29cc1a7e398f21398d6410a14665ba856d5fd9b6eef859920e4d3ce2c3",
+      "pdfSha256": "e6432093e64413cc216789547899fa6022a468a0a12c1fdbe3fcefdb0d730c06",
+      "workbooks": {
+        "ok": true,
+        "charts": 0,
+        "references": 0,
+        "cellsCompared": 0,
+        "workbooks": []
+      },
+      "assemblyBinding": "PASS",
+      "slides": 26,
+      "pdfTextMissing": []
+    },
+    {
+      "id": "332",
+      "state": "selected",
+      "folder": "C:\\wt\\ppt\\.book3\\review\\332-repaired",
+      "pptxSha256": "338a2c361f478dccfa72d3d6a49b989d4cee5ec110c4adfb0f334e369a406c3f",
+      "pdfSha256": "ccf308bbc1cee8507c0944d351f143d58ae336a70eb3bd0846de010bb7b31549",
+      "workbooks": {
+        "ok": true,
+        "charts": 6,
+        "references": 50,
+        "cellsCompared": 124,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx"
+        ]
+      },
+      "assemblyBinding": "PASS",
+      "slides": 25,
+      "pdfTextMissing": []
+    },
+    {
+      "id": "333",
+      "state": "selected",
+      "folder": "C:\\wt\\ppt\\.book3\\review\\333-repaired",
+      "pptxSha256": "ac6fc11ae10c4c326a8d309f37e6974fa711142c0337117ffb4dc6609a1751a4",
+      "pdfSha256": "7c881bb80921377acad485e7bbcaf66b9f2414011f70893505817b8b0d225167",
+      "workbooks": {
+        "ok": true,
+        "charts": 6,
+        "references": 174,
+        "cellsCompared": 300,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx"
+        ]
+      },
+      "assemblyBinding": "PASS",
+      "slides": 24,
+      "pdfTextMissing": []
+    },
+    {
+      "id": "334",
+      "state": "selected",
+      "folder": "C:\\wt\\ppt\\.book3\\review\\334-repaired",
+      "pptxSha256": "43f4ea80257bd6547ca00ff10d604fcb3a476180bc97bc65b1fa662248b6b9a0",
+      "pdfSha256": "7493997edea575c4700076de538f3d98fb09f5ac147121c3de9f580cbed0902c",
+      "workbooks": {
+        "ok": true,
+        "charts": 2,
+        "references": 52,
+        "cellsCompared": 104,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx"
+        ]
+      },
+      "assemblyBinding": "PASS",
+      "slides": 21,
+      "pdfTextMissing": []
+    }
+  ],
+  "syntaxPass": [
+    "check-presentation-311.py",
+    "check-presentation-312.py",
+    "check-presentation-314.py",
+    "check-presentation-315.py",
+    "check-presentation-324.py",
+    "check-presentation-332.py",
+    "check-presentation-333.py",
+    "presentation-311-chart-labels.py",
+    "presentation-311.mjs",
+    "presentation-312-package.py",
+    "presentation-312.mjs",
+    "presentation-313-chart-style.py",
+    "presentation-313.mjs",
+    "presentation-314.mjs",
+    "presentation-315.mjs",
+    "presentation-316.mjs",
+    "presentation-321.mjs",
+    "presentation-322.mjs",
+    "presentation-323.mjs",
+    "presentation-324.mjs",
+    "presentation-331.mjs",
+    "presentation-332.mjs",
+    "presentation-333.mjs",
+    "presentation-334.mjs"
+  ],
+  "assemblyFilesVerified": 80,
+  "sourceReferencesVerified": 134,
+  "additionalPrerequisiteSourceReferencesVerified": 2
+}

@@ -1,0 +1,42 @@
+{
+  "scope": "Independent root review bound to the completed cold handoff. Exact PPTX/PDF bytes match the individually reviewed native PowerPoint renders and read notes.",
+  "pptxSha256": "df0195e9819f0e1aeba85447aab91a987a719b16b4dcaa009023405e6c932e24",
+  "pdfSha256": "33b14102a577cb940b1a1fad916d0212a0c8b3783229fa731515ac4908761458",
+  "slides": 25,
+  "allNativePowerPointPageRendersViewedIndividually": true,
+  "allTextAndTeacherNotesRead": true,
+  "minimumExplicitNotesFontPt": 14,
+  "overviewSlides": [
+    1,
+    15,
+    25
+  ],
+  "overviewTextAndGeometryParity": true,
+  "pdfTextMismatches": [],
+  "chartWorkbookCheck": {
+    "ok": true,
+    "charts": 7,
+    "references": 118,
+    "cellsCompared": 250
+  },
+  "teaching": {
+    "source": "Current Book3 v3 3.1.5 manuscript, target43 Paddenstoelen in kratten a-e p46 and guided/independent/extra exercises read directly. Full target original assumptions and separate schemes retained.",
+    "overview": "Start37-38 p42 visibly supported by theory39-40, returned after14/before15. Basis39,40,40A;independent41-42;target43. Homework39,40,40A,41,42,43. Notes retain40A before40c as needed;extra44-45 remain extra. Provisional two55-minute route plus possible outflow is not presented as measured timing.",
+    "example": "Authored kruidenpotten V24-.20Q,A6+.10Q, weekly units. Free60@12; floor15 binds,Qv45,Qa90,oversupply45. Without purchases actual45,U0; explicit full purchase guarantee adds public45,actual90,U675. Replacement-only quota45 binds,price15 on V,not10.50 on A;U0. New quota80 allows original60/12. Values independently recomputed.",
+    "sequence": "Goals and reversed direction of bound2; own market3; refresh inverse equilibrium4 with Q(P) bridge in notes; freegraph5; binding/nonbinding floor6; quantities7; no-purchase actual8; explicit purchase promise9; expenditure rectangle10; replace entire scheme11; price on demand12; nonbinding quota13; numerical comparison and return14; practice15. Full target context16, blank native graph17, all a-e18-19 before answers20-24. Closure25.",
+    "target": "Free60@14;floor16,Qv40,Qa80,oversupply40,totaldelivery80 because guarantee. Public40,U640/week. Rectangle exactly Q40-80 and P0-16. Replacement quota40,P16,production40,U0,free rights. Same price with different production80/40 and state640/0, explained causally.",
+    "series": "Extends314 common price, desired versus actual quantities, and binding check with explicit lower-bound reversal. Does not treat government as automatic buyer. Different state-spending base/height are explained: purchased surplus times full price, not313 all-sales subsidy or tax wedge. Quota removes floor and purchases before using V for price; nonbinding quantity ceiling preserves free equilibrium. No missing prior teaching or contradiction in reviewed311-315 prefix.",
+    "visual": "All25 v2 native PowerPoint pages individually inspected. All seven native graphs have correct straight lines/guides, readable labels and correct expenditure rectangle. Tables and all target questions/answers are legible without material clipping. Author independently corrected PowerPoint smoothing before this snapshot; no parent coaching.",
+    "limits": "No measured classroom timing, pupil mastery, formal target approval or full companion acceptance claim."
+  },
+  "blockingFindings": [],
+  "reviewedRevision": "Author independent review caught assigned start38 numbers in the nonbinding demonstration; changed floor9 to10. Root read the changed note and individually inspected slide6. All other24 render PNGs and other slide text/notes match v2. Example now remains separate from start38; binding logic unchanged.",
+  "resolvedFindings": [
+    "The author's independent reviewer found that the nonbinding example on slide6 reuses the given freeprice12/floor9 of assigned start38. Author is repairing before cold handoff; review final revision. Root's earlier visual/content pass did not catch this overlap."
+  ],
+  "completedColdHeads": {
+    "4veco-platform": "2c9aca0166f99fe52940bdc57f6aadbe922d9441",
+    "4veco-lessen": "e85d395690abde0d85e0925c078b831cb9979c95"
+  },
+  "reviewedSnapshot": "315-v3"
+}

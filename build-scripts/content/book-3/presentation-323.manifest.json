@@ -1,0 +1,137 @@
+{
+  "paragraph": "3.2.3",
+  "title": "Winstmaximalisatie bij volkomen concurrentie",
+  "type": "theory",
+  "sourceEdition": "edities/books34-v3/books/book-3",
+  "sourceCommit": "9b8304d5031cafac936a56281e144573a25fbbc9",
+  "platformBaseline": "2b263cfd2bd5ea4b2ea172a7687a87a469bc73d7",
+  "sourceFiles": {
+    "edities/books34-v3/books/book-3/chapters/3.2/3.2.1 manuscript.md": "c13b390b105beaf18a7d3e83cb52fb04792f3927d207efe5616b01a3ce8fc366",
+    "edities/books34-v3/books/book-3/chapters/3.2/3.2.2 manuscript.md": "992f1f64ee131c8c7a6c85dd517fc87724be5f825a1f9e497cd01f699645fdce",
+    "edities/books34-v3/books/book-3/chapters/3.2/3.2.3 manuscript.md": "d46652e4ed48a368246ed70a0f1df0206752d95775e52c6de25df0088167fbd2",
+    "edities/books34-v3/books/book-3/chapters/3.2/Antwoorden.md": "5be2192b7c07dd09153130ff8e691cc161e0c6d0413ea740a696fbe5189b4115",
+    "edities/books34-v3/books/book-3/chapters/3.2/Docenteninformatie.md": "2e4043cfb28ce503cf37477914a53c3966682fe4604bfd4b91aaed96fe506e04",
+    "edities/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_target.svg": "90309bbff4b650e814e8383e1b3a6c53a503b2689ca735de019e40db2607de05",
+    "edities/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_ans_3.svg": "49abb61c0654f1f8660a16fca967ebf380488c3d00723e984e75048a9ce9fc01",
+    "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.1 Kostenstructuren – paragraaf.md": "7d1c31299783c3172cd89bd146c26e2af090b1e41de67d914835c616502a69d0",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.2 Opbrengsten, winst en break-even – paragraaf.md": "33c07c4327027feca0d09f82227ab30851b70519f42d5bc5f8fcdf0c0318be43"
+  },
+  "goals": [
+    "Winstmaximale haalbare productie kiezen en onderbouwen",
+    "Totale winst berekenen en als rechthoek weergeven"
+  ],
+  "sourcePrintedPages": {
+    "theory": [
+      69,
+      70,
+      71,
+      72
+    ],
+    "start": 73,
+    "basis": [
+      73,
+      74
+    ],
+    "independent": [
+      75,
+      76
+    ],
+    "target": 77
+  },
+  "pageVerification": "Complete student PDF physically and visually inspected at physical/printed pages 70, 73, 77. Chapter-relative 18, 21, 25 are not the complete-book printed references. Offset 0.",
+  "assignment": {
+    "start": [
+      20,
+      21
+    ],
+    "basis": [
+      22,
+      23,
+      24
+    ],
+    "independent": [
+      25,
+      26
+    ],
+    "target": 27,
+    "targetName": "Korrels voor kwekerijen",
+    "homework": [
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "homeworkInstruction": "Maken en nakijken",
+    "optional": [
+      28,
+      29,
+      30
+    ]
+  },
+  "startSupport": {
+    "20": "Retrieval: P=MO and TO in 3.2.1 theory p56; GTK and Winst in Book2 2.1.1/2.1.2 teaching. Interval MK explicitly taught in 3.2.2 p62–64.",
+    "21": "New choice reasoning, not established in 3.2.2. Supported exploration using 3.2.3 p69–70, then return before basis exercises."
+  },
+  "prerequisiteTrace": [
+    {
+      "operation": "TO=Pq; P=GO=MO; firm q versus market Q",
+      "source": "3.2.1 theory: De prijs bepaalt de opbrengst, complete p56",
+      "treatment": "Refresh in authored data/example."
+    },
+    {
+      "operation": "GTK=TK/q and Winst=TO−TK",
+      "source": "Book2 2.1.1 Gemiddelde kosten and 2.1.2 Winst=TO−TK theory (not exercise evidence)",
+      "treatment": "Refresh formulas before start return and demonstrate with new data."
+    },
+    {
+      "operation": "Interval MK versus derivative at a point; termwise derivative; fixed cost disappears only from MK",
+      "source": "3.2.2 theory complete p62–64",
+      "treatment": "Explicit comparison and termwise worked table."
+    },
+    {
+      "operation": "Marginal comparison, both sides, capacity, zero production",
+      "source": "3.2.3 theory complete p69–70 and worked example p72",
+      "treatment": "New instruction in separate Vezelwerk model; demonstration before basis work."
+    },
+    {
+      "operation": "Profit rectangle; chosen q before GTK; total-to-per-unit representation",
+      "source": "3.2.3 p71: Waarom hier wel een oppervlakte?",
+      "treatment": "Progressive graph, exact dimensions, quantity and euro units."
+    },
+    {
+      "operation": "Separate price and fixed cost changes",
+      "source": "3.2.2 p64 fixed cost teaching + 3.2.3 p70 marginal choice",
+      "treatment": "Demonstrate each change in Vezelwerk before exercise24."
+    }
+  ],
+  "authoredTeachingExample": {
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "name": "Vezelwerk, prijsnemer in standaardkwaliteit vezelvlokken",
+    "price": 15,
+    "TK": "0.10q^2 + 3q + 90",
+    "capacity": 90,
+    "units": "q kg/week; TK euro/week; P and MK euro/kg",
+    "assumptions": "All production sold; continuous kg; fixed costs unavoidable this week",
+    "optimalQ": 60,
+    "TO": 900,
+    "TKatOptimum": 630,
+    "profit": 270,
+    "GTK": 10.5,
+    "capacityVariant": 45,
+    "priceVariant": 17,
+    "fixedCostVariant": 150,
+    "distinction": "New context and complete parameter set, no assigned exercise is used as worked instruction. Actual exercise27 appears only after practice."
+  },
+  "targetAnswers": {
+    "a": "MK=0.08q+4",
+    "b": "q=150; MK(125)=14<16; MK(175)=18>16;150<=200",
+    "c": "TO=2400; TK=1900; Winst=500 euro/week",
+    "d": "GTK=1900/150; width150 kg/week; height10/3 euro/kg; area500 euro/week",
+    "e": "Winst(0)=-400 <500",
+    "f": "q=120; MK(120)=13.60<16; increasing profit until capacity"
+  },
+  "sourceFindings": []
+}

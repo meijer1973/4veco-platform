@@ -1,0 +1,518 @@
+{
+  "runs": [
+    {
+      "paragraph": "3.1.1",
+      "prompt": "Build the PowerPoint for paragraph 3.1.1.",
+      "baselines": {
+        "platform": "34464fb6091f721f7a87e8d1bb3165f758770799",
+        "lessons": "9b8304d5031cafac936a56281e144573a25fbbc9"
+      },
+      "startedAt": "2026-10-01T08:56:55.226834+00:00",
+      "isolation": "Fresh ephemeral CLI thread; isolated paired worktrees; no parent history, content coaching, or peer output supplied.",
+      "parallelism": "Up to three concurrent cold authors, all seeded before production from the same immutable repository pair.",
+      "model": "User-configured default; no override",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T09:23:38.632045+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "bcaac9416a3d160004a3afb5846ee5b9904b4fea",
+          "files": {
+            "build-scripts/content/book-3/check-presentation-311.py": "0b03d82f523df132c26c1d19afee94f7d47588fad2e783d0117a20cb5caaa9e8",
+            "build-scripts/content/book-3/presentation-311-charts.py": "55857fbbc49c93d0ee537642ba798c6a6c2bf42df4514ff89c52ebe6732f0969",
+            "build-scripts/content/book-3/presentation-311.manifest.json": "0e31171fb931956b30af180d21565c619cbb6ce8b0e51bbef2845a3316d22aa1",
+            "build-scripts/content/book-3/presentation-311.mjs": "f4e70ece616106016eb120d33a7c32d1ed5bd81b95aeb7ce6bfaac0a2e88f42b",
+            "build-scripts/maintenance/check-classroom-edition.js": "ea262e5f15f533c2fb867fec2ede2d0c8663171cebe801a289460843e3202cce",
+            "build-scripts/maintenance/check-classroom-edition.test.js": "4fc63058fb54a94a559e44157f0ca6fd2576ac37f0733812c17830a1b0225630"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "0b68c74a4ddb7db1c6dd1de7aeed417e8fb79c1f",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "f5a97524ad725ef6dcfed4d8cdae7401a42b085c4cc630b4cf4a5dc4b56bf59d",
+            "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.1 Belastingen – wig en nieuw evenwicht – presentatie.pdf": "d9bd24babe1e502ce1415a55da86aeefa4f143dc32bb8aeff2bb986cd5769e91",
+            "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.1 Belastingen – wig en nieuw evenwicht – presentatie.pptx": "310b032f9919d610e7d09d8d77f95dcca7eb500e46ee1dfb513aa43cb3f2ac1d",
+            "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/evidence/3.1.1-presentation.md": "e813024d47c3e510831c01c10d7b96a13a75548234450a3ee7e119b6a3f913e8"
+          }
+        }
+      },
+      "processLogSha256": "9be53a27a825b43598d866d734c76aa179117defb915075503e69f10e68ba7d7"
+    },
+    {
+      "paragraph": "3.1.2",
+      "prompt": "Build the PowerPoint for paragraph 3.1.2.",
+      "baselines": {
+        "platform": "34464fb6091f721f7a87e8d1bb3165f758770799",
+        "lessons": "9b8304d5031cafac936a56281e144573a25fbbc9"
+      },
+      "startedAt": "2026-10-01T08:56:57.398859+00:00",
+      "isolation": "Fresh ephemeral CLI thread; isolated paired worktrees; no parent history, content coaching, or peer output supplied.",
+      "parallelism": "Up to three concurrent cold authors, all seeded before production from the same immutable repository pair.",
+      "model": "User-configured default; no override",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T09:26:34.727349+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "2073f07604a9c98d4af338401a35f8dc059ab1d8",
+          "files": {
+            "build-scripts/content/book-3/check-presentation-312.py": "3d50c579b7ccc1d08dcc119144e0bc2bbd1d658d3db11b815760c725b00dd49a",
+            "build-scripts/content/book-3/presentation-312-package.py": "1982b2c27d28b59ab4719a26c2624e6f32c102c8a1f88d4cc71853c04616de73",
+            "build-scripts/content/book-3/presentation-312.manifest.json": "460fb61c3a76102dee99daaad064550e14598bf2da23a22f286c795628bd9eb7",
+            "build-scripts/content/book-3/presentation-312.mjs": "7161c9e5edfc2fdf5525f21a21ba031c761baaa3d4c3a67ab880b066d0850f9e"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "70c8145c91b1157e86d39edbe48342c5a70d852f",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "ff7b863e8c2f1c433bb75dba43052607ebad67e66d6b26a536c9fc439cda253e",
+            "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.2 Belastingdruk en welvaartsverlies – presentatie.pdf": "23f5b363f4693fd803db0e142ebf4cfa3798c5dfc664f84c0657a79bf2acbc50",
+            "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.2 Belastingdruk en welvaartsverlies – presentatie.pptx": "69ce8b56965aa27bfa212b6bf3fe4f4736df0a5fe695397798988cd693844880",
+            "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/evidence/3.1.2-presentation.md": "8ca2f19f7c7b48cb812c47014d092eec3761d0c630ca228f6ce11eb01b84487b"
+          }
+        }
+      },
+      "processLogSha256": "ac04ceb41f82ad444c9e9a6bd49f0b33f7366a9a2d770e059c17e84f36769de3"
+    },
+    {
+      "paragraph": "3.1.3",
+      "prompt": "Build the PowerPoint for paragraph 3.1.3.",
+      "baselines": {
+        "platform": "34464fb6091f721f7a87e8d1bb3165f758770799",
+        "lessons": "9b8304d5031cafac936a56281e144573a25fbbc9"
+      },
+      "startedAt": "2026-10-01T09:18:18.553856+00:00",
+      "isolation": "Fresh ephemeral CLI thread; isolated paired worktrees; no parent history, content coaching, or peer output supplied.",
+      "parallelism": "Up to three concurrent cold authors, all seeded before production from the same immutable repository pair.",
+      "model": "User-configured default; no override",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T09:55:57.069061+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "de382802bb8ec963d4cfb24389962f7609dbd16e",
+          "files": {
+            "build-scripts/content/book-3/presentation-313-chart-style.py": "e9a648c81aa4dc0375978fa2d3cb976ef8c9f39d67da8898b6d80aa51b289ec9",
+            "build-scripts/content/book-3/presentation-313.manifest.json": "74a26b2aa451711ad71cd986756b4c34097308f2968d5fe66c544b8f7e1578e9",
+            "build-scripts/content/book-3/presentation-313.mjs": "3b76e04e3eb890bbe8adaa0d4ba24f1542106ff5ccf2fee40284e7f3d49ce810"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "6f7061a5f1d02c00c098fc4e60891b9e0c7141ba",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "05db83113946c4562fea614c92ceb6acd25e1a7dee26acabb873cc3c381c397b",
+            "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.3 Subsidies – presentatie.pdf": "719e5c07b3163073302913d2f50301f7f222c274a78ec0efc66a1a06297f5903",
+            "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.3 Subsidies – presentatie.pptx": "0a021437b110af79268df39ef1ceccccc0f5eda3874008552458305b9da71444",
+            "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/evidence/3.1.3-presentation.md": "c8f078fbf1ea95ba3ef22dc7a9aba554322af375d4e79f7f595162ab66a60f89"
+          }
+        }
+      },
+      "processLogSha256": "e9b8dd4bcb330498e8e73a8cb3ded84530f69df7ed8031a47ec333a627b216d6"
+    },
+    {
+      "paragraph": "3.1.4",
+      "prompt": "Build the PowerPoint for paragraph 3.1.4.",
+      "baselines": {
+        "platform": "34464fb6091f721f7a87e8d1bb3165f758770799",
+        "lessons": "9b8304d5031cafac936a56281e144573a25fbbc9"
+      },
+      "startedAt": "2026-10-01T09:23:44.682734+00:00",
+      "isolation": "Fresh ephemeral CLI thread; isolated paired worktrees; no parent history, content coaching, or peer output supplied.",
+      "parallelism": "Up to three concurrent cold authors, all seeded before production from the same immutable repository pair.",
+      "model": "User-configured default; no override",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T09:48:30.944431+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "3f88162502ccc08af11f57c6d1901281474f4848",
+          "files": {
+            "build-scripts/content/book-3/check-presentation-314.py": "a705506799b50df6ab803da66decb8cab1860a6bbd91e814641eaafdd2f26d2c",
+            "build-scripts/content/book-3/presentation-314.manifest.json": "934f8b78b5b57fb3c7269270a7bb51b2b5b382f7344afca9d01add45ab1c3001",
+            "build-scripts/content/book-3/presentation-314.mjs": "16cb29ce49909262f257a389925e865643f4f7dd9d4433b3e478beebe31e7dc4"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "941d6d4cbc7ca68c55ef31d7d4d8ea499c106820",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "fb9483486d55ef5ae7c18c99b74d1c463c4267d80743e4732db87c501bc17c86",
+            "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.4 Maximumprijs – presentatie.pdf": "6ea83bf77f90800b0c02ae4085de814a8cc1da3d6a51f278b8a821cb10cff969",
+            "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.4 Maximumprijs – presentatie.pptx": "db91b3c26e9d262bb01771c21fc1ffde0988543cddf8e4ecc93f1ee80a3a71dc",
+            "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/evidence/3.1.4-presentation.md": "bffe8864bff3fb9b9a235799beb65662c241b5b9619d9113cd1f013d99cf53d8"
+          }
+        }
+      },
+      "processLogSha256": "066132aae1525b3d313332276139c23b50d2289401a964e004b1535bd73d5c4f"
+    },
+    {
+      "paragraph": "3.1.5",
+      "prompt": "Build the PowerPoint for paragraph 3.1.5.",
+      "baselines": {
+        "platform": "34464fb6091f721f7a87e8d1bb3165f758770799",
+        "lessons": "9b8304d5031cafac936a56281e144573a25fbbc9"
+      },
+      "startedAt": "2026-10-01T09:26:40.640473+00:00",
+      "isolation": "Fresh ephemeral CLI thread; isolated paired worktrees; no parent history, content coaching, or peer output supplied.",
+      "parallelism": "Up to three concurrent cold authors, all seeded before production from the same immutable repository pair.",
+      "model": "User-configured default; no override",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T09:50:56.379498+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "2c9aca0166f99fe52940bdc57f6aadbe922d9441",
+          "files": {
+            "build-scripts/content/book-3/check-presentation-315.py": "3426697c29a8a826098849e3035b3a06917283e2634c7eecd4c952b77fae3e5d",
+            "build-scripts/content/book-3/presentation-315.manifest.json": "d3fde65b2ddf46543563ead27df6872c248943d7a5d63540e90aebb339164878",
+            "build-scripts/content/book-3/presentation-315.mjs": "eba1bc2f9d2510b2df2746d506c156ebf31f14073713643fa19fb5f495bc05c9",
+            "build-scripts/maintenance/check-classroom-edition.js": "21149ede06844725ff7e6a32e9f316b3ac5aa3917c09ca041d11f7cca08465c7",
+            "build-scripts/maintenance/check-classroom-edition.test.js": "94f035e566571105697c5d928c6975d29c6bd1a38d2291e665c033771c791873",
+            "build-scripts/presentations/straight-scatter.py": "71a7bc88bfcf6fbb5a74833590754c22c0ead07f11766dabdb7233259d0024c7"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "e85d395690abde0d85e0925c078b831cb9979c95",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "7d02d7a0baee5df1caf0d12ba770f9f9c38f1c966ac96cca51f6e7b1a5931b2a",
+            "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.5 Minimumprijs en quota – presentatie.pdf": "33b14102a577cb940b1a1fad916d0212a0c8b3783229fa731515ac4908761458",
+            "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.5 Minimumprijs en quota – presentatie.pptx": "df0195e9819f0e1aeba85447aab91a987a719b16b4dcaa009023405e6c932e24",
+            "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/evidence/3.1.5-presentation.md": "8ecd4b13249a2147c22087b4896c2a04a029ad08c7e4042230c237fa6b4e5406"
+          }
+        }
+      },
+      "processLogSha256": "f0d097250ad94c29ae4d1f0becd32e33475da710354f10b865351684f9a8c6cc"
+    },
+    {
+      "paragraph": "3.1.6",
+      "prompt": "Build the PowerPoint for paragraph 3.1.6.",
+      "baselines": {
+        "platform": "34464fb6091f721f7a87e8d1bb3165f758770799",
+        "lessons": "9b8304d5031cafac936a56281e144573a25fbbc9"
+      },
+      "startedAt": "2026-10-01T09:48:36.339687+00:00",
+      "isolation": "Fresh ephemeral CLI thread; isolated paired worktrees; no parent history, content coaching, or peer output supplied.",
+      "parallelism": "Up to three concurrent cold authors, all seeded before production from the same immutable repository pair.",
+      "model": "User-configured default; no override",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T10:08:48.457786+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "4dca72555acbad545a8c5313b96576a3dd2d5403",
+          "files": {
+            "build-scripts/content/book-3/presentation-316.manifest.json": "3fd3173bdecf43b2ac06be377c89a6c632932bb537bde643a7b8a3d1c74c99a5",
+            "build-scripts/content/book-3/presentation-316.mjs": "1ab7d288c2291957f0d0c1d6a81e81e3269a186174263930b3451ef2172c66f9"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "78fd3ba1606cf37835f5736914dd92edcecabba2",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "8cabd3098ee8bfcc92c94e047f998d3efdf8914bac89c50eb7080b4c4c06618c",
+            "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.6 Gemengde opgaven - overheidsingrijpen – presentatie.pdf": "b33ff53975c81715de8346cf880334235c935ab07e71c956b85eeb38550634c0",
+            "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.6 Gemengde opgaven - overheidsingrijpen – presentatie.pptx": "dbe1a8f91790ee624bacb3b5745167f7bc3a4f87900c550ffffbeb0737a7bcab",
+            "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/evidence/3.1.6-presentation.md": "22ba7422256451788f198ffd8964905a75ac869be0a96de4e843457e2b03f80f"
+          }
+        }
+      },
+      "processLogSha256": "cec80f00b81cc7348136e498c512fa5ffa34c9f529e53c4284bc140b73cffb5e"
+    },
+    {
+      "paragraph": "3.2.1",
+      "prompt": "Build the PowerPoint for paragraph 3.2.1.",
+      "baselines": {
+        "platform": "34464fb6091f721f7a87e8d1bb3165f758770799",
+        "lessons": "9b8304d5031cafac936a56281e144573a25fbbc9"
+      },
+      "startedAt": "2026-10-01T09:51:01.976291+00:00",
+      "isolation": "Fresh ephemeral CLI thread; isolated paired worktrees; no parent history, content coaching, or peer output supplied.",
+      "parallelism": "Up to three concurrent cold authors, all seeded before production from the same immutable repository pair.",
+      "model": "User-configured default; no override",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T10:20:54.660303+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "555fc934009694021df36c219a44e0fa609ee2dc",
+          "files": {
+            "build-scripts/content/book-3/presentation-321.mjs": "de177b5094afb3ab31207e6a4356e9eadd3b021e92e6ebc50deae8a60a995632",
+            "build-scripts/content/book-3/presentation-321.sources.json": "cb3278f374f79692b103755206b89c697d74316ffdb7b45b718be3a1158ea519",
+            "build-scripts/maintenance/check-classroom-edition.js": "9f63a22caf99e1cc1ffae927e531fc7f501e496133565dee05993fcb8086f7ee",
+            "build-scripts/maintenance/check-classroom-edition.test.js": "02171f0567017f4b393143a8193a71b22ba78bea81af583c4706fb07ee6d2d3f"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "d239e332554c2adb3194e9271569e99675124ad1",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "8ca10c0ced4101820bdc494228f4b30c0545972bdaef2d5c696b658465eab246",
+            "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.1 Volkomen concurrentie – presentatie.pdf": "dc9d779c1a1f1ce18bf8357432945f984ac4a5dd5760a5d6f01edf43e4a4bbd5",
+            "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.1 Volkomen concurrentie – presentatie.pptx": "f36814f9642279108e31c127d8fe7c7e90520a3f0af78825a4f55d42bc5c854b",
+            "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/evidence/3.2.1-presentation.md": "e457d673c5f3db28815e8851d1d04f265d50e901b8b2276ad4d0b9bff7da8fe1"
+          }
+        }
+      },
+      "processLogSha256": "98b446fc33b2f91e27ea52fa1f226b464f4fa8cbe1d5e1e864f5d71aaeb20c55"
+    },
+    {
+      "paragraph": "3.2.2",
+      "prompt": "Build the PowerPoint for paragraph 3.2.2.",
+      "baselines": {
+        "platform": "34464fb6091f721f7a87e8d1bb3165f758770799",
+        "lessons": "9b8304d5031cafac936a56281e144573a25fbbc9"
+      },
+      "startedAt": "2026-10-01T09:56:03.174601+00:00",
+      "isolation": "Fresh ephemeral CLI thread; isolated paired worktrees; no parent history, content coaching, or peer output supplied.",
+      "parallelism": "Up to three concurrent cold authors, all seeded before production from the same immutable repository pair.",
+      "model": "User-configured default; no override",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T10:17:53.637403+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "bcdddc3f86ecc9122d731dce7a83b4a68d50c702",
+          "files": {
+            "build-scripts/content/book-3/presentation-322.mjs": "8abcc912a0351e62807604936f356fa070258e83691c1625ab479618aab08b89",
+            "build-scripts/content/book-3/presentation-322.source.json": "5e6ad6820b3eb9997f338c38ec5dd0ccdb278ff369d986514c081934fff6ec70"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "33f3b231440ae7bf797b05a2c010fde543312185",
+          "files": {
+            "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/3.2 Productie en winst/3.2.2 Marginale kosten en de afgeleide/3.2.2 Marginale kosten en de afgeleide – presentatie.pdf": "5137dbcf55874fefdf47c13619fa7b24736e2a5f9a1d5fc044f2c725a290c762",
+            "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/3.2 Productie en winst/3.2.2 Marginale kosten en de afgeleide/3.2.2 Marginale kosten en de afgeleide – presentatie.pptx": "368153f3f8c8b87a52908eb16153ada8cbaa4bf5d9f82c4e0c45c709b4d8d610",
+            "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/3.2 Productie en winst/3.2.2 Marginale kosten en de afgeleide/evidence/3.2.2-presentation.md": "3c5b3b2229afef337f4e8e10b8741e56bdb7c88b571764b02d7bbcd61a164384",
+            "RESEARCH_AGENT_MAP.md": "79f2c6026aed4f85167350b01352bc9d27e77f307da164f39f7588ef34506f66"
+          }
+        }
+      },
+      "processLogSha256": "4948436a2a73ddb287e32f36a222e5fe217c090cb0b4636806cbcb29b352427f"
+    },
+    {
+      "paragraph": "3.2.3",
+      "prompt": "Build the PowerPoint for paragraph 3.2.3.",
+      "baselines": {
+        "platform": "34464fb6091f721f7a87e8d1bb3165f758770799",
+        "lessons": "9b8304d5031cafac936a56281e144573a25fbbc9"
+      },
+      "startedAt": "2026-10-01T10:17:59.031174+00:00",
+      "isolation": "Fresh ephemeral CLI thread; isolated paired worktrees; no parent history, content coaching, or peer output supplied.",
+      "parallelism": "Up to three concurrent cold authors, all seeded before production from the same immutable repository pair.",
+      "model": "User-configured default; no override",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T10:59:22.351730+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "ab0a8a9243b9ae61fe9c1e2e406315f512b73393",
+          "files": {
+            "build-scripts/content/book-3/presentation-323-manifest.json": "ab83385e0a4f2fe79417508e80028cb425b2bfd2a7f303a9a847e539a0d92ee8",
+            "build-scripts/content/book-3/presentation-323-ooxml.py": "40749e6cb75d935a1408359721903ee6989168b89742d65d4f49ddf68cded64e",
+            "build-scripts/content/book-3/presentation-323.mjs": "3008f13835e0dea168fac19cfdca0b07d0e41f94b0d9210d3de8e53aff2eeb52",
+            "build-scripts/maintenance/check-classroom-edition.js": "e4cb52b46e9e071f7a903e2e34474d86d3fb2e585ab3856362cdcf1c465dcb9f",
+            "build-scripts/maintenance/check-classroom-edition.test.js": "3ab75f85a063800d9c3c58fa5f681d5b26565d3962c16b5c5aba02e6e5f3bf05"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "897b9ea6361e58964b202b13d8d7218b32682e80",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "1c9bdb2394bb1a722de076ecb284ea21e6a70c3a9bec79c7c2b3ed43f6b861aa",
+            "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.3 Winstmaximalisatie bij volkomen concurrentie – presentatie.pdf": "2dfe86b5a7b7f634e22380bf222cbc6e243abfe01e3ee247960d70268f209ed4",
+            "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.3 Winstmaximalisatie bij volkomen concurrentie – presentatie.pptx": "8be3c2405376b441b9e9a70260148c403dbd90d68c9884c9c38c88e69a9c097a",
+            "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/evidence/3.2.3-presentation.md": "9007a86b52cac6da5bf3bf721be2871ef3951e08433b3747201830244041e67b"
+          }
+        }
+      },
+      "processLogSha256": "5bafb3321a3f8145e897154738f1046af2a0cd2ad598aeb07ba88271adcea363"
+    },
+    {
+      "paragraph": "3.2.4",
+      "prompt": "Build the PowerPoint for paragraph 3.2.4.",
+      "baselines": {
+        "platform": "34464fb6091f721f7a87e8d1bb3165f758770799",
+        "lessons": "9b8304d5031cafac936a56281e144573a25fbbc9"
+      },
+      "startedAt": "2026-10-01T10:20:24.626921+00:00",
+      "isolation": "Fresh ephemeral CLI thread; isolated paired worktrees; no parent history, content coaching, or peer output supplied.",
+      "parallelism": "Up to three concurrent cold authors, all seeded before production from the same immutable repository pair.",
+      "model": "User-configured default; no override",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T10:46:16.655573+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "e8aadb6975329f6f79466d477c937ffc9cdfad42",
+          "files": {
+            "build-scripts/content/book-3/check-presentation-324.py": "6939a498009600400503a52c9e519d2d62732af701fed666aceefca84e00d1a4",
+            "build-scripts/content/book-3/presentation-324.manifest.json": "578118920ebdbfea97b0eb03d77355daeaeccbce401367f94deb44f239c24526",
+            "build-scripts/content/book-3/presentation-324.mjs": "96c022587228cd7639e7bbcfb288d5d910d6cc3905011299f92aab016ae76a46",
+            "build-scripts/maintenance/check-classroom-edition.js": "a5028d99e3d221c4630a1935bf646c3d663adc3a2d7113e945ccc175c00e4015",
+            "build-scripts/maintenance/check-classroom-edition.test.js": "efb9c939ed994879def4332e1b1170317c7156b49b2b21720245e94870cfc04b"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "c51be8a373cd134ff6c60a5b1332a689f353f66a",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "4ff2c0ddb5c4b7f015b29e9c912bf036bd72a73719649dbacafdc61533c9ade7",
+            "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.4 Gemengde opgaven – presentatie.pdf": "6009a3da39c00c4822a390db0b3995419550b74bfb23867141241d81a9508011",
+            "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.4 Gemengde opgaven – presentatie.pptx": "cba681e73335c4cbdd6a3be8af069482b0f40b2d3a851dbb1369fce417010f1b",
+            "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/evidence/3.2.4-presentation.md": "e81c25905c4002a4824198e6debdaf60e633689110b64b5868625117123bf675"
+          }
+        }
+      },
+      "processLogSha256": "17840c26a3accdd3a32d99ca5a38a616e338f780d73bd77d8a130e8f5fb2fb56"
+    },
+    {
+      "paragraph": "3.3.1",
+      "prompt": "Build the PowerPoint for paragraph 3.3.1.",
+      "baselines": {
+        "platform": "34464fb6091f721f7a87e8d1bb3165f758770799",
+        "lessons": "9b8304d5031cafac936a56281e144573a25fbbc9"
+      },
+      "startedAt": "2026-10-01T10:21:00.243030+00:00",
+      "isolation": "Fresh ephemeral CLI thread; isolated paired worktrees; no parent history, content coaching, or peer output supplied.",
+      "parallelism": "Up to three concurrent cold authors, all seeded before production from the same immutable repository pair.",
+      "model": "User-configured default; no override",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T10:42:50.699979+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "2d455b7a511922ecb7eb7df01d68706b22a51502",
+          "files": {
+            "build-scripts/content/book-3/presentation-331.manifest.json": "5a4ae44067fd6b7c06fb199ad9cf93902e5e209c3258fcd8e7883cc69bdeb987",
+            "build-scripts/content/book-3/presentation-331.mjs": "5871be76201b1b557f1a038c113170da0aa4aaa22c64efa8c7b19edb3dd101f2"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "ad626dead313adbb38ec09f75e9069ed73806132",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "c314e0e10c148d941efd665d0e520d790ef81dcf5ec6e2d9417a47b3497e3b53",
+            "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.1 Waarom landen handelen – presentatie.pdf": "e6432093e64413cc216789547899fa6022a468a0a12c1fdbe3fcefdb0d730c06",
+            "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.1 Waarom landen handelen – presentatie.pptx": "ba077e29cc1a7e398f21398d6410a14665ba856d5fd9b6eef859920e4d3ce2c3",
+            "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/evidence/3.3.1-presentation.md": "fd4438e81cbfb6348bdf6070669c9e7f96f9a2b9b040c4f97c96607691328fcb"
+          }
+        }
+      },
+      "processLogSha256": "1bc670b2c2bb1d96e5e78c419ee4192e5c649cda53a146fc3bf5a53a9057a3ad"
+    },
+    {
+      "paragraph": "3.3.2",
+      "prompt": "Build the PowerPoint for paragraph 3.3.2.",
+      "baselines": {
+        "platform": "34464fb6091f721f7a87e8d1bb3165f758770799",
+        "lessons": "9b8304d5031cafac936a56281e144573a25fbbc9"
+      },
+      "startedAt": "2026-10-01T10:42:56.549670+00:00",
+      "isolation": "Fresh ephemeral CLI thread; isolated paired worktrees; no parent history, content coaching, or peer output supplied.",
+      "parallelism": "Up to three concurrent cold authors, all seeded before production from the same immutable repository pair.",
+      "model": "User-configured default; no override",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T11:08:58.070481+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "51fc22d4cd9ee0ea360a3a1fdca77e40d7fec1bc",
+          "files": {
+            "build-scripts/content/book-3/check-presentation-332.py": "93d7acef0c81af4989f8097f47cb98bc3d517df6eba4d0b96e357a14eac44399",
+            "build-scripts/content/book-3/presentation-332.manifest.json": "2277570a70f26dc85e375542bece16b3532b7e02d0464a8c93b2521f8ea7fd6a",
+            "build-scripts/content/book-3/presentation-332.mjs": "c66e37dc419195e8eba6902e5208f7b967e711ba4384aedee41cccd6de3a93d0",
+            "build-scripts/maintenance/check-classroom-edition.js": "7a89c38d6e7272bf45fbaa7b66a3efaff092e4d3f39f5b31530dd75b9a8caa80",
+            "build-scripts/maintenance/check-classroom-edition.test.js": "34bb9b0f83b411c13989cfe733db86b35b4736883fba5bfb08db49f556ed4ff5"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "c46fc22ed5b48bc650d080f0b5e61d65559ead7f",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "dc1f498ebf6d6b91889a56bf4dd1162cd70e344389f2a243083fb0d76fdd11c2",
+            "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.2 Wereldmarktprijs, import, export en welvaart – presentatie.pdf": "9aefdaf4659cf26ce5d1d1974faed45bd2f2d6d9311d813f164c9b15b7041509",
+            "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.2 Wereldmarktprijs, import, export en welvaart – presentatie.pptx": "187d653feb82843321df739f24f7a59fbb8e06c1fdaece90901230e30c6e6842",
+            "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/evidence/3.3.2-presentation.md": "50150f2f72c35a3ea42c867518bbf2efb8f32d29dbf92c8476f0b84f39eeb971"
+          }
+        }
+      },
+      "processLogSha256": "9952db477d30fa234ea6d4356a6003df1c3ca19e345b299df5ff55d2d74461de"
+    },
+    {
+      "paragraph": "3.3.3",
+      "prompt": "Build the PowerPoint for paragraph 3.3.3.",
+      "baselines": {
+        "platform": "34464fb6091f721f7a87e8d1bb3165f758770799",
+        "lessons": "9b8304d5031cafac936a56281e144573a25fbbc9"
+      },
+      "startedAt": "2026-10-01T10:46:22.120904+00:00",
+      "isolation": "Fresh ephemeral CLI thread; isolated paired worktrees; no parent history, content coaching, or peer output supplied.",
+      "parallelism": "Up to three concurrent cold authors, all seeded before production from the same immutable repository pair.",
+      "model": "User-configured default; no override",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T11:06:23.058052+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "dfdb99259da38cf44440304e88879ef9b834efae",
+          "files": {
+            "build-scripts/content/book-3/check-presentation-333.py": "3f1a97a9897da765906b2fbd966df3969ca139787b3f7d5ec5b4d406d4481444",
+            "build-scripts/content/book-3/presentation-333.manifest.json": "f623b0b739a3951cfda7780d9f9d3f12a3e56a9c1b0a97b57eebecbf16c1554e",
+            "build-scripts/content/book-3/presentation-333.mjs": "5b0b0fd0db312ce0483d16645a9e72fe3994e94a86f32bb78058e206832e1fca"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "3606c8f150604adb5ecb978086191efe90928a96",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "db9a6ba64c9e72b3d4e928a32d9c331e7110f5f01bb98518dea291c028e13520",
+            "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.3 Protectionisme – presentatie.pdf": "c43379314ee6559ea2cbf6c5cef7d565854cc6b2692edc8bc81c0b968ac47267",
+            "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.3 Protectionisme – presentatie.pptx": "684588a088f17ad84ee2d6994fdbd0d6b2ad857fc45025c166a6366edfbb87f7",
+            "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/evidence/3.3.3-presentation.md": "b88f0ea7d54565e32996a7872ab51bef4ab1613bba66044bd88531079afe4bc5"
+          }
+        }
+      },
+      "processLogSha256": "d3dd06d5768e7469528dd2c243a541e59ea4bd921ed379c4b863d97cac77b6d0"
+    },
+    {
+      "paragraph": "3.3.4",
+      "prompt": "Build the PowerPoint for paragraph 3.3.4.",
+      "baselines": {
+        "platform": "34464fb6091f721f7a87e8d1bb3165f758770799",
+        "lessons": "9b8304d5031cafac936a56281e144573a25fbbc9"
+      },
+      "startedAt": "2026-10-01T10:59:28.009897+00:00",
+      "isolation": "Fresh ephemeral CLI thread; isolated paired worktrees; no parent history, content coaching, or peer output supplied.",
+      "parallelism": "Up to three concurrent cold authors, all seeded before production from the same immutable repository pair.",
+      "model": "User-configured default; no override",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T11:19:33.139683+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "02105fdd8145b552ee7a4fcaa6d960fdf1a6eca6",
+          "files": {
+            "build-scripts/content/book-3/presentation-334.manifest.json": "533f9e72a79dc7fb8b2f9c6f4b60387c3a7aa87852c89030fcf990f08d8bfccd",
+            "build-scripts/content/book-3/presentation-334.mjs": "833d8185fda9bf0d0c6747492382a2e9e8fb2e712a29ba867f0be034870a546e"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "03b52cb519c9a4c047446272d33439fc1d2d40c7",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "2ffbf93ba67475a7edc999ab0dd7cac4b9604bde84db672a8c4ed9d961897426",
+            "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.4 Gemengde opgaven internationale handel – presentatie.pdf": "cfab5bfffca265e8539771399cb4dd803313212a1bd2abc980f3ff4f7383ec3c",
+            "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.4 Gemengde opgaven internationale handel – presentatie.pptx": "06260360dae167f792c2775eb52a5edb3025cbcc96c47f2a6f441862abc225a4",
+            "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/evidence/3.3.4-presentation.md": "b3ac71326ad32965caa65184883c55dd4ac1ef452458143388333a993ef04a98"
+          }
+        }
+      },
+      "processLogSha256": "f3c46a6247acf55f778a9837d0cc2256e5873f10ab71c4c2c63aa463d955a16e"
+    }
+  ]
+}

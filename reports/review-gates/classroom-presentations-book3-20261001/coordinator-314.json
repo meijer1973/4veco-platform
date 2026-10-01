@@ -1,0 +1,40 @@
+{
+  "scope": "Independent root review bound to the completed cold handoff. Exact PPTX/PDF bytes match the individually reviewed native PowerPoint renders and read notes.",
+  "pptxSha256": "db91b3c26e9d262bb01771c21fc1ffde0988543cddf8e4ecc93f1ee80a3a71dc",
+  "pdfSha256": "6ea83bf77f90800b0c02ae4085de814a8cc1da3d6a51f278b8a821cb10cff969",
+  "slides": 24,
+  "allNativePowerPointPageRendersViewedIndividually": true,
+  "allTextAndTeacherNotesRead": true,
+  "minimumExplicitNotesFontPt": 14,
+  "overviewSlides": [
+    1,
+    13,
+    24
+  ],
+  "overviewTextAndGeometryParity": true,
+  "pdfTextMismatches": [],
+  "chartWorkbookCheck": {
+    "ok": true,
+    "charts": 5,
+    "references": 58,
+    "cellsCompared": 124
+  },
+  "teaching": {
+    "source": "Current Book3 v3 3.1.4 manuscript, actual target34 Tenten voor een weekend a-e bookpage37 and nearby practice read directly.",
+    "overview": "Start28-29 p34;29 visibly exploratory with theory32-33, returned to after12/before13. Basis30-31, independent32-33,target34. Homework30-34;extra35-36 remain extra.",
+    "example": "Authored thermosbekers, V24-.25Q,A4+.25Q, Q per week. Free40@14, ceiling11 yields Qv52,Qa28,actual28,shortage24. Explicit no additional supply, all offered units sold, priority to highest willingness to pay. Alternative17 nonbinding; then new demand scenario given freeprice20 makes17 binding, without inventing quantities.",
+    "sequence": "Definition/binding2; authored model3; solve4; freegraph5; binding commonprice6; separately calculate desired quantities7; actual/shortagegraph8; allocation9; nonbinding10; changed market11; diagnostic and return12; practice13. Complete target context14, a-b15,c and blank graph16,d-e17 before answers18-23. Closure24.",
+    "target": "All a-e and assumptions retained. V18-.1Q,A6+.1Q;free60@12;ceiling10, Qv80,Qa40,actual40,short40. Correct graph. Forty highest willingness-to-pay customers receive tents; lower rent does not give all80 access. Alternative ceiling14 resets same market and leaves actual12/60.",
+    "series": "Tax/subsidy two-price distinction is explicitly separated from this common controlled price; original V/A do not shift. Actual quantity and allocation are taught before practice. Nonbinding ceiling is a permitted upper bound, not a forced actual price. Uses previously taught market equilibrium, substitution, willingness to pay, and graph reading; no unintroduced prerequisite found in311-314 prefix.",
+    "visual": "All24 v1 native renders individually inspected; author independently repaired unwanted small auto-labels. Rechecked all five changed v3 pages5,6,8,16,21; remaining19 PNGs byte-identical. All slide text/teacher notes identical between these versions. Five native graphs now cleanly labeled with correct straight geometry; tables/text readable, no material clipping.",
+    "limits": "No measured classroom timing, pupil mastery, formal target approval or full companion acceptance claim."
+  },
+  "blockingFindings": [],
+  "reviewedRevision": "Author independent review clarified one cup per buyer. Root individually rechecked changed slide3; all other23 render PNGs match v3, all teacher notes and all other slide text unchanged. Clarification supports counting people alongside cups.",
+  "resolvedFindings": [],
+  "completedColdHeads": {
+    "4veco-platform": "3f88162502ccc08af11f57c6d1901281474f4848",
+    "4veco-lessen": "941d6d4cbc7ca68c55ef31d7d4d8ea499c106820"
+  },
+  "reviewedSnapshot": "314-v4"
+}

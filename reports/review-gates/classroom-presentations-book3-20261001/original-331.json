@@ -1,0 +1,35 @@
+{
+  "scope": "Final completed cold handoff reviewed. All26 original native pages read; final changed1/9/14/26 re-rendered from delivered PPTX and individually viewed, other22 native PNGs identical. Only note9 changed and was read.",
+  "pptxSha256": "ba077e29cc1a7e398f21398d6410a14665ba856d5fd9b6eef859920e4d3ce2c3",
+  "pdfSha256": "e6432093e64413cc216789547899fa6022a468a0a12c1fdbe3fcefdb0d730c06",
+  "slides": 26,
+  "allNativePowerPointPageRendersViewedIndividually": true,
+  "allTextAndTeacherNotesRead": true,
+  "minimumExplicitNotesFontPt": 14,
+  "overviewSlides": [
+    1,
+    14,
+    26
+  ],
+  "overviewTextAndGeometryParity": true,
+  "pdfTextMismatches": [],
+  "teaching": {
+    "source": "Entire current v3 3.3.1 manuscript read, including Aster/Brin target7a-e p95. Start1-2 p92.",
+    "overview": "Start1 retrieves opportunity cost; start2 explicitly new with theory88-90 support, returned at13 before practice14. Basis3-4, independent5-6, target7; homework3-7,8 bonus and9-10 repetition extra.",
+    "example": "Separate qualitative Elara/Vesta furniture/toys, no invented numerical ratios. Opportunity cost refreshed3; goods arrow/export/import perspectives4; absolute productivity5; relative opportunity costs6; partial specialization7; mutually attractive exchange terms8; competing finish/price changes and unknown buyer weighting9. Comparative advantage distinguished from competitive position.",
+    "sequence": "Source fact to reason to bounded conclusion10; winners and losers11; check12 and answer/return13. Full actual target context15-16, every question a-e17-18 before any answers19-24; feedback25; closure26.",
+    "target": "Aster absolute at both goods; Brin comparative jackets and Aster pumps by relative opportunity costs. Brin jacket export is Aster import; arrows track goods. Favorable terms relative to own production are needed, low transport cost alone insufficient. Timely delivery supports Aster competitive position without invented prices. Aster jacket makers can lose customers, rejecting all-inhabitants claim without claiming trade always bad.",
+    "series": "Book1 opportunity cost is refreshed visibly, no untaught numerical comparative ratios, GDP or world-price model assumed. Bounded group conclusions consistent with prior surplus/fairness teaching. Prepares 3.3.2 domestic versus foreign market analysis. No blocking textbook foundation gap found.",
+    "visual": "Final overview spacing and explicit scenario reset slide9 inspected; no clipping. Other22 native pages byte-identical to fully read r1; all notes except9 byte-identical. Note9 explicitly separates changed quality/price scenario from prior equal-quality country comparison.",
+    "limits": "No measured pupil mastery, classroom timing or formal textbook approval inferred.",
+    "sourceFollowup": "Confirmed literal ### printed on book pages88-90. Cosmetic Part A rendering issue; presentation uses proper headings, no source changed or blocking content omission."
+  },
+  "blockingFindings": [],
+  "resolvedFindings": [
+    "Author independently repaired overview spacing and made the quality/price scenario reset explicit. Coordinator made no presentation change."
+  ],
+  "completedColdHeads": {
+    "4veco-platform": "2d455b7a511922ecb7eb7df01d68706b22a51502",
+    "4veco-lessen": "ad626dead313adbb38ec09f75e9069ed73806132"
+  }
+}

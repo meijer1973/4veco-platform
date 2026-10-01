@@ -1,0 +1,1411 @@
+{
+  "partial": false,
+  "scope": "Exact artifact and source-binding checks, not proof of teaching quality, timing or pupil mastery.",
+  "passed": true,
+  "paragraphs": [
+    {
+      "paragraph": "3.1.1",
+      "lessonSourceCommit": "9b8304d5031cafac936a56281e144573a25fbbc9",
+      "sources": [
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.1 manuscript.md",
+          "sha256": "938160312edc425888dd54b3207c932e0aa396c59411a30e6679865eb14fded8"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/Antwoorden.md",
+          "sha256": "5c22520f978587c47a041723b24d144ed3ec18da3636090b58572a141ac2b288"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/Docenteninformatie.md",
+          "sha256": "46fdda1886adfc0df76f0a11b38182cf934a3040d1dd1976b961ae68a7e13aac"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+          "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_target.svg",
+          "sha256": "913b34e601af2ea9463fb1b207b54fb1f0b27ca3dde6db0fec02b23f0db5253c"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.1-leerling-v3.pdf",
+          "sha256": "7a792264c9c017e7af64ff4b63486b14ece746303eb1d62974fab38e3eacc3df"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+          "sha256": "77d485b2078bba0b3faffcb6d0e78d4ce8e55f4ab59de63d470c9214aff92745"
+        }
+      ],
+      "mechanical": {
+        "pptxSha256": "a478cc17fd25fdf98234a6ea049f71ad5ed0a08415f72b2258327d7a26e52156",
+        "pdfSha256": "33b7c4b2eb539294775a1e0033f1460a6a736b1e02f70798610b4ebe7d931d7e",
+        "slides": 27,
+        "pdfPages": 27,
+        "notes": 27,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          16,
+          27
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 8,
+      "nativeCharts": 6,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 6,
+        "references": 114,
+        "cellsCompared": 186,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx"
+        ]
+      },
+      "completedRootReview": true,
+      "artifacts": {
+        "pptx": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.1 Eén product, twee prijzen – presentatie.pptx",
+        "pdf": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.1 Eén product, twee prijzen – presentatie.pdf"
+      },
+      "coldBytesPreserved": false,
+      "assemblyTransformations": [
+        {
+          "repository": "4veco-platform",
+          "path": "build-scripts/content/book-3/presentation-311.mjs",
+          "originalSha256": "b5cef6aa55eb0381e3d4b6987a23cc300018e4ecbebcba1665892dee155ab06c",
+          "assembledSha256": "cf1be745c74566b3999a7fe67e6dfcd2b0e32e14ec804e98daedab31a5983991",
+          "reason": "Move only the target Pp label x anchor from .18 to .25 of the axis maximum, clearing A+t and A. No numerical, lesson-text, teacher-note or chart-data change."
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.1 Eén product, twee prijzen – presentatie.pdf",
+          "originalSha256": "62e83ccf93b4869247ea59474a789a02bb5ae38033bbaa5ffc81319ae31d86fb",
+          "assembledSha256": "33b7c4b2eb539294775a1e0033f1460a6a736b1e02f70798610b4ebe7d931d7e",
+          "reason": "Move only the target Pp label x anchor from .18 to .25 of the axis maximum, clearing A+t and A. No numerical, lesson-text, teacher-note or chart-data change."
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.1 Eén product, twee prijzen – presentatie.pptx",
+          "originalSha256": "3fcfef60a869d43b1d6848803f5969a82313eb84a2ffffe7f66bf55fd620b645",
+          "assembledSha256": "a478cc17fd25fdf98234a6ea049f71ad5ed0a08415f72b2258327d7a26e52156",
+          "reason": "Move only the target Pp label x anchor from .18 to .25 of the axis maximum, clearing A+t and A. No numerical, lesson-text, teacher-note or chart-data change."
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/evidence/3.1.1-presentation.md",
+          "originalSha256": "4cc574353439de9a292abaa29e4319d696da0f63a79c9cbea332eacae7e76858",
+          "assembledSha256": "2f16ea96fc8dedd331c7421bf8e38388466cbb260e58b60413e3a5f4b85ceb59",
+          "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+        }
+      ]
+    },
+    {
+      "paragraph": "3.1.2",
+      "lessonSourceCommit": "9b8304d5031cafac936a56281e144573a25fbbc9",
+      "sources": [
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.2 manuscript.md",
+          "sha256": "fcf420689fff743c59776345c5e1043e960f0e0d792d279476797071c3e87757"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/Antwoorden.md",
+          "sha256": "5c22520f978587c47a041723b24d144ed3ec18da3636090b58572a141ac2b288"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/Docenteninformatie.md",
+          "sha256": "46fdda1886adfc0df76f0a11b38182cf934a3040d1dd1976b961ae68a7e13aac"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.1 manuscript.md",
+          "sha256": "938160312edc425888dd54b3207c932e0aa396c59411a30e6679865eb14fded8"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_target.svg",
+          "sha256": "913b34e601af2ea9463fb1b207b54fb1f0b27ca3dde6db0fec02b23f0db5253c"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+          "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_Antwoorden_v3.pdf",
+          "sha256": "99bb148be789986f193b4aa534be62c0c7a91cd15e476660ab8106c0627a5a25"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md",
+          "sha256": "79abbe55782b3bd3a2ac38f14213654cef38a0111c93a27ab4d95d4394f2ad35"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+          "sha256": "77d485b2078bba0b3faffcb6d0e78d4ce8e55f4ab59de63d470c9214aff92745"
+        }
+      ],
+      "mechanical": {
+        "pptxSha256": "69ce8b56965aa27bfa212b6bf3fe4f4736df0a5fe695397798988cd693844880",
+        "pdfSha256": "23f5b363f4693fd803db0e142ebf4cfa3798c5dfc664f84c0657a79bf2acbc50",
+        "slides": 29,
+        "pdfPages": 29,
+        "notes": 29,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          16,
+          29
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 10,
+      "nativeCharts": 10,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 10,
+        "references": 732,
+        "cellsCompared": 1496,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx",
+          "ppt/embeddings/chart-data-snapshot-007.xlsx",
+          "ppt/embeddings/chart-data-snapshot-008.xlsx",
+          "ppt/embeddings/chart-data-snapshot-009.xlsx",
+          "ppt/embeddings/chart-data-snapshot-010.xlsx"
+        ]
+      },
+      "completedRootReview": true,
+      "artifacts": {
+        "pptx": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.2 Belastingdruk en welvaartsverlies – presentatie.pptx",
+        "pdf": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.2 Belastingdruk en welvaartsverlies – presentatie.pdf"
+      },
+      "coldBytesPreserved": false,
+      "assemblyTransformations": [
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/evidence/3.1.2-presentation.md",
+          "originalSha256": "8ca2f19f7c7b48cb812c47014d092eec3761d0c630ca228f6ce11eb01b84487b",
+          "assembledSha256": "ccdc70af05509b033194faedd886637a3ab60ce7ea006391a54e13ff47fdfc26",
+          "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+        }
+      ]
+    },
+    {
+      "paragraph": "3.1.3",
+      "lessonSourceCommit": "9b8304d5031cafac936a56281e144573a25fbbc9",
+      "sources": [
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.3 manuscript.md",
+          "sha256": "a9bfe97a56a9cf77feff4602dce945ea69af2c14bcd14cbcbcb1d2b35cbe94da"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/Antwoorden.md",
+          "sha256": "5c22520f978587c47a041723b24d144ed3ec18da3636090b58572a141ac2b288"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/Docenteninformatie.md",
+          "sha256": "46fdda1886adfc0df76f0a11b38182cf934a3040d1dd1976b961ae68a7e13aac"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.1 manuscript.md",
+          "sha256": "938160312edc425888dd54b3207c932e0aa396c59411a30e6679865eb14fded8"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.2 manuscript.md",
+          "sha256": "fcf420689fff743c59776345c5e1043e960f0e0d792d279476797071c3e87757"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_target.svg",
+          "sha256": "0f6a2e90c4c005e6880e2f31fd0277e2dab4da8559996a8f1c3a02a100d68d95"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+          "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+        }
+      ],
+      "mechanical": {
+        "pptxSha256": "0a021437b110af79268df39ef1ceccccc0f5eda3874008552458305b9da71444",
+        "pdfSha256": "719e5c07b3163073302913d2f50301f7f222c274a78ec0efc66a1a06297f5903",
+        "slides": 29,
+        "pdfPages": 29,
+        "notes": 29,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          16,
+          29
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 6,
+      "nativeCharts": 9,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 9,
+        "references": 164,
+        "cellsCompared": 1602,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx",
+          "ppt/embeddings/chart-data-snapshot-007.xlsx",
+          "ppt/embeddings/chart-data-snapshot-008.xlsx",
+          "ppt/embeddings/chart-data-snapshot-009.xlsx"
+        ]
+      },
+      "completedRootReview": true,
+      "artifacts": {
+        "pptx": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.3 Subsidies – presentatie.pptx",
+        "pdf": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.3 Subsidies – presentatie.pdf"
+      },
+      "coldBytesPreserved": false,
+      "assemblyTransformations": [
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/evidence/3.1.3-presentation.md",
+          "originalSha256": "c8f078fbf1ea95ba3ef22dc7a9aba554322af375d4e79f7f595162ab66a60f89",
+          "assembledSha256": "b22065a72e1848b7e396aa2e9fb0981a82552c34c66789c987f7a8e8dba0701e",
+          "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+        }
+      ]
+    },
+    {
+      "paragraph": "3.1.4",
+      "lessonSourceCommit": "9b8304d5031cafac936a56281e144573a25fbbc9",
+      "sources": [
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.4 manuscript.md",
+          "sha256": "77c8e3e3cbba0fae732cb904aa05be660e002bd378e1e049fd9e9155adbdef6c"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/Antwoorden.md",
+          "sha256": "5c22520f978587c47a041723b24d144ed3ec18da3636090b58572a141ac2b288"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/Docenteninformatie.md",
+          "sha256": "46fdda1886adfc0df76f0a11b38182cf934a3040d1dd1976b961ae68a7e13aac"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.1 manuscript.md",
+          "sha256": "938160312edc425888dd54b3207c932e0aa396c59411a30e6679865eb14fded8"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.3 manuscript.md",
+          "sha256": "a9bfe97a56a9cf77feff4602dce945ea69af2c14bcd14cbcbcb1d2b35cbe94da"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/00 Inleiding.md",
+          "sha256": "6da13a58afc3fdd6105fba2cad3468f60a395cff332c6f59c40cda392f709c7a"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_target.svg",
+          "sha256": "2b8d1d90381408b9767ee9f3c9a5084c8afac8d62279e02e7380577961841f4a"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+          "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_Antwoorden_v3.pdf",
+          "sha256": "99bb148be789986f193b4aa534be62c0c7a91cd15e476660ab8106c0627a5a25"
+        },
+        {
+          "path": "edities/books34-v3/curriculum/targets/3.1.4.json",
+          "sha256": "bbf8bf4d7c751fb1b8595a5841e89b9c7bdae5beb8c115d4b704abff88910fe0"
+        }
+      ],
+      "mechanical": {
+        "pptxSha256": "db91b3c26e9d262bb01771c21fc1ffde0988543cddf8e4ecc93f1ee80a3a71dc",
+        "pdfSha256": "6ea83bf77f90800b0c02ae4085de814a8cc1da3d6a51f278b8a821cb10cff969",
+        "slides": 24,
+        "pdfPages": 24,
+        "notes": 24,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          13,
+          24
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 9,
+      "nativeCharts": 5,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 5,
+        "references": 58,
+        "cellsCompared": 124,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx"
+        ]
+      },
+      "completedRootReview": true,
+      "artifacts": {
+        "pptx": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.4 Maximumprijs – presentatie.pptx",
+        "pdf": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.4 Maximumprijs – presentatie.pdf"
+      },
+      "coldBytesPreserved": false,
+      "assemblyTransformations": [
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/evidence/3.1.4-presentation.md",
+          "originalSha256": "bffe8864bff3fb9b9a235799beb65662c241b5b9619d9113cd1f013d99cf53d8",
+          "assembledSha256": "f6365d59ec0e6cb9a54f3eaedb9b5f073c46ee1046be338ce8296632f2264fc3",
+          "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+        }
+      ]
+    },
+    {
+      "paragraph": "3.1.5",
+      "lessonSourceCommit": "9b8304d5031cafac936a56281e144573a25fbbc9",
+      "sources": [
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.5 manuscript.md",
+          "sha256": "9f1aaab2c33c572a3d0dd4b85a5eb29bd90412a4de5bdf037c9a889c2c7bc30c"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/Antwoorden.md",
+          "sha256": "5c22520f978587c47a041723b24d144ed3ec18da3636090b58572a141ac2b288"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/Docenteninformatie.md",
+          "sha256": "46fdda1886adfc0df76f0a11b38182cf934a3040d1dd1976b961ae68a7e13aac"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.4 manuscript.md",
+          "sha256": "77c8e3e3cbba0fae732cb904aa05be660e002bd378e1e049fd9e9155adbdef6c"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.3 manuscript.md",
+          "sha256": "a9bfe97a56a9cf77feff4602dce945ea69af2c14bcd14cbcbcb1d2b35cbe94da"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.1 manuscript.md",
+          "sha256": "938160312edc425888dd54b3207c932e0aa396c59411a30e6679865eb14fded8"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_target.svg",
+          "sha256": "f9d35efbb704246457c8c179fe818899ccbcc9d4c166fca22ba8d4e67d2caf25"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+          "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+        },
+        {
+          "path": "edities/books34-v3/curriculum/targets/3.1.5.json",
+          "sha256": "ed6a747b77b681a5dea7d1952c356d8e1a7782f1324340d43a13b7b98b650013"
+        }
+      ],
+      "mechanical": {
+        "pptxSha256": "df0195e9819f0e1aeba85447aab91a987a719b16b4dcaa009023405e6c932e24",
+        "pdfSha256": "33b14102a577cb940b1a1fad916d0212a0c8b3783229fa731515ac4908761458",
+        "slides": 25,
+        "pdfPages": 25,
+        "notes": 25,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          15,
+          25
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 4,
+      "nativeCharts": 7,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 7,
+        "references": 118,
+        "cellsCompared": 250,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx",
+          "ppt/embeddings/chart-data-snapshot-007.xlsx"
+        ]
+      },
+      "completedRootReview": true,
+      "artifacts": {
+        "pptx": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.5 Minimumprijs en quota – presentatie.pptx",
+        "pdf": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.5 Minimumprijs en quota – presentatie.pdf"
+      },
+      "coldBytesPreserved": false,
+      "assemblyTransformations": [
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/evidence/3.1.5-presentation.md",
+          "originalSha256": "8ecd4b13249a2147c22087b4896c2a04a029ad08c7e4042230c237fa6b4e5406",
+          "assembledSha256": "149ac5df61694d8ac3d197aea858a409236d1776456423cd73999f7ee5518c2a",
+          "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+        }
+      ]
+    },
+    {
+      "paragraph": "3.1.6",
+      "lessonSourceCommit": "9b8304d5031cafac936a56281e144573a25fbbc9",
+      "sources": [
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.1 manuscript.md",
+          "sha256": "938160312edc425888dd54b3207c932e0aa396c59411a30e6679865eb14fded8"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.2 manuscript.md",
+          "sha256": "fcf420689fff743c59776345c5e1043e960f0e0d792d279476797071c3e87757"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.3 manuscript.md",
+          "sha256": "a9bfe97a56a9cf77feff4602dce945ea69af2c14bcd14cbcbcb1d2b35cbe94da"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.4 manuscript.md",
+          "sha256": "77c8e3e3cbba0fae732cb904aa05be660e002bd378e1e049fd9e9155adbdef6c"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.5 manuscript.md",
+          "sha256": "9f1aaab2c33c572a3d0dd4b85a5eb29bd90412a4de5bdf037c9a889c2c7bc30c"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.6 manuscript.md",
+          "sha256": "0ea1f1c3e7bc206b1829f39bcc9a0da161b65d14d2f8e385834c9e8660a12bca"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/Antwoorden.md",
+          "sha256": "5c22520f978587c47a041723b24d144ed3ec18da3636090b58572a141ac2b288"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/Docenteninformatie.md",
+          "sha256": "46fdda1886adfc0df76f0a11b38182cf934a3040d1dd1976b961ae68a7e13aac"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.6_target.svg",
+          "sha256": "76000525e28927d99527fe5540ae58608d39948c83f3f79d8d8b05d1a216ff30"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.6_ans_1.svg",
+          "sha256": "a1397750b8fa442fce2c5b6913266239c481897e71777090dfbeedc3468353cc"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+          "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+        }
+      ],
+      "mechanical": {
+        "pptxSha256": "dbe1a8f91790ee624bacb3b5745167f7bc3a4f87900c550ffffbeb0737a7bcab",
+        "pdfSha256": "b33ff53975c81715de8346cf880334235c935ab07e71c956b85eeb38550634c0",
+        "slides": 22,
+        "pdfPages": 22,
+        "notes": 22,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          5,
+          22
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 6,
+      "nativeCharts": 4,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 4,
+        "references": 52,
+        "cellsCompared": 104,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx"
+        ]
+      },
+      "completedRootReview": true,
+      "artifacts": {
+        "pptx": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.6 Gemengde opgaven - overheidsingrijpen – presentatie.pptx",
+        "pdf": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.6 Gemengde opgaven - overheidsingrijpen – presentatie.pdf"
+      },
+      "coldBytesPreserved": false,
+      "assemblyTransformations": [
+        {
+          "repository": "4veco-platform",
+          "path": "build-scripts/content/book-3/presentation-316.manifest.json",
+          "originalSha256": "3fd3173bdecf43b2ac06be377c89a6c632932bb537bde643a7b8a3d1c74c99a5",
+          "assembledSha256": "f1ce41dc9f3d62ebf4c1d26ea8f0f93a65899a4aaec5b9cc40d71560969ecb63",
+          "reason": "Normalize new assembled source line endings to LF; all non-newline bytes preserved."
+        },
+        {
+          "repository": "4veco-platform",
+          "path": "build-scripts/content/book-3/presentation-316.mjs",
+          "originalSha256": "1ab7d288c2291957f0d0c1d6a81e81e3269a186174263930b3451ef2172c66f9",
+          "assembledSha256": "9988416115ff70bd1bb1549d4eca66dd5f9af5f75fc6ba28c42e8901c8d627ae",
+          "reason": "Normalize new assembled source line endings to LF; all non-newline bytes preserved."
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/evidence/3.1.6-presentation.md",
+          "originalSha256": "22ba7422256451788f198ffd8964905a75ac869be0a96de4e843457e2b03f80f",
+          "assembledSha256": "95e02d077125762f8b049830276431db303df874dc9513a5070d4b211c71e9bd",
+          "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+        }
+      ]
+    },
+    {
+      "paragraph": "3.2.1",
+      "lessonSourceCommit": "9b8304d5031cafac936a56281e144573a25fbbc9",
+      "sources": [
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.1 manuscript.md",
+          "sha256": "c13b390b105beaf18a7d3e83cb52fb04792f3927d207efe5616b01a3ce8fc366"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/Antwoorden.md",
+          "sha256": "5be2192b7c07dd09153130ff8e691cc161e0c6d0413ea740a696fbe5189b4115"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/Docenteninformatie.md",
+          "sha256": "2e4043cfb28ce503cf37477914a53c3966682fe4604bfd4b91aaed96fe506e04"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/00 Inleiding.md",
+          "sha256": "22db4eb96b9a1ab9c0e686914d515fec58eb5d32d4349e63df5b3dd55ba235c9"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/_assets/3.2.1_target.svg",
+          "sha256": "7cf4856c10f2ebe5191509a648bb7246f52dbfdd22e7a603813a1b12359ec292"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/_assets/3.2.1_ans_3.svg",
+          "sha256": "41485e146d920b4b397f6fb330af81e02febd333cf7c93fdc4c4db79bdc694f7"
+        },
+        {
+          "path": "edities/books34-v3/curriculum/targets/3.2.1.json",
+          "sha256": "0ee05124f54ccd4711c38b6ff6bdb165c91d1134b63c66f175a966cbccf09689"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+          "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_Antwoorden_v3.pdf",
+          "sha256": "99bb148be789986f193b4aa534be62c0c7a91cd15e476660ab8106c0627a5a25"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+          "sha256": "33c07c4327027feca0d09f82227ab30851b70519f42d5bc5f8fcdf0c0318be43"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+          "sha256": "8cee4de8cc847b58d5c29c3f9bee3df6f4634cd16bed1dc8d45017529ef997d6"
+        },
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3 Aanbod en marktevenwicht – hoofdstuk.md",
+          "sha256": "4df0aa0c541e11ee2306e49aa33ae32bb5020343ea49057c89e27e574ac1e0ba"
+        }
+      ],
+      "mechanical": {
+        "pptxSha256": "a50e5915a895dd850add3b55c52713b99e196f3f8758cc0fd5a8e38702058b0c",
+        "pdfSha256": "fb46b868b4b4002d9122f7325fe166495725bd0a7282217a3126be437cf23697",
+        "slides": 25,
+        "pdfPages": 25,
+        "notes": 25,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          15,
+          25
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 9,
+      "nativeCharts": 11,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 11,
+        "references": 58,
+        "cellsCompared": 138,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx",
+          "ppt/embeddings/chart-data-snapshot-007.xlsx",
+          "ppt/embeddings/chart-data-snapshot-008.xlsx",
+          "ppt/embeddings/chart-data-snapshot-009.xlsx",
+          "ppt/embeddings/chart-data-snapshot-010.xlsx",
+          "ppt/embeddings/chart-data-snapshot-011.xlsx"
+        ]
+      },
+      "completedRootReview": true,
+      "artifacts": {
+        "pptx": "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.1 Volkomen concurrentie – presentatie.pptx",
+        "pdf": "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.1 Volkomen concurrentie – presentatie.pdf"
+      },
+      "coldBytesPreserved": false,
+      "assemblyTransformations": [
+        {
+          "repository": "4veco-platform",
+          "path": "build-scripts/content/book-3/presentation-321.mjs",
+          "originalSha256": "de177b5094afb3ab31207e6a4356e9eadd3b021e92e6ebc50deae8a60a995632",
+          "assembledSha256": "254db6df1eaf162fae2ca493af01454b1268c3c5b8545f66914ab410d9c82ee8",
+          "reason": "Coordinator repaired point label E placement in owning builder after completed cold handoff. Rebuilt/finalized; native PowerPoint render rechecked all four changed graphs. Other content and all notes preserved."
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.1 Volkomen concurrentie – presentatie.pdf",
+          "originalSha256": "dc9d779c1a1f1ce18bf8357432945f984ac4a5dd5760a5d6f01edf43e4a4bbd5",
+          "assembledSha256": "fb46b868b4b4002d9122f7325fe166495725bd0a7282217a3126be437cf23697",
+          "reason": "Coordinator repaired point label E placement in owning builder after completed cold handoff. Rebuilt/finalized; native PowerPoint render rechecked all four changed graphs. Other content and all notes preserved."
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.1 Volkomen concurrentie – presentatie.pptx",
+          "originalSha256": "f36814f9642279108e31c127d8fe7c7e90520a3f0af78825a4f55d42bc5c854b",
+          "assembledSha256": "a50e5915a895dd850add3b55c52713b99e196f3f8758cc0fd5a8e38702058b0c",
+          "reason": "Coordinator repaired point label E placement in owning builder after completed cold handoff. Rebuilt/finalized; native PowerPoint render rechecked all four changed graphs. Other content and all notes preserved."
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/evidence/3.2.1-presentation.md",
+          "originalSha256": "e457d673c5f3db28815e8851d1d04f265d50e901b8b2276ad4d0b9bff7da8fe1",
+          "assembledSha256": "5eb1b2b8568a1a116b1bed4d9f7abddc8a3afc94934e77eabb5b4471b8992b8c",
+          "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+        }
+      ]
+    },
+    {
+      "paragraph": "3.2.2",
+      "lessonSourceCommit": "9b8304d5031cafac936a56281e144573a25fbbc9",
+      "sources": [
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.2 manuscript.md",
+          "sha256": "992f1f64ee131c8c7a6c85dd517fc87724be5f825a1f9e497cd01f699645fdce"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.1 manuscript.md",
+          "sha256": "c13b390b105beaf18a7d3e83cb52fb04792f3927d207efe5616b01a3ce8fc366"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/Antwoorden.md",
+          "sha256": "5be2192b7c07dd09153130ff8e691cc161e0c6d0413ea740a696fbe5189b4115"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/Docenteninformatie.md",
+          "sha256": "2e4043cfb28ce503cf37477914a53c3966682fe4604bfd4b91aaed96fe506e04"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+          "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+        },
+        {
+          "path": "edities/books34-v3/curriculum/targets/3.2.2.json",
+          "sha256": "753c40b2a3c4a4454906e6459765c2c6229690f6007d4cb90eb81a465e4df77b"
+        },
+        {
+          "path": "edities/books34-v3/curriculum/lesson-routes-v3.json",
+          "sha256": "485dfa761daf90c3646bf4df5daabe4bd840c7ad908c930f186608482d46a344"
+        },
+        {
+          "path": "edities/books34-v3/curriculum/book-page-map-v3.json",
+          "sha256": "9271962caf0281f6e0d3207bfc97777252f8803fac11999e719f9a13043af27e"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.1 Kostenstructuren – paragraaf.md",
+          "sha256": "7d1c31299783c3172cd89bd146c26e2af090b1e41de67d914835c616502a69d0"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+          "sha256": "8cee4de8cc847b58d5c29c3f9bee3df6f4634cd16bed1dc8d45017529ef997d6"
+        }
+      ],
+      "mechanical": {
+        "pptxSha256": "368153f3f8c8b87a52908eb16153ada8cbaa4bf5d9f82c4e0c45c709b4d8d610",
+        "pdfSha256": "5137dbcf55874fefdf47c13619fa7b24736e2a5f9a1d5fc044f2c725a290c762",
+        "slides": 24,
+        "pdfPages": 24,
+        "notes": 24,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          14,
+          24
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 10,
+      "nativeCharts": 0,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 0,
+        "references": 0,
+        "cellsCompared": 0,
+        "workbooks": []
+      },
+      "completedRootReview": true,
+      "artifacts": {
+        "pptx": "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.2 Marginale kosten en de afgeleide – presentatie.pptx",
+        "pdf": "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.2 Marginale kosten en de afgeleide – presentatie.pdf"
+      },
+      "coldBytesPreserved": false,
+      "assemblyTransformations": [
+        {
+          "repository": "4veco-platform",
+          "path": "build-scripts/content/book-3/presentation-322.source.json",
+          "originalSha256": "5e6ad6820b3eb9997f338c38ec5dd0ccdb278ff369d986514c081934fff6ec70",
+          "assembledSha256": "c6e068dcb69da481a136009bad3d00886f9ca0694cec605f7a22751c91cb2649",
+          "reason": "Manifest destination corrected to the actual current-v3 assembled location; presentation/PDF bytes unchanged. Normalize new assembled source line endings to LF; all non-newline bytes preserved."
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/3.2 Productie en winst/3.2.2 Marginale kosten en de afgeleide/3.2.2 Marginale kosten en de afgeleide – presentatie.pdf",
+          "destination": "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.2 Marginale kosten en de afgeleide – presentatie.pdf",
+          "originalSha256": "5137dbcf55874fefdf47c13619fa7b24736e2a5f9a1d5fc044f2c725a290c762",
+          "assembledSha256": "5137dbcf55874fefdf47c13619fa7b24736e2a5f9a1d5fc044f2c725a290c762",
+          "reason": "Relocate current-v3 classroom companions from cold author legacy-style destination to current edition beside its sealed paragraph PDF. Content bytes unchanged; original handoff retained."
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/3.2 Productie en winst/3.2.2 Marginale kosten en de afgeleide/3.2.2 Marginale kosten en de afgeleide – presentatie.pptx",
+          "destination": "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.2 Marginale kosten en de afgeleide – presentatie.pptx",
+          "originalSha256": "368153f3f8c8b87a52908eb16153ada8cbaa4bf5d9f82c4e0c45c709b4d8d610",
+          "assembledSha256": "368153f3f8c8b87a52908eb16153ada8cbaa4bf5d9f82c4e0c45c709b4d8d610",
+          "reason": "Relocate current-v3 classroom companions from cold author legacy-style destination to current edition beside its sealed paragraph PDF. Content bytes unchanged; original handoff retained."
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/3.2 Productie en winst/3.2.2 Marginale kosten en de afgeleide/evidence/3.2.2-presentation.md",
+          "destination": "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/evidence/3.2.2-presentation.md",
+          "originalSha256": "3c5b3b2229afef337f4e8e10b8741e56bdb7c88b571764b02d7bbcd61a164384",
+          "assembledSha256": "0d6f5d7306658877fbe5beae78759d3b22f5095fe3a46b07fe8b0469b53c46d8",
+          "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+        }
+      ]
+    },
+    {
+      "paragraph": "3.2.3",
+      "lessonSourceCommit": "9b8304d5031cafac936a56281e144573a25fbbc9",
+      "sources": [
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.1 manuscript.md",
+          "sha256": "c13b390b105beaf18a7d3e83cb52fb04792f3927d207efe5616b01a3ce8fc366"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.2 manuscript.md",
+          "sha256": "992f1f64ee131c8c7a6c85dd517fc87724be5f825a1f9e497cd01f699645fdce"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.3 manuscript.md",
+          "sha256": "d46652e4ed48a368246ed70a0f1df0206752d95775e52c6de25df0088167fbd2"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/Antwoorden.md",
+          "sha256": "5be2192b7c07dd09153130ff8e691cc161e0c6d0413ea740a696fbe5189b4115"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/Docenteninformatie.md",
+          "sha256": "2e4043cfb28ce503cf37477914a53c3966682fe4604bfd4b91aaed96fe506e04"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_target.svg",
+          "sha256": "90309bbff4b650e814e8383e1b3a6c53a503b2689ca735de019e40db2607de05"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_ans_3.svg",
+          "sha256": "49abb61c0654f1f8660a16fca967ebf380488c3d00723e984e75048a9ce9fc01"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+          "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.1 Kostenstructuren – paragraaf.md",
+          "sha256": "7d1c31299783c3172cd89bd146c26e2af090b1e41de67d914835c616502a69d0"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+          "sha256": "33c07c4327027feca0d09f82227ab30851b70519f42d5bc5f8fcdf0c0318be43"
+        }
+      ],
+      "mechanical": {
+        "pptxSha256": "b91cff8a32a3b54dce83d39bbb1bf4c48363ff5d754174b87e32d73ea3b2534a",
+        "pdfSha256": "65e2cf7b285efdbf14db0a1bc96bf541d5c9c4a5aa4fcf7ff2c0514a7603f1be",
+        "slides": 27,
+        "pdfPages": 27,
+        "notes": 27,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          14,
+          27
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 6,
+      "nativeCharts": 9,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 9,
+        "references": 138,
+        "cellsCompared": 1442,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx",
+          "ppt/embeddings/chart-data-snapshot-007.xlsx",
+          "ppt/embeddings/chart-data-snapshot-008.xlsx",
+          "ppt/embeddings/chart-data-snapshot-009.xlsx"
+        ]
+      },
+      "completedRootReview": true,
+      "artifacts": {
+        "pptx": "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.3 Winstmaximalisatie bij volkomen concurrentie – presentatie.pptx",
+        "pdf": "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.3 Winstmaximalisatie bij volkomen concurrentie – presentatie.pdf"
+      },
+      "coldBytesPreserved": false,
+      "assemblyTransformations": [
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/evidence/3.2.3-presentation.md",
+          "originalSha256": "e6930bb062ec85bb967d8163359c3601486e0499faf1d883911e055f4a3bdac7",
+          "assembledSha256": "ec1f11b3f3caeba0b1f95fa20adbfe54ae4804284e79a449077d7c837e993f8f",
+          "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+        }
+      ]
+    },
+    {
+      "paragraph": "3.2.4",
+      "lessonSourceCommit": "9b8304d5031cafac936a56281e144573a25fbbc9",
+      "sources": [
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.1 manuscript.md",
+          "sha256": "c13b390b105beaf18a7d3e83cb52fb04792f3927d207efe5616b01a3ce8fc366"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.2 manuscript.md",
+          "sha256": "992f1f64ee131c8c7a6c85dd517fc87724be5f825a1f9e497cd01f699645fdce"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.3 manuscript.md",
+          "sha256": "d46652e4ed48a368246ed70a0f1df0206752d95775e52c6de25df0088167fbd2"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.4 manuscript.md",
+          "sha256": "08387dcdc8857346ddc877b1ef537a02cee235ec85f2766afc74bf30e04d8112"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/Antwoorden.md",
+          "sha256": "5be2192b7c07dd09153130ff8e691cc161e0c6d0413ea740a696fbe5189b4115"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/Docenteninformatie.md",
+          "sha256": "2e4043cfb28ce503cf37477914a53c3966682fe4604bfd4b91aaed96fe506e04"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/00 Inleiding.md",
+          "sha256": "22db4eb96b9a1ab9c0e686914d515fec58eb5d32d4349e63df5b3dd55ba235c9"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/_assets/3.2.4_target.svg",
+          "sha256": "7dc71d0349969a107f8dbb9d9bcb9dc1ae223e0ea3b57da150c32474fab286a8"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+          "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+        },
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.md",
+          "sha256": "e4e2717d088b20c3cbfc9c7944311a0b0bfdcf75a492335da5c3b0d0c027e898"
+        }
+      ],
+      "mechanical": {
+        "pptxSha256": "8f897b27a3d821f2dcaf231e6d1759fbad8a67f19216034b7a6632dc9e1a1ce9",
+        "pdfSha256": "5eff53005d23c8e130e3f2704849405e08bcd62b4eb7a34c4d1f89be8606f909",
+        "slides": 22,
+        "pdfPages": 22,
+        "notes": 22,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          6,
+          22
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 9,
+      "nativeCharts": 6,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 6,
+        "references": 166,
+        "cellsCompared": 1436,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx"
+        ]
+      },
+      "completedRootReview": true,
+      "artifacts": {
+        "pptx": "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.4 Gemengde opgaven – presentatie.pptx",
+        "pdf": "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.4 Gemengde opgaven – presentatie.pdf"
+      },
+      "coldBytesPreserved": false,
+      "assemblyTransformations": [
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/evidence/3.2.4-presentation.md",
+          "originalSha256": "5a33b6a01274443eb0c02f3ebb3bdc12dde7473bb4c11b1133a93aba128d0912",
+          "assembledSha256": "8bf99ec241c749279d6022c71deb3f7294b672f870be083ec47900258fcf198b",
+          "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+        }
+      ]
+    },
+    {
+      "paragraph": "3.3.1",
+      "lessonSourceCommit": "9b8304d5031cafac936a56281e144573a25fbbc9",
+      "sources": [
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/3.3.1 manuscript.md",
+          "sha256": "2f8b17f7624ecf6605d8f65a7076aacc95b39f2dabf3a1b4185d421247414a74"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/Antwoorden.md",
+          "sha256": "aec2cc01f5ea47e8ba00df0eb9740701d8c355176044d0796346b6ca31e33c70"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/Docenteninformatie.md",
+          "sha256": "4b2951f5db50ba422a424a262d52cbc59b3cf566213c3bd175e71910a9f38c5e"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/00 Inleiding.md",
+          "sha256": "fe930548853052711596d596d628791a856ef31f18d34a9bc14b1b515e15b9d6"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.3 manuscript.md",
+          "sha256": "d46652e4ed48a368246ed70a0f1df0206752d95775e52c6de25df0088167fbd2"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+          "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+        },
+        {
+          "path": "edities/books34-v3/curriculum/targets/3.3.1.json",
+          "sha256": "82abb1e3338f86b3fa1b872bccf7e0df347a499cced729d7bd514b5d6a0cee82"
+        },
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – paragraaf.md",
+          "sha256": "194363ea71e44c4d65100be36b05d52c7f8b07d4904bfad27f3bd659be072b1e"
+        }
+      ],
+      "mechanical": {
+        "pptxSha256": "ba077e29cc1a7e398f21398d6410a14665ba856d5fd9b6eef859920e4d3ce2c3",
+        "pdfSha256": "e6432093e64413cc216789547899fa6022a468a0a12c1fdbe3fcefdb0d730c06",
+        "slides": 26,
+        "pdfPages": 26,
+        "notes": 26,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          14,
+          26
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 10,
+      "nativeCharts": 0,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 0,
+        "references": 0,
+        "cellsCompared": 0,
+        "workbooks": []
+      },
+      "completedRootReview": true,
+      "artifacts": {
+        "pptx": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.1 Waarom landen handelen – presentatie.pptx",
+        "pdf": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.1 Waarom landen handelen – presentatie.pdf"
+      },
+      "coldBytesPreserved": false,
+      "assemblyTransformations": [
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/evidence/3.3.1-presentation.md",
+          "originalSha256": "fd4438e81cbfb6348bdf6070669c9e7f96f9a2b9b040c4f97c96607691328fcb",
+          "assembledSha256": "9f1a50c726c78ba053a9ab0630647b182bd83b3d1b9b8d3b94dcba02eb13b014",
+          "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+        }
+      ]
+    },
+    {
+      "paragraph": "3.3.2",
+      "lessonSourceCommit": "9b8304d5031cafac936a56281e144573a25fbbc9",
+      "sources": [
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/3.3.2 manuscript.md",
+          "sha256": "4098130b9a226b3007e5d2642f32ce47d0aa1667e1589a151fd8380a3efe043e"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/Antwoorden.md",
+          "sha256": "aec2cc01f5ea47e8ba00df0eb9740701d8c355176044d0796346b6ca31e33c70"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/Docenteninformatie.md",
+          "sha256": "4b2951f5db50ba422a424a262d52cbc59b3cf566213c3bd175e71910a9f38c5e"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/3.3.1 manuscript.md",
+          "sha256": "2f8b17f7624ecf6605d8f65a7076aacc95b39f2dabf3a1b4185d421247414a74"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.1 manuscript.md",
+          "sha256": "938160312edc425888dd54b3207c932e0aa396c59411a30e6679865eb14fded8"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.1 manuscript.md",
+          "sha256": "c13b390b105beaf18a7d3e83cb52fb04792f3927d207efe5616b01a3ce8fc366"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_target.svg",
+          "sha256": "ac4553729d371b901d2a1fbd87c1c756fa8282fc63ae1f9ff6578fcea52844b0"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+          "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+        },
+        {
+          "path": "edities/books34-v3/curriculum/targets/3.3.2.json",
+          "sha256": "1d77fcd8104c7aca25890077c8db88d3d066a515f5c55cde2fbe53d559c1621c"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md",
+          "sha256": "79abbe55782b3bd3a2ac38f14213654cef38a0111c93a27ab4d95d4394f2ad35"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+          "sha256": "77d485b2078bba0b3faffcb6d0e78d4ce8e55f4ab59de63d470c9214aff92745"
+        }
+      ],
+      "mechanical": {
+        "pptxSha256": "338a2c361f478dccfa72d3d6a49b989d4cee5ec110c4adfb0f334e369a406c3f",
+        "pdfSha256": "ccf308bbc1cee8507c0944d351f143d58ae336a70eb3bd0846de010bb7b31549",
+        "slides": 25,
+        "pdfPages": 25,
+        "notes": 25,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          14,
+          25
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 10,
+      "nativeCharts": 6,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 6,
+        "references": 50,
+        "cellsCompared": 124,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx"
+        ]
+      },
+      "completedRootReview": true,
+      "artifacts": {
+        "pptx": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.2 Wereldmarktprijs, import, export en welvaart – presentatie.pptx",
+        "pdf": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.2 Wereldmarktprijs, import, export en welvaart – presentatie.pdf"
+      },
+      "coldBytesPreserved": false,
+      "assemblyTransformations": [
+        {
+          "repository": "4veco-platform",
+          "path": "build-scripts/content/book-3/presentation-332.mjs",
+          "originalSha256": "c66e37dc419195e8eba6902e5208f7b967e711ba4384aedee41cccd6de3a93d0",
+          "assembledSha256": "afe52f4637e4be6e62d249c6e49b5c9c191b0f8eeeabb96085493d2a0e0d839b",
+          "reason": "Supported label-position names and clear anchors;332 uses collinear interior anchors, finite decimal rounding and reviewed straight-scatter normalizer;333 uses separate label-only anchor coordinates. No source, lesson-text or teacher-note changes."
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.2 Wereldmarktprijs, import, export en welvaart – presentatie.pdf",
+          "originalSha256": "9aefdaf4659cf26ce5d1d1974faed45bd2f2d6d9311d813f164c9b15b7041509",
+          "assembledSha256": "ccf308bbc1cee8507c0944d351f143d58ae336a70eb3bd0846de010bb7b31549",
+          "reason": "Supported label-position names and clear anchors;332 uses collinear interior anchors, finite decimal rounding and reviewed straight-scatter normalizer;333 uses separate label-only anchor coordinates. No source, lesson-text or teacher-note changes."
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.2 Wereldmarktprijs, import, export en welvaart – presentatie.pptx",
+          "originalSha256": "187d653feb82843321df739f24f7a59fbb8e06c1fdaece90901230e30c6e6842",
+          "assembledSha256": "338a2c361f478dccfa72d3d6a49b989d4cee5ec110c4adfb0f334e369a406c3f",
+          "reason": "Supported label-position names and clear anchors;332 uses collinear interior anchors, finite decimal rounding and reviewed straight-scatter normalizer;333 uses separate label-only anchor coordinates. No source, lesson-text or teacher-note changes."
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/evidence/3.3.2-presentation.md",
+          "originalSha256": "50150f2f72c35a3ea42c867518bbf2efb8f32d29dbf92c8476f0b84f39eeb971",
+          "assembledSha256": "73e44a95c425335f25dbf14edd355b40a43201d30c6bdd4ae6170a02930884a5",
+          "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+        }
+      ]
+    },
+    {
+      "paragraph": "3.3.3",
+      "lessonSourceCommit": "9b8304d5031cafac936a56281e144573a25fbbc9",
+      "sources": [
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/3.3.3 manuscript.md",
+          "sha256": "c2d21ba523488ab555fd9880718d4d986886a93fe938cabafd48c6865488a284"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/3.3.2 manuscript.md",
+          "sha256": "4098130b9a226b3007e5d2642f32ce47d0aa1667e1589a151fd8380a3efe043e"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/Docenteninformatie.md",
+          "sha256": "4b2951f5db50ba422a424a262d52cbc59b3cf566213c3bd175e71910a9f38c5e"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/Antwoorden.md",
+          "sha256": "aec2cc01f5ea47e8ba00df0eb9740701d8c355176044d0796346b6ca31e33c70"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_target.svg",
+          "sha256": "c6cb41a2828fd421d3ec94b1a3e2626b83f886b8ce73953423539a6fcea195a6"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_ans_27.svg",
+          "sha256": "17e654b323db912721d95067466a736478efc879d7a36e479b28974bdd4aca7d"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.2 manuscript.md",
+          "sha256": "fcf420689fff743c59776345c5e1043e960f0e0d792d279476797071c3e87757"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+          "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+        }
+      ],
+      "mechanical": {
+        "pptxSha256": "ac6fc11ae10c4c326a8d309f37e6974fa711142c0337117ffb4dc6609a1751a4",
+        "pdfSha256": "7c881bb80921377acad485e7bbcaf66b9f2414011f70893505817b8b0d225167",
+        "slides": 24,
+        "pdfPages": 24,
+        "notes": 24,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          14,
+          24
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 8,
+      "nativeCharts": 6,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 6,
+        "references": 174,
+        "cellsCompared": 300,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx"
+        ]
+      },
+      "completedRootReview": true,
+      "artifacts": {
+        "pptx": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.3 Protectionisme – presentatie.pptx",
+        "pdf": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.3 Protectionisme – presentatie.pdf"
+      },
+      "coldBytesPreserved": false,
+      "assemblyTransformations": [
+        {
+          "repository": "4veco-platform",
+          "path": "build-scripts/content/book-3/presentation-333.mjs",
+          "originalSha256": "5b0b0fd0db312ce0483d16645a9e72fe3994e94a86f32bb78058e206832e1fca",
+          "assembledSha256": "09e8c8fbd50198c2b5782fa805b99bbe1671061f4e4528e3ea73aa585674193b",
+          "reason": "Supported label-position names and clear anchors;332 uses collinear interior anchors, finite decimal rounding and reviewed straight-scatter normalizer;333 uses separate label-only anchor coordinates. No source, lesson-text or teacher-note changes."
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.3 Protectionisme – presentatie.pdf",
+          "originalSha256": "c43379314ee6559ea2cbf6c5cef7d565854cc6b2692edc8bc81c0b968ac47267",
+          "assembledSha256": "7c881bb80921377acad485e7bbcaf66b9f2414011f70893505817b8b0d225167",
+          "reason": "Supported label-position names and clear anchors;332 uses collinear interior anchors, finite decimal rounding and reviewed straight-scatter normalizer;333 uses separate label-only anchor coordinates. No source, lesson-text or teacher-note changes."
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.3 Protectionisme – presentatie.pptx",
+          "originalSha256": "684588a088f17ad84ee2d6994fdbd0d6b2ad857fc45025c166a6366edfbb87f7",
+          "assembledSha256": "ac6fc11ae10c4c326a8d309f37e6974fa711142c0337117ffb4dc6609a1751a4",
+          "reason": "Supported label-position names and clear anchors;332 uses collinear interior anchors, finite decimal rounding and reviewed straight-scatter normalizer;333 uses separate label-only anchor coordinates. No source, lesson-text or teacher-note changes."
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/evidence/3.3.3-presentation.md",
+          "originalSha256": "b88f0ea7d54565e32996a7872ab51bef4ab1613bba66044bd88531079afe4bc5",
+          "assembledSha256": "3264ae58a97900f348163b56246026fd12eebee55b504c023daa3cc02bf47c23",
+          "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+        }
+      ]
+    },
+    {
+      "paragraph": "3.3.4",
+      "lessonSourceCommit": "9b8304d5031cafac936a56281e144573a25fbbc9",
+      "sources": [
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/3.3.1 manuscript.md",
+          "sha256": "2f8b17f7624ecf6605d8f65a7076aacc95b39f2dabf3a1b4185d421247414a74"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/3.3.2 manuscript.md",
+          "sha256": "4098130b9a226b3007e5d2642f32ce47d0aa1667e1589a151fd8380a3efe043e"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/3.3.3 manuscript.md",
+          "sha256": "c2d21ba523488ab555fd9880718d4d986886a93fe938cabafd48c6865488a284"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/3.3.4 manuscript.md",
+          "sha256": "35868a050f130381e4dc600fbe4bd399eca23ab6e96d83c72662df9225126faf"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/Antwoorden.md",
+          "sha256": "aec2cc01f5ea47e8ba00df0eb9740701d8c355176044d0796346b6ca31e33c70"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/Docenteninformatie.md",
+          "sha256": "4b2951f5db50ba422a424a262d52cbc59b3cf566213c3bd175e71910a9f38c5e"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.4_target.svg",
+          "sha256": "01402846608a43c01a8e9aff1c049ebbc7055ab76762ec3ffe653d34517b1789"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.4_ans_35.svg",
+          "sha256": "cc2a05d54bfd7dfa630fbbffde5402030dd7cf96e7e2366ca125e490eae2bbd6"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.1 manuscript.md",
+          "sha256": "938160312edc425888dd54b3207c932e0aa396c59411a30e6679865eb14fded8"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.1 manuscript.md",
+          "sha256": "c13b390b105beaf18a7d3e83cb52fb04792f3927d207efe5616b01a3ce8fc366"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.3 manuscript.md",
+          "sha256": "d46652e4ed48a368246ed70a0f1df0206752d95775e52c6de25df0088167fbd2"
+        },
+        {
+          "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+          "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+        }
+      ],
+      "mechanical": {
+        "pptxSha256": "43f4ea80257bd6547ca00ff10d604fcb3a476180bc97bc65b1fa662248b6b9a0",
+        "pdfSha256": "7493997edea575c4700076de538f3d98fb09f5ac147121c3de9f580cbed0902c",
+        "slides": 21,
+        "pdfPages": 21,
+        "notes": 21,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          6,
+          21
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 3,
+      "nativeCharts": 2,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 2,
+        "references": 52,
+        "cellsCompared": 104,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx"
+        ]
+      },
+      "completedRootReview": true,
+      "artifacts": {
+        "pptx": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.4 Gemengde opgaven internationale handel – presentatie.pptx",
+        "pdf": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.4 Gemengde opgaven internationale handel – presentatie.pdf"
+      },
+      "coldBytesPreserved": false,
+      "assemblyTransformations": [
+        {
+          "repository": "4veco-platform",
+          "path": "build-scripts/content/book-3/presentation-334.mjs",
+          "originalSha256": "833d8185fda9bf0d0c6747492382a2e9e8fb2e712a29ba867f0be034870a546e",
+          "assembledSha256": "05cb880996beb4078643309d1345bd354898eb0e81fd9a3e5540a2ea08c47315",
+          "reason": "A/V textbox labels moved to clear whitespace in shared graph function on10/18; saved native charts unchanged. No source, lesson-text or teacher-note changes."
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.4 Gemengde opgaven internationale handel – presentatie.pdf",
+          "originalSha256": "cfab5bfffca265e8539771399cb4dd803313212a1bd2abc980f3ff4f7383ec3c",
+          "assembledSha256": "7493997edea575c4700076de538f3d98fb09f5ac147121c3de9f580cbed0902c",
+          "reason": "A/V textbox labels moved to clear whitespace in shared graph function on10/18; saved native charts unchanged. No source, lesson-text or teacher-note changes."
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.4 Gemengde opgaven internationale handel – presentatie.pptx",
+          "originalSha256": "06260360dae167f792c2775eb52a5edb3025cbcc96c47f2a6f441862abc225a4",
+          "assembledSha256": "43f4ea80257bd6547ca00ff10d604fcb3a476180bc97bc65b1fa662248b6b9a0",
+          "reason": "A/V textbox labels moved to clear whitespace in shared graph function on10/18; saved native charts unchanged. No source, lesson-text or teacher-note changes."
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/evidence/3.3.4-presentation.md",
+          "originalSha256": "b3ac71326ad32965caa65184883c55dd4ac1ef452458143388333a993ef04a98",
+          "assembledSha256": "e4413abae91bbbb38e71f071efb80082f6fc483de87070233fd999dbdb11d202",
+          "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+        }
+      ]
+    }
+  ],
+  "totalSlides": 350,
+  "unchangedBook2Decks": 12
+}

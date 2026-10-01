@@ -1,0 +1,49 @@
+{
+  "pptxSha256": "ac6fc11ae10c4c326a8d309f37e6974fa711142c0337117ffb4dc6609a1751a4",
+  "pdfSha256": "7c881bb80921377acad485e7bbcaf66b9f2414011f70893505817b8b0d225167",
+  "slides": 24,
+  "pdfPages": 24,
+  "notes": 24,
+  "minimumExplicitNotesFontPt": 14.0,
+  "pdfTextMismatches": [],
+  "overviewSlides": [
+    1,
+    14,
+    24
+  ],
+  "overviewTextAndGeometryParity": true,
+  "scope": "Coordinator repair built from the frozen cold author source. All six changed native PowerPoint pages inspected individually; all other native PNGs and all extracted slide/teacher-note text exactly unchanged from the complete original review.",
+  "allNativePowerPointPageRendersViewedIndividually": true,
+  "allTextAndTeacherNotesRead": true,
+  "teaching": {
+    "source": "Current-v3 manuscript/answers/teacher route checked, target27 Schoolrugzakken in Daro p115, complete context/table/figure6 and a-e.",
+    "overview": "Start21-22p112;22 visibly supported new exploration using108-109, explicitly returned to after13 beforebasis14. Basis23-24,independent25-26,target27,homework23-27. Bonus28/repeat29-30 extra. Overview1/14/24 parity verified; provisional two55-minute lessons not measured.",
+    "example": "Own Linde bicycle lamps Pw18,t4,V50-.5Q,A10+.5Q,€/lamp,Q/week. FreeQa16Qv64import48;taxP22Qa24Qv56import32O128. RectangleQ24-56/P18-22. AutarkyP30Q40;newt16 yields importprice34 but domesticP30Q40/import0/O0,notmechanicalPw+t. Reset t4 plus independent Pw16/t6 changes separated; jointP22 unchangedimport32. All math independently recomputed.",
+    "sequence": "Instrument definitions3 including importversusproductionquota, model assumptions and remitter4, prior import reading5, newtariffprice/unchangedcurves6, taxableunits7, receipt rectangle8, groupsandnetloss9, freepermitquota10, prohibitivetariffboundary11, separate/jointshocks12, owncheck13/practice14. Actual fulltargetsource15/table16/blanknativegivenfigureandqa-b17/qc-e18 beforeanswers19-23.",
+    "target": "Pw20,t10,P30,production40to60,consumption120to100,imports80to40,O400/week. Correct rectangleQ60-100/P20-30. Higher domesticproduction supports statedgoal but buyerspaymore,so noteveryonegains. Freepermitswithouttariff do notcreate same governmentreceipts. Targeta-e fully covered.",
+    "series": "Builds on332 fixed worldprice/importgap/CSPS and311-312 taxreceipts but explicitly changes taxablebase to remainingimports. Domestic A unchanged, own producers receiveP but do notremit importduty. Quota distinguished from315 productionquota. High-tariff case explicitlyreturnsclosedmarketequilibrium; no futuretheory assumed. Loss explained by costlydomesticproduction and foregoneconsumption; doesnot silentlyequateOandloss.",
+    "visual": "All native pages covered by complete original review plus all six changed final graph pages. Curve and point labels now have clear whitespace, price/quantity data and target geometry remain correct. No blocking findings.",
+    "limits": "No measured classroom timing, pupil mastery or formal target approval."
+  },
+  "resolvedFindings": [
+    {
+      "priority": "P2",
+      "slides": [
+        5,
+        6,
+        8,
+        11,
+        17,
+        20
+      ],
+      "finding": "Place V curve labels clear of the falling stroke in the shared graph function; also move E clear of the rising line on11. Verify the saved native pages. Data and teaching are correct."
+    }
+  ],
+  "completedColdHeads": {
+    "4veco-platform": "dfdb99259da38cf44440304e88879ef9b834efae",
+    "4veco-lessen": "3606c8f150604adb5ecb978086191efe90928a96"
+  },
+  "blockingFindings": [],
+  "reviewedSnapshot": "333-repair3",
+  "coordinatorRepair": "Supported label-position names and clear anchors;332 uses collinear interior anchors, finite decimal rounding and reviewed straight-scatter normalizer;333 uses separate label-only anchor coordinates. No source, lesson-text or teacher-note changes."
+}

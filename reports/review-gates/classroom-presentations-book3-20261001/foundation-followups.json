@@ -1,0 +1,7 @@
+{
+  "scope": "Non-blocking editorial observations only; no textbook edits authorized or made.",
+  "findings": [
+    {"id": "B3-GLOSSARY-W", "source": "edities/books34-v3/books/book-3/book-matter/back.md", "printedPage": 127, "finding": "Welfare-loss glossary wording covers the tax/missed-trade case; current paragraph3.1.3 correctly teaches the extra-trade subsidy case. Broaden the glossary in a later textbook editing task.", "review": "Independent source-audit.md"},
+    {"id": "B3-331-PRINT-HEADING", "source": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf", "printedPages": [88,89,90], "finding": "Literal ### appears at run-in heading transitions. The presentation uses proper slide headings and preserves the substantive teaching. Part A render cleanup is separate.", "review": "Detected by cold331 author; coordinator independently confirmed all3 PDF text occurrences."}
+  ]
+}

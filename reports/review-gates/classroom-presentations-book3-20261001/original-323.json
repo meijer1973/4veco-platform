@@ -1,0 +1,38 @@
+{
+  "scope": "Independent root review bound to the completed cold handoff. Exact PPTX/PDF bytes match the individually reviewed native PowerPoint renders and read notes.",
+  "pptxSha256": "8be3c2405376b441b9e9a70260148c403dbd90d68c9884c9c38c88e69a9c097a",
+  "pdfSha256": "2dfe86b5a7b7f634e22380bf222cbc6e243abfe01e3ee247960d70268f209ed4",
+  "slides": 26,
+  "allNativePowerPointPageRendersViewedIndividually": true,
+  "allTextAndTeacherNotesRead": true,
+  "minimumExplicitNotesFontPt": 14.0,
+  "overviewSlides": [
+    1,
+    14,
+    26
+  ],
+  "overviewTextAndGeometryParity": true,
+  "pdfTextMismatches": [],
+  "teaching": {
+    "source": "Current v3 3.2.3 manuscript fully read; target27 Korrels voor kwekerijen a-f p77. Historical long-run-equilibrium scratch draft is not reviewed/accepted as this paragraph.",
+    "overview": "Start20-21p73,21 visibly new supported exploration with p70 and returnafter13/before14. Basis22-24 all retained,ind25-26,target27;homework22-27. Bonus28/repeat29-30 extra. Two-lesson provisional timing unmeasured.",
+    "example": "Own havervlokken P8,TK.04q²+2q+100,kg/week,capacity100,fixed100 unavoidable. MK.08q+2,opt75. At50MK6<8,at90MK9.2>8, both feasible. TO600TK475profit125GTK19/3,height5/3. Atq50GTK6profit100, so minimumGTK is not max totalprofit. Zero-100. Capacity60 changes only feasible interval,MK60=6.8<8 choose60; then explicitly reset capacity100. Separate P10=>q100; separatefixed180=>sameq75profit45. Independently recomputed.",
+    "sequence": "Derivative recalled4, new marginal economic direction taught5 before candidate/feasibility6, totals7, perkgprofit8 and rectangle9, capacity10, zero11, changes12, minGTKcheck13. Practice14. Full actualtarget context15/nativegivenfigure16/questionsa-f17-18 BEFORE answers19-25;closure26.",
+    "target": "P16,TK.04q²+4q+400,MK.08q+4,opt150<=200;125MK14<16 and175MK18>16. TO2400TK1900profit500,GTK38/3; rectangle0-150 and38/3-16,500/week. Zero-400. Newcap120 means150 infeasible,MK12013.6<16; choose120 without unnecessarynewprofit calculation. All numbers/units match source.",
+    "series": "Correct current323 supplies marginal choice and profit-area bridge needed by324 after321 price-taking and322 derivatives. Explicit point-versus-interval reminder4, units/perkgheight times kg/week taught8-9. Prior total-profit method retained. No untaught entry/exit or implicit normal-profit theory. No blocking textbook gap found.",
+    "visual": "All26 native pages and all teacher notes covered. Final10/25 have clear capacity markers and price labels; rectangles and all economic data unchanged. No clipping, ambiguous boundaries or label collisions remain.",
+    "limits": "No measured classroom timing, pupil mastery, formal target approval or full companion acceptance claim."
+  },
+  "blockingFindings": [],
+  "resolvedFindings": [
+    "The author independently discovered the initial v2 source mismatch and rebuilt from current v3 without coordinator coaching.",
+    "Author autonomously moved price labels clear of capacity markers on slides10/25. Both final native pages individually inspected; other24 PNGs and all extracted slide/teacher-note text unchanged from the complete prior review. Packaging IDs differ."
+  ],
+  "pdfPages": 26,
+  "notes": 26,
+  "completedColdHeads": {
+    "4veco-platform": "ab0a8a9243b9ae61fe9c1e2e406315f512b73393",
+    "4veco-lessen": "897b9ea6361e58964b202b13d8d7218b32682e80"
+  },
+  "reviewedSnapshot": "323-current3"
+}

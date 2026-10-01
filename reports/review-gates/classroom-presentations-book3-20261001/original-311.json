@@ -1,0 +1,34 @@
+{
+  "scope": "Independent root review bound to completed cold handoff; original PPTX/PDF unchanged.",
+  "pptxSha256": "310b032f9919d610e7d09d8d77f95dcca7eb500e46ee1dfb513aa43cb3f2ac1d",
+  "pdfSha256": "d9bd24babe1e502ce1415a55da86aeefa4f143dc32bb8aeff2bb986cd5769e91",
+  "slides": 24,
+  "allNativePowerPointPageRendersViewedIndividually": true,
+  "allTextAndTeacherNotesRead": true,
+  "minimumExplicitNotesFontPt": 14.0,
+  "overviewSlides": [
+    1,
+    14,
+    24
+  ],
+  "overviewTextAndGeometryParity": true,
+  "pdfTextMismatches": [],
+  "teaching": {
+    "source": "Current Book3 v3 3.1.1 manuscript, real target7 a-e",
+    "overview": "Start1-2 p9; 2 visibly supported by p6-9; notes explicitly return to2 at slide13 before overview14/practice. Homework3-7, correct basis3-4.",
+    "example": "Houten puzzels, authored, demand26-.2Q/supply2+.1Q/t6. Free80@10, after60/Pc14/Pp8, burdens4+2. Separate context/data from all assigned work.",
+    "sequence": "New two-price meaning2; separate model3; algebra and graph4-5; derive shifted supply6-7; solve8, bothprices9, plotwig10, incidence11, diagnostic12-13; target context15, a-c16, d-e and blank native graph17; answers18-23; closure24.",
+    "target": "Independent exact arithmetic confirms Q060,P08,Qtax50,Pc10,Pp7, buyer2/seller1. All a-e and source facts available before answers.",
+    "visual": "All24 saved native PowerPoint render pages covered. No material clipping. Native plots show the correct geometry, units and explicit V/A/A+t curve labels. The author independently repaired disappearing curve labels during its own finalization; no root coaching or edit.",
+    "limits": "No classroom timing or pupil mastery claim; native PowerPoint actions were by author, root inspected their render output and saved file."
+  },
+  "blockingFindings": [
+    "Follow-up rule audit: slide7 introduces A to A+t but omits the horizontal shift arrow required by economic-graph.md. Economics and calculations remain correct. Preserve original cold output; require corrected artifact and fresh instruction test before final acceptance."
+  ],
+  "renderReview": "24 native PowerPoint renders individually viewed: v2 all pages; six changed v4 graph pages (5,7,10,17,21,22) individually re-viewed, all other18 PNG bytes identical. All slide text and notes identical across v2/v4. Completed cold author files match both reviewed artifact hashes.",
+  "authorIteration": "Root saw missing native curve labels in provisional v2; author separately detected and fixed them in v4. This is an internal cold-author repair, not a final uncoached-handoff failure.",
+  "coldHandoff": {
+    "platform": "bcaac9416a3d160004a3afb5846ee5b9904b4fea",
+    "lessons": "0b68c74a4ddb7db1c6dd1de7aeed417e8fb79c1f"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "pptxSha256": "8f897b27a3d821f2dcaf231e6d1759fbad8a67f19216034b7a6632dc9e1a1ce9",
+  "pdfSha256": "5eff53005d23c8e130e3f2704849405e08bcd62b4eb7a34c4d1f89be8606f909",
+  "slides": 22,
+  "pdfPages": 22,
+  "notes": 22,
+  "minimumExplicitNotesFontPt": 14.0,
+  "pdfTextMismatches": [],
+  "overviewSlides": [
+    1,
+    6,
+    22
+  ],
+  "overviewTextAndGeometryParity": true,
+  "scope": "Independent root review of complete cold retest bound to exact final PPTX/PDF and completed commits; all native pages and substantive teacher notes covered.",
+  "allNativePowerPointPageRendersViewedIndividually": true,
+  "allTextAndTeacherNotesRead": true,
+  "blockingFindings": [],
+  "teaching": {
+    "source": "Complete current-v3 target 35 source A/B, both given graphs, and questions a-e from printed pages 82-83 independently checked. All source material slides 7-10 and all questions 11-12 precede answers 13-21. Short-period unchanged supply and firm count explicit; no entry/exit substitution.",
+    "overview": "Mixed start 31 printed page 79 retrieves price-taking, equilibrium and P=GO=MO; visible support pages 54-56. All 31-37 assigned with preparation, target, bonus and repetition roles. Identical overview at 1/6/22 apart from current phase. No invented basis/independent numbering.",
+    "example": "Own glass-granulate market V9000-500P,A1000P gives P6,Q6000 kg/week. Firm TK=.025q²+2q+90, capacity100, MK=.05q+2 gives q80; feasible neighbors60/90 have MK5/6.5. TO480,TK410,profit70,GTK5.125; profit rectangle q0-80,price5.125-6. Unavoidable fixed cost and zero-production profit -90 explicit in notes. Separate capacity70 is an explicit single change; MK70=5.5<6, best feasible70. All independently recomputed.",
+    "sequence": "Recap market2, firm marginal choice3, totals/GTK/profit rectangle4 and capacity5 before mixed practice6. New mathematical operations are not introduced here. Derivative, continuous point marginal versus interval change and total profit are explicitly retrieved from 3.2.1-3.2.3 and Book2.",
+    "target": "Market V0=30000-2500P,A=2500P-10000 gives P8,Q10000; given firm q100,TO800,TK800,profit0. V1=50000-2500P with unchanged A gives P12,Q20000. MK=.04q+4, optimum200<=capacity250, TO2400,TK1800,profit600,GTK9. Rectangle q0-200 and P9-12 exactly; zero output -200. Left/right marginal checks150/250 correctly show MK10/14; at capacity the teacher note explicitly discusses feasible approaches from below rather than production beyond250. Both Q and q rise100% using their own old denominator; distinct objects and units explicit.",
+    "visual": "All22 native 1600x900 pages individually inspected. Market labels have whitespace from curves and E1. Native profit rectangles have correct boundaries and units. No clipping, ambiguous graph labels or blocking visual defect found.",
+    "series": "Market Q versus firm q established in321, differentiation in322, marginal optimum, feasibility, zero comparison and profit rectangle in323 all precede this mixed synthesis. Prior price/quantity equilibrium and percentage change retrieved. No blocking textbook prerequisite gap found.",
+    "limits": "No measured classroom timing, pupil mastery, formal target approval or full companion acceptance claim."
+  },
+  "completedColdHeads": {
+    "4veco-platform": "c6d4c3e6cb648d2649b85c38aae3e32d7daf2dfe",
+    "4veco-lessen": "cc9acb3b9258f1b7912ee771c730c9a216beab3c"
+  },
+  "reviewedSnapshot": "retest-324-v2"
+}

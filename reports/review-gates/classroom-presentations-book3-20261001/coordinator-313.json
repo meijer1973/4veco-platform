@@ -1,0 +1,39 @@
+{
+  "scope": "Independent root review bound to the completed cold handoff. Exact PPTX/PDF bytes match the individually reviewed native PowerPoint renders and read notes.",
+  "pptxSha256": "0a021437b110af79268df39ef1ceccccc0f5eda3874008552458305b9da71444",
+  "pdfSha256": "719e5c07b3163073302913d2f50301f7f222c274a78ec0efc66a1a06297f5903",
+  "slides": 29,
+  "allNativePowerPointPageRendersViewedIndividually": true,
+  "allTextAndTeacherNotesRead": true,
+  "minimumExplicitNotesFontPt": 14,
+  "overviewSlides": [
+    1,
+    16,
+    29
+  ],
+  "overviewTextAndGeometryParity": true,
+  "pdfTextMismatches": [],
+  "chartWorkbookCheck": {
+    "ok": true,
+    "charts": 9,
+    "references": 164,
+    "cellsCompared": 1602
+  },
+  "teaching": {
+    "source": "Current Book3 v3 3.1.3 manuscript, real target25 Cursusplaatsen a-e on bookpage30; target and nearby practice read directly.",
+    "overview": "Start19-20 p26, both visibly exploratory with theory19:p23/20:p24. Notes distinguish tax retrieval from new subsidy sign/base, return after15 before practice16. Correct basis21,22,22A; independent23-24;target25;HW21,22,22A,23,24,25. 22A may precede22c; extras26-27 remain extra.",
+    "example": "Separate authored fietscontroles, weekly Q, Pc32-.20Q, Pp8+.10Q, subsidy6. Free80@16; new100/Pc12/Pp18; benefits4/2; U600 on all100. CS/PS640/320 to1000/500; net960 to900; W60. Values independently recomputed from the displayed functions.",
+    "sequence": "Subsidy versus tax payment meaning2; authored model and explicit no-external-benefits condition3; free equilibrium4; derive buyer-price supply5 and graph6; new Q/two prices7-8; per-unit benefit9; all-sales spending10; CS11/PS12; old/new three-account ledger13; excess-trade loss with concrete WTP/MK comparison14; diagnostic and return15; practice16. Full target context17, a-c18,d-e19, blank native graph20 before answers21-28; closure29.",
+    "target": "All a-e covered with source assumptions, original functions and units. Qsub70/Pc12/Pp15; U210/week; benefits2/1; CS490PS245; ledger525 vs540; W15. Correct spending rectangle Q0-70/P12-15. Final welfare claim qualified by absent external benefits.",
+    "series": "Builds on actual311/312 two-price and surplus teaching. New sign explicitly reverses Pc-Pp=t to Pp-Pc=s. Preserves original A meaning, derives A-s in buyer prices, explains government outflow and does not equate U with W. Demonstrates loss from excess trade, rather than incorrectly carrying over only tax-lost transactions. Target resets authored data. No missing prior teaching or contradiction found in the reviewed311-313 prefix.",
+    "visual": "All29 final-v3 native PowerPoint render pages individually inspected. All nine graphs have straight correct boundaries and readable direct labels; native tables and text have no material clipping. Target axis extends slightly for label space, with unchanged functions/coordinates and disclosed note. No root coaching or edits.",
+    "limits": "No measured classroom timing, pupil mastery, formal target approval or full companion acceptance claim."
+  },
+  "blockingFindings": [],
+  "reviewedRevision": "Individually rechecked all seven changed native PowerPoint pages6,8,10,11,12,14,27 in v6. Other22 PNGs identical to fully reviewed v3. Only note6 changed: read and checked P10 gives oldA Q20 versus A-s Q80. Arrow points right at common buyerprice, distinct from subsidy wedge. Other changes add readable price/quantity guides without changing calculations.",
+  "completedColdHeads": {
+    "4veco-platform": "de382802bb8ec963d4cfb24389962f7609dbd16e",
+    "4veco-lessen": "6f7061a5f1d02c00c098fc4e60891b9e0c7141ba"
+  },
+  "reviewedSnapshot": "313-v6"
+}

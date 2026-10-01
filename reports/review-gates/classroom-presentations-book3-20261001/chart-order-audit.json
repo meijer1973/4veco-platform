@@ -1,0 +1,104 @@
+{
+  "scope": "Focused saved scatter-series/label child-order audit, not full OOXML validation.",
+  "artifacts": [
+    {
+      "paragraph": "3.1.1",
+      "pptxSha256": "a478cc17fd25fdf98234a6ea049f71ad5ed0a08415f72b2258327d7a26e52156",
+      "scatterSeries": 57,
+      "labelCollections": 30,
+      "failures": []
+    },
+    {
+      "paragraph": "3.1.2",
+      "pptxSha256": "69ce8b56965aa27bfa212b6bf3fe4f4736df0a5fe695397798988cd693844880",
+      "scatterSeries": 366,
+      "labelCollections": 67,
+      "failures": []
+    },
+    {
+      "paragraph": "3.1.3",
+      "pptxSha256": "0a021437b110af79268df39ef1ceccccc0f5eda3874008552458305b9da71444",
+      "scatterSeries": 82,
+      "labelCollections": 47,
+      "failures": []
+    },
+    {
+      "paragraph": "3.1.4",
+      "pptxSha256": "db91b3c26e9d262bb01771c21fc1ffde0988543cddf8e4ecc93f1ee80a3a71dc",
+      "scatterSeries": 29,
+      "labelCollections": 34,
+      "failures": []
+    },
+    {
+      "paragraph": "3.1.5",
+      "pptxSha256": "df0195e9819f0e1aeba85447aab91a987a719b16b4dcaa009023405e6c932e24",
+      "scatterSeries": 59,
+      "labelCollections": 21,
+      "failures": []
+    },
+    {
+      "paragraph": "3.1.6",
+      "pptxSha256": "dbe1a8f91790ee624bacb3b5745167f7bc3a4f87900c550ffffbeb0737a7bcab",
+      "scatterSeries": 26,
+      "labelCollections": 4,
+      "failures": []
+    },
+    {
+      "paragraph": "3.2.1",
+      "pptxSha256": "a50e5915a895dd850add3b55c52713b99e196f3f8758cc0fd5a8e38702058b0c",
+      "scatterSeries": 29,
+      "labelCollections": 30,
+      "failures": []
+    },
+    {
+      "paragraph": "3.2.2",
+      "pptxSha256": "368153f3f8c8b87a52908eb16153ada8cbaa4bf5d9f82c4e0c45c709b4d8d610",
+      "scatterSeries": 0,
+      "labelCollections": 0,
+      "failures": []
+    },
+    {
+      "paragraph": "3.2.3",
+      "pptxSha256": "b91cff8a32a3b54dce83d39bbb1bf4c48363ff5d754174b87e32d73ea3b2534a",
+      "scatterSeries": 69,
+      "labelCollections": 36,
+      "failures": []
+    },
+    {
+      "paragraph": "3.2.4",
+      "pptxSha256": "8f897b27a3d821f2dcaf231e6d1759fbad8a67f19216034b7a6632dc9e1a1ce9",
+      "scatterSeries": 83,
+      "labelCollections": 28,
+      "failures": []
+    },
+    {
+      "paragraph": "3.3.1",
+      "pptxSha256": "ba077e29cc1a7e398f21398d6410a14665ba856d5fd9b6eef859920e4d3ce2c3",
+      "scatterSeries": 0,
+      "labelCollections": 0,
+      "failures": []
+    },
+    {
+      "paragraph": "3.3.2",
+      "pptxSha256": "338a2c361f478dccfa72d3d6a49b989d4cee5ec110c4adfb0f334e369a406c3f",
+      "scatterSeries": 25,
+      "labelCollections": 23,
+      "failures": []
+    },
+    {
+      "paragraph": "3.3.3",
+      "pptxSha256": "ac6fc11ae10c4c326a8d309f37e6974fa711142c0337117ffb4dc6609a1751a4",
+      "scatterSeries": 87,
+      "labelCollections": 30,
+      "failures": []
+    },
+    {
+      "paragraph": "3.3.4",
+      "pptxSha256": "43f4ea80257bd6547ca00ff10d604fcb3a476180bc97bc65b1fa662248b6b9a0",
+      "scatterSeries": 26,
+      "labelCollections": 2,
+      "failures": []
+    }
+  ],
+  "passed": true
+}

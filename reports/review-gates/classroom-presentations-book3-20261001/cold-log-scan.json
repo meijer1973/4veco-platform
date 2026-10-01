@@ -1,0 +1,158 @@
+[
+  {
+    "paragraph": "3.1.1",
+    "run": "311",
+    "logSha256": "9be53a27a825b43598d866d734c76aa179117defb915075503e69f10e68ba7d7",
+    "completedCommands": 66,
+    "crossWorktreePathHits": [],
+    "scope": "Heuristic path scan of exposed completed command events. Hits need manual inspection; absence is not a filesystem access-control proof."
+  },
+  {
+    "paragraph": "3.1.2",
+    "run": "312",
+    "logSha256": "ac04ceb41f82ad444c9e9a6bd49f0b33f7366a9a2d770e059c17e84f36769de3",
+    "completedCommands": 74,
+    "crossWorktreePathHits": [],
+    "scope": "Heuristic path scan of exposed completed command events. Hits need manual inspection; absence is not a filesystem access-control proof."
+  },
+  {
+    "paragraph": "3.1.3",
+    "run": "313",
+    "logSha256": "e9b8dd4bcb330498e8e73a8cb3ded84530f69df7ed8031a47ec333a627b216d6",
+    "completedCommands": 98,
+    "crossWorktreePathHits": [
+      {
+        "command": "\"C:\\\\Users\\\\meije\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"@('C:/wt/ppt/4veco-platform/node_modules/jsdom','C:/wt/ppt/.book3/311/4veco-platform/node_modules/jsdom','C:/wt/ppt/.book3/312/4veco-platform/node_modules/jsdom') | ForEach-Object { [pscustomobject]@{Path=\"'$_;Exists=(Test-Path $_)} }; Get-Content C:/temp/ppt-313/review-log.txt -Tail 18; Get-Content package.json -TotalCount 18; Get-Content build-scripts/maintenance/check-classroom-edition.js -Tail 28'",
+        "peerKeys": [
+          "311",
+          "312"
+        ],
+        "possibleRootDeckRead": false
+      }
+    ],
+    "scope": "Heuristic path scan of exposed completed command events. Hits need manual inspection; absence is not a filesystem access-control proof."
+  },
+  {
+    "paragraph": "3.1.4",
+    "run": "314",
+    "logSha256": "066132aae1525b3d313332276139c23b50d2289401a964e004b1535bd73d5c4f",
+    "completedCommands": 59,
+    "crossWorktreePathHits": [],
+    "scope": "Heuristic path scan of exposed completed command events. Hits need manual inspection; absence is not a filesystem access-control proof."
+  },
+  {
+    "paragraph": "3.1.5",
+    "run": "315",
+    "logSha256": "f0d097250ad94c29ae4d1f0becd32e33475da710354f10b865351684f9a8c6cc",
+    "completedCommands": 48,
+    "crossWorktreePathHits": [
+      {
+        "command": "\"C:\\\\Users\\\\meije\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command '$env:NODE_PATH='\"'C:/wt/ppt/4veco-platform/node_modules'; node C:/wt/ppt/4veco-platform/node_modules/jest/bin/jest.js --runInBand build-scripts/maintenance/check-classroom-edition.test.js; & C:/Users/meije/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe build-scripts/content/book-3/check-presentation-315.py 'C:/wt/ppt/.book3/315/scratch-315/v2/final/3.1.5 Minimumprijs en quota – presentatie.pptx'; & C:/Users/meije/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe build-scripts/presentations/chart_workbooks.py 'C:/wt/ppt/.book3/315/scratch-315/v2/final/3.1.5 Minimumprijs en quota – presentatie.pptx'; \"'$geo=Get-Content C:/wt/ppt/.book3/315/scratch-315/v2/render/text-geometry.json -Raw | ConvertFrom-Json; $geo | Where-Object {($_.boundHeight -gt ($_.height+2)) -or ($_.boundWidth -gt ($_.width+2))} | Select-Object slide,name,height,boundHeight,width,boundWidth | ConvertTo-Json'",
+        "peerKeys": [],
+        "possibleRootDeckRead": true
+      },
+      {
+        "command": "\"C:\\\\Users\\\\meije\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"@'\nfrom pathlib import Path\nimport hashlib,json\nplatform=Path.cwd(); lessons=platform.parent/'4veco-lessen'\nevidence=lessons/'edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/evidence/3.1.5-presentation.md';evidence.parent.mkdir(exist_ok=True)\nbuilder=platform/'build-scripts/content/book-3/presentation-315.mjs'\nmanifest=platform/'build-scripts/content/book-3/presentation-315.manifest.json'\ntext='''# §3.1.5 Minimumprijs en quota — classroom presentation\n\nScoped Part B classroom output. 25 slides, editable PPTX and matching slide PDF.\nTarget: actual opgave 43, Paddenstoelen in kratten, all subquestions a–e.\nNo textbook bytes, targets, historic receipt or protected legacy Module 3 output changed.\n\n## Sources and assignment\n\n- Lesson source commit: \"'`9b8304d5031cafac936a56281e144573a25fbbc9`.\n- Platform baseline: `34464fb6091f721f7a87e8d1bb3165f758770799`.\n- Edition: selected Books 3/4 v3, including the current signed retrieval/follow-up revisions.\n- Source paths and nine SHA-256 hashes, goals, assignment, prerequisite trace and teaching-example data: platform `build-scripts/content/book-3/presentation-315.manifest.json`.\n- Authoring source: platform `build-scripts/content/book-3/presentation-315.mjs`.\n- Start: 37–38, complete student book printed p. 42. Both are supported exploration with theory p. 39–40 and a return after instruction.\n- Basis: 39, 40 and 40A (p. 43–44). The teacher can place 40A before 40c.\n- Independent: 41–42 (p. 45). Target: 43 (p. 46).\n- Homework: 39, 40, 40A, 41, 42 and 43, **Maken en nakijken**. Bonus 44 and herhaling 45 remain extra.\n- Printed page facts verified against complete student-PDF page footers and full-page renders. Chapter pages 38/42 correspond to complete-book pages 42/46; the deck uses the latter.\n\n## Content and teacher read-through\n\nOverviews 1, 15 and 25 use one shared function and match in text and geometry, except phase emphasis and slide number. Notes scaffold Q(P) versus P(Q), identify new start operations, return to the start after teaching, and retain all guided practice.\n\nSlides 3–14 use a separate authored kruidenpotten example, identified on each slide and in notes. It demonstrates free equilibrium, binding/nonbinding minimum price, desired versus sold quantities, no purchase/full purchase, expenditure rectangle, full replacement by a quota, price on V versus marginal cost on A, a nonbinding quota, and a calculated comparison. Assigned practice is not used as the explanation.\n\nSlides 16–19 contain the real target context, editable reproduction of its complete base graph and every subquestion before solutions. Slides 20–24 solve every requested operation: Q0=60, P0=14, binding minimum16; Qv40, Qa80, surplus40, sales80; purchases40, U640 per week; replacement quota40, price16, production40, U0; two calculated differences. Units and the assumptions about full purchase, full quota sales and free rights are retained.\n\nTeacher notes were read alongside the individual slide renders: explanation, prompt, misconception, transition and sources are present on all 25 slides. No claim of measured narration time or classroom mastery is made.\n\n## Rendered and executable checks\n\n- Artifact-tool finalizer: package PASS, zero layout findings, native object checks and reimport PASS.\n- Microsoft PowerPoint opened the saved final PPTX without a repair prompt, rendered every slide at 1600×900 and exported the matching 25-page PDF. No LibreOffice conversion was needed.\n- All slide renders individually inspected at readable size; no remaining clipping, wrapping or unintended overlap. PowerPoint text-geometry overflow check: zero findings.\n- Four native tables and seven native XY charts, with embedded data workbooks. `chart_workbooks.py`: 118 references and 250 cells agree.\n- `check-presentation-315.py`: saved chart equations, domains, free-equilibrium guides, floor and quota guides, expenditure rectangle and hatch coordinates, native objects, 25 teacher notes at ≥14pt and overview parity PASS. Expected series sets are required, so absent geometry fails.\n- All 25 PDF pages rasterized with Poppler. PDF text is present on every page; raster comparison against PowerPoint PNGs has mean absolute pixel difference at most 3.882/255. Dense question and graph pages inspected separately.\n- `straight-scatter.py` makes straight-series intent and suppressed default labels explicit in the draft before finalization. This repaired PowerPoint'\"'s initial curved guides/rectangle and extra automatic labels. Native data and custom curve labels remain editable. Independent checks verified idempotence and no change to deliberately smooth chart types.\n- Focused classroom-inventory Jest suite: 25/25 PASS. Runtime used existing installed dependencies; no replacements installed.\n\n## Independent review\n\nReviewer: \"'`independent_review`, 1 October 2026. All 25 revision-2 slide renders, textbook sources, answer model, teacher route, source hashes, native chart data and bounded inventory change reviewed. One finding: slide 6 repeated start38'\"'s €9 lower bound. Resolved to €10 in slide, notes and manifest. Reviewer inspected revision-3 slide6 and confirmed all 24 other render PNGs are byte-identical. Final conclusion: **PASS, no blocking findings**. Suggested strict expected-series checking was also added to the artifact checker and rerun.\n\nThe inventory adapter admits only additional presentation PPTX/PDF and matching evidence in an existing sealed Books3/4 paragraph export directory. It requires the sealed manuscript and student PDF in the same chapter. It still verifies all original signed bytes and rejects unknown/missing/replaced protected files.\n\n## Limits and publication\n\nThis is a classroom deck, not full web-companion acceptance. The source target remains \"'`candidate_review_ready`; this deck review does not confer target finality. The teacher guide provisionally advises two 55-minute lessons with possible spillover, and identifies §3.1.5 as a timing conflict. Neither a 55-minute nor 110-minute fit is evidenced. Finish the complete practice route in follow-up time or homework.\n\nPaired task branch: `codex/ppt-b3-315-20261001`; worktree owner: `codex-315`. Source and artifacts are prepared for review on task branches, with no merge or deployment authority implied. Commit/PR state is reported in the delivery message and PRs.\n\n## Final artifact hashes\n\n| File | SHA-256 |\n|---|---|\n| `3.1.5 Minimumprijs en quota – presentatie.pptx` | `df0195e9819f0e1aeba85447aab91a987a719b16b4dcaa009023405e6c932e24` |\n| `3.1.5 Minimumprijs en quota – presentatie.pdf` | `33b14102a577cb940b1a1fad916d0212a0c8b3783229fa731515ac4908761458` |\n'\"'''\nevidence.write_text(text,encoding='utf-8')\n'@ | & C:/Users/meije/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe -; git add build-scripts/content/book-3/presentation-315.mjs build-scripts/content/book-3/presentation-315.manifest.json build-scripts/content/book-3/check-presentation-315.py build-scripts/presentations/straight-scatter.py build-scripts/maintenance/check-classroom-edition.js build-scripts/maintenance/check-classroom-edition.test.js; git -C ../4veco-lessen add RESEARCH_AGENT_MAP.md 'edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.5 Minimumprijs en quota – presentatie.pptx' 'edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.5 Minimumprijs en quota – presentatie.pdf' edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/evidence/3.1.5-presentation.md; \"'$env:NODE_PATH='\"'C:/wt/ppt/4veco-platform/node_modules'; node build-scripts/maintenance/check-classroom-edition.js --require-tracked; & C:/Users/meije/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe build-scripts/content/book-3/check-presentation-315.py '../4veco-lessen/edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.5 Minimumprijs en quota – presentatie.pptx'; node build-scripts/workflows/check-paragraph-lane-scope.js --help\"",
+        "peerKeys": [],
+        "possibleRootDeckRead": true
+      }
+    ],
+    "scope": "Heuristic path scan of exposed completed command events. Hits need manual inspection; absence is not a filesystem access-control proof."
+  },
+  {
+    "paragraph": "3.1.6",
+    "run": "316",
+    "logSha256": "cec80f00b81cc7348136e498c512fa5ffa34c9f529e53c4284bc140b73cffb5e",
+    "completedCommands": 55,
+    "crossWorktreePathHits": [],
+    "scope": "Heuristic path scan of exposed completed command events. Hits need manual inspection; absence is not a filesystem access-control proof."
+  },
+  {
+    "paragraph": "3.2.1",
+    "run": "321",
+    "logSha256": "98b446fc33b2f91e27ea52fa1f226b464f4fa8cbe1d5e1e864f5d71aaeb20c55",
+    "completedCommands": 77,
+    "crossWorktreePathHits": [],
+    "scope": "Heuristic path scan of exposed completed command events. Hits need manual inspection; absence is not a filesystem access-control proof."
+  },
+  {
+    "paragraph": "3.2.2",
+    "run": "322",
+    "logSha256": "4948436a2a73ddb287e32f36a222e5fe217c090cb0b4636806cbcb29b352427f",
+    "completedCommands": 60,
+    "crossWorktreePathHits": [],
+    "scope": "Heuristic path scan of exposed completed command events. Hits need manual inspection; absence is not a filesystem access-control proof."
+  },
+  {
+    "paragraph": "3.2.3",
+    "run": "323",
+    "logSha256": "5bafb3321a3f8145e897154738f1046af2a0cd2ad598aeb07ba88271adcea363",
+    "completedCommands": 86,
+    "crossWorktreePathHits": [],
+    "scope": "Heuristic path scan of exposed completed command events. Hits need manual inspection; absence is not a filesystem access-control proof."
+  },
+  {
+    "paragraph": "3.2.4",
+    "run": "324",
+    "logSha256": "17840c26a3accdd3a32d99ca5a38a616e338f780d73bd77d8a130e8f5fb2fb56",
+    "completedCommands": 49,
+    "crossWorktreePathHits": [],
+    "scope": "Heuristic path scan of exposed completed command events. Hits need manual inspection; absence is not a filesystem access-control proof."
+  },
+  {
+    "paragraph": "3.3.1",
+    "run": "331",
+    "logSha256": "1bc670b2c2bb1d96e5e78c419ee4192e5c649cda53a146fc3bf5a53a9057a3ad",
+    "completedCommands": 58,
+    "crossWorktreePathHits": [],
+    "scope": "Heuristic path scan of exposed completed command events. Hits need manual inspection; absence is not a filesystem access-control proof."
+  },
+  {
+    "paragraph": "3.3.2",
+    "run": "332",
+    "logSha256": "9952db477d30fa234ea6d4356a6003df1c3ca19e345b299df5ff55d2d74461de",
+    "completedCommands": 74,
+    "crossWorktreePathHits": [],
+    "scope": "Heuristic path scan of exposed completed command events. Hits need manual inspection; absence is not a filesystem access-control proof."
+  },
+  {
+    "paragraph": "3.3.3",
+    "run": "333",
+    "logSha256": "d3dd06d5768e7469528dd2c243a541e59ea4bd921ed379c4b863d97cac77b6d0",
+    "completedCommands": 60,
+    "crossWorktreePathHits": [],
+    "scope": "Heuristic path scan of exposed completed command events. Hits need manual inspection; absence is not a filesystem access-control proof."
+  },
+  {
+    "paragraph": "3.3.4",
+    "run": "334",
+    "logSha256": "f3c46a6247acf55f778a9837d0cc2256e5873f10ab71c4c2c63aa463d955a16e",
+    "completedCommands": 47,
+    "crossWorktreePathHits": [],
+    "scope": "Heuristic path scan of exposed completed command events. Hits need manual inspection; absence is not a filesystem access-control proof."
+  },
+  {
+    "paragraph": "3.1.1",
+    "run": "retest-311",
+    "logSha256": "1b3234f03bb94a7d0686a9621419b76af4e624f4d4ecc1fea2f37aff8bc7b98e",
+    "completedCommands": 74,
+    "crossWorktreePathHits": [],
+    "scope": "Heuristic path scan of exposed completed command events. Hits need manual inspection; absence is not a filesystem access-control proof."
+  },
+  {
+    "paragraph": "3.2.3",
+    "run": "retest-323",
+    "logSha256": "849a66e0e1c8789dd85febbcb2c279f3aaccb72f65f0fa42a39e6dafb22d6aa9",
+    "completedCommands": 53,
+    "crossWorktreePathHits": [],
+    "scope": "Heuristic path scan of exposed completed command events. Hits need manual inspection; absence is not a filesystem access-control proof."
+  },
+  {
+    "paragraph": "3.2.4",
+    "run": "retest-324",
+    "logSha256": "7119134dfeb77a41c78641ff43233f7c08e3615724cce57f8d1f5a6ed24e8931",
+    "completedCommands": 61,
+    "crossWorktreePathHits": [],
+    "scope": "Heuristic path scan of exposed completed command events. Hits need manual inspection; absence is not a filesystem access-control proof."
+  }
+]

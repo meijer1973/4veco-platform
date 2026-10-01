@@ -1,0 +1,44 @@
+{
+  "pptxSha256": "b91cff8a32a3b54dce83d39bbb1bf4c48363ff5d754174b87e32d73ea3b2534a",
+  "pdfSha256": "65e2cf7b285efdbf14db0a1bc96bf541d5c9c4a5aa4fcf7ff2c0514a7603f1be",
+  "slides": 27,
+  "pdfPages": 27,
+  "notes": 27,
+  "minimumExplicitNotesFontPt": 14.0,
+  "pdfTextMismatches": [],
+  "overviewSlides": [
+    1,
+    14,
+    27
+  ],
+  "overviewTextAndGeometryParity": true,
+  "scope": "Independent root review of complete cold retest bound to exact final PPTX/PDF and completed commits; all native pages and substantive teacher notes covered.",
+  "allNativePowerPointPageRendersViewedIndividually": true,
+  "allTextAndTeacherNotesRead": true,
+  "teaching": {
+    "source": "Current-v3 profit maximization, not historical long-run equilibrium. Target27 Korrels voor kwekerijen printed77 independently checked: full context15/native given figure16/questionsa-f17-18 precede answers19-26. Complete actual exercise, no invented long-run prerequisite.",
+    "overview": "Start20-21 printed73. New reasoning in21 identified as exploration with visible theory69-70 and return after instruction. Homework22-27 retains all three basis22-24 and independent25-26. Overview1/14/27 parity. Bonus28/repetition29-30 extra. Provisional two55-minute route, no measured timing claim.",
+    "example": "Own Vezelwerk P15,TK=.10q²+3q+90,cap90,kg/week divisible,fixed90 unavoidable. MK=.20q+3,opt60;feasible45/75 yieldMK12/18. TO900,TK630,profit270,GTK10.5,rectangle0-60 and10.5-15. Zero profit-90. MinimumGTK at30 does not maximizeprofit. Separatecap45 implies optimum45,MK12<15,profit247.5>-90; resetcap90 andfixed150 preservesq60/profit210; resetTK thenP17 givesq70,feasible65/75 MK16/18. All independently recomputed.",
+    "sequence": "Retrieves price-taking2 and derivative versus interval3, showsMOalone4 before comparingMK/directionalprofit5 and calculatingcandidate/capacity6, totals7,GTK8 and area9. Explicitly bridges prior Book2 total-euro vertical profit gap to per-kg area. Capacity10,fixed-cost11 andprice12 scenarios reset separately. Check13 returns tostart21 beforepractice14.",
+    "target": "P16,TK=.04q²+4q+400,capacity200,MK=.08q+4,opt150. Neighbors125/175 give14/18 aroundMO16. TO2400,TK1900,profit500,GTK38/3 andheight10/3;rectangle0-150 and38/3-16. Exact unrounded arithmetic retained. Zero-400;newcap120 optimum120 sinceMK13.6<16 throughout feasible domain; original150 explicitly infeasible. No unnecessary newprofit demanded forf.",
+    "visual": "Final saved charts have whitespace around the price label and quantity guide labels. All27 pages covered via complete prior review plus six changed pages; no remaining blocking finding.",
+    "series": "New marginal economic direction and profit rectangle are taught here after322 differentiation and321 price-taking, before324 mixed synthesis. Fixedcost,capacity,zero and separate scenarios are explicit. No blocking textbook prerequisite gap.",
+    "limits": "No measured classroom timing, pupil mastery, formal target approval or full companion acceptance claim."
+  },
+  "resolvedFindings": [
+    {
+      "priority": "P2",
+      "slides": [
+        16,
+        24
+      ],
+      "finding": "GTK crosses the P=GO=MO label. Move this label to whitespace and inspect all repeated graphs."
+    }
+  ],
+  "blockingFindings": [],
+  "completedColdHeads": {
+    "4veco-platform": "3f95bef4f896b9582bd321ad92cdbc980ce4f7ed",
+    "4veco-lessen": "b07e365762323586ea451eba62a677e58e2dc97a"
+  },
+  "reviewedSnapshot": "retest-323-v3"
+}

@@ -1,0 +1,43 @@
+{
+  "pptxSha256": "a478cc17fd25fdf98234a6ea049f71ad5ed0a08415f72b2258327d7a26e52156",
+  "pdfSha256": "33b7c4b2eb539294775a1e0033f1460a6a736b1e02f70798610b4ebe7d931d7e",
+  "slides": 27,
+  "pdfPages": 27,
+  "notes": 27,
+  "minimumExplicitNotesFontPt": 14.0,
+  "pdfTextMismatches": [],
+  "overviewSlides": [
+    1,
+    16,
+    27
+  ],
+  "overviewTextAndGeometryParity": true,
+  "scope": "Final coordinator label repair after a completed cold retest. All 27 original native pages and substantive notes reviewed; only final slide 25 changes visually and was re-inspected. The other 26 PNGs and all extracted slide/note text are byte-identical.",
+  "allNativePowerPointPageRendersViewedIndividually": true,
+  "allTextAndTeacherNotesRead": true,
+  "teaching": {
+    "source": "Current-v3 target7 Bedrukte tassen on printed page12 matches manuscript, figure and answers. Entire source17, questionsa-c18 and native unworked figure plus d-e19 precede answers20-26.",
+    "overview": "Start1-2 on page9, explicit exploration and theory support6-9 for new content2, returned to before independent work. Homework3-7 with basis3-4,independent5-6,target7. All three overview slides1/16/27 match except phase. Teacher notes explicitly allow provisional two55-minute route without claiming measured fit.",
+    "example": "Own bicycle lights: V30-.20Q,A6+.10Q,t6 per light. FreeQ80,P14. A+t=12+.10Q;newQ60,Pc18,Pp12. Consumers4/producers2 per traded unit relative to14, seller remits6. Independently recomputed all equations/table points. AtPc20 the horizontal supply arrow is Q140 to80, distinct from Q60 equilibrium and vertical wedge18-12. Counterexample Pc20,Pp14 givesQv50,Qa80; a valid wedge alone is insufficient.",
+    "sequence": "Prior equilibrium algebra and price-quantity reading explicitly retrieved2/5/6. New prices3, own context4, original equilibrium5-6, tabletranslation7,function8,horizontalshift9,newQ10,two prices11,verticalwedge12 and incidence13. Check14-15 then supportedstart2return and practice16. This establishes the tax-price base needed by312 without assuming future welfare accounting.",
+    "target": "V20-.20Q,A2+.10Q,t3. Free60@8;A+t5+.10Q,Qt50,Pc10,Pp7; buyer2/seller1 burden while seller remits3. Arrow24 atPc11 mapsQ90to60, not the equilibrium. Full target function, quantity, prices, line and burden argument included. Same-day quantity and per-bag price units explicit.",
+    "visual": "Final slide 25 label has clear whitespace. Unchanged example slide 12 also re-inspected. No blocking findings.",
+    "limits": "No measured classroom timing, pupil mastery, formal target approval or full companion acceptance claim."
+  },
+  "completedColdHeads": {
+    "4veco-platform": "c515e991f409b9f3c6451bd67946dee215234d08",
+    "4veco-lessen": "aeb12002c1231cd411eeb382c11fcd618934ec27"
+  },
+  "reviewedSnapshot": "retest-311-repair1",
+  "resolvedFindings": [
+    {
+      "priority": "P2",
+      "slides": [
+        25
+      ],
+      "finding": "Orange A+t still touches the upper-left of Pp=7 after its small rightward move. Root and independent series reviewer both confirm insufficient clearance. Await final author handoff."
+    }
+  ],
+  "blockingFindings": [],
+  "coordinatorRepair": "Move only the target Pp label x anchor from .18 to .25 of the axis maximum, clearing A+t and A. No numerical, lesson-text, teacher-note or chart-data change."
+}

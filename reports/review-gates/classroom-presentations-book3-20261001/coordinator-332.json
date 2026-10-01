@@ -1,0 +1,50 @@
+{
+  "pptxSha256": "338a2c361f478dccfa72d3d6a49b989d4cee5ec110c4adfb0f334e369a406c3f",
+  "pdfSha256": "ccf308bbc1cee8507c0944d351f143d58ae336a70eb3bd0846de010bb7b31549",
+  "slides": 25,
+  "pdfPages": 25,
+  "notes": 25,
+  "minimumExplicitNotesFontPt": 14.0,
+  "pdfTextMismatches": [],
+  "overviewSlides": [
+    1,
+    14,
+    25
+  ],
+  "overviewTextAndGeometryParity": true,
+  "scope": "Coordinator repair built from the frozen cold author source. All six changed native PowerPoint pages inspected individually; all other native PNGs and all extracted slide/teacher-note text exactly unchanged from the complete original review.",
+  "allNativePowerPointPageRendersViewedIndividually": true,
+  "allTextAndTeacherNotesRead": true,
+  "teaching": {
+    "source": "Current-v3 manuscript/answers and target17 Noro p105 checked. All target context and questions retained.",
+    "overview": "Start11-12p102;12 explicitly new supported exploration p97-98 and returned to after13/before14. Basis13-14, independent15-16,target17,homework13-17. Overview1/14/25 identical content/geometry with phase emphasis. Two-lesson provisional timing, not measured.",
+    "example": "Mira raincoats V180-5P,A5P-60,Q/week,€/coat. AutarkyP24Q60;Pw18=>Qa30,Qv90,imports60. Explicit resetPw30=>Qa90,Qv30,exports60. BoundaryPw24=>Qa=Qv60,no trade. Independently recomputed.",
+    "sequence": "Small-country assumptions3, autarky4, lower world price5, two domestic quantities6/import7, CS and PS definitions/domestic populations8, group changes9, reset export10/groups11, total-versus-everyone12,boundary check13,practice14. Target fullcontext15/blankfigure+qa16, remainingquestions17,answers18-23/check24/close25.",
+    "target": "Noro autarkyP40Q80,Pw30=>Qa60,Qv100,imports40/week. Producers price40to30/production80to60 and PS falls; buyers CS rises. Total surplus rises but producers lose. Fixed world price follows explicit small-country assumption. Correct target17a-e.",
+    "series": "Builds on331 comparative advantage but explicitly introduces world-market mechanism before practice. Country price-taking distinguished in notes from321 firm price-taking; Pw is not domestic demand. Foreign availability explicitly changes closed-market assumption from314. Domestic CS/PS and total-versus-distribution recall Book2/332 own steps; PS not total revenue or profit. Prepares333 without assuming tariffs.",
+    "visual": "All native pages covered by complete original review plus all six changed final graph pages. Curve and point labels now have clear whitespace, price/quantity data and target geometry remain correct. No blocking findings.",
+    "limits": "No measured classroom timing, pupil mastery or formal target approval."
+  },
+  "resolvedFindings": [
+    {
+      "priority": "P2",
+      "slides": [
+        4,
+        5,
+        6,
+        10,
+        16,
+        18
+      ],
+      "finding": "A/V curve labels touch or cross their diagonal strokes. Move both labels into clear whitespace in the shared graph helper and inspect all six saved native pages."
+    }
+  ],
+  "finalOriginalBinding": "Final original packaging differs fromrev2; all25 native pages rerendered from completed original PPTX are byte-identical torev2 PNGs and all extracted slide/note text is unchanged.",
+  "completedColdHeads": {
+    "4veco-platform": "51fc22d4cd9ee0ea360a3a1fdca77e40d7fec1bc",
+    "4veco-lessen": "c46fc22ed5b48bc650d080f0b5e61d65559ead7f"
+  },
+  "blockingFindings": [],
+  "reviewedSnapshot": "332-repair3",
+  "coordinatorRepair": "Supported label-position names and clear anchors;332 uses collinear interior anchors, finite decimal rounding and reviewed straight-scatter normalizer;333 uses separate label-only anchor coordinates. No source, lesson-text or teacher-note changes."
+}

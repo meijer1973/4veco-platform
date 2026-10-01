@@ -1,0 +1,217 @@
+{
+  "paragraph": "3.3.2",
+  "title": "Wereldmarktprijs, import, export en welvaart",
+  "kind": "theory",
+  "edition": "books34-v3, current follow-up 2026-09-28",
+  "lessonCommit": "9b8304d5031cafac936a56281e144573a25fbbc9",
+  "platformBase": "34464fb6091f721f7a87e8d1bb3165f758770799",
+  "outputName": "3.3.2 Wereldmarktprijs, import, export en welvaart – presentatie",
+  "outputFolder": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs",
+  "sources": [
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/3.3.2 manuscript.md",
+      "sha256": "4098130b9a226b3007e5d2642f32ce47d0aa1667e1589a151fd8380a3efe043e"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/Antwoorden.md",
+      "sha256": "aec2cc01f5ea47e8ba00df0eb9740701d8c355176044d0796346b6ca31e33c70"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/Docenteninformatie.md",
+      "sha256": "4b2951f5db50ba422a424a262d52cbc59b3cf566213c3bd175e71910a9f38c5e"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/3.3.1 manuscript.md",
+      "sha256": "2f8b17f7624ecf6605d8f65a7076aacc95b39f2dabf3a1b4185d421247414a74"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.1 manuscript.md",
+      "sha256": "938160312edc425888dd54b3207c932e0aa396c59411a30e6679865eb14fded8"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.1 manuscript.md",
+      "sha256": "c13b390b105beaf18a7d3e83cb52fb04792f3927d207efe5616b01a3ce8fc366"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_target.svg",
+      "sha256": "ac4553729d371b901d2a1fbd87c1c756fa8282fc63ae1f9ff6578fcea52844b0"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+      "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.3.2.json",
+      "sha256": "1d77fcd8104c7aca25890077c8db88d3d066a515f5c55cde2fbe53d559c1621c"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md",
+      "sha256": "79abbe55782b3bd3a2ac38f14213654cef38a0111c93a27ab4d95d4394f2ad35"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+      "sha256": "77d485b2078bba0b3faffcb6d0e78d4ce8e55f4ab59de63d470c9214aff92745"
+    }
+  ],
+  "printedPages": {
+    "theory": [
+      97,
+      98,
+      99,
+      100,
+      101
+    ],
+    "start": 102,
+    "basis": [
+      102,
+      103
+    ],
+    "independent": 104,
+    "target": 105,
+    "verification": "Complete book PDF rendered; footer numbers checked. Physical and printed page numbers coincide here."
+  },
+  "assignment": {
+    "start": [
+      11,
+      12
+    ],
+    "basis": [
+      13,
+      14
+    ],
+    "independent": [
+      15,
+      16
+    ],
+    "target": 17,
+    "homework": [
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "homeworkInstruction": "Maken en nakijken",
+    "extra": [
+      18,
+      19,
+      20
+    ]
+  },
+  "goals": [
+    "Je kunt een wereldmarktprijs vergelijken met de prijs zonder handel.",
+    "Je kunt binnenlandse productie, binnenlands verbruik en import of export bepalen.",
+    "Je kunt met prijs en hoeveelheid uitleggen wat binnenlandse kopers en producenten merken."
+  ],
+  "target": {
+    "number": 17,
+    "subquestions": [
+      {
+        "label": "a",
+        "points": 3,
+        "prompt": "Lees bij de wereldmarktprijs de binnenlandse productie en het binnenlandse verbruik af. Bereken de import per week.",
+        "observable_operation": "Lees bij de wereldmarktprijs de binnenlandse productie en het binnenlandse verbruik af. Bereken de import per week.",
+        "source_question_id": "17a"
+      },
+      {
+        "label": "b",
+        "points": 2,
+        "prompt": "Leg uit wat binnenlandse producenten merken ten opzichte van de situatie zonder handel. Gebruik prijs én productie.",
+        "observable_operation": "Leg uit wat binnenlandse producenten merken ten opzichte van de situatie zonder handel. Gebruik prijs én productie.",
+        "source_question_id": "17b"
+      },
+      {
+        "label": "c",
+        "points": 2,
+        "prompt": "Leg uit wat er met het consumentensurplus van binnenlandse kopers gebeurt.",
+        "observable_operation": "Leg uit wat er met het consumentensurplus van binnenlandse kopers gebeurt.",
+        "source_question_id": "17c"
+      },
+      {
+        "label": "d",
+        "points": 2,
+        "prompt": "Een leerling zegt: “Het totale surplus stijgt, dus alle groepen gaan erop vooruit.” Beoordeel met een concrete groep.",
+        "observable_operation": "Een leerling zegt: “Het totale surplus stijgt, dus alle groepen gaan erop vooruit.” Beoordeel met een concrete groep.",
+        "source_question_id": "17d"
+      },
+      {
+        "label": "e",
+        "points": 1,
+        "prompt": "Waarom verandert de wereldmarktprijs in dit model niet als Noro meer importeert?",
+        "observable_operation": "Waarom verandert de wereldmarktprijs in dit model niet als Noro meer importeert?",
+        "source_question_id": "17e"
+      }
+    ],
+    "answerModel": {
+      "a": "a. Bij P = € 30: Qa = 60 matten en Qv = 100 matten per week . Import = 100 − 60 = 40 matten per week . Waarom: De wereldmarkt vult het verschil tussen verbruik en productie.",
+      "b": "b. Zonder handel: P = € 40 en Q = 80. Met import: P = € 30 en Qa = 60. Binnenlandse producenten ontvangen minder en produceren minder. Waarom: De lagere gegeven prijs leidt tot beweging langs de aanbodlijn.",
+      "c": "c. Het binnenlandse CS stijgt: kopers betalen minder en het verbruik neemt toe van 80 naar 100 matten. Waarom: Een lagere prijs vergroot het verschil met de betalingsbereidheid voor kopers.",
+      "d": "d. De conclusie is onjuist. Binnenlandse producenten verliezen surplus, ook als CS + PS samen stijgt. Waarom: Het totaal zegt niet dat ieder onderdeel toeneemt.",
+      "e": "e. Noro is volgens de bron klein en prijsnemend. Zijn handelsomvang heeft geen invloed op de wereldprijs. Waarom: Dit is een expliciete modelaanname, geen algemeen bewijs voor elk land."
+    }
+  },
+  "teachingExample": {
+    "authored": true,
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "context": "Regenjassen in Mira",
+    "functions": {
+      "Qv": "180 - 5P",
+      "Qa": "5P - 60"
+    },
+    "units": {
+      "P": "euro per regenjas",
+      "Q": "regenjassen per week"
+    },
+    "withoutTrade": {
+      "P": 24,
+      "Q": 60
+    },
+    "importAlternative": {
+      "Pw": 18,
+      "Qa": 30,
+      "Qv": 90,
+      "import": 60
+    },
+    "exportAlternative": {
+      "Pw": 30,
+      "Qa": 90,
+      "Qv": 30,
+      "export": 60
+    },
+    "distinction": "Not an assigned exercise. New context and demand/supply functions. Does not disclose answers to 11–17 before practice."
+  },
+  "prerequisites": [
+    {
+      "operation": "Substitute price in Qv/Qa; identify units",
+      "earlierTeaching": "Book 2 §2.3.1 theory given-price substitution; Book 3 §3.1.1 worked example substitutes into price functions (different representation).",
+      "thisLesson": "Slides 4 and 7 explicitly demonstrate Q-functions and match graph quantities to substitution; start 11 is retrieval with given formulas."
+    },
+    {
+      "operation": "Import/export direction",
+      "earlierTeaching": "§3.3.1 p.88, definitions and same delivery from two viewpoints",
+      "thisLesson": "Slides 6–7 and 10 introduce domestic gap and calculation. Start 12 is supported exploration with p.97–98, revisited at slide14."
+    },
+    {
+      "operation": "Read at one price on two curves; distinguish Qa, Qv and trade gap",
+      "earlierTeaching": "Market axes/equilibrium and guides in §3.1.1; split domestic quantities is NEW §3.3.2 p.97–99",
+      "thisLesson": "Slides 4–7 (import), 10–11 (export) before practice."
+    },
+    {
+      "operation": "Price-taking at country level and fixed world price",
+      "earlierTeaching": "§3.2.1 p.54–55 teaches firm price-taking, not country-level inference",
+      "thisLesson": "Slide3 explicitly introduces country assumption and contrasts market demand with world price."
+    },
+    {
+      "operation": "CS/PS meanings and total versus group",
+      "earlierTeaching": "Book2 §§2.3.1–2.3.2 theory; §3.3.1 p.90 joint gain not each group",
+      "thisLesson": "Slide8 refreshes meanings/boundaries; slides9–12 demonstrate direction with price/quantity evidence and model limits."
+    },
+    {
+      "operation": "Change of context and representation for target",
+      "earlierTeaching": "§3.3.2 p.101 connects functions, graph and flow; assigned 15 is a table and 17 a graph",
+      "thisLesson": "Graphs, formula substitution and comparison tables use same Mira data; slide15 resets to Noro; target a uses graph only."
+    }
+  ],
+  "timing": "Teacher guidance provisionally reserves two 55-minute lessons. No measured fit or effectiveness claim. All guided practice retained.",
+  "boundaries": "Scoped Part B classroom PPTX/PDF; no Part A/source repair, source authority change, deployment or merge. Target catalog remains candidate_review_ready."
+}

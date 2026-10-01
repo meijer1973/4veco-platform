@@ -1,0 +1,250 @@
+{
+  "paragraph": "3.1.4",
+  "title": "Maximumprijs",
+  "type": "theory",
+  "edition": "books34-v3, followups 2026-09-28",
+  "platformBaseline": "34464fb6091f721f7a87e8d1bb3165f758770799",
+  "lessonCommit": "9b8304d5031cafac936a56281e144573a25fbbc9",
+  "sources": [
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.4 manuscript.md",
+      "sha256": "77c8e3e3cbba0fae732cb904aa05be660e002bd378e1e049fd9e9155adbdef6c"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/Antwoorden.md",
+      "sha256": "5c22520f978587c47a041723b24d144ed3ec18da3636090b58572a141ac2b288"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/Docenteninformatie.md",
+      "sha256": "46fdda1886adfc0df76f0a11b38182cf934a3040d1dd1976b961ae68a7e13aac"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.1 manuscript.md",
+      "sha256": "938160312edc425888dd54b3207c932e0aa396c59411a30e6679865eb14fded8"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.3 manuscript.md",
+      "sha256": "a9bfe97a56a9cf77feff4602dce945ea69af2c14bcd14cbcbcb1d2b35cbe94da"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/00 Inleiding.md",
+      "sha256": "6da13a58afc3fdd6105fba2cad3468f60a395cff332c6f59c40cda392f709c7a"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_target.svg",
+      "sha256": "2b8d1d90381408b9767ee9f3c9a5084c8afac8d62279e02e7380577961841f4a"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+      "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_Antwoorden_v3.pdf",
+      "sha256": "99bb148be789986f193b4aa534be62c0c7a91cd15e476660ab8106c0627a5a25"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.1.4.json",
+      "sha256": "bbf8bf4d7c751fb1b8595a5841e89b9c7bdae5beb8c115d4b704abff88910fe0"
+    }
+  ],
+  "goals": [
+    "Binding bepalen",
+    "Vraag, aanbod, werkelijke verkopen en tekort berekenen",
+    "Hoeveelheden grafisch markeren",
+    "Toegang met een toewijzingsregel verklaren"
+  ],
+  "assignment": {
+    "start": [
+      28,
+      29
+    ],
+    "basis": [
+      30,
+      31
+    ],
+    "independent": [
+      32,
+      33
+    ],
+    "target": 34,
+    "homework": [
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "homeworkInstruction": "Maken en nakijken",
+    "extra": [
+      35,
+      36
+    ]
+  },
+  "printedBookPages": {
+    "theory": [
+      32,
+      33,
+      34
+    ],
+    "start": 34,
+    "basis": 35,
+    "independent": 36,
+    "target": 37,
+    "extra": 38
+  },
+  "pageVerification": "Complete Book 3 student PDF inspected: printed footers 34 and 37; physical PDF pages agree. Chapter/manuscript pages are four lower. This difference is contextual pagination, not a source error.",
+  "openingSupport": {
+    "28": "Retrieval: V=A, solve for Q then substitute; at a given price solve each original function separately. Give approach support if needed.",
+    "29": "First encounter: explore with theory p.32–33, especially Een maximum is geen verplicht prijskaartje. Revisit after instruction, before guided practice."
+  },
+  "prerequisiteTrace": [
+    {
+      "operation": "Solve free equilibrium and substitute to obtain price",
+      "earlierTeaching": "3.1.1 manuscript, Uitgewerkt voorbeeld step 1, chapter p.5 / complete p.9; 3.1.1 p.4 / complete p.8 supplies quantity-at-price counterexample.",
+      "lessonTeaching": "slides 4–5 fully refresh with separate example",
+      "usedIn": [
+        "28a",
+        "31a",
+        "32a",
+        "34a",
+        "34e"
+      ]
+    },
+    {
+      "operation": "Solve two desired quantities at a given price",
+      "earlierTeaching": "3.1.4 p.33 explicitly links technique to Book 1; mastery is not inferred from this claim.",
+      "lessonTeaching": "slide 7 explicitly demonstrates two equations with substitution checks",
+      "usedIn": [
+        "28b (supported retrieval)",
+        "31b",
+        "32b",
+        "34b"
+      ]
+    },
+    {
+      "operation": "Distinguish binding ceiling from obligatory price",
+      "earlierTeaching": "New content in 3.1.4 p.32–33",
+      "lessonTeaching": "slides 2,6,10; opening reading support and return to 29",
+      "usedIn": [
+        "29 (supported exploration)",
+        "31a",
+        "31d",
+        "32a",
+        "33",
+        "34a",
+        "34e"
+      ]
+    },
+    {
+      "operation": "Quantities to graph, guides and horizontal shortage",
+      "earlierTeaching": "3.1.1 p.7 demonstrates projection between curves and axes, but vertical wedge interpretation must be reset after subsidy 3.1.3.",
+      "lessonTeaching": "slides 5–8 use same axes; no curve shift or price wedge, shortage on horizontal quantity interval",
+      "usedIn": [
+        "30a",
+        "30b",
+        "31c",
+        "32c",
+        "34c"
+      ]
+    },
+    {
+      "operation": "Actual transactions require no extra supply and all offered units sold",
+      "earlierTeaching": "New content 3.1.4 p.32–34",
+      "lessonTeaching": "slides 3,8–9 expose assumptions",
+      "usedIn": [
+        "30a",
+        "31b",
+        "32b",
+        "34b"
+      ]
+    },
+    {
+      "operation": "Interpret which buyers receive products and avoid universal benefit claim",
+      "earlierTeaching": "3.1.4 p.33–34 explicitly supplies allocation assumption",
+      "lessonTeaching": "slide 9 shows count and priority, and explains missing allocation rule",
+      "usedIn": [
+        "30c",
+        "32d",
+        "34d"
+      ]
+    },
+    {
+      "operation": "Separate rule change from market change; compare with applicable free equilibrium",
+      "earlierTeaching": "3.1.4 p.33 provides comparator; 33 is practice rather than proof of prior teaching",
+      "lessonTeaching": "slide 11 supplies a separate given-new-equilibrium comparison without using assigned question data",
+      "usedIn": [
+        "33"
+      ]
+    }
+  ],
+  "authoredExample": {
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "context": "Thermosbekers",
+    "functions": {
+      "V": "P = 24 - 0.25Q",
+      "A": "P = 4 + 0.25Q"
+    },
+    "units": {
+      "P": "euro per beker",
+      "Q": "bekers per week"
+    },
+    "assumptions": [
+      "No extra supply",
+      "All offered units sold",
+      "Highest willingness to pay receives priority",
+      "No tax or subsidy",
+      "Each buyer wants one cup"
+    ],
+    "values": {
+      "Q0": 40,
+      "P0": 14,
+      "bindingMaximum": 11,
+      "Qv": 52,
+      "Qa": 28,
+      "sold": 28,
+      "shortage": 24,
+      "nonbindingMaximum": 17
+    },
+    "transfer": "At same ceiling 17, new free equilibrium price 20 is given after demand increase. No new function or quantity invented.",
+    "separation": "No assigned start, guided, independent or target exercise is worked as the main explanation. Target 34 is discussed only after practice."
+  },
+  "targetCoverage": {
+    "source": "34 Tenten voor een weekend, full context and a–e",
+    "questionsSlides": [
+      14,
+      15,
+      16,
+      17
+    ],
+    "answersSlides": {
+      "a": [
+        18
+      ],
+      "b": [
+        19,
+        20
+      ],
+      "c": [
+        21
+      ],
+      "d": [
+        22
+      ],
+      "e": [
+        23
+      ]
+    }
+  },
+  "overviewSlides": [
+    1,
+    13,
+    24
+  ],
+  "outputDirectory": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs",
+  "scope": "Scoped Part B classroom PPTX and matching PDF only. No source textbook/target change, no full companion acceptance.",
+  "knownSourceLimits": [
+    "Target remains candidate_review_ready; deck does not confer formal independent target approval.",
+    "Teacher guide provisionally reserves two lessons of 55 minutes; no measured duration or guaranteed 110-minute fit."
+  ],
+  "runtimeDiscovery": "load_workspace_dependencies is not exposed in this session. Existing bundled runtime located through runtime.json and its dependencies tree; no substitute packages installed."
+}

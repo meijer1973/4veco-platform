@@ -1,0 +1,45 @@
+{
+  "pptxSha256": "43f4ea80257bd6547ca00ff10d604fcb3a476180bc97bc65b1fa662248b6b9a0",
+  "pdfSha256": "7493997edea575c4700076de538f3d98fb09f5ac147121c3de9f580cbed0902c",
+  "slides": 21,
+  "pdfPages": 21,
+  "notes": 21,
+  "minimumExplicitNotesFontPt": 14.0,
+  "pdfTextMismatches": [],
+  "overviewSlides": [
+    1,
+    6,
+    21
+  ],
+  "overviewTextAndGeometryParity": true,
+  "scope": "Coordinator repair built from the frozen cold author source. All 2 changed native PowerPoint pages inspected individually; all other native PNGs and all extracted slide/teacher-note text exactly unchanged from the complete original review.",
+  "allNativePowerPointPageRendersViewedIndividually": true,
+  "allTextAndTeacherNotesRead": true,
+  "teaching": {
+    "source": "Current-v3 mixed chapter route and complete target35 Regenjassen in Nerin sourcesp120/questionsp121 checked, including all three sources, table, figure3 and questionsa-f. Printed source-page conversion explicit.",
+    "overview": "Mixed start31p117, preparation31-34,target35,bonus36,repeat37-38; all31-38 retained as homework with distinctroles. Overview1/6/21 parity. Notes distinguish classroom all-numbered assignment from textbook optionalextra route and do notclaim one-periodfit.",
+    "example": "Own Ivera bicyclehelmets:smallprice-takingcountry,Pw18,t4,importremains. FreeQv90Qa30import60;tariffP22Qv78Qa42import36,O144/week. Rectanglewidth36,height4 with boundariesQ42-78/P18-22 explained innotes. Explicit groups and policy-versus-all-inhabitants distinction. Independently recomputed; no numerical targetanswer consumed.",
+    "sequence": "Short recap2 retrieves absolute/comparative/competitiveposition from331. Own import3/receiptandquota4/groupconclusion5 beforepractice6. Complete actualsources7-11 and allquestions12-14 beforeanswers15-20 andclose21.",
+    "target": "Nerin absoluteadvantagebothgoods;Pelta lower machineopportunitycostofraincoats thereforecomparativeadvantage. No inventedratios. Pw10,t5,P15,production40to60,consumption120to100,imports80to40,O200/week. ExactrectangleQ60-100/P10-15. Gratispermitquotawithoutduty has no equivalentgovernmentreceipts. Higherproduction supports statedgoal but higherpriceforfamilies refutes allinhabitantsgain.",
+    "series": "Genuinelymixed:every operation explicitlytaughtin331-333;start31 retrieves ratherthanassumes newmethod. 331 suppliesqualitative opportunitycost;332 domesticconsumption/production/import andgroup effects;333 taxableimportbase,exactrectangle,freepermitsandpolicyjudgment. Sourcechanges are stated, noearlyfutureconcept or blockingtextbookgap.",
+    "visual": "All native pages covered by complete original review plus all 2 changed final graph pages. Curve and point labels now have clear whitespace, price/quantity data and target geometry remain correct. No blocking findings.",
+    "limits": "No measured classroom timing, pupil mastery or formal target approval."
+  },
+  "resolvedFindings": [
+    {
+      "priority": "P2",
+      "slides": [
+        10,
+        18
+      ],
+      "finding": "A/V overlaid textbox labels touch/cross plotted curves. Move the shared label coordinates into whitespace; preserve native chart coordinates and inspect both final saved pages."
+    }
+  ],
+  "completedColdHeads": {
+    "4veco-platform": "02105fdd8145b552ee7a4fcaa6d960fdf1a6eca6",
+    "4veco-lessen": "03b52cb519c9a4c047446272d33439fc1d2d40c7"
+  },
+  "blockingFindings": [],
+  "reviewedSnapshot": "334-repair2",
+  "coordinatorRepair": "A/V textbox labels moved to clear whitespace in shared graph function on10/18; saved native charts unchanged. No source, lesson-text or teacher-note changes."
+}
