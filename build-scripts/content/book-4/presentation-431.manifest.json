@@ -1,0 +1,239 @@
+{
+  "paragraph": "4.3.1",
+  "title": "Arbeidsvraag en arbeidsproductiviteit",
+  "manuscriptOpeningTitle": "Wie koopt jouw werktijd?",
+  "type": "theory",
+  "scope": "Part B classroom PPTX and matching slide PDF only",
+  "edition": "books34-v3 / book34-lesson-balance-v3-20260915",
+  "platformCommit": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+  "lessonCommit": "e734532a42b27732ac25ce990fc9448b12309d28",
+  "sources": [
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/4.3.1 manuscript.md",
+      "sha256": "12f46259c226c4be4e651dd9a1fbe140a33c137756eca860482e19f41b49bfb7"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/Antwoorden.md",
+      "sha256": "e602feba92be7245eeb349393f6787a2eac044e8c12a956712f3ac507f658f9f"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/Docenteninformatie.md",
+      "sha256": "106f211aec0caa10c693014055874468e74b034a619d077bff30feb3ed1a8f85"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+      "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.1-leerling-v3.pdf",
+      "sha256": "876baaa93e59d9bae6b7cfd3b164a85863ed9bcd2ec83abc49cf459f5b5f210c"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.3.1.md",
+      "sha256": "ae2a4dda3ed5fa093f3a71930143202793c2fb9c0cd8f1439135b9bcd3e90918"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.3.1.json",
+      "sha256": "d14d76e143905a16cf09a1bd9b4f28f357902762103ccc7ff022b28749204ca1"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.7 manuscript.md",
+      "sha256": "04ff9cf133cafb6f0986d69ad3c4f2a93930a396b59fd9503822f15962b2e2d5"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.1 Kostenstructuren – paragraaf.md",
+      "sha256": "c9655f6d8eb087c7d084856e4d1739f0be20a56385f775f442389891370f0955"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md",
+      "sha256": "135327f9170110864cd3b849821db55c0be2d4a5838fcb69f7e6fc2083d71369"
+    }
+  ],
+  "printedPages": {
+    "theory": [
+      114,
+      115,
+      116,
+      117,
+      118
+    ],
+    "start": 119,
+    "basis": [
+      119,
+      120
+    ],
+    "independent": [
+      120,
+      121
+    ],
+    "target": 122,
+    "bonusAndReview": 123,
+    "verification": "Complete book footers inspected; physical PDF pages equal printed page numbers here. Chapter-local pages 2–11 are not complete-book references."
+  },
+  "assignment": {
+    "start": [
+      1,
+      2
+    ],
+    "basis": [
+      3,
+      4
+    ],
+    "independent": [
+      5,
+      6
+    ],
+    "target": 7,
+    "homework": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "homeworkInstruction": "Maken en nakijken",
+    "extra": [
+      8,
+      9
+    ],
+    "targetTitle": "FrameWerk groeit",
+    "targetSubquestions": [
+      "7a",
+      "7b",
+      "7c",
+      "7d"
+    ]
+  },
+  "goals": [
+    "Explain employer demand and employee supply of labour",
+    "Calculate productivity, required hours, fte and labour costs per product with consistent units",
+    "Distinguish wage movement along demand from shifts due to other determinants; explain assumptions"
+  ],
+  "prerequisites": [
+    {
+      "operations": [
+        "1a: total / output",
+        "1b: (new−old)/old × 100%"
+      ],
+      "priorTeaching": [
+        "Book 2 §2.1.1, Gemiddelde totale kosten; manuscript lines 234–238",
+        "Book 2 §2.2.1, Rekenen met de oude waarde; manuscript lines 59–61"
+      ],
+      "lessonSupport": "Slide 3 revisits both procedures with separate MokStudio data; no assigned worked answers."
+    },
+    {
+      "operations": [
+        "2a: reverse buyer/seller roles on labour market"
+      ],
+      "priorTeaching": "Not assumed. New in Book 4 §4.3.1 p. 114, definition and actor comparison.",
+      "startSupport": "Overview explicitly labels 2 as exploration with theory p. 114; notes prompt using definition/figure, then return after slide 2 and before basis work."
+    },
+    {
+      "operations": [
+        "3a,6a: read numeric w/L axes and quantities",
+        "3b,6b–d,7d: movement versus shift, ceteris paribus and simultaneous opposing effects"
+      ],
+      "priorTeaching": "Book 2 §2.2.1 explains ceteris paribus; preceding §4.2.7 teaches keeping periods and separate cases distinct, not labour-market roles.",
+      "lessonSupport": "Slides 2 and 11–14 explicitly teach new actors, w and L, horizontal reading then vertical projection, movement, same-wage rightward shift, resets and unknown combined magnitude."
+    },
+    {
+      "operations": [
+        "4a,5a–b,7a–b: production/hours, production/productivity, hour-cost/productivity",
+        "4b,7c: compare changes in numerator and denominator"
+      ],
+      "priorTeaching": "Average ratios from Book 2; labour productivity procedure is new here.",
+      "lessonSupport": "Slides 4–10 teach units, fte, table-to-formula translation, reverse calculation, cost per product and production/productivity alternatives. Book pp. 115–118."
+    }
+  ],
+  "authoredExamples": {
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "context": "MokStudio",
+    "warmup": {
+      "cost": 360,
+      "quantityOld": 80,
+      "quantityNew": 100
+    },
+    "units": {
+      "people": 10,
+      "hoursEach": 30,
+      "fullTimeWeek": 40,
+      "hoursTotal": 300,
+      "fte": 7.5
+    },
+    "oldPlan": {
+      "mugs": 1800,
+      "hours": 300,
+      "productivity": 6,
+      "fullHourCost": 27,
+      "labourCostPerMug": 4.5
+    },
+    "newPlan": {
+      "mugs": 2800,
+      "productivity": 8,
+      "hours": 350,
+      "fullHourCost": 28.8,
+      "labourCostPerMug": 3.6
+    },
+    "productivityAlternatives": {
+      "productivity": 8,
+      "production": [
+        1800,
+        2400,
+        2800
+      ],
+      "hours": [
+        225,
+        300,
+        350
+      ]
+    },
+    "separateGraphModel": {
+      "old": "w = 30 − 0.1 L",
+      "new": "w = 36 − 0.1 L",
+      "axisUnits": {
+        "w": "euro per hour",
+        "L": "labour hours per week"
+      },
+      "points": {
+        "A": [
+          120,
+          18
+        ],
+        "B": [
+          60,
+          24
+        ],
+        "C": [
+          180,
+          18
+        ]
+      },
+      "domains": {
+        "oldL": [
+          0,
+          300
+        ],
+        "newL": [
+          0,
+          360
+        ]
+      },
+      "note": "Graph comparisons are separate from the complete production plan. Qualitative combined-effects slide supplies no numerical order magnitude."
+    }
+  },
+  "answerChecks": {
+    "7a": [
+      4,
+      600
+    ],
+    "7b": [
+      6,
+      4.8
+    ],
+    "7c": "Productivity and production both rise 37.5%; required hours stay 600. The universal claim is false.",
+    "7d": "Higher wage only: movement to less labour along same demand. Extra exports only at fixed wage and technique: demand shifts right."
+  },
+  "sourceConflicts": [],
+  "timing": "Teacher guidance suggests two 55-minute lessons provisionally; no observed lesson-time or learning-effectiveness claim.",
+  "sourceTargetApproval": "Candidate status retained; building slides does not confer curriculum target approval."
+}
