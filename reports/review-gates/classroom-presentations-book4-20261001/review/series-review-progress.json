@@ -1,0 +1,67 @@
+{
+  "scope": "In-progress review of actual completed presentations in teaching order; not approval of unseen later outputs.",
+  "completedThrough": "4.2.1",
+  "predecessorEvidence": "../source-audit.md and ../independent-source-bindings.json bind 11 prior Book2/3 decks and actual instructional slide anchors.",
+  "transitions": [
+    {
+      "to": "4.1.1",
+      "priorTeaching": "Book3 §3.2.1 slides3-6 marketQ/firmq, §3.2.2 slides4-11 derivative/interval distinction, §3.2.3 slides5-12 candidate crossing, direction, capacity, q0, profit area.",
+      "newTeaching": "Economic profit including normal remuneration and long-run entry/exit are explicitly taught in the new411 slides3-14. They are not falsely credited to Book3. Start2 is supported by theoryp7 and revisited15 before practice16.",
+      "modelBoundary": "Demand/input prices/technology and identical firm costs fixed; aggregate market supply changes while remaining firm MK/GTK stay fixed. MarketQ and firmq units differ. Short-run loss can beat q0; long-run exit is separate.",
+      "verdict": "PASS",
+      "presentationRepair": "B4-411-P3-01 removed nonuniqueness claim for the post-entry supply line. Current coordinator-repaired final passes; historical cold wording finding retained."
+    },
+    {
+      "from": "4.1.1",
+      "to": "4.1.2",
+      "priorTeaching": "411 establishes price taking, free entry and firm/market axes. 412 slide2 retrieves the full feasible marginal-choice procedure.",
+      "newTeaching": "412 slides3-4 teach market boundary, monopoly and barriers;5-6 explicitly change from one small price taker to sole providerq=Q. Slides7-11 teach own demand combinations, inversion, movement and demand shift. Supported start12 returns onslide12.",
+      "modelBoundary": "GO=P remains for uniform prices and positiveq; MO=P is explicitly withheld for monopoly. No optimal profit claim from demand alone. Own-price change holds demand factors fixed; extra interest changes those factors in a reset scenario.",
+      "verdict": "PASS"
+    },
+    {
+      "from": "4.1.2",
+      "to": "4.1.3",
+      "priorTeaching": "412 teaches falling monopoly demand, uniform price, GO=P, connectedP/q and lack of cost data. Book3 §3.2.2 teaches the limited derivative rule.",
+      "newTeaching": "413 slide3 refreshes differentiation;4-5 first teach two revenue effects for alternative uniform-price plans. Slides6-7 explicitly distributePq and differentiate signed terms;8-12 distinguish table totals, interval averages and pointMO;13 explains negativeMO. Supported start22 returns14 before practice15.",
+      "modelBoundary": "No refunds on previous sales: alternative plans for the same week. GO undefined atq0; pointMO is not exact change for a whole additionalkg. MO=0 with direction gives revenue maximum only; costs and profit selection deferred to414.",
+      "verdict": "PASS"
+    },
+    {
+      "from": "4.1.3",
+      "to": "4.1.4",
+      "priorTeaching": "413 slides4–13 teach uniform-price revenue mechanism, TO differentiation, interval/pointMO and revenue maximum; Book3§323 establishes feasible marginal choice with direction/capacity/q0.",
+      "newTeaching": "414 slides3–9 demonstrate monopoly MO=MK candidate followed by the distinct price step at the sameq onGO, then TO/TK/GTK/profit area. Slides10–12 separately teach capacity, fixed-cost and demand changes with resets; supported start32 returns before practice13.",
+      "modelBoundary": "MO=0 maximizes revenue only. MO=MK gives a profit candidate; price comes from demand. A binding capacity need not satisfy equality. Fixed costs affect profit level but not interiorq with unchanged demand andMK.",
+      "verdict": "PASS"
+    },
+    {
+      "from": "4.1.4",
+      "to": "4.1.5",
+      "priorTeaching": "411 entry/exit and economic-profit convention;412 market classification and uniform demand;413TO/MO;414 monopoly choice and capacity;Book2 percentage/old-base elasticity and tabular total calculations.",
+      "newTeaching": "Mixed415 uses bounded retrieval on2–6, one ownGelNova example with capacity variant, and explicit reminders of finite changes and feasible table maxima. Realstart41p46 and inserted41A are retained. Fulltarget45sources8–11/questions12–14 precede answers15–24.",
+      "modelBoundary": "Target monopoly and price-taker situations are distinct markets with distinct price/demand assumptions. Their profit difference does not establish a welfare ranking. Function extensions beyond capacity are not feasible production.",
+      "verdict": "PASS"
+    },
+    {
+      "from": "4.1.5",
+      "to": "4.2.1",
+      "priorTeaching": "414 establishes private monopoly choice;415 retrieves that complete route. Book2§232 andBook3tax/subsidy lessons establish CS/PS/total surplus, triangle areas, transfers and limits of welfare measures.",
+      "newTeaching": "421 slides2–3 explain marketQ=firmq here and welfare ledger;ownKeramiekoven4–14 separately computes monopoly choice and efficientP=MK, then CS/PS/profit/transfer/lost trades. Supported newstart2p59 refers top55/57 and returns16beforepractice17.",
+      "modelBoundary": "Private MO=MK and socialP=MK answer different questions under fixed costs/demand/quality/no externalities. PS excludes fixed costs while profit deducts them. A buyer-to-seller transfer is not the whole surplus loss; fairness does not follow solely fromTS. Target VRstudio Qm40Pm60 versusQe60Pe50 yields loss200, transfer400, ΔCS−500 andΔPS+300.",
+      "verdict": "PASS",
+      "presentationRepair": "B4-421-P3-01 corrected five note citations only. All31 final native renders unchanged; source itself correct."
+    }
+  ],
+  "sourceFollowups": [
+    {
+      "id": "SRC-411-CAP-01",
+      "disposition": "Target source curve extends beyond implied aggregate capacity outside assessed prices. Deck notes disclose the limit; both target equilibria feasible. Separate source-owner follow-up, no sealed source edit."
+    },
+    {
+      "id": "SRC-433-REMEDIAL-01",
+      "disposition": "Source audit found answer27 stale remedial reference to412 instead of413. Later433 deck still needs review. Separate editorial source follow-up."
+    }
+  ],
+  "independentReview": "independent-chapter41-review.md/json;132slides/notes inspected for content, seven selected native renders, bounded repair checks. Root full native coverage remains separate."
+}

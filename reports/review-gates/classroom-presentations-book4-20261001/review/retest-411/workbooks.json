@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "charts": 9,
+  "references": 106,
+  "cellsCompared": 2702,
+  "workbooks": [
+    "ppt/embeddings/chart-data-snapshot-001.xlsx",
+    "ppt/embeddings/chart-data-snapshot-002.xlsx",
+    "ppt/embeddings/chart-data-snapshot-003.xlsx",
+    "ppt/embeddings/chart-data-snapshot-004.xlsx",
+    "ppt/embeddings/chart-data-snapshot-005.xlsx",
+    "ppt/embeddings/chart-data-snapshot-006.xlsx",
+    "ppt/embeddings/chart-data-snapshot-007.xlsx",
+    "ppt/embeddings/chart-data-snapshot-008.xlsx",
+    "ppt/embeddings/chart-data-snapshot-009.xlsx"
+  ]
+}

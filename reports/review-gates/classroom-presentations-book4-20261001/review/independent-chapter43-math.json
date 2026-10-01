@@ -1,0 +1,133 @@
+{
+  "431Own": {
+    "persons": 10,
+    "hours": 300,
+    "fte": 7.5,
+    "productivityOld": 6.0,
+    "hoursNew": 350.0,
+    "hoursGrowthPercent": 16.666666666666668,
+    "unitCostOld": 4.5,
+    "unitCostNew": 3.6,
+    "alternativeHoursFixedOutput": 225.0,
+    "outputForSameHours": 2400,
+    "demandOldAt18": 120,
+    "demandOldAt24": 60,
+    "demandNewAt18": 180
+  },
+  "431Target": {
+    "productivityOld": 4.0,
+    "hoursNew": 600.0,
+    "unitCostOld": 6.0,
+    "unitCostNew": 4.8,
+    "outputGrowthPercent": 37.5,
+    "productivityGrowthPercent": 37.5
+  },
+  "432Own": {
+    "workforce": 1800,
+    "gross": 75.0,
+    "net": 65.0,
+    "wage": 18.0,
+    "labour": 72
+  },
+  "432Target": {
+    "workforce": 3500,
+    "gross": 70.0,
+    "net": 60.0,
+    "wage": 14.0,
+    "labour": 100
+  },
+  "433Own": {
+    "workforce": 1500,
+    "unemploymentPercent": 8.0,
+    "labourDemandObserved": 1455,
+    "falseUnemployment": 45,
+    "oldWage": 12.0,
+    "oldLabour": 100,
+    "newWage": 10.0,
+    "newLabour": 80,
+    "heldWageDemand": 60,
+    "heldWageSupply": 100,
+    "heldWageSurplus": 40
+  },
+  "433Target": {
+    "workforce": 3000,
+    "unemploymentPercent": 10.0,
+    "labourDemandObserved": 2820,
+    "falseUnemployment": 180,
+    "oldWage": 16.0,
+    "oldLabour": 84,
+    "newWage": 13.0,
+    "newLabour": 66,
+    "heldWageDemand": 48,
+    "heldWageSupply": 84,
+    "heldWageSurplus": 36
+  },
+  "434Own": {
+    "freeWage": 18,
+    "freeLabour": 60,
+    "floor": 20,
+    "demand": 50,
+    "supply": 70,
+    "oversupply": 20,
+    "oldPayroll": 25920,
+    "newPayroll": 24000,
+    "percentChange": -7.4074074074074066
+  },
+  "434Target": {
+    "freeWage": 12,
+    "freeLabour": 100,
+    "floor": 14,
+    "demand": 80,
+    "supply": 120,
+    "oversupply": 40,
+    "oldPayroll": 30000,
+    "newPayroll": 28000,
+    "percentChange": -6.666666666666665,
+    "fewerWorkers": 20,
+    "extraSuppliers": 20
+  },
+  "435Own": {
+    "hoursOld": 200.0,
+    "hoursNew": 160.0,
+    "unitCostOld": 2.5,
+    "unitCostNew": 2.2,
+    "unitCostPercentChange": -12.0
+  },
+  "435AssignedPrerequisiteChecks": {
+    "37": {
+      "fte": 4.0,
+      "persons": 8,
+      "workforce": 1000,
+      "unemploymentPercent": 4.0
+    },
+    "38": {
+      "oldProductivity": 6.0,
+      "newHours": 1050.0,
+      "hoursGrowthPercent": 5.0,
+      "oldUnitCost": 4.0,
+      "newUnitCost": 3.5
+    },
+    "39": {
+      "freeWage": 16.0,
+      "freeLabour": 84,
+      "floor18Demand": 72,
+      "floor18Supply": 96,
+      "surplus": 24,
+      "weeklyPayroll": 25920
+    }
+  },
+  "435Target": {
+    "workforce": 14000,
+    "population": 20000,
+    "grossPercent": 70.0,
+    "unemploymentPercent": 10.0,
+    "oldWage": 14.0,
+    "oldLabour": 100,
+    "newWage": 16.0,
+    "newLabour": 120,
+    "sameWageShift": 40,
+    "unitCostOld": 3.0,
+    "unitCostNew": 2.8636363636363638,
+    "unitCostPercentChange": -4.545454545454546
+  }
+}

@@ -1,0 +1,469 @@
+{
+  "status": "CANDIDATE_ONLY",
+  "pptx": "C:\\wt\\ppt\\.book4\\review\\preview-retest-422-v2\\4.2.2 Prijsdiscriminatie – presentatie.pptx",
+  "pdf": "C:\\wt\\ppt\\.book4\\review\\preview-retest-422-v2\\4.2.2 Prijsdiscriminatie – presentatie.pdf",
+  "pptxSha256": "5516b44d0a85e3304e6edf89414d781e84999706d8430af8a8e7e5976e41bf5c",
+  "pdfSha256": "36dd15b6ec69b9516f4763c9c287f2fa1732177a79810776bf8f6c379dc813e4",
+  "slides": 27,
+  "actualXmlTextNotesMatchInventory": true,
+  "nativeVisualPages": [
+    6,
+    7,
+    8,
+    17,
+    20,
+    21
+  ],
+  "pdfVisualPages": [
+    8
+  ],
+  "workbookParity": {
+    "ok": true,
+    "charts": 7,
+    "references": 58,
+    "cellsCompared": 156,
+    "workbooks": [
+      "ppt/embeddings/chart-data-snapshot-001.xlsx",
+      "ppt/embeddings/chart-data-snapshot-002.xlsx",
+      "ppt/embeddings/chart-data-snapshot-003.xlsx",
+      "ppt/embeddings/chart-data-snapshot-004.xlsx",
+      "ppt/embeddings/chart-data-snapshot-005.xlsx",
+      "ppt/embeddings/chart-data-snapshot-006.xlsx",
+      "ppt/embeddings/chart-data-snapshot-007.xlsx"
+    ]
+  },
+  "sourceFilesMatched": 8,
+  "observedCurrentSourceSha256": "1c036f915adb6abe4e7f6bfdbe8ee0ddbc4a304f7d6c4daab69c598953bd338d",
+  "observedCurrentManifestSha256": "eb3570f153059033377d00c0c690ed733ce1a8470497aed33b8ec10ae2dd42fd",
+  "currentSourceIsNotFinalCommitBinding": true,
+  "chartData": {
+    "ppt/slides/charts/chart1.xml": [
+      {
+        "name": "MO",
+        "x": [
+          "0",
+          "4.8",
+          "15"
+        ],
+        "y": [
+          "30",
+          "20.4",
+          "0"
+        ]
+      },
+      {
+        "name": "MK",
+        "x": [
+          "0",
+          "26.24",
+          "32"
+        ],
+        "y": [
+          "6",
+          "6",
+          "6"
+        ]
+      },
+      {
+        "name": "Q gekozen",
+        "x": [
+          "12",
+          "12"
+        ],
+        "y": [
+          "0",
+          "6"
+        ]
+      }
+    ],
+    "ppt/slides/charts/chart2.xml": [
+      {
+        "name": "Vraag / GO",
+        "x": [
+          "0",
+          "18.6",
+          "30"
+        ],
+        "y": [
+          "30",
+          "11.4",
+          "0"
+        ]
+      },
+      {
+        "name": "MO",
+        "x": [
+          "0",
+          "4.8",
+          "15"
+        ],
+        "y": [
+          "30",
+          "20.4",
+          "0"
+        ]
+      },
+      {
+        "name": "MK",
+        "x": [
+          "0",
+          "26.24",
+          "32"
+        ],
+        "y": [
+          "6",
+          "6",
+          "6"
+        ]
+      },
+      {
+        "name": "Q gekozen",
+        "x": [
+          "12",
+          "12"
+        ],
+        "y": [
+          "0",
+          "18"
+        ]
+      },
+      {
+        "name": "P op GO",
+        "x": [
+          "0",
+          "12"
+        ],
+        "y": [
+          "18",
+          "18"
+        ]
+      }
+    ],
+    "ppt/slides/charts/chart3.xml": [
+      {
+        "name": "Vraag / GO",
+        "x": [
+          "0",
+          "11.16",
+          "18"
+        ],
+        "y": [
+          "18",
+          "6.84",
+          "0"
+        ]
+      },
+      {
+        "name": "MO",
+        "x": [
+          "0",
+          "2.88",
+          "9"
+        ],
+        "y": [
+          "18",
+          "12.24",
+          "0"
+        ]
+      },
+      {
+        "name": "MK",
+        "x": [
+          "0",
+          "26.24",
+          "32"
+        ],
+        "y": [
+          "6",
+          "6",
+          "6"
+        ]
+      },
+      {
+        "name": "Q gekozen",
+        "x": [
+          "6",
+          "6"
+        ],
+        "y": [
+          "0",
+          "12"
+        ]
+      },
+      {
+        "name": "P op GO",
+        "x": [
+          "0",
+          "6"
+        ],
+        "y": [
+          "12",
+          "12"
+        ]
+      }
+    ],
+    "ppt/slides/charts/chart4.xml": [
+      {
+        "name": "Vraag / GO",
+        "x": [
+          "0",
+          "24.8",
+          "40"
+        ],
+        "y": [
+          "40",
+          "15.2",
+          "0"
+        ]
+      },
+      {
+        "name": "MO",
+        "x": [
+          "0",
+          "6.4",
+          "20"
+        ],
+        "y": [
+          "40",
+          "27.2",
+          "0"
+        ]
+      },
+      {
+        "name": "MK",
+        "x": [
+          "0",
+          "32.8",
+          "40"
+        ],
+        "y": [
+          "8",
+          "8",
+          "8"
+        ]
+      }
+    ],
+    "ppt/slides/charts/chart5.xml": [
+      {
+        "name": "Vraag / GO",
+        "x": [
+          "0",
+          "14.88",
+          "24"
+        ],
+        "y": [
+          "24",
+          "9.12",
+          "0"
+        ]
+      },
+      {
+        "name": "MO",
+        "x": [
+          "0",
+          "3.84",
+          "12"
+        ],
+        "y": [
+          "24",
+          "16.32",
+          "0"
+        ]
+      },
+      {
+        "name": "MK",
+        "x": [
+          "0",
+          "32.8",
+          "40"
+        ],
+        "y": [
+          "8",
+          "8",
+          "8"
+        ]
+      }
+    ],
+    "ppt/slides/charts/chart6.xml": [
+      {
+        "name": "Vraag / GO",
+        "x": [
+          "0",
+          "24.8",
+          "40"
+        ],
+        "y": [
+          "40",
+          "15.2",
+          "0"
+        ]
+      },
+      {
+        "name": "MO",
+        "x": [
+          "0",
+          "6.4",
+          "20"
+        ],
+        "y": [
+          "40",
+          "27.2",
+          "0"
+        ]
+      },
+      {
+        "name": "MK",
+        "x": [
+          "0",
+          "32.8",
+          "40"
+        ],
+        "y": [
+          "8",
+          "8",
+          "8"
+        ]
+      },
+      {
+        "name": "Q gekozen",
+        "x": [
+          "16",
+          "16"
+        ],
+        "y": [
+          "0",
+          "24"
+        ]
+      },
+      {
+        "name": "P op GO",
+        "x": [
+          "0",
+          "16"
+        ],
+        "y": [
+          "24",
+          "24"
+        ]
+      }
+    ],
+    "ppt/slides/charts/chart7.xml": [
+      {
+        "name": "Vraag / GO",
+        "x": [
+          "0",
+          "14.88",
+          "24"
+        ],
+        "y": [
+          "24",
+          "9.12",
+          "0"
+        ]
+      },
+      {
+        "name": "MO",
+        "x": [
+          "0",
+          "3.84",
+          "12"
+        ],
+        "y": [
+          "24",
+          "16.32",
+          "0"
+        ]
+      },
+      {
+        "name": "MK",
+        "x": [
+          "0",
+          "32.8",
+          "40"
+        ],
+        "y": [
+          "8",
+          "8",
+          "8"
+        ]
+      },
+      {
+        "name": "Q gekozen",
+        "x": [
+          "8",
+          "8"
+        ],
+        "y": [
+          "0",
+          "16"
+        ]
+      },
+      {
+        "name": "P op GO",
+        "x": [
+          "0",
+          "8"
+        ],
+        "y": [
+          "16",
+          "16"
+        ]
+      }
+    ]
+  },
+  "recomputedMath": {
+    "Speelatelier": {
+      "uniform": {
+        "QA": 15,
+        "QB": 3,
+        "PA": 15,
+        "PB": 15,
+        "TO": 270,
+        "TK": 144,
+        "profit": 126,
+        "CS": 117.0,
+        "PS": 162,
+        "TS": 279.0
+      },
+      "groups": {
+        "QA": 12.0,
+        "QB": 6.0,
+        "PA": 18.0,
+        "PB": 12.0,
+        "TO": 288.0,
+        "TK": 144.0,
+        "profit": 144.0,
+        "CS": 90.0,
+        "PS": 180.0,
+        "TS": 270.0
+      }
+    },
+    "FilmLab": {
+      "uniform": {
+        "QA": 20,
+        "QB": 4,
+        "PA": 20,
+        "PB": 20,
+        "TO": 480,
+        "TK": 272,
+        "profit": 208,
+        "CS": 208.0,
+        "PS": 288,
+        "TS": 496.0
+      },
+      "groups": {
+        "QA": 16.0,
+        "QB": 8.0,
+        "PA": 24.0,
+        "PB": 16.0,
+        "TO": 512.0,
+        "TK": 272.0,
+        "profit": 240.0,
+        "CS": 160.0,
+        "PS": 320.0,
+        "TS": 480.0
+      }
+    }
+  },
+  "allSavedEconomicChartPointsMatchEquations": true
+}

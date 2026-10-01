@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "charts": 4,
+  "references": 44,
+  "cellsCompared": 78,
+  "workbooks": [
+    "ppt/embeddings/chart-data-snapshot-001.xlsx",
+    "ppt/embeddings/chart-data-snapshot-002.xlsx",
+    "ppt/embeddings/chart-data-snapshot-003.xlsx",
+    "ppt/embeddings/chart-data-snapshot-004.xlsx"
+  ]
+}

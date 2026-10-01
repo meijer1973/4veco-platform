@@ -1,0 +1,476 @@
+[
+  {
+    "paragraph": "4.1.1",
+    "run": "411",
+    "logSha256": "16bd3a373f97be55678b7eab45d071775aec5adbe83a8ebb45c1c351997d475e",
+    "completedCommands": 52,
+    "pathHits": [
+      {
+        "eventLine": 91,
+        "commandSha256": "39a0c2cffa2f29f42561cb451c6753b6859b6cdd66dea51be7b3153f77877372",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules/jsdom"
+        ]
+      },
+      {
+        "eventLine": 95,
+        "commandSha256": "2915be303d3514b45e880f0c65b96886db82780d8544ec5f9123ae4f27182919",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules"
+        ]
+      },
+      {
+        "eventLine": 101,
+        "commandSha256": "55ec253b8d0056b65433e0efda32978674bf0a4e9deca1c6d25638ed81c4b61d",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules"
+        ]
+      },
+      {
+        "eventLine": 113,
+        "commandSha256": "589a015396440fd537b1bf40d1a84845b709f43ddf3d06115b839c85b92780fd",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules",
+          "C:/wt/ppt/4veco-platform/node_modules/jest/bin/jest.js"
+        ]
+      }
+    ],
+    "scope": "Heuristic exposed-command scan, not a filesystem isolation guarantee. Manual disposition required for each hit."
+  },
+  {
+    "paragraph": "4.1.2",
+    "run": "412",
+    "logSha256": "f4b052f743ddb74453ffbec836210ed0be13e69ac1a26337f33e0cf672964227",
+    "completedCommands": 46,
+    "pathHits": [
+      {
+        "eventLine": 105,
+        "commandSha256": "167017128a68c6d281a487698fce717cc694e4a9a68e70d5d7fc796f96ddb03f",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules/jsdom"
+        ]
+      },
+      {
+        "eventLine": 107,
+        "commandSha256": "58ab1ff179de7d90116a0cbd24309d9a80d320e503edcccb3631c03e7e060d3a",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules"
+        ]
+      }
+    ],
+    "scope": "Heuristic exposed-command scan, not a filesystem isolation guarantee. Manual disposition required for each hit."
+  },
+  {
+    "paragraph": "4.1.3",
+    "run": "413",
+    "logSha256": "cb909182863e4fe34fb10fc831dd1554c24f0eb3bb2cc21e1056f490c3903fa0",
+    "completedCommands": 48,
+    "pathHits": [
+      {
+        "eventLine": 96,
+        "commandSha256": "80a7b043ef773d1e3e7c684ff67340d83a6f3f1b93f5098f079aa425fe6f18c0",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules/jsdom"
+        ]
+      },
+      {
+        "eventLine": 98,
+        "commandSha256": "c371924fbcbce763413c936e4228424c1853c8ba8cb1f06b609e9b89e9ce8665",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules",
+          "C:/wt/ppt/4veco-platform/package-lock.json"
+        ]
+      }
+    ],
+    "scope": "Heuristic exposed-command scan, not a filesystem isolation guarantee. Manual disposition required for each hit."
+  },
+  {
+    "paragraph": "4.1.4",
+    "run": "414",
+    "logSha256": "791aad85b2f14442d5e7775637dd8c5da2cb32d6e7f58e935abb2b27eff9a472",
+    "completedCommands": 72,
+    "pathHits": [],
+    "scope": "Heuristic exposed-command scan, not a filesystem isolation guarantee. Manual disposition required for each hit."
+  },
+  {
+    "paragraph": "4.1.5",
+    "run": "415",
+    "logSha256": "596e1ff00f14c90e7acb78c9d5983ed1a94cf2e7e979f7f28ec6fe5635db5463",
+    "completedCommands": 51,
+    "pathHits": [],
+    "scope": "Heuristic exposed-command scan, not a filesystem isolation guarantee. Manual disposition required for each hit."
+  },
+  {
+    "paragraph": "4.2.1",
+    "run": "421",
+    "logSha256": "424a3af3a13dc9048ce61696035d159bcfefdfca40f0efc606dedbcb51febd14",
+    "completedCommands": 60,
+    "pathHits": [],
+    "scope": "Heuristic exposed-command scan, not a filesystem isolation guarantee. Manual disposition required for each hit."
+  },
+  {
+    "paragraph": "4.2.2",
+    "run": "422",
+    "logSha256": "cccfad0620537c5cfcad53921d49b3f3e0bee6fab093d980d83960c109780d33",
+    "completedCommands": 59,
+    "pathHits": [],
+    "scope": "Heuristic exposed-command scan, not a filesystem isolation guarantee. Manual disposition required for each hit."
+  },
+  {
+    "paragraph": "4.2.3",
+    "run": "423",
+    "logSha256": "90f2515abd6e5fcc58bae809780a6cf159fb1c75f4aad4467bfc5d25c137505b",
+    "completedCommands": 59,
+    "pathHits": [
+      {
+        "eventLine": 107,
+        "commandSha256": "0a59153b8e4caf56fe36abd6b86d4e44a2d7e238fa46bbdc30a050a9d7dc2d1c",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules/jsdom"
+        ]
+      },
+      {
+        "eventLine": 109,
+        "commandSha256": "538af55469b8f038685ab521122d5a5203fcf92b3865a6dca1d7839c2d4728eb",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules"
+        ]
+      },
+      {
+        "eventLine": 120,
+        "commandSha256": "7ef3d3e251ed6768c11b2453297b7cd63ab9068e5e2375d16624b153a09b3d5b",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules"
+        ]
+      }
+    ],
+    "scope": "Heuristic exposed-command scan, not a filesystem isolation guarantee. Manual disposition required for each hit."
+  },
+  {
+    "paragraph": "4.2.4",
+    "run": "424",
+    "logSha256": "bfaeaab7d90ffaee678ba332b2beef96e9992afd6535cd0f7e5cf13ea37c7df5",
+    "completedCommands": 50,
+    "pathHits": [],
+    "scope": "Heuristic exposed-command scan, not a filesystem isolation guarantee. Manual disposition required for each hit."
+  },
+  {
+    "paragraph": "4.2.5",
+    "run": "425",
+    "logSha256": "15881abc40b772865d38e2c1b0ff9ffd28348fdb4e912722d9a440d175af61c2",
+    "completedCommands": 45,
+    "pathHits": [],
+    "scope": "Heuristic exposed-command scan, not a filesystem isolation guarantee. Manual disposition required for each hit."
+  },
+  {
+    "paragraph": "4.2.6",
+    "run": "426",
+    "logSha256": "f0c34430424ebe347f42c6e809b873ebed15e8e8db131fcd890ae75ca778c1fd",
+    "completedCommands": 57,
+    "pathHits": [
+      {
+        "eventLine": 94,
+        "commandSha256": "3c79742b7bca86ffd0f0c3f43fa3f29351d14a4405e225e5867008920de16af9",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules/jsdom"
+        ]
+      },
+      {
+        "eventLine": 96,
+        "commandSha256": "0fe025f2f7052973d47f69e6cbf1221f0851eae1e0e6befa1469a5237645b705",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules",
+          "C:/wt/ppt/4veco-platform/package-lock.json"
+        ]
+      },
+      {
+        "eventLine": 98,
+        "commandSha256": "965014bcec18d253a7062944deddd33f9b8e933b4d0b48272a2183d5022e5c83",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules"
+        ]
+      },
+      {
+        "eventLine": 105,
+        "commandSha256": "ba3d392ac31100629d6eaaf87f2c2a50666241fb4d36ece3d1ae74d62bde5e67",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules"
+        ]
+      }
+    ],
+    "scope": "Heuristic exposed-command scan, not a filesystem isolation guarantee. Manual disposition required for each hit."
+  },
+  {
+    "paragraph": "4.2.7",
+    "run": "427",
+    "logSha256": "b30db12154b33b07f73bd31a7e940d6746f66f43c1f9b7081164ec2e4d47a162",
+    "completedCommands": 56,
+    "pathHits": [
+      {
+        "eventLine": 103,
+        "commandSha256": "45a7dc956cb0625500c88bcc678798c86794d4d1a3d976e440efe70c1cbba915",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules/jsdom"
+        ]
+      }
+    ],
+    "scope": "Heuristic exposed-command scan, not a filesystem isolation guarantee. Manual disposition required for each hit."
+  },
+  {
+    "paragraph": "4.3.1",
+    "run": "431",
+    "logSha256": "97d3d24c55f2c239f787803fc9ba545fda5f3067988521e22564ef9906c430dd",
+    "completedCommands": 50,
+    "pathHits": [
+      {
+        "eventLine": 110,
+        "commandSha256": "8b67dd03349ac97527b1448cf060d1486d86d82556237865fcb46bb14260f22e",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules/jsdom/package.json"
+        ]
+      },
+      {
+        "eventLine": 118,
+        "commandSha256": "88f966e404e9bc6a41662ff5d0b599669f07064bd34f009576c4245133c22e89",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules",
+          "C:/wt/ppt/4veco-platform/node_modules/jest/bin/jest.js"
+        ]
+      }
+    ],
+    "scope": "Heuristic exposed-command scan, not a filesystem isolation guarantee. Manual disposition required for each hit."
+  },
+  {
+    "paragraph": "4.3.2",
+    "run": "432",
+    "logSha256": "02fa99c967a3a866ca72e201ddb19be01932ebde03ef70d8ec91716e54e919a2",
+    "completedCommands": 41,
+    "pathHits": [
+      {
+        "eventLine": 92,
+        "commandSha256": "dbccf92a5a17c751f85759bb3911f57e4e29b0cd8e17334f22d0d9e39a3b2f7c",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules/jsdom"
+        ]
+      },
+      {
+        "eventLine": 94,
+        "commandSha256": "58ab1ff179de7d90116a0cbd24309d9a80d320e503edcccb3631c03e7e060d3a",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules"
+        ]
+      },
+      {
+        "eventLine": 98,
+        "commandSha256": "68d43efc4abe573875d607c1efb4d1810e090671d9731fa4c2756d304e60be25",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules"
+        ]
+      }
+    ],
+    "scope": "Heuristic exposed-command scan, not a filesystem isolation guarantee. Manual disposition required for each hit."
+  },
+  {
+    "paragraph": "4.3.3",
+    "run": "433",
+    "logSha256": "ea8c5b920464af8f2cf5763df38187bf1787bc35454405b7c172bbdfe2ddaed9",
+    "completedCommands": 54,
+    "pathHits": [
+      {
+        "eventLine": 98,
+        "commandSha256": "3cd562b50f8572d51b41987719673286834f5e3ded552b8f75ff4869a22ce242",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules/jsdom/package.json"
+        ]
+      },
+      {
+        "eventLine": 101,
+        "commandSha256": "cb7fb07ff1238e1073dec6e03fd714f555f55afdb5d3d4f4dcd511b733b10f12",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules"
+        ]
+      },
+      {
+        "eventLine": 102,
+        "commandSha256": "58ab1ff179de7d90116a0cbd24309d9a80d320e503edcccb3631c03e7e060d3a",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules"
+        ]
+      },
+      {
+        "eventLine": 106,
+        "commandSha256": "dba7071e5289d0e72477274d9d166ab864a9a43141a243412a06e8ff168fc274",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules"
+        ]
+      }
+    ],
+    "scope": "Heuristic exposed-command scan, not a filesystem isolation guarantee. Manual disposition required for each hit."
+  },
+  {
+    "paragraph": "4.3.4",
+    "run": "434",
+    "logSha256": "e93c5f84ed97250f2726a0c3692908df3ab057d59bc710da04793769ee993146",
+    "completedCommands": 49,
+    "pathHits": [
+      {
+        "eventLine": 99,
+        "commandSha256": "f45b41dbefa59d79dd88ce2f30bccfe44d04978980fbd3671e4d27868dad66ff",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules/jsdom"
+        ]
+      },
+      {
+        "eventLine": 101,
+        "commandSha256": "dea5928e8cfd00185d9a0ae6da43681f850aa440b7208cddc532744fe94905a6",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules"
+        ]
+      },
+      {
+        "eventLine": 105,
+        "commandSha256": "c01f1505ddfc71c85ff0756e0979f6d9c747962d09929ed0e8feec439c1f9fb3",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules"
+        ]
+      }
+    ],
+    "scope": "Heuristic exposed-command scan, not a filesystem isolation guarantee. Manual disposition required for each hit."
+  },
+  {
+    "paragraph": "4.3.5",
+    "run": "435",
+    "logSha256": "241b4c2cad1b68718b6c8b84bf9c12de1a4619d4bb24e2ff78b4ae7c8b4109ab",
+    "completedCommands": 56,
+    "pathHits": [
+      {
+        "eventLine": 91,
+        "commandSha256": "f01a7afbef9a0baaafae8493ae47cb7962e4c36b6f2e9043f69b750ee42f4ff5",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules/jsdom",
+          "C:/wt/ppt/4veco-platform/package-lock.json"
+        ]
+      },
+      {
+        "eventLine": 93,
+        "commandSha256": "ed2f87bcfeac49d068a6eed682a2902f9e39139f343c34e22d5d640c4100c034",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules"
+        ]
+      },
+      {
+        "eventLine": 97,
+        "commandSha256": "811582f86ddc7b8e4071e75a1079d5039fe1d82587a82fa054872322bc971f48",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules"
+        ]
+      },
+      {
+        "eventLine": 114,
+        "commandSha256": "b53865121302cf494fc0f37969989f4249f2d4b290b5c9174e05d7a0f610260c",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules"
+        ]
+      }
+    ],
+    "scope": "Heuristic exposed-command scan, not a filesystem isolation guarantee. Manual disposition required for each hit."
+  },
+  {
+    "paragraph": "4.1.1",
+    "run": "retest-411",
+    "logSha256": "147542ca0a0fcf3d81d563b27c19fdc658c5a633b7f81b9bf508061554ada8c6",
+    "completedCommands": 54,
+    "pathHits": [
+      {
+        "eventLine": 114,
+        "commandSha256": "bc4fe9d704deb889c04828bce2e57bd5772cdd60a9d349846ecaa09c42e8b5bd",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules/jsdom"
+        ]
+      },
+      {
+        "eventLine": 118,
+        "commandSha256": "58ab1ff179de7d90116a0cbd24309d9a80d320e503edcccb3631c03e7e060d3a",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules"
+        ]
+      },
+      {
+        "eventLine": 123,
+        "commandSha256": "55ec253b8d0056b65433e0efda32978674bf0a4e9deca1c6d25638ed81c4b61d",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules"
+        ]
+      }
+    ],
+    "scope": "Heuristic exposed-command scan, not a filesystem isolation guarantee. Manual disposition required for each hit."
+  },
+  {
+    "paragraph": "4.2.2",
+    "run": "retest-422",
+    "logSha256": "869096792a128af32b5bea3b5097874ecd27bebb76f5bda547f1e554d81d2677",
+    "completedCommands": 58,
+    "pathHits": [
+      {
+        "eventLine": 119,
+        "commandSha256": "d774d11b02128269837660e266b788a59d97312420f458ea97c4cb190f4e081a",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules/jsdom"
+        ]
+      },
+      {
+        "eventLine": 125,
+        "commandSha256": "58ab1ff179de7d90116a0cbd24309d9a80d320e503edcccb3631c03e7e060d3a",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules"
+        ]
+      },
+      {
+        "eventLine": 127,
+        "commandSha256": "d4abdbcd0d82ec2116ae5b2e591ddb3aac8a92229db728a51d449ae7a2d9122f",
+        "peerKeys": [],
+        "rootPaths": [
+          "C:/wt/ppt/4veco-platform/node_modules"
+        ]
+      }
+    ],
+    "scope": "Heuristic exposed-command scan, not a filesystem isolation guarantee. Manual disposition required for each hit."
+  }
+]

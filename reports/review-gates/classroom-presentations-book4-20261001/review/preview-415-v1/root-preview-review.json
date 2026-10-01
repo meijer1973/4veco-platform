@@ -1,0 +1,59 @@
+{
+  "paragraph": "4.1.5",
+  "scope": "Root independent read-only preview of author draft v1; no feedback sent to author; not a final cold-handoff verdict.",
+  "pptxSha256": "1427947877902f7d0ee82e2449ebccb9cc3baf12b390a1a4bc27e03f3a985188",
+  "nativeRenderSlidesIndividuallyInspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "allSlideTextAndTeacherNotesRead": true,
+  "sourceRead": "Full current-v3 4.1.5 manuscript, all exercise/context/target questions; independent chapter answer and guide source audit.",
+  "findings": [
+    {
+      "severity": "P2",
+      "slides": [
+        4
+      ],
+      "finding": "MK direct label touches its cost curve."
+    },
+    {
+      "severity": "P2",
+      "slides": [
+        10,
+        20,
+        21
+      ],
+      "finding": "GO=P label lies at the GO/MK crossing; MK label is below and closer to GO than its own curve. Move labels to unambiguous separate positions."
+    }
+  ],
+  "checks": [
+    "All source context and all six target45 questions precede answer15. Printed48/49 versus chapter-local44/45 explained.",
+    "Mixed roles/numbering preserve 41A and all41-48. Start41 retrieves previously taught model selection, own Gel Nova explanation is distinct from assigned practice.",
+    "Recalculated own q28/P19/profit222 versus q0 loss72 and cap20 profit198; target monopoly q40/P24/profit360 versus q0 loss120; separate price-taker q50/P18/profit130.",
+    "Shows capacity constraints, marginal direction, price versus marginal amount, uniform price and distinct markets; no unwarranted welfare ranking.",
+    "Percentage and interval/tabled maximum notes properly bounded. No novel method presumed beyond chapter4.1 predecessors; final serial review awaits414."
+  ]
+}

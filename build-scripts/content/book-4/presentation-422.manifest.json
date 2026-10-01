@@ -1,0 +1,267 @@
+{
+  "paragraph": "4.2.2",
+  "title": "Prijsdiscriminatie",
+  "manuscriptHeading": "Waarom krijgt de één korting?",
+  "type": "theory",
+  "edition": "books34-v3",
+  "lessonCommit": "e734532a42b27732ac25ce990fc9448b12309d28",
+  "platformBaseline": "d1cb1fe3db3a70dc86682491771ed68a67f45526",
+  "sources": [
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.2 manuscript.md",
+      "sha256": "980b9248d6ced542888be62403a717479b1909209ef871325461a423af8baee9"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.1 manuscript.md",
+      "sha256": "2761c18bb26b7e62d0436d623f388371eb1a4bbbe1f1a57d8170d16a45810305"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/Antwoorden.md",
+      "sha256": "b77880f5e0c3e9252002c502b1cd101d4181773fa9968ea37d63e3d04cdf80f9"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/Docenteninformatie.md",
+      "sha256": "b7fed5653f6f8677eeeab66d84fc80f55d11455b84243f80d3f3a6e1d651a2ed"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/4.1.4 manuscript.md",
+      "sha256": "65dd2923fd9c6544fce1e1a26d30969bf34abc4f0bd9bd8ad85cd3198db752b0"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/_assets/422_target.svg",
+      "sha256": "dc540b85129e703bbc088c953c4c6b823393ced5395c553bd55fc04b75b11b11"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/_assets/422_answer16.svg",
+      "sha256": "41a994151f6420e254e2fe0572793cb51919074980fb66d1853e5d25d8435b5c"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+      "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+    }
+  ],
+  "assignment": {
+    "start": [
+      10,
+      11
+    ],
+    "basis": [
+      12,
+      13
+    ],
+    "independent": [
+      14,
+      15
+    ],
+    "target": 16,
+    "homework": [
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "homeworkInstruction": "Maken en nakijken",
+    "extra": [
+      17,
+      18
+    ]
+  },
+  "printedPages": {
+    "paragraph": [
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70
+    ],
+    "start": 66,
+    "startSupport": [
+      63,
+      64
+    ],
+    "basis": [
+      66,
+      67
+    ],
+    "independent": [
+      67,
+      68
+    ],
+    "target": 69,
+    "priorMonopoly": [
+      36,
+      37,
+      38
+    ],
+    "priorSurplus": 55,
+    "verification": "Complete-book PDF extracted footers; physical page equals printed page in this file. Chapter 4.1 and 4.2 mappings independently inspected; no chapter-local offset reused."
+  },
+  "goals": [
+    "Prijsdiscriminatie herkennen en voorwaarden uitleggen",
+    "Per gescheiden groep MO, winstmaximale Q en prijs bepalen",
+    "Omzet, gezamenlijke kosten en winst bij één en twee prijzen vergelijken",
+    "CS, PS, TS en verdeling beoordelen met begrensde conclusie"
+  ],
+  "prerequisites": [
+    {
+      "operation": "TO = P × Q, TK = TVK + TCK, winst = TO − TK",
+      "teachingSource": "4.1.4 manuscript.md, Stap 3: bereken de winst",
+      "printedPages": [
+        38
+      ],
+      "firstUse": "start 10",
+      "lessonSupport": "notes slide 1: sum receipts and visits, common fixed cost once; demonstrated slide 9"
+    },
+    {
+      "operation": "Two group receipts with one common cost base",
+      "teachingSource": "4.2.2 manuscript.md, De bekende methode, nu tweemaal",
+      "printedPages": [
+        64
+      ],
+      "firstUse": "start 10",
+      "lessonSupport": "Visible overview support p. 64 plus notes: sum receipts/sum visits/common TCK once; slide 9 demonstration and return on slide 14"
+    },
+    {
+      "operation": "Recognize same product, cost differences and enforceable groups",
+      "teachingSource": "4.2.2 manuscript.md, Drie voorwaarden moeten passen and warning",
+      "printedPages": [
+        63
+      ],
+      "firstUse": "start 11, supported exploration",
+      "lessonSupport": "Visible support p. 63 on every overview; slide 3 teaching; return to 11 before basis on slide 14"
+    },
+    {
+      "operation": "P to TO to MO; MO = MK; before/after check and capacity; P on GO",
+      "teachingSource": "4.1.4 manuscript.md, Stap 1/2/3",
+      "printedPages": [
+        36,
+        37,
+        38
+      ],
+      "firstUse": "basis 12, independent 14, target 16a",
+      "lessonSupport": "Slides 5–8 demonstrate; native XY charts, q in earlier chapter means same firm output, Q_A and Q_B now group visits"
+    },
+    {
+      "operation": "Optimize groups separately only for common constant MK and nonbinding joint capacity",
+      "teachingSource": "4.2.2 manuscript.md, Elke groep heeft haar eigen vraag",
+      "printedPages": [
+        64
+      ],
+      "firstUse": "independent 14 and target 16a",
+      "lessonSupport": "slide 4 assumptions; slides 8 and 21 joint capacity checks"
+    },
+    {
+      "operation": "PS = TO − TVK, winst = PS − TCK, TS = CS + PS",
+      "teachingSource": "4.2.1 manuscript.md, Dezelfde markt, twee verschillende vragen",
+      "printedPages": [
+        55
+      ],
+      "firstUse": "independent 15 and target 16d",
+      "lessonSupport": "slides 10–11 and 24–25"
+    },
+    {
+      "operation": "Changed surplus per group, then sum; distinguish profit and welfare; bound inference",
+      "teachingSource": "4.2.2 manuscript.md, worked example and price sensitivity section",
+      "printedPages": [
+        65,
+        68
+      ],
+      "firstUse": "independent 15, target 16c–e",
+      "lessonSupport": "slides 10–13 and 23–26"
+    }
+  ],
+  "authoredExample": {
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "context": "Speelatelier",
+    "demandA": "P_A = 30 − Q_A",
+    "demandB": "P_B = 18 − Q_B",
+    "MK": 6,
+    "TCK": 36,
+    "capacity": 48,
+    "givenUniformPrice": 15,
+    "units": "euro per bezoek; bezoeken per week; totals euro per week",
+    "assumptions": [
+      "same service",
+      "recognizable personal passes prevent resale",
+      "market power",
+      "unchanged demand and costs",
+      "constant common MK",
+      "nonbinding joint capacity",
+      "no external effects"
+    ],
+    "uniform": {
+      "QA": 15,
+      "QB": 3,
+      "TO": 270,
+      "TK": 144,
+      "profit": 126,
+      "CSA": 112.5,
+      "CSB": 4.5,
+      "PS": 162,
+      "TS": 279
+    },
+    "groups": {
+      "QA": 12,
+      "QB": 6,
+      "PA": 18,
+      "PB": 12,
+      "TO": 288,
+      "TK": 144,
+      "profit": 144,
+      "CSA": 72,
+      "CSB": 18,
+      "PS": 180,
+      "TS": 270
+    },
+    "separation": "New context/data, not an assigned exercise. No book exercise number or page attributed to authored data."
+  },
+  "slidePlan": {
+    "overview": [
+      1,
+      14,
+      27
+    ],
+    "teaching": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "targetSources": [
+      15,
+      16,
+      17
+    ],
+    "targetQuestions": [
+      18,
+      19
+    ],
+    "targetAnswers": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ]
+  },
+  "constraints": [
+    "Scoped classroom Part B only",
+    "Normal route retained; no claim of one-lesson fit",
+    "No textbook sources or sealed exports changed"
+  ],
+  "sourceConflicts": []
+}

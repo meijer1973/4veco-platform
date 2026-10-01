@@ -1,0 +1,289 @@
+{
+  "paragraph": "4.1.3",
+  "title": "Marginale opbrengst bij monopolie",
+  "type": "theory",
+  "edition": "books34-v3",
+  "lessonCommit": "e734532a42b27732ac25ce990fc9448b12309d28",
+  "platformBaseline": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+  "sources": [
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/4.1.3 manuscript.md",
+      "sha256": "c4360e8f4b2bbf0ea576f80d8f2bb323c2fe34a7d5f90c375203ca629bddbfc1"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/Antwoorden.md",
+      "sha256": "4048fa122764663e445145463d63bf4b9b2367b1aa8e34f0e62d1cf5486e394f"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/Docenteninformatie.md",
+      "sha256": "0dd614ec1357e51a40dd19b6bc0480549e37c912b2de56ca403a31c7cb0e7e92"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/4.1.2 manuscript.md",
+      "sha256": "739fc8fc31d2df3fcce02832e72df341c5be7544ff6c90fbe089e2f7cee99a3d"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.2 manuscript.md",
+      "sha256": "992f1f64ee131c8c7a6c85dd517fc87724be5f825a1f9e497cd01f699645fdce"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+      "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.3-leerling-v3.pdf",
+      "sha256": "5d464b9480e6bbd0c885eea288eb0b3ad7fc642889e49f7c51d39048d87f94f1"
+    }
+  ],
+  "goals": [
+    "Derive TO and MO from a linear demand function",
+    "Fill and check a revenue table",
+    "Distinguish an interval average from point MO",
+    "Explain both revenue effects of a uniform price reduction"
+  ],
+  "assignment": {
+    "start": [
+      21,
+      22
+    ],
+    "basis": [
+      23,
+      24,
+      25
+    ],
+    "independent": [
+      26,
+      27
+    ],
+    "target": 28,
+    "homework": [
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "homeworkInstruction": "Maken en nakijken",
+    "extra": [
+      29,
+      30
+    ]
+  },
+  "printedBookPages": {
+    "theory": [
+      24,
+      25,
+      26,
+      27
+    ],
+    "workedExample": 28,
+    "start": 29,
+    "basis": [
+      30,
+      31
+    ],
+    "independent": 32,
+    "target": 33,
+    "extra": 34
+  },
+  "pageVerification": "Complete book PDF printed footers inspected. Physical indices 28, 29, 33 (one-based) equal printed 28, 29, 33 here. Manuscript edition_page and chapter teacher references are chapter-local and four lower.",
+  "prerequisites": [
+    {
+      "operation": "Substitute q into falling P, calculate TO=P*q, preserve units",
+      "priorAnchor": "4.1.2 manuscript: Dezelfde afkorting, een andere lijn; Uitgewerkt voorbeeld Parkveer steps 2-4. TO=P*q recalled explicitly in 4.1.3 Eerst de totale opbrengst.",
+      "lessonSlides": [
+        4,
+        6,
+        8
+      ],
+      "practice": [
+        24,
+        26,
+        28
+      ]
+    },
+    {
+      "operation": "Multiply q through parentheses to make the quadratic TO term",
+      "priorAnchor": "Start 21 provides the differentiation rule but does not itself prove mastery of distributing q. Treat expansion as fragile and refresh verbally during start; demonstrate explicitly in lesson.",
+      "lessonSlides": [
+        6
+      ],
+      "practice": [
+        21,
+        24,
+        26,
+        28
+      ]
+    },
+    {
+      "operation": "Differentiate quadratic, linear and constant terms with their signs",
+      "priorAnchor": "3.2.2 manuscript: Een beperkte rekenregel; Doe het één term tegelijk. Worked example Theeverpakker Linde steps 1-4.",
+      "lessonSlides": [
+        3,
+        7
+      ],
+      "practice": [
+        21,
+        24,
+        26,
+        28
+      ]
+    },
+    {
+      "operation": "Compare interval change with a point derivative in a continuous kg model",
+      "priorAnchor": "3.2.2 manuscript: Van een grote stap naar een kleine verandering; worked example step 3. Revenue transfer is new.",
+      "lessonSlides": [
+        7,
+        9,
+        11,
+        12
+      ],
+      "practice": [
+        24,
+        26,
+        28
+      ]
+    },
+    {
+      "operation": "Separate revenue on extra kg from lower revenue on first quantity under uniform price",
+      "priorAnchor": "New in 4.1.3. Start 22 uses supported exploration of Luma on printed p.28, steps 3-4 and its figure. No prior mastery assumed.",
+      "lessonSlides": [
+        4,
+        5,
+        14
+      ],
+      "practice": [
+        22,
+        23,
+        25,
+        26,
+        28
+      ]
+    },
+    {
+      "operation": "Read P and MO at same q, interpret negative MO and distinguish revenue from profit",
+      "priorAnchor": "4.1.2 explains falling demand and P=GO for q>0. 4.1.3 adds MO, its negative range and revenue maximum.",
+      "lessonSlides": [
+        10,
+        11,
+        13
+      ],
+      "practice": [
+        27,
+        28
+      ]
+    }
+  ],
+  "authoredExamples": [
+    {
+      "name": "Was Nova",
+      "label": "Uitlegvoorbeeld — niet uit het boek",
+      "slides": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "P": "28 - 0.40q",
+      "TO": "28q - 0.40q^2",
+      "MO": "28 - 0.80q",
+      "domain": [
+        0,
+        70
+      ],
+      "units": {
+        "q": "kg/week",
+        "P_MO": "EUR/kg",
+        "TO": "EUR/week"
+      },
+      "assumptions": [
+        "continuous kg",
+        "uniform price within each alternative weekly plan",
+        "other demand factors fixed"
+      ],
+      "table": [
+        [
+          10,
+          24,
+          240
+        ],
+        [
+          20,
+          20,
+          400
+        ],
+        [
+          30,
+          16,
+          480
+        ]
+      ],
+      "step_10_20": {
+        "extraSales": 200,
+        "revenueLoss": 40,
+        "net": 160,
+        "intervalAverage": 16,
+        "MO_start": 20,
+        "MO_end": 12
+      }
+    },
+    {
+      "name": "Differentiation refresh",
+      "slide": 3,
+      "expression": "0.30q^2 + 5q + 80",
+      "derivative": "0.60q + 5"
+    }
+  ],
+  "targetCoverage": {
+    "sourceAndBlankTable": [
+      16
+    ],
+    "allQuestionsBeforeAnswers": [
+      17,
+      18
+    ],
+    "28a": [
+      19,
+      20
+    ],
+    "28b": [
+      21
+    ],
+    "28c": [
+      22,
+      23
+    ],
+    "28d": [
+      24
+    ],
+    "28e": [
+      25
+    ],
+    "selfCorrection": [
+      26
+    ]
+  },
+  "overviewSlides": [
+    1,
+    15,
+    27
+  ],
+  "startReturnSlide": 14,
+  "sourceConflicts": [],
+  "timing": "Teacher guidance provisionally allocates two 55-minute lessons; no measured fit or learning-effectiveness claim. Keep all guided exercises.",
+  "build": "Run presentation-413.mjs using the installed Presentations runtime; use a fresh PRESENTATION_WORKSPACE. Render saved final with build-scripts/presentations/render-powerpoint.ps1."
+}

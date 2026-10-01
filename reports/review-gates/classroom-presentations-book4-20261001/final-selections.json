@@ -1,0 +1,79 @@
+{
+  "422": {
+    "paragraph": "4.2.2",
+    "prompt": "Build the PowerPoint for paragraph 4.2.2.",
+    "baselines": {
+      "platform": "d1cb1fe3db3a70dc86682491771ed68a67f45526",
+      "lessons": "e734532a42b27732ac25ce990fc9448b12309d28"
+    },
+    "startedAt": "2026-10-01T18:52:26.681662+00:00",
+    "isolation": "Fresh ephemeral CLI thread, separate paired worktrees, shared host filesystem. No parent history, original output, findings or coaching supplied.",
+    "model": "User-configured default; no override",
+    "instructionReviewSha256": "c41735bb004829ae30e10194813bd21bf33a5f36455a3a1c65fb8acdd71af0b9",
+    "noNewBook4OutputsInSeed": true,
+    "processOutcome": {
+      "exitCode": 0,
+      "finishedAt": "2026-10-01T19:17:51.892097+00:00"
+    },
+    "sourceFolder": "retest-422",
+    "reviewKey": "retest-422",
+    "outputs": {
+      "4veco-platform": {
+        "commit": "cf241cf7be7d00ef7640ffb97d8d0fe7792a1dea",
+        "files": {
+          "build-scripts/content/book-4/presentation-422.manifest.json": "ae102ecb769e39ba2518a98c9d12f24da8330bad61e5c0db896093fa54a8adbc",
+          "build-scripts/content/book-4/presentation-422.mjs": "0c668c8f6e33ac75e245c1c3620cb180a28473d0cfd8a6766e0e2798fa73fcfb"
+        }
+      },
+      "4veco-lessen": {
+        "commit": "b3901b222fec37e4c9c1cfa5591ca212a84d441b",
+        "files": {
+          "RESEARCH_AGENT_MAP.md": "b27f5c29e28522e792e34965318c34278ac23c77d356bb464351d1ded4956bc9",
+          "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.2 Prijsdiscriminatie – presentatie.pdf": "d5001b44104097a0c4462ea5385a8dfc0debecfc113d6d57b7021c846f89b485",
+          "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.2 Prijsdiscriminatie – presentatie.pptx": "3503f74dfc70bec83865a1502fa14bd97908e7abe6d83cbe930040610712091c",
+          "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/evidence/4.2.2-presentation.md": "2c3828d6d0e426607f3bf062b445679dca802c74bc3394835051dd36adbac2b0"
+        }
+      }
+    },
+    "processLogSha256": "869096792a128af32b5bea3b5097874ecd27bebb76f5bda547f1e554d81d2677"
+  },
+  "411": {
+    "paragraph": "4.1.1",
+    "prompt": "Build the PowerPoint for paragraph 4.1.1.",
+    "baselines": {
+      "platform": "d1cb1fe3db3a70dc86682491771ed68a67f45526",
+      "lessons": "e734532a42b27732ac25ce990fc9448b12309d28"
+    },
+    "startedAt": "2026-10-01T18:52:26.321062+00:00",
+    "isolation": "Fresh ephemeral CLI thread, separate paired worktrees, shared host filesystem. No parent history, original output, findings or coaching supplied.",
+    "model": "User-configured default; no override",
+    "instructionReviewSha256": "c41735bb004829ae30e10194813bd21bf33a5f36455a3a1c65fb8acdd71af0b9",
+    "noNewBook4OutputsInSeed": true,
+    "processOutcome": {
+      "exitCode": 0,
+      "finishedAt": "2026-10-01T19:19:31.909019+00:00"
+    },
+    "sourceFolder": "retest-411",
+    "reviewKey": "retest-411",
+    "outputs": {
+      "4veco-platform": {
+        "commit": "3dbfd37fcc7f031342b5fd406d10cd355df30140",
+        "files": {
+          "build-scripts/content/book-4/check-presentation-411.py": "6a6dbd839e6cf422d9ca339673ff9260bcb4d2b72b67c49393c963c76493fed8",
+          "build-scripts/content/book-4/presentation-411.manifest.json": "2d03542017054f7d98dc292f0fd963c67c9a5a6011a15bf5eedc3d70713cc520",
+          "build-scripts/content/book-4/presentation-411.mjs": "a561ac828df38449471e32b18cc0724fda0bbba7bbfd86d1e3d907e92a1e94d4"
+        }
+      },
+      "4veco-lessen": {
+        "commit": "5f3b38ef43c4ece540143659dd0ecb470d7117d9",
+        "files": {
+          "RESEARCH_AGENT_MAP.md": "83c853d3abfc1ff580cb4766098b4c74f3fc41b794b0b2f7838706531d48dc61",
+          "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.1 Toetreding, uittreding en langetermijnevenwicht – presentatie.pdf": "b14efb990a9092f32b1adbd270fa1ecf2de8099d6bcfee125ad339c787087ccf",
+          "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.1 Toetreding, uittreding en langetermijnevenwicht – presentatie.pptx": "e78b159ae169dfe06c608f949546e1ab54bdb5c2fb1428464378b80adc0ba693",
+          "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/evidence/4.1.1-presentation.md": "68f74a98829960913342e90bb7062e0bfb08b46e0018561aea9198372ae1e271"
+        }
+      }
+    },
+    "processLogSha256": "147542ca0a0fcf3d81d563b27c19fdc658c5a633b7f81b9bf508061554ada8c6"
+  }
+}

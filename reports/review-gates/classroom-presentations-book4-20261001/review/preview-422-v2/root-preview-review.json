@@ -1,0 +1,21 @@
+{
+  "paragraph": "4.2.2",
+  "scope": "Read-only coordinator review of author v2 candidate; not completed handoff. No feedback sent to author and no coordinator changes.",
+  "pptxSha256": "6297bffc49c1ca6211ce21da4512eebe9f61b9d6b90905c6566cac480395a43d",
+  "pdfSha256": "7abbebddbd38ab9af4e3b69a65a529127c7c9e52f1296b20f13320a9e0629b3b",
+  "nativeRenderSlidesIndividuallyInspected": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27],
+  "allSlideTextAndTeacherNotesRead": true,
+  "sourceRead": "Full current-v3 4.2.2 manuscript including pre-exercise target sources and all practice; independent source/answer foundation audit.",
+  "findings": [
+    {"severity":"P3","slides":[5],"finding":"Notes call 4.1.4 prerequisite p32–33 complete-book pages, but these are chapter-local; correct method pages36–37. Actual 413derivative teaching is earlier24–28. Verify final citation and manifest."},
+    {"severity":"P2","slides":[6,7,17,22],"finding":"Both MK labels lie across the MK lines. Vraag/GO multiline labels touch demand curves; targetB GO also touches MK intersection. Slide7 priceB label overlaps Vraag label and priceAguide crosses MO label;22B priceguide crossesMO. Require final label clearance inspection."}
+  ],
+  "checks": [
+    "Own Sterrenkoepel P_A54−2Q_A/P_B30−2Q_B,MK6,F72,cap42. MO54−4QA/30−4QB givesQA12PA30,QB6PB18. Both profit directions and domains/capacity checked. Shared F counted once.",
+    "Given commonP24 givesQA15/QB3,TO432 versus468;totalQ18/18,TVK108,TK180,profit252/288. CS_A225→144 andCS_B9→36; total234→180;PS324→360,TS558→540,profit+36 butTS−18. Recomputed independently.",
+    "Start10–11p66:10a retrieves total arithmetic, novel10b sharedF has supportp64, definition11p63; both returned14 beforepractice15. Basis12/13,independent14/15,target16p69 andHW12–16 retained; extra17/18 distinct.",
+    "New prerequisites taught2–3conditions,4constantMK/adequatecapacity,5–7per-groupMO=MKthenownP,8–11sharedtotalsanddistribution. Builds on414/421; no aggregate uniform-price optimization invented. Same-scale native panels and units visible.",
+    "Full FilmLabsource16–18 includes personalpasses/conditions/domains/costs/capacity/unchangedfactors/noexternal/givenCS. Allfivequestions19–20beforeanswers21–26. TargetQA16PA24/QB8PB16,TO480/512,TK272,w208/240,CS208/160,PS288/320,TS496/480. Correct bounded conclusion; groupnames/slope alone notelasticity.",
+    "Allnon-chart slides visually clear; overview1/15/27 parity and14ptnotes/PDFtext pass. Only draft graph-label and one citation findings; no missing teaching/sourcefoundation blocker identified."
+  ]
+}

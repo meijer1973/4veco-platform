@@ -1,0 +1,10 @@
+{
+  "paragraph": "4.1.1",
+  "finding": "B4-411-P3-01",
+  "priority": "P3",
+  "status": "Repair in progress",
+  "supersedesVerdict": "Earlier root-review.json PASS is retained as historical; this later independent content finding supersedes its no-unresolved-findings conclusion.",
+  "coldPptxSha256": "d3d0ecb395c17295ef0450db95ed025a9716778513d2b05ee2cc7aac5c686ac8",
+  "findingDetail": "Slide25 and notes imply arbitrary A1 slopes. Identical unchanged firms and the LR equilibrium fix N200, hence P4+.20Q on the unconstrained branch. Displayed line and economic answers were correct.",
+  "disposition": "Rebuild through owning builder, inspect changed native render/text/notes, and bind unchanged pages. Preserve original cold output."
+}

@@ -1,0 +1,15 @@
+{
+  "pptxSha256": "1e0df648bba44290c041c2d0cb06a4b35136d08eef64f8b82e0787386a228eab",
+  "pdfSha256": "84b83ca68b2b91bcda6151a40974c7d3413f40ee2ed6579555090183678c9042",
+  "slides": 26,
+  "pdfPages": 26,
+  "notes": 26,
+  "minimumExplicitNotesFontPt": 14.0,
+  "pdfTextMismatches": [],
+  "overviewSlides": [
+    1,
+    15,
+    26
+  ],
+  "overviewTextAndGeometryParity": true
+}

@@ -1,0 +1,663 @@
+{
+  "runs": [
+    {
+      "paragraph": "4.1.1",
+      "prompt": "Build the PowerPoint for paragraph 4.1.1.",
+      "baselines": {
+        "platform": "d1cb1fe3db3a70dc86682491771ed68a67f45526",
+        "lessons": "e734532a42b27732ac25ce990fc9448b12309d28"
+      },
+      "startedAt": "2026-10-01T18:52:26.321062+00:00",
+      "isolation": "Fresh ephemeral CLI thread, separate paired worktrees, shared host filesystem. No parent history, original output, findings or coaching supplied.",
+      "model": "User-configured default; no override",
+      "instructionReviewSha256": "c41735bb004829ae30e10194813bd21bf33a5f36455a3a1c65fb8acdd71af0b9",
+      "noNewBook4OutputsInSeed": true,
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T19:19:31.909019+00:00"
+      },
+      "sourceFolder": "retest-411",
+      "reviewKey": "retest-411",
+      "outputs": {
+        "4veco-platform": {
+          "commit": "3dbfd37fcc7f031342b5fd406d10cd355df30140",
+          "files": {
+            "build-scripts/content/book-4/check-presentation-411.py": "6a6dbd839e6cf422d9ca339673ff9260bcb4d2b72b67c49393c963c76493fed8",
+            "build-scripts/content/book-4/presentation-411.manifest.json": "2d03542017054f7d98dc292f0fd963c67c9a5a6011a15bf5eedc3d70713cc520",
+            "build-scripts/content/book-4/presentation-411.mjs": "a561ac828df38449471e32b18cc0724fda0bbba7bbfd86d1e3d907e92a1e94d4"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "5f3b38ef43c4ece540143659dd0ecb470d7117d9",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "83c853d3abfc1ff580cb4766098b4c74f3fc41b794b0b2f7838706531d48dc61",
+            "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.1 Toetreding, uittreding en langetermijnevenwicht – presentatie.pdf": "b14efb990a9092f32b1adbd270fa1ecf2de8099d6bcfee125ad339c787087ccf",
+            "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.1 Toetreding, uittreding en langetermijnevenwicht – presentatie.pptx": "e78b159ae169dfe06c608f949546e1ab54bdb5c2fb1428464378b80adc0ba693",
+            "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/evidence/4.1.1-presentation.md": "68f74a98829960913342e90bb7062e0bfb08b46e0018561aea9198372ae1e271"
+          }
+        }
+      },
+      "processLogSha256": "147542ca0a0fcf3d81d563b27c19fdc658c5a633b7f81b9bf508061554ada8c6"
+    },
+    {
+      "paragraph": "4.1.2",
+      "prompt": "Build the PowerPoint for paragraph 4.1.2.",
+      "baselines": {
+        "platform": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+        "lessons": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "platform_main": "d81db9558cc24d0671da1b2b9ecc5cdf1a092dde",
+        "lesson_main": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "instruction_preparation": "Bounded Book4 routing and companion allowance, reviewed in preparation-review.md; no paragraph content coaching."
+      },
+      "startedAt": "2026-10-01T16:09:39.181163+00:00",
+      "isolation": "Fresh ephemeral CLI thread, separate paired Git worktrees, shared host filesystem. No parent history or peer outputs supplied.",
+      "model": "User-configured default; no override",
+      "parallelism": "Up to three independent authors, all seeded from the same immutable repository pair.",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T16:32:45.579885+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "57afe8e5c8a219a2a51aa9feb3be45ee7eb04a9f",
+          "files": {
+            "build-scripts/content/book-4/check-presentation-412.py": "b9f6917e7fb79ac9b40a5335e2ff180e25521c178df0866aa33a679ff89e1884",
+            "build-scripts/content/book-4/presentation-412.manifest.json": "66980debf8aaf4c89f3e557cdb0cfa81432cddf704a1f8fbc894bdca8cd77519",
+            "build-scripts/content/book-4/presentation-412.mjs": "2770c43fc3121b70ad47e6cfd0af2b4c3de271f4b868aefbf39cc9a9d03d17e6"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "837f9cdd6fc31fad63863dc1276586e3e3d387d1",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "bd44381f2f68150ffd5016544d0ed68fe418fd79549591cc3460056a185ef34c",
+            "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.2 Monopolie - kenmerken – presentatie.pdf": "66e4ea378b6c4067052cfd06b528e019bed0a26875cd71be349022853624052d",
+            "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.2 Monopolie - kenmerken – presentatie.pptx": "df76dc244d562a46d2f611d3864551b1bb19571e76c6191e7701b8b0f2a60584",
+            "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/evidence/4.1.2-presentation.md": "034d6e402b0eae187303f293b8f0394210f8c5272fd652563663159429565446"
+          }
+        }
+      },
+      "processLogSha256": "f4b052f743ddb74453ffbec836210ed0be13e69ac1a26337f33e0cf672964227"
+    },
+    {
+      "paragraph": "4.1.3",
+      "prompt": "Build the PowerPoint for paragraph 4.1.3.",
+      "baselines": {
+        "platform": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+        "lessons": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "platform_main": "d81db9558cc24d0671da1b2b9ecc5cdf1a092dde",
+        "lesson_main": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "instruction_preparation": "Bounded Book4 routing and companion allowance, reviewed in preparation-review.md; no paragraph content coaching."
+      },
+      "startedAt": "2026-10-01T16:09:40.249749+00:00",
+      "isolation": "Fresh ephemeral CLI thread, separate paired Git worktrees, shared host filesystem. No parent history or peer outputs supplied.",
+      "model": "User-configured default; no override",
+      "parallelism": "Up to three independent authors, all seeded from the same immutable repository pair.",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T16:35:42.167926+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "d9b60147c64a0cdcdc136b1f95dc4c61ee7e7f77",
+          "files": {
+            "build-scripts/content/book-4/presentation-413.mjs": "162552d7ff3bc9962e30cafb408d3b3d1de6bf34c2c09101cefa0bfae1cf5b43",
+            "build-scripts/content/book-4/presentation-413.source.json": "0a928c1dd2b0c13914ef700afe8af5dd7776cd21162b24d8a015ca00c3d949b1"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "09ef1c752585330a5f4da22710aef1ab797e2bd3",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "7b0a91a9c69011c418f08e243463ceca23e8a91725eeae8675b6cd3ea1b3dc9f",
+            "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.3 Marginale opbrengst bij monopolie – presentatie.pdf": "fc170caaf306bcb6469bc5fc174b21b04e43be8b761c9e4e2a41b711d587850e",
+            "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.3 Marginale opbrengst bij monopolie – presentatie.pptx": "90d49caf084fb7e2b1b4c7f13299dc320443aa7fda2e7144afaef31522502788",
+            "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/evidence/4.1.3-presentation.md": "2456d5926bab23104c319cd9569f1e7e902132d8afe5fd2669eee395f5d2758a"
+          }
+        }
+      },
+      "processLogSha256": "cb909182863e4fe34fb10fc831dd1554c24f0eb3bb2cc21e1056f490c3903fa0"
+    },
+    {
+      "paragraph": "4.1.4",
+      "prompt": "Build the PowerPoint for paragraph 4.1.4.",
+      "baselines": {
+        "platform": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+        "lessons": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "platform_main": "d81db9558cc24d0671da1b2b9ecc5cdf1a092dde",
+        "lesson_main": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "instruction_preparation": "Bounded Book4 routing and companion allowance, reviewed in preparation-review.md; no paragraph content coaching."
+      },
+      "startedAt": "2026-10-01T16:32:51.423318+00:00",
+      "isolation": "Fresh ephemeral CLI thread, separate paired Git worktrees, shared host filesystem. No parent history or peer outputs supplied.",
+      "model": "User-configured default; no override",
+      "parallelism": "Up to three independent authors, all seeded from the same immutable repository pair.",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T17:01:23.640417+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "4f584737056354949cbb09f05bad369cd809af80",
+          "files": {
+            "build-scripts/content/book-4/check-presentation-414.py": "2d9b078371f0fb3c2a38c7321dde3c626e5a918ee7ea14120d8c97d3af9dda70",
+            "build-scripts/content/book-4/presentation-414.manifest.json": "9b7c552c9cd377c0ed31e5973436bc1d161122303ec5f0cf5c93674f6c2f8d12",
+            "build-scripts/content/book-4/presentation-414.mjs": "754eeb8c141a677ac21b07fbf86b7921138c1bdea7bdf47d20851ba52e2c55b9"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "140476bd1819abddf4763d8a9c6d6e07eff66e81",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "6ec8bae29d4d269bee4f7bc8dedd5d5f5f0d914846c312329dbad2b50fb4a36f",
+            "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.4 Winstmaximalisatie bij monopolie – presentatie.pdf": "c6af9a6fdeb64559c010b2fdd45ee73b257108a32e135171dfabe0ebf9dd56fd",
+            "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.4 Winstmaximalisatie bij monopolie – presentatie.pptx": "4661ecfc0bf641b1b724893862b98570eda74bd0a12e7f68a81f142111fc65c0",
+            "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/evidence/4.1.4-presentation.md": "84003e37a6b2e9b069f6eceedb36b4407787045809765275f73cb7b5dfeb63f5"
+          }
+        }
+      },
+      "processLogSha256": "791aad85b2f14442d5e7775637dd8c5da2cb32d6e7f58e935abb2b27eff9a472"
+    },
+    {
+      "paragraph": "4.1.5",
+      "prompt": "Build the PowerPoint for paragraph 4.1.5.",
+      "baselines": {
+        "platform": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+        "lessons": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "platform_main": "d81db9558cc24d0671da1b2b9ecc5cdf1a092dde",
+        "lesson_main": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "instruction_preparation": "Bounded Book4 routing and companion allowance, reviewed in preparation-review.md; no paragraph content coaching."
+      },
+      "startedAt": "2026-10-01T16:33:02.125286+00:00",
+      "isolation": "Fresh ephemeral CLI thread, separate paired Git worktrees, shared host filesystem. No parent history or peer outputs supplied.",
+      "model": "User-configured default; no override",
+      "parallelism": "Up to three independent authors, all seeded from the same immutable repository pair.",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T16:54:53.553588+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "d3527f736e290d4fe9c423994dda4d5b8a5e8b50",
+          "files": {
+            "build-scripts/content/book-4/check-presentation-415.py": "5d4bee01c7e76b02643e3d164ebb8c5ee4a04fea227072bcf613a622802032ee",
+            "build-scripts/content/book-4/presentation-415-package.py": "8e8b420d21969ff97ac657a877ad418726a30d2fe1df064cd6422c1a8a8d6fcf",
+            "build-scripts/content/book-4/presentation-415.manifest.json": "180f8fa02fb4828653717b0db387e773057cb87f9c7b61c84941ad1b05b50baa",
+            "build-scripts/content/book-4/presentation-415.mjs": "6e0202e8b5942eddaa200ba2ee753a0343958f70db2c69fda3e1f6152737e528"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "e4ebed5f37f9f147007632b8a0711deb4dd33956",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "73c288e099ffc627226fda96ffe4c65176e456b4bde1f08f90d6aa339a3da09b",
+            "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.5 Gemengde opgaven concurrentie en monopolie – presentatie.pdf": "71691d0016d9303e357c3d55e08d454f0b06b7253a43fc8e1cd64900ccb82921",
+            "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.5 Gemengde opgaven concurrentie en monopolie – presentatie.pptx": "033f12e26fff8101098d118819eeac6e5035b571e71d0cfb9ec92e864ad14e94",
+            "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/evidence/4.1.5-presentation.md": "be23688b0362355c16a60cf72023a524e1d67e52d0c9f3a7b122625b60b61350"
+          }
+        }
+      },
+      "processLogSha256": "596e1ff00f14c90e7acb78c9d5983ed1a94cf2e7e979f7f28ec6fe5635db5463"
+    },
+    {
+      "paragraph": "4.2.1",
+      "prompt": "Build the PowerPoint for paragraph 4.2.1.",
+      "baselines": {
+        "platform": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+        "lessons": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "platform_main": "d81db9558cc24d0671da1b2b9ecc5cdf1a092dde",
+        "lesson_main": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "instruction_preparation": "Bounded Book4 routing and companion allowance, reviewed in preparation-review.md; no paragraph content coaching."
+      },
+      "startedAt": "2026-10-01T16:35:48.301899+00:00",
+      "isolation": "Fresh ephemeral CLI thread, separate paired Git worktrees, shared host filesystem. No parent history or peer outputs supplied.",
+      "model": "User-configured default; no override",
+      "parallelism": "Up to three independent authors, all seeded from the same immutable repository pair.",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T17:03:39.676090+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "75226b7c1f9edfd046a8632105ebe1dfc5222968",
+          "files": {
+            "build-scripts/content/book-4/check-presentation-421.py": "d5ba2482aa19a04c3f2fe31cfb3459b0743f53c2f9bb24fe977530eb2e0aefe5",
+            "build-scripts/content/book-4/presentation-421.manifest.json": "7b66bec7a919983b602d47f97f3c9ecfd3ac6b9396573f814648b05c5149a7c6",
+            "build-scripts/content/book-4/presentation-421.mjs": "4882b10d4f8ee5fcf90671035d8081021983e942b565d70e8fbd7450a6bb55f6"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "82802ac0f428b64b4f385384e9e22eec69b0f93b",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "04ee347df1014ad1d7b617138f23785a7ef1e742074ebaa7c66889b511e07c5c",
+            "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.1 Welvaartseffecten van monopolie – presentatie.pdf": "09ed04dc50a801808486e6bec962a537633dad4a5b4615800bdb3b7a1d8d7e17",
+            "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.1 Welvaartseffecten van monopolie – presentatie.pptx": "01cdca3ffa4e503a6866bd1ec9ff487d02f18e76ffc233d079e8a5a253b4f5b9",
+            "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/evidence/4.2.1-presentation.md": "30d509484a9f4780dd83b784441743abad59043d57875c92eb512d54f9d5a9a7"
+          }
+        }
+      },
+      "processLogSha256": "424a3af3a13dc9048ce61696035d159bcfefdfca40f0efc606dedbcb51febd14"
+    },
+    {
+      "paragraph": "4.2.2",
+      "prompt": "Build the PowerPoint for paragraph 4.2.2.",
+      "baselines": {
+        "platform": "d1cb1fe3db3a70dc86682491771ed68a67f45526",
+        "lessons": "e734532a42b27732ac25ce990fc9448b12309d28"
+      },
+      "startedAt": "2026-10-01T18:52:26.681662+00:00",
+      "isolation": "Fresh ephemeral CLI thread, separate paired worktrees, shared host filesystem. No parent history, original output, findings or coaching supplied.",
+      "model": "User-configured default; no override",
+      "instructionReviewSha256": "c41735bb004829ae30e10194813bd21bf33a5f36455a3a1c65fb8acdd71af0b9",
+      "noNewBook4OutputsInSeed": true,
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T19:17:51.892097+00:00"
+      },
+      "sourceFolder": "retest-422",
+      "reviewKey": "retest-422",
+      "outputs": {
+        "4veco-platform": {
+          "commit": "cf241cf7be7d00ef7640ffb97d8d0fe7792a1dea",
+          "files": {
+            "build-scripts/content/book-4/presentation-422.manifest.json": "ae102ecb769e39ba2518a98c9d12f24da8330bad61e5c0db896093fa54a8adbc",
+            "build-scripts/content/book-4/presentation-422.mjs": "0c668c8f6e33ac75e245c1c3620cb180a28473d0cfd8a6766e0e2798fa73fcfb"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "b3901b222fec37e4c9c1cfa5591ca212a84d441b",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "b27f5c29e28522e792e34965318c34278ac23c77d356bb464351d1ded4956bc9",
+            "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.2 Prijsdiscriminatie – presentatie.pdf": "d5001b44104097a0c4462ea5385a8dfc0debecfc113d6d57b7021c846f89b485",
+            "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.2 Prijsdiscriminatie – presentatie.pptx": "3503f74dfc70bec83865a1502fa14bd97908e7abe6d83cbe930040610712091c",
+            "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/evidence/4.2.2-presentation.md": "2c3828d6d0e426607f3bf062b445679dca802c74bc3394835051dd36adbac2b0"
+          }
+        }
+      },
+      "processLogSha256": "869096792a128af32b5bea3b5097874ecd27bebb76f5bda547f1e554d81d2677"
+    },
+    {
+      "paragraph": "4.2.3",
+      "prompt": "Build the PowerPoint for paragraph 4.2.3.",
+      "baselines": {
+        "platform": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+        "lessons": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "platform_main": "d81db9558cc24d0671da1b2b9ecc5cdf1a092dde",
+        "lesson_main": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "instruction_preparation": "Bounded Book4 routing and companion allowance, reviewed in preparation-review.md; no paragraph content coaching."
+      },
+      "startedAt": "2026-10-01T17:03:45.055955+00:00",
+      "isolation": "Fresh ephemeral CLI thread, separate paired Git worktrees, shared host filesystem. No parent history or peer outputs supplied.",
+      "model": "User-configured default; no override",
+      "parallelism": "Up to three independent authors, all seeded from the same immutable repository pair.",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T17:38:52.145568+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "9b66f738852eebb00fbaf4d1fff10fbe6232908a",
+          "files": {
+            "build-scripts/content/book-4/presentation-423.manifest.json": "a25397dfb3c791bac7b3e7e5f9ee19fcdaee1d67c286b6a9241ac31c6f61ca43",
+            "build-scripts/content/book-4/presentation-423.mjs": "88cadc7b927afccd07e730ec5a3ab8e0ce6e95b20565faa6b2dc844cd6e66bb5"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "310b00a0a5ff11016a6fda2989962848ffa34a34",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "d084b30c44fe514572fafed2e2f20e6665f2248406eeb9bfe611f47ae43fdf93",
+            "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.3 Marktvormen vergelijken – presentatie.pdf": "950bd4f292d1aff352312a3699fdc6c0b678a4cc8707c941ba764758f5125ab7",
+            "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.3 Marktvormen vergelijken – presentatie.pptx": "78f5ff10f5e37796cc700f940a768f3882fdaed322ca02b319329f2fddcfa310",
+            "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/evidence/4.2.3-presentation.md": "d2ec49ef423fed1977df9e518e1bb347a15704ea7ed9d764d88272ccbac68c4f"
+          }
+        }
+      },
+      "processLogSha256": "90f2515abd6e5fcc58bae809780a6cf159fb1c75f4aad4467bfc5d25c137505b"
+    },
+    {
+      "paragraph": "4.2.4",
+      "prompt": "Build the PowerPoint for paragraph 4.2.4.",
+      "baselines": {
+        "platform": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+        "lessons": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "platform_main": "d81db9558cc24d0671da1b2b9ecc5cdf1a092dde",
+        "lesson_main": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "instruction_preparation": "Bounded Book4 routing and companion allowance, reviewed in preparation-review.md; no paragraph content coaching."
+      },
+      "startedAt": "2026-10-01T17:10:50.892314+00:00",
+      "isolation": "Fresh ephemeral CLI thread, separate paired Git worktrees, shared host filesystem. No parent history or peer outputs supplied.",
+      "model": "User-configured default; no override",
+      "parallelism": "Up to three independent authors, all seeded from the same immutable repository pair.",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T17:36:46.645772+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "4eb1af22e46ec2661fbadf58bcf5de26682ae804",
+          "files": {
+            "build-scripts/content/book-4/check-presentation-424.py": "0cdd5a723df898a65cd93b0306a1d76d6768545e2d0f7f055547c956ed3082fd",
+            "build-scripts/content/book-4/presentation-424.manifest.json": "c72fe69f508ed563bd8d03df4c6dc840d02d8a88150f02098b346c9f5dcfae81",
+            "build-scripts/content/book-4/presentation-424.mjs": "f5c6f04a6eebef93fb15f269cfd146eabec98997db9d19d22d70a64f007449dc",
+            "reports/review-gates/classroom-presentation-424-20261001.md": "ef3bddf65dda771d686505ae55c6fc8e34ccf64c23fd56a1562b2b207f631b77"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "e20f139370623178ed24bfe31483843855511d6f",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "0e84cf0abb586d49304b88adbf9d2f0bba565433de0ef6fdf709deee7d7d2c13",
+            "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.4 Negatieve externe effecten – presentatie.pdf": "84b83ca68b2b91bcda6151a40974c7d3413f40ee2ed6579555090183678c9042",
+            "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.4 Negatieve externe effecten – presentatie.pptx": "1e0df648bba44290c041c2d0cb06a4b35136d08eef64f8b82e0787386a228eab",
+            "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/evidence/4.2.4-presentation.md": "041fd8ab0a42a9d8b84de64061385ace1086f7fcc603b5491975bb5d7e9b5f04"
+          }
+        }
+      },
+      "processLogSha256": "bfaeaab7d90ffaee678ba332b2beef96e9992afd6535cd0f7e5cf13ea37c7df5"
+    },
+    {
+      "paragraph": "4.2.5",
+      "prompt": "Build the PowerPoint for paragraph 4.2.5.",
+      "baselines": {
+        "platform": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+        "lessons": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "platform_main": "d81db9558cc24d0671da1b2b9ecc5cdf1a092dde",
+        "lesson_main": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "instruction_preparation": "Bounded Book4 routing and companion allowance, reviewed in preparation-review.md; no paragraph content coaching."
+      },
+      "startedAt": "2026-10-01T17:33:01.582331+00:00",
+      "isolation": "Fresh ephemeral CLI thread, separate paired Git worktrees, shared host filesystem. No parent history or peer outputs supplied.",
+      "model": "User-configured default; no override",
+      "parallelism": "Up to three independent authors, all seeded from the same immutable repository pair.",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T17:54:13.037069+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "405340c33252748441e5e4415d7e2ecb09c54689",
+          "files": {
+            "build-scripts/content/book-4/presentation-425-manifest.json": "72aef24db45fe33e255a08d2ab1e863c2567986cbded233604e1db926dc190ed",
+            "build-scripts/content/book-4/presentation-425.mjs": "0337b6f47ac9ff5787e89cabe679914f068cc30a0f2ca6da7fbdf46242b06dcf"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "999c34ea64d1407b040976a45bdc2fec23f0c479",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "65f7d1a2ac4e915c14eca4088a5ca50900f4618fc49c09299d07be4cfc35450b",
+            "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.5 Positieve externe effecten – presentatie.pdf": "e672ecdea4819c7e9362f5fea4e9e77c712d0006e600bf8d8e95b6373ceb473f",
+            "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.5 Positieve externe effecten – presentatie.pptx": "5e437f3d88eea73a1f1212dae9c30821aeb69f1d0e29bdd002f63d4464b33bad",
+            "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/evidence/4.2.5-presentation.md": "713774f77d5d564a55ff13e98c58230badcb19c515510484a98d94b1947203e8"
+          }
+        }
+      },
+      "processLogSha256": "15881abc40b772865d38e2c1b0ff9ffd28348fdb4e912722d9a440d175af61c2"
+    },
+    {
+      "paragraph": "4.2.6",
+      "prompt": "Build the PowerPoint for paragraph 4.2.6.",
+      "baselines": {
+        "platform": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+        "lessons": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "platform_main": "d81db9558cc24d0671da1b2b9ecc5cdf1a092dde",
+        "lesson_main": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "instruction_preparation": "Bounded Book4 routing and companion allowance, reviewed in preparation-review.md; no paragraph content coaching."
+      },
+      "startedAt": "2026-10-01T17:36:52.107969+00:00",
+      "isolation": "Fresh ephemeral CLI thread, separate paired Git worktrees, shared host filesystem. No parent history or peer outputs supplied.",
+      "model": "User-configured default; no override",
+      "parallelism": "Up to three independent authors, all seeded from the same immutable repository pair.",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T17:56:38.070060+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "acefe7313f94c95541c1a4b723a96160e57810f6",
+          "files": {
+            "build-scripts/content/book-4/presentation-426.manifest.json": "08231abdc959e31fb7f2a0ba92794954a7f9f6defcdf9aa50715f884157abd98",
+            "build-scripts/content/book-4/presentation-426.mjs": "9d9043ea0063b011d447885029acc23e3f222faf6997d15dc65637a14fc0d449"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "4738e7d600a9d49b454a52aecb9bbfc51efe656e",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "51eb8b73f4e6b74bbb40add579205679d7736d4bbe396e5625561194c3a1a168",
+            "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.6 Overheidsingrijpen bij marktfalen – presentatie.pdf": "6455d45f759944e559823ff7b2131c3cd7218c2ca16e98b9ede4e1c0b95cfe71",
+            "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.6 Overheidsingrijpen bij marktfalen – presentatie.pptx": "d92dadd97b1045b28593b14cb01c0224fc096a10d0022da988a2d36a12591112",
+            "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/evidence/4.2.6-presentation.md": "3d6f2aa627d9db883f51ef012fea7c9698e8c750926d590e2e09ee1abe88da44"
+          }
+        }
+      },
+      "processLogSha256": "f0c34430424ebe347f42c6e809b873ebed15e8e8db131fcd890ae75ca778c1fd"
+    },
+    {
+      "paragraph": "4.2.7",
+      "prompt": "Build the PowerPoint for paragraph 4.2.7.",
+      "baselines": {
+        "platform": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+        "lessons": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "platform_main": "d81db9558cc24d0671da1b2b9ecc5cdf1a092dde",
+        "lesson_main": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "instruction_preparation": "Bounded Book4 routing and companion allowance, reviewed in preparation-review.md; no paragraph content coaching."
+      },
+      "startedAt": "2026-10-01T17:38:57.823147+00:00",
+      "isolation": "Fresh ephemeral CLI thread, separate paired Git worktrees, shared host filesystem. No parent history or peer outputs supplied.",
+      "model": "User-configured default; no override",
+      "parallelism": "Up to three independent authors, all seeded from the same immutable repository pair.",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T18:03:23.560153+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "452d8f2ff1a0d6c1f98f7a987678742c87ebbdff",
+          "files": {
+            "build-scripts/content/book-4/check-presentation-427.py": "4ed99c6f1f3b74f7e06f63a3e7c02f6e04e304f35ec6252fe581aa159b66756b",
+            "build-scripts/content/book-4/presentation-427.manifest.json": "c0a397c129dc4b807f529639c7fe027efc9cd23fd90464014ea35441ea7d531b",
+            "build-scripts/content/book-4/presentation-427.mjs": "8a330e8ed77ba4c9e0f1d26a25a8851a65db9879f9a2d8924d10235a79eb3825"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "bdeb6f8a2899d801ae30c9a57dcde12133e9e352",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "a25659e3cf5b8d61e56b36c9628bf6d6f812fbb2ae160e059d5ecd85a8f7926f",
+            "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.7 Gemengde opgaven - marktvormen en marktfalen – presentatie.pdf": "8fa7e56dd3953e546ff39f0179fc0a3cb6ef8418ed8aff1a39d22463b7e75f08",
+            "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.7 Gemengde opgaven - marktvormen en marktfalen – presentatie.pptx": "59044e61147cf8550b39496557dec5a62474a308d2b6c42ed08c08ae33f432ab",
+            "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/evidence/4.2.7-presentation.md": "adae0c13c27b449a0c6afdad28a1cf1657aa7e15ffdcea1d2f692aacee4448a3"
+          }
+        }
+      },
+      "processLogSha256": "b30db12154b33b07f73bd31a7e940d6746f66f43c1f9b7081164ec2e4d47a162"
+    },
+    {
+      "paragraph": "4.3.1",
+      "prompt": "Build the PowerPoint for paragraph 4.3.1.",
+      "baselines": {
+        "platform": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+        "lessons": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "platform_main": "d81db9558cc24d0671da1b2b9ecc5cdf1a092dde",
+        "lesson_main": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "instruction_preparation": "Bounded Book4 routing and companion allowance, reviewed in preparation-review.md; no paragraph content coaching."
+      },
+      "startedAt": "2026-10-01T17:56:43.466146+00:00",
+      "isolation": "Fresh ephemeral CLI thread, separate paired Git worktrees, shared host filesystem. No parent history or peer outputs supplied.",
+      "model": "User-configured default; no override",
+      "parallelism": "Up to three independent authors, all seeded from the same immutable repository pair.",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T18:20:29.499686+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "6ef49d8e0a100fb1fa29bd1a2fc0f09fc82fb2a7",
+          "files": {
+            "build-scripts/content/book-4/check-presentation-431.py": "57a6cf334c94ea5d467e3cfa6fcbc155c021750d2cb79d38012b52e1731b8c58",
+            "build-scripts/content/book-4/presentation-431.manifest.json": "20ef3baa9df125233619ba6674f63f4b5c217604d20f096a364387b6c4b4b4fc",
+            "build-scripts/content/book-4/presentation-431.mjs": "389dd34c2045c6524814698278ef9e2a8da7c55d38e6977be9c7a8e530959cb6"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "10697e52f97d5ac7f35a0e63717cc21b24f5a5ca",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "69f282b335aa22e245267a5f6fe716b8bb8266927cb56d2292d007d7fb11caa4",
+            "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.1 Arbeidsvraag en arbeidsproductiviteit – presentatie.pdf": "35ee1523974e592e11896a629e00fb7c12ae25947e08af94ec027564f1ba85ad",
+            "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.1 Arbeidsvraag en arbeidsproductiviteit – presentatie.pptx": "ccea0d15b4b961344b34b228858bed329856360251cbb52da2c4784741bd9414",
+            "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/evidence/4.3.1-presentation.md": "a7a0be78ebd8edf6ccb1c753a4fb688b6037176dbdb7bea8d649665cfcf3d68b"
+          }
+        }
+      },
+      "processLogSha256": "97d3d24c55f2c239f787803fc9ba545fda5f3067988521e22564ef9906c430dd"
+    },
+    {
+      "paragraph": "4.3.2",
+      "prompt": "Build the PowerPoint for paragraph 4.3.2.",
+      "baselines": {
+        "platform": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+        "lessons": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "platform_main": "d81db9558cc24d0671da1b2b9ecc5cdf1a092dde",
+        "lesson_main": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "instruction_preparation": "Bounded Book4 routing and companion allowance, reviewed in preparation-review.md; no paragraph content coaching."
+      },
+      "startedAt": "2026-10-01T18:03:28.942620+00:00",
+      "isolation": "Fresh ephemeral CLI thread, separate paired Git worktrees, shared host filesystem. No parent history or peer outputs supplied.",
+      "model": "User-configured default; no override",
+      "parallelism": "Up to three independent authors, all seeded from the same immutable repository pair.",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T18:24:19.853316+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "831dd8676d400be1c0842a665d4fa3a985529ae2",
+          "files": {
+            "build-scripts/content/book-4/check-presentation-432.py": "8c7c9a7823d450af8ea01f850f32163f9829b34d69d1d8af43df6462570af0fc",
+            "build-scripts/content/book-4/presentation-432.manifest.json": "e208c25bf0fd4e2b15400ce070f5b5db3187070e654f654c6c88e72286f5c2ab",
+            "build-scripts/content/book-4/presentation-432.mjs": "12a2f0e3e3c05c61bedc9ad96dda2ca45526db88e4d2e19b2f7e7ffc5b1da050"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "eae08e474fb1921217878b7979e60e1a12ee04d1",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "6fef3860baefc8fdbc97eefac3c2a168cac0b397dfe08a94044b3ce57be35334",
+            "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.2 Arbeidsaanbod, participatie en evenwicht – presentatie.pdf": "cc0337db38fc94fb38df564a54e385889cc96a0bd37288b8bc307cb973e211fc",
+            "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.2 Arbeidsaanbod, participatie en evenwicht – presentatie.pptx": "6bfd832b5007f3ef83f792fe5b1e8f540ee121dbb8e92d81e7f314d6316c7741",
+            "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/evidence/4.3.2-presentation.md": "2797d5106e1c6557ca7a3ae0be07a9ce893a870f971b96095e3c672644622cdb"
+          }
+        }
+      },
+      "processLogSha256": "02fa99c967a3a866ca72e201ddb19be01932ebde03ef70d8ec91716e54e919a2"
+    },
+    {
+      "paragraph": "4.3.3",
+      "prompt": "Build the PowerPoint for paragraph 4.3.3.",
+      "baselines": {
+        "platform": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+        "lessons": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "platform_main": "d81db9558cc24d0671da1b2b9ecc5cdf1a092dde",
+        "lesson_main": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "instruction_preparation": "Bounded Book4 routing and companion allowance, reviewed in preparation-review.md; no paragraph content coaching."
+      },
+      "startedAt": "2026-10-01T18:10:14.343681+00:00",
+      "isolation": "Fresh ephemeral CLI thread, separate paired Git worktrees, shared host filesystem. No parent history or peer outputs supplied.",
+      "model": "User-configured default; no override",
+      "parallelism": "Up to three independent authors, all seeded from the same immutable repository pair.",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T18:33:10.380170+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "1b9fd94f1251f808a0706384da3eb1df5acdb6f6",
+          "files": {
+            "build-scripts/content/book-4/check-presentation-433.py": "2826c388a965748ae941f6f311c10cb18ff5a87a838a04e7b096e6e1b4d9eada",
+            "build-scripts/content/book-4/presentation-433.manifest.json": "82a7c08cc607d18b9d725ebfe849a1ce28dda1073f3416b94de3166aa0fc3510",
+            "build-scripts/content/book-4/presentation-433.mjs": "7f40a37c61e05da7d5986f8a67a2b2c9679bf8daeee7bcfbf88bc50d61c1546a"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "5b299bde068735b3524f26fa9c89dc04960a5301",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "b87e58f196658ebf0d817e6282b48a0839904db0581eea3598ac95b1cb5d673d",
+            "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.3 Werkloosheid en veranderingen op de arbeidsmarkt – presentatie.pdf": "4394b8376c3afdb38136a45802d21b16f13f1a9c868de42a9229bf6e8660e01b",
+            "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.3 Werkloosheid en veranderingen op de arbeidsmarkt – presentatie.pptx": "68432489e8021d049ffea929140e387fa47947b21774522dc8ecc7f148724ed7",
+            "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/evidence/4.3.3-presentation.md": "efe677c76fa5ee7ad2b42f85163984e0a2e43b8a70e21ac0606627ffc4fd4443"
+          }
+        }
+      },
+      "processLogSha256": "ea8c5b920464af8f2cf5763df38187bf1787bc35454405b7c172bbdfe2ddaed9"
+    },
+    {
+      "paragraph": "4.3.4",
+      "prompt": "Build the PowerPoint for paragraph 4.3.4.",
+      "baselines": {
+        "platform": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+        "lessons": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "platform_main": "d81db9558cc24d0671da1b2b9ecc5cdf1a092dde",
+        "lesson_main": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "instruction_preparation": "Bounded Book4 routing and companion allowance, reviewed in preparation-review.md; no paragraph content coaching."
+      },
+      "startedAt": "2026-10-01T18:20:34.793228+00:00",
+      "isolation": "Fresh ephemeral CLI thread, separate paired Git worktrees, shared host filesystem. No parent history or peer outputs supplied.",
+      "model": "User-configured default; no override",
+      "parallelism": "Up to three independent authors, all seeded from the same immutable repository pair.",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T18:41:20.428841+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "083839d49b86f2c628d36a812df87746e1a04506",
+          "files": {
+            "build-scripts/content/book-4/check-presentation-434.py": "1cf41bd8a8eb06c1b25e74c21dfdb0846d18d65a52e4724aca364072d5698120",
+            "build-scripts/content/book-4/presentation-434.manifest.json": "5844693a57934795821756ecfc6922d136cfb99ded02f5164c9898f5425c1099",
+            "build-scripts/content/book-4/presentation-434.mjs": "531f83fcb6e8434da5bf1c63f7270fb5ac2205f94755a3d559bd3124a847b60f"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "6ebad0fc6f96a2990f7d857e32c2aef72831f249",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "7ea1ff74096f3ef43ec83ee577d2fe1e570a171742ea129d01d327d5e8ce36ea",
+            "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.4 Minimumloon – presentatie.pdf": "c783569b2a8f1ed59fdee978a6886e9ff807a621507cc650baf02bf5756d968a",
+            "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.4 Minimumloon – presentatie.pptx": "01c9add1633f1913c1cbee5902236a7a3e2c251d60d01b75ef66928b7953be52",
+            "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/evidence/4.3.4-presentation.md": "0c2400b7e69aacd61e3ddb245d52bc255f20c94c641001ac85a30a4362ef8993"
+          }
+        }
+      },
+      "processLogSha256": "e93c5f84ed97250f2726a0c3692908df3ab057d59bc710da04793769ee993146"
+    },
+    {
+      "paragraph": "4.3.5",
+      "prompt": "Build the PowerPoint for paragraph 4.3.5.",
+      "baselines": {
+        "platform": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+        "lessons": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "platform_main": "d81db9558cc24d0671da1b2b9ecc5cdf1a092dde",
+        "lesson_main": "e734532a42b27732ac25ce990fc9448b12309d28",
+        "instruction_preparation": "Bounded Book4 routing and companion allowance, reviewed in preparation-review.md; no paragraph content coaching."
+      },
+      "startedAt": "2026-10-01T18:24:25.221269+00:00",
+      "isolation": "Fresh ephemeral CLI thread, separate paired Git worktrees, shared host filesystem. No parent history or peer outputs supplied.",
+      "model": "User-configured default; no override",
+      "parallelism": "Up to three independent authors, all seeded from the same immutable repository pair.",
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T18:52:25.516542+00:00"
+      },
+      "outputs": {
+        "4veco-platform": {
+          "commit": "55f04bbd641d0cffb893d202a6f291b395673e27",
+          "files": {
+            "build-scripts/content/book-4/presentation-435.manifest.json": "68e07b7c2f7b5734afed340187e315c707b0b7a0e53a411f1f839c5203147ea0",
+            "build-scripts/content/book-4/presentation-435.mjs": "9c10de37d5c45e46a014b48717d81f4d763be45c64777af916276cc5bad02e56"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "76f24185c592bf22bfa9f4c12fb958385d6483ae",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "3c06eb8f8b84fe6fab5b3fa044d4efe8b428abdddc6c149567b280aac0730b02",
+            "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.5 Gemengde opgaven arbeidsmarkt – presentatie.pdf": "455cabbb8b326c6498616d23dbed68f2c43b0b17ae983b6aee1cf067ab4a9e08",
+            "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.5 Gemengde opgaven arbeidsmarkt – presentatie.pptx": "bc0e9d6f2b8cc12b2f0c1e76d1ea02f9517696f02618cecbd0f745a103f44016",
+            "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/evidence/4.3.5-presentation.md": "390a9bda8db3fe9f915298cba49d8d2d1d9550d7f011ae7b8f59accad520362e"
+          }
+        }
+      },
+      "processLogSha256": "241b4c2cad1b68718b6c8b84bf9c12de1a4619d4bb24e2ff78b4ae7c8b4109ab"
+    }
+  ]
+}

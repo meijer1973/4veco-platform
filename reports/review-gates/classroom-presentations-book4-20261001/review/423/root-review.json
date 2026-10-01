@@ -1,0 +1,76 @@
+{
+  "paragraph": "4.2.3",
+  "scope": "Coordinator review of completed original cold handoff, exactly matching inspected author v3. No feedback before handoff. Author fixed draft citations independently; two demand labels still cross curves.",
+  "reviewedAt": "2026-10-01T17:28:11.675891+00:00",
+  "pptxSha256": "78f5ff10f5e37796cc700f940a768f3882fdaed322ca02b319329f2fddcfa310",
+  "pdfSha256": "950bd4f292d1aff352312a3699fdc6c0b678a4cc8707c941ba764758f5125ab7",
+  "nativeRenderSlidesIndividuallyInspected": [
+    16
+  ],
+  "otherNativeSlidesByteIdenticalToPrior": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "priorReview": "C:\\wt\\ppt\\.book4\\review\\preview-423-v2\\root-preview-review.json",
+  "allSlideTextAndTeacherNotesRead": true,
+  "changedNotesRead": [
+    1,
+    2,
+    5,
+    6,
+    7,
+    8,
+    9,
+    12,
+    24
+  ],
+  "findings": [
+    {
+      "severity": "P2",
+      "slides": [
+        8,
+        20
+      ],
+      "finding": "GO=P label still touches the demand line (especially G on20); chart renders identical to reviewed v2. No mathematical/source issue."
+    }
+  ],
+  "resolvedDraftFindings": [
+    "Author independently corrected all chapter4.1 prerequisite citations in overview/method/source notes to printed full-book pages16/17,25–26,36–39.",
+    "Slide16 replaces process wording with useful source/reasoning prompt; sources/questions still complete."
+  ],
+  "verdict": "REPAIR_REQUIRED_P2",
+  "findingId": "B4-423-P2-01",
+  "nativeRenderBinding": ".book4/review/preview-423-v3/preview-bindings.json",
+  "independentConfirmation": ".book4/instruction-followup-review.json",
+  "unresolvedFindings": [
+    {
+      "severity": "P2",
+      "slides": [
+        8,
+        20
+      ],
+      "finding": "GO=P label still touches the demand line (especially G on20); chart renders identical to reviewed v2. No mathematical/source issue."
+    }
+  ]
+}

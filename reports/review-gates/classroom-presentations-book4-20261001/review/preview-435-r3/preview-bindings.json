@@ -1,0 +1,30 @@
+{
+  "scope": "Read-only copy of in-progress author native PowerPoint output. Requires exact final-handoff binding before acceptance. No feedback provided to author.",
+  "source": "C:\\wt\\ppt\\.book4\\435\\scratch\\r3",
+  "render": "C:\\wt\\ppt\\.book4\\435\\scratch\\r3\\render",
+  "files": {
+    "4.3.5 Gemengde opgaven arbeidsmarkt – presentatie.pdf": "455cabbb8b326c6498616d23dbed68f2c43b0b17ae983b6aee1cf067ab4a9e08",
+    "4.3.5 Gemengde opgaven arbeidsmarkt – presentatie.pptx": "bc0e9d6f2b8cc12b2f0c1e76d1ea02f9517696f02618cecbd0f745a103f44016",
+    "slide-01.png": "3d141d24279754d2faab4c8303116d4be3e5ecd7dd54d67c4a4ca6b99f0b5dd6",
+    "slide-02.png": "29b0d7bfa9cbcac437a461fd84427fc40bd2fe91486de64618a78a33684704d4",
+    "slide-03.png": "19f1aeac6b2fa475ecc49575fa2023b9ddae1a1a35c6d5aa0e04e49717079422",
+    "slide-04.png": "7dd3300a367611d837af4ad74c30b810deda0a85ccd84461a939a9746c19e903",
+    "slide-05.png": "fa2fe8b05c6e11b2a999587b237faa47d4cce541283ca4f40186f22fb6222bf0",
+    "slide-06.png": "855fa454771f74eba46809b6ba06e229f8e3a4a812279f8245b5a86c476e9393",
+    "slide-07.png": "eb5b0950a9b6b58ef6c90f12ebc0c095544e5cdf4b8b23439eb1c2ce4d2487f7",
+    "slide-08.png": "aa8a0e8c36c33beeb5780ea75c280e33a54c9e9508a17fafcd3eec0ef5ae416b",
+    "slide-09.png": "b849a4074d1d38f7bc7fee7554594cec9c2a3430af8f9524730d77aded7c1256",
+    "slide-10.png": "9d8ba0a64e2f106a609e11f76dd9d06c7c5e2380adeabfd562cd75cfd700069c",
+    "slide-11.png": "bc945911f994ed68585e59680da29e59cd486205584e47a44e19cace6d832092",
+    "slide-12.png": "97aa4ab2e1f2b1b7f1a89e909e23631cdebb854ab44a0c00d59057149e9d45f3",
+    "slide-13.png": "f17f9fc0cf7112435c195864b38bfb54498698faec49d83c5c2a4c2fa060cf08",
+    "slide-14.png": "b7e35f6ff12d5ba719a2e6e32a32ab08329713db688491eb905eaf432bebac93",
+    "slide-15.png": "29dee11848c411372f9d39f9c3207c7b898ff3837ba30137450e7ef6d9ec0081",
+    "slide-16.png": "ca5de7a35446f7ac7b0b83c2136431835d540a16a900edba998e2458c2c057c5",
+    "slide-17.png": "d2fa2f0e9fbc438e7cf70982cf4fcc0b7e8384a6f200764075a8f91dedeb435d",
+    "slide-18.png": "864c47eadce80e5d11a35b87dea509286c02112a5e7dd246174928669e63a98b",
+    "slide-19.png": "389598e9ab0635538339b14c85557257c809e31c5b46e26a22992e409125636f",
+    "slide-20.png": "d1ac7d4721d60190bbcf8498c1293492079cbf39c935fefd7120aa9b8b83aff8",
+    "text-geometry.json": "9af9091ff3305ccd483d028ea0347915cc988cc82da8a00f2eb9c4caebcbdf57"
+  }
+}

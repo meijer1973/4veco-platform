@@ -1,0 +1,51 @@
+{
+  "scope": "Coordinator review of full text, teacher notes, native pages and source context in teaching order. Final431, repaired432, final433, repaired434 and final435 accepted. No claim of pupil mastery.",
+  "transitions": [
+    {
+      "from": "4.2.7",
+      "to": "4.3.1",
+      "priorTeaching": "Earlier chapters distinguish firm output, market quantity, periods and units. No prior labour-market formula is presumed.",
+      "newTeaching": "431 introduces persons, paid hours, fte, output per hour and full labour cost per unit before a numerical example. Derived labour demand is explained through orders and productivity; movement along a curve and a shift are separately illustrated.",
+      "boundary": "A given output needs fewer hours at higher productivity; employment cannot be inferred without output and hours per person. The final wage-and-orders scenario is explicitly new and has unknown magnitudes. Higher productivity alone guarantees neither jobs nor profit.",
+      "supportedStart": "1–2 p119 use p114 definitions, and the start is revisited before practice15. Basis3–4, independent5–6 and target7 remain assigned; bonus8/retrieval9 stay extra.",
+      "artifactStatus": "Final original431 PASS after autonomous author repairs before handoff."
+    },
+    {
+      "from": "4.3.1",
+      "to": "4.3.2",
+      "priorTeaching": "431 teaches units, demand factors and the movement/shift distinction. Its actual movement teaching is complete-bookp117.",
+      "newTeaching": "432 defines workforce, non-workforce, gross and net participation; specifies the population denominator; introduces labour supply and solves a separate sector equilibrium by substitution in both functions.",
+      "boundary": "Population counts and sector-model quantities concern different groups. Participation percentages are not unemployment percentages; their difference is percentage points. Each fictional sector explicitly supplies hours per person and wage domain.",
+      "supportedStart": "10–11 p128 supported byp124 definitions and revisited before practice15. Basis12–13, independent14–15 and target16; homework12–16, extras17/18.",
+      "artifactStatus": "Final432-r1 PASS; coordinator corrected only note9 source page116 to117. All25 native pages byte-identical."
+    },
+    {
+      "from": "4.3.2",
+      "to": "4.3.3",
+      "priorTeaching": "432 supplies workforce definitions, the separate population/sector contexts and solving a free labour-market equilibrium.",
+      "newTeaching": "433 explicitly introduces the workforce denominator for unemployment, vacancy and matching distinctions, causes of unemployment, and a demand shock under first flexible then fixed wages.",
+      "boundary": "Vacancies are unfilled places, not employed people; unemployment minus vacancies is not unemployment. A flexible-model loss of jobs is not automatically the same number unemployed. A fixed wage is a separate stated assumption, not a claim that all regional unemployment has that cause.",
+      "supportedStart": "19–20 p137 supported by new denominator/matching explanationsp132–133; returned before practice16. Basis21–22, independent23–24, target25 and homework21–25; extras26/27.",
+      "artifactStatus": "Final original433 PASS. Source remedial citation/domain findings remain separate editorial follow-ups."
+    },
+    {
+      "from": "4.3.3",
+      "to": "4.3.4",
+      "priorTeaching": "433 explicitly compares a flexible wage with a fixed wage after a demand shock. Book3§3.1.5 teaches a price floor without automatic government purchases.",
+      "newTeaching": "434 introduces the minimum wage as a lower bound, tests whether it binds against the free equilibrium, then distinguishes actual employment, extra labour supply and total excess supply. It teaches payroll as wage times paid hours times employed persons before independent work.",
+      "boundary": "A nonbinding floor leaves the free equilibrium feasible. A binding floor is not a demand shift or government hiring promise. Individual retained-worker pay can rise while group payroll falls. The own example uses24 hours, target25; conditions are explicitly reset.",
+      "supportedStart": "28–29 p145:28 retrieves the prior no-purchase floor,29 has p143 reading support for the new payroll combination and is revisited before practice14. Basis30–31, independent32–33,target34,homework30–34; extras35/36.",
+      "artifactStatus": "Final434-r1 PASS after coordinator label-only repair on9/21. Content, all notes, economic/guide data and25 other native pages unchanged."
+    },
+    {
+      "from": "4.3.4",
+      "to": "4.3.5",
+      "priorTeaching": "431–434 have already taught fte/productivity, participation and unemployment denominators, sector equilibrium, shifts, minimum-wage bindendness and payroll.",
+      "newTeaching": "No new operation is presumed. 435 briefly retrieves source and unit selection, rehearses a separate printing-company example and the minimum-wage procedure, then assigns the actual mixed sequence.",
+      "boundary": "The three target sources are explicitly separate: regional people, a sector with flexible wages, and a company with unknown future orders. The minimum wage from exercise39 is not carried into target40. Growth-factor division is revisited explicitly; no jobs guarantee follows from lower unit labour costs.",
+      "supportedStart": "First actual mixed exercise37 p150 retrieves earlier methods; preparation37–39, target40, bonus41. Homework37–41 preserves all roles. Full sources/figure6–9 and all questions10–11 precede solutions12 onward.",
+      "artifactStatus": "Final original435 PASS, exact author r3 handoff bound; autonomous repair before completion."
+    }
+  ],
+  "conclusion": "No missing instructional prerequisite or contradictory model transition found in the inspected labour-market sequence. Remaining source issues are editorial references and figure-domain extensions, not a missing teaching foundation."
+}

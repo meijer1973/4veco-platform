@@ -1,0 +1,6 @@
+{
+  "path": "preparation-review.md",
+  "originalSha256": "40e0a18d7c6a953f63713bee5a648e4744757c9638fcde3f6f272876c24aaed3",
+  "publishedSha256": "4ff5b9245db5def842de0895a67780510d996475aafe1f507e4df7efd11d10b5",
+  "change": "Remove excess terminal blank line; all non-terminal bytes unchanged. Original private reviewer record preserved."
+}

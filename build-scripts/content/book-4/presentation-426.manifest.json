@@ -1,0 +1,243 @@
+{
+  "paragraph": "4.2.6",
+  "title": "Overheidsingrijpen bij marktfalen",
+  "type": "theory",
+  "edition": "books34-v3",
+  "lessonCommit": "e734532a42b27732ac25ce990fc9448b12309d28",
+  "platformBaseCommit": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+  "sources": [
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.6 manuscript.md",
+      "sha256": "a053ce87e6ac20703671514c05a6e44c91e81028469f2e13843801c32e9674ee"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/Antwoorden.md",
+      "sha256": "b77880f5e0c3e9252002c502b1cd101d4181773fa9968ea37d63e3d04cdf80f9"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/Docenteninformatie.md",
+      "sha256": "b7fed5653f6f8677eeeab66d84fc80f55d11455b84243f80d3f3a6e1d651a2ed"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+      "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.6-leerling-v3.pdf",
+      "sha256": "336cd54fd6cd6e74340655907ba31b39cf5e2cddfac3999dc5a3bee0dce795f4"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.1 manuscript.md",
+      "sha256": "2761c18bb26b7e62d0436d623f388371eb1a4bbbe1f1a57d8170d16a45810305"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.4 manuscript.md",
+      "sha256": "4589774bbf4209f36c852ef55be55e77c40d58395dd824502dbb8e5bb675647a"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.5 manuscript.md",
+      "sha256": "552967cbfcda43b2865f19417298dadee472081e67282182fe963fa55672e82b"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.4 manuscript.md",
+      "sha256": "77c8e3e3cbba0fae732cb904aa05be660e002bd378e1e049fd9e9155adbdef6c"
+    }
+  ],
+  "goals": [
+    "Beleid koppelen aan een vastgesteld marktprobleem",
+    "Twee voorstellen vergelijken met één criterium en bekende berekening",
+    "Efficiëntie, verdeling en uitvoering apart beoordelen"
+  ],
+  "printedBookPages": {
+    "theory": [
+      99,
+      100
+    ],
+    "start": 101,
+    "basis": [
+      101,
+      102
+    ],
+    "independent": 102,
+    "target": 103,
+    "extra": 104,
+    "physicalPdfPagesEqualPrinted": true,
+    "chapterPages": [
+      47,
+      48,
+      49,
+      50,
+      51,
+      52
+    ]
+  },
+  "assignment": {
+    "start": [
+      46,
+      47
+    ],
+    "basis": [
+      48,
+      49
+    ],
+    "independent": [
+      50,
+      51
+    ],
+    "target": 52,
+    "homework": [
+      48,
+      49,
+      50,
+      51,
+      52
+    ],
+    "homeworkInstruction": "Maken en nakijken",
+    "extraOnly": {
+      "bonus": 53,
+      "herhaling": 54
+    }
+  },
+  "startSupport": {
+    "46": "Verkennen met theorie p. 100: uitvoeringskosten zijn nieuw; CS + PS + ontvangsten - schade is bekend uit 4.2.4.",
+    "47": "Verkennen met theorie p. 99: beleid aan oorzaak en expliciet criterium koppelen is de nieuwe stap.",
+    "return": "Na uitleg bij tweede overzicht 46–47 opnieuw proberen en redenering verbeteren vóór basiswerk."
+  },
+  "prerequisiteTrace": [
+    {
+      "operations": "46a/b, 49a/b, 50a/b, 52c: complete surplusrekening, overdracht versus echte kosten",
+      "prior": "4.2.4 manuscript: De welvaartsrekening / uitgewerkt voorbeeld stap 5–6 (hoofdstuk p. 27,30; boek p. 79,82); 4.2.1: TS=CS+PS en verdeling versus welvaart (hoofdstuk p. 3; boek p. 55)",
+      "thisLesson": "Dia 4 voegt uitvoering expliciet toe; dia 8 demonstreert twee volledige rekeningen; dia 11 noemt oud/nieuw verschil."
+    },
+    {
+      "operations": "47, 48, 52a/d/e: probleem → oorzaak → instrument → criterium → begrensde conclusie; verdeling los beoordelen",
+      "prior": "4.2.4 eerste theorie: schade aan derden en private/maatschappelijke kosten; 4.2.5 eerste theorie: extern voordeel, te weinig activiteit; 4.2.1: afzetbeperking/TS en verdeling",
+      "thisLesson": "Nieuwe ordening §4.2.6 p. 99–100, dia 2–3, 5–9 en 11. Start is ondersteunde verkenning."
+    },
+    {
+      "operations": "52b: functies invullen in Pc=Pp+t; Q oplossen; afzonderlijke prijzen en t×Q; eenheden en wigcontrole",
+      "prior": "4.2.4 uitgewerkt voorbeeld stap 2–4 (hoofdstuk p. 29; boek p. 81)",
+      "thisLesson": "Fragiele algebra wordt opnieuw voorgedaan met eigen data op dia 6–7."
+    },
+    {
+      "operations": "51a/b: vraag, aanbod, tekort en werkelijke transacties onderscheiden; schade over uitgevoerde activiteit",
+      "prior": "Boek 3 §3.1.4, De korte kant bepaalt wat er kan worden verkocht en Wie ontvangt het product? (hoofdstuk p. 29); Boek 4 §4.2.4 schade per eenheid × Q",
+      "thisLesson": "Dia 10 herhaalt de representatiewissel naar drie hoeveelheden en vermenigvuldigt schade met daadwerkelijke transacties; eigen mini-voorbeeld."
+    },
+    {
+      "operations": "49, 50, 52c/d: dezelfde periode; surplus vóór versus na uitvoering; delta en criterium",
+      "prior": "4.2.4 volledige welvaartscontrole; 4.2.1 vergelijken bij dezelfde vraag en kosten",
+      "thisLesson": "Dia 4, 8–9, 11; uitvoering slechts eenmaal aftrekken; kosten en naleving als aannamen."
+    }
+  ],
+  "authoredExamples": [
+    {
+      "name": "Bootreiniging",
+      "slides": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "label": "Uitlegvoorbeeld — niet uit het boek",
+      "data": {
+        "demand": "Pc=48-Q",
+        "supply": "Pp=6+Q",
+        "unit": "beurten per dag; euro per beurt",
+        "externalDamagePerUnit": 6,
+        "tax": 6,
+        "quantityLimit": 18,
+        "compliance": true,
+        "allocation": "highest willingness to pay and lowest costs; free permission",
+        "executionCosts": [
+          12,
+          30
+        ],
+        "otherEffects": "none"
+      },
+      "answers": {
+        "Q": 18,
+        "Pc": 30,
+        "Pp": 24,
+        "receipts": 108,
+        "CS": [
+          162,
+          162
+        ],
+        "PS": [
+          162,
+          270
+        ],
+        "damage": [
+          108,
+          108
+        ],
+        "surplusBefore": [
+          324,
+          324
+        ],
+        "surplusAfter": [
+          312,
+          294
+        ],
+        "difference": 18
+      },
+      "distinction": "Eigen context en data, geen uitwerking van start-, basis-, zelfstandige of doelopgaven."
+    },
+    {
+      "name": "Ritten bij een maximumprijs",
+      "slides": [
+        10
+      ],
+      "data": {
+        "Qv": 36,
+        "Qa": 24,
+        "noExtraStock": true,
+        "allSupplySold": true,
+        "damagePerTrip": 5
+      },
+      "answers": {
+        "shortage": 12,
+        "actual": 24,
+        "damage": 120
+      },
+      "distinction": "Afzonderlijke opfrissing van Boek 3, niet opgave 51; geen extra huiswerk."
+    }
+  ],
+  "target": {
+    "exercise": 52,
+    "sourcePage": 103,
+    "sourceAndQuestionSlides": [
+      13,
+      14,
+      15
+    ],
+    "answerSlides": {
+      "a": [
+        16
+      ],
+      "b": [
+        17,
+        18
+      ],
+      "c": [
+        19
+      ],
+      "d": [
+        20
+      ],
+      "e": [
+        21
+      ]
+    },
+    "completeness": "Bron A met functies, units, schade, H/G, efficiënte toewijzing/gratis toestemming/naleving; volledige Bron B met tabel, uitvoering, geen overige posten en criterium; alle vijf subvragen en punten vóór antwoorden."
+  },
+  "overviewSlides": [
+    1,
+    12,
+    23
+  ],
+  "visualFamily": "Accepted 2.1.1: white 16:9, Arial, blue/green/orange emphasis, native tables, shared overview helper. No graph required: paragraph operations are algebraic and tabular, not graphical.",
+  "scope": "Scoped Part B classroom PPTX+PDF only. No textbook/source edits, no complete companion claim. Timing and mastery unmeasured."
+}

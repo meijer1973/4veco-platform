@@ -1,0 +1,1722 @@
+{
+  "scope": "Exact final assembly and recorded review bindings; not a substitute for content review.",
+  "passed": true,
+  "partial": false,
+  "paragraphs": [
+    {
+      "paragraph": "4.1.1",
+      "pptx": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.1 Toetreding, uittreding en langetermijnevenwicht – presentatie.pptx",
+      "pdf": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.1 Toetreding, uittreding en langetermijnevenwicht – presentatie.pdf",
+      "mechanical": {
+        "pptxSha256": "e78b159ae169dfe06c608f949546e1ab54bdb5c2fb1428464378b80adc0ba693",
+        "pdfSha256": "b14efb990a9092f32b1adbd270fa1ecf2de8099d6bcfee125ad339c787087ccf",
+        "slides": 28,
+        "pdfPages": 28,
+        "notes": 28,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          16,
+          28
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 7,
+      "nativeCharts": 9,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 9,
+        "references": 106,
+        "cellsCompared": 2702,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx",
+          "ppt/embeddings/chart-data-snapshot-007.xlsx",
+          "ppt/embeddings/chart-data-snapshot-008.xlsx",
+          "ppt/embeddings/chart-data-snapshot-009.xlsx"
+        ]
+      },
+      "sourceBindings": {
+        "paragraph": "4.1.1",
+        "manifest": "build-scripts\\content\\book-4\\presentation-411.manifest.json",
+        "manifestSha256": "2d03542017054f7d98dc292f0fd963c67c9a5a6011a15bf5eedc3d70713cc520",
+        "sources": [
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/4.1.1 manuscript.md",
+            "sha256": "7d80849940920bc83166692f39d89fec1c3eb909453ade5b6b55336aab17e797"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/Antwoorden.md",
+            "sha256": "4048fa122764663e445145463d63bf4b9b2367b1aa8e34f0e62d1cf5486e394f"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/Docenteninformatie.md",
+            "sha256": "0dd614ec1357e51a40dd19b6bc0480549e37c912b2de56ca403a31c7cb0e7e92"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/_assets/3.2.3_target.svg",
+            "sha256": "fb7c50589eac2ff53e993d5a044c72539d2a4b42f89e02f122e85406f71a84a7"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.2 manuscript.md",
+            "sha256": "992f1f64ee131c8c7a6c85dd517fc87724be5f825a1f9e497cd01f699645fdce"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.3 manuscript.md",
+            "sha256": "d46652e4ed48a368246ed70a0f1df0206752d95775e52c6de25df0088167fbd2"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+            "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+            "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+          }
+        ]
+      },
+      "review": "review\\retest-411\\root-review.json",
+      "reviewSha256": "1cbb5fe8be38f6f1a92ef92298619f58e93fc769664c1a86fc521b2c53be3e3b",
+      "coordinatorRepaired": false,
+      "assemblyTransformations": [
+        {
+          "repository": "4veco-platform",
+          "path": "build-scripts/content/book-4/check-presentation-411.py",
+          "originalSha256": "6a6dbd839e6cf422d9ca339673ff9260bcb4d2b72b67c49393c963c76493fed8",
+          "assembledSha256": "a446d74e7b11f63f80f06fd4ca2b4d1a64be6a316fa228020e8b92374a2c822d",
+          "reason": "Coordinator validator repair: reject absent/reordered/renamed saved chart series before positional checks and reject empty curves/wrong point counts. Actual cold artifact unchanged.",
+          "review": "repairs/411-checker-r1/root-review.json"
+        }
+      ]
+    },
+    {
+      "paragraph": "4.1.2",
+      "pptx": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.2 Monopolie - kenmerken – presentatie.pptx",
+      "pdf": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.2 Monopolie - kenmerken – presentatie.pdf",
+      "mechanical": {
+        "pptxSha256": "df76dc244d562a46d2f611d3864551b1bb19571e76c6191e7701b8b0f2a60584",
+        "pdfSha256": "66e4ea378b6c4067052cfd06b528e019bed0a26875cd71be349022853624052d",
+        "slides": 24,
+        "pdfPages": 24,
+        "notes": 24,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          13,
+          24
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 7,
+      "nativeCharts": 8,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 8,
+        "references": 36,
+        "cellsCompared": 122,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx",
+          "ppt/embeddings/chart-data-snapshot-007.xlsx",
+          "ppt/embeddings/chart-data-snapshot-008.xlsx"
+        ]
+      },
+      "sourceBindings": {
+        "paragraph": "4.1.2",
+        "manifest": "build-scripts\\content\\book-4\\presentation-412.manifest.json",
+        "manifestSha256": "66980debf8aaf4c89f3e557cdb0cfa81432cddf704a1f8fbc894bdca8cd77519",
+        "sources": [
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/4.1.2 manuscript.md",
+            "sha256": "739fc8fc31d2df3fcce02832e72df341c5be7544ff6c90fbe089e2f7cee99a3d"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/4.1.1 manuscript.md",
+            "sha256": "7d80849940920bc83166692f39d89fec1c3eb909453ade5b6b55336aab17e797"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/Antwoorden.md",
+            "sha256": "4048fa122764663e445145463d63bf4b9b2367b1aa8e34f0e62d1cf5486e394f"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/Docenteninformatie.md",
+            "sha256": "0dd614ec1357e51a40dd19b6bc0480549e37c912b2de56ca403a31c7cb0e7e92"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/_assets/4.1.1_target.svg",
+            "sha256": "9f4ac93ff25324d26f504f0b62232c1dfdb24f4310df0a4715faf81655250101"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+            "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.3 manuscript.md",
+            "sha256": "d46652e4ed48a368246ed70a0f1df0206752d95775e52c6de25df0088167fbd2"
+          }
+        ]
+      },
+      "review": "review\\412\\root-review.json",
+      "reviewSha256": "eafbfbd12f8c7861a3aee8038806c245eca94932468e1d7a342de55d210d8a5d",
+      "coordinatorRepaired": false,
+      "assemblyTransformations": []
+    },
+    {
+      "paragraph": "4.1.3",
+      "pptx": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.3 Marginale opbrengst bij monopolie – presentatie.pptx",
+      "pdf": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.3 Marginale opbrengst bij monopolie – presentatie.pdf",
+      "mechanical": {
+        "pptxSha256": "90d49caf084fb7e2b1b4c7f13299dc320443aa7fda2e7144afaef31522502788",
+        "pdfSha256": "fc170caaf306bcb6469bc5fc174b21b04e43be8b761c9e4e2a41b711d587850e",
+        "slides": 27,
+        "pdfPages": 27,
+        "notes": 27,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          15,
+          27
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 12,
+      "nativeCharts": 3,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 3,
+        "references": 10,
+        "cellsCompared": 90,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx"
+        ]
+      },
+      "sourceBindings": {
+        "paragraph": "4.1.3",
+        "manifest": "build-scripts\\content\\book-4\\presentation-413.source.json",
+        "manifestSha256": "0a928c1dd2b0c13914ef700afe8af5dd7776cd21162b24d8a015ca00c3d949b1",
+        "sources": [
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/4.1.3 manuscript.md",
+            "sha256": "c4360e8f4b2bbf0ea576f80d8f2bb323c2fe34a7d5f90c375203ca629bddbfc1"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/Antwoorden.md",
+            "sha256": "4048fa122764663e445145463d63bf4b9b2367b1aa8e34f0e62d1cf5486e394f"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/Docenteninformatie.md",
+            "sha256": "0dd614ec1357e51a40dd19b6bc0480549e37c912b2de56ca403a31c7cb0e7e92"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/4.1.2 manuscript.md",
+            "sha256": "739fc8fc31d2df3fcce02832e72df341c5be7544ff6c90fbe089e2f7cee99a3d"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.2 manuscript.md",
+            "sha256": "992f1f64ee131c8c7a6c85dd517fc87724be5f825a1f9e497cd01f699645fdce"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+            "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.3-leerling-v3.pdf",
+            "sha256": "5d464b9480e6bbd0c885eea288eb0b3ad7fc642889e49f7c51d39048d87f94f1"
+          }
+        ]
+      },
+      "review": "review\\413\\root-review.json",
+      "reviewSha256": "e1cc95bbae0638bc4e5ab408406c1f00106a93e7ba700b38638caed40d4131be",
+      "coordinatorRepaired": false,
+      "assemblyTransformations": []
+    },
+    {
+      "paragraph": "4.1.4",
+      "pptx": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.4 Winstmaximalisatie bij monopolie – presentatie.pptx",
+      "pdf": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.4 Winstmaximalisatie bij monopolie – presentatie.pdf",
+      "mechanical": {
+        "pptxSha256": "4661ecfc0bf641b1b724893862b98570eda74bd0a12e7f68a81f142111fc65c0",
+        "pdfSha256": "c6af9a6fdeb64559c010b2fdd45ee73b257108a32e135171dfabe0ebf9dd56fd",
+        "slides": 27,
+        "pdfPages": 27,
+        "notes": 27,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          13,
+          27
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 7,
+      "nativeCharts": 6,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 6,
+        "references": 124,
+        "cellsCompared": 270,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx"
+        ]
+      },
+      "sourceBindings": {
+        "paragraph": "4.1.4",
+        "manifest": "build-scripts\\content\\book-4\\presentation-414.manifest.json",
+        "manifestSha256": "9b7c552c9cd377c0ed31e5973436bc1d161122303ec5f0cf5c93674f6c2f8d12",
+        "sources": [
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/4.1.4 manuscript.md",
+            "sha256": "65dd2923fd9c6544fce1e1a26d30969bf34abc4f0bd9bd8ad85cd3198db752b0"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/4.1.3 manuscript.md",
+            "sha256": "c4360e8f4b2bbf0ea576f80d8f2bb323c2fe34a7d5f90c375203ca629bddbfc1"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/Antwoorden.md",
+            "sha256": "4048fa122764663e445145463d63bf4b9b2367b1aa8e34f0e62d1cf5486e394f"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/Docenteninformatie.md",
+            "sha256": "0dd614ec1357e51a40dd19b6bc0480549e37c912b2de56ca403a31c7cb0e7e92"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_target.svg",
+            "sha256": "b0d8828145077ad624af6d76c98f18604b173f268a3ee84bcca51cefa9641d53"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+            "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.2 manuscript.md",
+            "sha256": "992f1f64ee131c8c7a6c85dd517fc87724be5f825a1f9e497cd01f699645fdce"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.3 manuscript.md",
+            "sha256": "d46652e4ed48a368246ed70a0f1df0206752d95775e52c6de25df0088167fbd2"
+          }
+        ]
+      },
+      "review": "review\\414\\root-review.json",
+      "reviewSha256": "a7cc885658e52659a8fdca59c7b320a3ca694750d3f4ffffed8e729722e8e025",
+      "coordinatorRepaired": false,
+      "assemblyTransformations": []
+    },
+    {
+      "paragraph": "4.1.5",
+      "pptx": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.5 Gemengde opgaven concurrentie en monopolie – presentatie.pptx",
+      "pdf": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.5 Gemengde opgaven concurrentie en monopolie – presentatie.pdf",
+      "mechanical": {
+        "pptxSha256": "033f12e26fff8101098d118819eeac6e5035b571e71d0cfb9ec92e864ad14e94",
+        "pdfSha256": "71691d0016d9303e357c3d55e08d454f0b06b7253a43fc8e1cd64900ccb82921",
+        "slides": 25,
+        "pdfPages": 25,
+        "notes": 25,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          7,
+          25
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 5,
+      "nativeCharts": 4,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 4,
+        "references": 44,
+        "cellsCompared": 78,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx"
+        ]
+      },
+      "sourceBindings": {
+        "paragraph": "4.1.5",
+        "manifest": "build-scripts\\content\\book-4\\presentation-415.manifest.json",
+        "manifestSha256": "180f8fa02fb4828653717b0db387e773057cb87f9c7b61c84941ad1b05b50baa",
+        "sources": [
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/4.1.5 manuscript.md",
+            "sha256": "a75813115abe7117b6a0044960fc03a4861084949d86073b5e118e984d24bf3f"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/Antwoorden.md",
+            "sha256": "4048fa122764663e445145463d63bf4b9b2367b1aa8e34f0e62d1cf5486e394f"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/Docenteninformatie.md",
+            "sha256": "0dd614ec1357e51a40dd19b6bc0480549e37c912b2de56ca403a31c7cb0e7e92"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/4.1.1 manuscript.md",
+            "sha256": "7d80849940920bc83166692f39d89fec1c3eb909453ade5b6b55336aab17e797"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/4.1.2 manuscript.md",
+            "sha256": "739fc8fc31d2df3fcce02832e72df341c5be7544ff6c90fbe089e2f7cee99a3d"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/4.1.3 manuscript.md",
+            "sha256": "c4360e8f4b2bbf0ea576f80d8f2bb323c2fe34a7d5f90c375203ca629bddbfc1"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/4.1.4 manuscript.md",
+            "sha256": "65dd2923fd9c6544fce1e1a26d30969bf34abc4f0bd9bd8ad85cd3198db752b0"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/_assets/4.1.4_target.svg",
+            "sha256": "a35a985f73da21de7d88e698422674565b09f3e0b1d4c87dce6761d4e5264ed9"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+            "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.5-leerling-v3.pdf",
+            "sha256": "330ce20a782829db940dac42a6f0cd1cf69b5c10258b4dec7b09ad6f79f384ef"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md",
+            "sha256": "135327f9170110864cd3b849821db55c0be2d4a5838fcb69f7e6fc2083d71369"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.2 Elasticiteit en omzet – paragraaf.md",
+            "sha256": "74c0c4df6d184c834040bbe0e5ed7229026db2f4a8beaa611ff7d58168c4ab3d"
+          }
+        ]
+      },
+      "review": "review\\415\\root-review.json",
+      "reviewSha256": "e6566751f30bbb1f3a60cc1f63419da0b9dac367d37127a20b38dcd50331ad2c",
+      "coordinatorRepaired": false,
+      "assemblyTransformations": []
+    },
+    {
+      "paragraph": "4.2.1",
+      "pptx": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.1 Welvaartseffecten van monopolie – presentatie.pptx",
+      "pdf": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.1 Welvaartseffecten van monopolie – presentatie.pdf",
+      "mechanical": {
+        "pptxSha256": "cd6160db661fb9a81c731855817248568bc4deed8963e538e8b5a3fe96636a56",
+        "pdfSha256": "cf7360c6bc659646b533c41fdb0d29cd5fc215b5591a4c3ebad87e7271a85a12",
+        "slides": 31,
+        "pdfPages": 31,
+        "notes": 31,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          17,
+          31
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 8,
+      "nativeCharts": 15,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 15,
+        "references": 808,
+        "cellsCompared": 1486,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx",
+          "ppt/embeddings/chart-data-snapshot-007.xlsx",
+          "ppt/embeddings/chart-data-snapshot-008.xlsx",
+          "ppt/embeddings/chart-data-snapshot-009.xlsx",
+          "ppt/embeddings/chart-data-snapshot-010.xlsx",
+          "ppt/embeddings/chart-data-snapshot-011.xlsx",
+          "ppt/embeddings/chart-data-snapshot-012.xlsx",
+          "ppt/embeddings/chart-data-snapshot-013.xlsx",
+          "ppt/embeddings/chart-data-snapshot-014.xlsx",
+          "ppt/embeddings/chart-data-snapshot-015.xlsx"
+        ]
+      },
+      "sourceBindings": {
+        "paragraph": "4.2.1",
+        "manifest": "build-scripts\\content\\book-4\\presentation-421.manifest.json",
+        "manifestSha256": "8ce4bfa0ccce2681e006002c01a09e52457c98a1224b8d06ef072b70488eccd4",
+        "sources": [
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.1 manuscript.md",
+            "sha256": "2761c18bb26b7e62d0436d623f388371eb1a4bbbe1f1a57d8170d16a45810305"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/Antwoorden.md",
+            "sha256": "b77880f5e0c3e9252002c502b1cd101d4181773fa9968ea37d63e3d04cdf80f9"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/Docenteninformatie.md",
+            "sha256": "b7fed5653f6f8677eeeab66d84fc80f55d11455b84243f80d3f3a6e1d651a2ed"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/_assets/421_target.svg",
+            "sha256": "6c1b8a1588fc62d8af21d389d7fb90d05b275ed355baa838a49e2258b3e8879f"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/_assets/421_answer7.svg",
+            "sha256": "62af647a2ef6b4a0aa19dc8aacde9d58bebf299a3f52086566f03cb40035246d"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/4.1.4 manuscript.md",
+            "sha256": "65dd2923fd9c6544fce1e1a26d30969bf34abc4f0bd9bd8ad85cd3198db752b0"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+            "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+          }
+        ]
+      },
+      "review": "repairs\\421-r1\\root-review.json",
+      "reviewSha256": "562d1e9f43281ba025f2195baf3b4ebff2a79715d65a94fc26524004f61c6fa1",
+      "coordinatorRepaired": true,
+      "assemblyTransformations": [
+        {
+          "repository": "4veco-platform",
+          "path": "build-scripts/content/book-4/presentation-421.manifest.json",
+          "originalSha256": "7b66bec7a919983b602d47f97f3c9ecfd3ac6b9396573f814648b05c5149a7c6",
+          "assembledSha256": "8ce4bfa0ccce2681e006002c01a09e52457c98a1224b8d06ef072b70488eccd4",
+          "reason": "Coordinator citation repair B4-421-P3-01: prerequisite 4.1.4 complete-book pages36–40 and37; five notes only, no teaching or calculation change."
+        },
+        {
+          "repository": "4veco-platform",
+          "path": "build-scripts/content/book-4/presentation-421.mjs",
+          "originalSha256": "4882b10d4f8ee5fcf90671035d8081021983e942b565d70e8fbd7450a6bb55f6",
+          "assembledSha256": "d00906b6e6eefefe7f820b39410d695e43232b561e08a6b4bca68b80effb87ea",
+          "reason": "Coordinator citation repair B4-421-P3-01: prerequisite 4.1.4 complete-book pages36–40 and37; five notes only, no teaching or calculation change."
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.1 Welvaartseffecten van monopolie – presentatie.pdf",
+          "originalSha256": "09ed04dc50a801808486e6bec962a537633dad4a5b4615800bdb3b7a1d8d7e17",
+          "assembledSha256": "cf7360c6bc659646b533c41fdb0d29cd5fc215b5591a4c3ebad87e7271a85a12",
+          "reason": "B4-421-P3-01: correct prerequisite complete-book page citations to36–40 and37. No teaching text, chart or calculation changed.",
+          "review": "repairs\\421-r1\\root-review.json"
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.1 Welvaartseffecten van monopolie – presentatie.pptx",
+          "originalSha256": "01cdca3ffa4e503a6866bd1ec9ff487d02f18e76ffc233d079e8a5a253b4f5b9",
+          "assembledSha256": "cd6160db661fb9a81c731855817248568bc4deed8963e538e8b5a3fe96636a56",
+          "reason": "B4-421-P3-01: correct prerequisite complete-book page citations to36–40 and37. No teaching text, chart or calculation changed.",
+          "review": "repairs\\421-r1\\root-review.json"
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/evidence/4.2.1-presentation.md",
+          "originalSha256": "30d509484a9f4780dd83b784441743abad59043d57875c92eb512d54f9d5a9a7",
+          "assembledSha256": "f15279b661113747bdb6ba7cc7e2600f3d3e96cecdfc23051c132cece3066c02",
+          "reason": "Preserve historical cold review and add coordinator repair/final-file binding."
+        }
+      ]
+    },
+    {
+      "paragraph": "4.2.2",
+      "pptx": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.2 Prijsdiscriminatie – presentatie.pptx",
+      "pdf": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.2 Prijsdiscriminatie – presentatie.pdf",
+      "mechanical": {
+        "pptxSha256": "3503f74dfc70bec83865a1502fa14bd97908e7abe6d83cbe930040610712091c",
+        "pdfSha256": "d5001b44104097a0c4462ea5385a8dfc0debecfc113d6d57b7021c846f89b485",
+        "slides": 27,
+        "pdfPages": 27,
+        "notes": 27,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          14,
+          27
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 11,
+      "nativeCharts": 7,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 7,
+        "references": 72,
+        "cellsCompared": 156,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx",
+          "ppt/embeddings/chart-data-snapshot-007.xlsx"
+        ]
+      },
+      "sourceBindings": {
+        "paragraph": "4.2.2",
+        "manifest": "build-scripts\\content\\book-4\\presentation-422.manifest.json",
+        "manifestSha256": "ae102ecb769e39ba2518a98c9d12f24da8330bad61e5c0db896093fa54a8adbc",
+        "sources": [
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.2 manuscript.md",
+            "sha256": "980b9248d6ced542888be62403a717479b1909209ef871325461a423af8baee9"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.1 manuscript.md",
+            "sha256": "2761c18bb26b7e62d0436d623f388371eb1a4bbbe1f1a57d8170d16a45810305"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/Antwoorden.md",
+            "sha256": "b77880f5e0c3e9252002c502b1cd101d4181773fa9968ea37d63e3d04cdf80f9"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/Docenteninformatie.md",
+            "sha256": "b7fed5653f6f8677eeeab66d84fc80f55d11455b84243f80d3f3a6e1d651a2ed"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/4.1.4 manuscript.md",
+            "sha256": "65dd2923fd9c6544fce1e1a26d30969bf34abc4f0bd9bd8ad85cd3198db752b0"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/_assets/422_target.svg",
+            "sha256": "dc540b85129e703bbc088c953c4c6b823393ced5395c553bd55fc04b75b11b11"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/_assets/422_answer16.svg",
+            "sha256": "41a994151f6420e254e2fe0572793cb51919074980fb66d1853e5d25d8435b5c"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+            "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+          }
+        ]
+      },
+      "review": "review\\retest-422\\root-review.json",
+      "reviewSha256": "9a79a6f27b26a3bd27b319d70f330c976e2754af8d8d3961f7a5bdedc7f18006",
+      "coordinatorRepaired": false,
+      "assemblyTransformations": []
+    },
+    {
+      "paragraph": "4.2.3",
+      "pptx": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.3 Marktvormen vergelijken – presentatie.pptx",
+      "pdf": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.3 Marktvormen vergelijken – presentatie.pdf",
+      "mechanical": {
+        "pptxSha256": "d0fa6c348406bd89242b7ba3e277ff40ad7f265e906d11ae3e2ca9dcc0227cdf",
+        "pdfSha256": "e2b56baf71e05b3ca0c6c0c2a44c15bb88bb49101520a64b27416f5061127685",
+        "slides": 24,
+        "pdfPages": 24,
+        "notes": 24,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          12,
+          24
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 8,
+      "nativeCharts": 3,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 3,
+        "references": 40,
+        "cellsCompared": 66,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx"
+        ]
+      },
+      "sourceBindings": {
+        "paragraph": "4.2.3",
+        "manifest": "build-scripts\\content\\book-4\\presentation-423.manifest.json",
+        "manifestSha256": "a25397dfb3c791bac7b3e7e5f9ee19fcdaee1d67c286b6a9241ac31c6f61ca43",
+        "sources": [
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.3 manuscript.md",
+            "sha256": "e83c2aa394758e939873e228074f4aeb169f326c170924cee100108e33af4a01"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/Antwoorden.md",
+            "sha256": "b77880f5e0c3e9252002c502b1cd101d4181773fa9968ea37d63e3d04cdf80f9"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/Docenteninformatie.md",
+            "sha256": "b7fed5653f6f8677eeeab66d84fc80f55d11455b84243f80d3f3a6e1d651a2ed"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+            "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/4.1.2 manuscript.md",
+            "sha256": "739fc8fc31d2df3fcce02832e72df341c5be7544ff6c90fbe089e2f7cee99a3d"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/4.1.3 manuscript.md",
+            "sha256": "c4360e8f4b2bbf0ea576f80d8f2bb323c2fe34a7d5f90c375203ca629bddbfc1"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.1/4.1.4 manuscript.md",
+            "sha256": "65dd2923fd9c6544fce1e1a26d30969bf34abc4f0bd9bd8ad85cd3198db752b0"
+          }
+        ]
+      },
+      "review": "repairs\\423-r2\\root-review.json",
+      "reviewSha256": "a39d7b461d0e172802c47ab7fe5f2aed8d0b49bd15a77add2bdf5662cecf8782",
+      "coordinatorRepaired": true,
+      "assemblyTransformations": [
+        {
+          "repository": "4veco-platform",
+          "path": "build-scripts/content/book-4/presentation-423.mjs",
+          "originalSha256": "88cadc7b927afccd07e730ec5a3ab8e0ce6e95b20565faa6b2dc844cd6e66bb5",
+          "assembledSha256": "b82dff6b378cdf43c557b402365a1d861836c2962f48e9bea9618d4077597a99",
+          "reason": "Coordinator label repair B4-423-P2-01: invisible GO label anchors on slides8/20. Economic curves, lesson text, notes and calculations unchanged."
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.3 Marktvormen vergelijken – presentatie.pdf",
+          "originalSha256": "950bd4f292d1aff352312a3699fdc6c0b678a4cc8707c941ba764758f5125ab7",
+          "assembledSha256": "e2b56baf71e05b3ca0c6c0c2a44c15bb88bb49101520a64b27416f5061127685",
+          "reason": "B4-423-P2-01: move GO=P label anchors clear of the demand curves on slides8/20; economic curves, text, notes, source questions and answers unchanged.",
+          "review": "repairs\\423-r2\\root-review.json"
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.3 Marktvormen vergelijken – presentatie.pptx",
+          "originalSha256": "78f5ff10f5e37796cc700f940a768f3882fdaed322ca02b319329f2fddcfa310",
+          "assembledSha256": "d0fa6c348406bd89242b7ba3e277ff40ad7f265e906d11ae3e2ca9dcc0227cdf",
+          "reason": "B4-423-P2-01: move GO=P label anchors clear of the demand curves on slides8/20; economic curves, text, notes, source questions and answers unchanged.",
+          "review": "repairs\\423-r2\\root-review.json"
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/evidence/4.2.3-presentation.md",
+          "originalSha256": "d2ec49ef423fed1977df9e518e1bb347a15704ea7ed9d764d88272ccbac68c4f",
+          "assembledSha256": "2a3f956de3b01b77414fded5a9286e0e1f2a1909255ad16ac4702d7900efb132",
+          "reason": "Retain historical cold review and add coordinator label repair/final-file binding."
+        }
+      ]
+    },
+    {
+      "paragraph": "4.2.4",
+      "pptx": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.4 Negatieve externe effecten – presentatie.pptx",
+      "pdf": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.4 Negatieve externe effecten – presentatie.pdf",
+      "mechanical": {
+        "pptxSha256": "1e0df648bba44290c041c2d0cb06a4b35136d08eef64f8b82e0787386a228eab",
+        "pdfSha256": "84b83ca68b2b91bcda6151a40974c7d3413f40ee2ed6579555090183678c9042",
+        "slides": 26,
+        "pdfPages": 26,
+        "notes": 26,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          15,
+          26
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 12,
+      "nativeCharts": 7,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 7,
+        "references": 204,
+        "cellsCompared": 358,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx",
+          "ppt/embeddings/chart-data-snapshot-007.xlsx"
+        ]
+      },
+      "sourceBindings": {
+        "paragraph": "4.2.4",
+        "manifest": "build-scripts\\content\\book-4\\presentation-424.manifest.json",
+        "manifestSha256": "c72fe69f508ed563bd8d03df4c6dc840d02d8a88150f02098b346c9f5dcfae81",
+        "sources": [
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.4 manuscript.md",
+            "sha256": "4589774bbf4209f36c852ef55be55e77c40d58395dd824502dbb8e5bb675647a"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/Antwoorden.md",
+            "sha256": "b77880f5e0c3e9252002c502b1cd101d4181773fa9968ea37d63e3d04cdf80f9"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/Docenteninformatie.md",
+            "sha256": "b7fed5653f6f8677eeeab66d84fc80f55d11455b84243f80d3f3a6e1d651a2ed"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.1 manuscript.md",
+            "sha256": "2761c18bb26b7e62d0436d623f388371eb1a4bbbe1f1a57d8170d16a45810305"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.3 manuscript.md",
+            "sha256": "e83c2aa394758e939873e228074f4aeb169f326c170924cee100108e33af4a01"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/_assets/424_target.svg",
+            "sha256": "293f48422571adbd6171250079fd151c1bf8f6706871d3230689abe253a35010"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+            "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.1 manuscript.md",
+            "sha256": "938160312edc425888dd54b3207c932e0aa396c59411a30e6679865eb14fded8"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.2 manuscript.md",
+            "sha256": "fcf420689fff743c59776345c5e1043e960f0e0d792d279476797071c3e87757"
+          }
+        ]
+      },
+      "review": "review\\424\\root-review.json",
+      "reviewSha256": "0c0c3573f360f57b87e4efdee36487b0c507fa7c313663c8093fa30e33862e0c",
+      "coordinatorRepaired": false,
+      "assemblyTransformations": []
+    },
+    {
+      "paragraph": "4.2.5",
+      "pptx": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.5 Positieve externe effecten – presentatie.pptx",
+      "pdf": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.5 Positieve externe effecten – presentatie.pdf",
+      "mechanical": {
+        "pptxSha256": "0c38c87f0b02e65bf0691041d0ce434a66f80a34ce61c57e293e0bbde38795dd",
+        "pdfSha256": "b67251d407aed4d2b7e4f7803cbd0001576d0c8fd8de1ab0605a4d9e6712d67b",
+        "slides": 28,
+        "pdfPages": 28,
+        "notes": 28,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          15,
+          28
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 10,
+      "nativeCharts": 7,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 7,
+        "references": 108,
+        "cellsCompared": 558,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx",
+          "ppt/embeddings/chart-data-snapshot-007.xlsx"
+        ]
+      },
+      "sourceBindings": {
+        "paragraph": "4.2.5",
+        "manifest": "build-scripts\\content\\book-4\\presentation-425-manifest.json",
+        "manifestSha256": "72aef24db45fe33e255a08d2ab1e863c2567986cbded233604e1db926dc190ed",
+        "sources": [
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.5 manuscript.md",
+            "sha256": "552967cbfcda43b2865f19417298dadee472081e67282182fe963fa55672e82b"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/Antwoorden.md",
+            "sha256": "b77880f5e0c3e9252002c502b1cd101d4181773fa9968ea37d63e3d04cdf80f9"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/Docenteninformatie.md",
+            "sha256": "b7fed5653f6f8677eeeab66d84fc80f55d11455b84243f80d3f3a6e1d651a2ed"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.4 manuscript.md",
+            "sha256": "4589774bbf4209f36c852ef55be55e77c40d58395dd824502dbb8e5bb675647a"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/_assets/425_target.svg",
+            "sha256": "36d4350c10c67eadeacf5234778b6d52cb6b734742f87628cb2249343b39b4d8"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/_assets/425_answer43.svg",
+            "sha256": "1cdfa9c9b75a5a550c2115063875c91a97a043307bbea079af520d6056774c04"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.3 manuscript.md",
+            "sha256": "a9bfe97a56a9cf77feff4602dce945ea69af2c14bcd14cbcbcb1d2b35cbe94da"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+            "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+          }
+        ]
+      },
+      "review": "repairs\\425-r1\\root-review.json",
+      "reviewSha256": "0fa15e7892fa2d0ebfd350e5b9828909d8a69cabff700c7f256100090d0c4d9b",
+      "coordinatorRepaired": true,
+      "assemblyTransformations": [
+        {
+          "repository": "4veco-platform",
+          "path": "build-scripts/content/book-4/presentation-425.mjs",
+          "originalSha256": "0337b6f47ac9ff5787e89cabe679914f068cc30a0f2ca6da7fbdf46242b06dcf",
+          "assembledSha256": "d69f1599fb1193bd1047752fc7fff6edb4fbbfb0e57dc1f3e6331850035953fa",
+          "reason": "B4-425-P2-01: separate invisible A=MK label anchor; economic series and lesson text/notes unchanged."
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.5 Positieve externe effecten – presentatie.pdf",
+          "originalSha256": "e672ecdea4819c7e9362f5fea4e9e77c712d0006e600bf8d8e95b6373ceb473f",
+          "assembledSha256": "b67251d407aed4d2b7e4f7803cbd0001576d0c8fd8de1ab0605a4d9e6712d67b",
+          "reason": "B4-425-P2-01: move A=MK label anchors clear of the supply curves on slides4/5/6/8/9/18/26; economic curves, text, notes, source questions and answers unchanged.",
+          "review": "repairs\\425-r1\\root-review.json"
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.5 Positieve externe effecten – presentatie.pptx",
+          "originalSha256": "5e437f3d88eea73a1f1212dae9c30821aeb69f1d0e29bdd002f63d4464b33bad",
+          "assembledSha256": "0c38c87f0b02e65bf0691041d0ce434a66f80a34ce61c57e293e0bbde38795dd",
+          "reason": "B4-425-P2-01: move A=MK label anchors clear of the supply curves on slides4/5/6/8/9/18/26; economic curves, text, notes, source questions and answers unchanged.",
+          "review": "repairs\\425-r1\\root-review.json"
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/evidence/4.2.5-presentation.md",
+          "originalSha256": "713774f77d5d564a55ff13e98c58230badcb19c515510484a98d94b1947203e8",
+          "assembledSha256": "52add7d2538b78b1baca4e6cf4af4db39b792d599e36c3e2ce61c4b1301a396d",
+          "reason": "Retain historical cold review and add coordinator label repair/final-file binding."
+        }
+      ]
+    },
+    {
+      "paragraph": "4.2.6",
+      "pptx": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.6 Overheidsingrijpen bij marktfalen – presentatie.pptx",
+      "pdf": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.6 Overheidsingrijpen bij marktfalen – presentatie.pdf",
+      "mechanical": {
+        "pptxSha256": "d92dadd97b1045b28593b14cb01c0224fc096a10d0022da988a2d36a12591112",
+        "pdfSha256": "6455d45f759944e559823ff7b2131c3cd7218c2ca16e98b9ede4e1c0b95cfe71",
+        "slides": 23,
+        "pdfPages": 23,
+        "notes": 23,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          12,
+          23
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 8,
+      "nativeCharts": 0,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 0,
+        "references": 0,
+        "cellsCompared": 0,
+        "workbooks": []
+      },
+      "sourceBindings": {
+        "paragraph": "4.2.6",
+        "manifest": "build-scripts\\content\\book-4\\presentation-426.manifest.json",
+        "manifestSha256": "08231abdc959e31fb7f2a0ba92794954a7f9f6defcdf9aa50715f884157abd98",
+        "sources": [
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.6 manuscript.md",
+            "sha256": "a053ce87e6ac20703671514c05a6e44c91e81028469f2e13843801c32e9674ee"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/Antwoorden.md",
+            "sha256": "b77880f5e0c3e9252002c502b1cd101d4181773fa9968ea37d63e3d04cdf80f9"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/Docenteninformatie.md",
+            "sha256": "b7fed5653f6f8677eeeab66d84fc80f55d11455b84243f80d3f3a6e1d651a2ed"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+            "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.6-leerling-v3.pdf",
+            "sha256": "336cd54fd6cd6e74340655907ba31b39cf5e2cddfac3999dc5a3bee0dce795f4"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.1 manuscript.md",
+            "sha256": "2761c18bb26b7e62d0436d623f388371eb1a4bbbe1f1a57d8170d16a45810305"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.4 manuscript.md",
+            "sha256": "4589774bbf4209f36c852ef55be55e77c40d58395dd824502dbb8e5bb675647a"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.5 manuscript.md",
+            "sha256": "552967cbfcda43b2865f19417298dadee472081e67282182fe963fa55672e82b"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.4 manuscript.md",
+            "sha256": "77c8e3e3cbba0fae732cb904aa05be660e002bd378e1e049fd9e9155adbdef6c"
+          }
+        ]
+      },
+      "review": "review\\426\\root-review.json",
+      "reviewSha256": "6e38d38d828cc48b5f107aeb65fbfbe9c5a6639d0e80ccb49bdff262db91f75a",
+      "coordinatorRepaired": false,
+      "assemblyTransformations": []
+    },
+    {
+      "paragraph": "4.2.7",
+      "pptx": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.7 Gemengde opgaven - marktvormen en marktfalen – presentatie.pptx",
+      "pdf": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.7 Gemengde opgaven - marktvormen en marktfalen – presentatie.pdf",
+      "mechanical": {
+        "pptxSha256": "59044e61147cf8550b39496557dec5a62474a308d2b6c42ed08c08ae33f432ab",
+        "pdfSha256": "8fa7e56dd3953e546ff39f0179fc0a3cb6ef8418ed8aff1a39d22463b7e75f08",
+        "slides": 23,
+        "pdfPages": 23,
+        "notes": 23,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          6,
+          23
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 8,
+      "nativeCharts": 5,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 5,
+        "references": 54,
+        "cellsCompared": 108,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx"
+        ]
+      },
+      "sourceBindings": {
+        "paragraph": "4.2.7",
+        "manifest": "build-scripts\\content\\book-4\\presentation-427.manifest.json",
+        "manifestSha256": "c0a397c129dc4b807f529639c7fe027efc9cd23fd90464014ea35441ea7d531b",
+        "sources": [
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.7 manuscript.md",
+            "sha256": "04ff9cf133cafb6f0986d69ad3c4f2a93930a396b59fd9503822f15962b2e2d5"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/Antwoorden.md",
+            "sha256": "b77880f5e0c3e9252002c502b1cd101d4181773fa9968ea37d63e3d04cdf80f9"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/Docenteninformatie.md",
+            "sha256": "b7fed5653f6f8677eeeab66d84fc80f55d11455b84243f80d3f3a6e1d651a2ed"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.1 manuscript.md",
+            "sha256": "2761c18bb26b7e62d0436d623f388371eb1a4bbbe1f1a57d8170d16a45810305"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.2 manuscript.md",
+            "sha256": "980b9248d6ced542888be62403a717479b1909209ef871325461a423af8baee9"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.3 manuscript.md",
+            "sha256": "e83c2aa394758e939873e228074f4aeb169f326c170924cee100108e33af4a01"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.4 manuscript.md",
+            "sha256": "4589774bbf4209f36c852ef55be55e77c40d58395dd824502dbb8e5bb675647a"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.5 manuscript.md",
+            "sha256": "552967cbfcda43b2865f19417298dadee472081e67282182fe963fa55672e82b"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.6 manuscript.md",
+            "sha256": "a053ce87e6ac20703671514c05a6e44c91e81028469f2e13843801c32e9674ee"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/_assets/427_A.svg",
+            "sha256": "d134e29688966ff6a6d41884789b007659616f4650db6fce4bd425c559bb1558"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/_assets/427_B.svg",
+            "sha256": "37c3ad2c96f8977a2534d9d3ea000bce56ae9502ad267e48e9c0103441aeb9c8"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/_assets/427_answerA.svg",
+            "sha256": "c153c97027863e2bc825d6f5d8e403ea81e42a4668cfa53eec98ff151c234d9c"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/_assets/427_answerB.svg",
+            "sha256": "68e303b5ba5c9ada90846ab24698f833e996139f31c8b34ad5ad45eeee46aff3"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+            "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+          }
+        ]
+      },
+      "review": "review\\427\\root-review.json",
+      "reviewSha256": "48c6fff2eb04230082cb104be007ea910a754997f2a7315508ada97940aa5d12",
+      "coordinatorRepaired": false,
+      "assemblyTransformations": []
+    },
+    {
+      "paragraph": "4.3.1",
+      "pptx": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.1 Arbeidsvraag en arbeidsproductiviteit – presentatie.pptx",
+      "pdf": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.1 Arbeidsvraag en arbeidsproductiviteit – presentatie.pdf",
+      "mechanical": {
+        "pptxSha256": "ccea0d15b4b961344b34b228858bed329856360251cbb52da2c4784741bd9414",
+        "pdfSha256": "35ee1523974e592e11896a629e00fb7c12ae25947e08af94ec027564f1ba85ad",
+        "slides": 25,
+        "pdfPages": 25,
+        "notes": 25,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          15,
+          25
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 9,
+      "nativeCharts": 3,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 3,
+        "references": 50,
+        "cellsCompared": 84,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx"
+        ]
+      },
+      "sourceBindings": {
+        "paragraph": "4.3.1",
+        "manifest": "build-scripts\\content\\book-4\\presentation-431.manifest.json",
+        "manifestSha256": "20ef3baa9df125233619ba6674f63f4b5c217604d20f096a364387b6c4b4b4fc",
+        "sources": [
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/4.3.1 manuscript.md",
+            "sha256": "12f46259c226c4be4e651dd9a1fbe140a33c137756eca860482e19f41b49bfb7"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/Antwoorden.md",
+            "sha256": "e602feba92be7245eeb349393f6787a2eac044e8c12a956712f3ac507f658f9f"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/Docenteninformatie.md",
+            "sha256": "106f211aec0caa10c693014055874468e74b034a619d077bff30feb3ed1a8f85"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+            "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.1-leerling-v3.pdf",
+            "sha256": "876baaa93e59d9bae6b7cfd3b164a85863ed9bcd2ec83abc49cf459f5b5f210c"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/curriculum/target-excerpts/4.3.1.md",
+            "sha256": "ae2a4dda3ed5fa093f3a71930143202793c2fb9c0cd8f1439135b9bcd3e90918"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/curriculum/targets/4.3.1.json",
+            "sha256": "d14d76e143905a16cf09a1bd9b4f28f357902762103ccc7ff022b28749204ca1"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.7 manuscript.md",
+            "sha256": "04ff9cf133cafb6f0986d69ad3c4f2a93930a396b59fd9503822f15962b2e2d5"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.1 Kostenstructuren – paragraaf.md",
+            "sha256": "c9655f6d8eb087c7d084856e4d1739f0be20a56385f775f442389891370f0955"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md",
+            "sha256": "135327f9170110864cd3b849821db55c0be2d4a5838fcb69f7e6fc2083d71369"
+          }
+        ]
+      },
+      "review": "review\\431\\root-review.json",
+      "reviewSha256": "8935b1ba15d05a76da3a95e663e9786c51a0dda980b04641217dff383755e259",
+      "coordinatorRepaired": false,
+      "assemblyTransformations": []
+    },
+    {
+      "paragraph": "4.3.2",
+      "pptx": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.2 Arbeidsaanbod, participatie en evenwicht – presentatie.pptx",
+      "pdf": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.2 Arbeidsaanbod, participatie en evenwicht – presentatie.pdf",
+      "mechanical": {
+        "pptxSha256": "5f7318ebcc0b071c2d7d0fe3f6f2250aadadc44340cccd7fbca99805ba835769",
+        "pdfSha256": "664e8a4be9bad3e6be4574ba298c400a37b1d710c3d2ef4f8adef420773a233f",
+        "slides": 25,
+        "pdfPages": 25,
+        "notes": 25,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          15,
+          25
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 9,
+      "nativeCharts": 5,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 5,
+        "references": 52,
+        "cellsCompared": 78,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx"
+        ]
+      },
+      "sourceBindings": {
+        "paragraph": "4.3.2",
+        "manifest": "build-scripts\\content\\book-4\\presentation-432.manifest.json",
+        "manifestSha256": "e208c25bf0fd4e2b15400ce070f5b5db3187070e654f654c6c88e72286f5c2ab",
+        "sources": [
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/4.3.2 manuscript.md",
+            "sha256": "64323fd7ca261d025bb5944f65032d72b6d7a97d124f1ded9a2abeeea5dd89e7"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/4.3.1 manuscript.md",
+            "sha256": "12f46259c226c4be4e651dd9a1fbe140a33c137756eca860482e19f41b49bfb7"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/Antwoorden.md",
+            "sha256": "e602feba92be7245eeb349393f6787a2eac044e8c12a956712f3ac507f658f9f"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/Docenteninformatie.md",
+            "sha256": "106f211aec0caa10c693014055874468e74b034a619d077bff30feb3ed1a8f85"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/eq_target.svg",
+            "sha256": "b050da4637ecc5b395f8f04ed6acbd6d4fc06d43e4919b1781a4f65b7d939656"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/eq_target_answer.svg",
+            "sha256": "2bd24dbfbd067cebd70c763f3d9791d79a69689c1822a38653b403e2bcf04ade"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.2-leerling-v3.pdf",
+            "sha256": "372f0b5e3d7083e0e2ce0181980f0d5dbc271a3eb6db43ca6c04a0c258374e80"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+            "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.4 manuscript.md",
+            "sha256": "77c8e3e3cbba0fae732cb904aa05be660e002bd378e1e049fd9e9155adbdef6c"
+          }
+        ]
+      },
+      "review": "repairs\\432-r1\\root-review.json",
+      "reviewSha256": "4337d60487ba2cbbd87081d3295b2112a4e5d0bd18896bd95ef67edcfc814d04",
+      "coordinatorRepaired": true,
+      "assemblyTransformations": [
+        {
+          "repository": "4veco-platform",
+          "path": "build-scripts/content/book-4/presentation-432.mjs",
+          "originalSha256": "12a2f0e3e3c05c61bedc9ad96dda2ca45526db88e4d2e19b2f7e7ffc5b1da050",
+          "assembledSha256": "a9b104054b0c840e3c346c2e994bb1caec6ea4e8180fa56455c9992c3117a847",
+          "reason": "B4-432-P3-01: note9 prerequisite points to actual labour-demand movement teaching on complete-book117."
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.2 Arbeidsaanbod, participatie en evenwicht – presentatie.pdf",
+          "originalSha256": "cc0337db38fc94fb38df564a54e385889cc96a0bd37288b8bc307cb973e211fc",
+          "assembledSha256": "664e8a4be9bad3e6be4574ba298c400a37b1d710c3d2ef4f8adef420773a233f",
+          "reason": "B4-432-P3-01: correct note9 prerequisite from complete-book116 to117, where labour-demand movement is taught.",
+          "review": "repairs/432-r1/root-review.json"
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.2 Arbeidsaanbod, participatie en evenwicht – presentatie.pptx",
+          "originalSha256": "6bfd832b5007f3ef83f792fe5b1e8f540ee121dbb8e92d81e7f314d6316c7741",
+          "assembledSha256": "5f7318ebcc0b071c2d7d0fe3f6f2250aadadc44340cccd7fbca99805ba835769",
+          "reason": "B4-432-P3-01: correct note9 prerequisite from complete-book116 to117, where labour-demand movement is taught.",
+          "review": "repairs/432-r1/root-review.json"
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/evidence/4.3.2-presentation.md",
+          "originalSha256": "2797d5106e1c6557ca7a3ae0be07a9ce893a870f971b96095e3c672644622cdb",
+          "assembledSha256": "44d402ea0bfbf63f5c5661ad13e248d2040113b6956cb9e35fbc87aee26080b5",
+          "reason": "Preserve historical cold record and append coordinator citation repair/final-file binding."
+        }
+      ]
+    },
+    {
+      "paragraph": "4.3.3",
+      "pptx": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.3 Werkloosheid en veranderingen op de arbeidsmarkt – presentatie.pptx",
+      "pdf": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.3 Werkloosheid en veranderingen op de arbeidsmarkt – presentatie.pdf",
+      "mechanical": {
+        "pptxSha256": "68432489e8021d049ffea929140e387fa47947b21774522dc8ecc7f148724ed7",
+        "pdfSha256": "4394b8376c3afdb38136a45802d21b16f13f1a9c868de42a9229bf6e8660e01b",
+        "slides": 28,
+        "pdfPages": 28,
+        "notes": 28,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          16,
+          28
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 8,
+      "nativeCharts": 7,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 7,
+        "references": 164,
+        "cellsCompared": 250,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx",
+          "ppt/embeddings/chart-data-snapshot-007.xlsx"
+        ]
+      },
+      "sourceBindings": {
+        "paragraph": "4.3.3",
+        "manifest": "build-scripts\\content\\book-4\\presentation-433.manifest.json",
+        "manifestSha256": "82a7c08cc607d18b9d725ebfe849a1ce28dda1073f3416b94de3166aa0fc3510",
+        "sources": [
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/4.3.1 manuscript.md",
+            "sha256": "12f46259c226c4be4e651dd9a1fbe140a33c137756eca860482e19f41b49bfb7"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/4.3.2 manuscript.md",
+            "sha256": "64323fd7ca261d025bb5944f65032d72b6d7a97d124f1ded9a2abeeea5dd89e7"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/4.3.3 manuscript.md",
+            "sha256": "4e16bc85b0ebef225cd588575d73adec0aa563795ead3f20d3642540ff7eaaee"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/Antwoorden.md",
+            "sha256": "e602feba92be7245eeb349393f6787a2eac044e8c12a956712f3ac507f658f9f"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/Docenteninformatie.md",
+            "sha256": "106f211aec0caa10c693014055874468e74b034a619d077bff30feb3ed1a8f85"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/shift_target.svg",
+            "sha256": "a164a3f20e193ef1a44d41d5880e7f95ddb31140435a4755b0ea718a23b37062"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/shift_target_answer.svg",
+            "sha256": "cbd259477588d22d8677081155e6bfb76c72b656da9cb93f0704b4c923056c3e"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+            "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+          }
+        ]
+      },
+      "review": "review\\433\\root-review.json",
+      "reviewSha256": "2ebc76dbb9265a9b2f44da1611025cc6dfdd5d7945844a8714e0ef7f08639a19",
+      "coordinatorRepaired": false,
+      "assemblyTransformations": []
+    },
+    {
+      "paragraph": "4.3.4",
+      "pptx": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.4 Minimumloon – presentatie.pptx",
+      "pdf": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.4 Minimumloon – presentatie.pdf",
+      "mechanical": {
+        "pptxSha256": "fdf98df78d78c0f6f23d98f7bee5461cf6910a1de5f72ed18cde532f67a74255",
+        "pdfSha256": "0a80b5e8ff166f57a684735ce8cefb4b3dbbf5b068cdf543a588772d421aa36b",
+        "slides": 27,
+        "pdfPages": 27,
+        "notes": 27,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          14,
+          27
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 5,
+      "nativeCharts": 5,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 5,
+        "references": 84,
+        "cellsCompared": 130,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx"
+        ]
+      },
+      "sourceBindings": {
+        "paragraph": "4.3.4",
+        "manifest": "build-scripts\\content\\book-4\\presentation-434.manifest.json",
+        "manifestSha256": "5844693a57934795821756ecfc6922d136cfb99ded02f5164c9898f5425c1099",
+        "sources": [
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/4.3.4 manuscript.md",
+            "sha256": "ab17d4ad601262503b7ddfa0435fc4f7168512ee79f4e2977c3e489693df80e4"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/Antwoorden.md",
+            "sha256": "e602feba92be7245eeb349393f6787a2eac044e8c12a956712f3ac507f658f9f"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/Docenteninformatie.md",
+            "sha256": "106f211aec0caa10c693014055874468e74b034a619d077bff30feb3ed1a8f85"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+            "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/floor_target.svg",
+            "sha256": "1c56b3d1fcde16f89d346a3e22451c831322592a2328ef8077d3a497e2398373"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/4.3.1 manuscript.md",
+            "sha256": "12f46259c226c4be4e651dd9a1fbe140a33c137756eca860482e19f41b49bfb7"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/4.3.2 manuscript.md",
+            "sha256": "64323fd7ca261d025bb5944f65032d72b6d7a97d124f1ded9a2abeeea5dd89e7"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/4.3.3 manuscript.md",
+            "sha256": "4e16bc85b0ebef225cd588575d73adec0aa563795ead3f20d3642540ff7eaaee"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.5 manuscript.md",
+            "sha256": "9f1aaab2c33c572a3d0dd4b85a5eb29bd90412a4de5bdf037c9a889c2c7bc30c"
+          }
+        ]
+      },
+      "review": "repairs\\434-r1\\root-review.json",
+      "reviewSha256": "a7fe98fbac859c294fec6fa68d9584a30a7c682c176fee17259b75df02bdd02e",
+      "coordinatorRepaired": true,
+      "assemblyTransformations": [
+        {
+          "repository": "4veco-platform",
+          "path": "build-scripts/content/book-4/presentation-434.mjs",
+          "originalSha256": "531f83fcb6e8434da5bf1c63f7270fb5ac2205f94755a3d559bd3124a847b60f",
+          "assembledSha256": "bb49be74733bfdfb0bb3bba1f37aee685657bfd3abc7d63199eca5dfd27ecdc1",
+          "reason": "B4-434-P2-01: position quantity labels left of vertical guides; economic and guide coordinates unchanged."
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.4 Minimumloon – presentatie.pdf",
+          "originalSha256": "c783569b2a8f1ed59fdee978a6886e9ff807a621507cc650baf02bf5756d968a",
+          "assembledSha256": "0a80b5e8ff166f57a684735ce8cefb4b3dbbf5b068cdf543a588772d421aa36b",
+          "reason": "B4-434-P2-01: move quantity labels clear of vertical guides on slides9/21; economic curves, text, notes, source questions and answers unchanged.",
+          "review": "repairs\\434-r1\\root-review.json"
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.4 Minimumloon – presentatie.pptx",
+          "originalSha256": "01c9add1633f1913c1cbee5902236a7a3e2c251d60d01b75ef66928b7953be52",
+          "assembledSha256": "fdf98df78d78c0f6f23d98f7bee5461cf6910a1de5f72ed18cde532f67a74255",
+          "reason": "B4-434-P2-01: move quantity labels clear of vertical guides on slides9/21; economic curves, text, notes, source questions and answers unchanged.",
+          "review": "repairs\\434-r1\\root-review.json"
+        },
+        {
+          "repository": "4veco-lessen",
+          "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/evidence/4.3.4-presentation.md",
+          "originalSha256": "0c2400b7e69aacd61e3ddb245d52bc255f20c94c641001ac85a30a4362ef8993",
+          "assembledSha256": "adbaf437a88a4387801b27f4951f3e0a0d4dcd23a17b969575489bb6ecc30f7f",
+          "reason": "Retain historical cold review and add coordinator label repair/final-file binding."
+        }
+      ]
+    },
+    {
+      "paragraph": "4.3.5",
+      "pptx": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.5 Gemengde opgaven arbeidsmarkt – presentatie.pptx",
+      "pdf": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.5 Gemengde opgaven arbeidsmarkt – presentatie.pdf",
+      "mechanical": {
+        "pptxSha256": "bc0e9d6f2b8cc12b2f0c1e76d1ea02f9517696f02618cecbd0f745a103f44016",
+        "pdfSha256": "455cabbb8b326c6498616d23dbed68f2c43b0b17ae983b6aee1cf067ab4a9e08",
+        "slides": 20,
+        "pdfPages": 20,
+        "notes": 20,
+        "minimumExplicitNotesFontPt": 14.0,
+        "pdfTextMismatches": [],
+        "overviewSlides": [
+          1,
+          5,
+          20
+        ],
+        "overviewTextAndGeometryParity": true
+      },
+      "nativeTables": 4,
+      "nativeCharts": 1,
+      "chartWorkbooks": {
+        "ok": true,
+        "charts": 1,
+        "references": 26,
+        "cellsCompared": 46,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx"
+        ]
+      },
+      "sourceBindings": {
+        "paragraph": "4.3.5",
+        "manifest": "build-scripts\\content\\book-4\\presentation-435.manifest.json",
+        "manifestSha256": "68e07b7c2f7b5734afed340187e315c707b0b7a0e53a411f1f839c5203147ea0",
+        "sources": [
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/4.3.1 manuscript.md",
+            "sha256": "12f46259c226c4be4e651dd9a1fbe140a33c137756eca860482e19f41b49bfb7"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/4.3.2 manuscript.md",
+            "sha256": "64323fd7ca261d025bb5944f65032d72b6d7a97d124f1ded9a2abeeea5dd89e7"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/4.3.3 manuscript.md",
+            "sha256": "4e16bc85b0ebef225cd588575d73adec0aa563795ead3f20d3642540ff7eaaee"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/4.3.4 manuscript.md",
+            "sha256": "ab17d4ad601262503b7ddfa0435fc4f7168512ee79f4e2977c3e489693df80e4"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/4.3.5 manuscript.md",
+            "sha256": "a9c5196872388d35c8b7814b72430d752beacc203b58e8469f686dadcd14f5a0"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/Antwoorden.md",
+            "sha256": "e602feba92be7245eeb349393f6787a2eac044e8c12a956712f3ac507f658f9f"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/Docenteninformatie.md",
+            "sha256": "106f211aec0caa10c693014055874468e74b034a619d077bff30feb3ed1a8f85"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/mixed_base.svg",
+            "sha256": "ab75cd59d5c8a2707969a9f81601ca664893d9d3efe87dd646de65fbad6660da"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/mixed_answer.svg",
+            "sha256": "1b90f1f8d32ad60bf22982a15b483325d7a50c99ef005570d42c20447eb4ccf9"
+          },
+          {
+            "repository": "4veco-lessen",
+            "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+            "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+          }
+        ]
+      },
+      "review": "review\\435\\root-review.json",
+      "reviewSha256": "12ebeb76372d46f26606fc26d5f12d44ae24d1e16b8edbb62bdcb3d3042080dc",
+      "coordinatorRepaired": false,
+      "assemblyTransformations": []
+    }
+  ],
+  "totalSlides": 438,
+  "unchangedPriorDecks": 29,
+  "unchangedBook4SourceFiles": 335
+}

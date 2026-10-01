@@ -1,0 +1,1022 @@
+{
+  "sourceLessonCommit": "e734532a42b27732ac25ce990fc9448b12309d28",
+  "sourceBookTree": "d4c43fbc5ad4d0b7b09850d971ac5ff28c38bf1a",
+  "pdfPhysicalPageEqualsPrintedPage": true,
+  "chapterLocalOffsets": {
+    "4.1": 4,
+    "4.2": 52,
+    "4.3": 112
+  },
+  "mixedBonusAndExtraLabelsMustBeRetained": true,
+  "paragraphs": [
+    {
+      "id": "4.1.1",
+      "title": "Toetreding, uittreding en langetermijnevenwicht",
+      "type": "theory",
+      "manuscript": "edities/books34-v3/books/book-4/chapters/4.1/4.1.1 manuscript.md",
+      "manuscriptSha256": "7d80849940920bc83166692f39d89fec1c3eb909453ade5b6b55336aab17e797",
+      "bookPages": [
+        7,
+        15
+      ],
+      "chapterLocalPages": [
+        3,
+        11
+      ],
+      "startPage": 11,
+      "start": [
+        "1",
+        "2"
+      ],
+      "basis": [
+        "3",
+        "4"
+      ],
+      "independent": [
+        "5",
+        "6"
+      ],
+      "target": "7",
+      "targetSourceAndQuestionPages": [
+        14
+      ],
+      "answerTargetPages": [
+        6
+      ],
+      "bonus": [
+        "8"
+      ],
+      "repetition": [
+        "9",
+        "10"
+      ],
+      "allExercises": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "homework": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "openingStatus": "2: new normal-remuneration/economic-profit distinction; support p.7."
+    },
+    {
+      "id": "4.1.2",
+      "title": "Monopolie: kenmerken",
+      "type": "theory",
+      "manuscript": "edities/books34-v3/books/book-4/chapters/4.1/4.1.2 manuscript.md",
+      "manuscriptSha256": "739fc8fc31d2df3fcce02832e72df341c5be7544ff6c90fbe089e2f7cee99a3d",
+      "bookPages": [
+        16,
+        23
+      ],
+      "chapterLocalPages": [
+        12,
+        19
+      ],
+      "startPage": 19,
+      "start": [
+        "11",
+        "12"
+      ],
+      "basis": [
+        "13",
+        "14",
+        "15"
+      ],
+      "independent": [
+        "16",
+        "17"
+      ],
+      "target": "18",
+      "targetSourceAndQuestionPages": [
+        22
+      ],
+      "answerTargetPages": [
+        10
+      ],
+      "bonus": [
+        "19"
+      ],
+      "repetition": [
+        "20"
+      ],
+      "allExercises": [
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20"
+      ],
+      "homework": [
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18"
+      ],
+      "openingStatus": "12: apply new monopoly/market-boundary definition; support pp.16-17."
+    },
+    {
+      "id": "4.1.3",
+      "title": "Marginale opbrengst bij monopolie",
+      "type": "theory",
+      "manuscript": "edities/books34-v3/books/book-4/chapters/4.1/4.1.3 manuscript.md",
+      "manuscriptSha256": "c4360e8f4b2bbf0ea576f80d8f2bb323c2fe34a7d5f90c375203ca629bddbfc1",
+      "bookPages": [
+        24,
+        34
+      ],
+      "chapterLocalPages": [
+        20,
+        30
+      ],
+      "startPage": 29,
+      "start": [
+        "21",
+        "22"
+      ],
+      "basis": [
+        "23",
+        "24",
+        "25"
+      ],
+      "independent": [
+        "26",
+        "27"
+      ],
+      "target": "28",
+      "targetSourceAndQuestionPages": [
+        33
+      ],
+      "answerTargetPages": [
+        14,
+        15
+      ],
+      "bonus": [
+        "29"
+      ],
+      "repetition": [
+        "30"
+      ],
+      "allExercises": [
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30"
+      ],
+      "homework": [
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28"
+      ],
+      "openingStatus": "21 explicitly supplies the prior limited derivative rule. 22 references Luma worked example and needs pp.24,28; new uniform-price loss on earlier units."
+    },
+    {
+      "id": "4.1.4",
+      "title": "Winstmaximalisatie bij monopolie",
+      "type": "theory",
+      "manuscript": "edities/books34-v3/books/book-4/chapters/4.1/4.1.4 manuscript.md",
+      "manuscriptSha256": "65dd2923fd9c6544fce1e1a26d30969bf34abc4f0bd9bd8ad85cd3198db752b0",
+      "bookPages": [
+        35,
+        45
+      ],
+      "chapterLocalPages": [
+        31,
+        41
+      ],
+      "startPage": 41,
+      "start": [
+        "31",
+        "32"
+      ],
+      "basis": [
+        "33",
+        "34",
+        "35"
+      ],
+      "independent": [
+        "36",
+        "37"
+      ],
+      "target": "38",
+      "targetSourceAndQuestionPages": [
+        44
+      ],
+      "answerTargetPages": [
+        21,
+        22
+      ],
+      "bonus": [
+        "39"
+      ],
+      "repetition": [
+        "40"
+      ],
+      "allExercises": [
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40"
+      ],
+      "homework": [
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38"
+      ],
+      "openingStatus": "31-32 retrieve 4.1.3 P/GO versus MO and 3.2.3 marginal choice; do not claim whole monopoly optimization already taught."
+    },
+    {
+      "id": "4.1.5",
+      "title": "Gemengde opgaven: concurrentie en monopolie",
+      "type": "mixed",
+      "manuscript": "edities/books34-v3/books/book-4/chapters/4.1/4.1.5 manuscript.md",
+      "manuscriptSha256": "a75813115abe7117b6a0044960fc03a4861084949d86073b5e118e984d24bf3f",
+      "bookPages": [
+        46,
+        50
+      ],
+      "chapterLocalPages": [
+        42,
+        46
+      ],
+      "startPage": 46,
+      "start": [
+        "41"
+      ],
+      "basis": [],
+      "independent": [],
+      "target": "45",
+      "targetSourceAndQuestionPages": [
+        48,
+        49
+      ],
+      "answerTargetPages": [
+        25,
+        26
+      ],
+      "bonus": [],
+      "repetition": [],
+      "allExercises": [
+        "41",
+        "41A",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48"
+      ],
+      "homework": [
+        "41",
+        "41A",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48"
+      ],
+      "openingStatus": "Mixed retrieval; complete set includes inserted 41A."
+    },
+    {
+      "id": "4.2.1",
+      "title": "Welvaartseffecten van monopolie",
+      "type": "theory",
+      "manuscript": "edities/books34-v3/books/book-4/chapters/4.2/4.2.1 manuscript.md",
+      "manuscriptSha256": "2761c18bb26b7e62d0436d623f388371eb1a4bbbe1f1a57d8170d16a45810305",
+      "bookPages": [
+        55,
+        62
+      ],
+      "chapterLocalPages": [
+        3,
+        10
+      ],
+      "startPage": 59,
+      "start": [
+        "1",
+        "2"
+      ],
+      "basis": [
+        "3",
+        "4"
+      ],
+      "independent": [
+        "5",
+        "6"
+      ],
+      "target": "7",
+      "targetSourceAndQuestionPages": [
+        61
+      ],
+      "answerTargetPages": [
+        31
+      ],
+      "bonus": [
+        "8"
+      ],
+      "repetition": [
+        "9"
+      ],
+      "allExercises": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "homework": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "openingStatus": "1 retrieves 4.1.4; 2 retrieves surplus addition/transfer from 3.1.2. New geometric monopoly comparison still needs pp.55-58."
+    },
+    {
+      "id": "4.2.2",
+      "title": "Prijsdiscriminatie",
+      "type": "theory",
+      "manuscript": "edities/books34-v3/books/book-4/chapters/4.2/4.2.2 manuscript.md",
+      "manuscriptSha256": "980b9248d6ced542888be62403a717479b1909209ef871325461a423af8baee9",
+      "bookPages": [
+        63,
+        70
+      ],
+      "chapterLocalPages": [
+        11,
+        18
+      ],
+      "startPage": 66,
+      "start": [
+        "10",
+        "11"
+      ],
+      "basis": [
+        "12",
+        "13"
+      ],
+      "independent": [
+        "14",
+        "15"
+      ],
+      "target": "16",
+      "targetSourceAndQuestionPages": [
+        69
+      ],
+      "answerTargetPages": [
+        34
+      ],
+      "bonus": [
+        "17"
+      ],
+      "repetition": [
+        "18"
+      ],
+      "allExercises": [
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18"
+      ],
+      "homework": [
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "openingStatus": "10 uses known cost bookkeeping; 11 applies new price-discrimination definition; support p.63."
+    },
+    {
+      "id": "4.2.3",
+      "title": "Marktvormen vergelijken",
+      "type": "theory",
+      "manuscript": "edities/books34-v3/books/book-4/chapters/4.2/4.2.3 manuscript.md",
+      "manuscriptSha256": "e83c2aa394758e939873e228074f4aeb169f326c170924cee100108e33af4a01",
+      "bookPages": [
+        71,
+        76
+      ],
+      "chapterLocalPages": [
+        19,
+        24
+      ],
+      "startPage": 73,
+      "start": [
+        "19",
+        "20"
+      ],
+      "basis": [
+        "21",
+        "22"
+      ],
+      "independent": [
+        "23",
+        "24"
+      ],
+      "target": "25",
+      "targetSourceAndQuestionPages": [
+        75
+      ],
+      "answerTargetPages": [
+        37
+      ],
+      "bonus": [
+        "26"
+      ],
+      "repetition": [
+        "27"
+      ],
+      "allExercises": [
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27"
+      ],
+      "homework": [
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "openingStatus": "19-20 retrieve price-taker/price-setter and independent-firm counting; four-way classification introduced pp.71-72."
+    },
+    {
+      "id": "4.2.4",
+      "title": "Negatieve externe effecten",
+      "type": "theory",
+      "manuscript": "edities/books34-v3/books/book-4/chapters/4.2/4.2.4 manuscript.md",
+      "manuscriptSha256": "4589774bbf4209f36c852ef55be55e77c40d58395dd824502dbb8e5bb675647a",
+      "bookPages": [
+        77,
+        87
+      ],
+      "chapterLocalPages": [
+        25,
+        35
+      ],
+      "startPage": 83,
+      "start": [
+        "28",
+        "29"
+      ],
+      "basis": [
+        "30",
+        "31"
+      ],
+      "independent": [
+        "32",
+        "33"
+      ],
+      "target": "34",
+      "targetSourceAndQuestionPages": [
+        86
+      ],
+      "answerTargetPages": [
+        41
+      ],
+      "bonus": [
+        "35"
+      ],
+      "repetition": [
+        "36"
+      ],
+      "allExercises": [
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36"
+      ],
+      "homework": [
+        "30",
+        "31",
+        "32",
+        "33",
+        "34"
+      ],
+      "openingStatus": "28 retrieves tax wedge. 29 needs new third-party/external-cost definition p.77."
+    },
+    {
+      "id": "4.2.5",
+      "title": "Positieve externe effecten",
+      "type": "theory",
+      "manuscript": "edities/books34-v3/books/book-4/chapters/4.2/4.2.5 manuscript.md",
+      "manuscriptSha256": "552967cbfcda43b2865f19417298dadee472081e67282182fe963fa55672e82b",
+      "bookPages": [
+        88,
+        98
+      ],
+      "chapterLocalPages": [
+        36,
+        46
+      ],
+      "startPage": 94,
+      "start": [
+        "37",
+        "38"
+      ],
+      "basis": [
+        "39",
+        "40"
+      ],
+      "independent": [
+        "41",
+        "42"
+      ],
+      "target": "43",
+      "targetSourceAndQuestionPages": [
+        97
+      ],
+      "answerTargetPages": [
+        45
+      ],
+      "bonus": [
+        "44"
+      ],
+      "repetition": [
+        "45"
+      ],
+      "allExercises": [
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "homework": [
+        "39",
+        "40",
+        "41",
+        "42",
+        "43"
+      ],
+      "openingStatus": "37 retrieves subsidy wedge. 38 distinguishes new external benefits from private advantage/payment; support p.88."
+    },
+    {
+      "id": "4.2.6",
+      "title": "Overheidsingrijpen bij marktfalen",
+      "type": "theory",
+      "manuscript": "edities/books34-v3/books/book-4/chapters/4.2/4.2.6 manuscript.md",
+      "manuscriptSha256": "a053ce87e6ac20703671514c05a6e44c91e81028469f2e13843801c32e9674ee",
+      "bookPages": [
+        99,
+        104
+      ],
+      "chapterLocalPages": [
+        47,
+        52
+      ],
+      "startPage": 101,
+      "start": [
+        "46",
+        "47"
+      ],
+      "basis": [
+        "48",
+        "49"
+      ],
+      "independent": [
+        "50",
+        "51"
+      ],
+      "target": "52",
+      "targetSourceAndQuestionPages": [
+        103
+      ],
+      "answerTargetPages": [
+        48
+      ],
+      "bonus": [
+        "53"
+      ],
+      "repetition": [
+        "54"
+      ],
+      "allExercises": [
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54"
+      ],
+      "homework": [
+        "48",
+        "49",
+        "50",
+        "51",
+        "52"
+      ],
+      "openingStatus": "46 extends prior ledger by explicit execution-resource cost; 47 asks new goal-versus-instrument distinction. Support pp.99-100."
+    },
+    {
+      "id": "4.2.7",
+      "title": "Gemengde opgaven: marktvormen en marktfalen",
+      "type": "mixed",
+      "manuscript": "edities/books34-v3/books/book-4/chapters/4.2/4.2.7 manuscript.md",
+      "manuscriptSha256": "04ff9cf133cafb6f0986d69ad3c4f2a93930a396b59fd9503822f15962b2e2d5",
+      "bookPages": [
+        105,
+        110
+      ],
+      "chapterLocalPages": [
+        53,
+        58
+      ],
+      "startPage": 105,
+      "start": [
+        "55"
+      ],
+      "basis": [],
+      "independent": [],
+      "target": "58",
+      "targetSourceAndQuestionPages": [
+        108,
+        109
+      ],
+      "answerTargetPages": [
+        51,
+        52
+      ],
+      "bonus": [],
+      "repetition": [
+        "60"
+      ],
+      "allExercises": [
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60"
+      ],
+      "homework": [
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60"
+      ],
+      "openingStatus": "Mixed retrieval from all six preceding paragraphs; 59 is extra mixed, 60 explicitly repetition."
+    },
+    {
+      "id": "4.3.1",
+      "title": "Arbeidsvraag en arbeidsproductiviteit",
+      "type": "theory",
+      "manuscript": "edities/books34-v3/books/book-4/chapters/4.3/4.3.1 manuscript.md",
+      "manuscriptSha256": "12f46259c226c4be4e651dd9a1fbe140a33c137756eca860482e19f41b49bfb7",
+      "bookPages": [
+        114,
+        123
+      ],
+      "chapterLocalPages": [
+        2,
+        11
+      ],
+      "startPage": 119,
+      "start": [
+        "1",
+        "2"
+      ],
+      "basis": [
+        "3",
+        "4"
+      ],
+      "independent": [
+        "5",
+        "6"
+      ],
+      "target": "7",
+      "targetSourceAndQuestionPages": [
+        122
+      ],
+      "answerTargetPages": [
+        55
+      ],
+      "bonus": [
+        "8"
+      ],
+      "repetition": [
+        "9"
+      ],
+      "allExercises": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "homework": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "openingStatus": "1 retrieves division/old-base percentage; 2 introduces employer-demand/worker-supply roles; support p.114."
+    },
+    {
+      "id": "4.3.2",
+      "title": "Arbeidsaanbod, participatie en evenwicht",
+      "type": "theory",
+      "manuscript": "edities/books34-v3/books/book-4/chapters/4.3/4.3.2 manuscript.md",
+      "manuscriptSha256": "64323fd7ca261d025bb5944f65032d72b6d7a97d124f1ded9a2abeeea5dd89e7",
+      "bookPages": [
+        124,
+        131
+      ],
+      "chapterLocalPages": [
+        12,
+        19
+      ],
+      "startPage": 128,
+      "start": [
+        "10",
+        "11"
+      ],
+      "basis": [
+        "12",
+        "13"
+      ],
+      "independent": [
+        "14",
+        "15"
+      ],
+      "target": "16",
+      "targetSourceAndQuestionPages": [
+        130
+      ],
+      "answerTargetPages": [
+        58,
+        59
+      ],
+      "bonus": [
+        "17"
+      ],
+      "repetition": [
+        "18"
+      ],
+      "allExercises": [
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18"
+      ],
+      "homework": [
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "openingStatus": "10 retrieves equilibrium algebra/percentage share; 11 needs population-group definition p.124."
+    },
+    {
+      "id": "4.3.3",
+      "title": "Werkloosheid en veranderingen op de arbeidsmarkt",
+      "type": "theory",
+      "manuscript": "edities/books34-v3/books/book-4/chapters/4.3/4.3.3 manuscript.md",
+      "manuscriptSha256": "4e16bc85b0ebef225cd588575d73adec0aa563795ead3f20d3642540ff7eaaee",
+      "bookPages": [
+        132,
+        140
+      ],
+      "chapterLocalPages": [
+        20,
+        28
+      ],
+      "startPage": 137,
+      "start": [
+        "19",
+        "20"
+      ],
+      "basis": [
+        "21",
+        "22"
+      ],
+      "independent": [
+        "23",
+        "24"
+      ],
+      "target": "25",
+      "targetSourceAndQuestionPages": [
+        139
+      ],
+      "answerTargetPages": [
+        61,
+        62
+      ],
+      "bonus": [
+        "26"
+      ],
+      "repetition": [
+        "27"
+      ],
+      "allExercises": [
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27"
+      ],
+      "homework": [
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "openingStatus": "19 retrieves participation. 20 needs new unemployment denominator and friction classification; support pp.132-133."
+    },
+    {
+      "id": "4.3.4",
+      "title": "Minimumloon",
+      "type": "theory",
+      "manuscript": "edities/books34-v3/books/book-4/chapters/4.3/4.3.4 manuscript.md",
+      "manuscriptSha256": "ab17d4ad601262503b7ddfa0435fc4f7168512ee79f4e2977c3e489693df80e4",
+      "bookPages": [
+        141,
+        148
+      ],
+      "chapterLocalPages": [
+        29,
+        36
+      ],
+      "startPage": 145,
+      "start": [
+        "28",
+        "29"
+      ],
+      "basis": [
+        "30",
+        "31"
+      ],
+      "independent": [
+        "32",
+        "33"
+      ],
+      "target": "34",
+      "targetSourceAndQuestionPages": [
+        147
+      ],
+      "answerTargetPages": [
+        64
+      ],
+      "bonus": [
+        "35"
+      ],
+      "repetition": [
+        "36"
+      ],
+      "allExercises": [
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36"
+      ],
+      "homework": [
+        "30",
+        "31",
+        "32",
+        "33",
+        "34"
+      ],
+      "openingStatus": "28 retrieves minimum price without government purchases. 29 uses known persons-to-hours multiplication but introduces loonsom wording; p.143 defines it explicitly."
+    },
+    {
+      "id": "4.3.5",
+      "title": "Gemengde opgaven: arbeidsmarkt",
+      "type": "mixed",
+      "manuscript": "edities/books34-v3/books/book-4/chapters/4.3/4.3.5 manuscript.md",
+      "manuscriptSha256": "a9c5196872388d35c8b7814b72430d752beacc203b58e8469f686dadcd14f5a0",
+      "bookPages": [
+        149,
+        154
+      ],
+      "chapterLocalPages": [
+        37,
+        42
+      ],
+      "startPage": 150,
+      "start": [
+        "37"
+      ],
+      "basis": [],
+      "independent": [],
+      "target": "40",
+      "targetSourceAndQuestionPages": [
+        152,
+        153
+      ],
+      "answerTargetPages": [
+        67
+      ],
+      "bonus": [
+        "41"
+      ],
+      "repetition": [],
+      "allExercises": [
+        "37",
+        "38",
+        "39",
+        "40",
+        "41"
+      ],
+      "homework": [
+        "37",
+        "38",
+        "39",
+        "40",
+        "41"
+      ],
+      "openingStatus": "Mixed retrieval; not the former collective-bargaining policy lesson."
+    }
+  ]
+}

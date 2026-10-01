@@ -1,0 +1,128 @@
+{
+  "date": "2026-10-01",
+  "state": "COMPLETED_COLD_RETEST_FINAL_V5",
+  "verdict": "PASS",
+  "artifacts": {
+    "pptx": "C:\\wt\\ppt\\.book4\\review\\preview-retest-422-v5\\4.2.2 Prijsdiscriminatie â€“ presentatie.pptx",
+    "pdf": "C:\\wt\\ppt\\.book4\\review\\preview-retest-422-v5\\4.2.2 Prijsdiscriminatie â€“ presentatie.pdf",
+    "pptxSha256": "3503f74dfc70bec83865a1502fa14bd97908e7abe6d83cbe930040610712091c",
+    "pdfSha256": "d5001b44104097a0c4462ea5385a8dfc0debecfc113d6d57b7021c846f89b485",
+    "slides": 27
+  },
+  "scope": {
+    "allTextFullNotesRead": 27,
+    "nativePagesViewed": [
+      1,
+      6,
+      7,
+      8,
+      14,
+      17,
+      20,
+      21,
+      24,
+      27
+    ],
+    "pdfPagesViewed": [
+      8
+    ],
+    "fullVisualPass": false,
+    "authorContact": false,
+    "productionEdits": false
+  },
+  "findings": [
+    {
+      "id": "B4-RETEST-422-P2-PREVIEW",
+      "priority": "P2",
+      "status": "RESOLVED_AUTONOMOUS_AUTHOR_V5_BEFORE_HANDOFF",
+      "slides": [
+        6,
+        7,
+        8,
+        17,
+        20,
+        21
+      ],
+      "detail": "MK stroke passes through label on every graph; price guide crosses MO on8/21. Actual glyph contacts, reproduced in saved PDF8.",
+      "minimalFix": "Move owning label anchors off economic/guide lines, recheck repeats; preserve data.",
+      "resolution": "All ten changed native pages independently viewed; economic/guide-line collisions resolved. Frozen v5 hashes match completed Git handoff and root installed files."
+    }
+  ],
+  "content": {
+    "sourceTargetComplete": true,
+    "allMathRecomputed": true,
+    "printedPrior36_37_38Verified": true,
+    "prior421AndFollowing423Compatible": true,
+    "newStart11VisibleSupport": 63,
+    "start10Assessment": "Known total/cost operations in new two-stream context, concrete notes support; no missing prerequisite finding."
+  },
+  "mechanicalEvidence": "independent-retest-422-v5-mechanical.json",
+  "pending": [],
+  "historicalCandidateV2": {
+    "date": "2026-10-01",
+    "state": "CANDIDATE_V2_AUTHOR_ACTIVE",
+    "verdict": "CONTENT_PASS_VISUAL_REPAIR_REQUIRED_CANDIDATE_ONLY",
+    "artifacts": {
+      "pptx": "C:\\wt\\ppt\\.book4\\review\\preview-retest-422-v2\\4.2.2 Prijsdiscriminatie – presentatie.pptx",
+      "pdf": "C:\\wt\\ppt\\.book4\\review\\preview-retest-422-v2\\4.2.2 Prijsdiscriminatie – presentatie.pdf",
+      "pptxSha256": "5516b44d0a85e3304e6edf89414d781e84999706d8430af8a8e7e5976e41bf5c",
+      "pdfSha256": "36dd15b6ec69b9516f4763c9c287f2fa1732177a79810776bf8f6c379dc813e4",
+      "slides": 27
+    },
+    "scope": {
+      "allTextFullNotesRead": 27,
+      "nativePagesViewed": [
+        6,
+        7,
+        8,
+        17,
+        20,
+        21
+      ],
+      "nativeChartsViewed": 7,
+      "pdfPagesViewed": [
+        8
+      ],
+      "fullVisualPass": false,
+      "authorContact": false,
+      "productionEdits": false
+    },
+    "findings": [
+      {
+        "id": "B4-RETEST-422-P2-PREVIEW",
+        "priority": "P2",
+        "status": "CANDIDATE_ONLY_AT_V2",
+        "slides": [
+          6,
+          7,
+          8,
+          17,
+          20,
+          21
+        ],
+        "detail": "MK stroke passes through label on every graph; price guide crosses MO on8/21. Actual glyph contacts, reproduced in saved PDF8.",
+        "minimalFix": "Move owning label anchors off economic/guide lines, recheck repeats; preserve data."
+      }
+    ],
+    "content": {
+      "sourceTargetComplete": true,
+      "allMathRecomputed": true,
+      "printedPrior36_37_38Verified": true,
+      "prior421AndFollowing423Compatible": true,
+      "newStart11VisibleSupport": 63,
+      "start10Assessment": "Known total/cost operations in new two-stream context, concrete notes support; no missing prerequisite finding."
+    },
+    "mechanicalEvidence": "independent-retest-422-mechanical.json",
+    "pending": [
+      "Author final handoff",
+      "Changed-page and text/note/data delta review",
+      "Final exact hashes and Git source binding"
+    ]
+  },
+  "gitBindingEvidence": "independent-retest-422-git-bindings.json",
+  "finalSourceCommits": {
+    "platform": "cf241cf7be7d00ef7640ffb97d8d0fe7792a1dea",
+    "lessons": "b3901b222fec37e4c9c1cfa5591ca212a84d441b"
+  },
+  "unresolvedFindings": []
+}
