@@ -177,13 +177,3 @@ build-scripts/books/book2-signed-revision-pin.json -text
 build-scripts/books/books34-signed-revision-pin.json -text
 build-scripts/books/books34-followups-revision-pin.json -text
 references/data/procedure-visual/procedure-templates.json -text
-
-# Book 4 review records and reviewed repaired sources retain their exact bytes.
-# Treat CRLF as a line ending while retaining actual whitespace checks.
-reports/review-gates/classroom-presentations-book4-20261001/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
-build-scripts/content/book-4/presentation-421.manifest.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
-build-scripts/content/book-4/presentation-421.mjs -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
-build-scripts/content/book-4/presentation-423.mjs -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
-build-scripts/content/book-4/presentation-425.mjs -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
-build-scripts/content/book-4/presentation-432.mjs -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
-build-scripts/content/book-4/presentation-434.mjs -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

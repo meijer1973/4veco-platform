@@ -1,5 +1,5 @@
 {
-  "scope": "Original author verdicts, preview/rebuild chains and final exact-file reviews. Relative review/ and repairs/ paths are preserved below this report directory. Absolute paths identify the shared review host; final artifact paths and SHA-256 values are in final-artifacts.json. Native PNG hashes identify the inspected saved PowerPoint renders; raw runtime files remain outside Git.",
+  "scope": "Original author verdicts, preview/rebuild chains and final exact-file reviews. Relative review/ and repairs/ paths are preserved below this report directory. Absolute paths identify the shared review host; final artifact paths and SHA-256 values are in final-artifacts.json. Native PNG hashes identify the inspected saved PowerPoint renders; raw runtime files remain outside Git. Five linked crop images use the existing reports/sprints evidence area; two prose copies change relative image links only, as recorded in publicationTransports.",
   "files": {
     "review/411/later-finding.json": "02d795f4dbb745001333c650bf5a8625cc837344fcd4e2c740680a3b8e8cf904",
     "review/411/mechanical.json": "04bf50644683a38c7c9460911a922f81411b74b8a3e537855c91552dd13cdcff",
@@ -84,7 +84,7 @@
     "review/independent-chapter43-math.json": "a2cafc03376f8be549505fb708424cf6c87f39ed7ddbae36c29f0600ad94f21a",
     "review/independent-chapter43-mechanical.json": "be967c51938f4131b997ee467b477e98b6a8bfd81e7a5a6a6580d9172068f147",
     "review/independent-chapter43-review.json": "95d938918f08b0124700fc69e2938be688f3893132c93dcd843a76743ad2c229",
-    "review/independent-chapter43-review.md": "0151bbb2a2b51ad099dd5e83c8828d5a9830e15562767342e7057ae804279bd4",
+    "review/independent-chapter43-review.md": "f589e32d321d310609f10723d5125f878a923678cf13ebaed115f4c402d9780b",
     "review/independent-retest-411-checker-repair.json": "399b8004dc11c66e391f9bddcc35eeb31fc7b1f70c8d0908a059613d55407c7b",
     "review/independent-retest-411-git-bindings.json": "46b0837ed221446d9be925cf5e375b1726c631b69e7dc8ae4f2c8b5f8460ba0d",
     "review/independent-retest-411-review.json": "a25ddf24e6851b9f1c2cf79f9a572801ea6de42e22e6f122e0b2c4df17f938e3",
@@ -93,7 +93,7 @@
     "review/independent-retest-422-git-bindings.json": "d954d90a61991e82b7411fccc6cec484df057a22dab981c89e5dfc1bd808dc8c",
     "review/independent-retest-422-mechanical.json": "78be133240827fa64b74eab6270b5951706af3f43c1e711e1121811f057f0d4e",
     "review/independent-retest-422-review.json": "f8d71fa3a995f0b0ce86a6115d498b4955579693c72f8c29c5e6639111faab78",
-    "review/independent-retest-422-review.md": "2c5b03f7b294633fee1988fc2182ad5f2595d03f104e27e72748cdd49c782d75",
+    "review/independent-retest-422-review.md": "d2b120448ede0eabf547f7ba93bc6f09b25c915d1405eaf27d23bc510dd01d82",
     "review/independent-retest-422-v5-mechanical.json": "2f4ee194ad344851aee58fd5e96cf13428f1c7025c67b9dd4016ab3443df945d",
     "review/independent-series-final-binding.json": "d8fe64ecbac67a63efe0621105a2553e82434b7162663fecdc7515ee27d68c69",
     "review/independent-series-review.json": "f91a62ba41455f8bceccfd8dd3aa83967b916e1fa0aadf3446e1f9e875f0316c",
@@ -246,11 +246,54 @@
     "repairs/434-r1/final/pdf-native-comparison.json": "ecf1b68bf02869f83aa6bf24a8c4af74cb80042a4ae139bd723a611426cda471",
     "repairs/434-r1/final/workbooks.json": "68bfef236757e3c5e5c8f16bcc06386a0b826230e9f3b957aaae485e9438734c",
     "repairs/434-r1/root-review.json": "a7fe98fbac859c294fec6fa68d9584a30a7c682c176fee17259b75df02bdd02e",
-    "review/independent-434-v2-crop-9.png": "0f92813f7813378fa87a5f78a064525555a3ade98553f58c3813867aed52a128",
-    "review/independent-434-v2-crop-21.png": "d941aad50fb2ea8883211b8772e81a90ae6b54d44337dd3e9e2bc0917f78b084",
     "review/independent-chapter43-delta-checks.json": "1893c984863b5fd4648b841da1f9a2efc73a705c0de0c2aedb7f17cc4c96c628",
-    "review/independent-retest-422-v2-crop-6.png": "3a5d3a6b1ec4a610675fa05ff3901df359051613055c9d97c9121e7e7f4192d1",
-    "review/independent-retest-422-v2-crop-8.png": "3a2b2afe0838e8908332fbad2eb26730fc5e5bd2a114a233601ca7d22107a77b",
-    "review/independent-retest-422-v2-crop-21.png": "d94c13a21c8ce9f21e93b55c7ee1a63b719e7320dfe5e6147600c85f07f05ecf"
-  }
+    "../../sprints/classroom-presentations-book4-20261001/review/independent-434-v2-crop-9.png": "0f92813f7813378fa87a5f78a064525555a3ade98553f58c3813867aed52a128",
+    "../../sprints/classroom-presentations-book4-20261001/review/independent-434-v2-crop-21.png": "d941aad50fb2ea8883211b8772e81a90ae6b54d44337dd3e9e2bc0917f78b084",
+    "../../sprints/classroom-presentations-book4-20261001/review/independent-retest-422-v2-crop-6.png": "3a5d3a6b1ec4a610675fa05ff3901df359051613055c9d97c9121e7e7f4192d1",
+    "../../sprints/classroom-presentations-book4-20261001/review/independent-retest-422-v2-crop-8.png": "3a2b2afe0838e8908332fbad2eb26730fc5e5bd2a114a233601ca7d22107a77b",
+    "../../sprints/classroom-presentations-book4-20261001/review/independent-retest-422-v2-crop-21.png": "d94c13a21c8ce9f21e93b55c7ee1a63b719e7320dfe5e6147600c85f07f05ecf"
+  },
+  "publicationTransports": [
+    {
+      "path": "review/independent-chapter43-review.md",
+      "originalSha256": "0151bbb2a2b51ad099dd5e83c8828d5a9830e15562767342e7057ae804279bd4",
+      "publishedSha256": "f589e32d321d310609f10723d5125f878a923678cf13ebaed115f4c402d9780b",
+      "change": "Only relative links to unchanged review crops relocated to the existing image-evidence area. All other bytes unchanged; private original retained.",
+      "links": [
+        {
+          "oldLink": "independent-434-v2-crop-9.png",
+          "newLink": "../../../sprints/classroom-presentations-book4-20261001/review/independent-434-v2-crop-9.png",
+          "sha256": "0f92813f7813378fa87a5f78a064525555a3ade98553f58c3813867aed52a128"
+        },
+        {
+          "oldLink": "independent-434-v2-crop-21.png",
+          "newLink": "../../../sprints/classroom-presentations-book4-20261001/review/independent-434-v2-crop-21.png",
+          "sha256": "d941aad50fb2ea8883211b8772e81a90ae6b54d44337dd3e9e2bc0917f78b084"
+        }
+      ]
+    },
+    {
+      "path": "review/independent-retest-422-review.md",
+      "originalSha256": "2c5b03f7b294633fee1988fc2182ad5f2595d03f104e27e72748cdd49c782d75",
+      "publishedSha256": "d2b120448ede0eabf547f7ba93bc6f09b25c915d1405eaf27d23bc510dd01d82",
+      "change": "Only relative links to unchanged review crops relocated to the existing image-evidence area. All other bytes unchanged; private original retained.",
+      "links": [
+        {
+          "oldLink": "independent-retest-422-v2-crop-6.png",
+          "newLink": "../../../sprints/classroom-presentations-book4-20261001/review/independent-retest-422-v2-crop-6.png",
+          "sha256": "3a5d3a6b1ec4a610675fa05ff3901df359051613055c9d97c9121e7e7f4192d1"
+        },
+        {
+          "oldLink": "independent-retest-422-v2-crop-8.png",
+          "newLink": "../../../sprints/classroom-presentations-book4-20261001/review/independent-retest-422-v2-crop-8.png",
+          "sha256": "3a2b2afe0838e8908332fbad2eb26730fc5e5bd2a114a233601ca7d22107a77b"
+        },
+        {
+          "oldLink": "independent-retest-422-v2-crop-21.png",
+          "newLink": "../../../sprints/classroom-presentations-book4-20261001/review/independent-retest-422-v2-crop-21.png",
+          "sha256": "d94c13a21c8ce9f21e93b55c7ee1a63b719e7320dfe5e6147600c85f07f05ecf"
+        }
+      ]
+    }
+  ]
 }
