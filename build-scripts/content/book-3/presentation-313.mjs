@@ -56,6 +56,9 @@ function graph(s,m,{shift=false,newPoint=false,oldPoint=false,area=null}={}){
  ss.push(series('V',[0,m.d/m.b],[m.d,0],C.blue,4,'V'));
  ss.push(series('A',[0,m.xmax*.90],[m.a,m.a+m.k*m.xmax*.90],C.green,4,'A'));
  if(shift)ss.push(series('A − s',[0,m.xmax*.90],[m.a-m.s,m.a-m.s+m.k*m.xmax*.90],C.orange,4,'A − s'));
+ // At a common buyer price, the subsidy increases quantity supplied. Use the
+ // actual supply equations for an editable horizontal arrow and its head.
+ if(shift&&!newPoint){const price=10,from=(price-m.a)/m.k,to=(price-m.a+m.s)/m.k;ss.push(series('Verschuiving bij dezelfde kopersprijs',[from,to],[price,price],C.muted,2.5));ss.push(series('Pijlpunt verschuiving',[to-4,to,to-4],[price+.4,price,price-.4],C.muted,2.5));}
  const point=(q,pr,name,color)=>{ss.push({...series(name,[q],[pr],color,0),marker:{symbol:'circle',size:9}});};
  if(oldPoint){ss.push(series('Oude hulplijnen',[0,m.q0,m.q0],[m.p0,m.p0,0],C.muted,1.3));point(m.q0,m.p0,'Vrij evenwicht',C.ink);}
  if(newPoint){ss.push(series('Pc hulplijn',[0,m.q,m.q],[m.pc,m.pc,0],C.muted,1.4));ss.push(series('Pp hulplijn',[0,m.q],[m.pp,m.pp],C.muted,1.4));ss.push(series('Subsidiewig',[m.q,m.q],[m.pc,m.pp],C.orange,5));point(m.q,m.pc,'Pc',C.blue);point(m.q,m.pp,'Pp',C.green);}
@@ -91,7 +94,7 @@ overview('Startopdracht',2);
 }
 {
  const s=slide('A − s ligt € 6 onder A',true);graph(s,E,{shift:true});aside(s,'Twee aanbodlijnen','A: Pp = 8 + 0,10Q\n\nA − s:\nPc = 2 + 0,10Q','V blijft gelijk');
- notes(s,'24','Construeer twee punten van A−s: bij Q=0 is Pc=2, bij Q=100 is Pc=12. De helling blijft 0,10. Vergelijk bij dezelfde hoeveelheid met A: steeds zes euro lager. Het snijpunt van V met A−s gaat de nieuwe verkoop bepalen.','Waar begint A − s op de prijsas?','Lees Pp straks op de oorspronkelijke A af, niet op A − s.','Bereken eerst de nieuwe hoeveelheid.',true);
+ notes(s,'24','Construeer twee punten van A−s: bij Q=0 is Pc=2, bij Q=100 is Pc=12. De helling blijft 0,10. De horizontale pijl vergelijkt bij dezelfde kopersprijs van € 10: op A zijn dat 20 controles en op A−s 80 controles. Dit is een andere vergelijking dan de verticale subsidiewig bij dezelfde Q. Vergelijk bij dezelfde hoeveelheid met A: steeds zes euro lager. Het snijpunt van V met A−s gaat de nieuwe verkoop bepalen.','Waar begint A − s op de prijsas?','Lees Pp straks op de oorspronkelijke A af, niet op A − s.','Bereken eerst de nieuwe hoeveelheid.',true);
 }
 {
  const s=slide('De nieuwe hoeveelheid en beide prijzen',true);rows(s,['32 − 0,20Q = 2 + 0,10Q','30 = 0,30Q       Qsub = 100 controles per week','Pc = 32 − 0,20 × 100 = € 12','Pp = 8 + 0,10 × 100 = € 18'],{y:225,gap:126,size:41});
