@@ -1,0 +1,188 @@
+{
+  "paragraph": "4.2.1",
+  "title": "Welvaartseffecten van monopolie",
+  "manuscriptHeading": "Meer winst. Ook meer welvaart?",
+  "type": "theory",
+  "edition": "books34-v3",
+  "lessonCommit": "e734532a42b27732ac25ce990fc9448b12309d28",
+  "platformBaseline": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+  "sources": [
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.1 manuscript.md",
+      "sha256": "2761c18bb26b7e62d0436d623f388371eb1a4bbbe1f1a57d8170d16a45810305"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/Antwoorden.md",
+      "sha256": "b77880f5e0c3e9252002c502b1cd101d4181773fa9968ea37d63e3d04cdf80f9"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/Docenteninformatie.md",
+      "sha256": "b7fed5653f6f8677eeeab66d84fc80f55d11455b84243f80d3f3a6e1d651a2ed"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/_assets/421_target.svg",
+      "sha256": "6c1b8a1588fc62d8af21d389d7fb90d05b275ed355baa838a49e2258b3e8879f"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/_assets/421_answer7.svg",
+      "sha256": "62af647a2ef6b4a0aa19dc8aacde9d58bebf299a3f52086566f03cb40035246d"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/4.1.4 manuscript.md",
+      "sha256": "65dd2923fd9c6544fce1e1a26d30969bf34abc4f0bd9bd8ad85cd3198db752b0"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+      "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+    }
+  ],
+  "assignment": {
+    "start": [
+      1,
+      2
+    ],
+    "basis": [
+      3,
+      4
+    ],
+    "independent": [
+      5,
+      6
+    ],
+    "target": 7,
+    "homework": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "instruction": "Maken en nakijken",
+    "extra": [
+      8,
+      9
+    ]
+  },
+  "printedPages": {
+    "theory": [
+      55,
+      56,
+      57,
+      58
+    ],
+    "start": 59,
+    "basis": [
+      59,
+      60
+    ],
+    "independent": 60,
+    "target": 61,
+    "extra": 62,
+    "verification": "Read printed footers of complete book; physical indices 55–61 coincide with printed pages. Chapter-local 7 and 9 are not book pages."
+  },
+  "goals": [
+    "Compare monopoly and efficient quantities and prices with the same demand and costs",
+    "Calculate and shade CS, PS and TS; distinguish PS from profit",
+    "Distinguish transfers, forgone transactions and distribution judgments"
+  ],
+  "startSupport": {
+    "exercise": 2,
+    "status": "supported exploration",
+    "pages": [
+      55,
+      56,
+      57
+    ],
+    "return": "After instruction, revisit exercise 2 before basis exercises; answer only in teacher notes."
+  },
+  "prerequisites": [
+    {
+      "operations": [
+        "TO=P×q, derivative MO and MK",
+        "MO=MK, direction and capacity checks",
+        "P from demand, profit TO−TK"
+      ],
+      "evidence": "4.1.4 manuscript, teaching sections p. 32–36 including rising MK worked example Coating Mira",
+      "refresh": "Slides 4–6 and 10, own example"
+    },
+    {
+      "operations": [
+        "q of single firm becomes Q of entire monopoly market",
+        "hold demand, cost, quality, TCK and external-effect assumptions fixed"
+      ],
+      "evidence": "4.2.1 theory p.55; 4.1.4 one-price assumption p.31",
+      "teaching": "Slides 2–4 and notes"
+    },
+    {
+      "operations": [
+        "Efficient P=MK comparison",
+        "CS triangular region",
+        "PS trapezium and rectangle+triangle",
+        "TS difference and loss triangle",
+        "transfer and forgone buyer/seller benefit",
+        "PS minus fixed cost",
+        "change table and fairness limits"
+      ],
+      "evidence": "4.2.1 teaching p.55–58; these are refreshed or explicitly taught here, not assumed mastered from start 2",
+      "teaching": "Slides 3, 7–16; actual target discussion slides 22–30"
+    }
+  ],
+  "teachingExample": {
+    "authored": true,
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "context": "Keramiekoven",
+    "demand": "P=96−Q",
+    "cost": "TK=144+24Q+0.5Q²",
+    "capacity": 60,
+    "quantityUnit": "bakbeurten per week",
+    "priceUnit": "euro per bakbeurt",
+    "assumptions": [
+      "one price per situation",
+      "same demand/cost/quality",
+      "fixed cost unavoidable in this week",
+      "no external effects"
+    ],
+    "expected": {
+      "qm": 24,
+      "pm": 72,
+      "qe": 36,
+      "pe": 60,
+      "csMonopoly": 288,
+      "psMonopoly": 864,
+      "tsMonopoly": 1152,
+      "profitMonopoly": 720,
+      "csEfficient": 648,
+      "psEfficient": 648,
+      "tsEfficient": 1296,
+      "transfer": 288,
+      "loss": 144
+    }
+  },
+  "target": {
+    "exercise": 7,
+    "context": "VR-studio",
+    "subquestions": [
+      "7a",
+      "7b",
+      "7c",
+      "7d",
+      "7e"
+    ],
+    "questionsBeforeAnswers": true,
+    "expected": {
+      "qm": 40,
+      "pm": 60,
+      "qe": 60,
+      "pe": 50,
+      "csMonopoly": 400,
+      "psMonopoly": 1200,
+      "tsMonopoly": 1600,
+      "profitMonopoly": 1000,
+      "tsEfficient": 1800,
+      "transfer": 400,
+      "loss": 200
+    }
+  },
+  "timing": "Teacher guidance proposes two lessons of 55 minutes; no measured fit or mastery claim. Full route can continue as homework.",
+  "scope": "Scoped Part B PPTX and PDF, not complete companion; sealed textbook unchanged."
+}
