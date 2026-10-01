@@ -162,6 +162,8 @@ if __name__=='__main__':
     result['source_checks']=verify_sources(args.lesson_root)
     from book2_print_compatibility import verify as verify_compatibility
     result['print_and_presentation_compatibility']=verify_compatibility(args.lesson_root)
+    from book2_presentation_checks import verify as verify_presentations
+    result['presentation_successor']=verify_presentations(args.lesson_root)
     text=json.dumps(result,ensure_ascii=False,indent=2)+'\n'
     if args.report:args.report.write_text(text,encoding='utf8',newline='\n')
     print(text)

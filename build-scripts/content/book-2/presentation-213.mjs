@@ -64,18 +64,18 @@ function overview(phase,active){
  text(s,'Winst, MK en MO berekenen.\nMK-patronen vergelijken.\nGemiddeld en marginaal uitleggen.',972,244,565,122,31,{name:'overview-goals'});
  rule(s,972,374,568);
  text(s,'Startopdracht',972,403,565,45,35,{bold:true,color:active===2?C.blue:C.ink});
- text(s,'Pagina 23 · Opgaven 1 en 2\n2: verkennen, theorie p. 19–20',972,459,565,95,30,{bold:active===2,name:'overview-start'});
+ text(s,'Pagina 24 · Opgaven 1 en 2\n2: verkennen, theorie p. 19–20',972,459,565,95,30,{bold:active===2,name:'overview-start'});
  rule(s,972,570,568);
  text(s,'Huiswerk',972,598,565,45,35,{bold:true,color:active===7?C.blue:C.ink});
  text(s,`§${facts.paragraph}\nBasis: ${facts.assignment.basis.join(' en ')}\nZelfstandig: ${facts.assignment.independent.join(' en ')}\nDoelopgave: ${facts.assignment.target}\n${facts.assignment.homeworkInstruction}`,972,650,565,184,30,{bold:active===7,name:'overview-homework'});
- notes(s,'23–26',(`Laat het overzicht staan tijdens ${phase.toLowerCase()}. Start 1–2: pagina 23. Basis 3–4: pagina 23–24. Zelfstandig 5–6: pagina 24–25. Doel 7: pagina 26. Huiswerk 3, 4, 5, 6 en 7 maken en nakijken. Denkertje 8 en herhaling 9–10 zijn extra. De volledige route hoeft niet binnen één les af; plan vervolgwerktijd.` + "\n\nStart en terugblik: Opgave 1 gebruikt TK uit §2.1.1, dia 4, en TO en winst uit §2.1.2, dia 3–4. MK en delen door de verandering in Q zijn nieuw. Lees bij opgave 2 de definitie en tabelstappen op p. 19–20. Laat leerlingen bij deze verkenning aanwijzen welke uitleg zij gebruiken en hun twijfel noteren. Verwacht de nieuwe bewerking nog niet zonder steun. Bij terugkeer naar dit overzicht vóór het basiswerk: laat leerlingen opgave 2 opnieuw proberen na de uitleg, bespreek hun redenering en geef zo nodig extra steun. Dit is een verkennende start, geen toets van al beheerste nieuwe leerstof."),active===2?'Welke eerdere kennis over kosten en winst heb je nodig?':'Welke berekening of uitleg vraagt nog aandacht?','De MK-kolom beschrijft de stap vanaf de vorige rij. Gebruik de gedrukte boekpagina, niet de PDF-teller.',active===7?'Laat leerlingen het huiswerk noteren.':'Ga door naar de volgende lesfase zodra de klas eraan toe is.');
+ notes(s,'24–27',(`Laat het overzicht staan tijdens ${phase.toLowerCase()}. Start 1–2: pagina 24. Basis 3–4: pagina 24–25. Zelfstandig 5–6: pagina 25–26. Doel 7: pagina 27. Huiswerk 3, 4, 5, 6 en 7 maken en nakijken. Denkertje 8 en herhaling 9–10 zijn extra. De volledige route hoeft niet binnen één les af; plan vervolgwerktijd.` + "\n\nStart en terugblik: Opgave 1 gebruikt TK uit §2.1.1, dia 4, en TO en winst uit §2.1.2, dia 3–4. MK en delen door de verandering in Q zijn nieuw. Lees bij opgave 2 de definitie en tabelstappen op p. 19–20. Laat leerlingen bij deze verkenning aanwijzen welke uitleg zij gebruiken en hun twijfel noteren. Verwacht de nieuwe bewerking nog niet zonder steun. Bij terugkeer naar dit overzicht vóór het basiswerk: laat leerlingen opgave 2 opnieuw proberen na de uitleg, bespreek hun redenering en geef zo nodig extra steun. Dit is een verkennende start, geen toets van al beheerste nieuwe leerstof."),active===2?'Welke eerdere kennis over kosten en winst heb je nodig?':'Welke berekening of uitleg vraagt nog aandacht?','De MK-kolom beschrijft de stap vanaf de vorige rij. Gebruik de gedrukte boekpagina, niet de PDF-teller.',active===7?'Laat leerlingen het huiswerk noteren.':'Ga door naar de volgende lesfase zodra de klas eraan toe is.');
 }
 overview('Startopdracht',2);
 {
  const s=slide('Wat kun je na deze les?');
  const rows=[['Berekenen','Winst binnen één rij; MK en MO tussen twee rijen.'],['Vergelijken','Constante en stijgende MK herkennen; constante MO verklaren.'],['Uitleggen','De hele tabelstap en de eenheid noemen; gemiddeld van marginaal onderscheiden.']];
  rows.forEach((r,i)=>{let y=215+i*194;text(s,r[0],60,y,445,65,41,{bold:true,color:C.blue});text(s,r[1],560,y,975,125,38);if(i<2)rule(s,60,y+152,1480);});
- notes(s,'19–22','Koppel de drie doelen aan de tabelopgaven. Een ondernemer moet weten wat een grotere productie aan extra kosten en opbrengst betekent. We rekenen met verschillen, zonder afgeleiden en zonder een winstmaximum te bepalen.','Wat is het verschil tussen alle kosten en de kosten die erbij komen?','Marginaal betekent niet gemiddeld over alle producten.','Introduceer eerst de twee marginale begrippen.');
+ notes(s,'19–23','Koppel de drie doelen aan de tabelopgaven. Een ondernemer moet weten wat een grotere productie aan extra kosten en opbrengst betekent. We rekenen met verschillen, zonder afgeleiden en zonder een winstmaximum te bepalen.','Wat is het verschil tussen alle kosten en de kosten die erbij komen?','Marginaal betekent niet gemiddeld over alle producten.','Introduceer eerst de twee marginale begrippen.');
 }
 {
  const s=slide('Marginaal: het bedrag per extra product');
@@ -131,14 +131,14 @@ overview('Startopdracht',2);
  text(s,'Q: tegels per week. Capaciteit: 6. Alle tegels worden verkocht.',60,335,1480,76,34);
  table(s,[['Q (tegels per week)','TK (€ per week)','TO (€ per week)'],['0','32','0'],['2','40','52'],['4','64','104'],['6','104','156']],60,431,1480,300,[490,495,495],33);
  text(s,'Bij Q = 4: TK = 32 + 2 × 4² = 32 + 32 = € 64',60,767,1480,65,35,{bold:true,color:C.orange});
- notes(s,'21–22','Deze werkplaats maakt reliëftegels. Bij meer productie is steeds meer betaald werk nodig per extra tegel. De vaste werkplaatskosten blijven 32 euro per week. Kwadrateer eerst Q, vermenigvuldig daarna met 2 en tel 32 op.','Waarom is 2 × 4² gelijk aan 32 en niet aan 64?','Q² is Q × Q. De constante kosten blijven hier gelijk; dat sluit stijgende marginale kosten niet uit.','Vergelijk de even grote groepen extra tegels.','Studio Reliëf; TK = 32 + 2Q², TO = 26Q, Q = 0, 2, 4, 6');
+ notes(s,'21, 23','Deze werkplaats maakt reliëftegels. Bij meer productie is steeds meer betaald werk nodig per extra tegel. De vaste werkplaatskosten blijven 32 euro per week. Kwadrateer eerst Q, vermenigvuldig daarna met 2 en tel 32 op.','Waarom is 2 × 4² gelijk aan 32 en niet aan 64?','Q² is Q × Q. De constante kosten blijven hier gelijk; dat sluit stijgende marginale kosten niet uit.','Vergelijk de even grote groepen extra tegels.','Studio Reliëf; TK = 32 + 2Q², TO = 26Q, Q = 0, 2, 4, 6');
 }
 {
  const s=slide('Even grote stappen · Stijgende MK');exampleLabel(s,'Studio Reliëf');
  table(s,[['Stap (tegels)','MK = ΔTK / ΔQ','€ per extra tegel'],['0 → 2','(40 − 32) / (2 − 0)','8 / 2 = 4'],['2 → 4','(64 − 40) / (4 − 2)','24 / 2 = 12'],['4 → 6','(104 − 64) / (6 − 4)','40 / 2 = 20']],60,245,1480,340,[370,690,420],35);
  text(s,'MK: € 4 → € 12 → € 20 per extra tegel',60,624,1480,78,45,{bold:true,color:C.orange});
  text(s,'MO: steeds 52 / 2 = € 26 per extra tegel',60,746,1480,78,41,{bold:true,color:C.blue});
- notes(s,'21–22','De groepen hebben allemaal twee tegels. Hun extra kosten zijn 8, 24 en 40 euro: steeds meer per extra tegel. MO blijft 26 door de vaste verkoopprijs. De vaste 32 euro valt bij elke aftrekking weg. De bedragen 4, 12 en 20 zijn gemiddelden over telkens twee extra tegels.','Waarom stijgt MK terwijl de werkplaatskosten gelijk blijven?','Het zijn niet de afzonderlijke kosten van alleen tegel twee, vier of zes.','Vergelijk de laatste marginale uitkomst met het gemiddelde van alle tegels.','Studio Reliëf');
+ notes(s,'21, 23','De groepen hebben allemaal twee tegels. Hun extra kosten zijn 8, 24 en 40 euro: steeds meer per extra tegel. MO blijft 26 door de vaste verkoopprijs. De vaste 32 euro valt bij elke aftrekking weg. De bedragen 4, 12 en 20 zijn gemiddelden over telkens twee extra tegels.','Waarom stijgt MK terwijl de werkplaatskosten gelijk blijven?','Het zijn niet de afzonderlijke kosten van alleen tegel twee, vier of zes.','Vergelijk de laatste marginale uitkomst met het gemiddelde van alle tegels.','Studio Reliëf');
 }
 {
  const s=slide('GTK en MK · Alle tegels of extra tegels');exampleLabel(s,'Studio Reliëf');
@@ -158,7 +158,7 @@ function quickCheck(reveal){
 }
 quickCheck(false);quickCheck(true);
 overview('Zelfstandig werken',4);
-const targetFooter='§2.1.3 · Opgave 7 · Linea en Curva · Boekpagina 26';
+const targetFooter='§2.1.3 · Opgave 7 · Linea en Curva · Boekpagina 27';
 const targetHeader=['Q','TK (€)','TO (€)','Winst (€)','MK (€ per\nextra product)','MO (€ per\nextra product)'];
 const widths=[130,200,200,270,340,340];
 const lineaBlank=[targetHeader,['0','200','0','…','—','—'],['10','230','80','…','…','…'],['20','260','160','…','…','…'],['30','290','240','…','…','…']];
@@ -170,7 +170,7 @@ const curvaFull=[targetHeader,['0','100','0','−100','—','—'],['5','125','1
  table(s,[['Onderneming','Kosten en opbrengsten','Capaciteit'],['Linea','TK = 200 + 3Q\nTO = 8Q','30 producten per week'],['Curva','TK = 100 + Q²\n€ 30 per product; TO = 30Q','15 producten per week']],60,218,1480,305,[315,720,445],35);
  text(s,'Q: producten per week. Totale bedragen: euro per week.',60,566,1480,63,35,{bold:true});
  text(s,'Bereken MK en MO per extra product over iedere tabelstap.\nZet de uitkomst bij de laatste rij van die stap.\nGebruik geen afgeleiden.',60,677,1480,153,37);
- notes(s,'26','Begin deze bespreking nadat leerlingen de doelopgave hebben geprobeerd. Dit zijn de functies, prijs, capaciteiten, periode en algemene opdracht uit opgave 7. De volgende dia’s tonen beide invultabellen en alle vijf deelvragen voordat antwoorden worden onthuld.','Welke twee stappen zijn bij Linea en Curva verschillend van grootte?','Curva en Linea hebben verschillende capaciteiten. Trek de tabellen niet verder door.','Toon de oorspronkelijke invultabel van Linea.');
+ notes(s,'27','Begin deze bespreking nadat leerlingen de doelopgave hebben geprobeerd. Dit zijn de functies, prijs, capaciteiten, periode en algemene opdracht uit opgave 7. De volgende dia’s tonen beide invultabellen en alle vijf deelvragen voordat antwoorden worden onthuld.','Welke twee stappen zijn bij Linea en Curva verschillend van grootte?','Curva en Linea hebben verschillende capaciteiten. Trek de tabellen niet verder door.','Toon de oorspronkelijke invultabel van Linea.');
 }
 for(const [name,data] of [['Linea',lineaBlank],['Curva',curvaBlank]]){
  const s=slide(`Opgave 7 · Invultabel ${name}`,targetFooter);
@@ -178,7 +178,7 @@ for(const [name,data] of [['Linea',lineaBlank],['Curva',curvaBlank]]){
  text(s,'Q: producten per week · TK, TO en winst: euro per week',60,295,1480,58,33);
  table(s,data,60,381,1480,363,widths,32);
  text(s,'MK en MO: per extra product, vanaf de vorige tabelrij.',60,787,1480,52,34,{bold:true});
- notes(s,'26',`Behoud alle gegeven waarden en lege cellen uit de ${name}-tabel. ${name==='Curva'?'De winstbedragen zijn hier al in de opgave gegeven.':'De winstkolom moet nog worden ingevuld.'} Toon nog geen uitwerking.`, 'Welke twee rijen gebruik je voor de eerste marginale berekening?', 'Een streepje bij Q = 0 betekent geen eerdere tabelrij, niet nul.', name==='Linea'?'Toon ook de invultabel van Curva.':'Toon eerst alle deelvragen.');
+ notes(s,'27',`Behoud alle gegeven waarden en lege cellen uit de ${name}-tabel. ${name==='Curva'?'De winstbedragen zijn hier al in de opgave gegeven.':'De winstkolom moet nog worden ingevuld.'} Toon nog geen uitwerking.`, 'Welke twee rijen gebruik je voor de eerste marginale berekening?', 'Een streepje bij Q = 0 betekent geen eerdere tabelrij, niet nul.', name==='Linea'?'Toon ook de invultabel van Curva.':'Toon eerst alle deelvragen.');
 }
 {
  const s=slide('Opgave 7 · Deelvragen a, b en c',targetFooter);
@@ -187,21 +187,21 @@ for(const [name,data] of [['Linea',lineaBlank],['Curva',curvaBlank]]){
  text(s,'b) Bereken voor Linea MK en MO over de eerste stap. Laat teller en noemer zien. Vul de MK- en MO-kolommen verder in bij Q = 10, 20 en 30.',60,387,1480,206,41);
  rule(s,60,638,1480);
  text(s,'c) Leg uit waarom MO bij Linea constant is.',60,702,1480,111,43);
- notes(s,'26','Deze drie vragen horen bij Linea. Behoud de vraag naar de teller en noemer en de economische verklaring. Wacht nog met de uitwerking totdat ook d en e getoond zijn.','Wat moet je naast de ingevulde cellen laten zien?','Alleen een eindgetal is geen volledige berekening of verklaring.','Toon ook de Curva-vraag en de vergelijking.');
+ notes(s,'27','Deze drie vragen horen bij Linea. Behoud de vraag naar de teller en noemer en de economische verklaring. Wacht nog met de uitwerking totdat ook d en e getoond zijn.','Wat moet je naast de ingevulde cellen laten zien?','Alleen een eindgetal is geen volledige berekening of verklaring.','Toon ook de Curva-vraag en de vergelijking.');
 }
 {
  const s=slide('Opgave 7 · Deelvragen d en e',targetFooter);
  text(s,'d) Bereken voor Curva MK over de drie stappen en MO over de eerste stap. Vul alle lege MK- en MO-cellen in bij Q = 5, 10 en 15.',60,240,1480,195,42);
  rule(s,60,491,1480);
  text(s,'e) Vergelijk de MK-patronen. Leg uit wat MK en MO per extra product binnen een tabelstap betekenen. Trek geen conclusie over de hoeveelheid met maximale winst.',60,550,1480,240,42);
- notes(s,'26','Nu zijn de volledige context, beide tabellen en alle vijf deelvragen beschikbaar. d vraagt alle drie MK-berekeningen en de eerste MO-berekening; e vraagt patronen én betekenis. De opdracht sluit een conclusie over het winstmaximum uit.','Welke twee dingen moet je bij e uitleggen?','Geen afgeleiden gebruiken en geen winstmaximum afleiden uit de tabel.','Begin de uitwerking met winst bij Linea.');
+ notes(s,'27','Nu zijn de volledige context, beide tabellen en alle vijf deelvragen beschikbaar. d vraagt alle drie MK-berekeningen en de eerste MO-berekening; e vraagt patronen én betekenis. De opdracht sluit een conclusie over het winstmaximum uit.','Welke twee dingen moet je bij e uitleggen?','Geen afgeleiden gebruiken en geen winstmaximum afleiden uit de tabel.','Begin de uitwerking met winst bij Linea.');
 }
 {
  const s=slide('Opgave 7a · Winst bij Linea',targetFooter);
  text(s,'Winst = TO − TK',60,203,1480,76,49,{bold:true,color:C.blue});
  table(s,[['Q (producten per week)','Berekening','Winst (€ per week)'],['0','0 − 200','−200'],['10','80 − 230','−150'],['20','160 − 260','−100'],['30','240 − 290','−50']],60,328,1480,365,[500,480,500],35);
  text(s,'In elke getoonde rij: TO < TK, dus verlies.',60,749,1480,81,43,{bold:true,color:C.orange});
- notes(s,'26','Gebruik de bedragen uit één rij. De winstbedragen zijn −200, −150, −100 en −50 euro per week. Bij nul productie zijn er toch 200 euro kosten. Bij dertig producten is het verlies nog 50 euro.','Waarom is het eerste winstbedrag niet nul?','Verlies schrijf je als negatieve winst of als positief verliesbedrag met het woord verlies.','Vergelijk de eerste twee rijen voor de marginale bedragen.');
+ notes(s,'27','Gebruik de bedragen uit één rij. De winstbedragen zijn −200, −150, −100 en −50 euro per week. Bij nul productie zijn er toch 200 euro kosten. Bij dertig producten is het verlies nog 50 euro.','Waarom is het eerste winstbedrag niet nul?','Verlies schrijf je als negatieve winst of als positief verliesbedrag met het woord verlies.','Vergelijk de eerste twee rijen voor de marginale bedragen.');
 }
 {
  const s=slide('Opgave 7b · Linea, stap 0 → 10',targetFooter);
@@ -212,7 +212,7 @@ for(const [name,data] of [['Linea',lineaBlank],['Curva',curvaBlank]]){
  rule(s,60,582,1480);
  text(s,'MO = ΔTO / ΔQ',60,620,1480,65,45,{bold:true,color:C.blue});
  text(s,'= (80 − 0) / (10 − 0) = € 8 per extra product',60,708,1480,105,42,{bold:true});
- notes(s,'26','Laat eerst de teller en noemer ontstaan uit dezelfde twee rijen. De tien extra producten kosten samen 30 euro en leveren samen 80 euro op. Noteer de marginale uitkomsten bij Q = 10. Controle: 10 × 3 = 30 en 10 × 8 = 80.','Waar komen 230, 200, 10 en 0 vandaan?','De 200 euro vaste kosten vallen weg bij het verschil, niet bij de totale winst.','Vul ook de volgende twee stappen in en verklaar MO.');
+ notes(s,'27','Laat eerst de teller en noemer ontstaan uit dezelfde twee rijen. De tien extra producten kosten samen 30 euro en leveren samen 80 euro op. Noteer de marginale uitkomsten bij Q = 10. Controle: 10 × 3 = 30 en 10 × 8 = 80.','Waar komen 230, 200, 10 en 0 vandaan?','De 200 euro vaste kosten vallen weg bij het verschil, niet bij de totale winst.','Vul ook de volgende twee stappen in en verklaar MO.');
 }
 {
  const s=slide('Opgave 7b–c · Linea volledig',targetFooter);
@@ -220,14 +220,14 @@ for(const [name,data] of [['Linea',lineaBlank],['Curva',curvaBlank]]){
  table(s,lineaFull,60,283,1480,357,widths,32);
  text(s,'Elke stap: MK = 30 / 10 = 3 en MO = 80 / 10 = 8',60,686,1480,64,37,{bold:true});
  text(s,'MO blijft € 8: ieder extra product wordt voor € 8 verkocht.',60,772,1480,66,36,{bold:true,color:C.blue});
- notes(s,'26','Stap 10 naar 20: MK = (260 − 230) / (20 − 10) = 3 en MO = (160 − 80) / 10 = 8. Stap 20 naar 30: MK = (290 − 260) / (30 − 20) = 3 en MO = (240 − 160) / 10 = 8. Alle bedragen zijn euro per extra product. Iedere verkochte eenheid voegt 8 euro toe aan TO omdat TO = 8Q.','Hoe verklaar je de constante MO zonder alleen naar de tabel te wijzen?','Een vaste verkoopprijs verklaart MO; constante kosten verklaren MO niet.','Bereken nu Curva met de eigen stapgrootte.');
+ notes(s,'27','Stap 10 naar 20: MK = (260 − 230) / (20 − 10) = 3 en MO = (160 − 80) / 10 = 8. Stap 20 naar 30: MK = (290 − 260) / (30 − 20) = 3 en MO = (240 − 160) / 10 = 8. Alle bedragen zijn euro per extra product. Iedere verkochte eenheid voegt 8 euro toe aan TO omdat TO = 8Q.','Hoe verklaar je de constante MO zonder alleen naar de tabel te wijzen?','Een vaste verkoopprijs verklaart MO; constante kosten verklaren MO niet.','Bereken nu Curva met de eigen stapgrootte.');
 }
 {
  const s=slide('Opgave 7d · Drie MK-berekeningen bij Curva',targetFooter);
  text(s,'MK = ΔTK / ΔQ · elke stap bevat 5 extra producten',60,199,1480,80,39,{bold:true,color:C.orange});
  table(s,[['Stap','Teller en noemer','MK (€ per extra product)'],['0 → 5','(125 − 100) / (5 − 0)','25 / 5 = 5'],['5 → 10','(200 − 125) / (10 − 5)','75 / 5 = 15'],['10 → 15','(325 − 200) / (15 − 10)','125 / 5 = 25']],60,328,1480,348,[300,700,480],34);
  text(s,'Extra kosten per groep: € 25 → € 75 → € 125',60,743,1480,81,43,{bold:true,color:C.orange});
- notes(s,'26','Iedere teller is een verschil van opeenvolgende TK-bedragen en iedere noemer is vijf. MK stijgt van 5 naar 15 naar 25 euro per extra product. Controleer door elke uitkomst met vijf te vermenigvuldigen; je krijgt de extra totale kosten terug.','Waarom delen we hier door vijf, terwijl Linea tien gebruikte?','De € 125 is de extra totale kosten van de laatste vijf producten, niet MK.','Bereken de extra opbrengst met dezelfde stapgrootte.');
+ notes(s,'27','Iedere teller is een verschil van opeenvolgende TK-bedragen en iedere noemer is vijf. MK stijgt van 5 naar 15 naar 25 euro per extra product. Controleer door elke uitkomst met vijf te vermenigvuldigen; je krijgt de extra totale kosten terug.','Waarom delen we hier door vijf, terwijl Linea tien gebruikte?','De € 125 is de extra totale kosten van de laatste vijf producten, niet MK.','Bereken de extra opbrengst met dezelfde stapgrootte.');
 }
 {
  const s=slide('Opgave 7d · MO bij Curva',targetFooter);
@@ -236,7 +236,7 @@ for(const [name,data] of [['Linea',lineaBlank],['Curva',curvaBlank]]){
  text(s,'= (150 − 0) / (5 − 0) = 150 / 5',60,448,1480,80,48);
  text(s,'= € 30 per extra product',60,552,1480,80,51,{bold:true,color:C.blue});
  text(s,'Ook in de volgende stappen: € 150 extra voor 5 extra producten.',60,686,1480,102,37);
- notes(s,'26','De eerste stap levert 150 euro extra opbrengst voor vijf producten. Curva verkoopt ieder product voor 30 euro. Bij de volgende stappen zijn de verschillen (300 − 150) / (10 − 5) en (450 − 300) / (15 − 10), beide 30.','Waarom groeit MO hier niet mee met MK?','Kosten en verkoopprijs hebben verschillende oorzaken. Een hogere MK verandert in deze opgave de prijs niet.','Plaats alle uitkomsten in Curva’s tabel.');
+ notes(s,'27','De eerste stap levert 150 euro extra opbrengst voor vijf producten. Curva verkoopt ieder product voor 30 euro. Bij de volgende stappen zijn de verschillen (300 − 150) / (10 − 5) en (450 − 300) / (15 − 10), beide 30.','Waarom groeit MO hier niet mee met MK?','Kosten en verkoopprijs hebben verschillende oorzaken. Een hogere MK verandert in deze opgave de prijs niet.','Plaats alle uitkomsten in Curva’s tabel.');
 }
 {
  const s=slide('Opgave 7d · Curva volledig',targetFooter);
@@ -244,7 +244,7 @@ for(const [name,data] of [['Linea',lineaBlank],['Curva',curvaBlank]]){
  table(s,curvaFull,60,285,1480,357,widths,32);
  text(s,'Bij Q = 15 staat de uitkomst van de stap 10 → 15.',60,692,1480,73,40,{bold:true});
  text(s,'Controle: 5 × € 25 = € 125 extra kosten in die stap.',60,777,1480,61,35,{bold:true,color:C.orange});
- notes(s,'26','Alle zes ontbrekende marginale cellen zijn nu ingevuld. De winstkolom was al gegeven en blijft gelijk. Lees de laatste MK-uitkomst als 25 euro per extra product gemiddeld over vijf extra producten.','Over welke producten gaat de € 25 precies?','Het is niet het gemiddelde van alle vijftien producten en niet alleen de kosten van product vijftien.','Vergelijk de patronen en benoem de betekenis.');
+ notes(s,'27','Alle zes ontbrekende marginale cellen zijn nu ingevuld. De winstkolom was al gegeven en blijft gelijk. Lees de laatste MK-uitkomst als 25 euro per extra product gemiddeld over vijf extra producten.','Over welke producten gaat de € 25 precies?','Het is niet het gemiddelde van alle vijftien producten en niet alleen de kosten van product vijftien.','Vergelijk de patronen en benoem de betekenis.');
 }
 {
  const s=slide('Opgave 7e · Patronen en betekenis',targetFooter);
@@ -252,7 +252,7 @@ for(const [name,data] of [['Linea',lineaBlank],['Curva',curvaBlank]]){
  text(s,'MK: extra totale kosten / extra producten',60,550,1480,74,43,{bold:true,color:C.orange});
  text(s,'MO: extra totale opbrengst / extra verkochte producten',60,654,1480,79,40,{bold:true,color:C.blue});
  text(s,'Beide uitkomsten beschrijven de hele genoemde tabelstap.',60,778,1480,60,36,{bold:true});
- notes(s,'26','Linea heeft constante MK, Curva stijgende MK. Een MK-uitkomst verdeelt de extra totale kosten over alle extra producten in de betreffende stap; MO doet hetzelfde met de extra opbrengst. De vaste prijzen verklaren de constante MO: 8 bij Linea en 30 bij Curva. Laat leerlingen hun antwoord controleren op berekening, eenheid, interval en verklaring. De opdracht vraagt geen winstmaximum; trek daar geen conclusie over.','Welke woorden mogen niet ontbreken bij een marginale uitkomst?','Per extra product binnen een stap is geen exact bedrag voor één afzonderlijk product en geen gemiddelde over de hele productie.','Keer terug naar de lesroute voor afsluiting en huiswerk.');
+ notes(s,'27','Linea heeft constante MK, Curva stijgende MK. Een MK-uitkomst verdeelt de extra totale kosten over alle extra producten in de betreffende stap; MO doet hetzelfde met de extra opbrengst. De vaste prijzen verklaren de constante MO: 8 bij Linea en 30 bij Curva. Laat leerlingen hun antwoord controleren op berekening, eenheid, interval en verklaring. De opdracht vraagt geen winstmaximum; trek daar geen conclusie over.','Welke woorden mogen niet ontbreken bij een marginale uitkomst?','Per extra product binnen een stap is geen exact bedrag voor één afzonderlijk product en geen gemiddelde over de hele productie.','Keer terug naar de lesroute voor afsluiting en huiswerk.');
 }
 overview('Afsluiting / huiswerk',7);
 

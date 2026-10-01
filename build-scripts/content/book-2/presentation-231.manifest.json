@@ -3,33 +3,33 @@
   "title": "Consumentensurplus",
   "type": "theory",
   "sourceEdition": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026",
-  "sourceCommit": "d53080f38ebbdbba319e6d9b89dcba86067a72be",
-  "platformBaselineCommit": "d561b3e283dc05e377cebffd80d082f05518ad23",
+  "sourceCommit": "a8940a7a79e22857a3e306a91fe923c48c63e716",
+  "platformBaselineCommit": "ac6f8e5320406aaf4906811b289ce98fcfa548c1",
   "sourceFiles": {
-    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md": "79abbe55782b3bd3a2ac38f14213654cef38a0111c93a27ab4d95d4394f2ad35",
-    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/2.3 Surplus en welvaart – antwoorden.md": "9f5ebbbf133c5d0d50a0d55251546e957207cc3867b1d843842b271780b9b116",
-    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/2.3 Docenteninformatie.md": "95fef222ef377353c0f3986319707fe85838276e2dd59947aa764c6102437d93",
-    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet.pdf": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493",
-    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet_Antwoorden.pdf": "7bf9f43e801592b3632063b0720ae38b8a1776831bfaa90703a8ae95e5329bc2",
-    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md": "c79150a148e39ad1609ad77712c0f26cc032a83a40106e4aa0096e8af1dbb07b",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md": "68876c1c0ac12530eac0d73df936f6ef6e27a6b2367b3a69439accc09e0668fb",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/2.3 Surplus en welvaart – antwoorden.md": "aa2b16cf1a27f136755805b345b5ad48588baacd06fd219133d6013423e22a51",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/2.3 Docenteninformatie.md": "6cd82958d06e3da05ed7e96c1d2bdf6bf3ba54149f0eea9362e6c9277bbcff97",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet.pdf": "23d0532a7804fb743f053608a814959c6f09c9259c27762b1dff5952556908d5",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet_Antwoorden.pdf": "c28c975799c8f68f78d2d20ea92512322a9ba305e1da1c124b4fbc739dd8f4e8",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md": "135327f9170110864cd3b849821db55c0be2d4a5838fcb69f7e6fc2083d71369",
     "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.md": "b38720605f513e42a37cb64ebf843fd27817c6f26dfc87cd327491cdc54ff42d",
     "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.md": "e4e2717d088b20c3cbfc9c7944311a0b0bfdcf75a492335da5c3b0d0c027e898",
     "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – presentatie.pptx": "c89759165a2ecf24fbfadcff12eeab5c3b1b96eee5821e8ecf099bb93b225c84"
   },
   "sourcePrintedPages": {
     "theory": [
-      72,
       73,
-      74
+      74,
+      75
     ],
-    "workedExample": 75,
-    "start": 76,
+    "workedExample": 76,
+    "start": 77,
     "basis": [
-      76,
-      77
+      77,
+      78
     ],
-    "independent": 78,
-    "target": 79
+    "independent": 79,
+    "target": 80
   },
   "pdfPhysicalPageOffset": 2,
   "assignment": {
@@ -69,8 +69,8 @@
     "Gezamenlijk voordeel uitleggen en onderscheiden van betaling en evenwicht"
   ],
   "startSupport": {
-    "1": "Retrieval: function substitution and intercepts (Book 1 §1.3.2); triangle area is mathematics prerequisite, not evidenced as previously taught economics. Overview offers p.74 as fallback. Refreshed fully in slides 6–11.",
-    "2": "Supported exploration of formal CS definition. Opening overview directs to p.72; identify maximum willingness versus actual payment. Return to start 1–2 after instruction on slide 15 before basis work. No opening worked answers."
+    "1": "Retrieval: function substitution and intercepts (Book 1 §1.3.2); triangle area is mathematics prerequisite, not evidenced as previously taught economics. Overview offers p.75 as fallback. Refreshed fully in slides 6–11.",
+    "2": "Supported exploration of formal CS definition. Opening overview directs to p.73; identify maximum willingness versus actual payment. Return to start 1–2 after instruction on slide 15 before basis work. No opening worked answers."
   },
   "teachingExamples": [
     {
@@ -137,25 +137,25 @@
       "operation": "Willingness to pay and purchase decision",
       "neededBy": "2, 3–8 interpretation",
       "earlierTeaching": "Book 1 §1.2.1 Theorie / Betalingsbereidheid, De koopbeslissing, Consumentensurplus (Tom tables)",
-      "lessonTeaching": "3–4 refresh and formalize; p.72–73"
+      "lessonTeaching": "3–4 refresh and formalize; p.73–74"
     },
     {
       "operation": "Solve Q with P given; calculate axis intercepts with opposite variable zero",
       "neededBy": "1a, 3a, 4a–b, 6a–b, 7a, 8a–b",
       "earlierTeaching": "Book 1 §1.3.2 Theorie / De vraaglijn en de aanbodlijn samen and Overschot en tekort; Qv as function of P",
-      "lessonTeaching": "6–9 explicitly teach solving inverse P(Q) form, intercepts, coordinate order and scaled axes; p.74–75"
+      "lessonTeaching": "6–9 explicitly teach solving inverse P(Q) form, intercepts, coordinate order and scaled axes; p.75–76"
     },
     {
       "operation": "Triangle area and euro units",
       "neededBy": "1b, 3b, 4c, 5, 6d, 7a, 8d",
       "earlierTeaching": "H3 teacher prerequisite guidance names triangle area; no verified earlier economics demonstration relied on",
-      "lessonTeaching": "10–11 refresh half of base × perpendicular height; height is intercept minus price; p.74–75"
+      "lessonTeaching": "10–11 refresh half of base × perpendicular height; height is intercept minus price; p.75–76"
     },
     {
       "operation": "Discrete sum to continuous area; allocation and actual quantity",
       "neededBy": "3–8 CS reasoning",
       "earlierTeaching": "Book 1 §1.2.1 discrete Tom table only; §2.2.1 preceding teaching concerns elasticity, not area CS",
-      "lessonTeaching": "4–5 explicit model reset, 10 hatched triangle; p.73"
+      "lessonTeaching": "4–5 explicit model reset, 10 hatched triangle; p.74"
     },
     {
       "operation": "Given price quantity versus computed equilibrium",
@@ -202,5 +202,11 @@
     25
   ],
   "timing": "No claim that full route fits a single lesson. Homework completes any unfinished work.",
-  "knownSourceConflicts": []
+  "knownSourceConflicts": [],
+  "paginationRevision": {
+    "revision": "book2-presentation-pagination-20261001",
+    "sourceCommit": "a8940a7a79e22857a3e306a91fe923c48c63e716",
+    "previousPlatformCommit": "ac6f8e5320406aaf4906811b289ce98fcfa548c1",
+    "scope": "Current printed page references and Qv/Qa notation; assignments, economic values, goals, teaching examples and timing preserved."
+  }
 }

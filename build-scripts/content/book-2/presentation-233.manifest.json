@@ -4,35 +4,35 @@
   "type": "theory",
   "sourceEdition": "chat-2026",
   "sourceEditionPath": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026",
-  "sourceCommit": "d53080f38ebbdbba319e6d9b89dcba86067a72be",
-  "platformBaseline": "d561b3e283dc05e377cebffd80d082f05518ad23",
+  "sourceCommit": "a8940a7a79e22857a3e306a91fe923c48c63e716",
+  "platformBaseline": "ac6f8e5320406aaf4906811b289ce98fcfa548c1",
   "sourceFiles": {
-    "bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md": "79abbe55782b3bd3a2ac38f14213654cef38a0111c93a27ab4d95d4394f2ad35",
-    "bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md": "77d485b2078bba0b3faffcb6d0e78d4ce8e55f4ab59de63d470c9214aff92745",
-    "bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md": "73f8bdb4f9ef2b7e7e997a7eef54657d9a2944bb8b65505fefbb5bf33e1bf69d",
-    "bronnen/H3/2.3 Docenteninformatie.md": "95fef222ef377353c0f3986319707fe85838276e2dd59947aa764c6102437d93",
-    "bronnen/H3/2.3 Surplus en welvaart – antwoorden.md": "9f5ebbbf133c5d0d50a0d55251546e957207cc3867b1d843842b271780b9b116",
-    "boek/Boek_2_Compleet.pdf": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493",
+    "bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md": "68876c1c0ac12530eac0d73df936f6ef6e27a6b2367b3a69439accc09e0668fb",
+    "bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md": "2a022bf9e118efd9ff9bda06b8e7b047c997f827462cb941191f2a5ff87e9b36",
+    "bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md": "e1f261c060f2bfcf1af515fbf73c4d760863e1a1ba6e2d8becb1f4164ecb344b",
+    "bronnen/H3/2.3 Docenteninformatie.md": "6cd82958d06e3da05ed7e96c1d2bdf6bf3ba54149f0eea9362e6c9277bbcff97",
+    "bronnen/H3/2.3 Surplus en welvaart – antwoorden.md": "aa2b16cf1a27f136755805b345b5ad48588baacd06fd219133d6013423e22a51",
+    "boek/Boek_2_Compleet.pdf": "23d0532a7804fb743f053608a814959c6f09c9259c27762b1dff5952556908d5",
     "bronnen/H3/_assets/2.3.3_ex_4.svg": "6c57b3ab0eb56de517319cf387e718231891fee0009161e44b1651d280ac78bf"
   },
   "sourcePrintedPages": {
     "theory": [
-      90,
       91,
       92,
       93,
       94,
-      95
+      95,
+      96
     ],
-    "start": 96,
+    "start": 97,
     "basis": [
-      96,
-      97
+      97,
+      98
     ],
-    "independent": 98,
+    "independent": 99,
     "target": [
-      99,
-      100
+      100,
+      101
     ],
     "verification": "Printed footers inspected in complete book. Physical PDF page = printed page + 2."
   },
@@ -69,50 +69,50 @@
     "Efficiëntie en eerlijkheid onderscheiden"
   ],
   "startSupport": {
-    "1": "Retrieval: §2.3.1 p. 73–75 continuous-line triangle; §2.3.2 p. 81–84 PS and CS+PS. Refresh in slides 2 and 4.",
-    "2": "New formal Pareto criterion: supported exploration with theory p. 93. Visible shared overview support and explicit return after instruction before practice."
+    "1": "Retrieval: §2.3.1 p. 74–76 continuous-line triangle; §2.3.2 p. 82–85 PS and CS+PS. Refresh in slides 2 and 4.",
+    "2": "New formal Pareto criterion: supported exploration with theory p. 94. Visible shared overview support and explicit return after instruction before practice."
   },
   "prerequisiteTrace": [
     {
-      "operation": "Substitute into linear functions and solve for Qd/Qs",
+      "operation": "Substitute into linear functions and solve for Qv/Qa",
       "neededBy": "3a,4a,5b,6b",
-      "anchor": "§2.3.1 p. 74–75 solves P for Q; §2.3.2 p. 81 uses supply as MK",
+      "anchor": "§2.3.1 p. 75–76 solves P for Q; §2.3.2 p. 82 uses supply as MK",
       "lessonSupport": "Authored example explicitly substitutes each function and compares both desired quantities with the booking limit."
     },
     {
       "operation": "Continuous areas, CS above price; PS below price and above MK; TS sum",
       "neededBy": "1,3b,4b,5c,6c",
-      "anchor": "§2.3.1 p. 73 distinguishes discrete buyers from continuous line; p.74 triangle; §2.3.2 p.81–84 PS/TS",
+      "anchor": "§2.3.1 p. 74 distinguishes discrete buyers from continuous line; p.75 triangle; §2.3.2 p.82–85 PS/TS",
       "lessonSupport": "Brief free-equilibrium refresh and explicit rectangle plus triangle at the actual Q."
     },
     {
       "operation": "Allocation to highest willingness to pay and lowest MC; cap is not capacity",
       "neededBy": "3a,4a,5b,6b",
-      "anchor": "New formal comparison §2.3.3 p.90; previous §2.3.2 p.81 contains lowest MC assumption",
+      "anchor": "New formal comparison §2.3.3 p.91; previous §2.3.2 p.82 contains lowest MC assumption",
       "lessonSupport": "State full allocation/technical feasibility in example and target before areas."
     },
     {
       "operation": "Rectangle plus triangle at capped Q",
       "neededBy": "3b,4b,5c,6c",
-      "anchor": "New in §2.3.3 p.91 and p.94",
+      "anchor": "New in §2.3.3 p.92 and p.95",
       "lessonSupport": "Calculate endpoints, mark horizontal helper lines, separately calculate and add both parts."
     },
     {
       "operation": "Lost total surplus and triangle between actual Q and Qe",
       "neededBy": "3b,4b,5d,6d",
-      "anchor": "§2.3.2 p.82 explains marginal advantage and max TS; new loss method §2.3.3 p.92/95",
+      "anchor": "§2.3.2 p.83 explains marginal advantage and max TS; new loss method §2.3.3 p.93/96",
       "lessonSupport": "Two matching calculations; exact vertices, base, height and economic meaning."
     },
     {
       "operation": "One feasible Pareto improvement with nobody worse off",
       "neededBy": "2,4c,5ae,6ae",
-      "anchor": "New formal criterion §2.3.3 p.93/95",
+      "anchor": "New formal criterion §2.3.3 p.94/96",
       "lessonSupport": "Definition, next-unit willingness/MC, unchanged price and earlier transactions, costless expansion."
     },
     {
       "operation": "Aggregate gains, Pareto and fairness are separate judgments",
       "neededBy": "4d,5f,6f",
-      "anchor": "§2.3.2 p.82/84 limits efficiency claims; §2.3.3 p.92–93/95 distinguishes them",
+      "anchor": "§2.3.2 p.83/85 limits efficiency claims; §2.3.3 p.93–94/96 distinguishes them",
       "lessonSupport": "Compare changed CS and PS; extra transaction at same price versus whole return to free equilibrium."
     }
   ],
@@ -133,8 +133,8 @@
       "P": 18,
       "limit": 24,
       "technicalCapacityAtLeast": 48,
-      "Qd": 36,
-      "Qs": 48,
+      "Qv": 36,
+      "Qa": 48,
       "allocation": "highest willingness, lowest MC",
       "costlessExpansion": true,
       "priorTradesAndPriceUnchanged": true,
@@ -163,8 +163,8 @@
     "answers": {
       "a": "No feasible extra trade or redistribution that makes someone better and nobody worse under model assumptions.",
       "b": {
-        "Qd": 50,
-        "Qs": 80,
+        "Qv": 50,
+        "Qa": 80,
         "actual": 40,
         "allocation": "highest willingness, lowest MC"
       },
@@ -385,19 +385,10 @@
     25,
     27
   ],
-  "acceptedOutputHashes": {
-    "pdf": "a91de8bcd1d37e9ec916cc0861e0e4289e83eb802be67481f80b5925327dce24",
-    "pptx": "395df262431dc1c9765a6e4691bfc91856da40f054076409c89149c9c4be8045"
-  },
-  "validation": {
-    "renderer": "Microsoft PowerPoint (Windows), saved final PPTX reopened and all 30 slides exported",
-    "package": "pass",
-    "layoutFindings": 0,
-    "artifactToolReimport": true,
-    "nativeChartData": "10 charts; 190 references; 288 cached/workbook cells agree",
-    "notesMinimumPt": 14,
-    "visualReview": "All 30 slides individually inspected; changed slides rechecked after fixes. PDF has30 pages; all rasterized and compared with PPT PNGs; representative dense/graph pages separately inspected.",
-    "reference": "§2.1.1 accepted PowerPoint/PDF and source helpers",
-    "scope": "Signed textbook preserved; not a classroom timing or learning-effectiveness claim"
+  "paginationRevision": {
+    "revision": "book2-presentation-pagination-20261001",
+    "sourceCommit": "a8940a7a79e22857a3e306a91fe923c48c63e716",
+    "previousPlatformCommit": "ac6f8e5320406aaf4906811b289ce98fcfa548c1",
+    "scope": "Current printed page references and Qv/Qa notation; assignments, economic values, goals, teaching examples and timing preserved."
   }
 }

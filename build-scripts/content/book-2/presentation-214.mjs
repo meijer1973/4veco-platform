@@ -16,7 +16,7 @@ const C={ink:'#183247',blue:'#17658A',green:'#20665B',orange:'#A94D16',paper:'#F
 const FONT='Arial', tables=[], charts=[], slides=[], overviews=[], graphContracts=[];
 const source=`https://github.com/meijer1973/4veco-lessen/blob/${facts.sourceCommit}/${facts.sourceEdition.split('/').map(encodeURIComponent).join('/')}/`;
 const title='§2.1.4 Gemengde opgaven';
-const targetFooter=title+' · Opgave 5 · Boekpagina 32–33';
+const targetFooter=title+' · Opgave 5 · Boekpagina 33–34';
 const exampleFooter=title+' · '+facts.teachingExample.label;
 function exampleNotes(s,explanation,question,pitfall,transition){
  s.speakerNotes.textFrame.setText(`Vraag: ${question}\n\nUitleg: ${explanation}\n\nMisvatting: ${pitfall}\n\nOvergang: ${transition}\n\nBron: Zelfgemaakt uitlegvoorbeeld FietsWas, niet uit het boek. Context en getallen zijn voor deze uitleg gekozen en vormen geen boekopgave of huiswerk. De onderliggende methoden sluiten aan bij Boek 2, chatuitgave 2026, §2.1.1–2.1.3: kostenfuncties, totale/gemiddelde bedragen, break-even en marginale veranderingen. ${source}boek/Boek_2_Compleet.pdf`);
@@ -33,7 +33,7 @@ function slide(label,footer=title){
  slides.push({number:p.slides.items.length,title:label});return s;
 }
 function notes(s,page,explanation,question,pitfall,transition){
- s.speakerNotes.textFrame.setText(`Vraag: ${question}\n\nUitleg: ${explanation}\n\nMisvatting: ${pitfall}\n\nOvergang: ${transition}\n\nBron: leerlingenboek Boek 2, chatuitgave 2026, revisie 21 september 2026, gedrukte pagina ${page}. ${source}boek/Boek_2_Compleet.pdf\nAntwoordmodel: ${source}bronnen/H1/${encodeURIComponent('2.1 Kosten en opbrengsten – antwoorden.md')}\nDocentenroute: ${source}bronnen/H1/Docenten_en_bouwverantwoording.md`);
+ s.speakerNotes.textFrame.setText(`Vraag: ${question}\n\nUitleg: ${explanation}\n\nMisvatting: ${pitfall}\n\nOvergang: ${transition}\n\nBron: leerlingenboek Boek 2, chatuitgave 2026, revisie 1 oktober 2026, gedrukte pagina ${page}. ${source}boek/Boek_2_Compleet.pdf\nAntwoordmodel: ${source}bronnen/H1/${encodeURIComponent('2.1 Kosten en opbrengsten – antwoorden.md')}\nDocentenroute: ${source}bronnen/H1/Docenten_en_bouwverantwoording.md`);
 }
 function table(s,values,x,y,w,h,widths,size=32){
  const t=s.tables.add({rows:values.length,columns:values[0].length,left:x,top:y,width:w,height:h,columnWidths:widths,values});
@@ -70,18 +70,18 @@ function overview(phase,active){
  text(s,'Gegevens kiezen en combineren.\nTabel en grafiek verbinden.\nEen uitspraak onderbouwen.',972,244,565,122,30,{name:'overview-goals'});
  rule(s,972,374,568);
  text(s,'Startopdracht',972,403,565,45,35,{bold:true,color:active===2?C.blue:C.ink});
- text(s,'Pagina 29\nOpgave 1',972,459,565,95,33,{bold:active===2,name:'overview-start'});
+ text(s,'Pagina 30\nOpgave 1',972,459,565,95,33,{bold:active===2,name:'overview-start'});
  rule(s,972,570,568);
  text(s,'Huiswerk',972,591,565,45,35,{bold:true,color:active===7?C.blue:C.ink});
  text(s,'§2.1.4 · Opgaven 1–7\nGemengd: 1–4 · Doel: 5\nBonus / denkertje: 6\nHerhaling: 7\nMaken en nakijken',972,650,565,184,30,{bold:active===7,name:'overview-homework'});
- notes(s,'29–34',`Laat deze dia staan tijdens ${phase.toLowerCase()}. Start met opgave 1 op pagina 29. Deze gemengde paragraaf heeft geen afzonderlijke begeleide basissectie. Leerlingen werken met 1–4 naar doel 5 op pagina 32–33. Bespreek SmoothBox omdat deze echte doeloefening bronselectie, functies, break-even, GTK, marginale verschillen en grafiekinterpretatie samenbrengt. De klasopdracht/huiswerkopdracht is alle opgaven 1, 2, 3, 4, 5, 6 en 7 maken en nakijken, met behoud van het boeklabel bonus/denkertje bij 6 en herhaling bij 7. In de algemene docentenroute zijn 6 en 7 aanvullend; deze presentatie volgt de classroom-afspraak om alle gemengde opgaven als huiswerk te noemen. Begroot indien nodig vervolgwerktijd.`,active===2?'Welke grootheid vraagt opgave 1?':'Bij welke stap wil je hulp?', 'Verwar bezoekers niet met verkochte producten. Het startpaginanummer is het gedrukte nummer 29, niet PDF-pagina 31.',active===7?'Laat leerlingen het huiswerk in de agenda zetten.':'Ga door naar de volgende lesfase wanneer de klas daaraan toe is.');
+ notes(s,'30–35',`Laat deze dia staan tijdens ${phase.toLowerCase()}. Start met opgave 1 op pagina 30. Deze gemengde paragraaf heeft geen afzonderlijke begeleide basissectie. Leerlingen werken met 1–4 naar doel 5 op pagina 33–34. Bespreek SmoothBox omdat deze echte doeloefening bronselectie, functies, break-even, GTK, marginale verschillen en grafiekinterpretatie samenbrengt. De klasopdracht/huiswerkopdracht is alle opgaven 1, 2, 3, 4, 5, 6 en 7 maken en nakijken, met behoud van het boeklabel bonus/denkertje bij 6 en herhaling bij 7. In de algemene docentenroute zijn 6 en 7 aanvullend; deze presentatie volgt de classroom-afspraak om alle gemengde opgaven als huiswerk te noemen. Begroot indien nodig vervolgwerktijd.`,active===2?'Welke grootheid vraagt opgave 1?':'Bij welke stap wil je hulp?', 'Verwar bezoekers niet met verkochte producten. Het startpaginanummer is het gedrukte nummer 29, niet PDF-pagina 32.',active===7?'Laat leerlingen het huiswerk in de agenda zetten.':'Ga door naar de volgende lesfase wanneer de klas daaraan toe is.');
 }
 overview('Startopdracht',2);
 {
  const s=slide('De aanpak bij gemengde opgaven');
  const rows=[['Gegevens kiezen','Welke dag, hoeveelheid, periode en eenheid?'],['Bewerking kiezen','Totaal, per product of per extra product?'],['Tabel en grafiek','Tabelwaarden en lijnhoogten beschrijven dezelfde bedragen.'],['Uitspraak beoordelen','Berekening, economische betekenis en conclusie.']];
  rows.forEach((r,i)=>{let y=205+i*148;text(s,r[0],60,y,550,62,39,{bold:true,color:C.blue});text(s,r[1],675,y,860,107,36);if(i<3)rule(s,60,y+119,1480);});
- notes(s,'29–33','Er komt geen nieuwe theorie bij. Haal de aanpak uit de voorgaande paragrafen terug. Bij SmoothBox kies je straks per vraag de juiste dag en bron. Een verklaring moet zeggen wat de berekende verandering betekent. De lesdoelen zijn relevante gegevens kiezen, kosten en opbrengsten combineren, een tabel met een grafiek verbinden en een uitspraak onderbouwen.','Hoe zie je of een vraag een totaal of een bedrag per product verlangt?','Dezelfde formule op alle vragen toepassen werkt niet.','Demonstreer de aanpak met het aparte FietsWas-voorbeeld. Eventuele feedback op de al gemaakte startopdracht kiest de docent afzonderlijk.');
+ notes(s,'30–34','Er komt geen nieuwe theorie bij. Haal de aanpak uit de voorgaande paragrafen terug. Bij SmoothBox kies je straks per vraag de juiste dag en bron. Een verklaring moet zeggen wat de berekende verandering betekent. De lesdoelen zijn relevante gegevens kiezen, kosten en opbrengsten combineren, een tabel met een grafiek verbinden en een uitspraak onderbouwen.','Hoe zie je of een vraag een totaal of een bedrag per product verlangt?','Dezelfde formule op alle vragen toepassen werkt niet.','Demonstreer de aanpak met het aparte FietsWas-voorbeeld. Eventuele feedback op de al gemaakte startopdracht kiest de docent afzonderlijk.');
 }
 {
  const s=slide('FietsWas: gegevens en functies',exampleFooter);
@@ -143,7 +143,7 @@ overview('Zelfstandig werken',4);
  text(s,'Alle gemaakte lunchboxen worden voor € 5 per stuk verkocht. Gebruik bij elke vraag het juiste dagmenu.',60,297,1480,104,37);
  text(s,'Bron A · Vrijdag: het gewone menu',60,450,1480,66,41,{bold:true});
  table(s,[['Gegeven','Vrijdag'],['Totale constante kosten','€ 1.200 per dag'],['Variabele kosten','€ 2 per lunchbox'],['Verwachte festivalbezoekers','4.000']],60,544,1480,256,[940,540],32);
- notes(s,'32','Begin de bespreking nadat leerlingen de doeloefening hebben geprobeerd. Laat eerst alle bronnen en alle zes deelvragen zien, zonder antwoorden. Deze bedragen gelden op vrijdag tot en met de capaciteit. Q is het aantal lunchboxen per dag.','Welk menu hoort bij bron A?','Dezelfde verkoopprijs op beide dagen betekent niet dat de kosten gelijk zijn.','Toon bron B van zaterdag.');
+ notes(s,'33','Begin de bespreking nadat leerlingen de doeloefening hebben geprobeerd. Laat eerst alle bronnen en alle zes deelvragen zien, zonder antwoorden. Deze bedragen gelden op vrijdag tot en met de capaciteit. Q is het aantal lunchboxen per dag.','Welk menu hoort bij bron A?','Dezelfde verkoopprijs op beide dagen betekent niet dat de kosten gelijk zijn.','Toon bron B van zaterdag.');
 }
 {
  const s=slide('Opgave 5 · Bron B: zaterdag',targetFooter);
@@ -151,7 +151,7 @@ overview('Zelfstandig werken',4);
  text(s,'Meer productie vraagt steeds meer betaald werk per extra lunchbox. De variabele kosten per lunchbox zijn niet steeds gelijk.',60,276,1480,110,35);
  table(s,[['Q (lunchboxen per dag)','TK zaterdag (€ per dag)','TO zaterdag (€ per dag)'],['700','2.600','3.500'],['800','2.900','4.000'],['900','3.250','4.500'],['1.000','3.650','5.000']],60,421,1480,337,[500,490,490],31);
  text(s,'Gebruik voor zaterdag deze totalen, niet de € 2 uit bron A.',60,784,1480,51,32,{bold:true});
- notes(s,'32','Lees de zaterdagtabel letterlijk. De constante kosten blijven 1200 euro per dag. De tabel beschrijft een ander menu met stijgende extra arbeidskosten. Beide dagen hebben dezelfde capaciteit van 1000.','Welke bron geeft je de totale zaterdagkosten?','Gebruik de vrijdagfunctie niet voor zaterdag. Trek de zaterdagtabel niet door naar onbekende hoeveelheden.','Toon de bijbehorende basisgrafiek.');
+ notes(s,'33','Lees de zaterdagtabel letterlijk. De constante kosten blijven 1200 euro per dag. De tabel beschrijft een ander menu met stijgende extra arbeidskosten. Beide dagen hebben dezelfde capaciteit van 1000.','Welke bron geeft je de totale zaterdagkosten?','Gebruik de vrijdagfunctie niet voor zaterdag. Trek de zaterdagtabel niet door naar onbekende hoeveelheden.','Toon de bijbehorende basisgrafiek.');
 }
 function smoothGraph(stage){
  const s=slide(stage===0?'Opgave 5 · Bron C: basisgrafiek':stage===1?'Opgave 5e · Break-even en positieve winst':'Opgave 5e · De winstafstand bij 700',targetFooter);
@@ -162,7 +162,7 @@ function smoothGraph(stage){
  text(s,stage===0?'Beide dagen':stage===1?'Vrijdag':'Bij Q = 700',1190,231,350,64,35,{bold:true});
  text(s,stage===0?'Capaciteit:\n1.000 lunchboxen\nper dag':stage===1?'Break-even:\n(400; 2.000)':'TO = € 3.500\nTK = € 2.600',1190,333,350,151,31,{bold:true,color:C.blue});
  text(s,stage===0?'Zaterdag:\nalleen de vier\ntabelpunten':stage===1?'Positieve winst:\n400 < Q ≤ 1.000\n\nGehele aantallen:\n401 t/m 1.000':'Verticale afstand:\n€ 900 per dag\n\nOp beide dagen\nbij deze Q.',1190,567,350,245,31,{bold:true,color:stage===1?C.orange:C.green});
- notes(s,stage===0?'32':'32–33',stage===0?'De basisgrafiek bevat TO voor beide dagen, de volledige vrijdagkostenlijn en alleen de vier gegeven zaterdagpunten verbonden. De curves stoppen bij 1000. Break-even en winstmarkering ontbreken hier bewust: die zijn gevraagd. De verdere asruimte is alleen voor leesbare labels.':stage===1?'Markeer (400; 2000). Vrijdag is TO boven TK bij 400 < Q ≤ 1000. Bij gehele lunchboxen zijn dat 401 tot en met 1000 per dag. Het punt bij 400 zelf hoort niet bij positieve winst. Beide dagen en alle drie curves blijven zichtbaar; over ongegeven zaterdaghoeveelheden trekken we geen conclusie.':'Het verticale lijnstuk bij 700 loopt van 2600 naar 3500 euro per dag. Het verschil is 900. Op deze hoeveelheid vallen de kostenpunten van beide dagen samen. Een gelijk winstniveau bij 700 betekent niet dat de winst daarna even snel groeit.',stage===0?'Welke lijnen horen bij welke dag?':stage===1?'Waarom begint positieve winst pas rechts van 400?':'Kunnen twee dagen dezelfde winst hebben en toch verschillende winstgroei?', 'Alleen gegeven zaterdagpunten verbinden. Winst is een verticale afstand, geen oppervlakte.',stage===0?'Toon nu alle deelvragen voordat je de antwoorden bespreekt.':stage===1?'Bekijk de verticale winstafstand bij 700.':'Vergelijk nu de groei per extra lunchbox.');
+ notes(s,stage===0?'33':'33–34',stage===0?'De basisgrafiek bevat TO voor beide dagen, de volledige vrijdagkostenlijn en alleen de vier gegeven zaterdagpunten verbonden. De curves stoppen bij 1000. Break-even en winstmarkering ontbreken hier bewust: die zijn gevraagd. De verdere asruimte is alleen voor leesbare labels.':stage===1?'Markeer (400; 2000). Vrijdag is TO boven TK bij 400 < Q ≤ 1000. Bij gehele lunchboxen zijn dat 401 tot en met 1000 per dag. Het punt bij 400 zelf hoort niet bij positieve winst. Beide dagen en alle drie curves blijven zichtbaar; over ongegeven zaterdaghoeveelheden trekken we geen conclusie.':'Het verticale lijnstuk bij 700 loopt van 2600 naar 3500 euro per dag. Het verschil is 900. Op deze hoeveelheid vallen de kostenpunten van beide dagen samen. Een gelijk winstniveau bij 700 betekent niet dat de winst daarna even snel groeit.',stage===0?'Welke lijnen horen bij welke dag?':stage===1?'Waarom begint positieve winst pas rechts van 400?':'Kunnen twee dagen dezelfde winst hebben en toch verschillende winstgroei?', 'Alleen gegeven zaterdagpunten verbinden. Winst is een verticale afstand, geen oppervlakte.',stage===0?'Toon nu alle deelvragen voordat je de antwoorden bespreekt.':stage===1?'Bekijk de verticale winstafstand bij 700.':'Vergelijk nu de groei per extra lunchbox.');
 }
 smoothGraph(0);
 {
@@ -170,13 +170,13 @@ smoothGraph(0);
  const questions=[['a','Selecteer uit bron A de constante kosten, de variabele kosten per lunchbox en de verkoopprijs. Leg uit welke totale kosten met Q veranderen en welke gelijk blijven. Noem ook het gegeven dat je niet nodig hebt voor TK en TO.'],['b','Stel voor vrijdag de functies voor TK en TO op. Bereken de break-even-afzet.'],['c','Bereken voor vrijdag bij Q = 700 de winst en GTK. Noteer de volledige eenheden.']];
  const ys=[205,493,660], hs=[243,128,150];
  questions.forEach(([letter,q],i)=>{text(s,letter+')',60,ys[i],60,60,39,{bold:true,color:C.blue});text(s,q,151,ys[i],1389,hs[i],37);});
- notes(s,'33','Lees de vragen letterlijk. Gebruik bij a, b en c vrijdag, bron A. Laat de leerlingen hun eigen uitwerking erbij houden. Bespreek nog geen uitkomsten.','Welke bron hoort bij deze drie vragen?','Bij GTK wordt om per lunchbox gevraagd, bij winst om een totaal per dag.','Toon vraag d en daarna e en f.');
+ notes(s,'34','Lees de vragen letterlijk. Gebruik bij a, b en c vrijdag, bron A. Laat de leerlingen hun eigen uitwerking erbij houden. Bespreek nog geen uitkomsten.','Welke bron hoort bij deze drie vragen?','Bij GTK wordt om per lunchbox gevraagd, bij winst om een totaal per dag.','Toon vraag d en daarna e en f.');
 }
 {
  const s=slide('Opgave 5 · Vraag d',targetFooter);
  text(s,'d) Bereken met bron B voor elk van de drie stappen op zaterdag MK en MO per extra lunchbox. Laat bij iedere MK-berekening teller en noemer zien.',60,206,1480,207,41);
  table(s,[['Stap op zaterdag','Van Q','Naar Q'],['Eerste stap','700','800'],['Tweede stap','800','900'],['Derde stap','900','1.000']],60,473,1480,316,[780,350,350],34);
- notes(s,'33','De drie stappen moeten alle drie worden uitgewerkt. De tabel herhaalt alleen de hoeveelheden uit de bron en geeft nog geen marginale antwoorden. Vraag ook MO per extra lunchbox.','Welke twee rijen gebruik je voor iedere stap?','Het verschil tussen de totale kosten is nog niet MK per extra lunchbox.','Toon ook de grafiekvraag en de uitspraak.');
+ notes(s,'34','De drie stappen moeten alle drie worden uitgewerkt. De tabel herhaalt alleen de hoeveelheden uit de bron en geeft nog geen marginale antwoorden. Vraag ook MO per extra lunchbox.','Welke twee rijen gebruik je voor iedere stap?','Het verschil tussen de totale kosten is nog niet MK per extra lunchbox.','Toon ook de grafiekvraag en de uitspraak.');
 }
 {
  const s=slide('Opgave 5 · Vragen e en f',targetFooter);
@@ -185,7 +185,7 @@ smoothGraph(0);
  rule(s,60,562,1480);
  text(s,'f)',60,607,60,60,39,{bold:true,color:C.blue});
  text(s,'Een leerling zegt: “Door de vaste verkoopprijs leveren alle extra groepen van honderd lunchboxen evenveel extra winst op.” Beoordeel de uitspraak met de drie zaterdagstappen. Bereken daarbij de extra winst per groep.',151,607,1389,206,36);
- notes(s,'33','Nu zijn alle context, gegevens en deelvragen zonder oplossing getoond. Bij e vergelijk je beide dagen. Bij f gebruik je zaterdag. De uitspraak moet met alle drie de extra winsten beoordeeld worden. Er wordt geen winstmaximaliserende productie gevraagd.','Welke vergelijking moet je bij e maken, en welke bij f?','Een grotere winst is iets anders dan een snellere groei van de winst.','Start pas nu de stapsgewijze bespreking van de antwoorden.');
+ notes(s,'34','Nu zijn alle context, gegevens en deelvragen zonder oplossing getoond. Bij e vergelijk je beide dagen. Bij f gebruik je zaterdag. De uitspraak moet met alle drie de extra winsten beoordeeld worden. Er wordt geen winstmaximaliserende productie gevraagd.','Welke vergelijking moet je bij e maken, en welke bij f?','Een grotere winst is iets anders dan een snellere groei van de winst.','Start pas nu de stapsgewijze bespreking van de antwoorden.');
 }
 {
  const s=slide('Opgave 5a–b · Vrijdag: gegevens en functies',targetFooter);
@@ -194,7 +194,7 @@ smoothGraph(0);
  text(s,'TO = 5Q',895,594,645,73,45,{bold:true,color:C.blue});
  text(s,'Totalen in € per dag · 0 ≤ Q ≤ 1.000 lunchboxen per dag',60,694,1480,62,35,{bold:true});
  text(s,'4.000 bezoekers is niet nodig voor TK en TO.',60,780,1480,52,34);
- notes(s,'32–33','Kies de constante kosten, variabele kosten per lunchbox en de prijs uit bron A en de algemene context. TCK blijven 1200 euro, TVK = 2Q groeit mee. Alle gemaakte lunchboxen worden verkocht voor 5 euro, dus TO = 5Q. Bezoekers zijn geen gegarandeerde kopers.','Waarom tel je de constante kosten alleen bij TK op?','2 euro per lunchbox is niet TVK in euro per dag.','Los TO = TK op.');
+ notes(s,'33–34','Kies de constante kosten, variabele kosten per lunchbox en de prijs uit bron A en de algemene context. TCK blijven 1200 euro, TVK = 2Q groeit mee. Alle gemaakte lunchboxen worden verkocht voor 5 euro, dus TO = 5Q. Bezoekers zijn geen gegarandeerde kopers.','Waarom tel je de constante kosten alleen bij TK op?','2 euro per lunchbox is niet TVK in euro per dag.','Los TO = TK op.');
 }
 {
  const s=slide('Opgave 5b · De break-even-afzet',targetFooter);
@@ -202,7 +202,7 @@ smoothGraph(0);
  r.forEach((a,i)=>{let y=208+i*132;text(s,a[0],60,y,925,82,45,{bold:true,color:i===3?C.green:C.ink});text(s,a[1],1035,y+7,505,86,32);});
  text(s,'Controle: TO = 5 × 400 = € 2.000 per dag',60,750,1480,52,34,{bold:true,color:C.blue});
  text(s,'TK = 1.200 + 2 × 400 = € 2.000 per dag. Winst = € 0.',60,798,1480,43,30);
- notes(s,'33','De break-even-afzet is 400 lunchboxen per dag. Dit is een geheel aantal en past binnen de capaciteit van 1000. Controleer beide functies: beide geven 2000 euro per dag. Gebruik straks de coördinaten (400; 2000).','Wat zijn de twee coördinaten van het break-evenpunt?','400 is de hoeveelheid, niet het eurobedrag.','Bereken nu winst en GTK bij 700.');
+ notes(s,'34','De break-even-afzet is 400 lunchboxen per dag. Dit is een geheel aantal en past binnen de capaciteit van 1000. Controleer beide functies: beide geven 2000 euro per dag. Gebruik straks de coördinaten (400; 2000).','Wat zijn de twee coördinaten van het break-evenpunt?','400 is de hoeveelheid, niet het eurobedrag.','Bereken nu winst en GTK bij 700.');
 }
 {
  const s=slide('Opgave 5c · Vrijdag bij 700 lunchboxen',targetFooter);
@@ -212,14 +212,14 @@ smoothGraph(0);
  text(s,'Winst = TO − TK = 3.500 − 2.600',60,514,1480,69,41);
  text(s,'= € 900 per dag',60,587,1480,68,45,{bold:true,color:C.green});
  text(s,'GTK = TK / Q = 2.600 / 700 ≈ € 3,71 per lunchbox',60,735,1480,84,40,{bold:true});
- notes(s,'33','Winst is de totale opbrengst min alle kosten. GTK verdeelt de totale kosten over alle 700 lunchboxen. Rond GTK pas bij de uitkomst af op centen. Controle: winst plus kosten is 900 + 2600 = 3500 euro per dag.','Welke uitkomst is een totaal en welke is per lunchbox?','Winst is niet 900 euro per lunchbox. Gebruik vrijdag voor deze vraag.','Gebruik voor d de zaterdagtabel.');
+ notes(s,'34','Winst is de totale opbrengst min alle kosten. GTK verdeelt de totale kosten over alle 700 lunchboxen. Rond GTK pas bij de uitkomst af op centen. Controle: winst plus kosten is 900 + 2600 = 3500 euro per dag.','Welke uitkomst is een totaal en welke is per lunchbox?','Winst is niet 900 euro per lunchbox. Gebruik vrijdag voor deze vraag.','Gebruik voor d de zaterdagtabel.');
 }
 {
  const s=slide('Opgave 5d · MK en MO op zaterdag',targetFooter);
  text(s,'MK = ΔTK / ΔQ     MO = ΔTO / ΔQ',60,184,1480,67,41,{bold:true,color:C.blue});
  table(s,[['Stap (lunchboxen)','MK (€ per extra lunchbox)','MO (€ per extra lunchbox)'],['700 naar 800','(2.900 − 2.600) /\n(800 − 700) = 3,00','(4.000 − 3.500) /\n(800 − 700) = 5,00'],['800 naar 900','(3.250 − 2.900) /\n(900 − 800) = 3,50','(4.500 − 4.000) /\n(900 − 800) = 5,00'],['900 naar 1.000','(3.650 − 3.250) /\n(1.000 − 900) = 4,00','(5.000 − 4.500) /\n(1.000 − 900) = 5,00']],60,297,1480,440,[380,550,550],30);
  text(s,'De extra kosten per lunchbox stijgen.\nDe extra opbrengst blijft € 5.',60,750,1480,87,34,{bold:true});
- notes(s,'32–33','Elke stap bevat honderd extra lunchboxen. De kostenverschillen zijn 300, 350 en 400 euro. Deel elk verschil door 100: MK is 3, 3,50 en 4 euro per extra lunchbox. De opbrengstverschillen zijn steeds 500, dus MO steeds 5. Het gaat om gemiddelde marginale bedragen binnen elke tabelstap, niet om afgeleiden.','Waarom verandert MK terwijl TCK gelijk blijven?','Hogere marginale kosten maken de totale constante kosten niet hoger.','Verbind de berekeningen met de grafiek.');
+ notes(s,'33–34','Elke stap bevat honderd extra lunchboxen. De kostenverschillen zijn 300, 350 en 400 euro. Deel elk verschil door 100: MK is 3, 3,50 en 4 euro per extra lunchbox. De opbrengstverschillen zijn steeds 500, dus MO steeds 5. Het gaat om gemiddelde marginale bedragen binnen elke tabelstap, niet om afgeleiden.','Waarom verandert MK terwijl TCK gelijk blijven?','Hogere marginale kosten maken de totale constante kosten niet hoger.','Verbind de berekeningen met de grafiek.');
 }
 smoothGraph(1);smoothGraph(2);
 {
@@ -227,7 +227,7 @@ smoothGraph(1);smoothGraph(2);
  text(s,'Groei van de winst per extra lunchbox = MO − MK',60,188,1480,84,40,{bold:true,color:C.blue});
  table(s,[['Dag en hoeveelheid','MO − MK','Winstgroei per extra lunchbox'],['Vrijdag: 400 < Q ≤ 1.000','5 − 2','€ 3,00'],['Zaterdag: 700 naar 800','5 − 3','€ 2,00'],['Zaterdag: 800 naar 900','5 − 3,50','€ 1,50'],['Zaterdag: 900 naar 1.000','5 − 4','€ 1,00']],60,319,1480,351,[680,270,530],31);
  text(s,'Vrijdag groeit de positieve winstafstand het snelst:\nmeer dan 400 tot en met 1.000 lunchboxen per dag.',60,714,1480,113,39,{bold:true,color:C.orange});
- notes(s,'33','Vergelijk per extra lunchbox. Op vrijdag blijft het verschil 3 euro binnen de capaciteit. Voor positieve winst moet Q bovendien boven 400 liggen. Alle drie de gegeven zaterdagstappen zijn positief maar groeien met 2, 1,50 en 1 euro per extra lunchbox. Bij hele producten luidt het vrijdaggebied 401 tot en met 1000. Dit is alleen een vergelijking met de drie gegeven zaterdagstappen.','Waarom vergelijk je niet alleen de winst bij één Q?','Geen uitspraak over ongegeven zaterdaghoeveelheden of over de maximale winst buiten de capaciteit.','Bereken nu de extra winst per hele groep van honderd.');
+ notes(s,'34','Vergelijk per extra lunchbox. Op vrijdag blijft het verschil 3 euro binnen de capaciteit. Voor positieve winst moet Q bovendien boven 400 liggen. Alle drie de gegeven zaterdagstappen zijn positief maar groeien met 2, 1,50 en 1 euro per extra lunchbox. Bij hele producten luidt het vrijdaggebied 401 tot en met 1000. Dit is alleen een vergelijking met de drie gegeven zaterdagstappen.','Waarom vergelijk je niet alleen de winst bij één Q?','Geen uitspraak over ongegeven zaterdaghoeveelheden of over de maximale winst buiten de capaciteit.','Bereken nu de extra winst per hele groep van honderd.');
 }
 {
  const s=slide('Opgave 5f · Gelijke extra omzet, andere winst',targetFooter);
@@ -235,14 +235,14 @@ smoothGraph(1);smoothGraph(2);
  table(s,[['Stap op zaterdag','Berekening extra winst','Extra winst per dag'],['700 naar 800','500 − 300 = (5 − 3) × 100','€ 200'],['800 naar 900','500 − 350 = (5 − 3,50) × 100','€ 150'],['900 naar 1.000','500 − 400 = (5 − 4) × 100','€ 100']],60,312,1480,350,[400,680,400],31);
  text(s,'De uitspraak is onjuist.',60,708,1480,60,43,{bold:true,color:C.orange});
  text(s,'Elke groep levert € 500 extra omzet, maar vraagt meer extra kosten.',60,785,1480,51,34);
- notes(s,'33','De extra opbrengst per honderd blijft 500 euro. De extra kosten stijgen van 300 naar 350 naar 400. Daarom daalt de extra winst van 200 naar 150 naar 100 euro per dag. Controle via winstniveaus: bij 700 is winst 900; bij 800 1100; bij 900 1250; bij 1000 1350. Hun verschillen zijn dezelfde drie bedragen.','Welke kant van de winstberekening negeert de uitspraak?','Extra omzet is geen extra winst. 200, 150 en 100 zijn totaalbedragen voor een groep, niet per lunchbox.','Laat leerlingen een ontbrekende stap in hun eigen antwoord verbeteren.');
+ notes(s,'34','De extra opbrengst per honderd blijft 500 euro. De extra kosten stijgen van 300 naar 350 naar 400. Daarom daalt de extra winst van 200 naar 150 naar 100 euro per dag. Controle via winstniveaus: bij 700 is winst 900; bij 800 1100; bij 900 1250; bij 1000 1350. Hun verschillen zijn dezelfde drie bedragen.','Welke kant van de winstberekening negeert de uitspraak?','Extra omzet is geen extra winst. 200, 150 en 100 zijn totaalbedragen voor een groep, niet per lunchbox.','Laat leerlingen een ontbrekende stap in hun eigen antwoord verbeteren.');
 }
 {
  const s=slide('Antwoordcontrole bij SmoothBox');
  const rows=[['Bron en eenheid','Vrijdag bij a–c, zaterdag bij d en f, beide dagen bij e.'],['Berekeningen','Formule, ingevulde getallen en volledige eenheid.'],['Grafiek','(400; 2.000), positieve winst en de groei per extra lunchbox.'],['Redenering','Gelijke extra omzet geeft bij stijgende MK minder extra winst.']];
  rows.forEach((r,i)=>{let y=202+i*144;text(s,r[0],60,y,480,65,38,{bold:true,color:C.blue});text(s,r[1],595,y,940,108,36);});
  text(s,'Verbeter één ontbrekende stap of uitleg in je eigen antwoord.',60,788,1480,50,32,{bold:true});
- notes(s,'32–33','Laat leerlingen zelf controleren of a tot en met f volledig zijn. Kijk vooral naar de bronkeuze op zaterdag, de teller én noemer bij MK en de vergelijking per extra lunchbox bij e. Vraag een berekening plus economische betekenis.','Welke verbetering maakt jouw antwoord controleerbaar?','Juiste losse getallen zonder vergelijking of verklaring beantwoorden e en f niet volledig.','Laat het afsluitende overzicht staan.');
+ notes(s,'33–34','Laat leerlingen zelf controleren of a tot en met f volledig zijn. Kijk vooral naar de bronkeuze op zaterdag, de teller én noemer bij MK en de vergelijking per extra lunchbox bij e. Vraag een berekening plus economische betekenis.','Welke verbetering maakt jouw antwoord controleerbaar?','Juiste losse getallen zonder vergelijking of verklaring beantwoorden e en f niet volledig.','Laat het afsluitende overzicht staan.');
 }
 overview('Afsluiting / huiswerk',7);
 

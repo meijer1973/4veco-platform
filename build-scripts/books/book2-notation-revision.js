@@ -5,6 +5,7 @@ const prior=require('./exercise-route-revision'),book2=require('./book2-signed-r
 const signed=require('./books34-signed-revision'),followups=require('./books34-followups-revision');
 const {safeFile}=require('../references/books34-v3-delivery');
 const {gitBlob}=require('../lib/historical-paths');
+const classroom=require('./book2-presentation-revision');
 const ROOT=path.resolve(__dirname,'../..'),BASE='9b8304d5031cafac936a56281e144573a25fbbc9';
 const PREVIOUS_BASE='d53080f38ebbdbba319e6d9b89dcba86067a72be';
 const PLATFORM_BASE='34464fb6091f721f7a87e8d1bb3165f758770799';
@@ -20,7 +21,10 @@ const INPUTS=[CONTRACT_FILE,...['book2-notation-revision.js','record_book2_notat
  'book2_notation_checks.py','book2_print_compatibility.py','verify_book2_notation.py','requirements-exercise-routes.txt'].map(f=>'build-scripts/books/'+f),
  'skills/econ-textbook-paragraph.md','build-scripts/maintenance/check-books34-v3-import.js',
  'build-scripts/workflows/check-paragraph-lane-scope.js','.github/workflows/paired-book2-notation-ci.yml',
- '.gitattributes','build-scripts/books/book2-notation-checkout.test.js'];
+ '.gitattributes','build-scripts/books/book2-notation-checkout.test.js',classroom.CONTRACT,
+ ...['book2-presentation-revision.js','book2_presentation_checks.py','test_book2_presentations.py'].map(f=>'build-scripts/books/'+f),
+ ...classroom.CODES.flatMap(code=>['mjs','manifest.json'].map(ext=>'build-scripts/content/book-2/presentation-'+code+'.'+ext)),
+ ...['runtime.mjs','chart_workbooks.py','render-powerpoint.ps1'].map(f=>'build-scripts/presentations/'+f)];
 const git=(repo,args)=>execFileSync('git',args,{cwd:repo,maxBuffer:256*1024*1024});
 const assert=(yes,message)=>{if(!yes)throw Error(message);};
 const contract=(root=ROOT)=>JSON.parse(fs.readFileSync(safeFile(root,CONTRACT_FILE)));
@@ -42,7 +46,7 @@ function protectedPath(file){
  const relative=file.slice(EDITION.length+1);
  return /^(signed-|route-|delivery-manifest|repair-manifest|print-pagination|CORRECTIES|SIGNED-|ROUTE-)/.test(relative)
   || /^boek\/Boek_2_Theorie_43_/.test(relative)
-  || / – presentatie\.(pdf|pptx)$/.test(relative)
+  || (/ – presentatie\.(pdf|pptx)$/.test(relative)&&!classroom.allowed.has(file))
   || /\/evidence\/2\.[123]\.\d+-presentation\.md$/.test(relative)
   || /^bronnen\/H[123]\/[^/]+\.py$/.test(relative)
   || /^bronnen\/H[123]\/(_assets\/theory-20260921\/|QA\/)/.test(relative);
@@ -91,6 +95,7 @@ function verifyFiles(lessons,rows,actual,baseline,allowed){
 
 function verifyManifest(lessons,bytes,pin,{root=ROOT,requireTracked=false}={}){
  const doc=JSON.parse(bytes),c=contract(root),allowed=new Set(c.revision_paths);
+ classroom.checkContract(root,lessons);
  assert(prior.sha(bytes)===pin.manifest_sha256,'Unreviewed notation manifest');
  assert(doc.revision===REVISION&&doc.baseline_lesson_commit===BASE,'Wrong notation revision/base');
  assert(JSON.stringify(doc.predecessors)===JSON.stringify(history(lessons,root)),'False historical evidence');

@@ -1,7 +1,7 @@
 'use strict';
 // Freshness is evidence binding, never a generated review verdict.
 const fs=require('fs'),path=require('path'),r=require('./book2-notation-revision'),prior=require('./exercise-route-revision');
-const REPORT='reports/review-gates/book2-notation-completion-20261001/independent-review.md';
+const REPORT='reports/review-gates/book2-presentation-pagination-20261001/independent-review.md';
 function check({root=r.ROOT,lessons=path.resolve(root,'../4veco-lessen')}={}){
  const report=fs.readFileSync(path.join(root,REPORT),'utf8'),bytes=fs.readFileSync(path.join(lessons,r.MANIFEST));
  const bindings=[...report.matchAll(/^Review manifest SHA256: `([a-f0-9]{64})`$/gm)];

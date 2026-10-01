@@ -34,3 +34,13 @@ test('entry-document exception is confined to the one authorized README',()=>{
  expect(r.protectedPath(r.ENTRY.replace('README.md','IMPORT_REPORT.md'))).toBe(true);
  expect(r.protectedPath('Boek 1 - Schaarste/README.md')).toBe(true);
 });
+test('classroom successor permits only the twenty named final artifacts',()=>{
+ const classroom=require('./book2-presentation-revision');
+ expect(classroom.paths).toHaveLength(20);
+ for(const file of classroom.paths){
+  expect(r.protectedPath(file)).toBe(false);
+  expect(r.protectedPath(file.replace(' – presentatie.',' extra – presentatie.'))).toBe(true);
+  expect(r.protectedPath(file.replace('/chat-2026/','/unreviewed/'))).toBe(true);
+ }
+ expect(r.protectedPath(r.EDITION+'/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/evidence/2.3.3-presentation.md')).toBe(true);
+});

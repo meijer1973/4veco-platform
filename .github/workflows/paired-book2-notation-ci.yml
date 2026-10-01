@@ -8,6 +8,9 @@ on:
       - 'build-scripts/maintenance/check-books34-v3-import.js'
       - 'reports/review-gates/book2-notation-20261001/**'
       - 'reports/review-gates/book2-notation-completion-20261001/**'
+      - 'reports/review-gates/book2-presentation-pagination-20261001/**'
+      - 'build-scripts/content/book-2/presentation-*'
+      - 'build-scripts/presentations/**'
   workflow_dispatch:
     inputs:
       lesson_sha:
@@ -88,10 +91,12 @@ jobs:
           PYTHONDONTWRITEBYTECODE: '1'
         run: |
           python -m unittest discover -s build-scripts/books -p test_book2_notation.py -v
+          python -m unittest discover -s build-scripts/books -p test_book2_presentations.py -v
+          python build-scripts/books/book2_presentation_checks.py --report ../notation-ci-evidence/presentations.json
           python -X utf8 build-scripts/books/verify_book2_notation.py --report ../notation-ci-evidence/assembly.json
           node build-scripts/maintenance/check-books34-v3-import.js --require-tracked
           npx jest build-scripts/books/book2-notation-revision.test.js build-scripts/books/book2-notation-checkout.test.js build-scripts/workflows/check-paragraph-lane-scope.test.js build-scripts/ci/paired-paragraph-ci.test.js --runInBand
-          node -e "const r=require('./build-scripts/books/book2-notation-revision'),s=require('./build-scripts/workflows/check-paragraph-lane-scope');const result=s.checkLaneScope({lane:'textbook',changedPaths:r.changedPaths('../4veco-lessen')});if(!result.ok)throw Error(JSON.stringify(result));"
+          node build-scripts/books/book2-presentation-revision.js
           node build-scripts/books/book2-notation-review.js --check
       - name: Publish exact-pair evidence
         if: always()

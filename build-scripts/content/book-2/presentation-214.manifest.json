@@ -3,16 +3,16 @@
   "title": "Gemengde opgaven",
   "type": "mixed exercises",
   "sourceEdition": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026",
-  "sourceCommit": "08d7fd27830b5c42d1dbebc7fcb73b882b4d67a4",
-  "platformBaseline": "8271c1fcbcf1b10c35dabad790bdbb6a619cba28",
+  "sourceCommit": "a8940a7a79e22857a3e306a91fe923c48c63e716",
+  "platformBaseline": "ac6f8e5320406aaf4906811b289ce98fcfa548c1",
   "sourceFiles": {
     "bronnen/H1/manuscript/2.1.4 Gemengde opgaven – opgaven.md": "124bee60e526b1ef69693637ab02198215ab83367d1ffecbca6d27640b62dbf3",
-    "bronnen/H1/2.1 Kosten en opbrengsten – antwoorden.md": "380e73aa8c666604171a0fc4d52a39ce5ddde4d79175d339eae0f0051dde9eb2",
-    "bronnen/H1/Docenten_en_bouwverantwoording.md": "ed69ff51ef4dc9b73d359f5560ced6a190af82f200d79fb87222d0327f082b9e",
+    "bronnen/H1/2.1 Kosten en opbrengsten – antwoorden.md": "a2434ef2b4ee0b51082ecea128f5da52828e8e7de660905ca64f4ed9219d0165",
+    "bronnen/H1/Docenten_en_bouwverantwoording.md": "075313fe6286cd6aa44c214769a45a7d658aa3a0a6f0a1ed1208430980ee5b38",
     "bronnen/H1/_assets/2.1.4_ex_1.svg": "57f0e4916cd485873dbd39140d53a79128404e6f50b78014fb7550d282a00eff",
     "bronnen/H1/_assets/2.1.4_ex_2.svg": "d69abaab8e4de3477de418ec447fa59de1ebfb71c02aafeb70e302a4ca7732ec",
     "bronnen/H1/_assets/2.1.4_ex_3.svg": "9c9edcf06307a18062d0d67b2c1257adfd647a43902d115bb79897a2294cbe09",
-    "boek/Boek_2_Compleet.pdf": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493"
+    "boek/Boek_2_Compleet.pdf": "23d0532a7804fb743f053608a814959c6f09c9259c27762b1dff5952556908d5"
   },
   "goals": [
     "Relevante gegevens kiezen",
@@ -21,17 +21,17 @@
     "Uitspraak onderbouwen binnen de gegevens"
   ],
   "sourcePrintedPages": {
-    "start": 29,
+    "start": 30,
     "practice": [
-      29,
       30,
-      31
+      31,
+      32
     ],
     "target": [
-      32,
-      33
+      33,
+      34
     ],
-    "bonusAndReview": 34
+    "bonusAndReview": 35
   },
   "printedToPhysicalPdfOffset": 2,
   "assignment": {
@@ -101,5 +101,11 @@
     "role": "assigned-textbook-exercise",
     "exercise": 5,
     "startsAfterPractice": true
+  },
+  "paginationRevision": {
+    "revision": "book2-presentation-pagination-20261001",
+    "sourceCommit": "a8940a7a79e22857a3e306a91fe923c48c63e716",
+    "previousPlatformCommit": "ac6f8e5320406aaf4906811b289ce98fcfa548c1",
+    "scope": "Current printed page references and Qv/Qa notation; assignments, economic values, goals, teaching examples and timing preserved."
   }
 }

@@ -1,11 +1,14 @@
 """HOW TO ADAPT: audit source PAGE anchors and separately versioned slide maps.
 
-No slide source, economic value, timing or published classroom file is edited.
+Current classroom references are checked against source anchors and the sealed
+pre-pagination manifests. Economic values and timing are not changed.
 """
 import argparse,hashlib,json,re,subprocess
 from collections import defaultdict
 from pathlib import Path
+from urllib.parse import quote
 from build_book2_chat import EDITION
+from book2_presentation_checks import BASE_PLATFORM
 
 ROOT=Path(__file__).resolve().parents[2]
 ORIGINAL='d53080f38ebbdbba319e6d9b89dcba86067a72be'
@@ -68,9 +71,12 @@ def presentation_audit(lessons):
     rows=[];anchors=source_pages(lessons)
     for file in sorted((ROOT/'build-scripts/content/book-2').glob('presentation-2??.manifest.json')):
         m=json.loads(file.read_text(encoding='utf8'));pid=m.get('paragraph')or'.'.join(file.name.split('-')[1][:3])
-        old={k:v for k,v in (m.get('sourcePrintedPages')or m['printedPages']).items()if isinstance(v,(int,list))}
+        historical=json.loads(subprocess.check_output(['git','show',BASE_PLATFORM+':'+file.relative_to(ROOT).as_posix()],cwd=ROOT))
+        old={k:v for k,v in (historical.get('sourcePrintedPages')or historical['printedPages']).items()if isinstance(v,(int,list))}
         new={k:current_pages(v)for k,v in old.items()}
         if pid=='2.1.3':new['theory']=[19,20,21,22,23]
+        current={k:v for k,v in (m.get('sourcePrintedPages')or m['printedPages']).items()if isinstance(v,(int,list))}
+        if current!=new:raise ValueError('Current presentation manifest has obsolete pages '+pid)
         for role in ('start','target'):
             ids=m.get('assignment',{}).get(role,[])
             if isinstance(ids,int):ids=[ids]
@@ -80,46 +86,56 @@ def presentation_audit(lessons):
         rows.append({'paragraph':pid,'manifest':file.relative_to(ROOT).as_posix(),
                      'manifest_sha256':hashlib.sha256(file.read_bytes()).hexdigest(),
                      'recorded_pages':old,'current_pages':new,
-                     'status':'OPEN: page references need repair'if old!=new else'No pagination change; no new slide-content acceptance'})
+                     'status':'Rebuilt for current printed pages'if old!=new else'Unchanged; printed references still current'})
     if len(rows)!=12:raise ValueError('Expected all twelve existing presentations')
-    return {'followup':'BOOK2-PRESENTATION-PAGE-REFERENCES','status':'OPEN',
-            'scope':'Separately authorize source, manifest, overview text, speaker-note page references, PPTX and matching PDF repair. Check internal theory references by named example: old page 22 splits Linoprint/Atelier Boog across 22/23; do not apply a blanket shift. Audit cross-paragraph references in notes too. Preserve economics, exercise IDs and timing. Rebuild and independently review changed slides before closing.',
+    return {'followup':'BOOK2-PRESENTATION-PAGE-REFERENCES','status':'CLOSED',
+            'scope':'Ten owning slide sources/manifests, overview text, speaker notes, PPTX and matching PowerPoint-exported PDFs repaired and independently reviewed. Linoprint remains on 22; Atelier Boog is on 23. Qv/Qa notation and the StreamPlus previous-page direction follow the current textbook. Economics, exercise identities, native charts and timing preserved; first two decks and historical reviews unchanged.',
             'presentations':rows}
 
-def warning(pid):
-    return (f'# {pid} — presentaties en boekeditie\n\n'
-            '> **Let op: verouderde boekpaginaverwijzingen in de presentatie.** De PPTX en presentatie-PDF in deze map horen bij de eerdere paginering. Vanaf §2.1.3 sluiten de paginaverwijzingen niet aan op het herziene leerlingenboek van 111 pagina’s.\n\n'
-            'Gebruik vóór de les de [omzettabel en open vervolgtaak](../../../../'+GUIDE+'). De dia’s en sprekersnotities zijn nog niet hersteld; neem hun boekpaginanummers niet rechtstreeks over. Opgavenummers blijven gelijk.\n\n'
-            'De paragraaf- en opgaven-PDF’s volgen wel de actuele boekpaginering. Zie [bron- en bouwinformatie](LEESMIJ.md).\n')
+def presentation_files(root,pid):
+    folders=list((root/f'bronnen/H{pid[2]}/paragrafen').glob(pid+' *'))
+    if len(folders)!=1:raise ValueError('Missing/ambiguous paragraph folder '+pid)
+    folder=folders[0]
+    pptx=next(folder.glob('* – presentatie.pptx'))
+    return folder,pptx,pptx.with_suffix('.pdf')
 
-def guide(audit):
-    text=('# Presentaties: controleer de boekpaginaverwijzingen\n\n'
-          '**Waarschuwing voor de herziene editie met 111 leerlingpagina’s:** de bestaande presentaties vanaf §2.1.3 gebruiken nog de eerdere paginering. Dit geldt ook voor hun sprekersnotities en presentatie-PDF’s. Gebruik onderstaande omzettabel vóór de les. De eerste twee presentaties hebben geen paginaverschuiving; dat is geen nieuwe inhoudelijke beoordeling.\n\n'
-          'Open vervolgtaak: **BOOK2-PRESENTATION-PAGE-REFERENCES**. Na afzonderlijke opdracht: pas uitsluitend boekpaginaverwijzingen aan in bron, manifest, herhaalde overzichtsdia’s en sprekersnotities; bouw PPTX en PDF opnieuw en laat de gewijzigde dia’s onafhankelijk controleren. Opgavenummers, economische gegevens en tijdschattingen blijven behouden. Tot die afronding blijft deze waarschuwing staan.\n\n'
-          'Controleer interne theorieverwijzingen per voorbeeld: de oude pagina 22 is gesplitst over Linoprint op 22 en Atelier Boog op 23. Een algemene verschuiving met één pagina volstaat daar niet. Controleer ook verwijzingen naar andere paragrafen in de sprekersnotities.\n\n'
-          'Alle twaalf actuele manifesten zijn gecontroleerd. De tabel komt uit de bestaande manifesten en de actuele manuscriptpagina’s; de oorspronkelijke presentaties en hun bewijsstukken blijven ongewijzigd. Dit dossier staat apart van de printcorrectie van het leerboek.\n\n'
-          '| Paragraaf | Onderdeel | In bestaande presentatie | In huidig boek |\n|---|---|---|---|\n')
+def introduction(root,pid):
+    folder,pptx,pdf=presentation_files(root,pid)
+    return (f'# {pid} — presentaties en boekeditie\n\n'
+            'De presentatie en sprekersnotities sluiten aan op de gedrukte paginanummers van het herziene leerlingenboek (1 oktober 2026).\n\n'
+            f'- [PowerPoint]({quote(pptx.name)})\n- [Presentatie als PDF]({quote(pdf.name)})\n\n'
+            'Zie het [overzicht van alle twaalf presentaties](../../../../'+GUIDE+') en de [bron- en bouwinformatie](LEESMIJ.md).\n')
+
+def guide(audit,root):
+    text=('# Presentaties bij Boek 2\n\n'
+          'De presentaties en docentnotities gebruiken de gedrukte paginanummers van de huidige boekeditie. Tien presentaties vanaf §2.1.3 zijn opnieuw opgebouwd, in PowerPoint gerenderd en onafhankelijk gecontroleerd. De verwijzingen in §2.1.1 en §2.1.2 passen zonder aanpassing.\n\n'
+          'De hoeveelheidnotatie is Qv en Qa, zoals in het boek. Opgaven, economische gegevens en lesopbouw zijn behouden.\n\n'
+          '| Paragraaf | PowerPoint | PDF |\n|---|---|---|\n')
+    for row in audit['presentations']:
+        pid=row['paragraph'];_,pptx,pdf=presentation_files(root,pid)
+        text+=f"| {pid} | [Open PowerPoint]({quote(pptx.relative_to(root).as_posix())}) | [Open PDF]({quote(pdf.relative_to(root).as_posix())}) |\n"
+    text+='\n## Gedrukte boekpagina’s per lesonderdeel\n\n| Paragraaf | Onderdeel | Boekpagina’s |\n|---|---|---|\n'
     labels={'theory':'Theorie','workedExample':'Uitgewerkt voorbeeld','start':'Start','basis':'Begeleid/basis','independent':'Zelfstandig','target':'Doeloefening','practice':'Oefenen','bonusAndReview':'Bonus/herhaling','bonus':'Bonus','extra':'Extra','chapterCheck':'Hoofdstukcheck'}
     fmt=lambda v:', '.join(map(str,v))if isinstance(v,list)else str(v)
     for row in audit['presentations']:
-        for role,old in row['recorded_pages'].items():text+=f"| {row['paragraph']} | {labels.get(role,role)} | {fmt(old)} | {fmt(row['current_pages'][role])} |\n"
+        for role,value in row['current_pages'].items():text+=f"| {row['paragraph']} | {labels.get(role,role)} | {fmt(value)} |\n"
     return text
 
 def records(lessons):
     root=lessons/EDITION;audit=presentation_audit(lessons)
     expected={root/IMPACT:json.dumps(print_impact(lessons),ensure_ascii=False,indent=2)+'\n',
-              root/COMPAT:json.dumps(audit,ensure_ascii=False,indent=2)+'\n',root/GUIDE:guide(audit)}
+              root/COMPAT:json.dumps(audit,ensure_ascii=False,indent=2)+'\n',root/GUIDE:guide(audit,root)}
     for row in audit['presentations']:
         if row['recorded_pages']==row['current_pages']:continue
         pid=row['paragraph'];folders=list((root/f'bronnen/H{pid[2]}/paragrafen').glob(pid+' *'))
         if len(folders)!=1:raise ValueError('Missing/ambiguous paragraph folder '+pid)
-        expected[folders[0]/'README.md']=warning(pid)
+        expected[folders[0]/'README.md']=introduction(root,pid)
     return expected
 
 def verify(lessons):
     for file,text in records(lessons).items():
         if not file.is_file() or file.read_text(encoding='utf8')!=text:raise ValueError('Missing/stale compatibility evidence '+str(file))
-    return {'split_exercises':7,'lost_facing_pairs':5,'presentations_audited':12,'presentation_warnings':10,'presentation_repair':'OPEN'}
+    return {'split_exercises':7,'lost_facing_pairs':5,'presentations_audited':12,'presentations_rebuilt':10,'presentation_warnings':0,'presentation_repair':'CLOSED'}
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--write',action='store_true')
