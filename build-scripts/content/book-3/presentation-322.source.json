@@ -1,0 +1,272 @@
+{
+  "paragraph": "3.2.2",
+  "title": "Marginale kosten en de afgeleide",
+  "kind": "theory",
+  "edition": "books34-v3",
+  "structureRevision": "book34-lesson-balance-v3-20260915",
+  "platformBaseline": "34464fb6091f721f7a87e8d1bb3165f758770799",
+  "lessonCommit": "9b8304d5031cafac936a56281e144573a25fbbc9",
+  "sourceFiles": [
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.2 manuscript.md",
+      "sha256": "992f1f64ee131c8c7a6c85dd517fc87724be5f825a1f9e497cd01f699645fdce"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.1 manuscript.md",
+      "sha256": "c13b390b105beaf18a7d3e83cb52fb04792f3927d207efe5616b01a3ce8fc366"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/Antwoorden.md",
+      "sha256": "5be2192b7c07dd09153130ff8e691cc161e0c6d0413ea740a696fbe5189b4115"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/Docenteninformatie.md",
+      "sha256": "2e4043cfb28ce503cf37477914a53c3966682fe4604bfd4b91aaed96fe506e04"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+      "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.2.2.json",
+      "sha256": "753c40b2a3c4a4454906e6459765c2c6229690f6007d4cb90eb81a465e4df77b"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/lesson-routes-v3.json",
+      "sha256": "485dfa761daf90c3646bf4df5daabe4bd840c7ad908c930f186608482d46a344"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/book-page-map-v3.json",
+      "sha256": "9271962caf0281f6e0d3207bfc97777252f8803fac11999e719f9a13043af27e"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.1 Kostenstructuren – paragraaf.md",
+      "sha256": "7d1c31299783c3172cd89bd146c26e2af090b1e41de67d914835c616502a69d0"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "sha256": "8cee4de8cc847b58d5c29c3f9bee3df6f4634cd16bed1dc8d45017529ef997d6"
+    }
+  ],
+  "printedPages": {
+    "theory": [
+      62,
+      63,
+      64
+    ],
+    "start": 65,
+    "basis": [
+      65,
+      66
+    ],
+    "independent": 66,
+    "target": 67,
+    "verification": "Complete learner PDF physical pages 65 and 67 visually verified against printed footers; they coincide in this edition. Chapter-local pages are 13 and 15."
+  },
+  "assignment": {
+    "start": [
+      11,
+      12
+    ],
+    "basis": [
+      13,
+      14
+    ],
+    "independent": [
+      15,
+      16
+    ],
+    "target": 17,
+    "homework": [
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "homeworkWording": "Maken en nakijken",
+    "extras": [
+      18,
+      19
+    ]
+  },
+  "goals": [
+    "Derive MK from aq² + bq + c",
+    "Evaluate and interpret MK at a stated q in euro per kg",
+    "Distinguish a point value from average additional costs over a specified finite interval",
+    "Explain fixed versus linear variable cost changes without removing fixed costs from TK or profit"
+  ],
+  "prerequisiteTrace": [
+    {
+      "operation": "Difference quotient ΔTK/Δq and per-period versus per-unit quantities",
+      "priorTeaching": "Book 2 §2.1.3, printed p. 19–20, definition and worked table step (explicit teaching, not exercise title)",
+      "usedIn": [
+        "11a",
+        "11b",
+        "15b",
+        "17c"
+      ],
+      "refreshSlides": [
+        7,
+        8
+      ]
+    },
+    {
+      "operation": "Substitution, order of operations and TK versus marginal quantities",
+      "priorTeaching": "Book 2 §2.1.1 cost functions and totals, and §3.2.1 worked example, local p. 4 / book p. 56; substitution into a quadratic is explicitly refreshed here",
+      "usedIn": [
+        "12a",
+        "13b",
+        "14c",
+        "15a",
+        "15b",
+        "17b",
+        "17c",
+        "17e"
+      ],
+      "refreshSlides": [
+        6,
+        7
+      ]
+    },
+    {
+      "operation": "Interpretation of derivative as a point rate in a continuous kg model",
+      "newTeaching": "Current manuscript book p. 62 and 64; slides 3–6 and 9. Start 12 is supported exploration with theory p. 62–64, then revisited before basis practice on slide 14",
+      "usedIn": [
+        "12a",
+        "15b",
+        "17b",
+        "17d"
+      ]
+    },
+    {
+      "operation": "Term-wise differentiation of quadratic, linear and constant terms",
+      "newTeaching": "Book p. 63–64; slides 4–6",
+      "usedIn": [
+        "13a",
+        "13b",
+        "15a",
+        "16a",
+        "17a",
+        "17b"
+      ]
+    },
+    {
+      "operation": "Effects of fixed and linear cost changes at the same q",
+      "priorTeaching": "Book 2 §2.1.1 distinguishes fixed totals and variable costs; differentiation effects are new here",
+      "newTeaching": "Slides 10–13 distinguish a shift in c from a change in b, reset each scenario explicitly, and retain c in TK/profit",
+      "usedIn": [
+        "13c",
+        "14a",
+        "14b",
+        "14c",
+        "16a",
+        "17e"
+      ]
+    }
+  ],
+  "teachingExample": {
+    "status": "authored, not from book",
+    "context": "Cacaomenger Nova",
+    "TK": "0.15q^2 + 5q + 75",
+    "MK": "0.30q + 5",
+    "qUnit": "kg per week",
+    "TKUnit": "euro per week",
+    "MKUnit": "euro per kg",
+    "domain": [
+      0,
+      60
+    ],
+    "continuous": true,
+    "fixedCosts": "75 per week, unavoidable at q=0 within capacity",
+    "comparison": {
+      "point": 10,
+      "pointMK": 8,
+      "interval": [
+        10,
+        30
+      ],
+      "totals": [
+        140,
+        360
+      ],
+      "intervalAverage": 11,
+      "wholeKg": [
+        10,
+        11
+      ],
+      "wholeKgExtraCost": 8.15
+    },
+    "separateChanges": [
+      {
+        "constant": 125,
+        "TK10": 190,
+        "MK10": 8
+      },
+      {
+        "linearCoefficient": 6,
+        "constant": 75,
+        "TK10": 150,
+        "MK10": 9
+      }
+    ],
+    "assignedExerciseLeakage": "No assigned textbook exercise is used as the worked teaching example. Same operations with own context/data; start answers are only in optional feedback notes."
+  },
+  "targetDiscussion": {
+    "source": "Opgave 17 Zadenverpakker",
+    "contextSlide": 15,
+    "questionSlides": [
+      16,
+      17
+    ],
+    "answers": {
+      "a": [
+        18
+      ],
+      "b": [
+        19
+      ],
+      "c": [
+        20,
+        21
+      ],
+      "d": [
+        22
+      ],
+      "e": [
+        23
+      ]
+    },
+    "checks": {
+      "MK": "0.08q+4",
+      "MK100": 12,
+      "TK100": 1200,
+      "TK150": 1900,
+      "average100to150": 14,
+      "MK150": 16,
+      "afterFixedCostIncreaseTK100": 1300
+    }
+  },
+  "overviewSlides": [
+    1,
+    14,
+    24
+  ],
+  "nativeTables": [
+    3,
+    4,
+    5,
+    7,
+    9,
+    10,
+    11,
+    13,
+    18,
+    22
+  ],
+  "nativeCharts": [],
+  "destination": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/3.2 Productie en winst/3.2.2 Marginale kosten en de afgeleide",
+  "destinationRationale": "The current v3 edition has shared chapter sources and flat paragraph-pdfs, but no current titled paragraph folder. Create the standard book/chapter/paragraph companion location outside the sealed edition package. Do not place a current deck in the historical v2 Winstmaximalisatie folder or modify signed inventory/pins.",
+  "timing": "No measured single-lesson or 110-minute fit claimed. Teacher guide provisionally reserves two 55-minute lessons. All basis work retained; homework can complete route.",
+  "scope": "Classroom PPTX and matching PDF only. No textbook changes, full companion acceptance, formal target approval, merge or deployment."
+}
