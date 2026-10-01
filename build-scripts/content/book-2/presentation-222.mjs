@@ -23,13 +23,13 @@ function rule(s,x,y,w,color=C.line){s.shapes.add({geometry:'line',position:{left
 function slide(title,{example=false,target=false}={}){
  const s=p.slides.add();s.background.fill=C.paper;
  text(s,title,60,42,1480,86,52,{bold:true});rule(s,60,146,1480);
- text(s,example?label:target?'§2.2.2 Elasticiteit en omzet · Opgave 7 · Boekpagina 50':'§2.2.2 Elasticiteit en omzet',60,848,1400,30,21,{color:C.muted});
+ text(s,example?label:target?'§2.2.2 Elasticiteit en omzet · Opgave 7 · Boekpagina 51':'§2.2.2 Elasticiteit en omzet',60,848,1400,30,21,{color:C.muted});
  text(s,String(p.slides.items.length),1470,845,70,32,22,{align:'right',color:C.muted});
  slides.push({number:p.slides.items.length,title,example,target});return s;
 }
 function notes(s,page,explanation,question,misconception,transition,{example=false,target=false}={}){
  const attribution=example?'Zelfgemaakt uitlegvoorbeeld met eigen context en gegevens, niet uit het boek. De boekpagina’s zijn uitsluitend de bron voor de methode. ':'';
- s.speakerNotes.textFrame.setText(`Vraag: ${question}\n\nUitleg: ${explanation}\n\nMisvatting: ${misconception}\n\nOvergang: ${transition}\n\nBron: ${attribution}Leerlingenboek Boek 2, chatuitgave 2026, herziene theorie 21 september 2026, gedrukte pagina ${page}. ${source}boek/Boek_2_Compleet.pdf\n${target?'Antwoordmodel opgave 7: '+source+'bronnen/H2/paragrafen/'+encodeURIComponent('2.2.2 Elasticiteit en omzet')+'/'+encodeURIComponent('2.2.2 Elasticiteit en omzet – antwoorden.md'):''}`);
+ s.speakerNotes.textFrame.setText(`Vraag: ${question}\n\nUitleg: ${explanation}\n\nMisvatting: ${misconception}\n\nOvergang: ${transition}\n\nBron: ${attribution}Leerlingenboek Boek 2, chatuitgave 2026, herziene theorie 1 oktober 2026, gedrukte pagina ${page}. ${source}boek/Boek_2_Compleet.pdf\n${target?'Antwoordmodel opgave 7: '+source+'bronnen/H2/paragrafen/'+encodeURIComponent('2.2.2 Elasticiteit en omzet')+'/'+encodeURIComponent('2.2.2 Elasticiteit en omzet – antwoorden.md'):''}`);
 }
 function table(s,values,x,y,w,h,widths,size=32){
  const t=s.tables.add({rows:values.length,columns:values[0].length,left:x,top:y,width:w,height:h,columnWidths:widths,values});
@@ -65,18 +65,18 @@ function overview(phase,active){
  text(s,'Omzet berekenen en vergelijken,\nEv gebruiken en omzet van\nwinst onderscheiden.',972,244,565,122,31,{name:'overview-goals'});
  rule(s,972,374,568);
  text(s,'Startopdracht',972,403,565,45,35,{bold:true,color:active===2?C.blue:C.ink});
- text(s,'Pagina 48 · Opgaven 1 en 2\n2a: verkennen, theorie p. 45',972,459,565,95,30,{bold:active===2,name:'overview-start'});
+ text(s,'Pagina 49 · Opgaven 1 en 2\n2a: verkennen, theorie p. 46',972,459,565,95,30,{bold:active===2,name:'overview-start'});
  rule(s,972,568,568);
  text(s,'Huiswerk',972,595,565,45,35,{bold:true,color:active===7?C.blue:C.ink});
  text(s,'§2.2.2 Elasticiteit en omzet\nBasis: 3 en 4\nZelfstandig: 5 en 6\nDoelopgave: 7\nMaken en nakijken',972,651,565,185,30,{name:'overview-homework'});
- notes(s,'48–50',('Start met opgaven 1 en 2 op pagina 48. De basis bestaat uit allebei de begeleide opgaven 3 en 4, op pagina 48–49. Daarna volgen 5 en 6 op pagina 49 en doelopgave 7 op pagina 50. Huiswerk is 3 tot en met 7 maken en nakijken. Bonus 8 en herhaling 9–10 zijn extra. Laat deze dia staan tijdens het werken. De volledige route heeft geen gemeten lesduur; laat het huiswerk de route zo nodig afmaken.' + "\n\nStart en terugblik: Opgave 1 gebruikt TO uit §2.1.2, dia 3, en procentuele verandering met de oude waarde als basis, zoals opgehaald in §2.2.1. Opgave 2b gebruikt het onderscheid omzet/winst uit §2.1.2, dia 4. De lokale omzetregel in opgave 2a is nieuw. Zoek de uitleg en voorwaarden op p. 45 op. Opgave 2b kan het eerdere onderscheid tussen omzet en winst ophalen. Laat leerlingen bij deze verkenning aanwijzen welke uitleg zij gebruiken en hun twijfel noteren. Verwacht de nieuwe bewerking nog niet zonder steun. Bij terugkeer naar dit overzicht vóór het basiswerk: laat leerlingen opgave 2a opnieuw proberen na de uitleg, bespreek hun redenering en geef zo nodig extra steun. Dit is een verkennende start, geen toets van al beheerste nieuwe leerstof."),'Welke gegevens heb je nodig voor de omzet?','Omzet en winst zijn verschillende grootheden. Begeleide inoefening hoort bij de normale route.','Startopdracht'===phase?'Haal de eerdere kennis op, begeleid de verkenning van 2a met p. 45 en licht daarna de doelen toe.':active===4?'Bespreek na het werken alle onderdelen van opgave 7.':'Laat leerlingen het huiswerk in hun agenda zetten.');
+ notes(s,'49–51',('Start met opgaven 1 en 2 op pagina 49. De basis bestaat uit allebei de begeleide opgaven 3 en 4, op pagina 49–50. Daarna volgen 5 en 6 op pagina 50 en doelopgave 7 op pagina 51. Huiswerk is 3 tot en met 7 maken en nakijken. Bonus 8 en herhaling 9–10 zijn extra. Laat deze dia staan tijdens het werken. De volledige route heeft geen gemeten lesduur; laat het huiswerk de route zo nodig afmaken.' + "\n\nStart en terugblik: Opgave 1 gebruikt TO uit §2.1.2, dia 3, en procentuele verandering met de oude waarde als basis, zoals opgehaald in §2.2.1. Opgave 2b gebruikt het onderscheid omzet/winst uit §2.1.2, dia 4. De lokale omzetregel in opgave 2a is nieuw. Zoek de uitleg en voorwaarden op p. 46 op. Opgave 2b kan het eerdere onderscheid tussen omzet en winst ophalen. Laat leerlingen bij deze verkenning aanwijzen welke uitleg zij gebruiken en hun twijfel noteren. Verwacht de nieuwe bewerking nog niet zonder steun. Bij terugkeer naar dit overzicht vóór het basiswerk: laat leerlingen opgave 2a opnieuw proberen na de uitleg, bespreek hun redenering en geef zo nodig extra steun. Dit is een verkennende start, geen toets van al beheerste nieuwe leerstof."),'Welke gegevens heb je nodig voor de omzet?','Omzet en winst zijn verschillende grootheden. Begeleide inoefening hoort bij de normale route.','Startopdracht'===phase?'Haal de eerdere kennis op, begeleid de verkenning van 2a met p. 46 en licht daarna de doelen toe.':active===4?'Bespreek na het werken alle onderdelen van opgave 7.':'Laat leerlingen het huiswerk in hun agenda zetten.');
 }
 overview('Startopdracht',2);
 {
  const s=slide('Lesdoelen');
  const items=[['Omzet vergelijken','Je berekent TO vóór en na de prijswijziging.'],['Een verandering in procenten','Je vergelijkt het verschil met de oude omzet.'],['Elasticiteit gebruiken','Je verklaart de uitkomst en de grens van de lokale regel.'],['Winst onderscheiden','Je benoemt welke kostengegevens nog ontbreken.']];
  items.forEach((a,i)=>{const y=200+i*146;text(s,a[0],60,y,600,55,38,{bold:true,color:C.blue});text(s,a[1],695,y,820,108,35);if(i<3)rule(s,60,y+118,1480);});
- notes(s,'44–47','De doelen bereiden voor op 7a–f. Activeren: TO = P × Q, procentuele verandering ten opzichte van oud en Ev = %ΔQv / %ΔP. Alle gevraagde eenheden worden in de voorbeelden verkocht, dus Q = Qv.','Waarom kan een hogere prijs toch minder omzet geven?','Een hogere prijs alleen bepaalt de omzet niet.','Begin met een eigen workshopvoorbeeld.');
+ notes(s,'45–48','De doelen bereiden voor op 7a–f. Activeren: TO = P × Q, procentuele verandering ten opzichte van oud en Ev = %ΔQv / %ΔP. Alle gevraagde eenheden worden in de voorbeelden verkocht, dus Q = Qv.','Waarom kan een hogere prijs toch minder omzet geven?','Een hogere prijs alleen bepaalt de omzet niet.','Begin met een eigen workshopvoorbeeld.');
 }
 {
  const s=slide('KeramiekStudio: prijs en afzet',{example:true});
@@ -84,7 +84,7 @@ overview('Startopdracht',2);
  table(s,[['Situatie','P (€ per plaats)','Q (plaatsen per maand)'],['Oud','30','160'],['Nieuw','33','152']],60,290,1480,290,[380,500,600],36);
  line(s,'TO = P × Q',635,{size:52,bold:true,color:C.green});
  line(s,'Alle gevraagde plaatsen worden verkocht: Q = Qv.',754,{size:34});
- notes(s,'44, 46','Dit is een zelfgemaakt voorbeeld. KeramiekStudio verkoopt eerst 160 plaatsen voor 30 euro per plaats. Na de prijsverhoging tot 33 euro zijn dat 152 plaatsen per maand. Gebruik steeds P en Q uit dezelfde situatie. De omzet heeft als eenheid euro per maand.','Welke prijs hoort bij 152 verkochte plaatsen?','Vermenigvuldig niet de nieuwe prijs met de oude afzet.','Maak de oude omzet zichtbaar als een oppervlakte.',{example:true});
+ notes(s,'45, 47','Dit is een zelfgemaakt voorbeeld. KeramiekStudio verkoopt eerst 160 plaatsen voor 30 euro per plaats. Na de prijsverhoging tot 33 euro zijn dat 152 plaatsen per maand. Gebruik steeds P en Q uit dezelfde situatie. De omzet heeft als eenheid euro per maand.','Welke prijs hoort bij 152 verkochte plaatsen?','Vermenigvuldig niet de nieuwe prijs met de oude afzet.','Maak de oude omzet zichtbaar als een oppervlakte.',{example:true});
 }
 function revenueGraph(newSituation){
  const s=slide(newSituation?'De nieuwe omzetrechthoek':'Omzet als oppervlakte',{example:true});
@@ -98,7 +98,7 @@ function revenueGraph(newSituation){
  text(s,newSituation?'= € 5.016':'= € 4.800',1140,468,400,82,47,{bold:true});
  text(s,'per maand',1140,553,400,60,34);
  text(s,newSituation?'Hoger én smaller.\nDe oppervlakte\nwordt groter.':'Breedte × hoogte\ngeeft de omzet.',1140,668,400,153,33,{bold:true,color:newSituation?C.green:C.blue});
- notes(s,'44',newSituation?'De assen hebben dezelfde schaal. De groene rechthoek is hoger: de prijs is 33 in plaats van 30 euro. Hij is smaller: 152 in plaats van 160 plaatsen. Het product is 5016 euro per maand, 216 euro meer dan eerst. De grafiek toont omzetoppervlakken en geen geschatte vraagcurve.':'De horizontale as meet plaatsen per maand, de verticale as euro per plaats. Binnen de omtrek ligt een rechthoek van 160 × 30. De oppervlakte is 4800 euro per maand. Dit is een omzetrechthoek, geen winstvlak. Er wordt geen vraagfunctie verondersteld.',newSituation?'Waarom is alleen naar de hoogte kijken onvoldoende?':'Welke eenheid heeft breedte maal hoogte?','P is een bedrag per plaats. De verticale as geeft geen totale omzet.',newSituation?'Bereken daarna hoeveel procent de omzet verandert.':'Vergelijk nu met de nieuwe prijs en afzet op dezelfde assen.',{example:true});
+ notes(s,'45',newSituation?'De assen hebben dezelfde schaal. De groene rechthoek is hoger: de prijs is 33 in plaats van 30 euro. Hij is smaller: 152 in plaats van 160 plaatsen. Het product is 5016 euro per maand, 216 euro meer dan eerst. De grafiek toont omzetoppervlakken en geen geschatte vraagcurve.':'De horizontale as meet plaatsen per maand, de verticale as euro per plaats. Binnen de omtrek ligt een rechthoek van 160 × 30. De oppervlakte is 4800 euro per maand. Dit is een omzetrechthoek, geen winstvlak. Er wordt geen vraagfunctie verondersteld.',newSituation?'Waarom is alleen naar de hoogte kijken onvoldoende?':'Welke eenheid heeft breedte maal hoogte?','P is een bedrag per plaats. De verticale as geeft geen totale omzet.',newSituation?'Bereken daarna hoeveel procent de omzet verandert.':'Vergelijk nu met de nieuwe prijs en afzet op dezelfde assen.',{example:true});
 }
 revenueGraph(false);revenueGraph(true);
 {
@@ -108,7 +108,7 @@ revenueGraph(false);revenueGraph(true);
  line(s,'= (5.016 − 4.800) / 4.800 × 100%',457,{size:46});
  line(s,'= +4,5%',602,{size:62,bold:true,color:C.green});
  line(s,'€ 216 extra omzet, vergeleken met de oude € 4.800.',760,{size:35});
- notes(s,'46','Eerst het verschil: 5016 − 4800 = 216 euro per maand. Deel dit door 4800, de oude omzet, en vermenigvuldig met 100%. Dat is 4,5%. Het plusteken duidt een stijging aan.','Waarom delen we door 4800?','De noemer is de oude omzet, niet de nieuwe omzet, de prijs of het aantal.','Verbind deze uitkomst aan de relatieve hoeveelheidsreactie.',{example:true});
+ notes(s,'47','Eerst het verschil: 5016 − 4800 = 216 euro per maand. Deel dit door 4800, de oude omzet, en vermenigvuldig met 100%. Dat is 4,5%. Het plusteken duidt een stijging aan.','Waarom delen we door 4800?','De noemer is de oude omzet, niet de nieuwe omzet, de prijs of het aantal.','Verbind deze uitkomst aan de relatieve hoeveelheidsreactie.',{example:true});
 }
 {
  const s=slide('Een relatief zwakke hoeveelheidsreactie',{example:true});
@@ -116,14 +116,14 @@ revenueGraph(false);revenueGraph(true);
  line(s,'Ev = −5% / +10% = −0,5',526,{size:48,bold:true,color:C.blue});
  line(s,'−1 < −0,5 < 0: prijsinelastische vraag',630,{size:40});
  line(s,'In deze meting stijgt TO met 4,5%.',750,{size:42,bold:true,color:C.green});
- notes(s,'45–46','De prijs stijgt relatief tweemaal zo sterk als de afzet daalt. Ev = −0,5 is prijsinelastisch. In deze meting weegt het hogere bedrag per plaats zwaarder: de directe berekening heeft de omzetstijging aangetoond. Ev beschrijft hier de gemeten stap en bewijst geen gelijke reactie bij een volgende prijs.','Is de reactie zwak in aantallen of in procenten?','Vergelijk procenten, geen euro’s met aantallen. Ev is dimensieloos.','Vergelijk nu met een sterke hoeveelheidsreactie.',{example:true});
+ notes(s,'46–47','De prijs stijgt relatief tweemaal zo sterk als de afzet daalt. Ev = −0,5 is prijsinelastisch. In deze meting weegt het hogere bedrag per plaats zwaarder: de directe berekening heeft de omzetstijging aangetoond. Ev beschrijft hier de gemeten stap en bewijst geen gelijke reactie bij een volgende prijs.','Is de reactie zwak in aantallen of in procenten?','Vergelijk procenten, geen euro’s met aantallen. Ev is dimensieloos.','Vergelijk nu met een sterke hoeveelheidsreactie.',{example:true});
 }
 {
  const s=slide('KajakStek: minder verhuringen',{example:true});
  line(s,'Alle gevraagde kajaks worden verhuurd.',185,{size:34,color:C.blue});
  table(s,[['Situatie','P (€ per verhuring)','Q (per week)','TO (€ per week)'],['Oud','25','200','25 × 200 = 5.000'],['Nieuw','30','140','30 × 140 = 4.200']],60,290,1480,288,[250,390,330,510],34);
  line(s,'TO daalt met € 800 per week.',649,{size:48,bold:true,color:C.orange});
- notes(s,'44, 46–47','Tweede zelfgemaakte context. Eerst 200 verhuringen voor 25 euro, daarna 140 voor 30 euro, telkens per week. TO oud is 5000 en TO nieuw 4200 euro per week. Gebruik bij ieder product de passende P en Q.','Hoeveel omzet verdwijnt per week?','De prijs is hoger maar de totale omzet kan lager zijn.','Bereken de procentuele verandering en verbind die aan Ev.',{example:true});
+ notes(s,'45, 47–48','Tweede zelfgemaakte context. Eerst 200 verhuringen voor 25 euro, daarna 140 voor 30 euro, telkens per week. TO oud is 5000 en TO nieuw 4200 euro per week. Gebruik bij ieder product de passende P en Q.','Hoeveel omzet verdwijnt per week?','De prijs is hoger maar de totale omzet kan lager zijn.','Bereken de procentuele verandering en verbind die aan Ev.',{example:true});
 }
 {
  const s=slide('Een relatief sterke hoeveelheidsreactie',{example:true});
@@ -131,14 +131,14 @@ revenueGraph(false);revenueGraph(true);
  line(s,'%ΔTO = (4.200 − 5.000) / 5.000 × 100% = −16%',312,{size:40});
  table(s,[['%ΔP','%ΔQ','Ev'],['+20%','−30%','−30% / +20% = −1,5']],60,452,1480,197,[390,390,700],37);
  line(s,'Ev < −1: prijselastisch. TO daalt in deze meting.',732,{size:39,bold:true,color:C.orange});
- notes(s,'45–47','Het omzetverschil van min 800 delen we door de oude 5000. Dat is min 16%. De prijs stijgt van 25 naar 30: plus 20%. Q daalt van 200 naar 140: min 30%. Ev is min 1,5, dus prijselastisch. De procentuele afzetdaling is sterker dan de procentuele prijsstijging.','Welke twee procentuele veranderingen vergelijken we voor Ev?','Ev gebruikt de hoeveelheidsverandering in de teller, niet de omzetverandering van min 16%.','Vat de lokale omzetregel samen.',{example:true});
+ notes(s,'46–48','Het omzetverschil van min 800 delen we door de oude 5000. Dat is min 16%. De prijs stijgt van 25 naar 30: plus 20%. Q daalt van 200 naar 140: min 30%. Ev is min 1,5, dus prijselastisch. De procentuele afzetdaling is sterker dan de procentuele prijsstijging.','Welke twee procentuele veranderingen vergelijken we voor Ev?','Ev gebruikt de hoeveelheidsverandering in de teller, niet de omzetverandering van min 16%.','Vat de lokale omzetregel samen.',{example:true});
 }
 function localRule(isTarget=false){
  const s=slide(isTarget?'Opgave 7e: de lokale omzetregel':'De lokale omzetregel',{target:isTarget});
  line(s,'Bij een kleine prijsverandering rond de huidige situatie',185,{size:36,bold:true,color:C.blue});
  table(s,[['Vraag','Kleine prijsstijging','Kleine prijsdaling'],['Prijsinelastisch\n−1 < Ev ≤ 0','TO stijgt','TO daalt'],['Prijselastisch\nEv < −1','TO daalt','TO stijgt'],['Unitair elastisch\nEv = −1','Effecten ongeveer\nin evenwicht','Effecten ongeveer\nin evenwicht']],60,303,1480,388,[530,475,475],32);
  line(s,'Bij gegeven oude en nieuwe waarden: TO altijd narekenen.',748,{size:36,bold:true,color:C.orange});
- notes(s,isTarget?'50':'45','Bij een kleine prijsstijging werken de hogere prijs en de lagere afzet tegen elkaar in. Bij prijsinelastische vraag is de relatieve hoeveelheidsreactie zwak en stijgt TO. Bij prijselastische vraag is zij sterk en daalt TO. Bij een kleine prijsdaling draaien de richtingen om. Bij Ev = −1 zijn de effecten lokaal ongeveer in evenwicht. De elasticiteit bij een punt is niet automatisch gelijk aan de gemeten verhouding over een grote stap.','Wat verandert aan de regel als de prijs daalt?','Deze regel is geen garantie voor elke grote eindige prijswijziging.','Laat zien waarom je beide omzetbedragen rechtstreeks berekent.',{target:isTarget});
+ notes(s,isTarget?'51':'46','Bij een kleine prijsstijging werken de hogere prijs en de lagere afzet tegen elkaar in. Bij prijsinelastische vraag is de relatieve hoeveelheidsreactie zwak en stijgt TO. Bij prijselastische vraag is zij sterk en daalt TO. Bij een kleine prijsdaling draaien de richtingen om. Bij Ev = −1 zijn de effecten lokaal ongeveer in evenwicht. De elasticiteit bij een punt is niet automatisch gelijk aan de gemeten verhouding over een grote stap.','Wat verandert aan de regel als de prijs daalt?','Deze regel is geen garantie voor elke grote eindige prijswijziging.','Laat zien waarom je beide omzetbedragen rechtstreeks berekent.',{target:isTarget});
 }
 localRule();
 {
@@ -148,14 +148,14 @@ localRule();
  line(s,'= 1,20 × 0,70 = 0,84',476,{size:54,bold:true,color:C.green});
  line(s,'84% van de oude omzet: een daling van 16%.',613,{size:41});
  line(s,'Optellen van +20% en −30% zou −10% geven.',744,{size:35,color:C.orange});
- notes(s,'45, 47','Omdat TO = P × Q geldt exact dat de omzetfactor het product is van de prijsfactor en de hoeveelheidsfactor. 1,20 maal 0,70 is 0,84. De procenten simpel optellen laat de interactie van beide veranderingen weg. Een gemeten Ev over een grote stap bepaalt niet de lokale reactie bij elke prijs. Daarom reken je de twee omzetbedragen uit.','Waarom vermenigvuldigen we hier groeifactoren?','Een stijging en een daling kun je niet zonder meer tegen elkaar wegstrepen.','Bepaal welke gegevens nodig zijn voor een winstconclusie.',{example:true});
+ notes(s,'46, 48','Omdat TO = P × Q geldt exact dat de omzetfactor het product is van de prijsfactor en de hoeveelheidsfactor. 1,20 maal 0,70 is 0,84. De procenten simpel optellen laat de interactie van beide veranderingen weg. Een gemeten Ev over een grote stap bepaalt niet de lokale reactie bij elke prijs. Daarom reken je de twee omzetbedragen uit.','Waarom vermenigvuldigen we hier groeifactoren?','Een stijging en een daling kun je niet zonder meer tegen elkaar wegstrepen.','Bepaal welke gegevens nodig zijn voor een winstconclusie.',{example:true});
 }
 {
  const s=slide('Omzet en winst');
  line(s,'Winst = TO − TK',194,{size:60,bold:true,color:C.blue});
  table(s,[['Voor een winstvergelijking','Oud','Nieuw'],['Totale opbrengst','TO oud','TO nieuw'],['Totale kosten','TK oud nodig','TK nieuw nodig']],60,338,1480,297,[700,390,390],34);
  line(s,'Een omzetverandering geeft nog geen zekere winstrichting.',724,{size:39,bold:true,color:C.orange});
- notes(s,'44–47','Zet voor elke periode opbrengsten en kosten naast elkaar. Je kunt winst pas vergelijken als je beide kostenbedragen kent. Minder verkopen kan de kosten ook veranderen. Een volgende prijsstap kan bovendien een andere vraagreactie geven.','Welke twee extra bedragen zijn nodig?','Vul ontbrekende kosten niet automatisch als nul in.','Laat leerlingen een korte redenering toetsen.');
+ notes(s,'45–48','Zet voor elke periode opbrengsten en kosten naast elkaar. Je kunt winst pas vergelijken als je beide kostenbedragen kent. Minder verkopen kan de kosten ook veranderen. Een volgende prijsstap kan bovendien een andere vraagreactie geven.','Welke twee extra bedragen zijn nodig?','Vul ontbrekende kosten niet automatisch als nul in.','Laat leerlingen een korte redenering toetsen.');
 }
 function check(reveal){
  const s=slide(reveal?'Korte controle: de redenering':'Korte controle');
@@ -163,7 +163,7 @@ function check(reveal){
  line(s,'De lokale Ev is −0,5.',320,{size:45,bold:true,color:C.blue});
  if(reveal){line(s,'Prijsinelastisch: de omzet daalt volgens de lokale regel.',498,{size:39,bold:true,color:C.orange});line(s,'De winstrichting blijft onbekend zonder de kosten.',668,{size:39});}
  else{line(s,'Wat verwacht je voor TO? Leg uit.',498,{size:44});line(s,'Kun je ook de richting van de winst voorspellen?',668,{size:40});}
- notes(s,'45',reveal?'Bij prijsinelastische vraag groeit Q relatief weinig bij een kleine prijsdaling. De lagere opbrengst per eenheid weegt zwaarder en TO daalt lokaal. Voor winst ontbreken de kosten. Bij een werkelijke verandering met P en Q vóór en na controleer je TO rechtstreeks.':'Laat leerlingen eerst individueel een richting en een reden bedenken. Dit is een korte begripscontrole zonder extra huiswerkopgave. Gebruik de prijsdaling om te voorkomen dat leerlingen één omzetrichting aan het woord inelastisch koppelen.','Wat is de prijsrichting, en hoe sterk reageert Q relatief?','Prijsinelastisch betekent niet dat TO altijd stijgt.',reveal?'Laat de overzichtsdia staan tijdens het werken.':'Toon de redenering nadat leerlingen hun antwoord hebben gegeven.');
+ notes(s,'46',reveal?'Bij prijsinelastische vraag groeit Q relatief weinig bij een kleine prijsdaling. De lagere opbrengst per eenheid weegt zwaarder en TO daalt lokaal. Voor winst ontbreken de kosten. Bij een werkelijke verandering met P en Q vóór en na controleer je TO rechtstreeks.':'Laat leerlingen eerst individueel een richting en een reden bedenken. Dit is een korte begripscontrole zonder extra huiswerkopgave. Gebruik de prijsdaling om te voorkomen dat leerlingen één omzetrichting aan het woord inelastisch koppelen.','Wat is de prijsrichting, en hoe sterk reageert Q relatief?','Prijsinelastisch betekent niet dat TO altijd stijgt.',reveal?'Laat de overzichtsdia staan tijdens het werken.':'Toon de redenering nadat leerlingen hun antwoord hebben gegeven.');
 }
 check(false);check(true);overview('Zelfstandig werken',4);
 {
@@ -171,13 +171,13 @@ check(false);check(true);overview('Zelfstandig werken',4);
  line(s,'Gebruik TO = P × Q. Alle gegevens die je nodig hebt staan hier.',187,{size:35});
  table(s,[['Aanbieder en periode','P oud','P nieuw','Q oud','Q nieuw','Ev'],['Bioscoop Nova\nper week','€ 10','€ 12','500','420','−0,8'],['StreamNow\nper maand','€ 20','€ 22','1.000','800','−2,0']],60,307,1480,323,[440,208,208,208,208,208],32);
  line(s,'Bij beide aanbieders stijgt P en daalt Q.',726,{size:40,bold:true,color:C.blue});
- notes(s,'50','Begin de bespreking nadat leerlingen de doelopgave hebben geprobeerd. Dit zijn alle oorspronkelijke gegevens van opgave 7. Nova: P van 10 naar 12, Q van 500 naar 420 per week, Ev min 0,8. StreamNow: P van 20 naar 22, Q van 1000 naar 800 per maand, Ev min 2,0. De tekst is als tabel herschikt zonder gegevens toe te voegen. De volgende twee dia’s tonen alle zes vragen zonder uitwerking.','Welke verschillende perioden staan in de gegevens?','Vergelijk elk bedrijf met zijn eigen oude situatie. Nova en StreamNow hebben verschillende perioden.','Toon vragen a tot en met d.',{target:true});
+ notes(s,'51','Begin de bespreking nadat leerlingen de doelopgave hebben geprobeerd. Dit zijn alle oorspronkelijke gegevens van opgave 7. Nova: P van 10 naar 12, Q van 500 naar 420 per week, Ev min 0,8. StreamNow: P van 20 naar 22, Q van 1000 naar 800 per maand, Ev min 2,0. De tekst is als tabel herschikt zonder gegevens toe te voegen. De volgende twee dia’s tonen alle zes vragen zonder uitwerking.','Welke verschillende perioden staan in de gegevens?','Vergelijk elk bedrijf met zijn eigen oude situatie. Nova en StreamNow hebben verschillende perioden.','Toon vragen a tot en met d.',{target:true});
 }
 {
  const s=slide('Opgave 7: vragen a tot en met d',{target:true});
  const qs=[['a','Bereken voor Bioscoop Nova TO vóór en na de prijsverhoging. (2 punten)'],['b','Bereken de procentuele verandering van TO bij Bioscoop Nova en verbind die uitkomst met Ev = −0,8. (2 punten)'],['c','Bereken voor StreamNow TO vóór en na de prijsverhoging. (2 punten)'],['d','Bereken de procentuele verandering van TO bij StreamNow en verbind die uitkomst met Ev = −2. (2 punten)']];
  qs.forEach(([n,q],i)=>{text(s,n+')',60,197+i*155,75,65,39,{bold:true,color:C.blue});text(s,q,155,197+i*155,1380,135,37);});
- notes(s,'50','Laat de vier reken- en verklaringsvragen volledig lezen. a en c vragen oude en nieuwe TO. b en d vragen procenten en een verbinding met Ev. Geef op deze dia nog geen oplossingen.','Welke vraag vraagt naast rekenen ook om een verklaring?','Een elasticiteitslabel zonder verbinding met de gemeten omzet is onvolledig.','Toon e en f voordat de eerste uitwerking verschijnt.',{target:true});
+ notes(s,'51','Laat de vier reken- en verklaringsvragen volledig lezen. a en c vragen oude en nieuwe TO. b en d vragen procenten en een verbinding met Ev. Geef op deze dia nog geen oplossingen.','Welke vraag vraagt naast rekenen ook om een verklaring?','Een elasticiteitslabel zonder verbinding met de gemeten omzet is onvolledig.','Toon e en f voordat de eerste uitwerking verschijnt.',{target:true});
 }
 {
  const s=slide('Opgave 7: vragen e en f',{target:true});
@@ -185,14 +185,14 @@ check(false);check(true);overview('Zelfstandig werken',4);
  text(s,'Formuleer de lokale omzetregel voor een kleine prijsstijging bij prijsinelastische\nen bij prijselastische vraag. Leg uit waarom je bij een grote, eindige verandering\naltijd TO vóór en na berekent. (2 punten)',155,206,1380,246,39);
  text(s,'f)',60,572,75,65,40,{bold:true,color:C.blue});
  text(s,'Leg uit waarom uit deze omzetgegevens niet volgt dat de winst stijgt. (1 punt)',155,572,1380,146,39);
- notes(s,'50','Dit zijn de volledige vragen e en f. Nu zijn alle vragen beschikbaar zonder oplossingen. e bevat twee gevraagde onderdelen: de lokale regel en de reden om een eindige verandering direct te berekenen. f vraagt naar de ontbrekende kostengegevens.','Uit hoeveel onderdelen bestaat vraag e?','Een losse formule TO = P × Q beantwoordt nog niet waarom de lokale regel begrensd is.','Begin de uitwerking met a: de twee omzetbedragen van Nova.',{target:true});
+ notes(s,'51','Dit zijn de volledige vragen e en f. Nu zijn alle vragen beschikbaar zonder oplossingen. e bevat twee gevraagde onderdelen: de lokale regel en de reden om een eindige verandering direct te berekenen. f vraagt naar de ontbrekende kostengegevens.','Uit hoeveel onderdelen bestaat vraag e?','Een losse formule TO = P × Q beantwoordt nog niet waarom de lokale regel begrensd is.','Begin de uitwerking met a: de twee omzetbedragen van Nova.',{target:true});
 }
 function targetAmounts(n,company,P,Q,period){
  const s=slide(`Opgave 7${n}: ${company}, omzet vóór en na`,{target:true});
  line(s,'TO = P × Q',193,{size:45,bold:true,color:C.blue});
  table(s,[['Situatie','Invullen','TO (€ per '+period+')'],['Oud',`${P[0]} × ${Q[0]}`,company==='Nova'?'5.000':'20.000'],['Nieuw',`${P[1]} × ${Q[1]}`,company==='Nova'?'5.040':'17.600']],60,340,1480,310,[350,565,565],42);
  line(s,company==='Nova'?'Controle: € 40 meer omzet per week.':'Controle: € 2.400 minder omzet per maand.',738,{size:39,bold:true,color:company==='Nova'?C.green:C.orange});
- notes(s,'50',company==='Nova'?'TO oud = 10 × 500 = 5000 euro per week. TO nieuw = 12 × 420 = 5040 euro per week. Verschil: plus 40 euro per week. Gebruik beide keren de bijbehorende P en Q.':'TO oud = 20 × 1000 = 20000 euro per maand. TO nieuw = 22 × 800 = 17600 euro per maand. Verschil: min 2400 euro per maand.','Welke P en Q horen bij dezelfde situatie?','Nova is per week. StreamNow is per maand. Houd de juiste periode in het antwoord.','Zet het omzetverschil af tegen de oude omzet.',{target:true});
+ notes(s,'51',company==='Nova'?'TO oud = 10 × 500 = 5000 euro per week. TO nieuw = 12 × 420 = 5040 euro per week. Verschil: plus 40 euro per week. Gebruik beide keren de bijbehorende P en Q.':'TO oud = 20 × 1000 = 20000 euro per maand. TO nieuw = 22 × 800 = 17600 euro per maand. Verschil: min 2400 euro per maand.','Welke P en Q horen bij dezelfde situatie?','Nova is per week. StreamNow is per maand. Houd de juiste periode in het antwoord.','Zet het omzetverschil af tegen de oude omzet.',{target:true});
 }
 targetAmounts('a','Nova',[10,12],[500,420],'week');
 {
@@ -202,7 +202,7 @@ targetAmounts('a','Nova',[10,12],[500,420],'week');
  table(s,[['Prijsverandering','Hoeveelheidsverandering','Ev'],['+20%','−16%','−0,8']],60,466,1480,191,[493,493,494],34);
  line(s,'Prijsinelastisch: −1 < −0,8 < 0.',705,{size:37,bold:true,color:C.blue});
  line(s,'De relatief zwakke afzetdaling past hier bij de omzetstijging.',768,{size:34});
- notes(s,'50','Verschil 40 gedeeld door 5000 maal 100% = plus 0,8%. P stijgt 20% en Q daalt 16%. Ev = −16 / 20 = −0,8. De directe TO-berekening toont dat de hogere prijs de hoeveelheidsdaling in deze meting meer dan compenseert. De omzet stijgt met slechts 0,8%, niet met 4%.','Waarom is de omzetstijging geen 20% − 16% = 4%?','Het label prijsinelastisch alleen is geen bewijs voor een omzetstijging bij iedere grote stap.','Bereken vervolgens StreamNow.',{target:true});
+ notes(s,'51','Verschil 40 gedeeld door 5000 maal 100% = plus 0,8%. P stijgt 20% en Q daalt 16%. Ev = −16 / 20 = −0,8. De directe TO-berekening toont dat de hogere prijs de hoeveelheidsdaling in deze meting meer dan compenseert. De omzet stijgt met slechts 0,8%, niet met 4%.','Waarom is de omzetstijging geen 20% − 16% = 4%?','Het label prijsinelastisch alleen is geen bewijs voor een omzetstijging bij iedere grote stap.','Bereken vervolgens StreamNow.',{target:true});
 }
 targetAmounts('c','StreamNow',[20,22],['1.000',800],'maand');
 {
@@ -212,7 +212,7 @@ targetAmounts('c','StreamNow',[20,22],['1.000',800],'maand');
  table(s,[['Prijsverandering','Hoeveelheidsverandering','Ev'],['+10%','−20%','−2']],60,466,1480,191,[493,493,494],34);
  line(s,'Prijselastisch: Ev < −1.',705,{size:37,bold:true,color:C.blue});
  line(s,'De relatief sterke afzetdaling past hier bij de omzetdaling.',768,{size:34});
- notes(s,'50','Verschil min 2400 gedeeld door de oude omzet 20000 maal 100% = min 12%. P stijgt 10% en Q daalt 20%. Ev = −20 / 10 = −2. De hoeveelheid reageert procentueel tweemaal zo sterk. Dat past bij de berekende omzetdaling.','Hoe controleer je het minteken van het antwoord?','De teller voor %ΔTO is min 2400. Deel door 20000, niet door 17600.','Formuleer de lokale regel en verklaar de grens ervan.',{target:true});
+ notes(s,'51','Verschil min 2400 gedeeld door de oude omzet 20000 maal 100% = min 12%. P stijgt 10% en Q daalt 20%. Ev = −20 / 10 = −2. De hoeveelheid reageert procentueel tweemaal zo sterk. Dat past bij de berekende omzetdaling.','Hoe controleer je het minteken van het antwoord?','De teller voor %ΔTO is min 2400. Deel door 20000, niet door 17600.','Formuleer de lokale regel en verklaar de grens ervan.',{target:true});
 }
 localRule(true);
 {
@@ -220,14 +220,14 @@ localRule(true);
  line(s,'Een gemeten Ev geldt niet automatisch bij elke prijs.',189,{size:39,bold:true,color:C.blue});
  line(s,'De omzetfactor is de prijsfactor × de hoeveelheidsfactor.',323,{size:37});
  table(s,[['Controle','Factoren','Omzetverandering'],['Nova','1,20 × 0,84 = 1,008','+0,8%'],['StreamNow','1,10 × 0,80 = 0,88','−12%']],60,459,1480,265,[370,650,460],35);
- notes(s,'50','Bij een grote stap vermenigvuldig je de twee veranderfactoren. Het gemeten Ev tussen twee prijzen is niet automatisch de lokale elasticiteit bij elke tussenliggende prijs. Daarom geeft een lokaal label geen universele garantie voor een eindige verandering. Bereken TO oud en TO nieuw rechtstreeks. Controle: Nova 1,008 maal 5000 = 5040, StreamNow 0,88 maal 20000 = 17600.','Waarom kan je voor de grote stap niet volstaan met de vuistregel?','Procentuele veranderingen simpel optellen geeft bij Nova plus 4% en bij StreamNow min 10%, beide onjuist.','Bepaal tot slot wat ontbreekt voor winst.',{target:true});
+ notes(s,'51','Bij een grote stap vermenigvuldig je de twee veranderfactoren. Het gemeten Ev tussen twee prijzen is niet automatisch de lokale elasticiteit bij elke tussenliggende prijs. Daarom geeft een lokaal label geen universele garantie voor een eindige verandering. Bereken TO oud en TO nieuw rechtstreeks. Controle: Nova 1,008 maal 5000 = 5040, StreamNow 0,88 maal 20000 = 17600.','Waarom kan je voor de grote stap niet volstaan met de vuistregel?','Procentuele veranderingen simpel optellen geeft bij Nova plus 4% en bij StreamNow min 10%, beide onjuist.','Bepaal tot slot wat ontbreekt voor winst.',{target:true});
 }
 {
  const s=slide('Opgave 7f: de winst is nog onbekend',{target:true});
  line(s,'Winst = TO − TK',202,{size:60,bold:true,color:C.blue});
  table(s,[['Je kent','Je mist'],['TO oud en TO nieuw','TK oud en TK nieuw']],60,385,1480,213,[740,740],39);
  line(s,'Zonder kosten vóór en na volgt geen zekere winstverandering.',722,{size:40,bold:true,color:C.orange});
- notes(s,'50','Bij Nova stijgt de omzet, bij StreamNow daalt zij. Voor beide ontbreekt de verandering van de totale kosten. Zonder TK oud en TK nieuw kun je de winst niet vergelijken. Kosten kunnen tegelijkertijd veranderen. Laat leerlingen ontbrekende eenheden en verklaringen in hun eigen antwoord aanvullen.','Welke gegevens zou je bij beide aanbieders nog opvragen?','Meer omzet is niet automatisch meer winst. Ook minder omzet bewijst zonder kosten geen dalende winst.','Laat de laatste overzichtsdia staan en laat het huiswerk noteren.',{target:true});
+ notes(s,'51','Bij Nova stijgt de omzet, bij StreamNow daalt zij. Voor beide ontbreekt de verandering van de totale kosten. Zonder TK oud en TK nieuw kun je de winst niet vergelijken. Kosten kunnen tegelijkertijd veranderen. Laat leerlingen ontbrekende eenheden en verklaringen in hun eigen antwoord aanvullen.','Welke gegevens zou je bij beide aanbieders nog opvragen?','Meer omzet is niet automatisch meer winst. Ook minder omzet bewijst zonder kosten geen dalende winst.','Laat de laatste overzichtsdia staan en laat het huiswerk noteren.',{target:true});
 }
 overview('Afsluiting / huiswerk',7);
 

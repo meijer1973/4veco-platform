@@ -3,33 +3,33 @@
   "title": "Inkomenselasticiteit en kruislingse elasticiteit",
   "type": "theory",
   "sourceEdition": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026",
-  "sourceCommit": "f2660032cf7e4e3bbab96cf32863d06a38bd74bc",
-  "platformBaseline": "17abbe86731a60efa8d7936180d0478bf6e58831",
+  "sourceCommit": "a8940a7a79e22857a3e306a91fe923c48c63e716",
+  "platformBaseline": "ac6f8e5320406aaf4906811b289ce98fcfa548c1",
   "sourceFiles": {
-    "bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md": "40440809dc4e3d4261ff15d15e05bf8b5396ec346be1f59df3037c4d71984cea",
-    "bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md": "c79150a148e39ad1609ad77712c0f26cc032a83a40106e4aa0096e8af1dbb07b",
+    "bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md": "050354fd8dd8194edfb296fdcd145381066d63a01725e56c681d19766faeffa7",
+    "bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md": "135327f9170110864cd3b849821db55c0be2d4a5838fcb69f7e6fc2083d71369",
     "bronnen/H2/2.2 Elasticiteit – antwoorden.md": "db35c4ad3af0e49d79b6fec45cb5312f28e043cd875840b33d853c1d28fa07f9",
-    "bronnen/H2/Docenten_en_bouwverantwoording.md": "eedc86d6a46f1271e338195c92a63977b5523030fee9ee9a7d02b26a5e74b7f5",
-    "boek/Boek_2_Compleet.pdf": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493"
+    "bronnen/H2/Docenten_en_bouwverantwoording.md": "008cf0d37c82f84a405b086463ee7468ce31596177c99f1d23f2f2c8da34f4b0",
+    "boek/Boek_2_Compleet.pdf": "23d0532a7804fb743f053608a814959c6f09c9259c27762b1dff5952556908d5"
   },
   "sourcePrintedPages": {
     "theory": [
-      52,
       53,
       54,
       55,
       56,
       57,
-      58
+      58,
+      59
     ],
-    "start": 59,
+    "start": 60,
     "basis": [
-      59,
-      60
+      60,
+      61
     ],
-    "independent": 61,
-    "target": 62,
-    "verification": "Complete book: printed p. 52–62 = physical pages 54–64; rendered printed footers inspected."
+    "independent": 62,
+    "target": 63,
+    "verification": "Complete book: printed p. 53–63 = physical pages 55–65; printed body page + 2 gives the physical PDF page."
   },
   "assignment": {
     "start": [
@@ -68,14 +68,14 @@
     "Functie invullen met gegeven eenheden; één factor wijzigen en vorige verandering terugzetten"
   ],
   "startSupport": {
-    "1": "Retrieval of percentages and simple substitution. Fragile knowledge: offer old-value formula and substitute-before-multiplication scaffold if needed. Chapter teacher guide lists Book 1 origin; §2.2.1 p. 37 demonstrates percentages. Re-teach both operations in slides 3–4 with authored data.",
-    "2": "First encounter with formal Ei, Ek and multi-variable ceteris paribus. Shared overview explicitly points to theory p. 53–56; notes direct 2a to definitions p. 53–54, 2b to scenarios p. 55–56. Return after teaching and before independent practice."
+    "1": "Retrieval of percentages and simple substitution. Fragile knowledge: offer old-value formula and substitute-before-multiplication scaffold if needed. Chapter teacher guide lists Book 1 origin; §2.2.1 p. 38 demonstrates percentages. Re-teach both operations in slides 3–4 with authored data.",
+    "2": "First encounter with formal Ei, Ek and multi-variable ceteris paribus. Shared overview explicitly points to theory p. 54–57; notes direct 2a to definitions p. 54–55, 2b to scenarios p. 56–57. Return after teaching and before independent practice."
   },
   "prerequisiteTrace": [
     {
       "operation": "Old-value percentage calculation, keep sign",
       "neededBy": "1a,4b,7b,8d",
-      "anchor": "§2.2.1 p. 37: same percentage formula and worked price/quantity calculation; chapter guide Samehang en voorkennis",
+      "anchor": "§2.2.1 p. 38: same percentage formula and worked price/quantity calculation; chapter guide Samehang en voorkennis",
       "lessonSupport": "Slide 3 refresh, slides 12 and 27 apply to function output"
     },
     {
@@ -87,25 +87,25 @@
     {
       "operation": "Choose denominator, retain signs and classify Ei/Ek",
       "neededBy": "2a,3,5ab,6,8abc",
-      "anchor": "New in §2.2.3 p. 52–54; previous §2.2.1 p. 36–38 teaches Ev only",
+      "anchor": "New in §2.2.3 p. 53–55; previous §2.2.1 p. 37–39 teaches Ev only",
       "lessonSupport": "Slides 2,5–8 explicitly teach Ei categories, boundaries, both Ek signs and a falling other price"
     },
     {
       "operation": "Change Y only, translate Q to percentages, calculate Ei",
       "neededBy": "2b,4b,7b,8d",
-      "anchor": "New formal scenario procedure §2.2.3 p. 55–56 and p. 58",
+      "anchor": "New formal scenario procedure §2.2.3 p. 56–57 and p. 59",
       "lessonSupport": "Slides 9–12; declared annual income remains annual; coefficients are not elasticities"
     },
     {
       "operation": "Reset Y before changing Pz; identify fixed variables and direction",
       "neededBy": "4c,7c,8e",
-      "anchor": "§2.2.3 p. 56 and p. 58 reset explicitly",
+      "anchor": "§2.2.3 p. 57 and p. 59 reset explicitly",
       "lessonSupport": "Slide 13 reset to original row, hold Px/Y, calculate new Q"
     },
     {
       "operation": "Separate studies cannot establish exact combined effect",
       "neededBy": "5cd",
-      "anchor": "Chapter teacher guide §2.2.3; p. 52 ceteris paribus and p. 56 single-factor warning",
+      "anchor": "Chapter teacher guide §2.2.3; p. 53 ceteris paribus and p. 57 single-factor warning",
       "lessonSupport": "Slide 14 separate authored studies with opposing directions, exact combined response not inferred"
     }
   ],
@@ -119,7 +119,7 @@
   },
   "targetCoverage": {
     "exercise": 8,
-    "page": 62,
+    "page": 63,
     "questions": "Complete preamble, all three sources, all subquestions a–e and points shown before first solution. Answers follow textbook model.",
     "answers": {
       "a": [
@@ -299,8 +299,10 @@
     24,
     28
   ],
-  "acceptedOutputHashes": {
-    "pptx": "da543a769dfd24005f1f325fa073cc6496049c090c83ac8daa8f9cf7667ed6f0",
-    "pdf": "6c3a7813afe7395199223113534fe4a829dcfc7f78c7799e74fdca4115944392"
+  "paginationRevision": {
+    "revision": "book2-presentation-pagination-20261001",
+    "sourceCommit": "a8940a7a79e22857a3e306a91fe923c48c63e716",
+    "previousPlatformCommit": "ac6f8e5320406aaf4906811b289ce98fcfa548c1",
+    "scope": "Current printed page references and Qv/Qa notation; assignments, economic values, goals, teaching examples and timing preserved."
   }
 }

@@ -175,4 +175,5 @@ reports/review-gates/book2-theory-signed-20260921/reference-proposals.json -text
 build-scripts/books/exercise-route-revision-pin.json -text
 build-scripts/books/book2-signed-revision-pin.json -text
 build-scripts/books/books34-signed-revision-pin.json -text
+build-scripts/books/books34-followups-revision-pin.json -text
 references/data/procedure-visual/procedure-templates.json -text

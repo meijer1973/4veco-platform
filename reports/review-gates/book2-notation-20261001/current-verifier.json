@@ -1,0 +1,81 @@
+{
+  "revision": "book2-notation-20261001",
+  "passed": true,
+  "bundles": [
+    {
+      "kind": "student",
+      "pages": 111,
+      "links": 101,
+      "bookmarks": 20,
+      "print": {
+        "printed_pages": [
+          1,
+          109
+        ],
+        "contents_references": 15,
+        "viewer_labels": "PASS"
+      }
+    },
+    {
+      "kind": "answers",
+      "pages": 58,
+      "links": 47,
+      "bookmarks": 129,
+      "print": {
+        "printed_pages": [
+          1,
+          56
+        ],
+        "contents_references": 3,
+        "viewer_labels": "PASS"
+      }
+    },
+    {
+      "kind": "teacher",
+      "pages": 19,
+      "links": 3,
+      "bookmarks": 64,
+      "print": {
+        "printed_pages": [
+          1,
+          17
+        ],
+        "contents_references": 3,
+        "viewer_labels": "PASS"
+      }
+    }
+  ],
+  "identical_assembled_chapter_pages": 182,
+  "links_checked": 151,
+  "overview": {
+    "h2-overzicht": 73,
+    "h3-overzicht": 110
+  },
+  "cover_geometry": "PASS",
+  "paragraph_exports": {
+    "pages": 197,
+    "links": 25,
+    "text_pixels_navigation": "PASS"
+  },
+  "theory_extract": {
+    "pages": 46,
+    "text_pixels_page_map": "PASS",
+    "path": "boek/Boek_2_Theorie_46_Herziene_Paginas.pdf",
+    "sha256": "547e641c2f460bad2f5fbb47a28bc562f2a37bc7406d9c116c86a958e43ff4f2"
+  },
+  "source_checks": {
+    "exercise_blocks": 114,
+    "retrieval_headings": 9,
+    "economic_payloads": "PASS (equivalent Dutch notation and SportLint fill-in columns only)",
+    "SchaalWerk_curve_points": 241,
+    "SportLint_MK": [
+      4,
+      4
+    ],
+    "SportLint_MO": [
+      9,
+      9
+    ],
+    "theory_extract_pages": 5
+  }
+}

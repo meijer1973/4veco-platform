@@ -1,0 +1,188 @@
+{
+  "status": "PASS",
+  "decks_rebuilt": 10,
+  "slides": 258,
+  "notes": 258,
+  "decks": [
+    {
+      "paragraph": "2.1.3",
+      "slides": 27,
+      "notes": 27,
+      "tables": 16,
+      "charts": 0,
+      "editable_charts": {
+        "ok": true,
+        "charts": 0,
+        "references": 0,
+        "cellsCompared": 0,
+        "workbooks": []
+      }
+    },
+    {
+      "paragraph": "2.1.4",
+      "slides": 24,
+      "notes": 24,
+      "tables": 10,
+      "charts": 4,
+      "editable_charts": {
+        "ok": true,
+        "charts": 4,
+        "references": 44,
+        "cellsCompared": 94,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx"
+        ]
+      }
+    },
+    {
+      "paragraph": "2.2.1",
+      "slides": 24,
+      "notes": 24,
+      "tables": 7,
+      "charts": 1,
+      "editable_charts": {
+        "ok": true,
+        "charts": 1,
+        "references": 2,
+        "cellsCompared": 4,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx"
+        ]
+      }
+    },
+    {
+      "paragraph": "2.2.2",
+      "slides": 26,
+      "notes": 26,
+      "tables": 14,
+      "charts": 2,
+      "editable_charts": {
+        "ok": true,
+        "charts": 2,
+        "references": 6,
+        "cellsCompared": 30,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx"
+        ]
+      }
+    },
+    {
+      "paragraph": "2.2.3",
+      "slides": 30,
+      "notes": 30,
+      "tables": 14,
+      "charts": 0,
+      "editable_charts": {
+        "ok": true,
+        "charts": 0,
+        "references": 0,
+        "cellsCompared": 0,
+        "workbooks": []
+      }
+    },
+    {
+      "paragraph": "2.2.4",
+      "slides": 23,
+      "notes": 23,
+      "tables": 11,
+      "charts": 0,
+      "editable_charts": {
+        "ok": true,
+        "charts": 0,
+        "references": 0,
+        "cellsCompared": 0,
+        "workbooks": []
+      }
+    },
+    {
+      "paragraph": "2.3.1",
+      "slides": 25,
+      "notes": 25,
+      "tables": 7,
+      "charts": 5,
+      "editable_charts": {
+        "ok": true,
+        "charts": 5,
+        "references": 152,
+        "cellsCompared": 246,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx"
+        ]
+      }
+    },
+    {
+      "paragraph": "2.3.2",
+      "slides": 27,
+      "notes": 27,
+      "tables": 7,
+      "charts": 5,
+      "editable_charts": {
+        "ok": true,
+        "charts": 5,
+        "references": 384,
+        "cellsCompared": 730,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx"
+        ]
+      }
+    },
+    {
+      "paragraph": "2.3.3",
+      "slides": 30,
+      "notes": 30,
+      "tables": 8,
+      "charts": 10,
+      "editable_charts": {
+        "ok": true,
+        "charts": 10,
+        "references": 190,
+        "cellsCompared": 288,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx",
+          "ppt/embeddings/chart-data-snapshot-007.xlsx",
+          "ppt/embeddings/chart-data-snapshot-008.xlsx",
+          "ppt/embeddings/chart-data-snapshot-009.xlsx",
+          "ppt/embeddings/chart-data-snapshot-010.xlsx"
+        ]
+      }
+    },
+    {
+      "paragraph": "2.3.4",
+      "slides": 22,
+      "notes": 22,
+      "tables": 9,
+      "charts": 6,
+      "editable_charts": {
+        "ok": true,
+        "charts": 6,
+        "references": 58,
+        "cellsCompared": 110,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx"
+        ]
+      }
+    }
+  ]
+}

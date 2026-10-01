@@ -1,0 +1,3432 @@
+{
+  "result": "PASS: preservation and source/artifact page-reference audit only; no new deck acceptance",
+  "lesson_base": "9b8304d5031cafac936a56281e144573a25fbbc9",
+  "platform_base": "34464fb6091f721f7a87e8d1bb3165f758770799",
+  "protected_artifacts": [
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – presentatie.pdf",
+      "sha256": "e522d85d3b9636351c43bab21a6107943327f134a74329d89a7c821585d4c100",
+      "baseline_git_blob": "ee1efe34d85c1affd62ae45174068cf04191dc4c"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – presentatie.pptx",
+      "sha256": "c89759165a2ecf24fbfadcff12eeab5c3b1b96eee5821e8ecf099bb93b225c84",
+      "baseline_git_blob": "eadfff6a44c61d476c080fbb973816e14d0341c8"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/evidence/2.1.1-presentation.md",
+      "sha256": "2d129972f0585634e24e73ec9bfc881daa413d9c99a6eeac51416069e7bc9bbf",
+      "baseline_git_blob": "de5b021070eb5d7248fe93c9abc4b31923c7ae41"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – presentatie.pdf",
+      "sha256": "477a9702b22be5fefd6638cee1c8a066167c9d222313e4a058ddce099e9e6a04",
+      "baseline_git_blob": "ba73b5179666d9408308020b9f161e70f6f9428e"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – presentatie.pptx",
+      "sha256": "692d573ac67f647e5455f21908ba38544f2020f5ccfd40170dd76c54d3c890b8",
+      "baseline_git_blob": "c863912811b09ea52ec6124b50b4a0a9b4f80341"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/evidence/2.1.2-presentation.md",
+      "sha256": "3157c1a6e403a2c383953a7cf29d0741193d953ddac2094193bf316adaa8656e",
+      "baseline_git_blob": "0eb73bca109bccc7e250e62840b0b422493b82fb"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – presentatie.pdf",
+      "sha256": "f4f78ec14282b277747c3a83ec36bdb4805623fd606f5bf5484a354de174282b",
+      "baseline_git_blob": "17c07f11d75ec8dff9d6236aa18822da45c2bae8"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – presentatie.pptx",
+      "sha256": "1d975d886afea3ca2ebbcfc6bac6133f841962f6f4384e650f163a8e29bc6fd0",
+      "baseline_git_blob": "50860c914156d63882b9c0852b404732b918d254"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/evidence/2.1.3-presentation.md",
+      "sha256": "7fdc385668df21e16d0d10a8226808cc1ee7324d0ba2fa017d86fc4b5362b0d2",
+      "baseline_git_blob": "4859ffde92a03bab8a9ead6e198ab49e415ad582"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – presentatie.pdf",
+      "sha256": "b32ae5f042ccd580ec5206ab48bf5657c60d00b95062069645ac4020dff3b09e",
+      "baseline_git_blob": "92733b7d281a71b98dc1e09b89966f6457bf4290"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – presentatie.pptx",
+      "sha256": "7731c6d7a1840431404dd967e6515c88cf9d3a7c121dce9be2bcd960abf9bae7",
+      "baseline_git_blob": "787643aceec8ff8c7bfec74dfda9b874e6a188a4"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.4 Gemengde opgaven/evidence/2.1.4-presentation.md",
+      "sha256": "0eb46407f289ea151cc5ec8a2b7953e80e79fa07c1837844ca025929b77393ef",
+      "baseline_git_blob": "dc4e78e35dfe2efb6c34540f9f3bc5a4bd352101"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – presentatie.pdf",
+      "sha256": "10bbbe089572259d212a9af7aae9a71f974b9daba990c491466dbe14d6cde02e",
+      "baseline_git_blob": "e9db7b27d2fb95e3c8be50c2039b0f3128f3eb28"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – presentatie.pptx",
+      "sha256": "fa46600ade32cb54259657a6c96e7fc0f20eba1a633e12ecac0529303b1b8e35",
+      "baseline_git_blob": "08f69bf6975cd8fb9ce1f1e2331efe8e3f35ee46"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.1 Prijselasticiteit/evidence/2.2.1-presentation.md",
+      "sha256": "32d4eabd883ccc2cd74b93125fbd5c797b0b6ec93f5804f2f1cb095fbf7c61bd",
+      "baseline_git_blob": "541d1d2601441361dacd1c568facf1ce01c74350"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – presentatie.pdf",
+      "sha256": "07b667bac12a95a90441a8789dde4f0545ae7cbd38115b12c1fa79f8549af2ee",
+      "baseline_git_blob": "0b799b7220244f9ae11255206f9dbc97ac8826a5"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – presentatie.pptx",
+      "sha256": "8e9f5f5217d061a76b0a98c7e84459e6d3951ee46dc2bcbf00add162ab2dbc27",
+      "baseline_git_blob": "364cbfac30a9a7acaee4c7e900cf085ec80157b1"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.2 Elasticiteit en omzet/evidence/2.2.2-presentation.md",
+      "sha256": "97266cd77ea659e86232b4bb61bb955c99fd96ed5050178c40feabc156882292",
+      "baseline_git_blob": "331e19a21ee7b8ff24260c0de9da67f486ccc786"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – presentatie.pdf",
+      "sha256": "6c3a7813afe7395199223113534fe4a829dcfc7f78c7799e74fdca4115944392",
+      "baseline_git_blob": "663506340e157eae6f1f1d8cc559b49afe2ec529"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – presentatie.pptx",
+      "sha256": "da543a769dfd24005f1f325fa073cc6496049c090c83ac8daa8f9cf7667ed6f0",
+      "baseline_git_blob": "247301a79c942eac6192fbd652bc302b0cecc53f"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit/evidence/2.2.3-presentation.md",
+      "sha256": "a526da7c4c3657dc66e71296d90ebb0ea44e1f72e8e4a3ed95e0976969a97020",
+      "baseline_git_blob": "a4471c3b4344637c3e6140577bf1280f3e7e7853"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.4 Gemengde opgaven/2.2.4 Gemengde opgaven – presentatie.pdf",
+      "sha256": "207072891553d406a542549fe9c27ba01e4643f7a894a21b26eec697750da325",
+      "baseline_git_blob": "251897efb18621922685e9537f3055d7b8992171"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.4 Gemengde opgaven/2.2.4 Gemengde opgaven – presentatie.pptx",
+      "sha256": "40b58dd23408a0d0dae6dc0517520360b4326b9836fc5e024a3f2735fb697900",
+      "baseline_git_blob": "f858294cd9824504a520a0c4e657fbf648fdeefb"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.4 Gemengde opgaven/evidence/2.2.4-presentation.md",
+      "sha256": "ed3cd2fbcddd981baf17c99c4584244dfc25240ac4b5bfa14d8d174bb58f58c9",
+      "baseline_git_blob": "d0500df7cfc71162fe13f4f463241a5a50a429e5"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – presentatie.pdf",
+      "sha256": "25b91fa2302cc71f3af839ffee596a2b4910beb9454f7fddc2d36eb45a97085a",
+      "baseline_git_blob": "6681a7d8a61b9968f6f19cdcbaaa039b3683cc70"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – presentatie.pptx",
+      "sha256": "4bc9c938de81c3f94d09783a9fb9ec7c6462ae62e01243608b86d8578053df4a",
+      "baseline_git_blob": "15fc16680f11682d2cf781a8700f6f86270e60bc"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/evidence/2.3.1-presentation.md",
+      "sha256": "74ca8eae756b439f5fe5cae4a95c603bc90e27ba9ef8e50421dbf6c1e8fbf2bb",
+      "baseline_git_blob": "309a5fd26fd1632470788279e8a34226ab8b7ea2"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – presentatie.pdf",
+      "sha256": "b613c73fbe27bd24cb03fa20fa6c7615d70dce84ab8ac62c6c00d3c471583593",
+      "baseline_git_blob": "4805364f4c51c501a1436f41f9d4453059d63df3"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – presentatie.pptx",
+      "sha256": "04c2bc7a11b774dc6d1bbffa91bf6a96e1e276fb49504e8580639c4a036fb4a9",
+      "baseline_git_blob": "862544252ef8897733608b25b75d47b08ad52bfa"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/evidence/2.3.2-presentation.md",
+      "sha256": "d1958541b9dcf7e5ab09591e3a9b508b991aa465bd96dc83d69b0ea661c38e4a",
+      "baseline_git_blob": "bbf3e6f2132ccf6e5228a295ba5f66ff5c26a496"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/2.3.3 Pareto-efficiëntie en welvaartsverlies – presentatie.pdf",
+      "sha256": "a91de8bcd1d37e9ec916cc0861e0e4289e83eb802be67481f80b5925327dce24",
+      "baseline_git_blob": "8bd83d43ffdead6c3636fa32dfe708e58f77c29d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/2.3.3 Pareto-efficiëntie en welvaartsverlies – presentatie.pptx",
+      "sha256": "395df262431dc1c9765a6e4691bfc91856da40f054076409c89149c9c4be8045",
+      "baseline_git_blob": "bcf36c061ecedf1849f8e5278dc1b55a22fa449a"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/evidence/2.3.3-presentation.md",
+      "sha256": "224505cdc20d2b632e0c9f0ec19fcbdd06ff5eb13ce1d87d24fe66d93541ed4f",
+      "baseline_git_blob": "1cf412cd2790f7667e2ae9c2a4b2b2a3dad42905"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/2.3.4 Gemengde opgaven – presentatie.pdf",
+      "sha256": "5fe6a18408a7b2fc97f361e0afb697bd7af51cbbc3e6434abbb17913c4694e9a",
+      "baseline_git_blob": "919ebb6f2522609866c25ce32d87ea1be68432f9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/2.3.4 Gemengde opgaven – presentatie.pptx",
+      "sha256": "84a14b4a01ec1067961eccc2282a42bf583a63b8f2e5d2e2fe293dd932a51fae",
+      "baseline_git_blob": "29f5abb3fa4ae83c936855dd2413dcac1e707f87"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/evidence/2.3.4-presentation.md",
+      "sha256": "5b96b91bb1b05bff8ef14a6b65584513b37d82401fd7cefc3d47f347c50c543d",
+      "baseline_git_blob": "82ca1f197d45549d366e56eccfbb40f7404c88cc"
+    }
+  ],
+  "protected_sources": [
+    {
+      "path": "build-scripts/content/book-2/presentation-211.mjs",
+      "sha256": "b08d40d13c112ebb1722a80585cd9570ad64684bf53528814b4399c32852a7a9"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-211.manifest.json",
+      "sha256": "58fa01671768fed8d8738d918fb81497f9583bb627d7671f0dcd5d78cc1f2a0d"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-212.mjs",
+      "sha256": "7b7fc5011c1848d70d61252f06ac98f421f960ca30583308b4024e8e59c8058f"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-212.manifest.json",
+      "sha256": "c4a9c9ff6c5560ef416519ddd42387dff85924ea70d6d58480c9a7b6220fc735"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-213.mjs",
+      "sha256": "74951dbaf8123c060f0bb3c2e63df6a7f8c5f255d3755b4dad2bbd25592b2cf6"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-213.manifest.json",
+      "sha256": "c78539cbb9587f7516380ca2ec27c12209473a9a3ea2e0cd5d2a0253ad4bf4ae"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-214.mjs",
+      "sha256": "c04910065af89c2cd426f4a40ec6c690786dce6efe5307308f090f7cf106363d"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-214.manifest.json",
+      "sha256": "535d50dcd3525a8342c22e7835900c2bdd023cd9437b266dd8b062706ac9f02f"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-221.mjs",
+      "sha256": "253bc11abc547f9349255f261843b889a0571d9a55d6732701f8271ba8c2d11a"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-221.manifest.json",
+      "sha256": "cf852b73dfd71915208fda0e916fdced7e17edc21f119a0d6e751de8c27af7a4"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-222.mjs",
+      "sha256": "9369674e1413b7c6da8318baea532528583efa0a9edae4315db634d4e3c0eccc"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-222.manifest.json",
+      "sha256": "d1a717381e8040ae5c3a044154339f67d800e7cc124b7ab4afcedfb52ce0ae32"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-223.mjs",
+      "sha256": "f8055230924f2af352ef8695f0058a0f970694361f861deb1ac48756800edaed"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-223.manifest.json",
+      "sha256": "0bab76a98374b0305c312bf47826247f317a15fcbeb9150f2b76231f93c4fa3d"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-224.mjs",
+      "sha256": "14a4805d96086c3e4f564b7ae9150ead41d38da8b8e3eba98ba6065d1044e2ba"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-224.manifest.json",
+      "sha256": "705d2faabfa6cdb1fb12077b64c287f7e832f8de35fb02bb19f39427302d94da"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-231.mjs",
+      "sha256": "6b5b303931df73c01006b439835836c9d03e4b54363287796b0e5db886d6349b"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-231.manifest.json",
+      "sha256": "727d601f8f6c2419f62427d0c14576c12ca641eec175cfae4a3dc867dba44e1e"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-232.mjs",
+      "sha256": "86a729c0f87b5596f7aeadd0e141bc7ba41223c1105c0d55cb8e711ee0e13d23"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-232.manifest.json",
+      "sha256": "f56c559a2166ef0afac7ddeb3a902b067b46988685a7d53ff9bf1733eaf6ae84"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-233.mjs",
+      "sha256": "77a0654203c55254b1af9355c267490b55f6aa13361deab0172b46571e7f607a"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-233.manifest.json",
+      "sha256": "c48e63e51b72ffdd1a455b1ecf425b244f96954f7625b318af51078b97eae634"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-234.mjs",
+      "sha256": "3eef4aee6baed6f45b162866ba46bcf149d85c20286deae3b5d7537f8c320552"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-234.manifest.json",
+      "sha256": "c2207cc2f779eb630e9fece7de30a8b26bbded7696f1e9d4473dfbdb1dad7a61"
+    }
+  ],
+  "decks": [
+    {
+      "paragraph": "2.1.1",
+      "slides": 23,
+      "pdf_page_references": [
+        {
+          "slide": 1,
+          "references": [
+            "Pagina 6 · Opgaven 1 en 2",
+            "p. 2–4"
+          ]
+        },
+        {
+          "slide": 12,
+          "references": [
+            "Pagina 6 · Opgaven 1 en 2",
+            "p. 2–4"
+          ]
+        },
+        {
+          "slide": 13,
+          "references": [
+            "Boekpagina 8"
+          ]
+        },
+        {
+          "slide": 14,
+          "references": [
+            "Boekpagina 8"
+          ]
+        },
+        {
+          "slide": 15,
+          "references": [
+            "Boekpagina 8"
+          ]
+        },
+        {
+          "slide": 16,
+          "references": [
+            "Boekpagina 8"
+          ]
+        },
+        {
+          "slide": 17,
+          "references": [
+            "Boekpagina 8"
+          ]
+        },
+        {
+          "slide": 18,
+          "references": [
+            "Boekpagina 8"
+          ]
+        },
+        {
+          "slide": 19,
+          "references": [
+            "Boekpagina 8"
+          ]
+        },
+        {
+          "slide": 20,
+          "references": [
+            "Boekpagina 8"
+          ]
+        },
+        {
+          "slide": 21,
+          "references": [
+            "Boekpagina 8"
+          ]
+        },
+        {
+          "slide": 23,
+          "references": [
+            "Pagina 6 · Opgaven 1 en 2",
+            "p. 2–4"
+          ]
+        }
+      ],
+      "notes_page_references": [
+        {
+          "part": "ppt/notesSlides/notesSlide1.xml",
+          "references": [
+            " 1–2 en basis 3 staan op pagina 6; basis 4 en zelfstandig 5–6 staan op pagina 7; doel 7 op pa",
+            "e en variabele kosten op p. 2 en over gemiddelde kosten op p. 4. Laat leerlingen bij deze",
+            "t gedrukte paginanummer: pagina 6 is de achtste fysieke pagina van het complete PDF-bestand. ",
+            "september 2026, gedrukte pagina 6–8. https://github.com/meijer1973/4veco-lessen/blob/f6518f513d"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide10.xml",
+          "references": [
+            "september 2026, gedrukte pagina 3–4. https://github.com/meijer1973/4veco-lessen/blob/f6518f513d"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide11.xml",
+          "references": [
+            "september 2026, gedrukte pagina 3–4. https://github.com/meijer1973/4veco-lessen/blob/f6518f513d"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide12.xml",
+          "references": [
+            " 1–2 en basis 3 staan op pagina 6; basis 4 en zelfstandig 5–6 staan op pagina 7; doel 7 op pa",
+            "e en variabele kosten op p. 2 en over gemiddelde kosten op p. 4. Laat leerlingen bij deze",
+            "t gedrukte paginanummer: pagina 6 is de achtste fysieke pagina van het complete PDF-bestand. ",
+            "september 2026, gedrukte pagina 6–8. https://github.com/meijer1973/4veco-lessen/blob/f6518f513d"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide13.xml",
+          "references": [
+            "september 2026, gedrukte pagina 8. https://github.com/meijer1973/4veco-lessen/blob/f6518f513d"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide14.xml",
+          "references": [
+            "september 2026, gedrukte pagina 8. https://github.com/meijer1973/4veco-lessen/blob/f6518f513d"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide15.xml",
+          "references": [
+            "september 2026, gedrukte pagina 8. https://github.com/meijer1973/4veco-lessen/blob/f6518f513d"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide16.xml",
+          "references": [
+            "september 2026, gedrukte pagina 8. https://github.com/meijer1973/4veco-lessen/blob/f6518f513d"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide17.xml",
+          "references": [
+            "september 2026, gedrukte pagina 8. https://github.com/meijer1973/4veco-lessen/blob/f6518f513d"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide18.xml",
+          "references": [
+            "september 2026, gedrukte pagina 8. https://github.com/meijer1973/4veco-lessen/blob/f6518f513d"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide19.xml",
+          "references": [
+            "september 2026, gedrukte pagina 8. https://github.com/meijer1973/4veco-lessen/blob/f6518f513d"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide2.xml",
+          "references": [
+            "september 2026, gedrukte pagina 2. https://github.com/meijer1973/4veco-lessen/blob/f6518f513d"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide20.xml",
+          "references": [
+            "september 2026, gedrukte pagina 8. https://github.com/meijer1973/4veco-lessen/blob/f6518f513d"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide21.xml",
+          "references": [
+            "september 2026, gedrukte pagina 8. https://github.com/meijer1973/4veco-lessen/blob/f6518f513d"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide22.xml",
+          "references": [
+            "september 2026, gedrukte pagina 8. https://github.com/meijer1973/4veco-lessen/blob/f6518f513d"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide23.xml",
+          "references": [
+            " 1–2 en basis 3 staan op pagina 6; basis 4 en zelfstandig 5–6 staan op pagina 7; doel 7 op pa",
+            "e en variabele kosten op p. 2 en over gemiddelde kosten op p. 4. Laat leerlingen bij deze",
+            "t gedrukte paginanummer: pagina 6 is de achtste fysieke pagina van het complete PDF-bestand. ",
+            "september 2026, gedrukte pagina 6–8. https://github.com/meijer1973/4veco-lessen/blob/f6518f513d"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide3.xml",
+          "references": [
+            "september 2026, gedrukte pagina 2. https://github.com/meijer1973/4veco-lessen/blob/f6518f513d"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide4.xml",
+          "references": [
+            "september 2026, gedrukte pagina 3. https://github.com/meijer1973/4veco-lessen/blob/f6518f513d"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide5.xml",
+          "references": [
+            "september 2026, gedrukte pagina 3. https://github.com/meijer1973/4veco-lessen/blob/f6518f513d"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide6.xml",
+          "references": [
+            "september 2026, gedrukte pagina 3. https://github.com/meijer1973/4veco-lessen/blob/f6518f513d"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide7.xml",
+          "references": [
+            "september 2026, gedrukte pagina 4. https://github.com/meijer1973/4veco-lessen/blob/f6518f513d"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide8.xml",
+          "references": [
+            "september 2026, gedrukte pagina 4. https://github.com/meijer1973/4veco-lessen/blob/f6518f513d"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide9.xml",
+          "references": [
+            "september 2026, gedrukte pagina 4. https://github.com/meijer1973/4veco-lessen/blob/f6518f513d"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph": "2.1.2",
+      "slides": 28,
+      "pdf_page_references": [
+        {
+          "slide": 1,
+          "references": [
+            "Pagina 14 · Opgaven 1 en 2",
+            "p. 10–11"
+          ]
+        },
+        {
+          "slide": 14,
+          "references": [
+            "Pagina 14 · Opgaven 1 en 2",
+            "p. 10–11"
+          ]
+        },
+        {
+          "slide": 15,
+          "references": [
+            "Boekpagina 17"
+          ]
+        },
+        {
+          "slide": 16,
+          "references": [
+            "Boekpagina 17"
+          ]
+        },
+        {
+          "slide": 17,
+          "references": [
+            "Boekpagina 17"
+          ]
+        },
+        {
+          "slide": 18,
+          "references": [
+            "Boekpagina 17"
+          ]
+        },
+        {
+          "slide": 19,
+          "references": [
+            "Boekpagina 17"
+          ]
+        },
+        {
+          "slide": 20,
+          "references": [
+            "Boekpagina 17"
+          ]
+        },
+        {
+          "slide": 21,
+          "references": [
+            "Boekpagina 17"
+          ]
+        },
+        {
+          "slide": 22,
+          "references": [
+            "Boekpagina 17"
+          ]
+        },
+        {
+          "slide": 23,
+          "references": [
+            "Boekpagina 17"
+          ]
+        },
+        {
+          "slide": 24,
+          "references": [
+            "Boekpagina 17"
+          ]
+        },
+        {
+          "slide": 25,
+          "references": [
+            "Boekpagina 17"
+          ]
+        },
+        {
+          "slide": 26,
+          "references": [
+            "Boekpagina 17"
+          ]
+        },
+        {
+          "slide": 28,
+          "references": [
+            "Pagina 14 · Opgaven 1 en 2",
+            "p. 10–11"
+          ]
+        }
+      ],
+      "notes_page_references": [
+        {
+          "part": "ppt/notesSlides/notesSlide1.xml",
+          "references": [
+            "dracht. Start: 1 en 2 op pagina 14. Basis: alle begeleide opgaven 3, 4 en 5 op pagina 14–16. Z",
+            "elfstandig: 6 en 7 op pagina 16. Doel: 8 op pagina 17. Huiswerk: opgaven 3, 4, 5, 6, 7 en 8",
+            "betekenis en formules op p. 10–11. Laat leerlingen bij deze verkenning aanwijzen welke uitleg",
+            " 14 staat op fysieke PDF-pagina 16. Omzet is nog geen winst.  Overgang: Ga door naar de volgen",
+            "september 2026, gedrukte pagina 14–17. https://github.com/meijer1973/4veco-lessen/blob/ba79232a2c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide10.xml",
+          "references": [
+            "september 2026, gedrukte pagina 12–13. https://github.com/meijer1973/4veco-lessen/blob/ba79232a2c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide11.xml",
+          "references": [
+            "september 2026, gedrukte pagina 12–13. https://github.com/meijer1973/4veco-lessen/blob/ba79232a2c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide12.xml",
+          "references": [
+            "september 2026, gedrukte pagina 11, 13. https://github.com/meijer1973/4veco-lessen/blob/ba7923"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide13.xml",
+          "references": [
+            "september 2026, gedrukte pagina 11, 13. https://github.com/meijer1973/4veco-lessen/blob/ba7923"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide14.xml",
+          "references": [
+            "werken. Start: 1 en 2 op pagina 14. Basis: alle begeleide opgaven 3, 4 en 5 op pagina 14–16. Z",
+            "elfstandig: 6 en 7 op pagina 16. Doel: 8 op pagina 17. Huiswerk: opgaven 3, 4, 5, 6, 7 en 8",
+            "betekenis en formules op p. 10–11. Laat leerlingen bij deze verkenning aanwijzen welke uitleg",
+            " 14 staat op fysieke PDF-pagina 16. Omzet is nog geen winst.  Overgang: Ga door naar de volgen",
+            "september 2026, gedrukte pagina 14–17. https://github.com/meijer1973/4veco-lessen/blob/ba79232a2c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide15.xml",
+          "references": [
+            "september 2026, gedrukte pagina 17. https://github.com/meijer1973/4veco-lessen/blob/ba79232a2c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide16.xml",
+          "references": [
+            "september 2026, gedrukte pagina 17. https://github.com/meijer1973/4veco-lessen/blob/ba79232a2c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide17.xml",
+          "references": [
+            "september 2026, gedrukte pagina 17. https://github.com/meijer1973/4veco-lessen/blob/ba79232a2c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide18.xml",
+          "references": [
+            "september 2026, gedrukte pagina 17. https://github.com/meijer1973/4veco-lessen/blob/ba79232a2c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide19.xml",
+          "references": [
+            "september 2026, gedrukte pagina 17. https://github.com/meijer1973/4veco-lessen/blob/ba79232a2c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide2.xml",
+          "references": [
+            "september 2026, gedrukte pagina 10–13. https://github.com/meijer1973/4veco-lessen/blob/ba79232a2c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide20.xml",
+          "references": [
+            "september 2026, gedrukte pagina 17. https://github.com/meijer1973/4veco-lessen/blob/ba79232a2c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide21.xml",
+          "references": [
+            "september 2026, gedrukte pagina 17. https://github.com/meijer1973/4veco-lessen/blob/ba79232a2c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide22.xml",
+          "references": [
+            "september 2026, gedrukte pagina 17. https://github.com/meijer1973/4veco-lessen/blob/ba79232a2c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide23.xml",
+          "references": [
+            "september 2026, gedrukte pagina 17. https://github.com/meijer1973/4veco-lessen/blob/ba79232a2c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide24.xml",
+          "references": [
+            "september 2026, gedrukte pagina 17. https://github.com/meijer1973/4veco-lessen/blob/ba79232a2c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide25.xml",
+          "references": [
+            "september 2026, gedrukte pagina 17. https://github.com/meijer1973/4veco-lessen/blob/ba79232a2c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide26.xml",
+          "references": [
+            "september 2026, gedrukte pagina 17. https://github.com/meijer1973/4veco-lessen/blob/ba79232a2c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide27.xml",
+          "references": [
+            "september 2026, gedrukte pagina 17. https://github.com/meijer1973/4veco-lessen/blob/ba79232a2c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide28.xml",
+          "references": [
+            "iswerk. Start: 1 en 2 op pagina 14. Basis: alle begeleide opgaven 3, 4 en 5 op pagina 14–16. Z",
+            "elfstandig: 6 en 7 op pagina 16. Doel: 8 op pagina 17. Huiswerk: opgaven 3, 4, 5, 6, 7 en 8",
+            "betekenis en formules op p. 10–11. Laat leerlingen bij deze verkenning aanwijzen welke uitleg",
+            " 14 staat op fysieke PDF-pagina 16. Omzet is nog geen winst.  Overgang: Laat het huiswerk in d",
+            "september 2026, gedrukte pagina 14–17. https://github.com/meijer1973/4veco-lessen/blob/ba79232a2c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide3.xml",
+          "references": [
+            "september 2026, gedrukte pagina 10, 13. https://github.com/meijer1973/4veco-lessen/blob/ba7923"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide4.xml",
+          "references": [
+            "september 2026, gedrukte pagina 11, 13. https://github.com/meijer1973/4veco-lessen/blob/ba7923"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide5.xml",
+          "references": [
+            "september 2026, gedrukte pagina 11. https://github.com/meijer1973/4veco-lessen/blob/ba79232a2c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide6.xml",
+          "references": [
+            "september 2026, gedrukte pagina 11, 13. https://github.com/meijer1973/4veco-lessen/blob/ba7923"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide7.xml",
+          "references": [
+            "september 2026, gedrukte pagina 11, 13. https://github.com/meijer1973/4veco-lessen/blob/ba7923"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide8.xml",
+          "references": [
+            "september 2026, gedrukte pagina 12–13. https://github.com/meijer1973/4veco-lessen/blob/ba79232a2c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide9.xml",
+          "references": [
+            "september 2026, gedrukte pagina 12–13. https://github.com/meijer1973/4veco-lessen/blob/ba79232a2c"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph": "2.1.3",
+      "slides": 27,
+      "pdf_page_references": [
+        {
+          "slide": 1,
+          "references": [
+            "Pagina 23 · Opgaven 1 en 2",
+            "p. 19–20"
+          ]
+        },
+        {
+          "slide": 14,
+          "references": [
+            "Pagina 23 · Opgaven 1 en 2",
+            "p. 19–20"
+          ]
+        },
+        {
+          "slide": 15,
+          "references": [
+            "Boekpagina 26"
+          ]
+        },
+        {
+          "slide": 16,
+          "references": [
+            "Boekpagina 26"
+          ]
+        },
+        {
+          "slide": 17,
+          "references": [
+            "Boekpagina 26"
+          ]
+        },
+        {
+          "slide": 18,
+          "references": [
+            "Boekpagina 26"
+          ]
+        },
+        {
+          "slide": 19,
+          "references": [
+            "Boekpagina 26"
+          ]
+        },
+        {
+          "slide": 20,
+          "references": [
+            "Boekpagina 26"
+          ]
+        },
+        {
+          "slide": 21,
+          "references": [
+            "Boekpagina 26"
+          ]
+        },
+        {
+          "slide": 22,
+          "references": [
+            "Boekpagina 26"
+          ]
+        },
+        {
+          "slide": 23,
+          "references": [
+            "Boekpagina 26"
+          ]
+        },
+        {
+          "slide": 24,
+          "references": [
+            "Boekpagina 26"
+          ]
+        },
+        {
+          "slide": 25,
+          "references": [
+            "Boekpagina 26"
+          ]
+        },
+        {
+          "slide": 26,
+          "references": [
+            "Boekpagina 26"
+          ]
+        },
+        {
+          "slide": 27,
+          "references": [
+            "Pagina 23 · Opgaven 1 en 2",
+            "p. 19–20"
+          ]
+        }
+      ],
+      "notes_page_references": [
+        {
+          "part": "ppt/notesSlides/notesSlide1.xml",
+          "references": [
+            "tartopdracht. Start 1–2: pagina 23. Basis 3–4: pagina 23–24. Zelfstandig 5–6: pagina 24–25. Do",
+            "el 7: pagina 26. Huiswerk 3, 4, 5, 6 en 7 maken en nakijken. Denkertje 8 en",
+            "nitie en tabelstappen op p. 19–20. Laat leerlingen bij deze verkenning aanwijzen welke uitleg",
+            "atuitgave 2026, gedrukte pagina 23–26. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide10.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 21–22. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide11.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 19, 21. https://github.com/meijer1973/4veco-lessen/blob/f26600"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide12.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 19–21. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide13.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 19–21. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide14.xml",
+          "references": [
+            "andig werken. Start 1–2: pagina 23. Basis 3–4: pagina 23–24. Zelfstandig 5–6: pagina 24–25. Do",
+            "el 7: pagina 26. Huiswerk 3, 4, 5, 6 en 7 maken en nakijken. Denkertje 8 en",
+            "nitie en tabelstappen op p. 19–20. Laat leerlingen bij deze verkenning aanwijzen welke uitleg",
+            "atuitgave 2026, gedrukte pagina 23–26. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide15.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 26. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide16.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 26. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide17.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 26. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide18.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 26. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide19.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 26. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide2.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 19–22. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide20.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 26. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide21.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 26. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide22.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 26. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide23.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 26. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide24.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 26. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide25.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 26. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide26.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 26. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide27.xml",
+          "references": [
+            "g / huiswerk. Start 1–2: pagina 23. Basis 3–4: pagina 23–24. Zelfstandig 5–6: pagina 24–25. Do",
+            "el 7: pagina 26. Huiswerk 3, 4, 5, 6 en 7 maken en nakijken. Denkertje 8 en",
+            "nitie en tabelstappen op p. 19–20. Laat leerlingen bij deze verkenning aanwijzen welke uitleg",
+            "atuitgave 2026, gedrukte pagina 23–26. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide3.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 19–20. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide4.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 20, 22. https://github.com/meijer1973/4veco-lessen/blob/f26600"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide5.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 22. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide6.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 19–20. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide7.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 20, 22. https://github.com/meijer1973/4veco-lessen/blob/f26600"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide8.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 20. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide9.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 21–22. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph": "2.1.4",
+      "slides": 24,
+      "pdf_page_references": [
+        {
+          "slide": 1,
+          "references": [
+            "Pagina 29"
+          ]
+        },
+        {
+          "slide": 8,
+          "references": [
+            "Pagina 29"
+          ]
+        },
+        {
+          "slide": 9,
+          "references": [
+            "Boekpagina 32–33"
+          ]
+        },
+        {
+          "slide": 10,
+          "references": [
+            "Boekpagina 32–33"
+          ]
+        },
+        {
+          "slide": 11,
+          "references": [
+            "Boekpagina 32–33"
+          ]
+        },
+        {
+          "slide": 12,
+          "references": [
+            "Boekpagina 32–33"
+          ]
+        },
+        {
+          "slide": 13,
+          "references": [
+            "Boekpagina 32–33"
+          ]
+        },
+        {
+          "slide": 14,
+          "references": [
+            "Boekpagina 32–33"
+          ]
+        },
+        {
+          "slide": 15,
+          "references": [
+            "Boekpagina 32–33"
+          ]
+        },
+        {
+          "slide": 16,
+          "references": [
+            "Boekpagina 32–33"
+          ]
+        },
+        {
+          "slide": 17,
+          "references": [
+            "Boekpagina 32–33"
+          ]
+        },
+        {
+          "slide": 18,
+          "references": [
+            "Boekpagina 32–33"
+          ]
+        },
+        {
+          "slide": 19,
+          "references": [
+            "Boekpagina 32–33"
+          ]
+        },
+        {
+          "slide": 20,
+          "references": [
+            "Boekpagina 32–33"
+          ]
+        },
+        {
+          "slide": 21,
+          "references": [
+            "Boekpagina 32–33"
+          ]
+        },
+        {
+          "slide": 22,
+          "references": [
+            "Boekpagina 32–33"
+          ]
+        },
+        {
+          "slide": 24,
+          "references": [
+            "Pagina 29"
+          ]
+        }
+      ],
+      "notes_page_references": [
+        {
+          "part": "ppt/notesSlides/notesSlide1.xml",
+          "references": [
+            "t. Start met opgave 1 op pagina 29. Deze gemengde paragraaf heeft geen afzonderlijke begeleide",
+            "n met 1–4 naar doel 5 op pagina 32–33. Bespreek SmoothBox omdat deze echte doeloefening bronselec",
+            "ukte nummer 29, niet PDF-pagina 31.  Overgang: Ga door naar de volgende lesfase wanneer de kla",
+            "september 2026, gedrukte pagina 29–34. https://github.com/meijer1973/4veco-lessen/blob/08d7fd2783"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide10.xml",
+          "references": [
+            "september 2026, gedrukte pagina 32. https://github.com/meijer1973/4veco-lessen/blob/08d7fd2783"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide11.xml",
+          "references": [
+            "september 2026, gedrukte pagina 32. https://github.com/meijer1973/4veco-lessen/blob/08d7fd2783"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide12.xml",
+          "references": [
+            "september 2026, gedrukte pagina 33. https://github.com/meijer1973/4veco-lessen/blob/08d7fd2783"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide13.xml",
+          "references": [
+            "september 2026, gedrukte pagina 33. https://github.com/meijer1973/4veco-lessen/blob/08d7fd2783"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide14.xml",
+          "references": [
+            "september 2026, gedrukte pagina 33. https://github.com/meijer1973/4veco-lessen/blob/08d7fd2783"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide15.xml",
+          "references": [
+            "september 2026, gedrukte pagina 32–33. https://github.com/meijer1973/4veco-lessen/blob/08d7fd2783"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide16.xml",
+          "references": [
+            "september 2026, gedrukte pagina 33. https://github.com/meijer1973/4veco-lessen/blob/08d7fd2783"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide17.xml",
+          "references": [
+            "september 2026, gedrukte pagina 33. https://github.com/meijer1973/4veco-lessen/blob/08d7fd2783"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide18.xml",
+          "references": [
+            "september 2026, gedrukte pagina 32–33. https://github.com/meijer1973/4veco-lessen/blob/08d7fd2783"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide19.xml",
+          "references": [
+            "september 2026, gedrukte pagina 32–33. https://github.com/meijer1973/4veco-lessen/blob/08d7fd2783"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide2.xml",
+          "references": [
+            "september 2026, gedrukte pagina 29–33. https://github.com/meijer1973/4veco-lessen/blob/08d7fd2783"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide20.xml",
+          "references": [
+            "september 2026, gedrukte pagina 32–33. https://github.com/meijer1973/4veco-lessen/blob/08d7fd2783"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide21.xml",
+          "references": [
+            "september 2026, gedrukte pagina 33. https://github.com/meijer1973/4veco-lessen/blob/08d7fd2783"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide22.xml",
+          "references": [
+            "september 2026, gedrukte pagina 33. https://github.com/meijer1973/4veco-lessen/blob/08d7fd2783"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide23.xml",
+          "references": [
+            "september 2026, gedrukte pagina 32–33. https://github.com/meijer1973/4veco-lessen/blob/08d7fd2783"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide24.xml",
+          "references": [
+            "k. Start met opgave 1 op pagina 29. Deze gemengde paragraaf heeft geen afzonderlijke begeleide",
+            "n met 1–4 naar doel 5 op pagina 32–33. Bespreek SmoothBox omdat deze echte doeloefening bronselec",
+            "ukte nummer 29, niet PDF-pagina 31.  Overgang: Laat leerlingen het huiswerk in de agenda zette",
+            "september 2026, gedrukte pagina 29–34. https://github.com/meijer1973/4veco-lessen/blob/08d7fd2783"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide8.xml",
+          "references": [
+            "n. Start met opgave 1 op pagina 29. Deze gemengde paragraaf heeft geen afzonderlijke begeleide",
+            "n met 1–4 naar doel 5 op pagina 32–33. Bespreek SmoothBox omdat deze echte doeloefening bronselec",
+            "ukte nummer 29, niet PDF-pagina 31.  Overgang: Ga door naar de volgende lesfase wanneer de kla",
+            "september 2026, gedrukte pagina 29–34. https://github.com/meijer1973/4veco-lessen/blob/08d7fd2783"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide9.xml",
+          "references": [
+            "september 2026, gedrukte pagina 32. https://github.com/meijer1973/4veco-lessen/blob/08d7fd2783"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph": "2.2.1",
+      "slides": 24,
+      "pdf_page_references": [
+        {
+          "slide": 1,
+          "references": [
+            "Pagina 40 · Opgaven 1 en 2",
+            "p. 38"
+          ]
+        },
+        {
+          "slide": 12,
+          "references": [
+            "Boekpagina 40"
+          ]
+        },
+        {
+          "slide": 13,
+          "references": [
+            "Pagina 40 · Opgaven 1 en 2",
+            "p. 38"
+          ]
+        },
+        {
+          "slide": 14,
+          "references": [
+            "Boekpagina 42"
+          ]
+        },
+        {
+          "slide": 15,
+          "references": [
+            "Boekpagina 42"
+          ]
+        },
+        {
+          "slide": 16,
+          "references": [
+            "Boekpagina 42"
+          ]
+        },
+        {
+          "slide": 17,
+          "references": [
+            "Boekpagina 42"
+          ]
+        },
+        {
+          "slide": 18,
+          "references": [
+            "Boekpagina 42"
+          ]
+        },
+        {
+          "slide": 19,
+          "references": [
+            "Boekpagina 42"
+          ]
+        },
+        {
+          "slide": 20,
+          "references": [
+            "Boekpagina 42"
+          ]
+        },
+        {
+          "slide": 21,
+          "references": [
+            "Boekpagina 42"
+          ]
+        },
+        {
+          "slide": 22,
+          "references": [
+            "Boekpagina 42"
+          ]
+        },
+        {
+          "slide": 24,
+          "references": [
+            "Pagina 40 · Opgaven 1 en 2",
+            "p. 38"
+          ]
+        }
+      ],
+      "notes_page_references": [
+        {
+          "part": "ppt/notesSlides/notesSlide1.xml",
+          "references": [
+            "acht. Start 1–2 staat op p. 40. Opgave 1 haalt procenten uit Boek 1 §1.1.2 op. Opgave 2 vr",
+            "or de tabel en uitleg op p. 38 raadplegen. Dit is ondersteund verkennen, geen toets van al",
+            "g werk. Basis 3 staat op p. 40, basis 4 en zelfstandig 5–6 op p. 41; doel 7 op p. 42. Huis",
+            "Leerlingenboek, gedrukte pagina 38, 40–42. https://github.com/meijer1973/4veco-lessen/blob/f26",
+            "we begripskennis: Boek 2 p. 38. Ondersteuning en opdrachten zijn in alle drie overzichten "
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide10.xml",
+          "references": [
+            "de bron voor de methode (p. 37–38). https://github.com/meijer1973/4veco-lessen/blob/f2660032c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide11.xml",
+          "references": [
+            "de bron voor de methode (p. 37–38). https://github.com/meijer1973/4veco-lessen/blob/f2660032c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide12.xml",
+          "references": [
+            "tueel met de indeling op p. 38. 2a: −1 < −0,4 < 0, dus prijsinelastisch. 2b: bij −2 reagee",
+            "Leerlingenboek, gedrukte pagina 38, 40. https://github.com/meijer1973/4veco-lessen/blob/f26600"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide13.xml",
+          "references": [
+            "enen. Start 1–2 staat op p. 40. Opgave 1 haalt procenten uit Boek 1 §1.1.2 op. Opgave 2 vr",
+            "or de tabel en uitleg op p. 38 raadplegen. Dit is ondersteund verkennen, geen toets van al",
+            "g werk. Basis 3 staat op p. 40, basis 4 en zelfstandig 5–6 op p. 41; doel 7 op p. 42. Huis",
+            "Leerlingenboek, gedrukte pagina 38, 40–42. https://github.com/meijer1973/4veco-lessen/blob/f26",
+            "we begripskennis: Boek 2 p. 38. Ondersteuning en opdrachten zijn in alle drie overzichten "
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide14.xml",
+          "references": [
+            "Leerlingenboek, gedrukte pagina 42. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide15.xml",
+          "references": [
+            "Leerlingenboek, gedrukte pagina 42. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide16.xml",
+          "references": [
+            "Leerlingenboek, gedrukte pagina 42. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide17.xml",
+          "references": [
+            "Leerlingenboek, gedrukte pagina 42. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide18.xml",
+          "references": [
+            "Leerlingenboek, gedrukte pagina 42. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide19.xml",
+          "references": [
+            "Leerlingenboek, gedrukte pagina 42. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide2.xml",
+          "references": [
+            "Leerlingenboek, gedrukte pagina 36–39. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide20.xml",
+          "references": [
+            "Leerlingenboek, gedrukte pagina 42. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide21.xml",
+          "references": [
+            "Leerlingenboek, gedrukte pagina 42. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide22.xml",
+          "references": [
+            "Leerlingenboek, gedrukte pagina 42. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide23.xml",
+          "references": [
+            "Leerlingenboek, gedrukte pagina 42. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide24.xml",
+          "references": [
+            "werk. Start 1–2 staat op p. 40. Opgave 1 haalt procenten uit Boek 1 §1.1.2 op. Opgave 2 vr",
+            "or de tabel en uitleg op p. 38 raadplegen. Dit is ondersteund verkennen, geen toets van al",
+            "g werk. Basis 3 staat op p. 40, basis 4 en zelfstandig 5–6 op p. 41; doel 7 op p. 42. Huis",
+            "Leerlingenboek, gedrukte pagina 38, 40–42. https://github.com/meijer1973/4veco-lessen/blob/f26",
+            "we begripskennis: Boek 2 p. 38. Ondersteuning en opdrachten zijn in alle drie overzichten "
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide3.xml",
+          "references": [
+            "de bron voor de methode (p. 36). https://github.com/meijer1973/4veco-lessen/blob/f2660032c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide4.xml",
+          "references": [
+            "de bron voor de methode (p. 37). https://github.com/meijer1973/4veco-lessen/blob/f2660032c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide5.xml",
+          "references": [
+            "de bron voor de methode (p. 36–37). https://github.com/meijer1973/4veco-lessen/blob/f2660032c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide6.xml",
+          "references": [
+            "de bron voor de methode (p. 37). https://github.com/meijer1973/4veco-lessen/blob/f2660032c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide7.xml",
+          "references": [
+            "Leerlingenboek, gedrukte pagina 38. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide8.xml",
+          "references": [
+            "de bron voor de methode (p. 38–39). https://github.com/meijer1973/4veco-lessen/blob/f2660032c"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide9.xml",
+          "references": [
+            "de bron voor de methode (p. 38–39). https://github.com/meijer1973/4veco-lessen/blob/f2660032c"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph": "2.2.2",
+      "slides": 26,
+      "pdf_page_references": [
+        {
+          "slide": 1,
+          "references": [
+            "Pagina 48 · Opgaven 1 en 2",
+            "p. 45"
+          ]
+        },
+        {
+          "slide": 15,
+          "references": [
+            "Pagina 48 · Opgaven 1 en 2",
+            "p. 45"
+          ]
+        },
+        {
+          "slide": 16,
+          "references": [
+            "Boekpagina 50"
+          ]
+        },
+        {
+          "slide": 17,
+          "references": [
+            "Boekpagina 50"
+          ]
+        },
+        {
+          "slide": 18,
+          "references": [
+            "Boekpagina 50"
+          ]
+        },
+        {
+          "slide": 19,
+          "references": [
+            "Boekpagina 50"
+          ]
+        },
+        {
+          "slide": 20,
+          "references": [
+            "Boekpagina 50"
+          ]
+        },
+        {
+          "slide": 21,
+          "references": [
+            "Boekpagina 50"
+          ]
+        },
+        {
+          "slide": 22,
+          "references": [
+            "Boekpagina 50"
+          ]
+        },
+        {
+          "slide": 23,
+          "references": [
+            "Boekpagina 50"
+          ]
+        },
+        {
+          "slide": 24,
+          "references": [
+            "Boekpagina 50"
+          ]
+        },
+        {
+          "slide": 25,
+          "references": [
+            "Boekpagina 50"
+          ]
+        },
+        {
+          "slide": 26,
+          "references": [
+            "Pagina 48 · Opgaven 1 en 2",
+            "p. 45"
+          ]
+        }
+      ],
+      "notes_page_references": [
+        {
+          "part": "ppt/notesSlides/notesSlide1.xml",
+          "references": [
+            "rt met opgaven 1 en 2 op pagina 48. De basis bestaat uit allebei de begeleide opgaven 3 en 4, ",
+            "op pagina 48–49. Daarna volgen 5 en 6 op pagina 49 en doelopgave 7 op pagin",
+            "uitleg en voorwaarden op p. 45 op. Opgave 2b kan het eerdere onderscheid tussen omzet en w",
+            "de verkenning van 2a met p. 45 en licht daarna de doelen toe.  Bron: Leerlingenboek Boek 2",
+            "september 2026, gedrukte pagina 48–50. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide10.xml",
+          "references": [
+            "september 2026, gedrukte pagina 45. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide11.xml",
+          "references": [
+            "september 2026, gedrukte pagina 45, 47. https://github.com/meijer1973/4veco-lessen/blob/f26600"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide12.xml",
+          "references": [
+            "september 2026, gedrukte pagina 44–47. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide13.xml",
+          "references": [
+            "september 2026, gedrukte pagina 45. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide14.xml",
+          "references": [
+            "september 2026, gedrukte pagina 45. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide15.xml",
+          "references": [
+            "rt met opgaven 1 en 2 op pagina 48. De basis bestaat uit allebei de begeleide opgaven 3 en 4, ",
+            "op pagina 48–49. Daarna volgen 5 en 6 op pagina 49 en doelopgave 7 op pagin",
+            "uitleg en voorwaarden op p. 45 op. Opgave 2b kan het eerdere onderscheid tussen omzet en w",
+            "september 2026, gedrukte pagina 48–50. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide16.xml",
+          "references": [
+            "september 2026, gedrukte pagina 50. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide17.xml",
+          "references": [
+            "september 2026, gedrukte pagina 50. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide18.xml",
+          "references": [
+            "september 2026, gedrukte pagina 50. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide19.xml",
+          "references": [
+            "september 2026, gedrukte pagina 50. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide2.xml",
+          "references": [
+            "september 2026, gedrukte pagina 44–47. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide20.xml",
+          "references": [
+            "september 2026, gedrukte pagina 50. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide21.xml",
+          "references": [
+            "september 2026, gedrukte pagina 50. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide22.xml",
+          "references": [
+            "september 2026, gedrukte pagina 50. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide23.xml",
+          "references": [
+            "september 2026, gedrukte pagina 50. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide24.xml",
+          "references": [
+            "september 2026, gedrukte pagina 50. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide25.xml",
+          "references": [
+            "september 2026, gedrukte pagina 50. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide26.xml",
+          "references": [
+            "rt met opgaven 1 en 2 op pagina 48. De basis bestaat uit allebei de begeleide opgaven 3 en 4, ",
+            "op pagina 48–49. Daarna volgen 5 en 6 op pagina 49 en doelopgave 7 op pagin",
+            "uitleg en voorwaarden op p. 45 op. Opgave 2b kan het eerdere onderscheid tussen omzet en w",
+            "september 2026, gedrukte pagina 48–50. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide3.xml",
+          "references": [
+            "september 2026, gedrukte pagina 44, 46. https://github.com/meijer1973/4veco-lessen/blob/f26600"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide4.xml",
+          "references": [
+            "september 2026, gedrukte pagina 44. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide5.xml",
+          "references": [
+            "september 2026, gedrukte pagina 44. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide6.xml",
+          "references": [
+            "september 2026, gedrukte pagina 46. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide7.xml",
+          "references": [
+            "september 2026, gedrukte pagina 45–46. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide8.xml",
+          "references": [
+            "september 2026, gedrukte pagina 44, 46–47. https://github.com/meijer1973/4veco-lessen/blob/f26"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide9.xml",
+          "references": [
+            "september 2026, gedrukte pagina 45–47. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph": "2.2.3",
+      "slides": 30,
+      "pdf_page_references": [
+        {
+          "slide": 1,
+          "references": [
+            "pagina 59",
+            "p. 53–56"
+          ]
+        },
+        {
+          "slide": 15,
+          "references": [
+            "Boekpagina 59"
+          ]
+        },
+        {
+          "slide": 16,
+          "references": [
+            "pagina 59",
+            "p. 53–56"
+          ]
+        },
+        {
+          "slide": 17,
+          "references": [
+            "Boekpagina 62"
+          ]
+        },
+        {
+          "slide": 18,
+          "references": [
+            "Boekpagina 62"
+          ]
+        },
+        {
+          "slide": 19,
+          "references": [
+            "Boekpagina 62"
+          ]
+        },
+        {
+          "slide": 20,
+          "references": [
+            "Boekpagina 62"
+          ]
+        },
+        {
+          "slide": 21,
+          "references": [
+            "Boekpagina 62"
+          ]
+        },
+        {
+          "slide": 22,
+          "references": [
+            "Boekpagina 62"
+          ]
+        },
+        {
+          "slide": 23,
+          "references": [
+            "Boekpagina 62"
+          ]
+        },
+        {
+          "slide": 24,
+          "references": [
+            "Boekpagina 62"
+          ]
+        },
+        {
+          "slide": 25,
+          "references": [
+            "Boekpagina 62"
+          ]
+        },
+        {
+          "slide": 26,
+          "references": [
+            "Boekpagina 62"
+          ]
+        },
+        {
+          "slide": 27,
+          "references": [
+            "Boekpagina 62"
+          ]
+        },
+        {
+          "slide": 28,
+          "references": [
+            "Boekpagina 62"
+          ]
+        },
+        {
+          "slide": 30,
+          "references": [
+            "pagina 59",
+            "p. 53–56"
+          ]
+        }
+      ],
+      "notes_page_references": [
+        {
+          "part": "ppt/notesSlides/notesSlide1.xml",
+          "references": [
+            "a gebruikt definities op p. 53–54; bij 2b helpt het één-factor-voorbeeld op p. 55–56. Laat le",
+            "gave 2. Basis 3 staat op p. 59, 4–5 op p. 60; zelfstandig 6–7 op p. 61; doel 8 op p. 62. H",
+            "september 2026; gedrukte pagina 53–56 en 59–62. https://github.com/meijer1973/4veco-lessen/blob/f"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide10.xml",
+          "references": [
+            "september 2026; gedrukte pagina 55. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide11.xml",
+          "references": [
+            "september 2026; gedrukte pagina 56 en 58. https://github.com/meijer1973/4veco-lessen/blob/f266"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide12.xml",
+          "references": [
+            "september 2026; gedrukte pagina 56 en 58. https://github.com/meijer1973/4veco-lessen/blob/f266"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide13.xml",
+          "references": [
+            "september 2026; gedrukte pagina 56 en 58. https://github.com/meijer1973/4veco-lessen/blob/f266"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide14.xml",
+          "references": [
+            "september 2026; gedrukte pagina 52, 56 en 60; hoofdstukhandleiding §2.2.3. https://github.com/"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide15.xml",
+          "references": [
+            "september 2026; gedrukte pagina 53–56 en 59. https://github.com/meijer1973/4veco-lessen/blob/f266"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide16.xml",
+          "references": [
+            "a gebruikt definities op p. 53–54; bij 2b helpt het één-factor-voorbeeld op p. 55–56. Laat le",
+            "gave 2. Basis 3 staat op p. 59, 4–5 op p. 60; zelfstandig 6–7 op p. 61; doel 8 op p. 62. H",
+            "september 2026; gedrukte pagina 53–56 en 59–62. https://github.com/meijer1973/4veco-lessen/blob/f"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide17.xml",
+          "references": [
+            "n hun boek openhouden op p. 62.  Misvatting: De aanwijzingen op deze dia horen bij de opdr",
+            "september 2026; gedrukte pagina 62. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide18.xml",
+          "references": [
+            "september 2026; gedrukte pagina 62. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide19.xml",
+          "references": [
+            "september 2026; gedrukte pagina 62. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide2.xml",
+          "references": [
+            "september 2026; gedrukte pagina 36–38 en 52–56. https://github.com/meijer1973/4veco-lessen/blob/f"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide20.xml",
+          "references": [
+            "september 2026; gedrukte pagina 62. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide21.xml",
+          "references": [
+            "ar de brondia of gebruik p. 62.  Misvatting: De inkomensstijging uit d mag niet blijven st",
+            "september 2026; gedrukte pagina 62. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide22.xml",
+          "references": [
+            "september 2026; gedrukte pagina 62. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide23.xml",
+          "references": [
+            "september 2026; gedrukte pagina 62. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide24.xml",
+          "references": [
+            "september 2026; gedrukte pagina 62. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide25.xml",
+          "references": [
+            "september 2026; gedrukte pagina 62. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide26.xml",
+          "references": [
+            "september 2026; gedrukte pagina 62. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide27.xml",
+          "references": [
+            "september 2026; gedrukte pagina 62. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide28.xml",
+          "references": [
+            "september 2026; gedrukte pagina 62. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide29.xml",
+          "references": [
+            "september 2026; gedrukte pagina 62. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide3.xml",
+          "references": [
+            "september 2026; gedrukte pagina 37. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide30.xml",
+          "references": [
+            "a gebruikt definities op p. 53–54; bij 2b helpt het één-factor-voorbeeld op p. 55–56. Laat le",
+            "gave 2. Basis 3 staat op p. 59, 4–5 op p. 60; zelfstandig 6–7 op p. 61; doel 8 op p. 62. H",
+            "september 2026; gedrukte pagina 53–56 en 59–62. https://github.com/meijer1973/4veco-lessen/blob/f"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide4.xml",
+          "references": [
+            "september 2026; gedrukte pagina 55; voorkennis volgens hoofdstukhandleiding. https://github.co"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide5.xml",
+          "references": [
+            "september 2026; gedrukte pagina 53. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide6.xml",
+          "references": [
+            "september 2026; gedrukte pagina 53. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide7.xml",
+          "references": [
+            "september 2026; gedrukte pagina 54. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide8.xml",
+          "references": [
+            "september 2026; gedrukte pagina 54. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide9.xml",
+          "references": [
+            "september 2026; gedrukte pagina 55. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph": "2.2.4",
+      "slides": 23,
+      "pdf_page_references": [
+        {
+          "slide": 1,
+          "references": [
+            "Pagina 64"
+          ]
+        },
+        {
+          "slide": 6,
+          "references": [
+            "Pagina 64"
+          ]
+        },
+        {
+          "slide": 7,
+          "references": [
+            "Boekpagina 66–67"
+          ]
+        },
+        {
+          "slide": 8,
+          "references": [
+            "Boekpagina 66–67"
+          ]
+        },
+        {
+          "slide": 9,
+          "references": [
+            "Boekpagina 66–67"
+          ]
+        },
+        {
+          "slide": 10,
+          "references": [
+            "Boekpagina 66–67",
+            "boekpagina 66."
+          ]
+        },
+        {
+          "slide": 11,
+          "references": [
+            "Boekpagina 66–67",
+            "boekpagina 66."
+          ]
+        },
+        {
+          "slide": 12,
+          "references": [
+            "Boekpagina 66–67",
+            "boekpagina 66."
+          ]
+        },
+        {
+          "slide": 13,
+          "references": [
+            "Boekpagina 66–67"
+          ]
+        },
+        {
+          "slide": 14,
+          "references": [
+            "Boekpagina 66–67"
+          ]
+        },
+        {
+          "slide": 15,
+          "references": [
+            "Boekpagina 66–67"
+          ]
+        },
+        {
+          "slide": 16,
+          "references": [
+            "Boekpagina 66–67"
+          ]
+        },
+        {
+          "slide": 17,
+          "references": [
+            "Boekpagina 66–67"
+          ]
+        },
+        {
+          "slide": 18,
+          "references": [
+            "Boekpagina 66–67"
+          ]
+        },
+        {
+          "slide": 19,
+          "references": [
+            "Boekpagina 66–67"
+          ]
+        },
+        {
+          "slide": 20,
+          "references": [
+            "Boekpagina 66–67"
+          ]
+        },
+        {
+          "slide": 21,
+          "references": [
+            "Boekpagina 66–67"
+          ]
+        },
+        {
+          "slide": 23,
+          "references": [
+            "Pagina 64"
+          ]
+        }
+      ],
+      "notes_page_references": [
+        {
+          "part": "ppt/notesSlides/notesSlide1.xml",
+          "references": [
+            "tart: opgave 1, gedrukte pagina 64. Er is geen afzonderlijke basis- of begeleide sectie. Werk ",
+            "naar doel 5 (StreamPlus, p. 66–67). Die echte doelopgave is gekozen omdat zij bronselectie, E",
+            "k 2, chat-2026, gedrukte pagina 64–69. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide10.xml",
+          "references": [
+            "n. Gebruik de bronnen op pagina 66; in het boek staan ze op de tegenoverliggende pagina. Lees ",
+            "k 2, chat-2026, gedrukte pagina 67. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide11.xml",
+          "references": [
+            "n. Gebruik de bronnen op pagina 66; in het boek staan ze op de tegenoverliggende pagina. Lees ",
+            "k 2, chat-2026, gedrukte pagina 67. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide12.xml",
+          "references": [
+            "n. Gebruik de bronnen op pagina 66; in het boek staan ze op de tegenoverliggende pagina. Lees ",
+            "k 2, chat-2026, gedrukte pagina 67. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide13.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 66–67. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide14.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 66–67. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide15.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 66–67. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide16.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 66–67. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide17.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 66–67. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide18.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 66–67. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide19.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 66–67. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide20.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 66–67. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide21.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 66–67. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide22.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 67–69. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide23.xml",
+          "references": [
+            "tart: opgave 1, gedrukte pagina 64. Er is geen afzonderlijke basis- of begeleide sectie. Werk ",
+            "naar doel 5 (StreamPlus, p. 66–67). Die echte doelopgave is gekozen omdat zij bronselectie, E",
+            "k 2, chat-2026, gedrukte pagina 64–69. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide6.xml",
+          "references": [
+            "tart: opgave 1, gedrukte pagina 64. Er is geen afzonderlijke basis- of begeleide sectie. Werk ",
+            "naar doel 5 (StreamPlus, p. 66–67). Die echte doelopgave is gekozen omdat zij bronselectie, E",
+            "k 2, chat-2026, gedrukte pagina 64–69. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide7.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 66. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide8.xml",
+          "references": [
+            "gen beide bronnen op boekpagina 66 terugvinden.  Misvatting: Bron C geeft niet een nieuwe prij",
+            "k 2, chat-2026, gedrukte pagina 66. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide9.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 66. https://github.com/meijer1973/4veco-lessen/blob/f2660032cf"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph": "2.3.1",
+      "slides": 25,
+      "pdf_page_references": [
+        {
+          "slide": 1,
+          "references": [
+            "Pagina 76 · Opgaven 1 en 2",
+            "p. 72",
+            "p. 74"
+          ]
+        },
+        {
+          "slide": 15,
+          "references": [
+            "Pagina 76 · Opgaven 1 en 2",
+            "p. 72",
+            "p. 74"
+          ]
+        },
+        {
+          "slide": 16,
+          "references": [
+            "Boekpagina 79"
+          ]
+        },
+        {
+          "slide": 17,
+          "references": [
+            "Boekpagina 79"
+          ]
+        },
+        {
+          "slide": 18,
+          "references": [
+            "Boekpagina 79"
+          ]
+        },
+        {
+          "slide": 19,
+          "references": [
+            "Boekpagina 79"
+          ]
+        },
+        {
+          "slide": 20,
+          "references": [
+            "Boekpagina 79"
+          ]
+        },
+        {
+          "slide": 21,
+          "references": [
+            "Boekpagina 79"
+          ]
+        },
+        {
+          "slide": 22,
+          "references": [
+            "Boekpagina 79"
+          ]
+        },
+        {
+          "slide": 23,
+          "references": [
+            "Boekpagina 79"
+          ]
+        },
+        {
+          "slide": 24,
+          "references": [
+            "Boekpagina 79"
+          ]
+        },
+        {
+          "slide": 25,
+          "references": [
+            "Pagina 76 · Opgaven 1 en 2",
+            "p. 72",
+            "p. 74"
+          ]
+        }
+      ],
+      "notes_page_references": [
+        {
+          "part": "ppt/notesSlides/notesSlide1.xml",
+          "references": [
+            "topdracht. Start: 1–2 op p.76. Basis: alle begeleide opgaven 3 (p.76), 4 en 5 (p.77). Zel",
+            "fstandig: 6–7 (p.78). Doel: 8 (p.79). Huiswerk: 3 t/m 8 maken en nakijken. Bonu",
+            "rwijs bij vastlopen naar p.74. Start 2 is verkenning van formeel CS. Lees op p.72 de blok",
+            "atuitgave 2026, gedrukte pagina 72, 74, 76–79. https://github.com/meijer1973/4veco-lessen/blob"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide10.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 73–75. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide11.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 74–75. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide12.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 72–75. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide13.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 74–75. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide14.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 74–75. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide15.xml",
+          "references": [
+            "ig werken. Start: 1–2 op p.76. Basis: alle begeleide opgaven 3 (p.76), 4 en 5 (p.77). Zel",
+            "fstandig: 6–7 (p.78). Doel: 8 (p.79). Huiswerk: 3 t/m 8 maken en nakijken. Bonu",
+            "rwijs bij vastlopen naar p.74. Start 2 is verkenning van formeel CS. Lees op p.72 de blok",
+            "atuitgave 2026, gedrukte pagina 72, 74, 76–79. https://github.com/meijer1973/4veco-lessen/blob"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide16.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 79. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide17.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 79. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide18.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 79. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide19.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 79. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide2.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 72–75. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide20.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 79. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide21.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 79. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide22.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 79. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide23.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 79. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide24.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 79. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide25.xml",
+          "references": [
+            " huiswerk. Start: 1–2 op p.76. Basis: alle begeleide opgaven 3 (p.76), 4 en 5 (p.77). Zel",
+            "fstandig: 6–7 (p.78). Doel: 8 (p.79). Huiswerk: 3 t/m 8 maken en nakijken. Bonu",
+            "rwijs bij vastlopen naar p.74. Start 2 is verkenning van formeel CS. Lees op p.72 de blok",
+            "atuitgave 2026, gedrukte pagina 72, 74, 76–79. https://github.com/meijer1973/4veco-lessen/blob"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide3.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 72. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide4.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 72–73. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide5.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 73–75. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide6.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 74–75. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide7.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 74–75. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide8.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 74–75. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide9.xml",
+          "references": [
+            "atuitgave 2026, gedrukte pagina 74–75. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph": "2.3.2",
+      "slides": 27,
+      "pdf_page_references": [
+        {
+          "slide": 1,
+          "references": [
+            "Pagina 84 · Opgaven 1 en 2",
+            "p. 82; 2: verkennen p. 80"
+          ]
+        },
+        {
+          "slide": 16,
+          "references": [
+            "Pagina 84 · Opgaven 1 en 2",
+            "p. 82; 2: verkennen p. 80"
+          ]
+        },
+        {
+          "slide": 17,
+          "references": [
+            "Boekpagina 88–89"
+          ]
+        },
+        {
+          "slide": 18,
+          "references": [
+            "Boekpagina 88–89"
+          ]
+        },
+        {
+          "slide": 19,
+          "references": [
+            "Boekpagina 88–89"
+          ]
+        },
+        {
+          "slide": 20,
+          "references": [
+            "Boekpagina 88–89"
+          ]
+        },
+        {
+          "slide": 21,
+          "references": [
+            "Boekpagina 88–89"
+          ]
+        },
+        {
+          "slide": 22,
+          "references": [
+            "Boekpagina 88–89"
+          ]
+        },
+        {
+          "slide": 23,
+          "references": [
+            "Boekpagina 88–89"
+          ]
+        },
+        {
+          "slide": 24,
+          "references": [
+            "Boekpagina 88–89"
+          ]
+        },
+        {
+          "slide": 25,
+          "references": [
+            "Boekpagina 88–89"
+          ]
+        },
+        {
+          "slide": 26,
+          "references": [
+            "Boekpagina 88–89"
+          ]
+        },
+        {
+          "slide": 27,
+          "references": [
+            "Pagina 84 · Opgaven 1 en 2",
+            "p. 82; 2: verkennen p. 80"
+          ]
+        }
+      ],
+      "notes_page_references": [
+        {
+          "part": "ppt/notesSlides/notesSlide1.xml",
+          "references": [
+            "Vraag: Welke uitleg op p. 80 helpt bij startopgave 2?  Uitleg: Laat het overzicht staan ",
+            "topdracht. Start: 1–2 op p. 84. Basis: 3 op p. 85, 4–5 op p. 86. Zelfstandig: 6–7 op p. 87",
+            ". Doel: 8, bronnen p. 88 en vragen p. 89. Huiswerk 3–8 maken en nakijken. Bonus 9 en",
+            "nodig vooraf de steun op p. 82: beide formules geven P bij dezelfde Q; stel ze gelijk, los",
+            "aat de leerling eerst op p. 80 de twee voordelen en figuur 1 lezen, de passende verschille",
+            "k 2, chat-2026, gedrukte pagina 80, 84–89. https://github.com/meijer1973/4veco-lessen/blob/d53"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide10.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 81–83. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide11.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 82–83. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide12.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 82, 84. https://github.com/meijer1973/4veco-lessen/blob/d53080"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide13.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 82–84. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide14.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 82–84. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide15.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 82–84. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide16.xml",
+          "references": [
+            "ig werken. Start: 1–2 op p. 84. Basis: 3 op p. 85, 4–5 op p. 86. Zelfstandig: 6–7 op p. 87",
+            ". Doel: 8, bronnen p. 88 en vragen p. 89. Huiswerk 3–8 maken en nakijken. Bonus 9 en",
+            "nodig vooraf de steun op p. 82: beide formules geven P bij dezelfde Q; stel ze gelijk, los",
+            "aat de leerling eerst op p. 80 de twee voordelen en figuur 1 lezen, de passende verschille",
+            "k 2, chat-2026, gedrukte pagina 80, 84–89. https://github.com/meijer1973/4veco-lessen/blob/d53"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide17.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 88. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide18.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 88. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide19.xml",
+          "references": [
+            "afgaande dia’s en op boekpagina 88. Toon nog geen uitwerkingen.  Misvatting: Een juist eindget",
+            "k 2, chat-2026, gedrukte pagina 89. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide2.xml",
+          "references": [
+            "ksformule op uit §2.3.1 (p. 72–75). MK zijn extra kosten per extra product (§2.1.3, p. 19–21)",
+            "k 2, chat-2026, gedrukte pagina 80–84. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide20.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 89. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide21.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 88–89. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide22.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 88–89. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide23.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 88–89. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide24.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 88–89. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide25.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 88–89. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide26.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 88–89. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide27.xml",
+          "references": [
+            " huiswerk. Start: 1–2 op p. 84. Basis: 3 op p. 85, 4–5 op p. 86. Zelfstandig: 6–7 op p. 87",
+            ". Doel: 8, bronnen p. 88 en vragen p. 89. Huiswerk 3–8 maken en nakijken. Bonus 9 en",
+            "nodig vooraf de steun op p. 82: beide formules geven P bij dezelfde Q; stel ze gelijk, los",
+            "aat de leerling eerst op p. 80 de twee voordelen en figuur 1 lezen, de passende verschille",
+            "k 2, chat-2026, gedrukte pagina 80, 84–89. https://github.com/meijer1973/4veco-lessen/blob/d53"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide3.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 80. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide4.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 80–81. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide5.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 80, 86. https://github.com/meijer1973/4veco-lessen/blob/d53080"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide6.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 81. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide7.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 82–83. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide8.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 81–83. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide9.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 74–75, 82–83. https://github.com/meijer1973/4veco-lessen/blob/d53"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph": "2.3.3",
+      "slides": 30,
+      "pdf_page_references": [
+        {
+          "slide": 1,
+          "references": [
+            "Pagina 96 · Opgaven 1 en 2",
+            "p. 93"
+          ]
+        },
+        {
+          "slide": 13,
+          "references": [
+            "Boekpagina 96"
+          ]
+        },
+        {
+          "slide": 14,
+          "references": [
+            "Pagina 96 · Opgaven 1 en 2",
+            "p. 93"
+          ]
+        },
+        {
+          "slide": 15,
+          "references": [
+            "Boekpagina 99–100"
+          ]
+        },
+        {
+          "slide": 16,
+          "references": [
+            "Boekpagina 99–100"
+          ]
+        },
+        {
+          "slide": 17,
+          "references": [
+            "Boekpagina 99–100"
+          ]
+        },
+        {
+          "slide": 18,
+          "references": [
+            "Boekpagina 99–100"
+          ]
+        },
+        {
+          "slide": 19,
+          "references": [
+            "Boekpagina 99–100"
+          ]
+        },
+        {
+          "slide": 20,
+          "references": [
+            "Boekpagina 99–100"
+          ]
+        },
+        {
+          "slide": 21,
+          "references": [
+            "Boekpagina 99–100"
+          ]
+        },
+        {
+          "slide": 22,
+          "references": [
+            "Boekpagina 99–100"
+          ]
+        },
+        {
+          "slide": 23,
+          "references": [
+            "Boekpagina 99–100"
+          ]
+        },
+        {
+          "slide": 24,
+          "references": [
+            "Boekpagina 99–100"
+          ]
+        },
+        {
+          "slide": 25,
+          "references": [
+            "Boekpagina 99–100"
+          ]
+        },
+        {
+          "slide": 26,
+          "references": [
+            "Boekpagina 99–100"
+          ]
+        },
+        {
+          "slide": 27,
+          "references": [
+            "Boekpagina 99–100"
+          ]
+        },
+        {
+          "slide": 28,
+          "references": [
+            "Boekpagina 99–100"
+          ]
+        },
+        {
+          "slide": 29,
+          "references": [
+            "Boekpagina 99–100"
+          ]
+        },
+        {
+          "slide": 30,
+          "references": [
+            "Pagina 96 · Opgaven 1 en 2",
+            "p. 93"
+          ]
+        }
+      ],
+      "notes_page_references": [
+        {
+          "part": "ppt/notesSlides/notesSlide1.xml",
+          "references": [
+            " Start 1–2 en basis 3 op p.96; basis 4 op p.97; zelfstandig 5 op p.98; doel 6 op p.99–100",
+            "de driehoeken uit §2.3.1 p.74 en §2.3.2 p.81–84 op. Start 2 vraagt het nieuwe Pareto-crit",
+            "met een groter totaal op p.93. Noteer een eerste redenering en twijfel. Dit is ondersteun",
+            "september 2026, gedrukte pagina 90–100. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide10.xml",
+          "references": [
+            "september 2026, gedrukte pagina 93. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide11.xml",
+          "references": [
+            "september 2026, gedrukte pagina 93, 95. https://github.com/meijer1973/4veco-lessen/blob/d53080"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide12.xml",
+          "references": [
+            "september 2026, gedrukte pagina 92–93, 95. https://github.com/meijer1973/4veco-lessen/blob/d53080"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide13.xml",
+          "references": [
+            "september 2026, gedrukte pagina 93, 96. https://github.com/meijer1973/4veco-lessen/blob/d53080"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide14.xml",
+          "references": [
+            " Start 1–2 en basis 3 op p.96; basis 4 op p.97; zelfstandig 5 op p.98; doel 6 op p.99–100",
+            "de driehoeken uit §2.3.1 p.74 en §2.3.2 p.81–84 op. Start 2 vraagt het nieuwe Pareto-crit",
+            "met een groter totaal op p.93. Noteer een eerste redenering en twijfel. Dit is ondersteun",
+            "september 2026, gedrukte pagina 90–100. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide15.xml",
+          "references": [
+            "september 2026, gedrukte pagina 99. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide16.xml",
+          "references": [
+            "september 2026, gedrukte pagina 99. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide17.xml",
+          "references": [
+            "september 2026, gedrukte pagina 99. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide18.xml",
+          "references": [
+            "september 2026, gedrukte pagina 100. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide19.xml",
+          "references": [
+            "september 2026, gedrukte pagina 100. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide2.xml",
+          "references": [
+            "september 2026, gedrukte pagina 74, 80–84, 90–93. https://github.com/meijer1973/4veco-lessen/b"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide20.xml",
+          "references": [
+            "september 2026, gedrukte pagina 100. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide21.xml",
+          "references": [
+            "september 2026, gedrukte pagina 93, 100. https://github.com/meijer1973/4veco-lessen/blob/d5308"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide22.xml",
+          "references": [
+            "september 2026, gedrukte pagina 99–100. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide23.xml",
+          "references": [
+            "september 2026, gedrukte pagina 99–100. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide24.xml",
+          "references": [
+            "september 2026, gedrukte pagina 100. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide25.xml",
+          "references": [
+            "september 2026, gedrukte pagina 100. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide26.xml",
+          "references": [
+            "september 2026, gedrukte pagina 99–100. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide27.xml",
+          "references": [
+            "september 2026, gedrukte pagina 100. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide28.xml",
+          "references": [
+            "september 2026, gedrukte pagina 99–100. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide29.xml",
+          "references": [
+            "september 2026, gedrukte pagina 93, 99–100. https://github.com/meijer1973/4veco-lessen/blob/d5"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide3.xml",
+          "references": [
+            "september 2026, gedrukte pagina 90–95. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide30.xml",
+          "references": [
+            " Start 1–2 en basis 3 op p.96; basis 4 op p.97; zelfstandig 5 op p.98; doel 6 op p.99–100",
+            "de driehoeken uit §2.3.1 p.74 en §2.3.2 p.81–84 op. Start 2 vraagt het nieuwe Pareto-crit",
+            "met een groter totaal op p.93. Noteer een eerste redenering en twijfel. Dit is ondersteun",
+            "september 2026, gedrukte pagina 90–100. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide4.xml",
+          "references": [
+            "september 2026, gedrukte pagina 81–84. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide5.xml",
+          "references": [
+            "september 2026, gedrukte pagina 90, 94. https://github.com/meijer1973/4veco-lessen/blob/d53080"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide6.xml",
+          "references": [
+            "september 2026, gedrukte pagina 91, 94. https://github.com/meijer1973/4veco-lessen/blob/d53080"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide7.xml",
+          "references": [
+            "september 2026, gedrukte pagina 91, 94. https://github.com/meijer1973/4veco-lessen/blob/d53080"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide8.xml",
+          "references": [
+            "september 2026, gedrukte pagina 91, 94. https://github.com/meijer1973/4veco-lessen/blob/d53080"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide9.xml",
+          "references": [
+            "september 2026, gedrukte pagina 92, 95. https://github.com/meijer1973/4veco-lessen/blob/d53080"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph": "2.3.4",
+      "slides": 22,
+      "pdf_page_references": [
+        {
+          "slide": 1,
+          "references": [
+            "Pagina 101 · Opgave 1",
+            "p. 82–84"
+          ]
+        },
+        {
+          "slide": 6,
+          "references": [
+            "Pagina 101 · Opgave 1",
+            "p. 82–84"
+          ]
+        },
+        {
+          "slide": 7,
+          "references": [
+            "Boekpagina 104–105"
+          ]
+        },
+        {
+          "slide": 8,
+          "references": [
+            "Boekpagina 104–105"
+          ]
+        },
+        {
+          "slide": 9,
+          "references": [
+            "Boekpagina 104–105"
+          ]
+        },
+        {
+          "slide": 10,
+          "references": [
+            "Boekpagina 104–105"
+          ]
+        },
+        {
+          "slide": 11,
+          "references": [
+            "Boekpagina 104–105"
+          ]
+        },
+        {
+          "slide": 12,
+          "references": [
+            "Boekpagina 104–105"
+          ]
+        },
+        {
+          "slide": 13,
+          "references": [
+            "Boekpagina 104–105"
+          ]
+        },
+        {
+          "slide": 14,
+          "references": [
+            "Boekpagina 104–105"
+          ]
+        },
+        {
+          "slide": 15,
+          "references": [
+            "Boekpagina 104–105"
+          ]
+        },
+        {
+          "slide": 16,
+          "references": [
+            "Boekpagina 104–105"
+          ]
+        },
+        {
+          "slide": 17,
+          "references": [
+            "Boekpagina 104–105"
+          ]
+        },
+        {
+          "slide": 18,
+          "references": [
+            "Boekpagina 104–105"
+          ]
+        },
+        {
+          "slide": 19,
+          "references": [
+            "Boekpagina 104–105"
+          ]
+        },
+        {
+          "slide": 20,
+          "references": [
+            "Boekpagina 104–105"
+          ]
+        },
+        {
+          "slide": 21,
+          "references": [
+            "Boekpagina 104–105"
+          ]
+        },
+        {
+          "slide": 22,
+          "references": [
+            "Pagina 101 · Opgave 1",
+            "p. 82–84"
+          ]
+        }
+      ],
+      "notes_page_references": [
+        {
+          "part": "ppt/notesSlides/notesSlide1.xml",
+          "references": [
+            "acht. Start is opgave 1 (p. 101). Er is geen afzonderlijke basis- of zelfstandige sectie: w",
+            "erk na 1 verder aan 2 (p. 102–103) en doel 3 (p. 104–105). Het huiswerk volgens de classroomr",
+            "derwezen stof uit §2.3.2 p. 82–84 op: functies gelijkstellen, driehoeken, vergelijking betali",
+            " Page 101 is fysieke PDF-pagina 103. Geen nieuwe theorie aannemen op basis van een eerdere para",
+            "k 2, chat-2026, gedrukte pagina 101–106. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide10.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 104. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide11.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 105. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide12.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 105. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide13.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 104–105. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide14.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 104–105. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide15.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 104–105. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide16.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 104–105. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide17.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 104–105. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide18.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 104–105. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide19.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 104–105. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide2.xml",
+          "references": [
+            "heden. De rekenroute uit p. 91 is hoeveelheid, grenshoogten, rechthoek en driehoek, som. V",
+            "k 2, chat-2026, gedrukte pagina 82–84, 90–95. https://github.com/meijer1973/4veco-lessen/blob/d53"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide20.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 104–105. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide21.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 104–105. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide22.xml",
+          "references": [
+            "werk. Start is opgave 1 (p. 101). Er is geen afzonderlijke basis- of zelfstandige sectie: w",
+            "erk na 1 verder aan 2 (p. 102–103) en doel 3 (p. 104–105). Het huiswerk volgens de classroomr",
+            "derwezen stof uit §2.3.2 p. 82–84 op: functies gelijkstellen, driehoeken, vergelijking betali",
+            " Page 101 is fysieke PDF-pagina 103. Geen nieuwe theorie aannemen op basis van een eerdere para",
+            "k 2, chat-2026, gedrukte pagina 101–106. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide3.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 82–84. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide4.xml",
+          "references": [
+            "e eerdere boekgrafiek op p. 91 als steun.  Misvatting: Alleen de driehoek tellen zou het v",
+            "k 2, chat-2026, gedrukte pagina 90–91, 94. https://github.com/meijer1973/4veco-lessen/blob/d53080"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide5.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 92–95. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide6.xml",
+          "references": [
+            "rken. Start is opgave 1 (p. 101). Er is geen afzonderlijke basis- of zelfstandige sectie: w",
+            "erk na 1 verder aan 2 (p. 102–103) en doel 3 (p. 104–105). Het huiswerk volgens de classroomr",
+            "derwezen stof uit §2.3.2 p. 82–84 op: functies gelijkstellen, driehoeken, vergelijking betali",
+            " Page 101 is fysieke PDF-pagina 103. Geen nieuwe theorie aannemen op basis van een eerdere para",
+            "k 2, chat-2026, gedrukte pagina 101–106. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide7.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 104. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide8.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 104. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        },
+        {
+          "part": "ppt/notesSlides/notesSlide9.xml",
+          "references": [
+            "k 2, chat-2026, gedrukte pagina 104. https://github.com/meijer1973/4veco-lessen/blob/d53080f38e"
+          ]
+        }
+      ]
+    }
+  ]
+}

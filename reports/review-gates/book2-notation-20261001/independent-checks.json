@@ -1,0 +1,73 @@
+{
+  "base": "d53080f38ebbdbba319e6d9b89dcba86067a72be",
+  "independent_checks": [
+    {
+      "check": "All complete-book page labels,182 printed footers,151 links and21 main contents destinations",
+      "result": "PASS"
+    },
+    {
+      "check": "61 preexisting links outside redesigned theory retain clickable rectangles and remapped destinations/views",
+      "result": "PASS"
+    },
+    {
+      "check": "All122 historical named destinations and20 bookmarks preserve identity/content; one new logical page anchor",
+      "result": "PASS"
+    },
+    {
+      "check": "Seven native replacement pages retain complete prototype word/number/operator inventories",
+      "result": "PASS"
+    },
+    {
+      "check": "Final student notation and all nine retrieval headings",
+      "result": "PASS"
+    },
+    {
+      "check": "Answer sources exactly match the two narrowly approved proposals; H2 answer source unchanged",
+      "result": "PASS"
+    },
+    {
+      "check": "All nine historical teacher time-budget rows are unchanged",
+      "result": "PASS"
+    },
+    {
+      "check": "All twelve H3 glossary page references match the revised printed locations",
+      "result": "PASS"
+    },
+    {
+      "check": "H3 answer contents labels use current continuous printed pagination",
+      "result": "PASS"
+    },
+    {
+      "check": "Protected Book1/B34/PartB/PPT/lesson-history surfaces unchanged in tracked delta",
+      "result": "PASS"
+    }
+  ],
+  "files": {
+    "student": {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet.pdf",
+      "sha256": "3e1164e44de994b440cef0884c52894723b1967c48266006784501bcd2afadf1",
+      "physical_pages": 111,
+      "links": 101,
+      "toc_links": 15
+    },
+    "answers": {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet_Antwoorden.pdf",
+      "sha256": "58a78a4262903e96c883c48c253cfd4156b9be3eeb60e304bf4404ae07641fe8",
+      "physical_pages": 58,
+      "links": 47,
+      "toc_links": 3
+    },
+    "teacher": {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet_Docenteninformatie.pdf",
+      "sha256": "0f36bf59daec60b137a05ca76fcb67844d455ff395a6fa79b373db3c204ae5f7",
+      "physical_pages": 19,
+      "links": 3,
+      "toc_links": 3
+    }
+  },
+  "flags": [
+    "Three source/question facing spreads become consecutive nonfacing pages.",
+    "Answers gain one physical page to retain the complete SportLint solution.",
+    "Existing Book2 timing/foundation/held curriculum limitations are not released."
+  ]
+}

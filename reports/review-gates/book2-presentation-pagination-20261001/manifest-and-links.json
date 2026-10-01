@@ -1,0 +1,834 @@
+{
+  "manifest_sha256": "f839772d9edab8ad1f6468292ab7eab0661effa12520b721599b32e37efd9624",
+  "inventory": 1561,
+  "platform_inputs": [
+    {
+      "path": "build-scripts/books/book2-notation-contract.json",
+      "sha256_lf": "ca508e7126a6e6b6556f827b8804cfd2f287989b7a15a7d328220ac842afdb6e"
+    },
+    {
+      "path": "build-scripts/books/book2-notation-revision.js",
+      "sha256_lf": "e33f2bcbd25bee931439f509f7f4b16722df83f5c28b36e11cdf01892324faf0"
+    },
+    {
+      "path": "build-scripts/books/record_book2_notation_revision.js",
+      "sha256_lf": "df62f7ac2046d98cf108baa8fcba86d2e7e6325746163fc2b9887cc9c111f86f"
+    },
+    {
+      "path": "build-scripts/books/book2-notation-review.js",
+      "sha256_lf": "5b825d411e9102cd0b0ba3d3224deda02746e11a3b74cde0cfef67580d32cdde"
+    },
+    {
+      "path": "build-scripts/books/rebuild_book2_notation.py",
+      "sha256_lf": "bbb2865bb06836b2bce68082b5b6072424a1318054be90491424e098a1da5f59"
+    },
+    {
+      "path": "build-scripts/books/assemble_book2_notation.py",
+      "sha256_lf": "81892ce1e74ff9b76aad0bd9f2d475f123362c79dce12f17fd9195f316bd398d"
+    },
+    {
+      "path": "build-scripts/books/book2_notation_print.py",
+      "sha256_lf": "e500b166802d6817d5b84892c706f053bd6f5e719e05e43f8b6d62acd867f7ad"
+    },
+    {
+      "path": "build-scripts/books/book2_notation_exports.py",
+      "sha256_lf": "38193d98d806241989b94571d31e1b432d31cd3e639ec31b58dd066e2f76c3bf"
+    },
+    {
+      "path": "build-scripts/books/book2_notation_checks.py",
+      "sha256_lf": "624b080fab293e3fa9170ba65405339bcf4e7cd5ca85c8b074e2b5e8b87c935b"
+    },
+    {
+      "path": "build-scripts/books/book2_print_compatibility.py",
+      "sha256_lf": "de10d343a060aeb77d4f3d9a0bb39c79f2f26c7519b204dbfdedfbde3b29d348"
+    },
+    {
+      "path": "build-scripts/books/verify_book2_notation.py",
+      "sha256_lf": "6a575b0ee52ff56db90a970ab20c052e084895e62fa444ef15dc7f00ebecd042"
+    },
+    {
+      "path": "build-scripts/books/requirements-exercise-routes.txt",
+      "sha256_lf": "e3be02c414ddf3088fc0521c3a62300ae52c55eddf6699036ce58313cb146500"
+    },
+    {
+      "path": "skills/econ-textbook-paragraph.md",
+      "sha256_lf": "c6340f93f811f3198fae9dd9d3c909e341f8b7e07b3fec80752c6dd70a58fb5e"
+    },
+    {
+      "path": "build-scripts/maintenance/check-books34-v3-import.js",
+      "sha256_lf": "e0384129374ba1dbe386792490b336ee5b2a6b45a9980be00b47eb673377e69b"
+    },
+    {
+      "path": "build-scripts/workflows/check-paragraph-lane-scope.js",
+      "sha256_lf": "13a8294b948eacd531dcb7a41ff299baf39273253f4fc791477d26de0797c034"
+    },
+    {
+      "path": ".github/workflows/paired-book2-notation-ci.yml",
+      "sha256_lf": "6c5107fa1b21af256407b4d65faec597ed4960e50c6882d5ced25a35a18cdb7e"
+    },
+    {
+      "path": ".gitattributes",
+      "sha256_lf": "384cdd33adf74085d056c269213d210d927704e0e0041f0a8f7485c5cb423f98"
+    },
+    {
+      "path": "build-scripts/books/book2-notation-checkout.test.js",
+      "sha256_lf": "8346e34552fe0829b85cb15786c52fc22d14101a80a117b85e30f62e194962c6"
+    },
+    {
+      "path": "build-scripts/books/book2-presentation-contract.json",
+      "sha256_lf": "8c4d4fd815ea6dcddbe5b9f5a665bf77c6ea1e4fda7cb7045ba811329ad482b9"
+    },
+    {
+      "path": "build-scripts/books/book2-presentation-revision.js",
+      "sha256_lf": "18a9cb54390b17a532406d88ad5d77f65c02dd4fc48d95c6010df6d805370b3f"
+    },
+    {
+      "path": "build-scripts/books/book2_presentation_checks.py",
+      "sha256_lf": "be3998bc2610a07540eafc4de10cfdcde3b4e61efab42ff14c2a89bf0afe91fe"
+    },
+    {
+      "path": "build-scripts/books/test_book2_presentations.py",
+      "sha256_lf": "1caf7ae5f9c3de2d16bf3cbb6e38308c9ff0ca240842ff9f954001f5605dfb48"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-213.mjs",
+      "sha256_lf": "9237e68d9f2cb3d69704102dd865dfa1db7e252dc4b284291f02872f0eac5f81"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-213.manifest.json",
+      "sha256_lf": "ac01650b54f6e440d1e450623d08e2d228b1944a80246ef3cd171e96b4ec06bc"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-214.mjs",
+      "sha256_lf": "c4c1638238b248441b1ec1eaa6051c3a5815b2e6796538e3fd9019c0a9d25e06"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-214.manifest.json",
+      "sha256_lf": "bbcce4640adc42d918c4b8d9ff4f705f157068cc7c44f17f0e4af088c2ffa3a4"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-221.mjs",
+      "sha256_lf": "47308f8984f9c69597249f6d6d9a6f9b44b728014b1479e864111fccce6c2f12"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-221.manifest.json",
+      "sha256_lf": "499f55cfa07590a3ac8f5b0a4d340e4682a9af0d06270c2e50d7b364b906ac79"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-222.mjs",
+      "sha256_lf": "5febae355742b0baf408e50fc3e40f12e4ebcea2ccbbb70e4df7beb1f2b0fa0e"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-222.manifest.json",
+      "sha256_lf": "71f79b432d6e35698c3d4eb11b9b42bcf531f453de9383c92d835004b4d20f97"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-223.mjs",
+      "sha256_lf": "3fc939a85a62f9e912c67b335e69de1384bda67bc6b847d9776a0e30d97d8187"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-223.manifest.json",
+      "sha256_lf": "cfdc756d63ec0b0dc2bfd525c9b341db2b2570347aec15b302aa4de5c818a477"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-224.mjs",
+      "sha256_lf": "7fcda86a7c31766dcb991439f5cd87788fb21752bfa14a723ee919bfe80037d6"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-224.manifest.json",
+      "sha256_lf": "5c5cb024c8881901f6957c1dc2b013ee0e53c1fd52eb43466deea0ac573f24e2"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-231.mjs",
+      "sha256_lf": "96eecaa595ea4222110ad41cdde179917f0c8c4f24fcdbef512fbad6488fe759"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-231.manifest.json",
+      "sha256_lf": "46a403e6dcb373718db851e72602db6fbe060691bf5dd044fa9313f14de7ab4e"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-232.mjs",
+      "sha256_lf": "65c70aa2d3a608c4de149702fee5cd25b0c1031e057802bdd32d4cdb3c7640d6"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-232.manifest.json",
+      "sha256_lf": "9ffc8e325c9a86263012da2a3ea6919e7d6725c52abfe57f285099d4133aed6e"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-233.mjs",
+      "sha256_lf": "93cc47536b250b29e099d218222fba21afdff96229c36230ce972b723d45f1b2"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-233.manifest.json",
+      "sha256_lf": "75005d09baef5bc7214cb6e646bf61280a07d7551d4747ddff4c3b657eb1ded3"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-234.mjs",
+      "sha256_lf": "508cccd7dbeb7285e744d3970f16e8f8c4c3d06034720d865bce2a3595136334"
+    },
+    {
+      "path": "build-scripts/content/book-2/presentation-234.manifest.json",
+      "sha256_lf": "149b10318148560e122172013e1c53e20d13eb3f83754ee115cbba02247c930a"
+    },
+    {
+      "path": "build-scripts/presentations/runtime.mjs",
+      "sha256_lf": "02cdb68ad55e2bfd488076f783609b3055fec08d59e85a344db8123781a0cfd3"
+    },
+    {
+      "path": "build-scripts/presentations/chart_workbooks.py",
+      "sha256_lf": "6287f048a6c9a1ff332fe56136822389d72f32b58cee2a1b1de80c5d4309ba6c"
+    },
+    {
+      "path": "build-scripts/presentations/render-powerpoint.ps1",
+      "sha256_lf": "ac849c3761adf86fb1b246342966177b9a0214243cc8bab69773429380b41dc5"
+    }
+  ],
+  "links": [
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\README.md",
+      "target": "edities/chat-2026/README.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\README.md",
+      "target": "edities/chat-2026/NOTATION-REVISION-2026-10-01.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\README.md",
+      "target": "edities/chat-2026/boek/Boek_2_Compleet.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\README.md",
+      "target": "edities/chat-2026/boek/Boek_2_Compleet_Antwoorden.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\README.md",
+      "target": "edities/chat-2026/boek/Boek_2_Compleet_Docenteninformatie.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\README.md",
+      "target": "edities/chat-2026/README.md#hoofdstukken",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\README.md",
+      "target": "edities/chat-2026/README.md#paragrafen-direct-vinden",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\README.md",
+      "target": "edities/chat-2026/IMPORT_NOTES.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\README.md",
+      "target": "edities/chat-2026/PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\README.md",
+      "target": "IMPORT_REPORT.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\README.md",
+      "target": "../archive/book-2-pre-chat-2026/README.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\NOTATION-REVISION-2026-10-01.md",
+      "target": "notation-print-impact.json",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\NOTATION-REVISION-2026-10-01.md",
+      "target": "PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "target": "bronnen/H1/paragrafen/2.1.1%20Kostenstructuren/2.1.1%20Kostenstructuren%20%E2%80%93%20presentatie.pptx",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "target": "bronnen/H1/paragrafen/2.1.1%20Kostenstructuren/2.1.1%20Kostenstructuren%20%E2%80%93%20presentatie.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "target": "bronnen/H1/paragrafen/2.1.2%20Opbrengsten%2C%20winst%20en%20break-even/2.1.2%20Opbrengsten%2C%20winst%20en%20break-even%20%E2%80%93%20presentatie.pptx",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "target": "bronnen/H1/paragrafen/2.1.2%20Opbrengsten%2C%20winst%20en%20break-even/2.1.2%20Opbrengsten%2C%20winst%20en%20break-even%20%E2%80%93%20presentatie.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "target": "bronnen/H1/paragrafen/2.1.3%20Marginale%20kosten%20en%20marginale%20opbrengsten/2.1.3%20Marginale%20kosten%20en%20marginale%20opbrengsten%20%E2%80%93%20presentatie.pptx",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "target": "bronnen/H1/paragrafen/2.1.3%20Marginale%20kosten%20en%20marginale%20opbrengsten/2.1.3%20Marginale%20kosten%20en%20marginale%20opbrengsten%20%E2%80%93%20presentatie.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "target": "bronnen/H1/paragrafen/2.1.4%20Gemengde%20opgaven/2.1.4%20Gemengde%20opgaven%20%E2%80%93%20presentatie.pptx",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "target": "bronnen/H1/paragrafen/2.1.4%20Gemengde%20opgaven/2.1.4%20Gemengde%20opgaven%20%E2%80%93%20presentatie.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "target": "bronnen/H2/paragrafen/2.2.1%20Prijselasticiteit/2.2.1%20Prijselasticiteit%20%E2%80%93%20presentatie.pptx",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "target": "bronnen/H2/paragrafen/2.2.1%20Prijselasticiteit/2.2.1%20Prijselasticiteit%20%E2%80%93%20presentatie.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "target": "bronnen/H2/paragrafen/2.2.2%20Elasticiteit%20en%20omzet/2.2.2%20Elasticiteit%20en%20omzet%20%E2%80%93%20presentatie.pptx",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "target": "bronnen/H2/paragrafen/2.2.2%20Elasticiteit%20en%20omzet/2.2.2%20Elasticiteit%20en%20omzet%20%E2%80%93%20presentatie.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "target": "bronnen/H2/paragrafen/2.2.3%20Inkomenselasticiteit%20en%20kruislingse%20elasticiteit/2.2.3%20Inkomenselasticiteit%20en%20kruislingse%20elasticiteit%20%E2%80%93%20presentatie.pptx",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "target": "bronnen/H2/paragrafen/2.2.3%20Inkomenselasticiteit%20en%20kruislingse%20elasticiteit/2.2.3%20Inkomenselasticiteit%20en%20kruislingse%20elasticiteit%20%E2%80%93%20presentatie.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "target": "bronnen/H2/paragrafen/2.2.4%20Gemengde%20opgaven/2.2.4%20Gemengde%20opgaven%20%E2%80%93%20presentatie.pptx",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "target": "bronnen/H2/paragrafen/2.2.4%20Gemengde%20opgaven/2.2.4%20Gemengde%20opgaven%20%E2%80%93%20presentatie.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "target": "bronnen/H3/paragrafen/2.3.1%20Consumentensurplus/2.3.1%20Consumentensurplus%20%E2%80%93%20presentatie.pptx",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "target": "bronnen/H3/paragrafen/2.3.1%20Consumentensurplus/2.3.1%20Consumentensurplus%20%E2%80%93%20presentatie.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "target": "bronnen/H3/paragrafen/2.3.2%20Producentensurplus%20en%20totaal%20surplus/2.3.2%20Producentensurplus%20en%20totaal%20surplus%20%E2%80%93%20presentatie.pptx",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "target": "bronnen/H3/paragrafen/2.3.2%20Producentensurplus%20en%20totaal%20surplus/2.3.2%20Producentensurplus%20en%20totaal%20surplus%20%E2%80%93%20presentatie.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "target": "bronnen/H3/paragrafen/2.3.3%20Pareto-effici%C3%ABntie%20en%20welvaartsverlies/2.3.3%20Pareto-effici%C3%ABntie%20en%20welvaartsverlies%20%E2%80%93%20presentatie.pptx",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "target": "bronnen/H3/paragrafen/2.3.3%20Pareto-effici%C3%ABntie%20en%20welvaartsverlies/2.3.3%20Pareto-effici%C3%ABntie%20en%20welvaartsverlies%20%E2%80%93%20presentatie.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "target": "bronnen/H3/paragrafen/2.3.4%20Gemengde%20opgaven/2.3.4%20Gemengde%20opgaven%20%E2%80%93%20presentatie.pptx",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "target": "bronnen/H3/paragrafen/2.3.4%20Gemengde%20opgaven/2.3.4%20Gemengde%20opgaven%20%E2%80%93%20presentatie.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "NOTATION-REVISION-2026-10-01.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "ROUTE-REVISION-2026-09-21.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "CORRECTIES-2026-09-20.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "boek/Boek_2_Compleet.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "boek/Boek_2_Compleet_Antwoorden.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "boek/Boek_2_Compleet_Docenteninformatie.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "hoofdstukken/Boek_2_H1_Kosten_en_opbrengsten.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "hoofdstukken/Boek_2_H1_Antwoorden.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "hoofdstukken/Boek_2_H1_Docenteninformatie.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "bronnen/H1/README.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "hoofdstukken/Boek_2_H2_Elasticiteit.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "hoofdstukken/Boek_2_H2_Antwoorden.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "hoofdstukken/Boek_2_H2_Docenteninformatie.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "bronnen/H2/README.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "hoofdstukken/Boek_2_H3_Surplus_en_welvaart.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "hoofdstukken/Boek_2_H3_Antwoorden.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "hoofdstukken/Boek_2_H3_Docenteninformatie.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "bronnen/H3/README.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "bronnen/H1/paragrafen/2.1.1%20Kostenstructuren/",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "bronnen/H1/paragrafen/2.1.2%20Opbrengsten%2C%20winst%20en%20break-even/",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "bronnen/H1/paragrafen/2.1.3%20Marginale%20kosten%20en%20marginale%20opbrengsten/",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "bronnen/H1/paragrafen/2.1.4%20Gemengde%20opgaven/",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "bronnen/H2/paragrafen/2.2.1%20Prijselasticiteit/",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "bronnen/H2/paragrafen/2.2.2%20Elasticiteit%20en%20omzet/",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "bronnen/H2/paragrafen/2.2.3%20Inkomenselasticiteit%20en%20kruislingse%20elasticiteit/",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "bronnen/H2/paragrafen/2.2.4%20Gemengde%20opgaven/",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "bronnen/H3/paragrafen/2.3.1%20Consumentensurplus/",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "bronnen/H3/paragrafen/2.3.2%20Producentensurplus%20en%20totaal%20surplus/",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "bronnen/H3/paragrafen/2.3.3%20Pareto-effici%C3%ABntie%20en%20welvaartsverlies/",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "bronnen/H3/paragrafen/2.3.4%20Gemengde%20opgaven/",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "IMPORT_NOTES.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "delivery-manifest.json",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\README.md",
+      "target": "NOTATION-REVISION-2026-10-01.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H1\\paragrafen\\2.1.3 Marginale kosten en marginale opbrengsten\\README.md",
+      "target": "2.1.3%20Marginale%20kosten%20en%20marginale%20opbrengsten%20%E2%80%93%20presentatie.pptx",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H1\\paragrafen\\2.1.3 Marginale kosten en marginale opbrengsten\\README.md",
+      "target": "2.1.3%20Marginale%20kosten%20en%20marginale%20opbrengsten%20%E2%80%93%20presentatie.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H1\\paragrafen\\2.1.3 Marginale kosten en marginale opbrengsten\\README.md",
+      "target": "../../../../PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H1\\paragrafen\\2.1.3 Marginale kosten en marginale opbrengsten\\README.md",
+      "target": "LEESMIJ.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H1\\paragrafen\\2.1.4 Gemengde opgaven\\README.md",
+      "target": "2.1.4%20Gemengde%20opgaven%20%E2%80%93%20presentatie.pptx",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H1\\paragrafen\\2.1.4 Gemengde opgaven\\README.md",
+      "target": "2.1.4%20Gemengde%20opgaven%20%E2%80%93%20presentatie.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H1\\paragrafen\\2.1.4 Gemengde opgaven\\README.md",
+      "target": "../../../../PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H1\\paragrafen\\2.1.4 Gemengde opgaven\\README.md",
+      "target": "LEESMIJ.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\paragrafen\\2.2.1 Prijselasticiteit\\README.md",
+      "target": "2.2.1%20Prijselasticiteit%20%E2%80%93%20presentatie.pptx",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\paragrafen\\2.2.1 Prijselasticiteit\\README.md",
+      "target": "2.2.1%20Prijselasticiteit%20%E2%80%93%20presentatie.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\paragrafen\\2.2.1 Prijselasticiteit\\README.md",
+      "target": "../../../../PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\paragrafen\\2.2.1 Prijselasticiteit\\README.md",
+      "target": "LEESMIJ.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\paragrafen\\2.2.2 Elasticiteit en omzet\\README.md",
+      "target": "2.2.2%20Elasticiteit%20en%20omzet%20%E2%80%93%20presentatie.pptx",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\paragrafen\\2.2.2 Elasticiteit en omzet\\README.md",
+      "target": "2.2.2%20Elasticiteit%20en%20omzet%20%E2%80%93%20presentatie.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\paragrafen\\2.2.2 Elasticiteit en omzet\\README.md",
+      "target": "../../../../PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\paragrafen\\2.2.2 Elasticiteit en omzet\\README.md",
+      "target": "LEESMIJ.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\paragrafen\\2.2.3 Inkomenselasticiteit en kruislingse elasticiteit\\README.md",
+      "target": "2.2.3%20Inkomenselasticiteit%20en%20kruislingse%20elasticiteit%20%E2%80%93%20presentatie.pptx",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\paragrafen\\2.2.3 Inkomenselasticiteit en kruislingse elasticiteit\\README.md",
+      "target": "2.2.3%20Inkomenselasticiteit%20en%20kruislingse%20elasticiteit%20%E2%80%93%20presentatie.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\paragrafen\\2.2.3 Inkomenselasticiteit en kruislingse elasticiteit\\README.md",
+      "target": "../../../../PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\paragrafen\\2.2.3 Inkomenselasticiteit en kruislingse elasticiteit\\README.md",
+      "target": "LEESMIJ.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\paragrafen\\2.2.4 Gemengde opgaven\\README.md",
+      "target": "2.2.4%20Gemengde%20opgaven%20%E2%80%93%20presentatie.pptx",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\paragrafen\\2.2.4 Gemengde opgaven\\README.md",
+      "target": "2.2.4%20Gemengde%20opgaven%20%E2%80%93%20presentatie.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\paragrafen\\2.2.4 Gemengde opgaven\\README.md",
+      "target": "../../../../PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\paragrafen\\2.2.4 Gemengde opgaven\\README.md",
+      "target": "LEESMIJ.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\paragrafen\\2.3.1 Consumentensurplus\\README.md",
+      "target": "2.3.1%20Consumentensurplus%20%E2%80%93%20presentatie.pptx",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\paragrafen\\2.3.1 Consumentensurplus\\README.md",
+      "target": "2.3.1%20Consumentensurplus%20%E2%80%93%20presentatie.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\paragrafen\\2.3.1 Consumentensurplus\\README.md",
+      "target": "../../../../PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\paragrafen\\2.3.1 Consumentensurplus\\README.md",
+      "target": "LEESMIJ.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\paragrafen\\2.3.2 Producentensurplus en totaal surplus\\README.md",
+      "target": "2.3.2%20Producentensurplus%20en%20totaal%20surplus%20%E2%80%93%20presentatie.pptx",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\paragrafen\\2.3.2 Producentensurplus en totaal surplus\\README.md",
+      "target": "2.3.2%20Producentensurplus%20en%20totaal%20surplus%20%E2%80%93%20presentatie.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\paragrafen\\2.3.2 Producentensurplus en totaal surplus\\README.md",
+      "target": "../../../../PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\paragrafen\\2.3.2 Producentensurplus en totaal surplus\\README.md",
+      "target": "LEESMIJ.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\paragrafen\\2.3.3 Pareto-efficiëntie en welvaartsverlies\\README.md",
+      "target": "2.3.3%20Pareto-effici%C3%ABntie%20en%20welvaartsverlies%20%E2%80%93%20presentatie.pptx",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\paragrafen\\2.3.3 Pareto-efficiëntie en welvaartsverlies\\README.md",
+      "target": "2.3.3%20Pareto-effici%C3%ABntie%20en%20welvaartsverlies%20%E2%80%93%20presentatie.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\paragrafen\\2.3.3 Pareto-efficiëntie en welvaartsverlies\\README.md",
+      "target": "../../../../PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\paragrafen\\2.3.3 Pareto-efficiëntie en welvaartsverlies\\README.md",
+      "target": "LEESMIJ.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\paragrafen\\2.3.4 Gemengde opgaven\\README.md",
+      "target": "2.3.4%20Gemengde%20opgaven%20%E2%80%93%20presentatie.pptx",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\paragrafen\\2.3.4 Gemengde opgaven\\README.md",
+      "target": "2.3.4%20Gemengde%20opgaven%20%E2%80%93%20presentatie.pdf",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\paragrafen\\2.3.4 Gemengde opgaven\\README.md",
+      "target": "../../../../PRESENTATIES-PAGINAVERWIJZINGEN.md",
+      "exists": true
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\paragrafen\\2.3.4 Gemengde opgaven\\README.md",
+      "target": "LEESMIJ.md",
+      "exists": true
+    }
+  ],
+  "finalizers": [
+    {
+      "paragraph": "2.1.3",
+      "sha256": "4a567bc82562daadcc2ed2236b3d41175f53a139f7bf3fbd32e301f85ffb0835",
+      "package_findings": 0,
+      "layout_findings": 0,
+      "warnings": []
+    },
+    {
+      "paragraph": "2.1.4",
+      "sha256": "6e70da3f6755b478cb204e7c06cbf332a24f7ccbf347687c737d1456f756f793",
+      "package_findings": 0,
+      "layout_findings": 0,
+      "warnings": []
+    },
+    {
+      "paragraph": "2.2.1",
+      "sha256": "335e76e559e00df33ba30025fc60db95ab7b1e3734da856bf60e97fc36fc2ed5",
+      "package_findings": 0,
+      "layout_findings": 0,
+      "warnings": []
+    },
+    {
+      "paragraph": "2.2.2",
+      "sha256": "346f1501a03578fc5c66c56151f735850921ed3b13fecb8ec0a183a7213ad5d7",
+      "package_findings": 0,
+      "layout_findings": 0,
+      "warnings": []
+    },
+    {
+      "paragraph": "2.2.3",
+      "sha256": "552463daafd3b110f38b4cf65be9a5ccfa2b53d19bcfc138df62b6412d67d072",
+      "package_findings": 0,
+      "layout_findings": 0,
+      "warnings": []
+    },
+    {
+      "paragraph": "2.2.4",
+      "sha256": "c1463e257c398605a0c5bdbf9665d2dc4f7429146eaa8cf4d1f911bb1f0a6c3b",
+      "package_findings": 0,
+      "layout_findings": 0,
+      "warnings": []
+    },
+    {
+      "paragraph": "2.3.1",
+      "sha256": "e7acee05c88d0fa9ac1392009887197a3a3e5757ddec5780af78db5699a1bf56",
+      "package_findings": 0,
+      "layout_findings": 0,
+      "warnings": []
+    },
+    {
+      "paragraph": "2.3.2",
+      "sha256": "9576622067841bd48ad09c4a2e149c509ad13e03e9cb605d7a25461035358bba",
+      "package_findings": 0,
+      "layout_findings": 0,
+      "warnings": []
+    },
+    {
+      "paragraph": "2.3.3",
+      "sha256": "c0d11aef72622b69b4ea00b0c616e5618c669305bee6c883fac30c2de0c62253",
+      "package_findings": 0,
+      "layout_findings": 0,
+      "warnings": [
+        {
+          "character_count": 162,
+          "kind": "dense_bold_paragraphs_without_spacing",
+          "object_id": "8",
+          "paragraph_count": 2,
+          "slide": 3,
+          "usable_height_pt": 77.25
+        }
+      ]
+    },
+    {
+      "paragraph": "2.3.4",
+      "sha256": "d37077aa28d315533f1dc15f3329611f99918a3470eb9754d14551982e59a23f",
+      "package_findings": 0,
+      "layout_findings": 0,
+      "warnings": [
+        {
+          "character_count": 120,
+          "kind": "dense_bold_paragraphs_without_spacing",
+          "object_id": "8",
+          "paragraph_count": 2,
+          "slide": 5,
+          "usable_height_pt": 83.25
+        }
+      ]
+    }
+  ],
+  "preserved_books": true
+}

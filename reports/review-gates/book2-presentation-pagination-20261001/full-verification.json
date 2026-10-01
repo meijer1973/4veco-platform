@@ -1,0 +1,277 @@
+{
+  "revision": "book2-notation-20261001",
+  "passed": true,
+  "bundles": [
+    {
+      "kind": "student",
+      "pages": 111,
+      "links": 101,
+      "bookmarks": 20,
+      "print": {
+        "printed_pages": [
+          1,
+          109
+        ],
+        "contents_references": 15,
+        "viewer_labels": "PASS"
+      }
+    },
+    {
+      "kind": "answers",
+      "pages": 58,
+      "links": 47,
+      "bookmarks": 129,
+      "print": {
+        "printed_pages": [
+          1,
+          56
+        ],
+        "contents_references": 3,
+        "viewer_labels": "PASS"
+      }
+    },
+    {
+      "kind": "teacher",
+      "pages": 19,
+      "links": 3,
+      "bookmarks": 64,
+      "print": {
+        "printed_pages": [
+          1,
+          17
+        ],
+        "contents_references": 3,
+        "viewer_labels": "PASS"
+      }
+    }
+  ],
+  "identical_assembled_chapter_pages": 182,
+  "links_checked": 151,
+  "overview": {
+    "h2-overzicht": 73,
+    "h3-overzicht": 110
+  },
+  "cover_geometry": "PASS",
+  "paragraph_exports": {
+    "pages": 197,
+    "links": 25,
+    "text_pixels_navigation": "PASS"
+  },
+  "theory_extract": {
+    "pages": 46,
+    "text_pixels_page_map": "PASS",
+    "path": "boek/Boek_2_Theorie_46_Herziene_Paginas.pdf",
+    "sha256": "264934198ec5532cbee989a4a349e15cfa9855e32b16c0d7b05c60b3662bf090"
+  },
+  "source_checks": {
+    "exercise_blocks": 114,
+    "retrieval_headings": 9,
+    "economic_payloads": "PASS (equivalent Dutch notation and SportLint fill-in columns only)",
+    "SchaalWerk_curve_points": 241,
+    "SportLint_MK": [
+      4,
+      4
+    ],
+    "SportLint_MO": [
+      9,
+      9
+    ],
+    "theory_extract_pages": 5
+  },
+  "print_and_presentation_compatibility": {
+    "split_exercises": 7,
+    "lost_facing_pairs": 5,
+    "presentations_audited": 12,
+    "presentations_rebuilt": 10,
+    "presentation_warnings": 0,
+    "presentation_repair": "CLOSED"
+  },
+  "presentation_successor": {
+    "status": "PASS",
+    "decks_rebuilt": 10,
+    "slides": 258,
+    "notes": 258,
+    "decks": [
+      {
+        "paragraph": "2.1.3",
+        "slides": 27,
+        "notes": 27,
+        "tables": 16,
+        "charts": 0,
+        "editable_charts": {
+          "ok": true,
+          "charts": 0,
+          "references": 0,
+          "cellsCompared": 0,
+          "workbooks": []
+        }
+      },
+      {
+        "paragraph": "2.1.4",
+        "slides": 24,
+        "notes": 24,
+        "tables": 10,
+        "charts": 4,
+        "editable_charts": {
+          "ok": true,
+          "charts": 4,
+          "references": 44,
+          "cellsCompared": 94,
+          "workbooks": [
+            "ppt/embeddings/chart-data-snapshot-001.xlsx",
+            "ppt/embeddings/chart-data-snapshot-002.xlsx",
+            "ppt/embeddings/chart-data-snapshot-003.xlsx",
+            "ppt/embeddings/chart-data-snapshot-004.xlsx"
+          ]
+        }
+      },
+      {
+        "paragraph": "2.2.1",
+        "slides": 24,
+        "notes": 24,
+        "tables": 7,
+        "charts": 1,
+        "editable_charts": {
+          "ok": true,
+          "charts": 1,
+          "references": 2,
+          "cellsCompared": 4,
+          "workbooks": [
+            "ppt/embeddings/chart-data-snapshot-001.xlsx"
+          ]
+        }
+      },
+      {
+        "paragraph": "2.2.2",
+        "slides": 26,
+        "notes": 26,
+        "tables": 14,
+        "charts": 2,
+        "editable_charts": {
+          "ok": true,
+          "charts": 2,
+          "references": 6,
+          "cellsCompared": 30,
+          "workbooks": [
+            "ppt/embeddings/chart-data-snapshot-001.xlsx",
+            "ppt/embeddings/chart-data-snapshot-002.xlsx"
+          ]
+        }
+      },
+      {
+        "paragraph": "2.2.3",
+        "slides": 30,
+        "notes": 30,
+        "tables": 14,
+        "charts": 0,
+        "editable_charts": {
+          "ok": true,
+          "charts": 0,
+          "references": 0,
+          "cellsCompared": 0,
+          "workbooks": []
+        }
+      },
+      {
+        "paragraph": "2.2.4",
+        "slides": 23,
+        "notes": 23,
+        "tables": 11,
+        "charts": 0,
+        "editable_charts": {
+          "ok": true,
+          "charts": 0,
+          "references": 0,
+          "cellsCompared": 0,
+          "workbooks": []
+        }
+      },
+      {
+        "paragraph": "2.3.1",
+        "slides": 25,
+        "notes": 25,
+        "tables": 7,
+        "charts": 5,
+        "editable_charts": {
+          "ok": true,
+          "charts": 5,
+          "references": 152,
+          "cellsCompared": 246,
+          "workbooks": [
+            "ppt/embeddings/chart-data-snapshot-001.xlsx",
+            "ppt/embeddings/chart-data-snapshot-002.xlsx",
+            "ppt/embeddings/chart-data-snapshot-003.xlsx",
+            "ppt/embeddings/chart-data-snapshot-004.xlsx",
+            "ppt/embeddings/chart-data-snapshot-005.xlsx"
+          ]
+        }
+      },
+      {
+        "paragraph": "2.3.2",
+        "slides": 27,
+        "notes": 27,
+        "tables": 7,
+        "charts": 5,
+        "editable_charts": {
+          "ok": true,
+          "charts": 5,
+          "references": 384,
+          "cellsCompared": 730,
+          "workbooks": [
+            "ppt/embeddings/chart-data-snapshot-001.xlsx",
+            "ppt/embeddings/chart-data-snapshot-002.xlsx",
+            "ppt/embeddings/chart-data-snapshot-003.xlsx",
+            "ppt/embeddings/chart-data-snapshot-004.xlsx",
+            "ppt/embeddings/chart-data-snapshot-005.xlsx"
+          ]
+        }
+      },
+      {
+        "paragraph": "2.3.3",
+        "slides": 30,
+        "notes": 30,
+        "tables": 8,
+        "charts": 10,
+        "editable_charts": {
+          "ok": true,
+          "charts": 10,
+          "references": 190,
+          "cellsCompared": 288,
+          "workbooks": [
+            "ppt/embeddings/chart-data-snapshot-001.xlsx",
+            "ppt/embeddings/chart-data-snapshot-002.xlsx",
+            "ppt/embeddings/chart-data-snapshot-003.xlsx",
+            "ppt/embeddings/chart-data-snapshot-004.xlsx",
+            "ppt/embeddings/chart-data-snapshot-005.xlsx",
+            "ppt/embeddings/chart-data-snapshot-006.xlsx",
+            "ppt/embeddings/chart-data-snapshot-007.xlsx",
+            "ppt/embeddings/chart-data-snapshot-008.xlsx",
+            "ppt/embeddings/chart-data-snapshot-009.xlsx",
+            "ppt/embeddings/chart-data-snapshot-010.xlsx"
+          ]
+        }
+      },
+      {
+        "paragraph": "2.3.4",
+        "slides": 22,
+        "notes": 22,
+        "tables": 9,
+        "charts": 6,
+        "editable_charts": {
+          "ok": true,
+          "charts": 6,
+          "references": 58,
+          "cellsCompared": 110,
+          "workbooks": [
+            "ppt/embeddings/chart-data-snapshot-001.xlsx",
+            "ppt/embeddings/chart-data-snapshot-002.xlsx",
+            "ppt/embeddings/chart-data-snapshot-003.xlsx",
+            "ppt/embeddings/chart-data-snapshot-004.xlsx",
+            "ppt/embeddings/chart-data-snapshot-005.xlsx",
+            "ppt/embeddings/chart-data-snapshot-006.xlsx"
+          ]
+        }
+      }
+    ]
+  }
+}

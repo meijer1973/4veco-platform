@@ -3,32 +3,32 @@
   "title": "Producentensurplus en totaal surplus",
   "type": "theory",
   "edition": "chat-2026",
-  "lessonCommit": "d53080f38ebbdbba319e6d9b89dcba86067a72be",
-  "platformBaseline": "d561b3e283dc05e377cebffd80d082f05518ad23",
+  "lessonCommit": "a8940a7a79e22857a3e306a91fe923c48c63e716",
+  "platformBaseline": "ac6f8e5320406aaf4906811b289ce98fcfa548c1",
   "sources": [
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
-      "sha256": "77d485b2078bba0b3faffcb6d0e78d4ce8e55f4ab59de63d470c9214aff92745"
+      "sha256": "2a022bf9e118efd9ff9bda06b8e7b047c997f827462cb941191f2a5ff87e9b36"
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md",
-      "sha256": "79abbe55782b3bd3a2ac38f14213654cef38a0111c93a27ab4d95d4394f2ad35"
+      "sha256": "68876c1c0ac12530eac0d73df936f6ef6e27a6b2367b3a69439accc09e0668fb"
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
-      "sha256": "8cee4de8cc847b58d5c29c3f9bee3df6f4634cd16bed1dc8d45017529ef997d6"
+      "sha256": "31197b09b4754a59cd09b00fdfbf1906f0068d4e9ff93dc7e5bf6f8a36f09459"
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/2.3 Docenteninformatie.md",
-      "sha256": "95fef222ef377353c0f3986319707fe85838276e2dd59947aa764c6102437d93"
+      "sha256": "6cd82958d06e3da05ed7e96c1d2bdf6bf3ba54149f0eea9362e6c9277bbcff97"
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/2.3 Surplus en welvaart – antwoorden.md",
-      "sha256": "9f5ebbbf133c5d0d50a0d55251546e957207cc3867b1d843842b271780b9b116"
+      "sha256": "aa2b16cf1a27f136755805b345b5ad48588baacd06fd219133d6013423e22a51"
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet.pdf",
-      "sha256": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493"
+      "sha256": "23d0532a7804fb743f053608a814959c6f09c9259c27762b1dff5952556908d5"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.md",
@@ -67,24 +67,24 @@
   },
   "printedPages": {
     "theory": [
-      80,
       81,
       82,
       83,
-      84
+      84,
+      85
     ],
-    "start": 84,
+    "start": 85,
     "basis": [
-      85,
-      86
+      86,
+      87
     ],
-    "independent": 87,
+    "independent": 88,
     "target": [
-      88,
-      89
+      89,
+      90
     ]
   },
-  "pageVerification": "Complete student PDF physical pages 82–91 have printed footers 80–89; inspected start and target footers.",
+  "pageVerification": "Complete student PDF physical pages 83–92 have printed footers 81–90; printed body page + 2 gives the physical PDF page.",
   "goals": [
     "Evenwicht berekenen en markeren",
     "CS, PS en TS berekenen met basis, hoogte, eenheid",
@@ -95,11 +95,11 @@
     {
       "operation": "Evenwicht: gelijkstellen, oplossen, invullen, controleren",
       "anchor": "Boek 1 §1.3.2, Theorie / Het evenwicht berekenen",
-      "status": "Previously taught with Qv(P), Qa(P); inverse P(Q) is a representation change. Start 1 gets support from p.82; slide 7 explicitly refreshes inverse equality."
+      "status": "Previously taught with Qv(P), Qa(P); inverse P(Q) is a representation change. Start 1 gets support from p.83; slide 7 explicitly refreshes inverse equality."
     },
     {
       "operation": "Kopersvoordeel en driehoeksoppervlakte",
-      "anchor": "§2.3.1 p.72–75, definitions and worked example",
+      "anchor": "§2.3.1 p.73–76, definitions and worked example",
       "status": "Previously taught; refreshed slides 2–3, 9, 11."
     },
     {
@@ -109,22 +109,22 @@
     },
     {
       "operation": "PS and cancellation of payment",
-      "anchor": "§2.3.2 p.80",
-      "status": "New in start 2, supported exploration with p.80. Slides 3–4 teach it; overview 16 notes require revisit before basis."
+      "anchor": "§2.3.2 p.81",
+      "status": "New in start 2, supported exploration with p.81. Slides 3–4 teach it; overview 16 notes require revisit before basis."
     },
     {
       "operation": "Separate higher valuation and lower MK effects",
-      "anchor": "§2.3.2 p.80 principles; exercise 5 p.86 asks application",
+      "anchor": "§2.3.2 p.81 principles; exercise 5 p.87 asks application",
       "status": "Worked on slide 5 with separate authored data, before assigned practice."
     },
     {
       "operation": "From one transaction to continuous areas, shared Qe, PS intercept and euro units",
-      "anchor": "§2.3.2 p.81–83",
+      "anchor": "§2.3.2 p.82–84",
       "status": "Explicitly taught slides 6–11."
     },
     {
       "operation": "Marginal comparison outside equilibrium, maximum and fairness limits",
-      "anchor": "§2.3.2 p.82–84",
+      "anchor": "§2.3.2 p.83–85",
       "status": "Explicitly taught slides 12–15; domain 0≤Q≤56 for authored market."
     }
   ],
@@ -159,8 +159,8 @@
   "target": {
     "context": "Concertkaartjes",
     "sourcePages": [
-      88,
-      89
+      89,
+      90
     ],
     "questions": [
       "a equilibrium",
@@ -182,7 +182,7 @@
   "sourceFindings": [
     {
       "id": "232-teacher-context-label",
-      "detail": "Teacher guide calls the example postervoorbeeld in its introduction and Notitieboekenvoorbeeld in its table; actual student pages contain posters on 81–82 and notitieboeken on 83–84. No assignment ambiguity or source alteration."
+      "detail": "Teacher guide calls the example postervoorbeeld in its introduction and Notitieboekenvoorbeeld in its table; actual student pages contain posters on 82–83 and notitieboeken on 84–85. No assignment ambiguity or source alteration."
     }
   ],
   "scope": "Classroom PPTX and PDF only; no full companion acceptance or classroom timing claim.",
@@ -317,14 +317,10 @@
     17,
     22
   ],
-  "outputs": [
-    {
-      "name": "2.3.2 Producentensurplus en totaal surplus – presentatie.pdf",
-      "sha256": "b613c73fbe27bd24cb03fa20fa6c7615d70dce84ab8ac62c6c00d3c471583593"
-    },
-    {
-      "name": "2.3.2 Producentensurplus en totaal surplus – presentatie.pptx",
-      "sha256": "04c2bc7a11b774dc6d1bbffa91bf6a96e1e276fb49504e8580639c4a036fb4a9"
-    }
-  ]
+  "paginationRevision": {
+    "revision": "book2-presentation-pagination-20261001",
+    "sourceCommit": "a8940a7a79e22857a3e306a91fe923c48c63e716",
+    "previousPlatformCommit": "ac6f8e5320406aaf4906811b289ce98fcfa548c1",
+    "scope": "Current printed page references and Qv/Qa notation; assignments, economic values, goals, teaching examples and timing preserved."
+  }
 }
