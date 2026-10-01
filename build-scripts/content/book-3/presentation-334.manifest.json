@@ -1,0 +1,290 @@
+{
+  "paragraph": "3.3.4",
+  "title": "Gemengde opgaven internationale handel",
+  "type": "gemengde opgaven",
+  "edition": "book34-lesson-balance-v3-20260915, current selected v3 with signed followups at source commit",
+  "lesson_commit": "9b8304d5031cafac936a56281e144573a25fbbc9",
+  "platform_base": "34464fb6091f721f7a87e8d1bb3165f758770799",
+  "goals": [
+    "Relevante brongegevens kiezen",
+    "Comparatief voordeel kwalitatief verklaren",
+    "Import en heffingsopbrengst met eenheden berekenen",
+    "Gevolgen per groep en beleidsconclusie onderscheiden"
+  ],
+  "sources": [
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/3.3.1 manuscript.md",
+      "sha256": "2f8b17f7624ecf6605d8f65a7076aacc95b39f2dabf3a1b4185d421247414a74"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/3.3.2 manuscript.md",
+      "sha256": "4098130b9a226b3007e5d2642f32ce47d0aa1667e1589a151fd8380a3efe043e"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/3.3.3 manuscript.md",
+      "sha256": "c2d21ba523488ab555fd9880718d4d986886a93fe938cabafd48c6865488a284"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/3.3.4 manuscript.md",
+      "sha256": "35868a050f130381e4dc600fbe4bd399eca23ab6e96d83c72662df9225126faf"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/Antwoorden.md",
+      "sha256": "aec2cc01f5ea47e8ba00df0eb9740701d8c355176044d0796346b6ca31e33c70"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/Docenteninformatie.md",
+      "sha256": "4b2951f5db50ba422a424a262d52cbc59b3cf566213c3bd175e71910a9f38c5e"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.4_target.svg",
+      "sha256": "01402846608a43c01a8e9aff1c049ebbc7055ab76762ec3ffe653d34517b1789"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/_assets/3.3.4_ans_35.svg",
+      "sha256": "cc2a05d54bfd7dfa630fbbffde5402030dd7cf96e7e2366ca125e490eae2bbd6"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.1 manuscript.md",
+      "sha256": "938160312edc425888dd54b3207c932e0aa396c59411a30e6679865eb14fded8"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.1 manuscript.md",
+      "sha256": "c13b390b105beaf18a7d3e83cb52fb04792f3927d207efe5616b01a3ce8fc366"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.3 manuscript.md",
+      "sha256": "d46652e4ed48a368246ed70a0f1df0206752d95775e52c6de25df0088167fbd2"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+      "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+    }
+  ],
+  "pages": {
+    "verified_against": "printed footers in complete student book; physical page equals printed page in this edition",
+    "paragraph": [
+      117,
+      123
+    ],
+    "start": 117,
+    "preparation": [
+      117,
+      119
+    ],
+    "target_sources": 120,
+    "target_questions": 121,
+    "bonus": 122,
+    "repetition": 123,
+    "chapter_to_book_offset": 86
+  },
+  "assignment": {
+    "start": [
+      31
+    ],
+    "basis": [],
+    "independent_preparation": [
+      32,
+      33,
+      34
+    ],
+    "target": 35,
+    "homework": [
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38
+    ],
+    "bonus_label": [
+      36
+    ],
+    "repetition_label": [
+      37,
+      38
+    ],
+    "wording": "Maken en nakijken",
+    "rationale": "Use first actual mixed item 31. No separate guided/basis section exists. Classroom recipe explicitly assigns all mixed items, keeping bonus label; general textbook optional-bonus route therefore does not determine this homework selection. Target 35 combines all paragraph operations."
+  },
+  "prerequisite_trace": [
+    {
+      "used_by": "31a,33a,35a",
+      "operation": "Distinguish resources per same-quality product from sacrificed other production; explain lower alternative costs without invented numerical ratios",
+      "earlier_teaching": "3.3.1 chapter pp.3-5, definitions and Sol/Terra worked example (book 89-91)",
+      "current_support": "slide 2 brief recall; slide 15 target feedback"
+    },
+    {
+      "used_by": "31b,32a,33b,34a,35b",
+      "operation": "Identify direction of border crossing; use Qa-Qv for export and Qv-Qa for import at one given price",
+      "earlier_teaching": "3.3.1 chapter p.2 and 3.3.2 pp.11-13 (book 88,97-99)",
+      "current_support": "slides 3-4 use an independent Ivera table, explain production + import = use"
+    },
+    {
+      "used_by": "33c,33d,36a-c",
+      "operation": "Use delivery/quality evidence, distinguish model assumptions from actual product differences and avoid universal group claims",
+      "earlier_teaching": "3.3.1 chapter pp.4-5; 3.3.2 p.11 (book 90-91,97)",
+      "current_support": "slide 2 comparison; slides 3-5 notes recheck assumptions"
+    },
+    {
+      "used_by": "34a,35b,35d",
+      "operation": "Select post-tariff row; multiply residual imports by per-unit tariff; represent as rectangle with quantity width and price height",
+      "earlier_teaching": "3.3.3 chapter pp.22-25 including figure 3 and worked Orel example (book 108-111)",
+      "current_support": "slides 3-4 arithmetic and representation recall; slide 18 native XY exact shaded rectangle"
+    },
+    {
+      "used_by": "32b,34b-d,35c,35f",
+      "operation": "Compare price and quantity for each domestic group; connect production goal to a source fact and bound conclusion",
+      "earlier_teaching": "3.3.1 chapter p.4; 3.3.2 pp.13-15; 3.3.3 pp.23,25 (book 90,99-101,109,111)",
+      "current_support": "slide 5 independent Ivera worked reasoning; target feedback slides 17,20"
+    },
+    {
+      "used_by": "35e",
+      "operation": "Read free permits and no tariff as no direct government receipt; distinguish quantity limit from payment",
+      "earlier_teaching": "3.3.3 chapter pp.24-25 (book 110-111)",
+      "current_support": "slide 4 brief recall then slide 19 target feedback"
+    },
+    {
+      "used_by": "37a-b",
+      "operation": "Product-tax wedge and government revenue over all taxed units; distinguish tax base from imported units",
+      "earlier_teaching": "3.1.1 chapter pp.2-5 definitions, formula and worked example; 3.3.3 p.22 explicit contrast",
+      "current_support": "slide 4 notes distinguish domestic output from tariff base; no assigned answer revealed"
+    },
+    {
+      "used_by": "38a-b",
+      "operation": "TO=P*q; profit=TO-TK; solve MO=MK, check capacity and compare MK to MO before/after candidate q",
+      "earlier_teaching": "3.2.1 chapter p.4 worked Noor example; 3.2.3 chapter pp.17-20 explicit marginal check and complete worked Linde example",
+      "current_support": "homework is recall of those taught operations; no new long-run entry/exit teaching or answer revealed"
+    }
+  ],
+  "authored_example": {
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "context": "Fietshelmen in Ivera",
+    "slides": [
+      3,
+      4,
+      5
+    ],
+    "world_price": 18,
+    "tariff": 4,
+    "pre_tariff": {
+      "price": 18,
+      "use": 90,
+      "production": 30
+    },
+    "post_tariff": {
+      "price": 22,
+      "use": 78,
+      "production": 42
+    },
+    "import": 36,
+    "revenue_eur_per_week": 144,
+    "assumptions": [
+      "small price-taking country",
+      "competitive market",
+      "equivalent goods",
+      "ample foreign supply",
+      "no transport costs",
+      "no external effects",
+      "positive imports remain"
+    ],
+    "attribution": "Own data; book cites method only. No assigned item used as explanation."
+  },
+  "slide_contract": {
+    "count": 21,
+    "overview_slides": [
+      1,
+      6,
+      21
+    ],
+    "recap_and_authored_example": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "target_sources": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "target_questions": [
+      12,
+      13,
+      14
+    ],
+    "target_answers": [
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "native_table_slides": [
+      3,
+      9,
+      17
+    ],
+    "native_xy_chart_slides": [
+      10,
+      18
+    ]
+  },
+  "graph_contract": {
+    "source": "3.3.4_target.svg",
+    "quantity_domain": [
+      0,
+      160
+    ],
+    "price_domain": [
+      0,
+      40
+    ],
+    "demand_points": [
+      [
+        0,
+        40
+      ],
+      [
+        160,
+        0
+      ]
+    ],
+    "supply_points": [
+      [
+        0,
+        0
+      ],
+      [
+        160,
+        40
+      ]
+    ],
+    "price_lines": [
+      10,
+      15
+    ],
+    "revenue_rectangle": {
+      "q": [
+        60,
+        100
+      ],
+      "p": [
+        10,
+        15
+      ]
+    },
+    "note": "Numeric reconstruction of supplied SVG, not a new assumed model. Native scatter chart uses separate straight two-point boundary segments and data-coordinate hatching."
+  },
+  "limitations": [
+    "No measured lesson duration or learning-effectiveness claim.",
+    "No formal target acceptance or complete companion acceptance.",
+    "Current classroom edition adapter admits Book 2 additions only; Book 3 slide publication needs a separately reviewed additive scope extension. Source bytes and signed receipts remain unchanged."
+  ],
+  "output_location": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/ (existing folder of current paragraph exports; v3 has no per-paragraph directory)"
+}
