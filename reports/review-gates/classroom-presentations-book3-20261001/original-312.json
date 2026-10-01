@@ -1,0 +1,38 @@
+{
+  "scope": "Independent root review bound to completed cold handoff; original PPTX/PDF unchanged.",
+  "pptxSha256": "69ce8b56965aa27bfa212b6bf3fe4f4736df0a5fe695397798988cd693844880",
+  "pdfSha256": "23f5b363f4693fd803db0e142ebf4cfa3798c5dfc664f84c0657a79bf2acbc50",
+  "slides": 29,
+  "allNativePowerPointPageRendersViewedIndividually": true,
+  "allTextAndTeacherNotesRead": true,
+  "minimumExplicitNotesFontPt": 14,
+  "overviewSlides": [
+    1,
+    16,
+    29
+  ],
+  "overviewTextAndGeometryParity": true,
+  "pdfTextMismatches": [],
+  "chartWorkbookCheck": {
+    "ok": true,
+    "charts": 10,
+    "references": 732,
+    "cellsCompared": 1496
+  },
+  "teaching": {
+    "source": "Current Book3 v3 3.1.2; actual target16 a-e, bookpage21.",
+    "overview": "Start10-11 p18;11 visibly supported by p14-16. Notes and slide15 return to11 before practice16. Homework12-16, basis12-13, independent14-15, extra17-18. Prior CS/PS operations correctly anchored to Book2 2.3.1-2.3.2.",
+    "example": "Authored notitieboekjes: Pc20-.30Q, Pp4+.10Q, t4. Free40@8; after30/Pc11/Pp7. CS/PS240/80 to135/45; O120; W20. Weekly amounts and per-unit incidence3/1 clearly distinguished.",
+    "sequence": "Goals2; authored data3; old surplus4; recap311 two-price graph5; per-unit burden/percentage6; new surplus7; government rectangle8; welfare triangle and missed transactions9; ledger10; private-loss versus transfer11; controlled demand response comparison12-13; diagnostic14-15; practice16. Full target context17, native blank figure18, a-c19 and d-e20 before answers21-28. Closure29.",
+    "target": "All target operations and independent arithmetic agree: burdens2/1, buyer66.67%; O150/day; old CS360 PS180; new250/125; ledger525; W15. Correct exact graph vertices and distinct revenue/welfare hatching, units and quantities. Price sensitivity comparison holds initial P/Q, supply and tax constant; no slope-only inference.",
+    "series": "Extends actual reviewed311 operations without contradiction: its meaning of Pc/Pp, supply in buyer prices, tax wedge and incidence are recalled explicitly. Textbook target t3/day is reused deliberately with all givens repeated; authored weekly notitieboekjes example is reset explicitly. Predecessor Book2 surplus knowledge is recalled and redemonstrated before independent work.",
+    "visual": "All29 native PowerPoint renders individually inspected. No material clipping, all ten native charts geometrically coherent. Author independently repaired rounded hatching edges and automatic labels before this copy; no root coaching or edits.",
+    "limits": "No measured classroom timing or pupil mastery claim. Native PowerPoint actions by author; root inspected resulting renders, saved PPTX/PDF and all notes. Final cold handoff identity verified."
+  },
+  "blockingFindings": [],
+  "coldHandoff": {
+    "platform": "2073f07604a9c98d4af338401a35f8dc059ab1d8",
+    "lessons": "70c8145c91b1157e86d39edbe48342c5a70d852f"
+  },
+  "renderReview": "All29 native PowerPoint renders inspected: v4 all pages, then final v5 changed pages4,5,7,8,9,23,24,26,27 individually re-viewed; all other20 PNGs byte-identical. Slide text identical; the only note change, slide8 Q0 to Q = 0, was read and is a clarification. Final handoff hashes match v5."
+}

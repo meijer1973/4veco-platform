@@ -18,6 +18,14 @@ const git = (repo, args) => execFileSync('git', args, {cwd: repo, maxBuffer: 256
 
 function isClassroomAddition(file, sealedPaths) {
   if (sealedPaths.has(file)) return false;
+  // Book 3 v3 keeps the existing paragraph exports together in paragraph-pdfs/.
+  // Admit only companion slides/evidence for a paragraph present in the receipt.
+  const book3 = file.match(/^(edities\/books34-v3\/books\/book-3\/chapters\/(3\.[1-3])\/paragraph-pdfs\/)(?:(3\.[1-3]\.[1-9]\d*) [^/]+ – presentatie\.(?:pptx|pdf)|evidence\/(3\.[1-3]\.[1-9]\d*)-presentation\.md)$/);
+  if (book3) {
+    const [, folder, chapter, slideId, evidenceId] = book3;
+    const id = slideId || evidenceId;
+    return id.startsWith(chapter + '.') && sealedPaths.has(folder + id + '-leerling-v3.pdf');
+  }
   const prefix = prior.ROOTS[0] + '/bronnen/';
   if (!file.startsWith(prefix)) return false;
   const match = file.slice(prefix.length).match(/^H([1-3])\/paragrafen\/(2\.([1-3])\.[1-9]\d* [^/]+)\/(.+)$/);
@@ -129,21 +137,67 @@ function verifyFollowups(lessons, {root = ROOT, requireTracked = false} = {}) {
   return {files: sealed.length, classroom_additions: additions};
 }
 
+function verifyNotation(lessons, {root = ROOT, requireTracked = false} = {}) {
+  // The notation successor seals the accepted Book 2 edits as well as all older
+  // books. Reuse its byte/history validators; do not fall back to an older receipt.
+  const notation = require('../books/book2-notation-revision');
+  const classroom = require('../books/book2-presentation-revision');
+  const read = (repo, file) => fs.readFileSync(safeFile(repo, file));
+  const pin = JSON.parse(read(root, notation.PIN_FILE));
+  const bytes = read(lessons, notation.MANIFEST), doc = JSON.parse(bytes);
+  const contract = notation.contract(root), allowed = new Set(contract.revision_paths);
+  classroom.checkContract(root, lessons);
+  assert(pin.revision === notation.REVISION && prior.sha(bytes) === pin.manifest_sha256, 'Unreviewed notation manifest');
+  assert(doc.revision === notation.REVISION && doc.baseline_lesson_commit === notation.BASE, 'Wrong notation revision/base');
+  assert(equal(doc.predecessors, notation.history(lessons, root)), 'False historical evidence');
+  assert(contract.lessons_base === notation.BASE && contract.platform_base === notation.PLATFORM_BASE, 'Wrong contract bases');
+  assert(contract.revision_paths.every(file => [notation.MANIFEST, notation.ENTRY].includes(file)
+    || file.startsWith(notation.EDITION + '/')), 'Contract exceeds Book 2 scope');
+  assert(contract.source_bindings.some(row => row.path === notation.ENTRY), 'Missing bounded entry-document binding');
+  const actual = notation.inventory(lessons), sealed = doc.files.map(row => row.path);
+  const additions = partitionInventory(actual, sealed);
+  notation.verifyFiles(lessons, doc.files, sealed, signed.tree(lessons, notation.BASE, notation.ROOTS), allowed);
+  const extra = new Set(additions), changes = notation.changedPaths(lessons);
+  const navigation = changes.includes('RESEARCH_AGENT_MAP.md') ? ['RESEARCH_AGENT_MAP.md'] : [];
+  for (const file of navigation) safeFile(lessons, file);
+  const receiptChanges = changes.filter(file => !extra.has(file) && file !== 'RESEARCH_AGENT_MAP.md');
+  assert(equal(receiptChanges, [...allowed].sort()), 'Outside finite notation revision');
+  assert(equal(receiptChanges, pin.revision_paths), 'Unreviewed changed paths');
+  for (const row of contract.source_bindings) {
+    assert(prior.sha(git(lessons, ['show', notation.BASE + ':' + row.path])) === row.baseline_sha256, 'False source ancestry ' + row.path);
+    assert(prior.sha(read(lessons, row.path)) === row.proposed_sha256, 'Unreviewed editable source ' + row.path);
+  }
+  assert(equal(doc.platform_inputs.map(row => row.path), notation.INPUTS), 'Wrong platform input inventory');
+  for (const row of doc.platform_inputs) {
+    assert(prior.sha(prior.text(read(root, row.path))) === row.sha256_lf, 'Stale notation tool ' + row.path);
+  }
+  if (requireTracked) {
+    verifyTracked(lessons, [...actual, notation.MANIFEST, ...navigation], [...notation.ROOTS, notation.MANIFEST, ...navigation]);
+  }
+  return {files: sealed.length, classroom_additions: additions};
+}
+
 function verify(options = {}) {
   const original = historical.verify(options);
   // Never suppress transport, structure, source, pin or other historical failures.
-  if (original.passed || original.failures.length !== 1 || !/^(Unexpected successor inventory|Out-of-scope successor change:|Unreviewed changed-path inventory|Successor is not fully tracked|Unexpected follow-up inventory|Outside follow-up scope:|Unreviewed changed-path list|Follow-up inventory not fully tracked|Stale follow-up tool build-scripts\/workflows\/check-paragraph-lane-scope\.js$)/.test(original.failures[0])) return original;
+  const notation = require('../books/book2-notation-revision');
+  const notationInventory = original.lesson_state === notation.REVISION
+    && ['Unexpected current file inventory', 'Outside finite notation revision'].includes(original.failures[0]);
+  if (original.passed || original.failures.length !== 1 || (!notationInventory && !/^(Unexpected successor inventory|Out-of-scope successor change:|Unreviewed changed-path inventory|Successor is not fully tracked|Unexpected follow-up inventory|Outside follow-up scope:|Unreviewed changed-path list|Follow-up inventory not fully tracked|Stale follow-up tool build-scripts\/workflows\/check-paragraph-lane-scope\.js$)/.test(original.failures[0]))) return original;
   try {
     const root = options.root || ROOT, lessons = options.lessons || path.resolve(root, '../4veco-lessen');
-    const current = fs.existsSync(path.join(lessons, followups.MANIFEST))
+    const current = fs.existsSync(path.join(lessons, notation.MANIFEST))
+      ? verifyNotation(lessons, {...options, root}) : fs.existsSync(path.join(lessons, followups.MANIFEST))
       ? verifyFollowups(lessons, {...options, root}) : verifySuccessor(lessons, {...options, root});
     return {...original, ...current, passed: true, failures: [], classroom_scope: 'additive slides; all signed book bytes preserved'};
   } catch (error) { return {...original, passed: false, failures: [error.message]}; }
 }
 
+// The notation receipt calls partitionInventory while the CLI runs verify().
+// Publish the API first so that this circular require sees the complete exports.
+module.exports = {isClassroomAddition, partitionInventory, verifyCurrentInventory, verifyTracked, verifySuccessor, verifyFollowupInput, verifyFollowups, verifyNotation, verify};
 if (require.main === module) {
   const result = verify({requireTracked: process.argv.includes('--require-tracked')});
   console.log(JSON.stringify(result, null, 2));
   if (!result.passed) process.exitCode = 1;
 }
-module.exports = {isClassroomAddition, partitionInventory, verifyCurrentInventory, verifyTracked, verifySuccessor, verifyFollowupInput, verifyFollowups, verify};

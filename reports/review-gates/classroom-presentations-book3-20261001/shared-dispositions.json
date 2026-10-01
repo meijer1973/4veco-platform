@@ -1,0 +1,31 @@
+{
+  "scope": "Coordinator assembly choices; original author commits and outputs remain frozen separately.",
+  "decisions": [
+    {
+      "path": "build-scripts/maintenance/check-classroom-edition.js",
+      "acceptedSource": "311 cold platform commit bcaac9416a3d160004a3afb5846ee5b9904b4fea",
+      "reason": "Narrow Book3-only classroom allowance, requiring a sealed existing student paragraph export in the same chapter. All original receipt/hash checks remain.",
+      "alternative": "315 cold proposal also admits Book4 and additionally requires the sealed manuscript. The Book4 extension is outside this Book3 batch and was not assembled.",
+      "tests": "Focused shared suites pass 26 Jest tests; the repaired scatter wrapper runs six Python cases. Final tracked inventory passes all 1,480 sealed files and 78 classroom additions (36 existing Book 2, 42 new Book 3)."
+    },
+    {
+      "path": "build-scripts/presentations/straight-scatter.py",
+      "acceptedSource": "315 cold platform commit 2c9aca0166f99fe52940bdc57f6aadbe922d9441",
+      "reason": "Required by the delivered315 builder. Opt-in repair for authored line/lineMarker XY series; preserves intentionally smooth styles, numeric coordinates, formulas and custom labels.",
+      "coordinatorAddition": "Six Python cases through Jest preserve teaching data/labels/package parts and schema child order/delete choice. Independent reviewer reproduced original failure, verified fix, and found final315 unaffected. Shared repair commit2b263cfd."
+    },
+    {
+      "path": "docs/workflows/classroom-presentation.md",
+      "coordinatorCommits": [
+        "452e0ad34748ab24acda0893aea49e17701811e0",
+        "47438bb86456ffa0f396804aa57eb65ce084951c",
+        "2b263cfd2bd5ea4b2ea172a7687a87a469bc73d7"
+      ],
+      "reason": "Clarify current Book3 source/output paths and bounded checker, actual first mixed exercise, full target context, saved chart smoothing/labels, and the existing horizontal shift-arrow requirement.",
+      "tests": "Three completed fresh cold retests were seeded before author start from 2b263cfd and the original lessons baseline, with no Book 3 builders/outputs. Prompts unchanged. All three resolved the routing/content issues. Retest 3.1.1 still needed a separately recorded coordinator label-placement repair; 3.2.3 and 3.2.4 final cold handoffs pass unchanged. See retests.json and selected-runs.json."
+    }
+  ],
+  "noTextbookEdits": true,
+  "independentReviewPending": false,
+  "independentSharedReview": "shared-code-review.md: PASS at 2b263cfd2bd5ea4b2ea172a7687a87a469bc73d7; full-series and cold retests separate."
+}

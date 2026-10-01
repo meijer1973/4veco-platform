@@ -1,0 +1,15 @@
+{
+  "scope": "Manual dispositions of heuristic exposed-command path hits; not an operating-system access-control proof.",
+  "reviewed": {
+    "3.1.3": {
+      "logSha256": "e9b8dd4bcb330498e8e73a8cb3ded84530f69df7ed8031a47ec333a627b216d6",
+      "hits": 1,
+      "disposition": "Test-Path probes only for jsdom under root and311/312 node_modules. Subsequent reads are own temp reviewer log, own package.json and own baseline validator. No peer Book3 presentation/builder/content read appears in this command. This is runtime lookup, not content coaching."
+    },
+    "3.1.5": {
+      "logSha256": "f0d097250ad94c29ae4d1f0becd32e33475da710354f10b865351684f9a8c6cc",
+      "hits": 2,
+      "disposition": "Both are false positives from a greedy command-text match. The root worktree path is only NODE_PATH / node_modules/jest for installed dependencies. The presentation315 checks and evidence writes use the author's own relative pair/scratch paths. One command embeds the author's own evidence prose. Neither hit reads a new peer or root Book3 deck/builder. No parent content coaching was supplied."
+    }
+  }
+}

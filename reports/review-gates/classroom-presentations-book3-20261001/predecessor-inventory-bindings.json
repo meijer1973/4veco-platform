@@ -1,0 +1,23 @@
+[
+  {
+    "paragraph": "2.3.1",
+    "inventorySha256": "4bc9c938de81c3f94d09783a9fb9ec7c6462ae62e01243608b86d8578053df4a",
+    "baselineMatches": [
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – presentatie.pptx"
+    ]
+  },
+  {
+    "paragraph": "2.3.2",
+    "inventorySha256": "04c2bc7a11b774dc6d1bbffa91bf6a96e1e276fb49504e8580639c4a036fb4a9",
+    "baselineMatches": [
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – presentatie.pptx"
+    ]
+  },
+  {
+    "paragraph": "2.3.3",
+    "inventorySha256": "395df262431dc1c9765a6e4691bfc91856da40f054076409c89149c9c4be8045",
+    "baselineMatches": [
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/2.3.3 Pareto-efficiëntie en welvaartsverlies – presentatie.pptx"
+    ]
+  }
+]

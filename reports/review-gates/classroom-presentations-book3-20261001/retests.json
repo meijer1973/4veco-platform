@@ -1,0 +1,136 @@
+{
+  "runs": [
+    {
+      "paragraph": "3.1.1",
+      "prompt": "Build the PowerPoint for paragraph 3.1.1.",
+      "baselines": {
+        "platform": "2b263cfd2bd5ea4b2ea172a7687a87a469bc73d7",
+        "lessons": "9b8304d5031cafac936a56281e144573a25fbbc9"
+      },
+      "startedAt": "2026-10-01T11:08:59.559718+00:00",
+      "purpose": "Retest explicit tax/subsidy horizontal shift-arrow instruction, plus Book3 routing and bounded preservation checker.",
+      "isolation": "Fresh ephemeral CLI thread; clean paired worktrees; no new Book3 builders, decks, evidence, parent history or paragraph-specific coaching.",
+      "model": "User-configured default; no override",
+      "instructionHashes": {
+        "AGENTS.md": "171d4c95ae5506353f9b86dbaf6c260bc5b52a1d929ef11dd4fd3d202a30cc80",
+        "skills/econ-pptx-templates.md": "48df993545d893006b7861a0df9a4c2755a58b5a19109325f75754789451e7d8",
+        "docs/workflows/classroom-presentation.md": "4326b2dd970f8d6ebebb367603779f600ed6bdb8c5fde23109fbfdae55fbffef",
+        "build-scripts/maintenance/check-classroom-edition.js": "ea262e5f15f533c2fb867fec2ede2d0c8663171cebe801a289460843e3202cce"
+      },
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T11:41:13.755241+00:00"
+      },
+      "sourceFolder": "retest-311",
+      "reviewKey": "retest-311",
+      "outputs": {
+        "4veco-platform": {
+          "commit": "c515e991f409b9f3c6451bd67946dee215234d08",
+          "files": {
+            "build-scripts/content/book-3/check-presentation-311.py": "76cfe14c3b3067d5c182411dd8a0e98fbcfc95d8c911c9aab7b13f7302ff65ac",
+            "build-scripts/content/book-3/presentation-311-chart-labels.py": "8ea7805c6f7a2514ca9f2a4f1972a3d65dd366e12baabd6976301f6fff103703",
+            "build-scripts/content/book-3/presentation-311.manifest.json": "1bdaef81230fb1ae1d80eb7656dae165edeed9a66bee29b1b69ced9bc7f46e6e",
+            "build-scripts/content/book-3/presentation-311.mjs": "b5cef6aa55eb0381e3d4b6987a23cc300018e4ecbebcba1665892dee155ab06c"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "aeb12002c1231cd411eeb382c11fcd618934ec27",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "24cec0abdeb77fd335e4a94da66e424ffc061370302b8d9e838a04dea845695e",
+            "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.1 Eén product, twee prijzen – presentatie.pdf": "62e83ccf93b4869247ea59474a789a02bb5ae38033bbaa5ffc81319ae31d86fb",
+            "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.1 Eén product, twee prijzen – presentatie.pptx": "3fcfef60a869d43b1d6848803f5969a82313eb84a2ffffe7f66bf55fd620b645",
+            "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/evidence/3.1.1-presentation.md": "4cc574353439de9a292abaa29e4319d696da0f63a79c9cbea332eacae7e76858"
+          }
+        }
+      },
+      "processLogSha256": "1b3234f03bb94a7d0686a9621419b76af4e624f4d4ecc1fea2f37aff8bc7b98e"
+    },
+    {
+      "paragraph": "3.2.3",
+      "prompt": "Build the PowerPoint for paragraph 3.2.3.",
+      "baselines": {
+        "platform": "2b263cfd2bd5ea4b2ea172a7687a87a469bc73d7",
+        "lessons": "9b8304d5031cafac936a56281e144573a25fbbc9"
+      },
+      "startedAt": "2026-10-01T11:19:36.986454+00:00",
+      "purpose": "Retest current-edition routing and source selection for an overlapping paragraph identifier. No topic or answer plan supplied.",
+      "isolation": "Fresh ephemeral CLI thread; clean paired worktrees; no new Book3 builders, decks, evidence, parent history or paragraph-specific coaching.",
+      "model": "User-configured default; no override",
+      "instructionHashes": {
+        "AGENTS.md": "171d4c95ae5506353f9b86dbaf6c260bc5b52a1d929ef11dd4fd3d202a30cc80",
+        "skills/econ-pptx-templates.md": "48df993545d893006b7861a0df9a4c2755a58b5a19109325f75754789451e7d8",
+        "docs/workflows/classroom-presentation.md": "4326b2dd970f8d6ebebb367603779f600ed6bdb8c5fde23109fbfdae55fbffef",
+        "build-scripts/maintenance/check-classroom-edition.js": "ea262e5f15f533c2fb867fec2ede2d0c8663171cebe801a289460843e3202cce"
+      },
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T11:41:43.855030+00:00"
+      },
+      "sourceFolder": "retest-323",
+      "reviewKey": "retest-323",
+      "outputs": {
+        "4veco-platform": {
+          "commit": "3f95bef4f896b9582bd321ad92cdbc980ce4f7ed",
+          "files": {
+            "build-scripts/content/book-3/presentation-323.manifest.json": "2da04ee61e8d2f1958541007a2b932eae30a75877e4d1ad7738d5f0f56757b39",
+            "build-scripts/content/book-3/presentation-323.mjs": "d24a1a6a3596a26af3b1d18a1dbae8e71df1da39e5ad55ae1b6045192f6cbe8d"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "b07e365762323586ea451eba62a677e58e2dc97a",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "a060676460ee86c9802d13922cae9ccff42c45e7b5a0d490bde41d4fb713599b",
+            "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.3 Winstmaximalisatie bij volkomen concurrentie – presentatie.pdf": "65e2cf7b285efdbf14db0a1bc96bf541d5c9c4a5aa4fcf7ff2c0514a7603f1be",
+            "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.3 Winstmaximalisatie bij volkomen concurrentie – presentatie.pptx": "b91cff8a32a3b54dce83d39bbb1bf4c48363ff5d754174b87e32d73ea3b2534a",
+            "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/evidence/3.2.3-presentation.md": "e6930bb062ec85bb967d8163359c3601486e0499faf1d883911e055f4a3bdac7"
+          }
+        }
+      },
+      "processLogSha256": "849a66e0e1c8789dd85febbcb2c279f3aaccb72f65f0fa42a39e6dafb22d6aa9"
+    },
+    {
+      "paragraph": "3.2.4",
+      "prompt": "Build the PowerPoint for paragraph 3.2.4.",
+      "baselines": {
+        "platform": "2b263cfd2bd5ea4b2ea172a7687a87a469bc73d7",
+        "lessons": "9b8304d5031cafac936a56281e144573a25fbbc9"
+      },
+      "startedAt": "2026-10-01T11:06:28.690028+00:00",
+      "purpose": "Retest Book3 source/path, mixed numbering, native-chart review and bounded preservation instructions.",
+      "isolation": "Fresh ephemeral CLI thread; clean paired worktrees; no new Book3 builders, decks, evidence, parent history or paragraph-specific coaching.",
+      "model": "User-configured default; no override",
+      "instructionHashes": {
+        "AGENTS.md": "171d4c95ae5506353f9b86dbaf6c260bc5b52a1d929ef11dd4fd3d202a30cc80",
+        "skills/econ-pptx-templates.md": "48df993545d893006b7861a0df9a4c2755a58b5a19109325f75754789451e7d8",
+        "docs/workflows/classroom-presentation.md": "4326b2dd970f8d6ebebb367603779f600ed6bdb8c5fde23109fbfdae55fbffef",
+        "build-scripts/maintenance/check-classroom-edition.js": "ea262e5f15f533c2fb867fec2ede2d0c8663171cebe801a289460843e3202cce"
+      },
+      "processOutcome": {
+        "exitCode": 0,
+        "finishedAt": "2026-10-01T11:28:15.125598+00:00"
+      },
+      "sourceFolder": "retest-324",
+      "reviewKey": "retest-324",
+      "outputs": {
+        "4veco-platform": {
+          "commit": "c6d4c3e6cb648d2649b85c38aae3e32d7daf2dfe",
+          "files": {
+            "build-scripts/content/book-3/check-presentation-324.py": "2776d89664c0ecb14d6244b24c96d74bc89823a84f41c4a1958a1e98c517d953",
+            "build-scripts/content/book-3/presentation-324.manifest.json": "53e56d776c4d8ae3265322a4df472908d490ef7ade91c0fc3c1cf2ab70ce946f",
+            "build-scripts/content/book-3/presentation-324.mjs": "a7e5dddd50a49860160debe9d9b653fb150e06c8e1ec30f6ff87869579142b4a"
+          }
+        },
+        "4veco-lessen": {
+          "commit": "cc9acb3b9258f1b7912ee771c730c9a216beab3c",
+          "files": {
+            "RESEARCH_AGENT_MAP.md": "b1b7c090c70532b233ca357adbcffd16eb728ffbe463f70d10e0b3641293d994",
+            "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.4 Gemengde opgaven – presentatie.pdf": "5eff53005d23c8e130e3f2704849405e08bcd62b4eb7a34c4d1f89be8606f909",
+            "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.4 Gemengde opgaven – presentatie.pptx": "8f897b27a3d821f2dcaf231e6d1759fbad8a67f19216034b7a6632dc9e1a1ce9",
+            "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/evidence/3.2.4-presentation.md": "5a33b6a01274443eb0c02f3ebb3bdc12dde7473bb4c11b1133a93aba128d0912"
+          }
+        }
+      },
+      "processLogSha256": "7119134dfeb77a41c78641ff43233f7c08e3615724cce57f8d1f5a6ed24e8931"
+    }
+  ]
+}

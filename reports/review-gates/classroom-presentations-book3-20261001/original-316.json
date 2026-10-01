@@ -1,0 +1,39 @@
+{
+  "scope": "Independent root review bound to the completed cold handoff. Exact PPTX/PDF bytes match the individually reviewed native PowerPoint renders and read notes.",
+  "pptxSha256": "dbe1a8f91790ee624bacb3b5745167f7bc3a4f87900c550ffffbeb0737a7bcab",
+  "pdfSha256": "b33ff53975c81715de8346cf880334235c935ab07e71c956b85eeb38550634c0",
+  "slides": 22,
+  "allNativePowerPointPageRendersViewedIndividually": true,
+  "allTextAndTeacherNotesRead": true,
+  "minimumExplicitNotesFontPt": 14,
+  "overviewSlides": [
+    1,
+    5,
+    22
+  ],
+  "overviewTextAndGeometryParity": true,
+  "pdfTextMismatches": [],
+  "chartWorkbookCheck": {
+    "ok": true,
+    "charts": 4,
+    "references": 52,
+    "cellsCompared": 104
+  },
+  "teaching": {
+    "source": "Current v3 3.1.6 manuscript read directly, including all mixed46/47/47A and target48 Festivalbandjes full sources p50 and all six questions p51. Manuscript hashes bound by manifest.",
+    "overview": "Actual mixed start46 p48; prior 3.1.1-3.1.5 explanation visibly available. No invented basis section. HW46,47,47A,48 preserves47A extra label. Overviews1/5/22 have identical text/geometry except phase/number and active emphasis. No measured timing claim.",
+    "example": "Separate candle market V18-.20Q,A2+.20Q,t4 per candle, weekly. Free40@10;tax30,Pc12,Pp8;O120,W20. RectangleQ0-30,P8-12 and loss triangle(30,8),(40,10),(30,12). Totals:old320,newCS90+PS90+O120=300. Values recomputed independently.",
+    "sequence": "Prior-policy retrieval and choosing method2, own calculation3, money/loss graph4, practice5; full target context/source1 on6, two alternative plans/source2 on7, full claim/source3 and blank graph8; all a-f9-11 before any answer12. Answers12-21 and closure22.",
+    "target": "V24-.20Q,A6+.10Q daily. Free60@12; PlanA tax3:50,Pc14,Pp11,buyer2/seller1,O150,CS250,PS125,new525,old540,W15. Native guided graph15 and differently hatched O rectangleQ0-50,P11-14/W triangleQ50-60 between originalV/A18. PlanB resets to original market:ceiling10 binds,Qv70,Qa40,actual40,shortage30. Rejects both claim parts numerically; compares price14/10 and actual50/40 only, no unsupported full welfare ranking.",
+    "series": "All operations have visible prior instruction in311-315. Actual versus desired quantities, originalA for PS, receipts included in total welfare, tax/subsidy reversal, quota and guaranteed surplus purchases remain consistent. Mixed lesson retrieves methods rather than assuming untaught new operations. Source-based conclusion is explicitly scaffolded.",
+    "visual": "All22v2 native pages individually viewed; v6 changes2,4,5,10,15,16,18 individually viewed. Other15 PNGs byteidentical. All teacher notes identical. v6 resolves crowded process-row labels, plotted label collisions, and price/per-day units ambiguity without parent coaching. Tables, full questions, graphs and all notes remain legible; native graphs correct and editable.",
+    "limits": "No measured classroom timing, pupil mastery, formal target approval or full companion acceptance claim."
+  },
+  "reviewedRevision": "v2 all22 pages, then seven v6 changes; all notes unchanged, read atv2.",
+  "blockingFindings": [],
+  "completedColdHeads": {
+    "4veco-platform": "4dca72555acbad545a8c5313b96576a3dd2d5403",
+    "4veco-lessen": "78fd3ba1606cf37835f5736914dd92edcecabba2"
+  },
+  "reviewedSnapshot": "C:\\wt\\ppt\\.book3\\preview\\316-v6"
+}

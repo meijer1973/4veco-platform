@@ -1,0 +1,47 @@
+{
+  "scope": "Completed original cold handoff bound to fully reviewed v3 native preview. Visual label findings remain open; fresh retest pending.",
+  "pptxSha256": "cba681e73335c4cbdd6a3be8af069482b0f40b2d3a851dbb1369fce417010f1b",
+  "pdfSha256": "6009a3da39c00c4822a390db0b3995419550b74bfb23867141241d81a9508011",
+  "slides": 19,
+  "allNativePowerPointPageRendersViewedIndividually": true,
+  "allTextAndTeacherNotesRead": true,
+  "minimumExplicitNotesFontPt": 14,
+  "overviewSlides": [
+    1,
+    6,
+    19
+  ],
+  "overviewTextAndGeometryParity": true,
+  "pdfTextMismatches": [],
+  "chartWorkbookCheck": {
+    "ok": true,
+    "charts": 7,
+    "references": 50,
+    "cellsCompared": 2382
+  },
+  "teaching": {
+    "source": "Current v3 mixed section3.2.4 read. Actual target35a-e Kweekkorrels p82-83; start31p79, not invented exercise1.",
+    "overview": "Start31 retrieves321, with54-56 support and returnbefore6. Homework31-37,31-34practice35target36bonus37repetition; notes explicitly acknowledge book extras versus requested classroom all-opgaven convention and unmeasured timing.",
+    "example": "Own standardized clay market V18000-1000P,A1000P-2000 ->P10Q8000. FirmTK.05q²+2q+120,capacity100 ->MK.1q+2,opt80, feasible; at60MK8<10,at90MK11>10. TO800TK600GTK7.5profit200,zero-120; rectangle0-80/7.5-10. Explicit new capacity70 binds while MO10>MK9. Values independently recomputed.",
+    "sequence": "Concise recap market2,derivative and marginal/capacity3,profit rectangle4,changed capacity5,practice6. Full sources7-8 including native basic graphs, all questionsa-e9-10, answers11-18,closure19. Blank question graphs carry no answer annotations.",
+    "target": "V030000-2500P,A2500P-10000;P8Q10000,firmq100TO800TK800profit0. V150000-2500P ->P12Q20000. FirmTK.02q²+4q+200,MK.04q+4 ->q200<=250. At150MK10<12,250MK14>12. TO2400TK1800profit600GTK9,zero-200. Rectangle0-200/9-12. Q andq both100% increase with distinct scales/objects. No long-run entry assumption.",
+    "series": "Coherent recap of current321/322 and textbook323; final323 slide teaching still must be verified before serialized approval. Fixed firm count and cost function explicit, source units consistent, no blocking foundation gap found.",
+    "visual": "All19 native PowerPoint pages and teacher notes read. Tables, source graphs, exact rectangle dimensions, scales and labels readable except equilibrium subscripts touching supply line on11/13.",
+    "limits": "No measured pacing/mastery or formal source approval."
+  },
+  "blockingFindings": [
+    {
+      "priority": "P2",
+      "slides": [
+        11,
+        13
+      ],
+      "finding": "E0/E1 labels are placed immediately above-right of their intersections; supply line touches/crosses the low subscript. Move labels into clear whitespace and inspect the final native render. This is the same generic label-clearance class already added to the shared recipe."
+    }
+  ],
+  "resolvedFindings": [],
+  "completedColdHeads": {
+    "4veco-platform": "e8aadb6975329f6f79466d477c937ffc9cdfad42",
+    "4veco-lessen": "c51be8a373cd134ff6c60a5b1332a689f353f66a"
+  }
+}

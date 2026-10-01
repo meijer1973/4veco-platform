@@ -1,0 +1,614 @@
+{
+  "scope": "Independently calculated expected arithmetic from actual target source models; manual comparison with saved deck and answer model remains separate. Negative burden and government revenue in the subsidy case denote benefits and government expenditure.",
+  "targets": {
+    "3.1.1": {
+      "q0": {
+        "exact": "60",
+        "decimal": 60.0
+      },
+      "p0": {
+        "exact": "8",
+        "decimal": 8.0
+      },
+      "q": {
+        "exact": "50",
+        "decimal": 50.0
+      },
+      "pc": {
+        "exact": "10",
+        "decimal": 10.0
+      },
+      "pp": {
+        "exact": "7",
+        "decimal": 7.0
+      },
+      "buyerBurden": {
+        "exact": "2",
+        "decimal": 2.0
+      },
+      "sellerBurden": {
+        "exact": "1",
+        "decimal": 1.0
+      },
+      "CS0": {
+        "exact": "360",
+        "decimal": 360.0
+      },
+      "PS0": {
+        "exact": "180",
+        "decimal": 180.0
+      },
+      "CS": {
+        "exact": "250",
+        "decimal": 250.0
+      },
+      "PS": {
+        "exact": "125",
+        "decimal": 125.0
+      },
+      "governmentNetRevenue": {
+        "exact": "150",
+        "decimal": 150.0
+      },
+      "welfare": {
+        "exact": "525",
+        "decimal": 525.0
+      },
+      "loss": {
+        "exact": "15",
+        "decimal": 15.0
+      }
+    },
+    "3.1.2": {
+      "q0": {
+        "exact": "60",
+        "decimal": 60.0
+      },
+      "p0": {
+        "exact": "8",
+        "decimal": 8.0
+      },
+      "q": {
+        "exact": "50",
+        "decimal": 50.0
+      },
+      "pc": {
+        "exact": "10",
+        "decimal": 10.0
+      },
+      "pp": {
+        "exact": "7",
+        "decimal": 7.0
+      },
+      "buyerBurden": {
+        "exact": "2",
+        "decimal": 2.0
+      },
+      "sellerBurden": {
+        "exact": "1",
+        "decimal": 1.0
+      },
+      "CS0": {
+        "exact": "360",
+        "decimal": 360.0
+      },
+      "PS0": {
+        "exact": "180",
+        "decimal": 180.0
+      },
+      "CS": {
+        "exact": "250",
+        "decimal": 250.0
+      },
+      "PS": {
+        "exact": "125",
+        "decimal": 125.0
+      },
+      "governmentNetRevenue": {
+        "exact": "150",
+        "decimal": 150.0
+      },
+      "welfare": {
+        "exact": "525",
+        "decimal": 525.0
+      },
+      "loss": {
+        "exact": "15",
+        "decimal": 15.0
+      },
+      "buyerBurdenPercent": {
+        "exact": "200/3",
+        "decimal": 66.66666666666667
+      }
+    },
+    "3.1.3": {
+      "q0": {
+        "exact": "60",
+        "decimal": 60.0
+      },
+      "p0": {
+        "exact": "14",
+        "decimal": 14.0
+      },
+      "q": {
+        "exact": "70",
+        "decimal": 70.0
+      },
+      "pc": {
+        "exact": "12",
+        "decimal": 12.0
+      },
+      "pp": {
+        "exact": "15",
+        "decimal": 15.0
+      },
+      "buyerBurden": {
+        "exact": "-2",
+        "decimal": -2.0
+      },
+      "sellerBurden": {
+        "exact": "-1",
+        "decimal": -1.0
+      },
+      "CS0": {
+        "exact": "360",
+        "decimal": 360.0
+      },
+      "PS0": {
+        "exact": "180",
+        "decimal": 180.0
+      },
+      "CS": {
+        "exact": "490",
+        "decimal": 490.0
+      },
+      "PS": {
+        "exact": "245",
+        "decimal": 245.0
+      },
+      "governmentNetRevenue": {
+        "exact": "-210",
+        "decimal": -210.0
+      },
+      "welfare": {
+        "exact": "525",
+        "decimal": 525.0
+      },
+      "loss": {
+        "exact": "15",
+        "decimal": 15.0
+      }
+    },
+    "3.1.4": {
+      "q0": {
+        "exact": "60",
+        "decimal": 60.0
+      },
+      "p0": {
+        "exact": "12",
+        "decimal": 12.0
+      },
+      "qv": {
+        "exact": "80",
+        "decimal": 80.0
+      },
+      "qa": {
+        "exact": "40",
+        "decimal": 40.0
+      },
+      "shortage": {
+        "exact": "40",
+        "decimal": 40.0
+      },
+      "surplus": {
+        "exact": "-40",
+        "decimal": -40.0
+      },
+      "actual": {
+        "exact": "40",
+        "decimal": 40.0
+      },
+      "nonBindingCeiling": {
+        "exact": "14",
+        "decimal": 14.0
+      },
+      "nonBindingActualPrice": {
+        "exact": "12",
+        "decimal": 12.0
+      },
+      "nonBindingTransactions": {
+        "exact": "60",
+        "decimal": 60.0
+      }
+    },
+    "3.1.5": {
+      "q0": {
+        "exact": "60",
+        "decimal": 60.0
+      },
+      "p0": {
+        "exact": "14",
+        "decimal": 14.0
+      },
+      "qv": {
+        "exact": "40",
+        "decimal": 40.0
+      },
+      "qa": {
+        "exact": "80",
+        "decimal": 80.0
+      },
+      "shortage": {
+        "exact": "-40",
+        "decimal": -40.0
+      },
+      "surplus": {
+        "exact": "40",
+        "decimal": 40.0
+      },
+      "governmentPurchases": {
+        "exact": "40",
+        "decimal": 40.0
+      },
+      "governmentSpending": {
+        "exact": "640",
+        "decimal": 640.0
+      },
+      "totalSales": {
+        "exact": "80",
+        "decimal": 80.0
+      },
+      "quotaProduction": {
+        "exact": "40",
+        "decimal": 40.0
+      },
+      "quotaPrice": {
+        "exact": "16",
+        "decimal": 16.0
+      },
+      "quotaSpending": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    "3.1.6": {
+      "planA": {
+        "q0": {
+          "exact": "60",
+          "decimal": 60.0
+        },
+        "p0": {
+          "exact": "12",
+          "decimal": 12.0
+        },
+        "q": {
+          "exact": "50",
+          "decimal": 50.0
+        },
+        "pc": {
+          "exact": "14",
+          "decimal": 14.0
+        },
+        "pp": {
+          "exact": "11",
+          "decimal": 11.0
+        },
+        "buyerBurden": {
+          "exact": "2",
+          "decimal": 2.0
+        },
+        "sellerBurden": {
+          "exact": "1",
+          "decimal": 1.0
+        },
+        "CS0": {
+          "exact": "360",
+          "decimal": 360.0
+        },
+        "PS0": {
+          "exact": "180",
+          "decimal": 180.0
+        },
+        "CS": {
+          "exact": "250",
+          "decimal": 250.0
+        },
+        "PS": {
+          "exact": "125",
+          "decimal": 125.0
+        },
+        "governmentNetRevenue": {
+          "exact": "150",
+          "decimal": 150.0
+        },
+        "welfare": {
+          "exact": "525",
+          "decimal": 525.0
+        },
+        "loss": {
+          "exact": "15",
+          "decimal": 15.0
+        }
+      },
+      "planB": {
+        "q0": {
+          "exact": "60",
+          "decimal": 60.0
+        },
+        "p0": {
+          "exact": "12",
+          "decimal": 12.0
+        },
+        "qv": {
+          "exact": "70",
+          "decimal": 70.0
+        },
+        "qa": {
+          "exact": "40",
+          "decimal": 40.0
+        },
+        "shortage": {
+          "exact": "30",
+          "decimal": 30.0
+        },
+        "surplus": {
+          "exact": "-30",
+          "decimal": -30.0
+        }
+      }
+    },
+    "3.2.1": {
+      "marketP": {
+        "exact": "3",
+        "decimal": 3.0
+      },
+      "marketQ": {
+        "exact": "4000",
+        "decimal": 4000.0
+      },
+      "capacity": {
+        "exact": "160",
+        "decimal": 160.0
+      },
+      "TO120": {
+        "exact": "360",
+        "decimal": 360.0
+      },
+      "GO120": {
+        "exact": "3",
+        "decimal": 3.0
+      },
+      "TO140": {
+        "exact": "420",
+        "decimal": 420.0
+      },
+      "MO120to140": {
+        "exact": "3",
+        "decimal": 3.0
+      }
+    },
+    "3.2.2": {
+      "MKLinearCoefficient": {
+        "exact": "2/25",
+        "decimal": 0.08
+      },
+      "MKConstant": {
+        "exact": "4",
+        "decimal": 4.0
+      },
+      "MK100": {
+        "exact": "12",
+        "decimal": 12.0
+      },
+      "TK100": {
+        "exact": "1200",
+        "decimal": 1200.0
+      },
+      "TK150": {
+        "exact": "1900",
+        "decimal": 1900.0
+      },
+      "intervalAverage": {
+        "exact": "14",
+        "decimal": 14.0
+      },
+      "TK100NewConstant": {
+        "exact": "1300",
+        "decimal": 1300.0
+      }
+    },
+    "3.2.3": {
+      "q": {
+        "exact": "150",
+        "decimal": 150.0
+      },
+      "TO": {
+        "exact": "2400",
+        "decimal": 2400.0
+      },
+      "TK": {
+        "exact": "1900",
+        "decimal": 1900.0
+      },
+      "profit": {
+        "exact": "500",
+        "decimal": 500.0
+      },
+      "GTK": {
+        "exact": "38/3",
+        "decimal": 12.666666666666666
+      },
+      "profitRectangleHeight": {
+        "exact": "10/3",
+        "decimal": 3.3333333333333335
+      },
+      "q0Profit": {
+        "exact": "-400",
+        "decimal": -400.0
+      },
+      "capacityContrastQ": {
+        "exact": "120",
+        "decimal": 120.0
+      },
+      "MKAtCapacity120": {
+        "exact": "68/5",
+        "decimal": 13.6
+      }
+    },
+    "3.2.4": {
+      "P0": {
+        "exact": "8",
+        "decimal": 8.0
+      },
+      "Q0": {
+        "exact": "10000",
+        "decimal": 10000.0
+      },
+      "q0": {
+        "exact": "100",
+        "decimal": 100.0
+      },
+      "profit0": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "P1": {
+        "exact": "12",
+        "decimal": 12.0
+      },
+      "Q1": {
+        "exact": "20000",
+        "decimal": 20000.0
+      },
+      "q1": {
+        "exact": "200",
+        "decimal": 200.0
+      },
+      "TO1": {
+        "exact": "2400",
+        "decimal": 2400.0
+      },
+      "TK1": {
+        "exact": "1800",
+        "decimal": 1800.0
+      },
+      "profit1": {
+        "exact": "600",
+        "decimal": 600.0
+      },
+      "GTK1": {
+        "exact": "9",
+        "decimal": 9.0
+      },
+      "marketQuantityGrowthPercent": {
+        "exact": "100",
+        "decimal": 100.0
+      },
+      "firmQuantityGrowthPercent": {
+        "exact": "100",
+        "decimal": 100.0
+      }
+    },
+    "3.3.1": {
+      "scope": "Qualitative target: no numerical opportunity-cost or terms-of-trade computation required."
+    },
+    "3.3.2": {
+      "worldP": {
+        "exact": "30",
+        "decimal": 30.0
+      },
+      "domesticSupply": {
+        "exact": "60",
+        "decimal": 60.0
+      },
+      "domesticDemand": {
+        "exact": "100",
+        "decimal": 100.0
+      },
+      "imports": {
+        "exact": "40",
+        "decimal": 40.0
+      },
+      "autarkyP": {
+        "exact": "40",
+        "decimal": 40.0
+      },
+      "autarkyQ": {
+        "exact": "80",
+        "decimal": 80.0
+      }
+    },
+    "3.3.3": {
+      "importsBefore": {
+        "exact": "80",
+        "decimal": 80.0
+      },
+      "importsAfter": {
+        "exact": "40",
+        "decimal": 40.0
+      },
+      "tariff": {
+        "exact": "10",
+        "decimal": 10.0
+      },
+      "governmentRevenue": {
+        "exact": "400",
+        "decimal": 400.0
+      },
+      "rectangle": {
+        "xMin": {
+          "exact": "60",
+          "decimal": 60.0
+        },
+        "xMax": {
+          "exact": "100",
+          "decimal": 100.0
+        },
+        "yMin": {
+          "exact": "20",
+          "decimal": 20.0
+        },
+        "yMax": {
+          "exact": "30",
+          "decimal": 30.0
+        }
+      }
+    },
+    "3.3.4": {
+      "importsBefore": {
+        "exact": "80",
+        "decimal": 80.0
+      },
+      "importsAfter": {
+        "exact": "40",
+        "decimal": 40.0
+      },
+      "tariff": {
+        "exact": "5",
+        "decimal": 5.0
+      },
+      "governmentRevenue": {
+        "exact": "200",
+        "decimal": 200.0
+      },
+      "rectangle": {
+        "xMin": {
+          "exact": "60",
+          "decimal": 60.0
+        },
+        "xMax": {
+          "exact": "100",
+          "decimal": 100.0
+        },
+        "yMin": {
+          "exact": "10",
+          "decimal": 10.0
+        },
+        "yMax": {
+          "exact": "15",
+          "decimal": 15.0
+        }
+      }
+    }
+  }
+}

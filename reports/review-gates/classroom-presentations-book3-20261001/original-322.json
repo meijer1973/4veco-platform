@@ -1,0 +1,41 @@
+{
+  "scope": "Independent root review bound to the completed cold handoff. Exact PPTX/PDF bytes match the individually reviewed native PowerPoint renders and read notes.",
+  "pptxSha256": "368153f3f8c8b87a52908eb16153ada8cbaa4bf5d9f82c4e0c45c709b4d8d610",
+  "pdfSha256": "5137dbcf55874fefdf47c13619fa7b24736e2a5f9a1d5fc044f2c725a290c762",
+  "slides": 24,
+  "allNativePowerPointPageRendersViewedIndividually": true,
+  "allTextAndTeacherNotesRead": true,
+  "minimumExplicitNotesFontPt": 14,
+  "overviewSlides": [
+    1,
+    14,
+    24
+  ],
+  "overviewTextAndGeometryParity": true,
+  "pdfTextMismatches": [],
+  "chartWorkbookCheck": {
+    "ok": true,
+    "charts": 0,
+    "references": 0,
+    "cellsCompared": 0
+  },
+  "teaching": {
+    "source": "Entire current v3 3.2.2 manuscript and exercises read. Actual target17a-e Zadenverpakker p67; start11-12 p65.",
+    "overview": "12 explicitly new exploratory point-meaning with theory62-64 support, returnedafter13/beforepractice14.11retrievesBook2interval. Basis13-14,ind15-16,target17,HW13-17;18/19extra. Provisional two55-minute lessons unmeasured.",
+    "example": "SeparateNova cocoa mixerTK.15q²+5q+75,kg/week,cap60,continuousfractionalkg,fixedcostalsoq0. MK.30q+5;MK10=8/kg;TK10=140,TK30=360,average220/20=11/kg;exact10to11cost8.15contrastedwithpoint8. Fixed75to125 raisesTK50/MKunchanged;separate reset5qto6q raisesTKat10by10/MKby1. All independently recomputed.",
+    "sequence": "Function/domain3;limitedderivativerulewithmeaning4;termwiseexample5;pointsubstitutionandmeaning6;TKsubstitution7;intervaldifferencequotient8;explicitthree-waycomparison9;fixedshock10,resetvariable11;check12/explanation13;practice14. Full actualtargetcontext15 andall fivequestions16-17 beforeanswers18-23;closure24.",
+    "target": "TK.04q²+4q+400 cap200. MK.08q+4,at100=12/kg;TK1001200,TK1501900,average700/50=14/kg;MK15016. Explains averageover50vsinstantaneous100,not contradiction. Fixed+100=>newconstant500,TK1001300,MKunchanged. Perweek/perkg distinction explicit;nooptimizationassumed.",
+    "series": "Explicitly teaches derivative as new point change and does not pretendBook2tabledifferences alreadyestablishit. Book2quadratic substitution and deltaTK/deltaQ recalled;current q onefirmconsistent321. Differentiation taught before independentapplication; fixedcostretainedinTK/profit. Representationcontrast prepares323withoutpremature marginalchoice. No textbookfoundationgap found.",
+    "visual": "All24 native r1 pages and notes read; r3 changed slide22 viewed individually, other23 render PNGs and all notes byte identical. Native tables and all text readable.",
+    "limits": "No measured classroom timing, pupil mastery, formal target approval or full companion acceptance claim."
+  },
+  "blockingFindings": [],
+  "resolvedFindings": [
+    "Author independently shortened slide22 label to Verandering in q; full-size native render rechecked."
+  ],
+  "completedColdHeads": {
+    "4veco-platform": "bcdddc3f86ecc9122d731dce7a83b4a68d50c702",
+    "4veco-lessen": "33f3b231440ae7bf797b05a2c010fde543312185"
+  },
+  "reviewedSnapshot": "322-r3"
+}

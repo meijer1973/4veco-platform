@@ -1,0 +1,38 @@
+[
+  {
+    "id": "312",
+    "returncode": 0,
+    "stdout": "{\"ok\": true, \"slides\": 29, \"notes\": 29, \"native_tables\": 10, \"native_charts\": 10, \"geometry_points_checked\": 748, \"overview_slides\": [1, 16, 29], \"chart_slides\": [4, 5, 7, 8, 9, 18, 23, 24, 26, 27]}\n",
+    "stderr": ""
+  },
+  {
+    "id": "314",
+    "returncode": 0,
+    "stdout": "{\n  \"ok\": true,\n  \"slides\": 24,\n  \"notes\": 24,\n  \"minimumNotesPt\": 14,\n  \"overviewSlides\": [\n    1,\n    13,\n    24\n  ],\n  \"tables\": 9,\n  \"chartSlides\": [\n    5,\n    6,\n    8,\n    16,\n    21\n  ],\n  \"chartPointsChecked\": 62,\n  \"sourceHashesVerified\": 10,\n  \"completeTargetQuestions\": \"a–e\",\n  \"pdfPages\": 24,\n  \"pptxSha256\": \"db91b3c26e9d262bb01771c21fc1ffde0988543cddf8e4ecc93f1ee80a3a71dc\",\n  \"pdfSha256\": \"6ea83bf77f90800b0c02ae4085de814a8cc1da3d6a51f278b8a821cb10cff969\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "id": "315",
+    "returncode": 0,
+    "stdout": "{\n  \"ok\": true,\n  \"slides\": 25,\n  \"tables\": 4,\n  \"charts\": [\n    {\n      \"chart\": 1,\n      \"series\": 3,\n      \"coordinates\": \"PASS\"\n    },\n    {\n      \"chart\": 2,\n      \"series\": 5,\n      \"coordinates\": \"PASS\"\n    },\n    {\n      \"chart\": 3,\n      \"series\": 20,\n      \"coordinates\": \"PASS\"\n    },\n    {\n      \"chart\": 4,\n      \"series\": 4,\n      \"coordinates\": \"PASS\"\n    },\n    {\n      \"chart\": 5,\n      \"series\": 2,\n      \"coordinates\": \"PASS\"\n    },\n    {\n      \"chart\": 6,\n      \"series\": 21,\n      \"coordinates\": \"PASS\"\n    },\n    {\n      \"chart\": 7,\n      \"series\": 4,\n      \"coordinates\": \"PASS\"\n    }\n  ],\n  \"notes\": 25,\n  \"overviewParity\": [\n    1,\n    15,\n    25\n  ]\n}\n",
+    "stderr": ""
+  },
+  {
+    "id": "324",
+    "returncode": 0,
+    "stdout": "{\"ok\": true, \"slides\": 22, \"charts\": 6, \"tables\": 9, \"chartPoints\": 718, \"overviews\": [1, 6, 22], \"notes\": 22, \"sourceHashes\": 10}\n",
+    "stderr": ""
+  },
+  {
+    "id": "333",
+    "returncode": 0,
+    "stdout": "{\"ok\": true, \"slides\": 24, \"notes\": 24, \"charts\": 6, \"tables\": 8, \"overviewParity\": [1, 14, 24], \"geometry\": \"actual saved XY data, axes, straight edges, hatching and rectangle areas\"}\n",
+    "stderr": ""
+  },
+  {
+    "id": "311",
+    "returncode": 0,
+    "stdout": "{\n  \"ok\": true,\n  \"slides\": 27,\n  \"notes\": 27,\n  \"tables\": 8,\n  \"charts\": 6,\n  \"sourceHashes\": 7,\n  \"targetQuestions\": 5,\n  \"overviewParity\": true,\n  \"geometry\": [\n    {\n      \"slide\": 6,\n      \"stage\": \"free\",\n      \"model\": 0,\n      \"axes\": [\n        [\n          \"32\",\n          \"0\"\n        ],\n        [\n          \"160\",\n          \"0\"\n        ]\n      ]\n    },\n    {\n      \"slide\": 9,\n      \"stage\": \"shift\",\n      \"model\": 0,\n      \"axes\": [\n        [\n          \"32\",\n          \"0\"\n        ],\n        [\n          \"160\",\n          \"0\"\n        ]\n      ]\n    },\n    {\n      \"slide\": 12,\n      \"stage\": \"wedge\",\n      \"model\": 0,\n      \"axes\": [\n        [\n          \"32\",\n          \"0\"\n        ],\n        [\n          \"160\",\n          \"0\"\n        ]\n      ]\n    },\n    {\n      \"slide\": 19,\n      \"stage\": \"base\",\n      \"model\": 1,\n      \"axes\": [\n        [\n          \"22\",\n          \"0\"\n        ],\n        [\n          \"100\",\n          \"0\"\n        ]\n      ]\n    },\n    {\n      \"slide\": 24,\n      \"stage\": \"shift\",\n      \"model\": 1,\n      \"axes\": [\n        [\n          \"22\",\n          \"0\"\n        ],\n        [\n          \"100\",\n          \"0\"\n        ]\n      ]\n    },\n    {\n      \"slide\": 25,\n      \"stage\": \"wedge\",\n      \"model\": 1,\n      \"axes\": [\n        [\n          \"22\",\n          \"0\"\n        ],\n        [\n          \"100\",\n          \"0\"\n        ]\n      ]\n    }\n  ]\n}\n",
+    "stderr": ""
+  }
+]

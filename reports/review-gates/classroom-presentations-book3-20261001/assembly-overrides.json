@@ -1,0 +1,175 @@
+{
+  "4veco-lessen/Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/3.2 Productie en winst/3.2.2 Marginale kosten en de afgeleide/3.2.2 Marginale kosten en de afgeleide – presentatie.pdf": {
+    "destination": "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.2 Marginale kosten en de afgeleide – presentatie.pdf",
+    "originalSha256": "5137dbcf55874fefdf47c13619fa7b24736e2a5f9a1d5fc044f2c725a290c762",
+    "assembledSha256": "5137dbcf55874fefdf47c13619fa7b24736e2a5f9a1d5fc044f2c725a290c762",
+    "reason": "Relocate current-v3 classroom companions from cold author legacy-style destination to current edition beside its sealed paragraph PDF. Content bytes unchanged; original handoff retained."
+  },
+  "4veco-lessen/Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/3.2 Productie en winst/3.2.2 Marginale kosten en de afgeleide/3.2.2 Marginale kosten en de afgeleide – presentatie.pptx": {
+    "destination": "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.2 Marginale kosten en de afgeleide – presentatie.pptx",
+    "originalSha256": "368153f3f8c8b87a52908eb16153ada8cbaa4bf5d9f82c4e0c45c709b4d8d610",
+    "assembledSha256": "368153f3f8c8b87a52908eb16153ada8cbaa4bf5d9f82c4e0c45c709b4d8d610",
+    "reason": "Relocate current-v3 classroom companions from cold author legacy-style destination to current edition beside its sealed paragraph PDF. Content bytes unchanged; original handoff retained."
+  },
+  "4veco-lessen/Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/3.2 Productie en winst/3.2.2 Marginale kosten en de afgeleide/evidence/3.2.2-presentation.md": {
+    "destination": "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/evidence/3.2.2-presentation.md",
+    "originalSha256": "3c5b3b2229afef337f4e8e10b8741e56bdb7c88b571764b02d7bbcd61a164384",
+    "assembledSha256": "0d6f5d7306658877fbe5beae78759d3b22f5095fe3a46b07fe8b0469b53c46d8",
+    "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+  },
+  "4veco-lessen/edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.1 Volkomen concurrentie – presentatie.pdf": {
+    "originalSha256": "dc9d779c1a1f1ce18bf8357432945f984ac4a5dd5760a5d6f01edf43e4a4bbd5",
+    "assembledSha256": "fb46b868b4b4002d9122f7325fe166495725bd0a7282217a3126be437cf23697",
+    "reason": "Coordinator repaired point label E placement in owning builder after completed cold handoff. Rebuilt/finalized; native PowerPoint render rechecked all four changed graphs. Other content and all notes preserved."
+  },
+  "4veco-lessen/edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.1 Volkomen concurrentie – presentatie.pptx": {
+    "originalSha256": "f36814f9642279108e31c127d8fe7c7e90520a3f0af78825a4f55d42bc5c854b",
+    "assembledSha256": "a50e5915a895dd850add3b55c52713b99e196f3f8758cc0fd5a8e38702058b0c",
+    "reason": "Coordinator repaired point label E placement in owning builder after completed cold handoff. Rebuilt/finalized; native PowerPoint render rechecked all four changed graphs. Other content and all notes preserved."
+  },
+  "4veco-platform/build-scripts/content/book-3/presentation-321.mjs": {
+    "originalSha256": "de177b5094afb3ab31207e6a4356e9eadd3b021e92e6ebc50deae8a60a995632",
+    "assembledSha256": "254db6df1eaf162fae2ca493af01454b1268c3c5b8545f66914ab410d9c82ee8",
+    "reason": "Coordinator repaired point label E placement in owning builder after completed cold handoff. Rebuilt/finalized; native PowerPoint render rechecked all four changed graphs. Other content and all notes preserved."
+  },
+  "4veco-platform/build-scripts/content/book-3/presentation-322.source.json": {
+    "originalSha256": "5e6ad6820b3eb9997f338c38ec5dd0ccdb278ff369d986514c081934fff6ec70",
+    "assembledSha256": "c6e068dcb69da481a136009bad3d00886f9ca0694cec605f7a22751c91cb2649",
+    "reason": "Manifest destination corrected to the actual current-v3 assembled location; presentation/PDF bytes unchanged. Normalize new assembled source line endings to LF; all non-newline bytes preserved."
+  },
+  "4veco-platform/build-scripts/content/book-3/presentation-333.mjs": {
+    "originalSha256": "5b0b0fd0db312ce0483d16645a9e72fe3994e94a86f32bb78058e206832e1fca",
+    "assembledSha256": "09e8c8fbd50198c2b5782fa805b99bbe1671061f4e4528e3ea73aa585674193b",
+    "reason": "Supported label-position names and clear anchors;332 uses collinear interior anchors, finite decimal rounding and reviewed straight-scatter normalizer;333 uses separate label-only anchor coordinates. No source, lesson-text or teacher-note changes."
+  },
+  "4veco-platform/build-scripts/content/book-3/presentation-332.mjs": {
+    "originalSha256": "c66e37dc419195e8eba6902e5208f7b967e711ba4384aedee41cccd6de3a93d0",
+    "assembledSha256": "afe52f4637e4be6e62d249c6e49b5c9c191b0f8eeeabb96085493d2a0e0d839b",
+    "reason": "Supported label-position names and clear anchors;332 uses collinear interior anchors, finite decimal rounding and reviewed straight-scatter normalizer;333 uses separate label-only anchor coordinates. No source, lesson-text or teacher-note changes."
+  },
+  "4veco-lessen/edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.2 Wereldmarktprijs, import, export en welvaart – presentatie.pdf": {
+    "originalSha256": "9aefdaf4659cf26ce5d1d1974faed45bd2f2d6d9311d813f164c9b15b7041509",
+    "assembledSha256": "ccf308bbc1cee8507c0944d351f143d58ae336a70eb3bd0846de010bb7b31549",
+    "reason": "Supported label-position names and clear anchors;332 uses collinear interior anchors, finite decimal rounding and reviewed straight-scatter normalizer;333 uses separate label-only anchor coordinates. No source, lesson-text or teacher-note changes."
+  },
+  "4veco-lessen/edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.2 Wereldmarktprijs, import, export en welvaart – presentatie.pptx": {
+    "originalSha256": "187d653feb82843321df739f24f7a59fbb8e06c1fdaece90901230e30c6e6842",
+    "assembledSha256": "338a2c361f478dccfa72d3d6a49b989d4cee5ec110c4adfb0f334e369a406c3f",
+    "reason": "Supported label-position names and clear anchors;332 uses collinear interior anchors, finite decimal rounding and reviewed straight-scatter normalizer;333 uses separate label-only anchor coordinates. No source, lesson-text or teacher-note changes."
+  },
+  "4veco-lessen/edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.3 Protectionisme – presentatie.pdf": {
+    "originalSha256": "c43379314ee6559ea2cbf6c5cef7d565854cc6b2692edc8bc81c0b968ac47267",
+    "assembledSha256": "7c881bb80921377acad485e7bbcaf66b9f2414011f70893505817b8b0d225167",
+    "reason": "Supported label-position names and clear anchors;332 uses collinear interior anchors, finite decimal rounding and reviewed straight-scatter normalizer;333 uses separate label-only anchor coordinates. No source, lesson-text or teacher-note changes."
+  },
+  "4veco-lessen/edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.3 Protectionisme – presentatie.pptx": {
+    "originalSha256": "684588a088f17ad84ee2d6994fdbd0d6b2ad857fc45025c166a6366edfbb87f7",
+    "assembledSha256": "ac6fc11ae10c4c326a8d309f37e6974fa711142c0337117ffb4dc6609a1751a4",
+    "reason": "Supported label-position names and clear anchors;332 uses collinear interior anchors, finite decimal rounding and reviewed straight-scatter normalizer;333 uses separate label-only anchor coordinates. No source, lesson-text or teacher-note changes."
+  },
+  "4veco-platform/build-scripts/content/book-3/presentation-334.mjs": {
+    "originalSha256": "833d8185fda9bf0d0c6747492382a2e9e8fb2e712a29ba867f0be034870a546e",
+    "assembledSha256": "05cb880996beb4078643309d1345bd354898eb0e81fd9a3e5540a2ea08c47315",
+    "reason": "A/V textbox labels moved to clear whitespace in shared graph function on10/18; saved native charts unchanged. No source, lesson-text or teacher-note changes."
+  },
+  "4veco-lessen/edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.4 Gemengde opgaven internationale handel – presentatie.pdf": {
+    "originalSha256": "cfab5bfffca265e8539771399cb4dd803313212a1bd2abc980f3ff4f7383ec3c",
+    "assembledSha256": "7493997edea575c4700076de538f3d98fb09f5ac147121c3de9f580cbed0902c",
+    "reason": "A/V textbox labels moved to clear whitespace in shared graph function on10/18; saved native charts unchanged. No source, lesson-text or teacher-note changes."
+  },
+  "4veco-lessen/edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.4 Gemengde opgaven internationale handel – presentatie.pptx": {
+    "originalSha256": "06260360dae167f792c2775eb52a5edb3025cbcc96c47f2a6f441862abc225a4",
+    "assembledSha256": "43f4ea80257bd6547ca00ff10d604fcb3a476180bc97bc65b1fa662248b6b9a0",
+    "reason": "A/V textbox labels moved to clear whitespace in shared graph function on10/18; saved native charts unchanged. No source, lesson-text or teacher-note changes."
+  },
+  "4veco-lessen/edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.1 Eén product, twee prijzen – presentatie.pdf": {
+    "originalSha256": "62e83ccf93b4869247ea59474a789a02bb5ae38033bbaa5ffc81319ae31d86fb",
+    "assembledSha256": "33b7c4b2eb539294775a1e0033f1460a6a736b1e02f70798610b4ebe7d931d7e",
+    "reason": "Move only the target Pp label x anchor from .18 to .25 of the axis maximum, clearing A+t and A. No numerical, lesson-text, teacher-note or chart-data change."
+  },
+  "4veco-lessen/edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.1 Eén product, twee prijzen – presentatie.pptx": {
+    "originalSha256": "3fcfef60a869d43b1d6848803f5969a82313eb84a2ffffe7f66bf55fd620b645",
+    "assembledSha256": "a478cc17fd25fdf98234a6ea049f71ad5ed0a08415f72b2258327d7a26e52156",
+    "reason": "Move only the target Pp label x anchor from .18 to .25 of the axis maximum, clearing A+t and A. No numerical, lesson-text, teacher-note or chart-data change."
+  },
+  "4veco-platform/build-scripts/content/book-3/presentation-311.mjs": {
+    "originalSha256": "b5cef6aa55eb0381e3d4b6987a23cc300018e4ecbebcba1665892dee155ab06c",
+    "assembledSha256": "cf1be745c74566b3999a7fe67e6dfcd2b0e32e14ec804e98daedab31a5983991",
+    "reason": "Move only the target Pp label x anchor from .18 to .25 of the axis maximum, clearing A+t and A. No numerical, lesson-text, teacher-note or chart-data change."
+  },
+  "4veco-lessen/edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/evidence/3.1.1-presentation.md": {
+    "originalSha256": "4cc574353439de9a292abaa29e4319d696da0f63a79c9cbea332eacae7e76858",
+    "assembledSha256": "2f16ea96fc8dedd331c7421bf8e38388466cbb260e58b60413e3a5f4b85ceb59",
+    "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+  },
+  "4veco-lessen/edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/evidence/3.1.2-presentation.md": {
+    "originalSha256": "8ca2f19f7c7b48cb812c47014d092eec3761d0c630ca228f6ce11eb01b84487b",
+    "assembledSha256": "ccdc70af05509b033194faedd886637a3ab60ce7ea006391a54e13ff47fdfc26",
+    "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+  },
+  "4veco-lessen/edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/evidence/3.1.3-presentation.md": {
+    "originalSha256": "c8f078fbf1ea95ba3ef22dc7a9aba554322af375d4e79f7f595162ab66a60f89",
+    "assembledSha256": "b22065a72e1848b7e396aa2e9fb0981a82552c34c66789c987f7a8e8dba0701e",
+    "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+  },
+  "4veco-lessen/edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/evidence/3.1.4-presentation.md": {
+    "originalSha256": "bffe8864bff3fb9b9a235799beb65662c241b5b9619d9113cd1f013d99cf53d8",
+    "assembledSha256": "f6365d59ec0e6cb9a54f3eaedb9b5f073c46ee1046be338ce8296632f2264fc3",
+    "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+  },
+  "4veco-lessen/edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/evidence/3.1.5-presentation.md": {
+    "originalSha256": "8ecd4b13249a2147c22087b4896c2a04a029ad08c7e4042230c237fa6b4e5406",
+    "assembledSha256": "149ac5df61694d8ac3d197aea858a409236d1776456423cd73999f7ee5518c2a",
+    "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+  },
+  "4veco-lessen/edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/evidence/3.1.6-presentation.md": {
+    "originalSha256": "22ba7422256451788f198ffd8964905a75ac869be0a96de4e843457e2b03f80f",
+    "assembledSha256": "95e02d077125762f8b049830276431db303df874dc9513a5070d4b211c71e9bd",
+    "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+  },
+  "4veco-lessen/edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/evidence/3.2.1-presentation.md": {
+    "originalSha256": "e457d673c5f3db28815e8851d1d04f265d50e901b8b2276ad4d0b9bff7da8fe1",
+    "assembledSha256": "5eb1b2b8568a1a116b1bed4d9f7abddc8a3afc94934e77eabb5b4471b8992b8c",
+    "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+  },
+  "4veco-lessen/edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/evidence/3.2.3-presentation.md": {
+    "originalSha256": "e6930bb062ec85bb967d8163359c3601486e0499faf1d883911e055f4a3bdac7",
+    "assembledSha256": "ec1f11b3f3caeba0b1f95fa20adbfe54ae4804284e79a449077d7c837e993f8f",
+    "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+  },
+  "4veco-lessen/edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/evidence/3.2.4-presentation.md": {
+    "originalSha256": "5a33b6a01274443eb0c02f3ebb3bdc12dde7473bb4c11b1133a93aba128d0912",
+    "assembledSha256": "8bf99ec241c749279d6022c71deb3f7294b672f870be083ec47900258fcf198b",
+    "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+  },
+  "4veco-lessen/edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/evidence/3.3.1-presentation.md": {
+    "originalSha256": "fd4438e81cbfb6348bdf6070669c9e7f96f9a2b9b040c4f97c96607691328fcb",
+    "assembledSha256": "9f1a50c726c78ba053a9ab0630647b182bd83b3d1b9b8d3b94dcba02eb13b014",
+    "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+  },
+  "4veco-lessen/edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/evidence/3.3.2-presentation.md": {
+    "originalSha256": "50150f2f72c35a3ea42c867518bbf2efb8f32d29dbf92c8476f0b84f39eeb971",
+    "assembledSha256": "73e44a95c425335f25dbf14edd355b40a43201d30c6bdd4ae6170a02930884a5",
+    "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+  },
+  "4veco-lessen/edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/evidence/3.3.3-presentation.md": {
+    "originalSha256": "b88f0ea7d54565e32996a7872ab51bef4ab1613bba66044bd88531079afe4bc5",
+    "assembledSha256": "3264ae58a97900f348163b56246026fd12eebee55b504c023daa3cc02bf47c23",
+    "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+  },
+  "4veco-lessen/edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/evidence/3.3.4-presentation.md": {
+    "originalSha256": "b3ac71326ad32965caa65184883c55dd4ac1ef452458143388333a993ef04a98",
+    "assembledSha256": "e4413abae91bbbb38e71f071efb80082f6fc483de87070233fd999dbdb11d202",
+    "reason": "Add final assembly identity and independent-series verdict above verbatim historical author evidence; clarify adapter/review status and any relocation/rebuild."
+  },
+  "4veco-platform/build-scripts/content/book-3/presentation-316.manifest.json": {
+    "originalSha256": "3fd3173bdecf43b2ac06be377c89a6c632932bb537bde643a7b8a3d1c74c99a5",
+    "assembledSha256": "f1ce41dc9f3d62ebf4c1d26ea8f0f93a65899a4aaec5b9cc40d71560969ecb63",
+    "reason": "Normalize new assembled source line endings to LF; all non-newline bytes preserved."
+  },
+  "4veco-platform/build-scripts/content/book-3/presentation-316.mjs": {
+    "originalSha256": "1ab7d288c2291957f0d0c1d6a81e81e3269a186174263930b3451ef2172c66f9",
+    "assembledSha256": "9988416115ff70bd1bb1549d4eca66dd5f9af5f75fc6ba28c42e8901c8d627ae",
+    "reason": "Normalize new assembled source line endings to LF; all non-newline bytes preserved."
+  }
+}

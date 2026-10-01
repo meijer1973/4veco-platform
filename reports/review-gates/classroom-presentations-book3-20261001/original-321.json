@@ -1,0 +1,58 @@
+{
+  "scope": "Completed original cold handoff: content passes but the E-label collision remains on slides 5, 6, 7 and 19. Final native re-render binds all 25 pages to prior reviews: 22 pages are byte-identical to reviewed v5; only overviews 1,15,25 differ and are byte-identical to the subsequently inspected final-repair overviews. All slide/notes text is unchanged.",
+  "pptxSha256": "f36814f9642279108e31c127d8fe7c7e90520a3f0af78825a4f55d42bc5c854b",
+  "pdfSha256": "dc9d779c1a1f1ce18bf8357432945f984ac4a5dd5760a5d6f01edf43e4a4bbd5",
+  "slides": 25,
+  "allNativePowerPointPageRendersViewedIndividually": true,
+  "allTextAndTeacherNotesRead": true,
+  "minimumExplicitNotesFontPt": 14.0,
+  "overviewSlides": [
+    1,
+    15,
+    25
+  ],
+  "overviewTextAndGeometryParity": true,
+  "pdfTextMismatches": [],
+  "chartWorkbookCheck": {
+    "ok": true,
+    "charts": 11,
+    "references": 58,
+    "cellsCompared": 138,
+    "workbooks": [
+      "ppt/embeddings/chart-data-snapshot-001.xlsx",
+      "ppt/embeddings/chart-data-snapshot-002.xlsx",
+      "ppt/embeddings/chart-data-snapshot-003.xlsx",
+      "ppt/embeddings/chart-data-snapshot-004.xlsx",
+      "ppt/embeddings/chart-data-snapshot-005.xlsx",
+      "ppt/embeddings/chart-data-snapshot-006.xlsx",
+      "ppt/embeddings/chart-data-snapshot-007.xlsx",
+      "ppt/embeddings/chart-data-snapshot-008.xlsx",
+      "ppt/embeddings/chart-data-snapshot-009.xlsx",
+      "ppt/embeddings/chart-data-snapshot-010.xlsx",
+      "ppt/embeddings/chart-data-snapshot-011.xlsx"
+    ]
+  },
+  "teaching": {
+    "source": "Read all current v3 3.2.1 manuscript including start1-2,basis3-4,independent5-6,target7a-e,optional8-10. Actual target graph and book p60 bound in manifest.",
+    "overview": "Start1-2 p57;2 visibly new exploration with theory54-55;notes return after14/before15. HW3-7;bonus8/repetition9-10extra. Identical content/geometry1,15,25. Provisional two55minutes not timing approval.",
+    "example": "Own havermarkt Q in thousandkg/day V4-.25Q,A1+.25Q -> Q6=6000kg,P2.50/kg;small Sam capacity180kg/day. q60TO150GO2.50;q90TO225,delta75/30=MO2.50. Higher2.75 loses customers,lower2.25 atsameq60reducesTO/profit15. Exactnewq100/110 retrieval TO250/275,MO2.50. Separate mixed-grain differentiation example; no assigned numerical solution revealed.",
+    "sequence": "Four assumptions3;own market4/equilibrium5;market-firm representation change with emptyfirm6, horizontalP7;TO/GO8 and deltaTO/deltaqMO9 before line fullylabeled10;higher/lowerprice11-12;homogeneous-product boundary13;retrievalandreturn14;practice15. Full actual targetcontextandblank two-graph16,all a-e17-18 beforeanswers19-24.",
+    "target": "ActualwortelveilingmarketV5-.5Q,A1+.5Q,Q4thousandkg/day,P3/kg;Mila capacity160. FirmhorizontalP=GO=MO3; q120TO360GO3;q140TO420,delta60/20=MO3. Higher3.20 rejected using identicalquality/knownprices/alternatives. Q4000market is not firmcapacity160.",
+    "series": "321bridges marketmodels from311-316 toindividualfirm; namesBook2 Q toBook3q innotes8. Book2 intervalMO retained9, no derivative assumed. Price taking not read as unlimitedsales;GOundefinedq0 innotes10/20. Optimization postponed323,costs322, formalentry effectsBook4. No prerequisite gap found.",
+    "visual": "Finalv4 removes automaticendpoint labels and clears the P/P=GO=MOlabels; native data correct andeditability intact. Epointlabel proximity remains to resolve. Allothercontentlegible.",
+    "limits": "File/content review cannot establish pupil mastery, pacing or formal source target approval."
+  },
+  "blockingFindings": [
+    "The E point label is still very close to/crossed by the adjacent V/A lines on5,6,7,19. Offset it into clear whitespace before final acceptance. Other chart-label findings resolved in v4."
+  ],
+  "resolvedFindings": [
+    "v2 chart labels on4-7,10,16,19,20 include unwanted tiny endpoint text;7 price label wraps across line,10/20line crosses label. Recheck final author revision before acceptance."
+  ],
+  "reviewedRevision": "All25v2 pages andnotes reviewed;8changedv4pages4,5,6,7,10,16,19,20 individually rechecked. Other17PNGs andallnotes byteidentical.",
+  "pdfPages": 25,
+  "notes": 25,
+  "completedColdHeads": {
+    "4veco-platform": "555fc934009694021df36c219a44e0fa609ee2dc",
+    "4veco-lessen": "d239e332554c2adb3194e9271569e99675124ad1"
+  }
+}

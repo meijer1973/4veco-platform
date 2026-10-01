@@ -1,0 +1,41 @@
+{
+  "pptxSha256": "3fcfef60a869d43b1d6848803f5969a82313eb84a2ffffe7f66bf55fd620b645",
+  "pdfSha256": "62e83ccf93b4869247ea59474a789a02bb5ae38033bbaa5ffc81319ae31d86fb",
+  "slides": 27,
+  "pdfPages": 27,
+  "notes": 27,
+  "minimumExplicitNotesFontPt": 14.0,
+  "pdfTextMismatches": [],
+  "overviewSlides": [
+    1,
+    16,
+    27
+  ],
+  "overviewTextAndGeometryParity": true,
+  "scope": "Independent root review of complete cold retest bound to exact final PPTX/PDF and completed commits; all native pages and substantive teacher notes covered.",
+  "allNativePowerPointPageRendersViewedIndividually": true,
+  "allTextAndTeacherNotesRead": true,
+  "blockingFindings": [
+    {
+      "priority": "P2",
+      "slides": [
+        25
+      ],
+      "finding": "Orange A+t still touches the upper-left of Pp=7 after its small rightward move. Root and independent series reviewer both confirm insufficient clearance. Await final author handoff."
+    }
+  ],
+  "teaching": {
+    "source": "Current-v3 target7 Bedrukte tassen on printed page12 matches manuscript, figure and answers. Entire source17, questionsa-c18 and native unworked figure plus d-e19 precede answers20-26.",
+    "overview": "Start1-2 on page9, explicit exploration and theory support6-9 for new content2, returned to before independent work. Homework3-7 with basis3-4,independent5-6,target7. All three overview slides1/16/27 match except phase. Teacher notes explicitly allow provisional two55-minute route without claiming measured fit.",
+    "example": "Own bicycle lights: V30-.20Q,A6+.10Q,t6 per light. FreeQ80,P14. A+t=12+.10Q;newQ60,Pc18,Pp12. Consumers4/producers2 per traded unit relative to14, seller remits6. Independently recomputed all equations/table points. AtPc20 the horizontal supply arrow is Q140 to80, distinct from Q60 equilibrium and vertical wedge18-12. Counterexample Pc20,Pp14 givesQv50,Qa80; a valid wedge alone is insufficient.",
+    "sequence": "Prior equilibrium algebra and price-quantity reading explicitly retrieved2/5/6. New prices3, own context4, original equilibrium5-6, tabletranslation7,function8,horizontalshift9,newQ10,two prices11,verticalwedge12 and incidence13. Check14-15 then supportedstart2return and practice16. This establishes the tax-price base needed by312 without assuming future welfare accounting.",
+    "target": "V20-.20Q,A2+.10Q,t3. Free60@8;A+t5+.10Q,Qt50,Pc10,Pp7; buyer2/seller1 burden while seller remits3. Arrow24 atPc11 mapsQ90to60, not the equilibrium. Full target function, quantity, prices, line and burden argument included. Same-day quantity and per-bag price units explicit.",
+    "visual": "All27 native pages individually viewed. Correct horizontal supply arrows9/24 and visible vertical tax wedges12/25. Pages1-24/26-27 clear; remaining label collision on25 recorded above.",
+    "limits": "No measured classroom timing, pupil mastery, formal target approval or full companion acceptance claim."
+  },
+  "completedColdHeads": {
+    "4veco-platform": "c515e991f409b9f3c6451bd67946dee215234d08",
+    "4veco-lessen": "aeb12002c1231cd411eeb382c11fcd618934ec27"
+  },
+  "reviewedSnapshot": "retest-311-v2"
+}
