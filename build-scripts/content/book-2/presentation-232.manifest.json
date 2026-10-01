@@ -1,0 +1,330 @@
+{
+  "paragraph": "2.3.2",
+  "title": "Producentensurplus en totaal surplus",
+  "type": "theory",
+  "edition": "chat-2026",
+  "lessonCommit": "d53080f38ebbdbba319e6d9b89dcba86067a72be",
+  "platformBaseline": "d561b3e283dc05e377cebffd80d082f05518ad23",
+  "sources": [
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+      "sha256": "77d485b2078bba0b3faffcb6d0e78d4ce8e55f4ab59de63d470c9214aff92745"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md",
+      "sha256": "79abbe55782b3bd3a2ac38f14213654cef38a0111c93a27ab4d95d4394f2ad35"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "sha256": "8cee4de8cc847b58d5c29c3f9bee3df6f4634cd16bed1dc8d45017529ef997d6"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/2.3 Docenteninformatie.md",
+      "sha256": "95fef222ef377353c0f3986319707fe85838276e2dd59947aa764c6102437d93"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/2.3 Surplus en welvaart – antwoorden.md",
+      "sha256": "9f5ebbbf133c5d0d50a0d55251546e957207cc3867b1d843842b271780b9b116"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet.pdf",
+      "sha256": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.md",
+      "sha256": "e4e2717d088b20c3cbfc9c7944311a0b0bfdcf75a492335da5c3b0d0c027e898"
+    }
+  ],
+  "assignment": {
+    "start": [
+      1,
+      2
+    ],
+    "basis": [
+      3,
+      4,
+      5
+    ],
+    "independent": [
+      6,
+      7
+    ],
+    "target": 8,
+    "homework": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "instruction": "Maken en nakijken",
+    "extra": [
+      9,
+      10,
+      11
+    ]
+  },
+  "printedPages": {
+    "theory": [
+      80,
+      81,
+      82,
+      83,
+      84
+    ],
+    "start": 84,
+    "basis": [
+      85,
+      86
+    ],
+    "independent": 87,
+    "target": [
+      88,
+      89
+    ]
+  },
+  "pageVerification": "Complete student PDF physical pages 82–91 have printed footers 80–89; inspected start and target footers.",
+  "goals": [
+    "Evenwicht berekenen en markeren",
+    "CS, PS en TS berekenen met basis, hoogte, eenheid",
+    "Betalingsbereidheid en MK vergelijken, ook voorbij evenwicht binnen domein",
+    "Maximaal TS onderscheiden van eerlijke verdeling"
+  ],
+  "prerequisites": [
+    {
+      "operation": "Evenwicht: gelijkstellen, oplossen, invullen, controleren",
+      "anchor": "Boek 1 §1.3.2, Theorie / Het evenwicht berekenen",
+      "status": "Previously taught with Qv(P), Qa(P); inverse P(Q) is a representation change. Start 1 gets support from p.82; slide 7 explicitly refreshes inverse equality."
+    },
+    {
+      "operation": "Kopersvoordeel en driehoeksoppervlakte",
+      "anchor": "§2.3.1 p.72–75, definitions and worked example",
+      "status": "Previously taught; refreshed slides 2–3, 9, 11."
+    },
+    {
+      "operation": "Marginale kosten",
+      "anchor": "§2.1.3 p.19–21, delta method and constant versus rising MK",
+      "status": "Previously taught as interval average; slide 6 explicitly introduces continuous A=MK model and domain."
+    },
+    {
+      "operation": "PS and cancellation of payment",
+      "anchor": "§2.3.2 p.80",
+      "status": "New in start 2, supported exploration with p.80. Slides 3–4 teach it; overview 16 notes require revisit before basis."
+    },
+    {
+      "operation": "Separate higher valuation and lower MK effects",
+      "anchor": "§2.3.2 p.80 principles; exercise 5 p.86 asks application",
+      "status": "Worked on slide 5 with separate authored data, before assigned practice."
+    },
+    {
+      "operation": "From one transaction to continuous areas, shared Qe, PS intercept and euro units",
+      "anchor": "§2.3.2 p.81–83",
+      "status": "Explicitly taught slides 6–11."
+    },
+    {
+      "operation": "Marginal comparison outside equilibrium, maximum and fairness limits",
+      "anchor": "§2.3.2 p.82–84",
+      "status": "Explicitly taught slides 12–15; domain 0≤Q≤56 for authored market."
+    }
+  ],
+  "authoredExamples": [
+    {
+      "context": "Sleutelhanger",
+      "data": {
+        "willingness": 18,
+        "price": 11,
+        "MK": 6,
+        "newWillingness": 20,
+        "newMK": 4
+      },
+      "notBookExercise": true
+    },
+    {
+      "context": "Fietsbellen",
+      "demand": "P=28−0.5Q",
+      "supply": "P=4+0.25Q",
+      "domain": [
+        0,
+        56
+      ],
+      "Qe": 32,
+      "Pe": 12,
+      "CS": 256,
+      "PS": 128,
+      "TS": 384,
+      "notBookExercise": true
+    }
+  ],
+  "target": {
+    "context": "Concertkaartjes",
+    "sourcePages": [
+      88,
+      89
+    ],
+    "questions": [
+      "a equilibrium",
+      "b mark E and shade CS PS",
+      "c CS PS TS with base height unit",
+      "d Q50 Q70 marginal comparison",
+      "e maximum Q60 and fairness distinction"
+    ],
+    "answers": {
+      "Qe": 60,
+      "Pe": 20,
+      "CS": 900,
+      "PS": 450,
+      "TS": 1350,
+      "marginalAt50": 7.5,
+      "marginalAt70": -7.5
+    }
+  },
+  "sourceFindings": [
+    {
+      "id": "232-teacher-context-label",
+      "detail": "Teacher guide calls the example postervoorbeeld in its introduction and Notitieboekenvoorbeeld in its table; actual student pages contain posters on 81–82 and notitieboeken on 83–84. No assignment ambiguity or source alteration."
+    }
+  ],
+  "scope": "Classroom PPTX and PDF only; no full companion acceptance or classroom timing claim.",
+  "slides": [
+    {
+      "number": 1,
+      "title": "Deze les: §2.3.2 Producentensurplus en totaal surplus"
+    },
+    {
+      "number": 2,
+      "title": "Wat kun je na deze les?"
+    },
+    {
+      "number": 3,
+      "title": "Het voordeel van één transactie"
+    },
+    {
+      "number": 4,
+      "title": "Omzet, producentensurplus en winst"
+    },
+    {
+      "number": 5,
+      "title": "Een hogere waardering en lagere MK"
+    },
+    {
+      "number": 6,
+      "title": "De aanbodlijn als MK-lijn"
+    },
+    {
+      "number": 7,
+      "title": "Het marktevenwicht berekenen"
+    },
+    {
+      "number": 8,
+      "title": "Het evenwicht in de grafiek"
+    },
+    {
+      "number": 9,
+      "title": "Consumentensurplus boven de prijs"
+    },
+    {
+      "number": 10,
+      "title": "Producentensurplus onder de prijs"
+    },
+    {
+      "number": 11,
+      "title": "Totaal surplus en de eenheden"
+    },
+    {
+      "number": 12,
+      "title": "Extra handel vóór en na het evenwicht"
+    },
+    {
+      "number": 13,
+      "title": "Maximaal totaal surplus"
+    },
+    {
+      "number": 14,
+      "title": "Korte controle"
+    },
+    {
+      "number": 15,
+      "title": "Korte controle · Bespreking"
+    },
+    {
+      "number": 16,
+      "title": "Deze les: §2.3.2 Producentensurplus en totaal surplus"
+    },
+    {
+      "number": 17,
+      "title": "Opgave 8 · Concertkaartjes"
+    },
+    {
+      "number": 18,
+      "title": "Opgave 8 · Bron: marginale vergelijking"
+    },
+    {
+      "number": 19,
+      "title": "Opgave 8 · Vragen a–c"
+    },
+    {
+      "number": 20,
+      "title": "Opgave 8 · Vragen d–e"
+    },
+    {
+      "number": 21,
+      "title": "Opgave 8a · Evenwicht"
+    },
+    {
+      "number": 22,
+      "title": "Opgave 8b · Evenwicht en surplusgebieden"
+    },
+    {
+      "number": 23,
+      "title": "Opgave 8c · Consumentensurplus"
+    },
+    {
+      "number": 24,
+      "title": "Opgave 8c · Producentensurplus en totaal"
+    },
+    {
+      "number": 25,
+      "title": "Opgave 8d · Wat doet extra handel met TS?"
+    },
+    {
+      "number": 26,
+      "title": "Opgave 8e · Maximaal TS en verdeling"
+    },
+    {
+      "number": 27,
+      "title": "Deze les: §2.3.2 Producentensurplus en totaal surplus"
+    }
+  ],
+  "overviewSlides": [
+    1,
+    16,
+    27
+  ],
+  "nativeTables": [
+    3,
+    5,
+    6,
+    11,
+    12,
+    18,
+    25
+  ],
+  "nativeCharts": [
+    8,
+    9,
+    10,
+    17,
+    22
+  ],
+  "outputs": [
+    {
+      "name": "2.3.2 Producentensurplus en totaal surplus – presentatie.pdf",
+      "sha256": "b613c73fbe27bd24cb03fa20fa6c7615d70dce84ab8ac62c6c00d3c471583593"
+    },
+    {
+      "name": "2.3.2 Producentensurplus en totaal surplus – presentatie.pptx",
+      "sha256": "04c2bc7a11b774dc6d1bbffa91bf6a96e1e276fb49504e8580639c4a036fb4a9"
+    }
+  ]
+}

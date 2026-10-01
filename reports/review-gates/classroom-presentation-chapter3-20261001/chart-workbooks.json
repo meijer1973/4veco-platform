@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "paragraphs": [
+    {
+      "paragraph": "2.3.1",
+      "result": {
+        "ok": true,
+        "charts": 5,
+        "references": 152,
+        "cellsCompared": 246,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx"
+        ]
+      }
+    },
+    {
+      "paragraph": "2.3.2",
+      "result": {
+        "ok": true,
+        "charts": 5,
+        "references": 384,
+        "cellsCompared": 730,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx"
+        ]
+      }
+    },
+    {
+      "paragraph": "2.3.3",
+      "result": {
+        "ok": true,
+        "charts": 10,
+        "references": 190,
+        "cellsCompared": 288,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx",
+          "ppt/embeddings/chart-data-snapshot-007.xlsx",
+          "ppt/embeddings/chart-data-snapshot-008.xlsx",
+          "ppt/embeddings/chart-data-snapshot-009.xlsx",
+          "ppt/embeddings/chart-data-snapshot-010.xlsx"
+        ]
+      }
+    },
+    {
+      "paragraph": "2.3.4",
+      "result": {
+        "ok": true,
+        "charts": 6,
+        "references": 58,
+        "cellsCompared": 110,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx"
+        ]
+      }
+    }
+  ]
+}

@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-09-29T13:25:36.000Z
+Generated: 2026-10-01T08:11:33.000Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-lessen`
 Source branch: `origin/main`
-Source commit: `d53080f38ebbdbba319e6d9b89dcba86067a72be`
-Files indexed: 4136
+Source commit: `9b8304d5031cafac936a56281e144573a25fbbc9`
+Files indexed: 4148
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -756,7 +756,7 @@ _No files indexed in this group._
 
 ## book folders
 
-Count: 2729
+Count: 2741
 
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.svg
@@ -2374,7 +2374,10 @@ Count: 2729
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – opgaven.pdf
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.pdf
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – presentatie.pdf
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – presentatie.pptx
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/build_pdf.py
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/evidence/2.3.1-presentation.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/LEESMIJ.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/_assets/2.3.2_ans_4.png
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/_assets/2.3.2_ans_4.svg
@@ -2412,7 +2415,10 @@ Count: 2729
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – opgaven.pdf
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – paragraaf.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – paragraaf.pdf
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – presentatie.pdf
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – presentatie.pptx
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/build_pdf.py
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/evidence/2.3.2-presentation.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/LEESMIJ.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/_assets/2.3.3_ans_4.png
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/_assets/2.3.3_ans_4.svg
@@ -2458,7 +2464,10 @@ Count: 2729
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/2.3.3 Pareto-efficiëntie en welvaartsverlies – opgaven.pdf
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.pdf
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/2.3.3 Pareto-efficiëntie en welvaartsverlies – presentatie.pdf
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/2.3.3 Pareto-efficiëntie en welvaartsverlies – presentatie.pptx
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/build_pdf.py
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/evidence/2.3.3-presentation.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/LEESMIJ.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/_assets/2.3.4_ans_2.png
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/_assets/2.3.4_ans_2.svg
@@ -2472,7 +2481,10 @@ Count: 2729
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/2.3.4 Gemengde opgaven – antwoorden.pdf
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/2.3.4 Gemengde opgaven – opgaven.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/2.3.4 Gemengde opgaven – opgaven.pdf
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/2.3.4 Gemengde opgaven – presentatie.pdf
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/2.3.4 Gemengde opgaven – presentatie.pptx
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/build_pdf.py
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/evidence/2.3.4-presentation.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/LEESMIJ.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/manifest.json
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragraph-exports.json
@@ -3490,7 +3502,7 @@ Count: 2729
 
 ## paragraph folders
 
-Count: 1124
+Count: 1136
 
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_ex_1_doc.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_ex_1_doc.svg
@@ -4274,7 +4286,10 @@ Count: 1124
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – opgaven.pdf
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.pdf
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – presentatie.pdf
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – presentatie.pptx
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/build_pdf.py
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/evidence/2.3.1-presentation.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/LEESMIJ.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/_assets/2.3.2_ans_4.png
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/_assets/2.3.2_ans_4.svg
@@ -4312,7 +4327,10 @@ Count: 1124
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – opgaven.pdf
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – paragraaf.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – paragraaf.pdf
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – presentatie.pdf
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – presentatie.pptx
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/build_pdf.py
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/evidence/2.3.2-presentation.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/LEESMIJ.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/_assets/2.3.3_ans_4.png
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/_assets/2.3.3_ans_4.svg
@@ -4358,7 +4376,10 @@ Count: 1124
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/2.3.3 Pareto-efficiëntie en welvaartsverlies – opgaven.pdf
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.pdf
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/2.3.3 Pareto-efficiëntie en welvaartsverlies – presentatie.pdf
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/2.3.3 Pareto-efficiëntie en welvaartsverlies – presentatie.pptx
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/build_pdf.py
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/evidence/2.3.3-presentation.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/LEESMIJ.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/_assets/2.3.4_ans_2.png
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/_assets/2.3.4_ans_2.svg
@@ -4372,7 +4393,10 @@ Count: 1124
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/2.3.4 Gemengde opgaven – antwoorden.pdf
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/2.3.4 Gemengde opgaven – opgaven.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/2.3.4 Gemengde opgaven – opgaven.pdf
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/2.3.4 Gemengde opgaven – presentatie.pdf
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/2.3.4 Gemengde opgaven – presentatie.pptx
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/build_pdf.py
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/evidence/2.3.4-presentation.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/LEESMIJ.md
 - Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/source_chapters/Boek_3_H1_Herzien_bronpakket/3.1.1 manuscript.md
 - Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/source_chapters/Boek_3_H1_Herzien_bronpakket/3.1.2 manuscript.md
@@ -4619,7 +4643,7 @@ Count: 1124
 
 ## generated artifacts
 
-Count: 2380
+Count: 2392
 
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.svg
@@ -6084,6 +6108,9 @@ Count: 2380
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – opgaven.pdf
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.pdf
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – presentatie.pdf
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – presentatie.pptx
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/evidence/2.3.1-presentation.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/LEESMIJ.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/_assets/2.3.2_ans_4.png
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/_assets/2.3.2_ans_4.svg
@@ -6121,6 +6148,9 @@ Count: 2380
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – opgaven.pdf
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – paragraaf.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – paragraaf.pdf
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – presentatie.pdf
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – presentatie.pptx
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/evidence/2.3.2-presentation.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/LEESMIJ.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/_assets/2.3.3_ans_4.png
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/_assets/2.3.3_ans_4.svg
@@ -6166,6 +6196,9 @@ Count: 2380
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/2.3.3 Pareto-efficiëntie en welvaartsverlies – opgaven.pdf
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.pdf
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/2.3.3 Pareto-efficiëntie en welvaartsverlies – presentatie.pdf
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/2.3.3 Pareto-efficiëntie en welvaartsverlies – presentatie.pptx
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/evidence/2.3.3-presentation.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/LEESMIJ.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/_assets/2.3.4_ans_2.png
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/_assets/2.3.4_ans_2.svg
@@ -6179,6 +6212,9 @@ Count: 2380
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/2.3.4 Gemengde opgaven – antwoorden.pdf
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/2.3.4 Gemengde opgaven – opgaven.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/2.3.4 Gemengde opgaven – opgaven.pdf
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/2.3.4 Gemengde opgaven – presentatie.pdf
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/2.3.4 Gemengde opgaven – presentatie.pptx
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/evidence/2.3.4-presentation.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/LEESMIJ.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/QA/LOCAL_REVIEW.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/QA/VALIDATION.md
