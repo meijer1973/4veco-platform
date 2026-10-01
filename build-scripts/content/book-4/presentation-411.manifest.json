@@ -1,0 +1,147 @@
+{
+  "paragraph": "4.1.1",
+  "title": "Toetreding, uittreding en langetermijnevenwicht",
+  "manuscriptTitle": "Hoe lang blijft de winst?",
+  "type": "theory",
+  "sourceEdition": "edities/books34-v3/books/book-4/",
+  "sourceCommit": "e734532a42b27732ac25ce990fc9448b12309d28",
+  "platformBaseline": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+  "sourceFiles": {
+    "edities/books34-v3/books/book-4/chapters/4.1/4.1.1 manuscript.md": "7d80849940920bc83166692f39d89fec1c3eb909453ade5b6b55336aab17e797",
+    "edities/books34-v3/books/book-4/chapters/4.1/Antwoorden.md": "4048fa122764663e445145463d63bf4b9b2367b1aa8e34f0e62d1cf5486e394f",
+    "edities/books34-v3/books/book-4/chapters/4.1/Docenteninformatie.md": "0dd614ec1357e51a40dd19b6bc0480549e37c912b2de56ca403a31c7cb0e7e92",
+    "edities/books34-v3/books/book-4/chapters/4.1/_assets/3.2.3_target.svg": "fb7c50589eac2ff53e993d5a044c72539d2a4b42f89e02f122e85406f71a84a7",
+    "edities/books34-v3/books/book-4/chapters/4.1/_assets/3.2.3_ans_2.svg": "9e5aec5347e7ab8f7f708abe6ce526ef27430fd24788c27b9a2563215870f25d",
+    "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8",
+    "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.1-leerling-v3.pdf": "e71fb0a6af8c9e2ec443363fbdbb20ff90bc3b98afdecd94485f15ea0eefdf6c",
+    "edities/books34-v3/books/book-3/chapters/3.2/3.2.1 manuscript.md": "c13b390b105beaf18a7d3e83cb52fb04792f3927d207efe5616b01a3ce8fc366",
+    "edities/books34-v3/books/book-3/chapters/3.2/3.2.2 manuscript.md": "992f1f64ee131c8c7a6c85dd517fc87724be5f825a1f9e497cd01f699645fdce",
+    "edities/books34-v3/books/book-3/chapters/3.2/3.2.3 manuscript.md": "d46652e4ed48a368246ed70a0f1df0206752d95775e52c6de25df0088167fbd2",
+    "edities/books34-v3/books/book-3/chapters/3.2/Docenteninformatie.md": "2e4043cfb28ce503cf37477914a53c3966682fe4604bfd4b91aaed96fe506e04"
+  },
+  "goals": [
+    "Toe- en uittreding causaal verklaren",
+    "Marktaanbod en individuele prijslijn tekenen met vaste kostencurven",
+    "Langetermijnuitkomst berekenen",
+    "Nul economische winst onderscheiden van omzet en normale beloning"
+  ],
+  "sourcePrintedPages": {
+    "theory": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "start": 11,
+    "basis": [
+      11,
+      12
+    ],
+    "independent": 13,
+    "target": 14
+  },
+  "pageVerification": "Complete PDF physical pages 11 and 14 visually inspected including printed footers. Chapter-relative page +4 = complete-book printed page.",
+  "assignment": {
+    "start": [
+      1,
+      2
+    ],
+    "basis": [
+      3,
+      4
+    ],
+    "independent": [
+      5,
+      6
+    ],
+    "target": 7,
+    "homework": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "extra": [
+      8,
+      9,
+      10
+    ]
+  },
+  "prerequisites": [
+    {
+      "operations": "Prijsnemer: P=GO=MO; markt Q versus individuele q",
+      "source": "Book 3 v3 §3.2.1 teaching, followed by §3.2.3 p.17–20 chapter-relative",
+      "refresh": "Two distinct graph axes; source-linked notes and explicit units."
+    },
+    {
+      "operations": "MK from quadratic TK, capacity, marginal crossing, TO, TK, GTK, profit",
+      "source": "Book 3 v3 §3.2.2 teaching pp.10–12 and §3.2.3 pp.17–20 chapter-relative",
+      "use": "Start 1 retrieves; optional formula reminder in overview notes; authored example refreshes before basis work."
+    },
+    {
+      "operations": "Normal remuneration in TK, economic profit, long-term entry/exit, market shift versus firm-price change, minimum GTK",
+      "source": "This lesson Book 4 v3 pp.7–10, not assumed prior knowledge",
+      "use": "Start 2 explores with visible theory support p.7, revisited after instruction before guided practice; all new operations demonstrated."
+    }
+  ],
+  "authoredExample": {
+    "context": "Homogeneous cellulose pellets",
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "TK": "0.10q²+q+90",
+    "capacityKgPerWeek": 80,
+    "minimumGTK": {
+      "q": 30,
+      "P": 7
+    },
+    "initialPrice": 11,
+    "initialQ": 50,
+    "initialProfit": 160,
+    "alternativeLossScenario": {
+      "P": 5,
+      "q": 20,
+      "profit": -50
+    },
+    "marketQuantityUnit": "1000 kg/week",
+    "demand": "P=15-0.10Q",
+    "entrySupplyOld": "P=1+0.25Q",
+    "entrySupplyNew": "P=1+0.075Q",
+    "exitSupplyOld": "P=1+0.04Q",
+    "note": "Own context and data, not an assigned textbook exercise. Continuous illustrative market; no integer firm count claimed.",
+    "aggregation": "P=1+(200/N)Q for N identical firms; Q in 1000 kg/week; intercept agrees with MK."
+  },
+  "target": {
+    "exercise": 7,
+    "title": "Standaard koffiebonen",
+    "allParts": [
+      "7a",
+      "7b",
+      "7c",
+      "7d",
+      "7e"
+    ],
+    "TK": "0.02q²+4q+200",
+    "capacity": 250,
+    "normalRemuneration": 120,
+    "initialPrice": 10,
+    "initialQ": 150,
+    "initialProfit": 250,
+    "longTermPrice": 8,
+    "longTermQ": 100,
+    "longTermTO": 800,
+    "longTermTK": 800,
+    "longTermProfit": 0,
+    "marketDemand": "P=16-0.40Q; Q in 1000 kg/week",
+    "marketInitialSupply": "P=4+0.40Q",
+    "marketSolutionSupply": "P=4+0.20Q; one admissible constructed answer, not supplied as a textbook formula"
+  },
+  "timing": "Teacher source suggests two 55-minute lessons provisionally; neither route fit nor learning effectiveness measured.",
+  "sourceFindings": [
+    {
+      "id": "SRC-411-CAP-01",
+      "source": "_assets/3.2.3_target.svg",
+      "finding": "Original A extends beyond implied aggregate capacity: initial 100 firms each cap250 => Q25 thousand at P14; source line continues to Q40,P20.",
+      "disposition": "Preserve sealed source; teacher notes limit use to relevant prices8–10. Source owner follow-up to add capacity kink or limit plotted domain; no current exercise answer changes."
+    }
+  ]
+}
