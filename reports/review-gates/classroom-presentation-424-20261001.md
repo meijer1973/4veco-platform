@@ -29,12 +29,15 @@
 
 ## Reviewed SHA-256
 
+The author normalized the manifest and this record to LF after content review.
+The table records the committed manifest bytes; its content and all artifact bytes are unchanged.
+
 | File | SHA-256 |
 |---|---|
 | Final PPTX | `1e0df648bba44290c041c2d0cb06a4b35136d08eef64f8b82e0787386a228eab` |
 | Final PDF | `84b83ca68b2b91bcda6151a40974c7d3413f40ee2ed6579555090183678c9042` |
 | `presentation-424.mjs` | `f5c6f04a6eebef93fb15f269cfd146eabec98997db9d19d22d70a64f007449dc` |
-| `presentation-424.manifest.json` | `d94955b3a3ce8e2053431212619e769d4d297542b13e8eebc418055fce45f566` |
+| `presentation-424.manifest.json` | `c72fe69f508ed563bd8d03df4c6dc840d02d8a88150f02098b346c9f5dcfae81` |
 | `check-presentation-424.py` | `0cdd5a723df898a65cd93b0306a1d76d6768545e2d0f7f055547c956ed3082fd` |
 
 Remaining action belongs to the author: preserve these reviewed bytes in the lesson destination and complete the repository's publication/completion checks. No waiver was used.
