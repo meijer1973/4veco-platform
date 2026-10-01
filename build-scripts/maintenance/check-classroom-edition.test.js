@@ -54,6 +54,24 @@ test.each([
 test('an already sealed presentation never becomes an exempt addition', () => {
   expect(current.isClassroomAddition(slides, new Set([textbook, slides]))).toBe(false);
 });
+test('v3 slides require a sealed paragraph manuscript and student export in the same chapter', () => {
+  const root = 'edities/books34-v3/books/book-3/chapters/3.1/';
+  const manuscript = root + '3.1.5 manuscript.md';
+  const student = root + 'paragraph-pdfs/3.1.5-leerling-v3.pdf';
+  const sealed = new Set([manuscript, student]);
+  const deck = root + 'paragraph-pdfs/3.1.5 Minimumprijs en quota – presentatie.pptx';
+  expect(current.isClassroomAddition(deck, sealed)).toBe(true);
+  expect(current.isClassroomAddition(deck.replace('.pptx', '.pdf'), sealed)).toBe(true);
+  expect(current.isClassroomAddition(root + 'paragraph-pdfs/evidence/3.1.5-presentation.md', sealed)).toBe(true);
+  for (const paths of [new Set([student]), new Set([manuscript]), new Set([...sealed, deck])]) {
+    expect(current.isClassroomAddition(deck, paths)).toBe(false);
+  }
+  for (const bad of [deck.replace('book-3', 'book-4'), deck.replace('/3.1/', '/3.2/'),
+    deck.replaceAll('3.1.5', '3.1.9'), deck.replace(' – presentatie.pptx', ' – antwoorden.pdf'),
+    root + 'paragraph-pdfs/evidence/3.1.5-approval.json', deck.replace('Minimumprijs', 'nested/Minimumprijs')]) {
+    expect(current.isClassroomAddition(bad, sealed)).toBe(false);
+  }
+});
 test('presentation additions must be staged with their exact saved bytes', () => {
   const git = (...args) => execFileSync('git', args, {cwd: temp, stdio: 'pipe'});
   git('init', '-q'); git('config', 'core.autocrlf', 'false');

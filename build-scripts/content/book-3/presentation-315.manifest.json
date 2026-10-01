@@ -1,0 +1,214 @@
+{
+  "paragraph": "3.1.5",
+  "title": "Minimumprijs en quota",
+  "kind": "theory",
+  "scope": "Part B classroom PPTX and matching slide PDF only",
+  "edition": "books34-v3, book34-lesson-balance-v3-20260915, signed retrieval and follow-up revisions",
+  "platformBaseline": "34464fb6091f721f7a87e8d1bb3165f758770799",
+  "lessonCommit": "9b8304d5031cafac936a56281e144573a25fbbc9",
+  "sources": [
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.5 manuscript.md",
+      "sha256": "9f1aaab2c33c572a3d0dd4b85a5eb29bd90412a4de5bdf037c9a889c2c7bc30c"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/Antwoorden.md",
+      "sha256": "5c22520f978587c47a041723b24d144ed3ec18da3636090b58572a141ac2b288"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/Docenteninformatie.md",
+      "sha256": "46fdda1886adfc0df76f0a11b38182cf934a3040d1dd1976b961ae68a7e13aac"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.4 manuscript.md",
+      "sha256": "77c8e3e3cbba0fae732cb904aa05be660e002bd378e1e049fd9e9155adbdef6c"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.3 manuscript.md",
+      "sha256": "a9bfe97a56a9cf77feff4602dce945ea69af2c14bcd14cbcbcb1d2b35cbe94da"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.1 manuscript.md",
+      "sha256": "938160312edc425888dd54b3207c932e0aa396c59411a30e6679865eb14fded8"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_target.svg",
+      "sha256": "f9d35efbb704246457c8c179fe818899ccbcc9d4c166fca22ba8d4e67d2caf25"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+      "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.1.5.json",
+      "sha256": "ed6a747b77b681a5dea7d1952c356d8e1a7782f1324340d43a13b7b98b650013"
+    }
+  ],
+  "goals": [
+    "Binding, vraag, aanbod en aanbodoverschot bepalen.",
+    "Met expliciete volledige opkoop overheidsaankopen en uitgaven berekenen.",
+    "Minimumprijs met/zonder opkoop vergelijken met een bindend of niet-bindend productiequotum."
+  ],
+  "assignment": {
+    "start": [
+      "37",
+      "38"
+    ],
+    "basis": [
+      "39",
+      "40",
+      "40A"
+    ],
+    "independent": [
+      "41",
+      "42"
+    ],
+    "target": "43",
+    "homework": [
+      "39",
+      "40",
+      "40A",
+      "41",
+      "42",
+      "43"
+    ],
+    "homeworkAction": "Maken en nakijken",
+    "extras": [
+      "44 bonus",
+      "45 herhaling"
+    ]
+  },
+  "printedCompleteBookPages": {
+    "theory": [
+      39,
+      40,
+      41,
+      42
+    ],
+    "start": 42,
+    "basis": [
+      43,
+      44
+    ],
+    "independent": 45,
+    "target": 46,
+    "bonusAndRetrieval": 47
+  },
+  "pageEvidence": "Complete student PDF text and full-page render checked: start physical/printed 42, target physical/printed 46. Chapter source PAGE numbering is four lower, so chapter p.38/p.42 must not be used for complete-book references.",
+  "overviewSlides": [
+    1,
+    15,
+    25
+  ],
+  "prerequisites": [
+    {
+      "operation": "Vrij evenwicht oplossen en terugsubstitueren",
+      "priorTeaching": "3.1.1 manuscript, Uitgewerkt voorbeeld, chapter p.5 / complete book p.9; 3.1.4 worked example chapter p.30 / complete p.34",
+      "lessonSupport": "slide 4 re-demonstrates equality and substitution; slide 5 maps to axes"
+    },
+    {
+      "operation": "Q(P) versus P(Q), invullen versus oplossen",
+      "priorTeaching": "3.1.4 chapter p.29 explicitly recalls substitution from Book 1; worked P(Q) calculation p.30",
+      "lessonSupport": "overview notes give Q(P) scaffold before start 37 without its answer; slide 4 notes demonstrate both representations using the authored example. No claim of prior mastery"
+    },
+    {
+      "operation": "Gewenste vraag en aanbod onderscheiden van werkelijke verkoop",
+      "priorTeaching": "3.1.4 chapter pp.28-30 / complete pp.32-34 explicitly teaches and works the short-side distinction",
+      "lessonSupport": "slides 7-9 apply it to surplus supply, without and then with government purchases"
+    },
+    {
+      "operation": "Aanbodoverschot en minimumprijs-binding in start37-38",
+      "priorTeaching": "New in this lesson; maximum-price comparison is taught in 3.1.4 chapter p.29",
+      "lessonSupport": "opening overview labels start37-38 as exploration with complete-book pp.39-40; notes direct reading and return after instruction; slides6-8 demonstrate the new rule"
+    },
+    {
+      "operation": "Uitgavenrechthoek met juiste basis en hoogte",
+      "priorTeaching": "3.1.3 chapter p.20 / complete p.24 teaches U as expenditure rectangle and inclusion of each eligible transaction",
+      "lessonSupport": "slide10 changes the base to government purchases Qa-Qv and uses full purchase price; no automatic transfer of subsidy formula"
+    },
+    {
+      "operation": "Quotum bindt, nieuwe regeling, prijs op V, gratis rechten, geen opkoop",
+      "priorTeaching": "New, demonstrated in 3.1.5 chapter pp.37-38 / complete pp.41-42",
+      "lessonSupport": "slides11-13 explicitly reset and teach before practice40c/40A/41c/43d. 40A retained and may precede40c"
+    },
+    {
+      "operation": "Regelingen vergelijken met berekende verschillen",
+      "priorTeaching": "3.1.5 worked comparison chapter p.38 / complete p.42",
+      "lessonSupport": "slide14 separate authored comparison; target43e later slide24"
+    }
+  ],
+  "authoredTeachingExample": {
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "context": "Kruidenpotten, per week",
+    "demand": "P = 24 - 0.20 Q",
+    "supply": "P = 6 + 0.10 Q",
+    "free": {
+      "Q": 60,
+      "P": 12
+    },
+    "bindingFloor": {
+      "Pmin": 15,
+      "Qv": 45,
+      "Qa": 90,
+      "surplus": 45
+    },
+    "noPurchase": {
+      "sales": 45,
+      "U": 0
+    },
+    "fullPurchase": {
+      "sales": 90,
+      "governmentPurchases": 45,
+      "U": 675
+    },
+    "replacementQuota": {
+      "Q": 45,
+      "P": 15,
+      "marginalCost": 10.5,
+      "U": 0
+    },
+    "nonbindingAlternatives": {
+      "floor": 10,
+      "quota": 80,
+      "Q": 60,
+      "P": 12
+    },
+    "separation": "No assigned exercise is worked before independent practice. Context, slopes, quantities and expenditure differ from book exercises."
+  },
+  "actualTarget": {
+    "exercise": "43",
+    "contextSlides": [
+      16,
+      17
+    ],
+    "questionSlides": [
+      18,
+      19
+    ],
+    "answerSlides": [
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "sourceSubquestions": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e"
+    ],
+    "a": "Q0=60 kratten/week; P0=14 euro/krat; 16>14 binds",
+    "b": "Qv40, Qa80, excess40, actual sales80 with full purchase",
+    "c": "government purchases40, U640 euro/week; rectangle Q40-80, P0-16",
+    "d": "complete replacement by quota40; P16, production40, U0; free rights",
+    "e": "same price, production80 vs40 and U640 vs0"
+  },
+  "outputDirectory": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs",
+  "reviewLimits": [
+    "No measured 55- or 110-minute fit. Teacher guide advises two 55-minute lessons plus possible spillover.",
+    "Target record remains candidate_review_ready; deck review does not confer curriculum target finality.",
+    "This is scoped classroom output, not full companion acceptance."
+  ]
+}
