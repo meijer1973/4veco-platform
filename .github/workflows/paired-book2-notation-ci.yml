@@ -7,6 +7,7 @@ on:
       - 'build-scripts/books/*book2*'
       - 'build-scripts/maintenance/check-books34-v3-import.js'
       - 'reports/review-gates/book2-notation-20261001/**'
+      - 'reports/review-gates/book2-notation-completion-20261001/**'
   workflow_dispatch:
     inputs:
       lesson_sha:

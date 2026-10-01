@@ -29,3 +29,8 @@ test('current manuscripts and new figure sources remain writable',()=>{
  expect(r.protectedPath(rows[0].path)).toBe(false);
  expect(r.protectedPath(r.EDITION+'/bronnen/H1/_assets/notation-20261001/page-023.json')).toBe(false);
 });
+test('entry-document exception is confined to the one authorized README',()=>{
+ expect(r.protectedPath(r.ENTRY)).toBe(false);
+ expect(r.protectedPath(r.ENTRY.replace('README.md','IMPORT_REPORT.md'))).toBe(true);
+ expect(r.protectedPath('Boek 1 - Schaarste/README.md')).toBe(true);
+});

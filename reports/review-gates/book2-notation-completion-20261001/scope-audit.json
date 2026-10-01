@@ -1,0 +1,1944 @@
+{
+  "accepted_lessons_base": "9b8304d5031cafac936a56281e144573a25fbbc9",
+  "before_pages": 108,
+  "current_pages": 109,
+  "repeated_exercise_header_pairs": [
+    {
+      "paragraph": "2.1.4",
+      "exercise": 5,
+      "before": [
+        32,
+        33
+      ],
+      "current": [
+        33,
+        34
+      ],
+      "lost_facing": true,
+      "gained_facing": false
+    },
+    {
+      "paragraph": "2.2.4",
+      "exercise": 5,
+      "before": [
+        66,
+        67
+      ],
+      "current": [
+        67,
+        68
+      ],
+      "lost_facing": true,
+      "gained_facing": false
+    },
+    {
+      "paragraph": "2.3.2",
+      "exercise": 8,
+      "before": [
+        88,
+        89
+      ],
+      "current": [
+        89,
+        90
+      ],
+      "lost_facing": true,
+      "gained_facing": false
+    },
+    {
+      "paragraph": "2.3.3",
+      "exercise": 6,
+      "before": [
+        99,
+        100
+      ],
+      "current": [
+        100,
+        101
+      ],
+      "lost_facing": false,
+      "gained_facing": true
+    },
+    {
+      "paragraph": "2.3.4",
+      "exercise": 2,
+      "before": [
+        102,
+        103
+      ],
+      "current": [
+        103,
+        104
+      ],
+      "lost_facing": true,
+      "gained_facing": false
+    },
+    {
+      "paragraph": "2.3.4",
+      "exercise": 3,
+      "before": [
+        104,
+        105
+      ],
+      "current": [
+        105,
+        106
+      ],
+      "lost_facing": true,
+      "gained_facing": false
+    }
+  ],
+  "all_page_anchors": [
+    {
+      "printed": 1,
+      "meta": {
+        "section": "2.1",
+        "title": "Kosten en opbrengsten",
+        "kind": "chapter"
+      },
+      "path": "bronnen/H1/manuscript/00 Hoofdstukopening.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 2,
+      "meta": {
+        "section": "2.1.1",
+        "title": "Kostenstructuren",
+        "kind": "chapter"
+      },
+      "path": "bronnen/H1/manuscript/2.1.1 Kostenstructuren – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 3,
+      "meta": {
+        "section": "2.1.1",
+        "title": "Totale kosten: alles bij elkaar",
+        "kind": "chapter",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H1/manuscript/2.1.1 Kostenstructuren – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 4,
+      "meta": {
+        "section": "2.1.1",
+        "title": "Gemiddelde kosten: per product",
+        "kind": "chapter",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H1/manuscript/2.1.1 Kostenstructuren – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 5,
+      "meta": {
+        "section": "2.1.1",
+        "title": "Van kostenposten naar een conclusie",
+        "kind": "chapter",
+        "native_layout": "notation-20261001"
+      },
+      "path": "bronnen/H1/manuscript/2.1.1 Kostenstructuren – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 6,
+      "meta": {
+        "section": "2.1.1",
+        "title": "Beginnen en oefenen met hulp",
+        "kind": "chapter"
+      },
+      "path": "bronnen/H1/manuscript/2.1.1 Kostenstructuren – paragraaf.md",
+      "opgaven": [
+        "1",
+        "2",
+        "3"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 7,
+      "meta": {
+        "section": "2.1.1",
+        "title": "Steeds meer zelf doen",
+        "kind": "chapter"
+      },
+      "path": "bronnen/H1/manuscript/2.1.1 Kostenstructuren – paragraaf.md",
+      "opgaven": [
+        "4",
+        "5",
+        "6"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 8,
+      "meta": {
+        "section": "2.1.1",
+        "title": "Laat zien wat je kunt",
+        "kind": "chapter"
+      },
+      "path": "bronnen/H1/manuscript/2.1.1 Kostenstructuren – paragraaf.md",
+      "opgaven": [
+        "7"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 9,
+      "meta": {
+        "section": "2.1.1",
+        "title": "Verder denken en herhalen",
+        "kind": "chapter"
+      },
+      "path": "bronnen/H1/manuscript/2.1.1 Kostenstructuren – paragraaf.md",
+      "opgaven": [
+        "8",
+        "9",
+        "10"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 10,
+      "meta": {
+        "section": "2.1.2",
+        "title": "Opbrengsten, winst en break-even",
+        "kind": "chapter",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H1/manuscript/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 11,
+      "meta": {
+        "section": "2.1.2",
+        "title": "Van omzet naar winst",
+        "kind": "chapter",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H1/manuscript/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 12,
+      "meta": {
+        "section": "2.1.2",
+        "title": "Van een tabel naar een grafiek",
+        "kind": "chapter",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H1/manuscript/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 13,
+      "meta": {
+        "section": "2.1.2",
+        "title": "Het hele reken- en tekenproces",
+        "kind": "chapter",
+        "native_layout": "notation-20261001"
+      },
+      "path": "bronnen/H1/manuscript/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "opgaven": [],
+      "refs": [
+        "Gebruik figuur 2 op de vorige pagina als controle. Horizontaal staan wafels per dag; verticaal euro per dag. TO begint bij nul en TK bij € 250. Benoem de lijnen en markeer het snijpunt. Links is er verlies, rechts winst. Bij Q = 100 is de winst een  verticale afstand van € 50 , geen oppervlakte."
+      ]
+    },
+    {
+      "printed": 14,
+      "meta": {
+        "section": "2.1.2",
+        "title": "Eerst controleren, dan verder",
+        "kind": "chapter"
+      },
+      "path": "bronnen/H1/manuscript/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "opgaven": [
+        "1",
+        "2",
+        "3"
+      ],
+      "refs": [
+        "SokkenShop heeft TK = 180 + 3Q en TO = 6Q. De capaciteit is 120 paar sokken per week. Bekijk de volledig getekende grafiek op de volgende pagina."
+      ]
+    },
+    {
+      "printed": 15,
+      "meta": {
+        "section": "2.1.2",
+        "title": "Van herkennen naar zelf tekenen",
+        "kind": "chapter"
+      },
+      "path": "bronnen/H1/manuscript/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "opgaven": [
+        "4"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 16,
+      "meta": {
+        "section": "2.1.2",
+        "title": "Zelf kiezen, rekenen en tekenen",
+        "kind": "chapter"
+      },
+      "path": "bronnen/H1/manuscript/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "opgaven": [
+        "5",
+        "6",
+        "7"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 17,
+      "meta": {
+        "section": "2.1.2",
+        "title": "Opbrengsten en winst bij De Korenaar",
+        "kind": "chapter"
+      },
+      "path": "bronnen/H1/manuscript/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "opgaven": [
+        "8"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 18,
+      "meta": {
+        "section": "2.1.2",
+        "title": "Kan het plan eigenlijk wel uit?",
+        "kind": "chapter"
+      },
+      "path": "bronnen/H1/manuscript/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "opgaven": [
+        "9",
+        "10",
+        "11"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 19,
+      "meta": {
+        "section": "2.1.3",
+        "title": "Marginale kosten en marginale opbrengsten",
+        "kind": "chapter",
+        "native_layout": "notation-20261001"
+      },
+      "path": "bronnen/H1/manuscript/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 20,
+      "meta": {
+        "section": "2.1.3",
+        "title": "Rekenen met stappen in een tabel",
+        "kind": "chapter",
+        "native_layout": "notation-20261001"
+      },
+      "path": "bronnen/H1/manuscript/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 21,
+      "meta": {
+        "section": "2.1.3",
+        "title": "Als de extra producten steeds meer kosten",
+        "kind": "chapter",
+        "native_layout": "notation-20261001"
+      },
+      "path": "bronnen/H1/manuscript/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 22,
+      "meta": {
+        "section": "2.1.3",
+        "title": "Linoprint: winst en marginale bedragen",
+        "kind": "chapter",
+        "native_layout": "notation-20261001"
+      },
+      "path": "bronnen/H1/manuscript/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 23,
+      "meta": {
+        "section": "2.1.3",
+        "title": "Atelier Boog: winst en marginale bedragen",
+        "kind": "chapter",
+        "native_layout": "notation-20261001"
+      },
+      "path": "bronnen/H1/manuscript/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 24,
+      "meta": {
+        "section": "2.1.3",
+        "title": "Beginnen met de juiste verschillen",
+        "kind": "chapter"
+      },
+      "path": "bronnen/H1/manuscript/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "opgaven": [
+        "1",
+        "2",
+        "3"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 25,
+      "meta": {
+        "section": "2.1.3",
+        "title": "Een andere stapgrootte vraagt dezelfde werkwijze",
+        "kind": "chapter"
+      },
+      "path": "bronnen/H1/manuscript/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "opgaven": [
+        "4",
+        "5"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 26,
+      "meta": {
+        "section": "2.1.3",
+        "title": "Zelfstandig twee patronen onderzoeken",
+        "kind": "chapter"
+      },
+      "path": "bronnen/H1/manuscript/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "opgaven": [
+        "6"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 27,
+      "meta": {
+        "section": "2.1.3",
+        "title": "Laat je berekeningen én de betekenis zien",
+        "kind": "chapter"
+      },
+      "path": "bronnen/H1/manuscript/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "opgaven": [
+        "7"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 28,
+      "meta": {
+        "section": "2.1.3",
+        "title": "Gemiddeld en marginaal hoeven niet mee te bewegen",
+        "kind": "chapter"
+      },
+      "path": "bronnen/H1/manuscript/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "opgaven": [
+        "8",
+        "9",
+        "10"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 29,
+      "meta": {
+        "section": "2.1",
+        "title": "Overzicht vóór de gemengde opgaven",
+        "kind": "chapter",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H1/manuscript/2.1 Hoofdstukoverzicht.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 30,
+      "meta": {
+        "section": "2.1.4",
+        "title": "Gemengde opgaven",
+        "kind": "chapter"
+      },
+      "path": "bronnen/H1/manuscript/2.1.4 Gemengde opgaven – opgaven.md",
+      "opgaven": [
+        "1"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 31,
+      "meta": {
+        "section": "2.1.4",
+        "title": "Een grafiek als bron gebruiken",
+        "kind": "chapter"
+      },
+      "path": "bronnen/H1/manuscript/2.1.4 Gemengde opgaven – opgaven.md",
+      "opgaven": [
+        "2"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 32,
+      "meta": {
+        "section": "2.1.4",
+        "title": "Vergelijken zonder overhaaste conclusies",
+        "kind": "chapter"
+      },
+      "path": "bronnen/H1/manuscript/2.1.4 Gemengde opgaven – opgaven.md",
+      "opgaven": [
+        "3",
+        "4"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 33,
+      "meta": {
+        "section": "2.1.4",
+        "title": "Doeloefening — bronblad",
+        "kind": "chapter"
+      },
+      "path": "bronnen/H1/manuscript/2.1.4 Gemengde opgaven – opgaven.md",
+      "opgaven": [
+        "5"
+      ],
+      "refs": [
+        "SmoothBox verkoopt lunchboxen op twee festivaldagen. De capaciteit is op beide dagen **1.000 lunchboxen per dag**. Alle gemaakte lunchboxen worden voor **€ 5 per stuk** verkocht. Gebruik het juiste dagmenu bij elke vraag op de volgende pagina."
+      ]
+    },
+    {
+      "printed": 34,
+      "meta": {
+        "section": "2.1.4",
+        "title": "Doeloefening — de vragen",
+        "kind": "chapter"
+      },
+      "path": "bronnen/H1/manuscript/2.1.4 Gemengde opgaven – opgaven.md",
+      "opgaven": [
+        "5"
+      ],
+      "refs": [
+        "Gebruik het bronblad op de vorige pagina. Q is het aantal lunchboxen per dag."
+      ]
+    },
+    {
+      "printed": 35,
+      "meta": {
+        "section": "2.1.4",
+        "title": "Het model kritisch gebruiken",
+        "kind": "chapter"
+      },
+      "path": "bronnen/H1/manuscript/2.1.4 Gemengde opgaven – opgaven.md",
+      "opgaven": [
+        "6",
+        "7"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 36,
+      "meta": {
+        "section": "2.2",
+        "title": "Elasticiteit",
+        "kind": "cover"
+      },
+      "path": "bronnen/H2/manuscript/00 Hoofdstukopening.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 37,
+      "meta": {
+        "section": "2.2.1",
+        "title": "Prijselasticiteit",
+        "kind": "theory",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 38,
+      "meta": {
+        "section": "2.2.1",
+        "title": "Rekenen met de oude waarde",
+        "kind": "theory",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 39,
+      "meta": {
+        "section": "2.2.1",
+        "title": "Teken, grootte en betekenis",
+        "kind": "theory",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 40,
+      "meta": {
+        "section": "2.2.1",
+        "title": "Van berekening naar verklaring",
+        "kind": "worked",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 41,
+      "meta": {
+        "section": "2.2.1",
+        "title": "Beginnen en oefenen met hulp",
+        "kind": "exercise"
+      },
+      "path": "bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md",
+      "opgaven": [
+        "1",
+        "2",
+        "3"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 42,
+      "meta": {
+        "section": "2.2.1",
+        "title": "Steeds meer zelf doen",
+        "kind": "exercise"
+      },
+      "path": "bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md",
+      "opgaven": [
+        "4",
+        "5",
+        "6"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 43,
+      "meta": {
+        "section": "2.2.1",
+        "title": "Laat zien wat je kunt",
+        "kind": "target"
+      },
+      "path": "bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md",
+      "opgaven": [
+        "7"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 44,
+      "meta": {
+        "section": "2.2.1",
+        "title": "Anders kijken en kort herhalen",
+        "kind": "exercise"
+      },
+      "path": "bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md",
+      "opgaven": [
+        "8",
+        "9",
+        "10"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 45,
+      "meta": {
+        "section": "2.2.2",
+        "title": "Elasticiteit en omzet",
+        "kind": "theory",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H2/manuscript/2.2.2 Elasticiteit en omzet – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 46,
+      "meta": {
+        "section": "2.2.2",
+        "title": "Een vuistregel én een controle",
+        "kind": "theory",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H2/manuscript/2.2.2 Elasticiteit en omzet – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 47,
+      "meta": {
+        "section": "2.2.2",
+        "title": "Omzet vóór en na vergelijken",
+        "kind": "worked",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H2/manuscript/2.2.2 Elasticiteit en omzet – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 48,
+      "meta": {
+        "section": "2.2.2",
+        "title": "Van uitkomst naar een begrensde conclusie",
+        "kind": "worked",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H2/manuscript/2.2.2 Elasticiteit en omzet – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 49,
+      "meta": {
+        "section": "2.2.2",
+        "title": "Beginnen en oefenen met hulp",
+        "kind": "exercise"
+      },
+      "path": "bronnen/H2/manuscript/2.2.2 Elasticiteit en omzet – paragraaf.md",
+      "opgaven": [
+        "1",
+        "2",
+        "3"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 50,
+      "meta": {
+        "section": "2.2.2",
+        "title": "Oefenen zonder vaste invulroute",
+        "kind": "exercise"
+      },
+      "path": "bronnen/H2/manuscript/2.2.2 Elasticiteit en omzet – paragraaf.md",
+      "opgaven": [
+        "4",
+        "5",
+        "6"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 51,
+      "meta": {
+        "section": "2.2.2",
+        "title": "Laat zien wat je kunt",
+        "kind": "target"
+      },
+      "path": "bronnen/H2/manuscript/2.2.2 Elasticiteit en omzet – paragraaf.md",
+      "opgaven": [
+        "7"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 52,
+      "meta": {
+        "section": "2.2.2",
+        "title": "Een vuistregel kritisch gebruiken",
+        "kind": "exercise"
+      },
+      "path": "bronnen/H2/manuscript/2.2.2 Elasticiteit en omzet – paragraaf.md",
+      "opgaven": [
+        "8",
+        "9",
+        "10"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 53,
+      "meta": {
+        "section": "2.2.3",
+        "title": "Inkomen en de prijs van andere goederen",
+        "kind": "theory",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 54,
+      "meta": {
+        "section": "2.2.3",
+        "title": "Wat doet een inkomensverandering?",
+        "kind": "theory",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 55,
+      "meta": {
+        "section": "2.2.3",
+        "title": "Wat doet de prijs van een ander goed?",
+        "kind": "theory",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 56,
+      "meta": {
+        "section": "2.2.3",
+        "title": "Meerdere factoren in één vraagfunctie",
+        "kind": "theory",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 57,
+      "meta": {
+        "section": "2.2.3",
+        "title": "Verander één factor en zet daarna terug",
+        "kind": "theory",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 58,
+      "meta": {
+        "section": "2.2.3",
+        "title": "Eerst Ei en Ek uit bronnen",
+        "kind": "worked",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 59,
+      "meta": {
+        "section": "2.2.3",
+        "title": "Daarna de functie gebruiken",
+        "kind": "worked",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 60,
+      "meta": {
+        "section": "2.2.3",
+        "title": "Starten met de juiste noemer",
+        "kind": "exercise"
+      },
+      "path": "bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md",
+      "opgaven": [
+        "1",
+        "2",
+        "3"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 61,
+      "meta": {
+        "section": "2.2.3",
+        "title": "Hulp afbouwen en twee verbanden onderscheiden",
+        "kind": "exercise"
+      },
+      "path": "bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md",
+      "opgaven": [
+        "4",
+        "5"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 62,
+      "meta": {
+        "section": "2.2.3",
+        "title": "Zelf de verhouding en de basis kiezen",
+        "kind": "exercise"
+      },
+      "path": "bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md",
+      "opgaven": [
+        "6",
+        "7"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 63,
+      "meta": {
+        "section": "2.2.3",
+        "title": "Laat zien wat je kunt",
+        "kind": "target"
+      },
+      "path": "bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md",
+      "opgaven": [
+        "8"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 64,
+      "meta": {
+        "section": "2.2.3",
+        "title": "Wat bewijst een categorie wel en niet?",
+        "kind": "exercise"
+      },
+      "path": "bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md",
+      "opgaven": [
+        "9",
+        "10",
+        "11"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 65,
+      "meta": {
+        "section": "2.2.4",
+        "title": "Gemengde opgaven",
+        "kind": "mixed"
+      },
+      "path": "bronnen/H2/manuscript/2.2.4 Gemengde opgaven – opgaven.md",
+      "opgaven": [
+        "1",
+        "2"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 66,
+      "meta": {
+        "section": "2.2.4",
+        "title": "Rekenen met bronnen en voorzichtig adviseren",
+        "kind": "mixed"
+      },
+      "path": "bronnen/H2/manuscript/2.2.4 Gemengde opgaven – opgaven.md",
+      "opgaven": [
+        "3",
+        "4"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 67,
+      "meta": {
+        "section": "2.2.4",
+        "title": "Doeloefening · de bronnen",
+        "kind": "target-sources"
+      },
+      "path": "bronnen/H2/manuscript/2.2.4 Gemengde opgaven – opgaven.md",
+      "opgaven": [
+        "5"
+      ],
+      "refs": [
+        "Bron D is een regionaal model. Gebruik voor die berekening de gegevens uit D, niet het aantal uit A. De vragen staan op de volgende pagina."
+      ]
+    },
+    {
+      "printed": 68,
+      "meta": {
+        "section": "2.2.4",
+        "title": "Doeloefening · de vragen",
+        "kind": "target"
+      },
+      "path": "bronnen/H2/manuscript/2.2.4 Gemengde opgaven – opgaven.md",
+      "opgaven": [
+        "5"
+      ],
+      "refs": [
+        "Gebruik de bronnen op de vorige pagina."
+      ]
+    },
+    {
+      "printed": 69,
+      "meta": {
+        "section": "2.2.4",
+        "title": "Een berekende verhouding is nog geen verklaring",
+        "kind": "mixed-bonus"
+      },
+      "path": "bronnen/H2/manuscript/2.2.4 Gemengde opgaven – opgaven.md",
+      "opgaven": [
+        "6"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 70,
+      "meta": {
+        "section": "2.2.4",
+        "title": "Hoofdstukcheck",
+        "kind": "mixed-check"
+      },
+      "path": "bronnen/H2/manuscript/2.2.4 Gemengde opgaven – opgaven.md",
+      "opgaven": [
+        "7"
+      ],
+      "refs": [
+        "Dit is een oefencheck, geen uitspraak dat je de stof voor altijd beheerst. Het overzicht op de volgende pagina helpt bij gericht terugkijken."
+      ]
+    },
+    {
+      "printed": 71,
+      "meta": {
+        "section": "2.2",
+        "title": "Hoofdstukoverzicht",
+        "kind": "summary",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H2/manuscript/2.2 Hoofdstukoverzicht.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 72,
+      "meta": {
+        "section": "2.3",
+        "title": "Surplus en welvaart",
+        "kind": "cover"
+      },
+      "path": "bronnen/H3/manuscript/00 Hoofdstukopening.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 73,
+      "meta": {
+        "section": "2.3.1",
+        "title": "Een aankoop kan meer waard zijn dan de prijs",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 74,
+      "meta": {
+        "section": "2.3.1",
+        "title": "Van één koper naar alle kopers",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 75,
+      "meta": {
+        "section": "2.3.1",
+        "title": "Zo teken en bereken je het gebied",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 76,
+      "meta": {
+        "section": "2.3.1",
+        "title": "Van vraagfunctie naar consumentensurplus",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 77,
+      "meta": {
+        "section": "2.3.1",
+        "title": "Ophalen en oefenen met steun"
+      },
+      "path": "bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md",
+      "opgaven": [
+        "1",
+        "2",
+        "3"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 78,
+      "meta": {
+        "section": "2.3.1",
+        "title": "Steeds minder tekenhulp"
+      },
+      "path": "bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md",
+      "opgaven": [
+        "4",
+        "5"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 79,
+      "meta": {
+        "section": "2.3.1",
+        "title": "Zelf de volledige route uitvoeren"
+      },
+      "path": "bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md",
+      "opgaven": [
+        "6",
+        "7"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 80,
+      "meta": {
+        "section": "2.3.1",
+        "title": "Doeloefening en terugblik"
+      },
+      "path": "bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md",
+      "opgaven": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 81,
+      "meta": {
+        "section": "2.3.2",
+        "title": "Ook de verkoper kan voordeel hebben",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 82,
+      "meta": {
+        "section": "2.3.2",
+        "title": "De aanbodlijn krijgt een tweede betekenis",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 83,
+      "meta": {
+        "section": "2.3.2",
+        "title": "Hoe groot is het gezamenlijke voordeel?",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 84,
+      "meta": {
+        "section": "2.3.2",
+        "title": "Evenwicht en twee surplusgebieden",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 85,
+      "meta": {
+        "section": "2.3.2",
+        "title": "De uitkomsten economisch uitleggen",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+      "opgaven": [
+        "1",
+        "2"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 86,
+      "meta": {
+        "section": "2.3.2",
+        "title": "Gebieden lezen met volledige steun"
+      },
+      "path": "bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+      "opgaven": [
+        "3"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 87,
+      "meta": {
+        "section": "2.3.2",
+        "title": "Markeringen toevoegen; twee effecten scheiden"
+      },
+      "path": "bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+      "opgaven": [
+        "4",
+        "5"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 88,
+      "meta": {
+        "section": "2.3.2",
+        "title": "Zelf evenwicht, gebieden en betekenis verbinden"
+      },
+      "path": "bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+      "opgaven": [
+        "6",
+        "7"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 89,
+      "meta": {
+        "section": "2.3.2",
+        "title": "Doeloefening · bronnen"
+      },
+      "path": "bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+      "opgaven": [
+        "8"
+      ],
+      "refs": [
+        "Figuur 8 · Basisgrafiek bij opgave 8. Vraag en aanbod zijn al getekend. De vragen staan op de volgende pagina."
+      ]
+    },
+    {
+      "printed": 90,
+      "meta": {
+        "section": "2.3.2",
+        "title": "Doeloefening · vragen en terugblik"
+      },
+      "path": "bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+      "opgaven": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "refs": [
+        "Gebruik de bronnen op de vorige pagina."
+      ]
+    },
+    {
+      "printed": 91,
+      "meta": {
+        "section": "2.3.3",
+        "title": "Niet elke voordelige transactie gaat door",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 92,
+      "meta": {
+        "section": "2.3.3",
+        "title": "Het surplusgebied is niet altijd een driehoek",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 93,
+      "meta": {
+        "section": "2.3.3",
+        "title": "Voordeel dat niemand ontvangt",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 94,
+      "meta": {
+        "section": "2.3.3",
+        "title": "Kan iemand erop vooruit zonder nadeel voor anderen?",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 95,
+      "meta": {
+        "section": "2.3.3",
+        "title": "Een boekingsgrens volledig doorrekenen",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 96,
+      "meta": {
+        "section": "2.3.3",
+        "title": "Het verlies en de Pareto-uitleg controleren",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 97,
+      "meta": {
+        "section": "2.3.3",
+        "title": "Ophalen en de eerste berekening met steun"
+      },
+      "path": "bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md",
+      "opgaven": [
+        "1",
+        "2",
+        "3"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 98,
+      "meta": {
+        "section": "2.3.3",
+        "title": "Minder hulp: zelf gebieden en een conclusie kiezen"
+      },
+      "path": "bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md",
+      "opgaven": [
+        "4"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 99,
+      "meta": {
+        "section": "2.3.3",
+        "title": "Zelfstandig een boekingsregel beoordelen"
+      },
+      "path": "bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md",
+      "opgaven": [
+        "5"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 100,
+      "meta": {
+        "section": "2.3.3",
+        "title": "Doeloefening · bronnen"
+      },
+      "path": "bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md",
+      "opgaven": [
+        "6"
+      ],
+      "refs": [
+        "Figuur 10 · Basisgrafiek bij opgave 6. Het vrije evenwicht E, P = 25 en Q = 40 zijn aangegeven. De vragen staan op de volgende pagina."
+      ]
+    },
+    {
+      "printed": 101,
+      "meta": {
+        "section": "2.3.3",
+        "title": "Doeloefening · vragen en terugblik"
+      },
+      "path": "bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md",
+      "opgaven": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 102,
+      "meta": {
+        "section": "2.3.4",
+        "title": "Zelf gegevens en stappen kiezen"
+      },
+      "path": "bronnen/H3/manuscript/2.3.4 Gemengde opgaven – opgaven.md",
+      "opgaven": [
+        "1"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 103,
+      "meta": {
+        "section": "2.3.4",
+        "title": "Plantenmarkt · bronnen"
+      },
+      "path": "bronnen/H3/manuscript/2.3.4 Gemengde opgaven – opgaven.md",
+      "opgaven": [
+        "2"
+      ],
+      "refs": [
+        "Figuur 1 · Basisgrafiek bij opgave 2. De vragen staan op de volgende pagina."
+      ]
+    },
+    {
+      "printed": 104,
+      "meta": {
+        "section": "2.3.4",
+        "title": "Plantenmarkt · vergelijken en beoordelen"
+      },
+      "path": "bronnen/H3/manuscript/2.3.4 Gemengde opgaven – opgaven.md",
+      "opgaven": [
+        "2"
+      ],
+      "refs": [
+        "Gebruik de bronnen op de vorige pagina."
+      ]
+    },
+    {
+      "printed": 105,
+      "meta": {
+        "section": "2.3.4",
+        "title": "Doeloefening · bronnen"
+      },
+      "path": "bronnen/H3/manuscript/2.3.4 Gemengde opgaven – opgaven.md",
+      "opgaven": [
+        "3"
+      ],
+      "refs": [
+        "Figuur 2 · Basisgrafiek bij de doeloefening. De vragen staan op de volgende pagina."
+      ]
+    },
+    {
+      "printed": 106,
+      "meta": {
+        "section": "2.3.4",
+        "title": "Doeloefening · vragen"
+      },
+      "path": "bronnen/H3/manuscript/2.3.4 Gemengde opgaven – opgaven.md",
+      "opgaven": [
+        "3"
+      ],
+      "refs": [
+        "Gebruik de bronnen op de vorige pagina."
+      ]
+    },
+    {
+      "printed": 107,
+      "meta": {
+        "section": "2.3.4",
+        "title": "Denkertje en verbinding met eerdere stof"
+      },
+      "path": "bronnen/H3/manuscript/2.3.4 Gemengde opgaven – opgaven.md",
+      "opgaven": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "refs": []
+    },
+    {
+      "printed": 108,
+      "meta": {
+        "section": "2.3",
+        "title": "De hele rekenroute op één pagina",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H3/manuscript/2.3 Hoofdstukoverzicht.md",
+      "opgaven": [],
+      "refs": []
+    },
+    {
+      "printed": 109,
+      "meta": {
+        "section": "2.3",
+        "title": "Begrippen en veelgemaakte verwisselingen",
+        "native_layout": "theory-20260921"
+      },
+      "path": "bronnen/H3/manuscript/2.3 Hoofdstukoverzicht.md",
+      "opgaven": [],
+      "refs": []
+    }
+  ],
+  "presentation_page_maps": [
+    {
+      "paragraph": "2.1.1",
+      "path": "build-scripts/content/book-2/presentation-211.manifest.json",
+      "sourcePrintedPages": {
+        "start": 6,
+        "basis": [
+          6,
+          7
+        ],
+        "independent": 7,
+        "target": 8
+      },
+      "expected_current_numeric_page_map": {
+        "start": 6,
+        "basis": [
+          6,
+          7
+        ],
+        "independent": 7,
+        "target": 8
+      },
+      "requires_page_reference_repair": false
+    },
+    {
+      "paragraph": "2.1.2",
+      "path": "build-scripts/content/book-2/presentation-212.manifest.json",
+      "sourcePrintedPages": {
+        "start": 14,
+        "target": 17,
+        "basis": [
+          14,
+          15,
+          16
+        ],
+        "independent": 16,
+        "theory": [
+          10,
+          11,
+          12,
+          13
+        ]
+      },
+      "expected_current_numeric_page_map": {
+        "start": 14,
+        "target": 17,
+        "basis": [
+          14,
+          15,
+          16
+        ],
+        "independent": 16,
+        "theory": [
+          10,
+          11,
+          12,
+          13
+        ]
+      },
+      "requires_page_reference_repair": false
+    },
+    {
+      "paragraph": "2.1.3",
+      "path": "build-scripts/content/book-2/presentation-213.manifest.json",
+      "sourcePrintedPages": {
+        "theory": [
+          19,
+          20,
+          21,
+          22
+        ],
+        "start": 23,
+        "basis": [
+          23,
+          24
+        ],
+        "independent": [
+          24,
+          25
+        ],
+        "target": 26
+      },
+      "expected_current_numeric_page_map": {
+        "theory": [
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "start": 24,
+        "basis": [
+          24,
+          25
+        ],
+        "independent": [
+          25,
+          26
+        ],
+        "target": 27
+      },
+      "requires_page_reference_repair": true
+    },
+    {
+      "paragraph": "2.1.4",
+      "path": "build-scripts/content/book-2/presentation-214.manifest.json",
+      "sourcePrintedPages": {
+        "start": 29,
+        "practice": [
+          29,
+          30,
+          31
+        ],
+        "target": [
+          32,
+          33
+        ],
+        "bonusAndReview": 34
+      },
+      "expected_current_numeric_page_map": {
+        "start": 30,
+        "practice": [
+          30,
+          31,
+          32
+        ],
+        "target": [
+          33,
+          34
+        ],
+        "bonusAndReview": 35
+      },
+      "requires_page_reference_repair": true
+    },
+    {
+      "paragraph": "2.2.1",
+      "path": "build-scripts/content/book-2/presentation-221.manifest.json",
+      "sourcePrintedPages": {
+        "theory": [
+          36,
+          37,
+          38
+        ],
+        "workedExample": 39,
+        "start": 40,
+        "basis": [
+          40,
+          41
+        ],
+        "independent": 41,
+        "target": 42,
+        "extra": 43
+      },
+      "expected_current_numeric_page_map": {
+        "theory": [
+          37,
+          38,
+          39
+        ],
+        "workedExample": 40,
+        "start": 41,
+        "basis": [
+          41,
+          42
+        ],
+        "independent": 42,
+        "target": 43,
+        "extra": 44
+      },
+      "requires_page_reference_repair": true
+    },
+    {
+      "paragraph": "2.2.2",
+      "path": "build-scripts/content/book-2/presentation-222.manifest.json",
+      "sourcePrintedPages": {
+        "theory": [
+          44,
+          45,
+          46,
+          47
+        ],
+        "start": 48,
+        "basis": [
+          48,
+          49
+        ],
+        "independent": 49,
+        "target": 50,
+        "extra": 51
+      },
+      "expected_current_numeric_page_map": {
+        "theory": [
+          45,
+          46,
+          47,
+          48
+        ],
+        "start": 49,
+        "basis": [
+          49,
+          50
+        ],
+        "independent": 50,
+        "target": 51,
+        "extra": 52
+      },
+      "requires_page_reference_repair": true
+    },
+    {
+      "paragraph": "2.2.3",
+      "path": "build-scripts/content/book-2/presentation-223.manifest.json",
+      "sourcePrintedPages": {
+        "theory": [
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58
+        ],
+        "start": 59,
+        "basis": [
+          59,
+          60
+        ],
+        "independent": 61,
+        "target": 62,
+        "verification": "Complete book: printed p. 52–62 = physical pages 54–64; rendered printed footers inspected."
+      },
+      "expected_current_numeric_page_map": {
+        "theory": [
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59
+        ],
+        "start": 60,
+        "basis": [
+          60,
+          61
+        ],
+        "independent": 62,
+        "target": 63
+      },
+      "requires_page_reference_repair": true
+    },
+    {
+      "paragraph": "2.2.4",
+      "path": "build-scripts/content/book-2/presentation-224.manifest.json",
+      "sourcePrintedPages": {
+        "bonus": 68,
+        "practice": [
+          64,
+          65
+        ],
+        "chapterCheck": 69,
+        "target": [
+          66,
+          67
+        ],
+        "start": 64
+      },
+      "expected_current_numeric_page_map": {
+        "bonus": 69,
+        "practice": [
+          65,
+          66
+        ],
+        "chapterCheck": 70,
+        "target": [
+          67,
+          68
+        ],
+        "start": 65
+      },
+      "requires_page_reference_repair": true
+    },
+    {
+      "paragraph": "2.3.1",
+      "path": "build-scripts/content/book-2/presentation-231.manifest.json",
+      "sourcePrintedPages": {
+        "theory": [
+          72,
+          73,
+          74
+        ],
+        "workedExample": 75,
+        "start": 76,
+        "basis": [
+          76,
+          77
+        ],
+        "independent": 78,
+        "target": 79
+      },
+      "expected_current_numeric_page_map": {
+        "theory": [
+          73,
+          74,
+          75
+        ],
+        "workedExample": 76,
+        "start": 77,
+        "basis": [
+          77,
+          78
+        ],
+        "independent": 79,
+        "target": 80
+      },
+      "requires_page_reference_repair": true
+    },
+    {
+      "paragraph": "2.3.2",
+      "path": "build-scripts/content/book-2/presentation-232.manifest.json",
+      "sourcePrintedPages": {
+        "theory": [
+          80,
+          81,
+          82,
+          83,
+          84
+        ],
+        "start": 84,
+        "basis": [
+          85,
+          86
+        ],
+        "independent": 87,
+        "target": [
+          88,
+          89
+        ]
+      },
+      "expected_current_numeric_page_map": {
+        "theory": [
+          81,
+          82,
+          83,
+          84,
+          85
+        ],
+        "start": 85,
+        "basis": [
+          86,
+          87
+        ],
+        "independent": 88,
+        "target": [
+          89,
+          90
+        ]
+      },
+      "requires_page_reference_repair": true
+    },
+    {
+      "paragraph": "2.3.3",
+      "path": "build-scripts/content/book-2/presentation-233.manifest.json",
+      "sourcePrintedPages": {
+        "theory": [
+          90,
+          91,
+          92,
+          93,
+          94,
+          95
+        ],
+        "start": 96,
+        "basis": [
+          96,
+          97
+        ],
+        "independent": 98,
+        "target": [
+          99,
+          100
+        ],
+        "verification": "Printed footers inspected in complete book. Physical PDF page = printed page + 2."
+      },
+      "expected_current_numeric_page_map": {
+        "theory": [
+          91,
+          92,
+          93,
+          94,
+          95,
+          96
+        ],
+        "start": 97,
+        "basis": [
+          97,
+          98
+        ],
+        "independent": 99,
+        "target": [
+          100,
+          101
+        ]
+      },
+      "requires_page_reference_repair": true
+    },
+    {
+      "paragraph": "2.3.4",
+      "path": "build-scripts/content/book-2/presentation-234.manifest.json",
+      "sourcePrintedPages": {
+        "start": 101,
+        "practice": [
+          102,
+          103
+        ],
+        "target": [
+          104,
+          105
+        ],
+        "bonusAndReview": 106
+      },
+      "expected_current_numeric_page_map": {
+        "start": 102,
+        "practice": [
+          103,
+          104
+        ],
+        "target": [
+          105,
+          106
+        ],
+        "bonusAndReview": 107
+      },
+      "requires_page_reference_repair": true
+    }
+  ]
+}

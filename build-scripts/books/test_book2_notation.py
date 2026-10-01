@@ -1,7 +1,19 @@
 import unittest
+from book2_print_compatibility import page_exercises,facing
 from book2_notation_checks import canonical,exercise_blocks
 from book2_notation_print import destination_id
 
+
+class PrintCompatibilityChecks(unittest.TestCase):
+    def test_continuation_figure_is_not_lost_without_an_exercise_heading(self):
+        body='<figure><figcaption>Bij opgave 3. Gegeven grafiek.</figcaption></figure><b>Opgave 4 · Vervolg</b>'
+        self.assertEqual(page_exercises(body),['3','4'])
+        self.assertEqual(page_exercises('Gebruik wat je bij Opgave 3 hebt geleerd.'),[])
+
+    def test_facing_parity_and_nonadjacent_reference(self):
+        self.assertTrue(facing([88,89]))
+        self.assertFalse(facing([89,90]))
+        with self.assertRaises(ValueError):facing([89,91])
 class NotationChecks(unittest.TestCase):
     def test_stable_preexisting_destinations(self):
         self.assertEqual(destination_id(24),'book2-page-24')

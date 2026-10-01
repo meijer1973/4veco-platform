@@ -28,7 +28,12 @@ def verify_sources(lessons):
         current=source.read_text(encoding='utf8')
         require(not re.search(r'\bQ[ds]\b|interleaving',current),'Obsolete student notation '+relative)
         headings+=current.count('## Herhaling en combineren')
-        a,b=exercise_blocks(before),exercise_blocks(current)
+        compared=current
+        if source.name.startswith('2.2.4 '):
+            require('tegenoverliggende pagina' not in current,'False StreamPlus facing-page instruction')
+            compared=compared.replace('De vragen staan op de volgende pagina.','De vragen staan op de tegenoverliggende pagina.')
+            compared=compared.replace('Gebruik de bronnen op de vorige pagina.','Gebruik de bronnen op de tegenoverliggende pagina.')
+        a,b=exercise_blocks(before),exercise_blocks(compared)
         require(len(a)==len(b),'Changed exercise count '+relative)
         for old,new in zip(a,b):
             if 'Opgave 3 · Bloemenbossen' in old:

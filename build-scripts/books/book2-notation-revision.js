@@ -5,14 +5,19 @@ const prior=require('./exercise-route-revision'),book2=require('./book2-signed-r
 const signed=require('./books34-signed-revision'),followups=require('./books34-followups-revision');
 const {safeFile}=require('../references/books34-v3-delivery');
 const {gitBlob}=require('../lib/historical-paths');
-const ROOT=path.resolve(__dirname,'../..'),BASE='d53080f38ebbdbba319e6d9b89dcba86067a72be';
-const PLATFORM_BASE='d561b3e283dc05e377cebffd80d082f05518ad23';
+const ROOT=path.resolve(__dirname,'../..'),BASE='9b8304d5031cafac936a56281e144573a25fbbc9';
+const PREVIOUS_BASE='d53080f38ebbdbba319e6d9b89dcba86067a72be';
+const PLATFORM_BASE='34464fb6091f721f7a87e8d1bb3165f758770799';
 const REVISION='book2-notation-20261001',EDITION=prior.ROOTS[0];
+// R3 authorizes this one current entry document, not the rest of the book root.
+const ENTRY=EDITION.split('/edities/')[0]+'/README.md';
+const ROOTS=[...prior.ROOTS,book2.PROJECTION,ENTRY];
+const inventory=lessons=>[...book2.inventory(lessons),ENTRY].sort();
 const MANIFEST='book2-notation-revision.json',PIN_FILE='build-scripts/books/book2-notation-revision-pin.json';
 const CONTRACT_FILE='build-scripts/books/book2-notation-contract.json';
 const INPUTS=[CONTRACT_FILE,...['book2-notation-revision.js','record_book2_notation_revision.js','book2-notation-review.js',
  'rebuild_book2_notation.py','assemble_book2_notation.py','book2_notation_print.py','book2_notation_exports.py',
- 'book2_notation_checks.py','verify_book2_notation.py','requirements-exercise-routes.txt'].map(f=>'build-scripts/books/'+f),
+ 'book2_notation_checks.py','book2_print_compatibility.py','verify_book2_notation.py','requirements-exercise-routes.txt'].map(f=>'build-scripts/books/'+f),
  'skills/econ-textbook-paragraph.md','build-scripts/maintenance/check-books34-v3-import.js',
  'build-scripts/workflows/check-paragraph-lane-scope.js','.github/workflows/paired-book2-notation-ci.yml',
  '.gitattributes','build-scripts/books/book2-notation-checkout.test.js'];
@@ -33,7 +38,7 @@ function blobRecords(repo,oids){
  return result;
 }
 function protectedPath(file){
- if(!file.startsWith(EDITION+'/'))return file!==MANIFEST;
+ if(!file.startsWith(EDITION+'/'))return ![MANIFEST,ENTRY].includes(file);
  const relative=file.slice(EDITION.length+1);
  return /^(signed-|route-|delivery-manifest|repair-manifest|print-pagination|CORRECTIES|SIGNED-|ROUTE-)/.test(relative)
   || /^boek\/Boek_2_Theorie_43_/.test(relative)
@@ -90,8 +95,9 @@ function verifyManifest(lessons,bytes,pin,{root=ROOT,requireTracked=false}={}){
  assert(doc.revision===REVISION&&doc.baseline_lesson_commit===BASE,'Wrong notation revision/base');
  assert(JSON.stringify(doc.predecessors)===JSON.stringify(history(lessons,root)),'False historical evidence');
  assert(c.lessons_base===BASE&&c.platform_base===PLATFORM_BASE,'Wrong contract bases');
- assert(c.revision_paths.every(p=>p===MANIFEST||p.startsWith(EDITION+'/')),'Contract exceeds Book 2 scope');
- const actual=book2.inventory(lessons),base=signed.tree(lessons,BASE,[...prior.ROOTS,book2.PROJECTION]);
+ assert(c.revision_paths.every(p=>[MANIFEST,ENTRY].includes(p)||p.startsWith(EDITION+'/')),'Contract exceeds Book 2 scope');
+ assert(c.source_bindings.some(row=>row.path===ENTRY),'Missing bounded entry-document binding');
+ const actual=inventory(lessons),base=signed.tree(lessons,BASE,ROOTS);
  verifyFiles(lessons,doc.files,actual,base,allowed);
  const changes=changedPaths(lessons);
  assert(JSON.stringify(changes)===JSON.stringify([...allowed].sort()),'Outside finite notation revision');
@@ -120,14 +126,16 @@ function acceptedBaseline({root=ROOT,lessons=path.resolve(root,'../4veco-lessen'
  try{
   history(lessons,root);
   const doc=JSON.parse(git(lessons,['show',BASE+':'+followups.MANIFEST]));
-  const base=signed.tree(lessons,BASE,[...prior.ROOTS,book2.PROJECTION]),actual=book2.inventory(lessons);
+  const base=signed.tree(lessons,BASE,ROOTS),actual=inventory(lessons);
   // Preserve the exact historical pair as well as the exact accepted main with
   // classroom additions. Neither arbitrary additions nor partial sets qualify.
-  assert([doc.files.map(r=>r.path),[...base.keys()].sort()].some(files=>JSON.stringify(actual)===JSON.stringify(files)),'Changed accepted inventory');
+  const previous=signed.tree(lessons,PREVIOUS_BASE,ROOTS);
+  assert([[...doc.files.map(r=>r.path),ENTRY].sort(),[...previous.keys()].sort(),[...base.keys()].sort()]
+    .some(files=>JSON.stringify(actual)===JSON.stringify(files)),'Changed accepted inventory');
   for(const file of actual)assert(gitBlob(fs.readFileSync(safeFile(lessons,file)))===base.get(file),'Changed accepted bytes '+file);
   if(requireTracked)assert(!String(git(lessons,['diff','--name-only']))&&!String(git(lessons,['diff','--cached','--name-only'])),'Dirty baseline index');
   count=actual.length;
  }catch(e){failures.push(e.message);}
  return {revision:followups.REVISION,state:followups.REVISION,evidence:'Exact accepted predecessor; no notation revision claim',files:count,passed:!failures.length,failures};
 }
-module.exports={ROOT,BASE,PLATFORM_BASE,REVISION,EDITION,MANIFEST,PIN_FILE,CONTRACT_FILE,INPUTS,contract,protectedPath,changedPaths,history,verifyFiles,verifyManifest,verify,acceptedBaseline};
+module.exports={ROOT,BASE,PLATFORM_BASE,REVISION,EDITION,ENTRY,ROOTS,inventory,MANIFEST,PIN_FILE,CONTRACT_FILE,INPUTS,contract,protectedPath,changedPaths,history,verifyFiles,verifyManifest,verify,acceptedBaseline};

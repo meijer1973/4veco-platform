@@ -160,6 +160,8 @@ if __name__=='__main__':
     args=parser.parse_args();result=verify(args.lesson_root/EDITION)
     from book2_notation_checks import verify_sources
     result['source_checks']=verify_sources(args.lesson_root)
+    from book2_print_compatibility import verify as verify_compatibility
+    result['print_and_presentation_compatibility']=verify_compatibility(args.lesson_root)
     text=json.dumps(result,ensure_ascii=False,indent=2)+'\n'
     if args.report:args.report.write_text(text,encoding='utf8',newline='\n')
     print(text)
