@@ -2,13 +2,13 @@
   "paragraph": "2.2.2",
   "title": "Elasticiteit en omzet",
   "type": "theory",
-  "edition": "chat-2026, revised theory 20260921",
-  "lessonCommit": "f2660032cf7e4e3bbab96cf32863d06a38bd74bc",
-  "platformBaseline": "7ed2500f53fbd29bd0863dfd84b4fd6df57dc34f",
+  "edition": "chat-2026, notatie- en woordformulerevisie 20261001",
+  "lessonCommit": "a8940a7a79e22857a3e306a91fe923c48c63e716",
+  "platformBaseline": "ac6f8e5320406aaf4906811b289ce98fcfa548c1",
   "sources": [
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.2 Elasticiteit en omzet – paragraaf.md",
-      "sha256": "dd5aec29637a494da80ad7264f08c7d7ecc7081d9ca23f0e963385127f8166f3"
+      "sha256": "74c0c4df6d184c834040bbe0e5ed7229026db2f4a8beaa611ff7d58168c4ab3d"
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/2.2 Elasticiteit – antwoorden.md",
@@ -16,7 +16,7 @@
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/Docenten_en_bouwverantwoording.md",
-      "sha256": "eedc86d6a46f1271e338195c92a63977b5523030fee9ee9a7d02b26a5e74b7f5"
+      "sha256": "008cf0d37c82f84a405b086463ee7468ce31596177c99f1d23f2f2c8da34f4b0"
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.md",
@@ -24,36 +24,36 @@
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet.pdf",
-      "sha256": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493"
+      "sha256": "23d0532a7804fb743f053608a814959c6f09c9259c27762b1dff5952556908d5"
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet_Antwoorden.pdf",
-      "sha256": "7bf9f43e801592b3632063b0720ae38b8a1776831bfaa90703a8ae95e5329bc2"
+      "sha256": "c28c975799c8f68f78d2d20ea92512322a9ba305e1da1c124b4fbc739dd8f4e8"
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – presentatie.pptx",
-      "sha256": "e0891d1e0ff4aa507ecb869670f904b80a5486b019f0d66f6434857296992bfe"
+      "sha256": "c89759165a2ecf24fbfadcff12eeab5c3b1b96eee5821e8ecf099bb93b225c84"
     }
   ],
   "printedPages": {
     "theory": [
-      44,
       45,
       46,
-      47
+      47,
+      48
     ],
-    "start": 48,
+    "start": 49,
     "basis": [
-      48,
-      49
+      49,
+      50
     ],
-    "independent": 49,
-    "target": 50,
-    "extra": 51
+    "independent": 50,
+    "target": 51,
+    "extra": 52
   },
   "physicalPdfPages": {
-    "start": 50,
-    "target": 52
+    "start": 51,
+    "target": 53
   },
   "assignment": {
     "start": [
@@ -137,11 +137,17 @@
     "priorTeaching": "Opgave 1 gebruikt TO uit §2.1.2, dia 3, en procentuele verandering met de oude waarde als basis, zoals opgehaald in §2.2.1. Opgave 2b gebruikt het onderscheid omzet/winst uit §2.1.2, dia 4.",
     "exploration": {
       "item": "2a",
-      "supportPrintedPages": "45",
-      "reason": "De lokale omzetregel in opgave 2a is nieuw. Zoek de uitleg en voorwaarden op p. 45 op. Opgave 2b kan het eerdere onderscheid tussen omzet en winst ophalen.",
+      "supportPrintedPages": "46",
+      "reason": "De lokale omzetregel in opgave 2a is nieuw. Zoek de uitleg en voorwaarden op p. 46 op. Opgave 2b kan het eerdere onderscheid tussen omzet en winst ophalen.",
       "instruction": "dia 3–12, lokale regel op dia 10",
       "returnBeforePractice": "dia 15"
     },
     "deliveryRevision": "Opening overview and teacher notes repaired after serialized review; assignment numbers retained."
+  },
+  "paginationRevision": {
+    "revision": "book2-presentation-pagination-20261001",
+    "sourceCommit": "a8940a7a79e22857a3e306a91fe923c48c63e716",
+    "previousPlatformCommit": "ac6f8e5320406aaf4906811b289ce98fcfa548c1",
+    "scope": "Current printed page references and Qv/Qa notation; assignments, economic values, goals, teaching examples and timing preserved."
   }
 }

@@ -1,0 +1,102 @@
+{
+  "manifest_sha256": "94320a3ee3cc6855dbdcbf417064b5206d7abf0c6c892bb94d1c14179e9e0b43",
+  "lesson_candidate": "a8940a7a79e22857a3e306a91fe923c48c63e716",
+  "files": [
+    {
+      "path": "build-scripts/books/book2-notation-contract.json",
+      "sha256_lf": "1c926141d4c704ef97c2e1f49557ee6c73643ce5d774c77a306f92d16a2e4c64"
+    },
+    {
+      "path": "build-scripts/books/book2-notation-revision.js",
+      "sha256_lf": "3bc06f090797bfabdc0c492923c06d6b49ffb6965d32e96d789e55eacc719051"
+    },
+    {
+      "path": "build-scripts/books/record_book2_notation_revision.js",
+      "sha256_lf": "df62f7ac2046d98cf108baa8fcba86d2e7e6325746163fc2b9887cc9c111f86f"
+    },
+    {
+      "path": "build-scripts/books/book2-notation-review.js",
+      "sha256_lf": "1fd3f83564bbaa52f34f8fcef27968d0ef93b14d64c53a75b024ec07310ed50b"
+    },
+    {
+      "path": "build-scripts/books/rebuild_book2_notation.py",
+      "sha256_lf": "bbb2865bb06836b2bce68082b5b6072424a1318054be90491424e098a1da5f59"
+    },
+    {
+      "path": "build-scripts/books/assemble_book2_notation.py",
+      "sha256_lf": "81892ce1e74ff9b76aad0bd9f2d475f123362c79dce12f17fd9195f316bd398d"
+    },
+    {
+      "path": "build-scripts/books/book2_notation_print.py",
+      "sha256_lf": "e500b166802d6817d5b84892c706f053bd6f5e719e05e43f8b6d62acd867f7ad"
+    },
+    {
+      "path": "build-scripts/books/book2_notation_exports.py",
+      "sha256_lf": "38193d98d806241989b94571d31e1b432d31cd3e639ec31b58dd066e2f76c3bf"
+    },
+    {
+      "path": "build-scripts/books/book2_notation_checks.py",
+      "sha256_lf": "624b080fab293e3fa9170ba65405339bcf4e7cd5ca85c8b074e2b5e8b87c935b"
+    },
+    {
+      "path": "build-scripts/books/book2_print_compatibility.py",
+      "sha256_lf": "78bdb7b4af76b05e8b27870de340b836b1540ef259fda432c8ab5b91bfc8c1da"
+    },
+    {
+      "path": "build-scripts/books/verify_book2_notation.py",
+      "sha256_lf": "18739c323a25d715c3a1934d25c5a766b88566412f59099d157e8211d1ce43fc"
+    },
+    {
+      "path": "build-scripts/books/requirements-exercise-routes.txt",
+      "sha256_lf": "e3be02c414ddf3088fc0521c3a62300ae52c55eddf6699036ce58313cb146500"
+    },
+    {
+      "path": "skills/econ-textbook-paragraph.md",
+      "sha256_lf": "c6340f93f811f3198fae9dd9d3c909e341f8b7e07b3fec80752c6dd70a58fb5e"
+    },
+    {
+      "path": "build-scripts/maintenance/check-books34-v3-import.js",
+      "sha256_lf": "e0384129374ba1dbe386792490b336ee5b2a6b45a9980be00b47eb673377e69b"
+    },
+    {
+      "path": "build-scripts/workflows/check-paragraph-lane-scope.js",
+      "sha256_lf": "13a8294b948eacd531dcb7a41ff299baf39273253f4fc791477d26de0797c034"
+    },
+    {
+      "path": ".github/workflows/paired-book2-notation-ci.yml",
+      "sha256_lf": "1379b7162f60c9e2891cc9d4e0e52fcc7c820d20ad6165d8fbcbf37d726aa7e0"
+    },
+    {
+      "path": ".gitattributes",
+      "sha256_lf": "384cdd33adf74085d056c269213d210d927704e0e0041f0a8f7485c5cb423f98"
+    },
+    {
+      "path": "build-scripts/books/book2-notation-checkout.test.js",
+      "sha256_lf": "8346e34552fe0829b85cb15786c52fc22d14101a80a117b85e30f62e194962c6"
+    },
+    {
+      "path": "build-scripts/books/test_book2_notation.py",
+      "sha256_lf": "882fbb3acd17657b98799ba53444d800871908b2c38e8a7280eb115742a13212"
+    },
+    {
+      "path": "build-scripts/books/book2-notation-revision.test.js",
+      "sha256_lf": "9d5cfaf21a2fc423b937c46034959b08bddd93f2102220d37974f24afdd63068"
+    },
+    {
+      "path": "build-scripts/books/book2-notation-revision-pin.json",
+      "sha256_lf": "deed44deb923cac3716be38ab6f2b5f1be096851176d2b7299101ec982ab9ba8"
+    },
+    {
+      "path": "build-scripts/books/book2-notation-lesson-head.txt",
+      "sha256_lf": "6207f3daf0568175ace5c90a2fabc89eb2d03017af9f330d1efd5fe0321b8c62"
+    },
+    {
+      "path": "build-scripts/ci/paired-paragraph-ci.test.js",
+      "sha256_lf": "3bb2bb7f4a88f27f332e8ac44ddacfc8445ecb0a0240824660fc9040b06d7584"
+    },
+    {
+      "path": "build-scripts/maintenance/check-classroom-edition.js",
+      "sha256_lf": "1f780b39a249e434add7b6cb5f263e6479adc1e9a53f4388c5b435e1d6ecd915"
+    }
+  ]
+}

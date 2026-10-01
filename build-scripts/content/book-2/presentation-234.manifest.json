@@ -3,22 +3,22 @@
   "title": "Gemengde opgaven",
   "type": "mixed exercises",
   "sourceEdition": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026",
-  "sourceCommit": "d53080f38ebbdbba319e6d9b89dcba86067a72be",
-  "platformBaseline": "d561b3e283dc05e377cebffd80d082f05518ad23",
+  "sourceCommit": "a8940a7a79e22857a3e306a91fe923c48c63e716",
+  "platformBaseline": "ac6f8e5320406aaf4906811b289ce98fcfa548c1",
   "sourceFiles": {
-    "bronnen/H3/manuscript/2.3.4 Gemengde opgaven – opgaven.md": "21eb878c0bdfef67199b193224b3665fdf9247b5fbb2d96d07f8d710ac8f180f",
-    "bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/2.3.4 Gemengde opgaven – antwoorden.md": "4bf1e5cd4018a98f0231524e07003cf45aac383197dd1b6d4842bc2615c29d72",
-    "bronnen/H3/2.3 Surplus en welvaart – antwoorden.md": "9f5ebbbf133c5d0d50a0d55251546e957207cc3867b1d843842b271780b9b116",
-    "bronnen/H3/2.3 Docenteninformatie.md": "95fef222ef377353c0f3986319707fe85838276e2dd59947aa764c6102437d93",
-    "bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md": "79abbe55782b3bd3a2ac38f14213654cef38a0111c93a27ab4d95d4394f2ad35",
-    "bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md": "77d485b2078bba0b3faffcb6d0e78d4ce8e55f4ab59de63d470c9214aff92745",
-    "bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md": "73f8bdb4f9ef2b7e7e997a7eef54657d9a2944bb8b65505fefbb5bf33e1bf69d",
+    "bronnen/H3/manuscript/2.3.4 Gemengde opgaven – opgaven.md": "2352f845659befe81d23f7bfb5e0563f0fd1ce2e86d73303a67e508568f25574",
+    "bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/2.3.4 Gemengde opgaven – antwoorden.md": "712f5d8974aa012a715b18c6d4cae8dd83374a3af5e8a001b7d1f72fc918475d",
+    "bronnen/H3/2.3 Surplus en welvaart – antwoorden.md": "aa2b16cf1a27f136755805b345b5ad48588baacd06fd219133d6013423e22a51",
+    "bronnen/H3/2.3 Docenteninformatie.md": "6cd82958d06e3da05ed7e96c1d2bdf6bf3ba54149f0eea9362e6c9277bbcff97",
+    "bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md": "68876c1c0ac12530eac0d73df936f6ef6e27a6b2367b3a69439accc09e0668fb",
+    "bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md": "2a022bf9e118efd9ff9bda06b8e7b047c997f827462cb941191f2a5ff87e9b36",
+    "bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md": "e1f261c060f2bfcf1af515fbf73c4d760863e1a1ba6e2d8becb1f4164ecb344b",
     "bronnen/H3/_assets/2.3.4_ex_2.svg": "fcf0b258b472dafe53b7d8c7d9e318456a8d92653261563c64dfaef8d928fc79",
     "bronnen/H3/_assets/2.3.4_ans_3.svg": "ad0179af400463384951d691f87c20bcfa350cb3ee42d40e557a4a8408c6ce1c",
-    "boek/Boek_2_Compleet.pdf": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493",
-    "bronnen/H1/manuscript/2.1.2 Opbrengsten, winst en break-even – paragraaf.md": "33c07c4327027feca0d09f82227ab30851b70519f42d5bc5f8fcdf0c0318be43",
-    "bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md": "c79150a148e39ad1609ad77712c0f26cc032a83a40106e4aa0096e8af1dbb07b",
-    "bronnen/H2/manuscript/2.2.2 Elasticiteit en omzet – paragraaf.md": "dd5aec29637a494da80ad7264f08c7d7ecc7081d9ca23f0e963385127f8166f3"
+    "boek/Boek_2_Compleet.pdf": "23d0532a7804fb743f053608a814959c6f09c9259c27762b1dff5952556908d5",
+    "bronnen/H1/manuscript/2.1.2 Opbrengsten, winst en break-even – paragraaf.md": "b73d597d0c26d9b6e769fa266b32368561bca976d90067503ccbf85d713bf44a",
+    "bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md": "135327f9170110864cd3b849821db55c0be2d4a5838fcb69f7e6fc2083d71369",
+    "bronnen/H2/manuscript/2.2.2 Elasticiteit en omzet – paragraaf.md": "74c0c4df6d184c834040bbe0e5ed7229026db2f4a8beaa611ff7d58168c4ab3d"
   },
   "goals": [
     "Evenwicht en surplussen berekenen uit bronnen",
@@ -27,19 +27,19 @@
     "Pareto-efficiëntie en eerlijkheid onderscheiden"
   ],
   "sourcePrintedPages": {
-    "start": 101,
+    "start": 102,
     "practice": [
-      102,
-      103
+      103,
+      104
     ],
     "target": [
-      104,
-      105
+      105,
+      106
     ],
-    "bonusAndReview": 106
+    "bonusAndReview": 107
   },
   "printedToPhysicalPdfOffset": 2,
-  "pageVerification": "Rendered complete student PDF physical 103, 106, 107, 108; printed footers 101, 104, 105, 106.",
+  "pageVerification": "Complete student PDF physical 104, 107, 108, 109; printed footers 102, 105, 106, 107. Printed body page + 2 gives the physical PDF page.",
   "assignment": {
     "start": [
       1
@@ -74,7 +74,7 @@
   "prerequisites": [
     {
       "operation": "Select functions, solve equilibrium, substitute and check units",
-      "earlierTeaching": "§2.3.2 p. 82 and worked notitieboeken example p. 83–84",
+      "earlierTeaching": "§2.3.2 p. 83 and worked notitieboeken example p. 84–85",
       "usedBy": "start 1a–b; practice 2a; target 3.1",
       "refreshSlides": [
         2,
@@ -83,7 +83,7 @@
     },
     {
       "operation": "CS and PS as areas; change from individual benefits to continuous areas",
-      "earlierTeaching": "§2.3.1 p. 72–74 individual/discrete/continuous CS; §2.3.2 p. 80–82 A = MK, PS and TS",
+      "earlierTeaching": "§2.3.1 p. 73–75 individual/discrete/continuous CS; §2.3.2 p. 81–83 A = MK, PS and TS",
       "usedBy": "start 1c; practice 2a,c; target 3.2–3",
       "refreshSlides": [
         2,
@@ -93,7 +93,7 @@
     },
     {
       "operation": "Compare willingness to pay and MK before/beyond equilibrium; total surplus versus equality",
-      "earlierTeaching": "§2.3.2 p. 82 marginal table and model scope, p. 84 worked example",
+      "earlierTeaching": "§2.3.2 p. 83 marginal table and model scope, p. 85 worked example",
       "usedBy": "start 1d–e",
       "refreshSlides": [
         2,
@@ -101,8 +101,8 @@
       ]
     },
     {
-      "operation": "Qd/Qs/actual transactions and highest-willingness/lowest-MK allocation",
-      "earlierTeaching": "§2.3.3 p. 90 calculation table and allocation, p. 94 worked example",
+      "operation": "Qv/Qa/actual transactions and highest-willingness/lowest-MK allocation",
+      "earlierTeaching": "§2.3.3 p. 91 calculation table and allocation, p. 95 worked example",
       "usedBy": "practice 2b–c; target 3.3; bonus 4",
       "refreshSlides": [
         2,
@@ -111,7 +111,7 @@
     },
     {
       "operation": "Read boundary heights and partition truncated surplus into rectangle plus triangle",
-      "earlierTeaching": "§2.3.3 p. 91 figure 2 and worked sums, p. 94 workshop",
+      "earlierTeaching": "§2.3.3 p. 92 figure 2 and worked sums, p. 95 workshop",
       "usedBy": "practice 2c; target 3.3",
       "refreshSlides": [
         4
@@ -119,7 +119,7 @@
     },
     {
       "operation": "Difference in TS and triangle with quantity/price-unit factors",
-      "earlierTeaching": "§2.3.3 p. 92 figure 3 and both methods; p. 95 example",
+      "earlierTeaching": "§2.3.3 p. 93 figure 3 and both methods; p. 96 example",
       "usedBy": "practice 2d; target 3.4; review 7a",
       "refreshSlides": [
         5
@@ -127,7 +127,7 @@
     },
     {
       "operation": "Concrete feasible Pareto improvement, unchanged existing trade, value judgement",
-      "earlierTeaching": "§2.3.3 p. 93 definitions and three-part proof, p. 95 worked example",
+      "earlierTeaching": "§2.3.3 p. 94 definitions and three-part proof, p. 96 worked example",
       "usedBy": "practice 2e–f; target 3.5–6; review 7b",
       "refreshSlides": [
         5
@@ -135,13 +135,13 @@
     },
     {
       "operation": "Old-base percentage changes, Ev and direct revenue comparison",
-      "earlierTeaching": "§2.2.1 p. 36–39 percentage route and calculation; §2.2.2 p. 45–46 direct revenue comparison",
+      "earlierTeaching": "§2.2.1 p. 37–40 percentage route and calculation; §2.2.2 p. 46–47 direct revenue comparison",
       "usedBy": "review 5",
       "support": "Previously taught route remains available on the cited book pages. No new elasticity instruction is claimed for this mixed surplus lesson."
     },
     {
       "operation": "PS versus profit; subtract variable and fixed costs",
-      "earlierTeaching": "§2.1.2 p. 13–14 TO, TK and winst; §2.3.2 p. 81 explicitly says constant costs not deducted from PS",
+      "earlierTeaching": "§2.1.2 p. 13–14 TO, TK and winst; §2.3.2 p. 82 explicitly says constant costs not deducted from PS",
       "usedBy": "review 6",
       "support": "PS discussion slide 17 notes distinguish fixed costs and profit."
     }
@@ -162,8 +162,8 @@
     "restriction": {
       "Q": 8,
       "P": 20,
-      "Qd": 11,
-      "Qs": 14,
+      "Qv": 11,
+      "Qa": 14,
       "boundaryWTP": 26,
       "boundaryMC": 14,
       "CS": 112,
@@ -190,5 +190,11 @@
   "reviewLimits": [
     "No measured classroom timing or demonstrated learner mastery",
     "Scoped Part B PowerPoint; does not establish complete companion product"
-  ]
+  ],
+  "paginationRevision": {
+    "revision": "book2-presentation-pagination-20261001",
+    "sourceCommit": "a8940a7a79e22857a3e306a91fe923c48c63e716",
+    "previousPlatformCommit": "ac6f8e5320406aaf4906811b289ce98fcfa548c1",
+    "scope": "Current printed page references and Qv/Qa notation; assignments, economic values, goals, teaching examples and timing preserved."
+  }
 }

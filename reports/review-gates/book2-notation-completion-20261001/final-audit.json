@@ -1,0 +1,169 @@
+{
+  "result": "PASS",
+  "manifest_sha256": "94320a3ee3cc6855dbdcbf417064b5206d7abf0c6c892bb94d1c14179e9e0b43",
+  "lesson_base": "9b8304d5031cafac936a56281e144573a25fbbc9",
+  "platform_base": "34464fb6091f721f7a87e8d1bb3165f758770799",
+  "prior_reviewed_lesson": "0cb8a20891b21fc2ed585f93a73d112993d7af99",
+  "inventory_files": 1551,
+  "changed_paths": 183,
+  "source_bindings": 24,
+  "implementation_inputs": [
+    {
+      "path": "build-scripts/books/book2-notation-contract.json",
+      "sha256_lf": "1c926141d4c704ef97c2e1f49557ee6c73643ce5d774c77a306f92d16a2e4c64"
+    },
+    {
+      "path": "build-scripts/books/book2-notation-revision.js",
+      "sha256_lf": "3bc06f090797bfabdc0c492923c06d6b49ffb6965d32e96d789e55eacc719051"
+    },
+    {
+      "path": "build-scripts/books/record_book2_notation_revision.js",
+      "sha256_lf": "df62f7ac2046d98cf108baa8fcba86d2e7e6325746163fc2b9887cc9c111f86f"
+    },
+    {
+      "path": "build-scripts/books/book2-notation-review.js",
+      "sha256_lf": "1fd3f83564bbaa52f34f8fcef27968d0ef93b14d64c53a75b024ec07310ed50b"
+    },
+    {
+      "path": "build-scripts/books/rebuild_book2_notation.py",
+      "sha256_lf": "bbb2865bb06836b2bce68082b5b6072424a1318054be90491424e098a1da5f59"
+    },
+    {
+      "path": "build-scripts/books/assemble_book2_notation.py",
+      "sha256_lf": "81892ce1e74ff9b76aad0bd9f2d475f123362c79dce12f17fd9195f316bd398d"
+    },
+    {
+      "path": "build-scripts/books/book2_notation_print.py",
+      "sha256_lf": "e500b166802d6817d5b84892c706f053bd6f5e719e05e43f8b6d62acd867f7ad"
+    },
+    {
+      "path": "build-scripts/books/book2_notation_exports.py",
+      "sha256_lf": "38193d98d806241989b94571d31e1b432d31cd3e639ec31b58dd066e2f76c3bf"
+    },
+    {
+      "path": "build-scripts/books/book2_notation_checks.py",
+      "sha256_lf": "624b080fab293e3fa9170ba65405339bcf4e7cd5ca85c8b074e2b5e8b87c935b"
+    },
+    {
+      "path": "build-scripts/books/book2_print_compatibility.py",
+      "sha256_lf": "78bdb7b4af76b05e8b27870de340b836b1540ef259fda432c8ab5b91bfc8c1da"
+    },
+    {
+      "path": "build-scripts/books/verify_book2_notation.py",
+      "sha256_lf": "18739c323a25d715c3a1934d25c5a766b88566412f59099d157e8211d1ce43fc"
+    },
+    {
+      "path": "build-scripts/books/requirements-exercise-routes.txt",
+      "sha256_lf": "e3be02c414ddf3088fc0521c3a62300ae52c55eddf6699036ce58313cb146500"
+    },
+    {
+      "path": "skills/econ-textbook-paragraph.md",
+      "sha256_lf": "c6340f93f811f3198fae9dd9d3c909e341f8b7e07b3fec80752c6dd70a58fb5e"
+    },
+    {
+      "path": "build-scripts/maintenance/check-books34-v3-import.js",
+      "sha256_lf": "e0384129374ba1dbe386792490b336ee5b2a6b45a9980be00b47eb673377e69b"
+    },
+    {
+      "path": "build-scripts/workflows/check-paragraph-lane-scope.js",
+      "sha256_lf": "13a8294b948eacd531dcb7a41ff299baf39273253f4fc791477d26de0797c034"
+    },
+    {
+      "path": ".github/workflows/paired-book2-notation-ci.yml",
+      "sha256_lf": "1379b7162f60c9e2891cc9d4e0e52fcc7c820d20ad6165d8fbcbf37d726aa7e0"
+    },
+    {
+      "path": ".gitattributes",
+      "sha256_lf": "384cdd33adf74085d056c269213d210d927704e0e0041f0a8f7485c5cb423f98"
+    },
+    {
+      "path": "build-scripts/books/book2-notation-checkout.test.js",
+      "sha256_lf": "8346e34552fe0829b85cb15786c52fc22d14101a80a117b85e30f62e194962c6"
+    }
+  ],
+  "changed_student_sources_since_review": [
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.4 Gemengde opgaven – opgaven.md"
+  ],
+  "pdfs": [
+    {
+      "kind": "student",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet.pdf",
+      "sha256": "23d0532a7804fb743f053608a814959c6f09c9259c27762b1dff5952556908d5",
+      "pages": 111,
+      "changed_physical_pages": [
+        69,
+        70
+      ],
+      "changed_printed_pages": [
+        67,
+        68
+      ],
+      "links_preserved": 101,
+      "rendered_changed_pages_and_neighbours": [
+        {
+          "physical_page": 68,
+          "path": "student-068.png",
+          "sha256": "47520653e9d13aca545d9d3042eb0cd0cf78a1dda8ad645509dd17477557941f"
+        },
+        {
+          "physical_page": 69,
+          "path": "student-069.png",
+          "sha256": "65859286c60cd817dd894c0ec96c51e773cefe3f05901b816ecfae1a8c0e1e6f"
+        },
+        {
+          "physical_page": 70,
+          "path": "student-070.png",
+          "sha256": "78872dc9e22fb2a7026c5f750f73e4e0038837c80d4f68f6b9d2ebbc9809bd5f"
+        },
+        {
+          "physical_page": 71,
+          "path": "student-071.png",
+          "sha256": "39d06b9b9da65a625e41803a8a904becc7388e7ada892121b363a580df773d2b"
+        }
+      ]
+    },
+    {
+      "kind": "answers",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet_Antwoorden.pdf",
+      "sha256": "c28c975799c8f68f78d2d20ea92512322a9ba305e1da1c124b4fbc739dd8f4e8",
+      "pages": 58,
+      "changed_physical_pages": [],
+      "changed_printed_pages": [],
+      "links_preserved": 47,
+      "rendered_changed_pages_and_neighbours": []
+    },
+    {
+      "kind": "teacher",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet_Docenteninformatie.pdf",
+      "sha256": "75a4756341b45e93f6387703363c583d6869240754357696c85bc1dd4436b7ff",
+      "pages": 19,
+      "changed_physical_pages": [
+        14
+      ],
+      "changed_printed_pages": [
+        12
+      ],
+      "links_preserved": 3,
+      "rendered_changed_pages_and_neighbours": [
+        {
+          "physical_page": 13,
+          "path": "teacher-013.png",
+          "sha256": "209a24a0064c7ebbbbec617614ac2e7366e9fec90056f7b35e1e469c6bfd7293"
+        },
+        {
+          "physical_page": 14,
+          "path": "teacher-014.png",
+          "sha256": "542017d59271edb9281613e665508c2c455f86d9cdf610737a758c1680af29f9"
+        },
+        {
+          "physical_page": 15,
+          "path": "teacher-015.png",
+          "sha256": "332e3c370dfcc8f155c8784297ddc85e0fe4b45ae275bb9549642bd2e9bf2946"
+        }
+      ]
+    }
+  ],
+  "preserved_initial_review_files": 18,
+  "root_entry_exception": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/README.md",
+  "protected_classroom_files": 36
+}

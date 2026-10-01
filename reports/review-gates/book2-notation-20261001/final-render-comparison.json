@@ -1,0 +1,578 @@
+{
+  "result": "PASS",
+  "old_pdf_bindings": {
+    "student": {
+      "sha256": "ee9e2e9e87e3def67368dee71a58ed18206bae2d56f98909cc5f8153b4b4bee0",
+      "pages": 111
+    },
+    "answers": {
+      "sha256": "c28c975799c8f68f78d2d20ea92512322a9ba305e1da1c124b4fbc739dd8f4e8",
+      "pages": 58
+    },
+    "teacher": {
+      "sha256": "c6c5dd60201035d6e085e12f24524be252c6afc458c22500b32ed69a9ea25994",
+      "pages": 19
+    }
+  },
+  "final_pdf_bindings": {
+    "student": {
+      "sha256": "3e1164e44de994b440cef0884c52894723b1967c48266006784501bcd2afadf1",
+      "pages": 111
+    },
+    "answers": {
+      "sha256": "58a78a4262903e96c883c48c253cfd4156b9be3eeb60e304bf4404ae07641fe8",
+      "pages": 58
+    },
+    "teacher": {
+      "sha256": "0f36bf59daec60b137a05ca76fcb67844d455ff395a6fa79b373db3c204ae5f7",
+      "pages": 19
+    }
+  },
+  "identical_reviewed_page_renders": [
+    {
+      "kind": "student",
+      "physical_page": 1,
+      "png_sha256": "75e27a80183ca8f0db1623039629e2b00616fdee3ef88e880d7a938a669b0208"
+    },
+    {
+      "kind": "student",
+      "physical_page": 2,
+      "png_sha256": "113e5adc9bf790664841ae5d30e6a9d5df3db14689c4208bcb9600c57244c4d5"
+    },
+    {
+      "kind": "student",
+      "physical_page": 3,
+      "png_sha256": "29dd3893b46169c281f031d6950fba91b98fbc0379e0f769542d7e69404109e6"
+    },
+    {
+      "kind": "student",
+      "physical_page": 6,
+      "png_sha256": "8690eddc472286e30ba83cd57648f16cc507d7fac67c60f4516187a91e637ac0"
+    },
+    {
+      "kind": "student",
+      "physical_page": 7,
+      "png_sha256": "c7d6efe9993d8b660b5c3308637cb164a40f0b299b2e26412fd4802cff15d75e"
+    },
+    {
+      "kind": "student",
+      "physical_page": 8,
+      "png_sha256": "288f58683383e9bf59910b8b9b1dd675ffe3068bf6c87036e2cd7616762d4a9f"
+    },
+    {
+      "kind": "student",
+      "physical_page": 14,
+      "png_sha256": "1ed4aad5fab22b296f1de70f413198e2bd4ec5d1a80d15fdd136605b9de2a175"
+    },
+    {
+      "kind": "student",
+      "physical_page": 15,
+      "png_sha256": "160956e469700049b1023127107c3f1ceebdde95f459b7dade983f72b65d9d38"
+    },
+    {
+      "kind": "student",
+      "physical_page": 16,
+      "png_sha256": "29dd2e085e58ff12526b3e7c4c026d882a374f6728b9e97cdef75b2649951e40"
+    },
+    {
+      "kind": "student",
+      "physical_page": 20,
+      "png_sha256": "f79adc9555615a3ed39931bc3212a778bce0c6a2f8ab8412a2ee0f38354bbe3d"
+    },
+    {
+      "kind": "student",
+      "physical_page": 21,
+      "png_sha256": "de5e3f79dc9c3b1eaf9f659f5a465187d3b20a5de5ab68ecb01989c08cd1e41c"
+    },
+    {
+      "kind": "student",
+      "physical_page": 22,
+      "png_sha256": "cc50c05b7f69f404eef4fd6d32697e26b4adaf34762add99d70ba0676a2fe388"
+    },
+    {
+      "kind": "student",
+      "physical_page": 23,
+      "png_sha256": "08c84dfbdfe4ca456638188c243eaa5a061ef33e619ac68f6424150e6ef0a160"
+    },
+    {
+      "kind": "student",
+      "physical_page": 24,
+      "png_sha256": "33724b76c5a2f3eae256a9e38e863ddb35d9fa478712dc8fb9dddfe5b8984977"
+    },
+    {
+      "kind": "student",
+      "physical_page": 25,
+      "png_sha256": "7e89f02be73a653f2dda5fc8fded56534525e2aba5e5ee1b98c4ae4bcc6cea0b"
+    },
+    {
+      "kind": "student",
+      "physical_page": 26,
+      "png_sha256": "0f67af05dfe7c31aaa0762628aed159a582312cf7dfdbf76e051b06c676deac4"
+    },
+    {
+      "kind": "student",
+      "physical_page": 27,
+      "png_sha256": "f7ce74611bec604e7d7b9a472e0b9f9bc0e6cbdf41824407d87c0e1ce1bfb78a"
+    },
+    {
+      "kind": "student",
+      "physical_page": 28,
+      "png_sha256": "e6886e6db3d1e54206765cdb0922753ab8a79cb00b0d4faabad162370c56ee79"
+    },
+    {
+      "kind": "student",
+      "physical_page": 30,
+      "png_sha256": "5cec6c5c09c64e82db56dbb93428339595f0a99d5a8a68a56989ca10efa076f2"
+    },
+    {
+      "kind": "student",
+      "physical_page": 31,
+      "png_sha256": "a8590e6d6be54337cc4c671372d3c8237380e19689da3d736605d81f7e885961"
+    },
+    {
+      "kind": "student",
+      "physical_page": 32,
+      "png_sha256": "8c478e071b32a564aac0add166efb356abf1a9174233e308b2c669b53607b7ad"
+    },
+    {
+      "kind": "student",
+      "physical_page": 36,
+      "png_sha256": "e875f1688ef27b895faab9c6fb10ee48fe1effa181486096d5b41eb835b5b98d"
+    },
+    {
+      "kind": "student",
+      "physical_page": 37,
+      "png_sha256": "b84d21e90447f761356a582313bdee09e4c92732526bc75f0a78ad62a2b32bab"
+    },
+    {
+      "kind": "student",
+      "physical_page": 38,
+      "png_sha256": "8cd1c888bfbc3357354f00387037e80fb8914c0526bccd6b2a50c6ab76155ca6"
+    },
+    {
+      "kind": "student",
+      "physical_page": 39,
+      "png_sha256": "71111ef13da9b328b7b8665cca7a160656d5d32cea03e4040d4b2032a39f9c2a"
+    },
+    {
+      "kind": "student",
+      "physical_page": 72,
+      "png_sha256": "07d7d9720594fc1885d2345f28eb3f934e3ab565063b89c5fffbdc17aba036d7"
+    },
+    {
+      "kind": "student",
+      "physical_page": 73,
+      "png_sha256": "a52e32ee13c73ed77a9e24a0d2947224668bd0fd3ec534ea901e739ca805331d"
+    },
+    {
+      "kind": "student",
+      "physical_page": 74,
+      "png_sha256": "1a6613367cabc9cde6b6d7372aa104067a98b9073bb896cf4cdee228d987af4c"
+    },
+    {
+      "kind": "student",
+      "physical_page": 75,
+      "png_sha256": "282c54f2ca94405912b72c234de7cb195e098c7c3b64f2d4a9135a61daec7d38"
+    },
+    {
+      "kind": "student",
+      "physical_page": 86,
+      "png_sha256": "2b3a3ece8b6936ba5d0c516fa0899bc98515bcba44ed0a8e58e2ca099b720b64"
+    },
+    {
+      "kind": "student",
+      "physical_page": 87,
+      "png_sha256": "6ca4888a9f16e95de4ef69cfc8b87e1dbe67f1c5d979f69cbc16397d2443ece9"
+    },
+    {
+      "kind": "student",
+      "physical_page": 88,
+      "png_sha256": "d31f22710e8b1d959ba787e700f80541501dc2d924304822c62f810be0c67330"
+    },
+    {
+      "kind": "student",
+      "physical_page": 89,
+      "png_sha256": "416a7ca65c5668da66fcfc244d908f87f3362025900d0971f26537ed342a5775"
+    },
+    {
+      "kind": "student",
+      "physical_page": 90,
+      "png_sha256": "6d3cb1bc1df01e505ab3eae64405a35e4967b45a07a6822455d72b798734f20a"
+    },
+    {
+      "kind": "student",
+      "physical_page": 91,
+      "png_sha256": "834cb6011eb57ae6ea53d4eba5c9986d42dd9f0a80d765483e926943fe4ff126"
+    },
+    {
+      "kind": "student",
+      "physical_page": 92,
+      "png_sha256": "a9ffa0824a80443270c767b70aa3955290c8f36bd8b61477306769e4774f04dc"
+    },
+    {
+      "kind": "student",
+      "physical_page": 93,
+      "png_sha256": "3df5b50610904b6f714c9722984f270f74309438223714dcdfda9cd46ca7dd01"
+    },
+    {
+      "kind": "student",
+      "physical_page": 94,
+      "png_sha256": "4c86ef89d98b936ae0a52333d2610acfc84b3ea847aef28c32d0909a481126ca"
+    },
+    {
+      "kind": "student",
+      "physical_page": 95,
+      "png_sha256": "5c9f529f35f6b2b781606ba7f5ea1baaad3e4d1f408a4b07d377b156ef6069b5"
+    },
+    {
+      "kind": "student",
+      "physical_page": 96,
+      "png_sha256": "6de04fb6088f45fd02d01a68dda94f97209d6448d45b6130d0a841c684c40bd9"
+    },
+    {
+      "kind": "student",
+      "physical_page": 97,
+      "png_sha256": "95ca4ad78c1a63c245966d19381b4797275b4c18702523b73621008a295ce69b"
+    },
+    {
+      "kind": "student",
+      "physical_page": 98,
+      "png_sha256": "34eacea9eee1198e9424420a9e631d7ab9173f92baa1ee38068a3229b48b1e7e"
+    },
+    {
+      "kind": "student",
+      "physical_page": 99,
+      "png_sha256": "5d6d1111f8ca9dad5a6c75ee10bebfef36162e4ac225d4d52e441ac28a8ad253"
+    },
+    {
+      "kind": "student",
+      "physical_page": 100,
+      "png_sha256": "237c48aaabd49070b78dd654e582d2277b7afb9e8ebb5af81da59121db3471cb"
+    },
+    {
+      "kind": "student",
+      "physical_page": 101,
+      "png_sha256": "21777ce90fabeb2b5407af397344445c6b2c3ed430c0331e367203f91cd4016d"
+    },
+    {
+      "kind": "student",
+      "physical_page": 102,
+      "png_sha256": "96e6e74177bce617944dca4a625ca0d03beffc8ddcbb165dedb83ea5e8c99021"
+    },
+    {
+      "kind": "student",
+      "physical_page": 103,
+      "png_sha256": "f0d31a4362b61d61c0962a48b89cc9607d246dbbdf9720bfda11e032aed6be50"
+    },
+    {
+      "kind": "student",
+      "physical_page": 104,
+      "png_sha256": "9d1a4a0bc13ca8f67c4af1383d6a332150e00ceb26acad86832773153c728191"
+    },
+    {
+      "kind": "student",
+      "physical_page": 105,
+      "png_sha256": "dde831f87515d8f4fec697a523f6f8a68a60c322285d5899f6894723add5237c"
+    },
+    {
+      "kind": "student",
+      "physical_page": 106,
+      "png_sha256": "73c8de953571f2a18b50894f1519d622aae489911562a587205001060b1117e3"
+    },
+    {
+      "kind": "student",
+      "physical_page": 107,
+      "png_sha256": "51935090ee3c990891a362fb7ef5cdaa86fea5e9e90608e265e2bec0cfe93064"
+    },
+    {
+      "kind": "student",
+      "physical_page": 108,
+      "png_sha256": "67667a776e8d2fc1241c1b8645a04c286e486cf318591fcc30e10c892ac26b80"
+    },
+    {
+      "kind": "student",
+      "physical_page": 109,
+      "png_sha256": "ea197654d328b4a27b36bbdd04efe2f184ba2d413d3e9660ecc81f49b3041922"
+    },
+    {
+      "kind": "student",
+      "physical_page": 110,
+      "png_sha256": "95196f3ead73b7d0ddc1d946c8256a5ffbb90b0fb7b428b8c6af7ace30869fdf"
+    },
+    {
+      "kind": "student",
+      "physical_page": 111,
+      "png_sha256": "f27cf9c1d2f854cf0bf44c801e54b46f81b2364c9f0dbd3ec5595edb4d550d47"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 1,
+      "png_sha256": "75e27a80183ca8f0db1623039629e2b00616fdee3ef88e880d7a938a669b0208"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 2,
+      "png_sha256": "7787e081c172635539e84ad2e36a4ad867e3cf0524b95831b4fe7409d5b145b9"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 12,
+      "png_sha256": "55860f2a8b3bed5728f2143f01cbe1118bcb7894cb1b486b245067d97b86f3d5"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 13,
+      "png_sha256": "1d5e5d3cfce28ff33034023a7e7b93e0a0f9e4bb2aa7958c8ffa1b4fe5d4af21"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 14,
+      "png_sha256": "64e4bbd18bdb2422fb83d5f7e504383a39eb27782a894894faa05a8a0cce4ac8"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 15,
+      "png_sha256": "a7940bc3db7fe09f954b27f2092e22d986c8c07a0fbf862c256fe9f0084a77c9"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 16,
+      "png_sha256": "03d4ca7624c6f7aae167298301528adb6bd06e51c87e4a225f927dfad1689720"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 17,
+      "png_sha256": "7d98ce18757280033fc79923e0fe47dff5133d47a90147c69827ef3119c09dd9"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 18,
+      "png_sha256": "1ef2fe80514e79413cbf6d7f1779b75b48405ede46ec86bed1d9accdde99f552"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 19,
+      "png_sha256": "cd538905f04e70436b507e1ece132a41ce6e6e6ac86b70eda29350986e8c5e92"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 20,
+      "png_sha256": "18f2d688defadae079184e6659c0d8b1b482cdfaf3bb9fa5d90518b5958dff10"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 21,
+      "png_sha256": "22185e9e70ecbe9f980811ff77e6eac6e153fddec3909116f50100fe772e8408"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 22,
+      "png_sha256": "9971c76af20fa7d1f9deb0610eb2a5ab0bc8cc1ceef7c12ce405d1d8a81f537c"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 23,
+      "png_sha256": "85ee367037d1ac749bff03d8b93d19594bde23fcf3e4074210130adcf1c28118"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 24,
+      "png_sha256": "5595e3de70332b5c6a99ac82421337e745c570c2e22d415bbd5c5b88f566f86c"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 39,
+      "png_sha256": "6649a36405b2a92f746317e6a2ee148dfe362b97a30e8bb1835a5c3a7c9b4d3e"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 40,
+      "png_sha256": "732a0cbfeef8337f464f2d92d9beb611d9810dc57ae2b3d75058a113b70c1300"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 41,
+      "png_sha256": "11e99b58e822e2e43e60a1822802fd3b750727b8a3eb80df32b2e05c0843992d"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 42,
+      "png_sha256": "5a7949fff07e35733e15e9ae59e85b0cc086a6cc511c95c4f19ffc18ef44ca77"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 43,
+      "png_sha256": "b93b59376f5c1a0645b3f5b8bc7b497d63821beeaa1b7363cab2fbc9a0af8d33"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 44,
+      "png_sha256": "f689af52e300ea9794b10e98b0b3ecf9626583768865465573dbfb8dc29baee5"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 45,
+      "png_sha256": "fbb12217b3831b63cf89f780b606646c62077dbf843fe5e45fc2c90b50783e39"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 46,
+      "png_sha256": "82a018d55ae8c23d14cbafacf39392dd786d7e9416df14466c698de6e8caef7f"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 47,
+      "png_sha256": "76a92a5359dde1e76e70232c51d225019779b8a2f708397d0f911bbb89c671c8"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 48,
+      "png_sha256": "1809856ec71c91448c06e6cba7474b1df1d488cb58fd651f513291fb23849d5a"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 49,
+      "png_sha256": "d72098ee8b5a0d855e87badd9f7ea5e792b398eaafeee3eefe0072a249e1894a"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 50,
+      "png_sha256": "74895b4e4f76241d76868b974d06e7052d3edecb888245438f8764a5366052a9"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 51,
+      "png_sha256": "9037dd6b7c1dfd09faec094f90531d841b9163c48ea56c5cd1325bf963ca12b5"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 52,
+      "png_sha256": "ea9a5252bdfe5f74d6a8586ee00650beaefcbd0c95995bc360953b37e94af397"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 53,
+      "png_sha256": "15ead0d25443eec67f738a4941a2707cc7519ab899b876dda52f1d020d8385ca"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 54,
+      "png_sha256": "dd9614f35246dcaaa2c12fbc4b4697a35b446fb61a15fa949a4c71e407024905"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 55,
+      "png_sha256": "fa7862dc2f78305715814cdedd87dcc717db9b80efa26877bd575d5a61868c06"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 56,
+      "png_sha256": "be1041d82e53348bea60ff5ae26e49d339322e8abbb3821fcc7e56cfa70b2e02"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 57,
+      "png_sha256": "9e96f6e7081f0d2b3e2de217fc3e30a456d5c8d8d655e64d38101e8c5a8c0c04"
+    },
+    {
+      "kind": "answers",
+      "physical_page": 58,
+      "png_sha256": "f863ee29b9555ee8cde28287b707e70f4eb39520e56043df1015d83f4fad6f54"
+    },
+    {
+      "kind": "teacher",
+      "physical_page": 1,
+      "png_sha256": "75e27a80183ca8f0db1623039629e2b00616fdee3ef88e880d7a938a669b0208"
+    },
+    {
+      "kind": "teacher",
+      "physical_page": 2,
+      "png_sha256": "195cdf425bb99ca88767f4dc485b6b869485f49f4c1ed35b5805d5173ccedba6"
+    },
+    {
+      "kind": "teacher",
+      "physical_page": 3,
+      "png_sha256": "8b713b9ba7175d817d920c39160d78ade7c400b176d81ca5ae56908fb4167996"
+    },
+    {
+      "kind": "teacher",
+      "physical_page": 4,
+      "png_sha256": "5ed182f13891c2447159ec14be506b473706ca02f35ee21b5337d570aea47954"
+    },
+    {
+      "kind": "teacher",
+      "physical_page": 5,
+      "png_sha256": "edd30e106162f3e4747e4545ddf7d42cfea33802d7c3c2af9957ba167c3ea9bb"
+    },
+    {
+      "kind": "teacher",
+      "physical_page": 6,
+      "png_sha256": "b79cfddf89f4ecd8a3f53d8e3a01ee3a061b4a3eb04922c2786e37890ba4f8fc"
+    },
+    {
+      "kind": "teacher",
+      "physical_page": 7,
+      "png_sha256": "9c0ba460b0e0fa222ae4e5295b99bc0e3e358acd4e48269fae61bde310b257d4"
+    },
+    {
+      "kind": "teacher",
+      "physical_page": 8,
+      "png_sha256": "4cd9702036f6b88f2b4a71d97c8a5419311314ae6e0b86bd52301e61c294326b"
+    },
+    {
+      "kind": "teacher",
+      "physical_page": 9,
+      "png_sha256": "7d583b3fb8052ebb4a03505fee359964af61ec2e6c7ecad2d38fc3009157e2d3"
+    },
+    {
+      "kind": "teacher",
+      "physical_page": 10,
+      "png_sha256": "bd063505639ce46e82e41580e5f67e57346aba4232ebe928e8e176592ae753e7"
+    },
+    {
+      "kind": "teacher",
+      "physical_page": 11,
+      "png_sha256": "02d7d15cd5c46a3ad204c8055fe037a1b901cf6f215cb772c116cc13ef4c1966"
+    },
+    {
+      "kind": "teacher",
+      "physical_page": 12,
+      "png_sha256": "04de3637e33f457e134540e4026c2d2f086e4d629e57781705cf88bada615504"
+    },
+    {
+      "kind": "teacher",
+      "physical_page": 13,
+      "png_sha256": "209a24a0064c7ebbbbec617614ac2e7366e9fec90056f7b35e1e469c6bfd7293"
+    },
+    {
+      "kind": "teacher",
+      "physical_page": 14,
+      "png_sha256": "9b96a9f3a406b8e738d12c6a628cc09fb6b557c0e0f785e012a08be023e7f7a7"
+    },
+    {
+      "kind": "teacher",
+      "physical_page": 15,
+      "png_sha256": "332e3c370dfcc8f155c8784297ddc85e0fe4b45ae275bb9549642bd2e9bf2946"
+    },
+    {
+      "kind": "teacher",
+      "physical_page": 16,
+      "png_sha256": "16bb711aaa3ccda6ab5df77d7e4edcb985526cf65d521c5c2b347d9381bd892a"
+    },
+    {
+      "kind": "teacher",
+      "physical_page": 17,
+      "png_sha256": "c18c3d450d3270d328dd1f3a2aab002b51b0d308a1930b78718ee5da173ca7df"
+    },
+    {
+      "kind": "teacher",
+      "physical_page": 18,
+      "png_sha256": "ee9c0fb79a9cafd6aace7802dcc4775395b0586935d0f5c39e1258f5352ecdae"
+    },
+    {
+      "kind": "teacher",
+      "physical_page": 19,
+      "png_sha256": "d1cb6d527718ff7f6bcaea824f18efee3d96c3e450c40dc76e65791be6110847"
+    }
+  ]
+}
