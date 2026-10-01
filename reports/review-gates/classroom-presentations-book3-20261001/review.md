@@ -169,6 +169,13 @@ in the consolidated PRs after this evidence commit, not inferred from author CI.
 
 ## Evidence
 
+After this delivery review, both mains advanced with the accepted Book 2 notation
+revision. The [integration repair and teacher page mapping](integration-repair.md)
+and [independent base-drift review](integration-base-drift-review.md) describe
+the resulting compatibility repair. Earlier source bindings and preservation
+counts below remain evidence for their recorded pair, not assertions that the
+new Book 2 files equal the old source snapshot. All Book 3 artifacts are unchanged.
+
 The first required CI run exposed a Python interpreter mismatch in the new
 graph-repair test. The [runtime repair and negative control](ci-runtime-repair.md)
 record the narrow fix; presentation bytes are unchanged. Final CI and independent
