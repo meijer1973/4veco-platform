@@ -11,6 +11,10 @@ const textbook = folder + title + ' – paragraaf.pdf';
 const slides = folder + title + ' – presentatie.pptx';
 const pdf = folder + title + ' – presentatie.pdf';
 const evidence = folder + 'evidence/2.1.2-presentation.md';
+const v3chapter = 'edities/books34-v3/books/book-3/chapters/3.2/';
+const v3pdf = v3chapter + 'paragraph-pdfs/3.2.4-leerling-v3.pdf';
+const v3source = v3chapter + '3.2.4 manuscript.md';
+const v3slides = v3chapter + 'paragraph-pdfs/3.2.4 Gemengde opgaven – presentatie.pptx';
 let temp, files, baseline;
 beforeEach(() => {
   temp = fs.mkdtempSync(path.join(os.tmpdir(), 'classroom-edition-'));
@@ -53,6 +57,28 @@ test.each([
 });
 test('an already sealed presentation never becomes an exempt addition', () => {
   expect(current.isClassroomAddition(slides, new Set([textbook, slides]))).toBe(false);
+});
+
+test('v3 additions require a matching received manuscript and paragraph PDF', () => {
+  const sealed = new Set([v3source, v3pdf]);
+  for (const file of [v3slides, v3slides.replace('.pptx', '.pdf'),
+    v3chapter + 'paragraph-pdfs/evidence/3.2.4-presentation.md']) {
+    expect(current.isClassroomAddition(file, sealed)).toBe(true);
+    expect(current.isClassroomAddition(file, new Set([v3source]))).toBe(false);
+    expect(current.isClassroomAddition(file, new Set([v3pdf]))).toBe(false);
+  }
+  expect(current.isClassroomAddition(v3slides, new Set([...sealed, v3slides]))).toBe(false);
+});
+
+test.each([
+  v3slides.replace('/3.2/', '/3.1/'), v3slides.replace('/book-3/', '/book-4/'),
+  v3slides.replace('3.2.4 Gemengde', '3.2.5 Gemengde'),
+  v3slides.replace('presentatie.pptx', 'opgaven.pdf'),
+  v3slides.replace('paragraph-pdfs/', ''),
+  v3chapter + 'paragraph-pdfs/evidence/3.2.5-presentation.md',
+  v3chapter + 'paragraph-pdfs/evidence/approval.json',
+])('v3 additions cannot create paragraphs or admit other files: %s', file => {
+  expect(current.isClassroomAddition(file, new Set([v3source, v3pdf]))).toBe(false);
 });
 test('presentation additions must be staged with their exact saved bytes', () => {
   const git = (...args) => execFileSync('git', args, {cwd: temp, stdio: 'pipe'});

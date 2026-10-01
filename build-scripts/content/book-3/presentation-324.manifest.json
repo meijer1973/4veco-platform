@@ -1,0 +1,231 @@
+{
+  "paragraph": "3.2.4",
+  "title": "Gemengde opgaven: de prijsnemende onderneming",
+  "type": "gemengde_opgaven",
+  "structureRevision": "book34-lesson-balance-v3-20260915",
+  "sourceEdition": "edities/books34-v3/books/book-3",
+  "sourceCommit": "9b8304d5031cafac936a56281e144573a25fbbc9",
+  "platformBaseline": "34464fb6091f721f7a87e8d1bb3165f758770799",
+  "sourceFiles": {
+    "chapters/3.2/3.2.1 manuscript.md": "c13b390b105beaf18a7d3e83cb52fb04792f3927d207efe5616b01a3ce8fc366",
+    "chapters/3.2/3.2.2 manuscript.md": "992f1f64ee131c8c7a6c85dd517fc87724be5f825a1f9e497cd01f699645fdce",
+    "chapters/3.2/3.2.3 manuscript.md": "d46652e4ed48a368246ed70a0f1df0206752d95775e52c6de25df0088167fbd2",
+    "chapters/3.2/3.2.4 manuscript.md": "08387dcdc8857346ddc877b1ef537a02cee235ec85f2766afc74bf30e04d8112",
+    "chapters/3.2/Antwoorden.md": "5be2192b7c07dd09153130ff8e691cc161e0c6d0413ea740a696fbe5189b4115",
+    "chapters/3.2/Docenteninformatie.md": "2e4043cfb28ce503cf37477914a53c3966682fe4604bfd4b91aaed96fe506e04",
+    "chapters/3.2/_assets/3.2.4_target.svg": "7dc71d0349969a107f8dbb9d9bcb9dc1ae223e0ea3b57da150c32474fab286a8",
+    "chapters/3.2/_assets/3.2.4_ans_1.svg": "0f2eb836a4b399f8be325cdef1064a4199f27608168c1f3b81167a40f10ca6d4",
+    "output/Boek_3_Compleet_v3.pdf": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+  },
+  "goals": [
+    "Van marktverandering naar marktprijs en productie van een prijsnemer",
+    "Marginale keuze, capaciteit en winst onderbouwen",
+    "Q en q, bedragen per kg en totaalbedragen onderscheiden"
+  ],
+  "assignment": {
+    "start": [
+      31
+    ],
+    "basis": null,
+    "independent": null,
+    "practice": [
+      31,
+      32,
+      33,
+      34
+    ],
+    "target": 35,
+    "targetName": "Kweekkorrels op twee momenten",
+    "targetParts": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e"
+    ],
+    "bonus": [
+      36
+    ],
+    "review": [
+      37
+    ],
+    "homework": [
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37
+    ],
+    "homeworkInstruction": "Maken en nakijken",
+    "routeNote": "Mixed paragraph: first actual exercise 31 as start. No invented basis/independent sections. Classroom recipe assigns all mixed exercises, preserving bonus/review labels; textbook treats 36/37 as additional."
+  },
+  "sourcePrintedPages": {
+    "start": 79,
+    "practice": [
+      79,
+      80,
+      81
+    ],
+    "target": [
+      82,
+      83
+    ],
+    "bonusAndReview": 84
+  },
+  "pageVerification": "Complete current Book 3 PDF inspected at physical pages 79, 82 and 83; printed footers equal these numbers. Chapter-local 27/30/31 are not used as book page references.",
+  "prerequisites": [
+    {
+      "operation": "Equate market demand and supply; substitute and check equilibrium",
+      "earlierTeaching": "Book 3 §3.2.1 pp. 54–56: equality, Q/q and worked market-to-firm example; algebra is Book 1 retrieval",
+      "usedBy": "31a,35a–b",
+      "refreshSlides": [
+        2,
+        11,
+        13
+      ]
+    },
+    {
+      "operation": "Take only P to one firm; TO=Pq, P=GO=MO, price-taking assumptions",
+      "earlierTeaching": "§3.2.1 pp. 54–56 definition, dual graphs and Noor worked example",
+      "usedBy": "31b–c,34,35a/c/d",
+      "refreshSlides": [
+        2
+      ]
+    },
+    {
+      "operation": "Differentiate aq²+bq+c, preserve fixed costs in TK",
+      "earlierTeaching": "§3.2.2 pp. 62–64, term-by-term rule and Linde worked example",
+      "usedBy": "32,34,35c",
+      "refreshSlides": [
+        3,
+        14
+      ]
+    },
+    {
+      "operation": "MO/MK sign on either side; capacity and zero-output boundary",
+      "earlierTeaching": "§3.2.3 pp. 69–70,72: table, sign comparison, cap50 example and full worked Linde model",
+      "usedBy": "32a/d,33,34,35c,36",
+      "refreshSlides": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "operation": "Profit and GTK at chosen q; native graph rectangle versus total-curve distance",
+      "earlierTeaching": "§3.2.3 pp. 71–72 explanation and worked example",
+      "usedBy": "32b/c,34b,35a/d,37a",
+      "refreshSlides": [
+        4
+      ]
+    },
+    {
+      "operation": "Market price increase raises firm MO with unchanged cost function",
+      "earlierTeaching": "§3.2.1 p.55 price-transfer explanation and §3.2.3 pp.70–72 marginal choice; §3.2.4 introduction p.79 explicitly asks to combine these previously taught operations",
+      "usedBy": "34c,35b–d",
+      "support": "Source A explicitly supplies new demand and fixed number of firms. This is transfer practice, no long-run mechanism is assumed."
+    },
+    {
+      "operation": "Percentage change with own old base",
+      "earlierTeaching": "Book 2 §2.2.1 pp.36–39 percentage method; used as retrieval in this chapter",
+      "usedBy": "35e",
+      "refreshSlides": [
+        18
+      ]
+    },
+    {
+      "operation": "Finite marginal step ΔTO/Δq and ΔTK/Δq versus derivative at a point",
+      "earlierTeaching": "§3.2.1 p.56 MO worked step; §3.2.2 pp.62–64 distinction and worked finite-cost step",
+      "usedBy": "37b/c",
+      "support": "Notes refer to prior pages; no new derivative rule is introduced."
+    }
+  ],
+  "teachingExample": {
+    "authored": true,
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "context": "Gestandaardiseerde klei",
+    "market": {
+      "demand": "Qv = 18.000 − 1.000P",
+      "supply": "Qa = 1.000P − 2.000",
+      "P": 10,
+      "Q": 8000
+    },
+    "firm": {
+      "TK": "0,05q² + 2q + 120",
+      "MK": "0,10q + 2",
+      "capacity": 100,
+      "q": 80,
+      "TO": 800,
+      "TKatQ": 600,
+      "profit": 200,
+      "GTK": 7.5,
+      "zeroOutputProfit": -120
+    },
+    "capacityVariant": {
+      "capacity": 70,
+      "MKatCapacity": 9,
+      "q": 70
+    },
+    "assumptions": [
+      "Many small price-taking firms, same quality, known prices",
+      "All output sold at market price",
+      "Divisible kg in a continuous model",
+      "Fixed costs unavoidable this week"
+    ],
+    "separation": "Own context and data, no worked assigned exercise before independent practice."
+  },
+  "targetAnswers": {
+    "a": {
+      "P0": 8,
+      "Q0": 10000,
+      "q0": 100,
+      "TO": 800,
+      "TK": 800,
+      "profit": 0
+    },
+    "b": {
+      "P1": 12,
+      "Q1": 20000,
+      "graphPoint": [
+        20,
+        12
+      ],
+      "quantityAxisFactor": 1000
+    },
+    "c": {
+      "MK": "0,04q + 4",
+      "q1": 200,
+      "capacity": 250,
+      "MK150": 10,
+      "MK250": 14
+    },
+    "d": {
+      "TO": 2400,
+      "TK": 1800,
+      "profit": 600,
+      "GTK": 9,
+      "rectangle": [
+        0,
+        200,
+        9,
+        12
+      ]
+    },
+    "e": {
+      "percentChangeQ": 100,
+      "percentChangeq": 100
+    }
+  },
+  "reviewLimits": [
+    "Scoped classroom Part B output, not complete companion product",
+    "Existing edition target candidate status remains unchanged",
+    "No measured classroom timing or demonstrated learner mastery",
+    "Installed load_workspace_dependencies tool absent; used metadata and dependencies from the installed bundled runtime, no substitute installation"
+  ],
+  "destination": "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/",
+  "additionalSourceFiles": {
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md": "c79150a148e39ad1609ad77712c0f26cc032a83a40106e4aa0096e8af1dbb07b"
+  }
+}
