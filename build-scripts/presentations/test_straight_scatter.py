@@ -48,6 +48,41 @@ class StraightScatterTests(unittest.TestCase):
                 source = fixture(style)
                 self.assertEqual(source, repair.normalize(source))
 
+    def test_partial_label_options_keep_schema_order_and_existing_content(self):
+        source = fixture().replace(
+            b'<c:showVal val="1"/></c:dLbls>',
+            b'<c:numFmt formatCode="0.00" sourceLinked="0"/>'
+            b'<c:dLblPos val="r"/><c:showVal val="1"/>'
+            b'<c:separator> / </c:separator><c:showLeaderLines val="1"/>'
+            b'<c:leaderLines/><c:extLst/></c:dLbls>')
+        labels = ET.fromstring(repair.normalize(source)).find('.//c:dLbls', NS)
+        self.assertEqual([ET.QName(child).localname for child in labels], [
+            'dLbl', 'numFmt', 'dLblPos', 'showLegendKey', 'showVal',
+            'showCatName', 'showSerName', 'showPercent', 'showBubbleSize',
+            'separator', 'showLeaderLines', 'leaderLines', 'extLst'])
+        self.assertEqual(labels.find('c:separator', NS).text, ' / ')
+        self.assertEqual(labels.find('c:numFmt', NS).get('formatCode'), '0.00')
+        self.assertEqual(labels.find('c:showLeaderLines', NS).get('val'), '1')
+
+    def test_absent_smooth_precedes_existing_extension_list(self):
+        source = fixture('lineMarker').replace(b'<c:smooth val="1"/>', b'<c:extLst/>')
+        result = ET.fromstring(repair.normalize(source))
+        series = result.find('.//c:ser', NS)
+        self.assertEqual([ET.QName(child).localname for child in series][-2:],
+                         ['smooth', 'extLst'])
+        self.assertEqual(series.find('c:smooth', NS).get('val'), '0')
+
+    def test_delete_label_branch_is_preserved_without_formatting_branch(self):
+        for value in ['0', '1']:
+            source = ET.fromstring(fixture())
+            labels = source.find('.//c:dLbls', NS)
+            labels.clear()
+            ET.SubElement(labels, f'{{{C}}}delete', val=value)
+            ET.SubElement(labels, f'{{{C}}}extLst')
+            before = ET.tostring(labels)
+            result = ET.fromstring(repair.normalize(ET.tostring(source)))
+            self.assertEqual(ET.tostring(result.find('.//c:dLbls', NS)), before)
+
     def test_command_changes_only_eligible_chart_parts(self):
         with TemporaryDirectory() as tmp:
             file = Path(tmp)/'candidate.pptx'

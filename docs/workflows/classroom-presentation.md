@@ -146,7 +146,10 @@ new paragraph. Do not copy old numbers or content by search-and-replace.
   endpoints alone do not prove that the rendered boundary is straight. For
   straight XY series, preserve explicit per-series `c:smooth val="0"` in the
   saved package when the exporter otherwise introduces smoothing. Check direct
-  curve/area labels too; remove unintended automatic value labels.
+  curve/area labels too; remove unintended automatic value labels. Offset point
+  labels such as E into clear whitespace: a correct coordinate does not make a
+  label readable when adjacent curves cross its letters. Recheck every repeated
+  graph after changing shared label placement.
   On a tax/subsidy curve-shift introduction, include the horizontal shift arrow
   required by `skills/economic-graph.md`, at a common price in an uncluttered
   region. Explain that comparison separately from the vertical price wedge at
