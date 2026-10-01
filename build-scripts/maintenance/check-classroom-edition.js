@@ -18,6 +18,20 @@ const git = (repo, args) => execFileSync('git', args, {cwd: repo, maxBuffer: 256
 
 function isClassroomAddition(file, sealedPaths) {
   if (sealedPaths.has(file)) return false;
+  // The current Books 3/4 edition groups its existing paragraph exports in
+  // paragraph-pdfs. Admit only slides and their review beside a sealed PDF
+  // and manuscript; never exempt textbook bytes or create a new paragraph.
+  const v3 = file.match(/^edities\/books34-v3\/books\/book-([34])\/chapters\/(\1\.[1-9]\d*)\/paragraph-pdfs\/(.+)$/);
+  if (v3) {
+    const [, book, chapter, leaf] = v3;
+    const id = leaf.match(/^(?:evidence\/)?([34]\.[1-9]\d*\.[1-9]\d*)(?: |\-presentation\.md$)/)?.[1];
+    if (!id || !id.startsWith(chapter + '.')) return false;
+    const chapterRoot = `edities/books34-v3/books/book-${book}/chapters/${chapter}/`;
+    if (!sealedPaths.has(chapterRoot + `${id} manuscript.md`)
+      || !sealedPaths.has(chapterRoot + `paragraph-pdfs/${id}-leerling-v3.pdf`)) return false;
+    return leaf === `evidence/${id}-presentation.md`
+      || new RegExp(`^${id.replaceAll('.', '\\.')} [^/]+ – presentatie\\.(pptx|pdf)$`).test(leaf);
+  }
   const prefix = prior.ROOTS[0] + '/bronnen/';
   if (!file.startsWith(prefix)) return false;
   const match = file.slice(prefix.length).match(/^H([1-3])\/paragrafen\/(2\.([1-3])\.[1-9]\d* [^/]+)\/(.+)$/);

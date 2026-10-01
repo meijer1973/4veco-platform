@@ -54,6 +54,29 @@ test.each([
 test('an already sealed presentation never becomes an exempt addition', () => {
   expect(current.isClassroomAddition(slides, new Set([textbook, slides]))).toBe(false);
 });
+test.each(['3.2.1', '4.1.2'])('v3 slides require both the existing manuscript and paragraph PDF: %s', id => {
+  const chapter = id.split('.').slice(0, 2).join('.');
+  const root = `edities/books34-v3/books/book-${id[0]}/chapters/${chapter}/`;
+  const manuscript = root + `${id} manuscript.md`;
+  const paragraph = root + `paragraph-pdfs/${id}-leerling-v3.pdf`;
+  const sealed = new Set([manuscript, paragraph]);
+  const additions = [root + `paragraph-pdfs/${id} Title – presentatie.pptx`,
+    root + `paragraph-pdfs/${id} Title – presentatie.pdf`,
+    root + `paragraph-pdfs/evidence/${id}-presentation.md`];
+  for (const file of additions) {
+    expect(current.isClassroomAddition(file, sealed)).toBe(true);
+    expect(current.isClassroomAddition(file, new Set([manuscript]))).toBe(false);
+    expect(current.isClassroomAddition(file, new Set([paragraph]))).toBe(false);
+    expect(current.isClassroomAddition(file, new Set([...sealed, file]))).toBe(false);
+  }
+  for (const leaf of [`${id}-leerling-v3.pdf`, `${id} Title – paragraaf.pdf`,
+    `evidence/${id}-approval.json`, `${chapter}.99 Title – presentatie.pptx`,
+    `nested/${id} Title – presentatie.pptx`, `../${id} Title – presentatie.pptx`]) {
+    expect(current.isClassroomAddition(root + 'paragraph-pdfs/' + leaf, sealed)).toBe(false);
+  }
+  expect(() => current.partitionInventory([...sealed, ...additions].sort(), [...sealed].sort())).not.toThrow();
+  expect(() => current.partitionInventory([manuscript, ...additions].sort(), [...sealed].sort())).toThrow(/Signed edition file missing/);
+});
 test('presentation additions must be staged with their exact saved bytes', () => {
   const git = (...args) => execFileSync('git', args, {cwd: temp, stdio: 'pipe'});
   git('init', '-q'); git('config', 'core.autocrlf', 'false');
