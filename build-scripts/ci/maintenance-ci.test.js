@@ -3,7 +3,7 @@ const path = require('path');
 const yaml = require('js-yaml');
 const os = require('os');
 const { spawnSync } = require('child_process');
-const { classify, packageOnlyCiChanges, exerciseChecksumOnly, plan, jestArgs } = require('./maintenance-ci');
+const { classify, packageOnlyCiChanges, exerciseChecksumOnly, plan, jestArgs, checkDiffHygiene } = require('./maintenance-ci');
 const EXERCISE_SKILL = 'skills/econ-exercise-builder.md';
 const BOOK_METADATA = 'references/authored/book-outlines/book-2-outline.meta.json';
 const PR242_BASE = 'ce2a88134771ada73d19df370131a217120faa8b';
@@ -288,5 +288,45 @@ describe('required workflow reports and runs the selected checks', () => {
     expect(config.testPathIgnorePatterns).toContain('check-y1-golden-rollout-wave-1(-current)?\\.test\\.js$');
     expect(steps.find(s => s.name === 'Validate platform Jest suite').run).toContain('--outputFile ../ci-artifacts/jest-results.json');
     expect(steps.find(s => s.name === 'Validate Y1 Golden rollout wave').run).toContain('check:y1-golden-rollout-wave-1-product');
+  });
+});
+
+describe('committed diff hygiene', () => {
+  let fixture, base;
+  beforeAll(() => {
+    fixture = fs.mkdtempSync(path.join(os.tmpdir(), '4veco-diff-hygiene-'));
+    gitAt(fixture, 'init', '--quiet');
+    gitAt(fixture, 'config', 'user.email', 'fixture@example.test');
+    gitAt(fixture, 'config', 'user.name', 'CI fixture');
+    gitAt(fixture, 'config', 'core.autocrlf', 'false');
+    // Prevent a developer's global whitespace setting from determining the fixture.
+    gitAt(fixture, 'config', 'core.whitespace', 'blank-at-eol,blank-at-eof,space-before-tab');
+    gitAt(fixture, 'commit', '--quiet', '--allow-empty', '-m', 'base');
+    base = gitAt(fixture, 'rev-parse', 'HEAD');
+  });
+  afterAll(() => fs.rmSync(fixture, { recursive: true, force: true }));
+  function candidate(contents) {
+    fs.writeFileSync(path.join(fixture, 'evidence.txt'), contents);
+    gitAt(fixture, 'add', 'evidence.txt');
+    gitAt(fixture, 'commit', '--quiet', '-m', 'fixture');
+    return gitAt(fixture, 'rev-parse', 'HEAD');
+  }
+  test.each(['\n', '\r\n'])('accepts clean evidence with %j line endings without rewriting it', eol => {
+    const contents = `first${eol}second${eol}`;
+    const head = candidate(contents);
+    expect(() => checkDiffHygiene(base, head, fixture)).not.toThrow();
+    expect(fs.readFileSync(path.join(fixture, 'evidence.txt'), 'utf8')).toBe(contents);
+    expect(gitAt(fixture, 'status', '--porcelain')).toBe('');
+  });
+  test.each([
+    ['space before LF', 'line \n', 'trailing whitespace'],
+    ['space before CRLF', 'line \r\n', 'trailing whitespace'],
+    ['tab before CRLF', 'line\t\r\n', 'trailing whitespace'],
+    ['space before indentation tab', ' \tline\r\n', 'space before tab in indent'],
+    ['blank line at EOF', 'line\r\n\r\n', 'new blank line at EOF'],
+  ])('rejects %s and retains Git diagnostics', (_label, contents, diagnostic) => {
+    const head = candidate(contents);
+    expect(() => checkDiffHygiene(base, head, fixture)).toThrow(diagnostic);
+    expect(() => checkDiffHygiene(base, head, fixture)).toThrow('evidence.txt:');
   });
 });
