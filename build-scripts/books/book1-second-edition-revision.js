@@ -4,7 +4,10 @@
 const fs=require('fs'),path=require('path'),crypto=require('crypto'),{execFileSync}=require('child_process');
 const ROOT=path.resolve(__dirname,'../..');
 const REVISION='book1-second-edition-20261002';
-const BASE_P='d81db9558cc24d0671da1b2b9ecc5cdf1a092dde',BASE_L='e734532a42b27732ac25ce990fc9448b12309d28';
+// Includes the independently merged Book 4 companions; they are frozen inputs,
+// not files permitted to change in this Book 1 revision.
+const BASE_P='6d010e98610b5f7d1288af322cd228e160d39ada',BASE_L='10b2bab1ab1dc9592f2ea1e967b6cc2cd7c281c2';
+const HISTORICAL_P='d81db9558cc24d0671da1b2b9ecc5cdf1a092dde';
 const BOOK='Boek 1 - Grondslagen, vraag en aanbod',EDITION=BOOK+'/edities/tweede-editie-2026';
 const MANIFEST='references/owned/book1-second-edition-2026/revision.json',LESSON_MANIFEST=REVISION+'.json';
 const PIN='build-scripts/books/book1-second-edition-pin.json';
@@ -60,7 +63,7 @@ function checkRows(root,base,records,excluded,repo,requireTracked){
 function historicalPair(root,lessons,requireTracked){
  const names=['book2-notation','book2-signed','books34-signed','books34-followups','exercise-route'];
  const known=names.map(name=>{
-  try{return git(root,['show',BASE_P+':build-scripts/books/'+name+'-lesson-head.txt']).trim();}catch{return null;}
+  try{return git(root,['show',HISTORICAL_P+':build-scripts/books/'+name+'-lesson-head.txt']).trim();}catch{return null;}
  }).filter(s=>/^[a-f0-9]{40}$/.test(s||''));
  const matched=known.find(sha=>changes(lessons,sha).length===0);
  if(!matched)throw Error('Unrecognized predecessor: exact accepted or historical lesson tree required');
@@ -68,10 +71,10 @@ function historicalPair(root,lessons,requireTracked){
  // relabelling a result from the new gate. It has its actual pins and history.
  const os=require('os'),parent=fs.mkdtempSync(path.join(os.tmpdir(),'book1-history-')),checkout=path.join(parent,'platform');
  try{
-  git(root,['worktree','add','--detach',checkout,BASE_P]);
+  git(root,['worktree','add','--detach',checkout,HISTORICAL_P]);
   const script="const path=require('path');const result=require(path.join(process.argv[1],'build-scripts/maintenance/check-classroom-edition.js')).verify({root:process.argv[1],lessons:process.argv[2],requireTracked:process.argv[3]==='true'});process.stdout.write(JSON.stringify(result));";
   const result=JSON.parse(execFileSync(process.execPath,['-e',script,checkout,lessons,String(requireTracked)],{encoding:'utf8',maxBuffer:128*1024*1024,env:{...process.env,NODE_PATH:path.join(root,'node_modules')}}));
-  return {...result,historical_verification:{platform:BASE_P,lessons:matched,mode:'original verifier in immutable accepted checkout'}};
+  return {...result,historical_verification:{platform:HISTORICAL_P,lessons:matched,mode:'original verifier in immutable accepted checkout'}};
  }finally{
   if(fs.existsSync(checkout))git(root,['worktree','remove',checkout]);
   // Empty, task-created parent only; no recursive filesystem removal.

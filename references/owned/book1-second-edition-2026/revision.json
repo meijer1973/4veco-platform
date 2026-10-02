@@ -1,7 +1,7 @@
 {
   "revision": "book1-second-edition-20261002",
-  "platform_base": "d81db9558cc24d0671da1b2b9ecc5cdf1a092dde",
-  "lessons_base": "e734532a42b27732ac25ce990fc9448b12309d28",
+  "platform_base": "6d010e98610b5f7d1288af322cd228e160d39ada",
+  "lessons_base": "10b2bab1ab1dc9592f2ea1e967b6cc2cd7c281c2",
   "scope": "Book 1 second edition; first-edition history and Books 2–4 unchanged outside finite entry/instruction changes",
   "approval": "Manifest is freshness evidence only; independent review and human merge authority are separate.",
   "platform": [
@@ -27,8 +27,8 @@
     },
     {
       "path": "build-scripts/books/book1-second-edition-revision.js",
-      "bytes": 10064,
-      "sha256": "493dc49473deeeb0f3b6f11da4dfe8537a609df2b9b140dc10ff99064c61f690"
+      "bytes": 10283,
+      "sha256": "f1ea94b930c09429dc0f9e3681c86712d81de50d00c3afa33b6110126158518e"
     },
     {
       "path": "build-scripts/books/book1-second-edition-revision.test.js",
@@ -142,8 +142,8 @@
     },
     {
       "path": "build-scripts/books/book1_second_edition/verify.py",
-      "bytes": 8234,
-      "sha256": "ad1edf317a70b416fd5499e1ca5e4abd2025d6a6dfb827c4e4a63bbd843e979e"
+      "bytes": 8901,
+      "sha256": "d68c5cd79773af68d9645bc0e02c85143bb6dd3ac042c4d38e794d24f924b4ec"
     },
     {
       "path": "build-scripts/books/build-book.py",
@@ -162,13 +162,13 @@
     },
     {
       "path": "build-scripts/maintenance/check-classroom-edition.js",
-      "bytes": 14144,
-      "sha256": "fc8ced11e1964d6e48a1662f886ff097f2f5991f5e0949abcdc8fb1f56e71ced"
+      "bytes": 14224,
+      "sha256": "cf0d8c51d414370acd4958079b9382a3fb1e89cf1bebc261e85a5d60e2ab4e4a"
     },
     {
       "path": "build-scripts/maintenance/check-classroom-edition.test.js",
-      "bytes": 8216,
-      "sha256": "76ee09ae9600530bc17378460cb8d9bd5b27a8b546ae2711cc402769dbbb202b"
+      "bytes": 10648,
+      "sha256": "69d6b7b43429cb301b2ff989dd005fa807796654aac085340f6b3bcd829ffdae"
     },
     {
       "path": "build-scripts/maintenance/check-classroom-notation.test.js",
@@ -217,8 +217,8 @@
     },
     {
       "path": "build-scripts/workflows/check-paragraph-lane-scope.js",
-      "bytes": 22974,
-      "sha256": "f23daa6f46a373168b67133cc74a66a0e91963c4b01b4f7f36c354dcddddb08c"
+      "bytes": 23037,
+      "sha256": "8c6b9461bab499920def3b579eb5544cae01e47b06ab633328681f81aadc36d3"
     },
     {
       "path": "build-scripts/workflows/check-part-a-exercise-authoring-contract.js",
@@ -306,6 +306,66 @@
       "sha256": "cd135da820b6dc80185180a4a4a13cc5dec5882ddee1eac3741424e816460baa"
     },
     {
+      "path": "reports/review-gates/book1-second-edition-20261002/1.1.1-review.md",
+      "bytes": 4898,
+      "sha256": "6557676221e5925b59c34900445f77edfcaa67e5861675df3bfe7e741cbc1423"
+    },
+    {
+      "path": "reports/review-gates/book1-second-edition-20261002/1.1.2-review.md",
+      "bytes": 4912,
+      "sha256": "7febb029aeb82a489784a26cf86d482b39ddd02f2a4785bc91a5a10457eb9997"
+    },
+    {
+      "path": "reports/review-gates/book1-second-edition-20261002/1.1.3-review.md",
+      "bytes": 4869,
+      "sha256": "e644abb99cc636389ca787b7a1098747f72cda38bb40bb1c98aff2189cbbf77e"
+    },
+    {
+      "path": "reports/review-gates/book1-second-edition-20261002/1.1.4-review.md",
+      "bytes": 4809,
+      "sha256": "09ab1ef2e820be0ec7804ea349df8dc73115c3b2dbed978e62bb72baba18e7f0"
+    },
+    {
+      "path": "reports/review-gates/book1-second-edition-20261002/1.2.1-review.md",
+      "bytes": 4838,
+      "sha256": "ecb8d5a5455c98beab0bd9d7e5cae0603f7c884ebe3ad3fe4a884c10d9fb01a7"
+    },
+    {
+      "path": "reports/review-gates/book1-second-edition-20261002/1.2.2-review.md",
+      "bytes": 4913,
+      "sha256": "3d21f9b2c8a828bde149311ef447ca0521c373920b7d3e143b9e97a5078335f7"
+    },
+    {
+      "path": "reports/review-gates/book1-second-edition-20261002/1.2.3-review.md",
+      "bytes": 4843,
+      "sha256": "051787d20a30385a4480f1a411bc62fa2f58b05ffcec9b48a5a6a1586a741d80"
+    },
+    {
+      "path": "reports/review-gates/book1-second-edition-20261002/1.2.4-review.md",
+      "bytes": 4743,
+      "sha256": "3de36c1f181ec7811bc887dbaa5102124f273030529577f357fe0e0082dfbb82"
+    },
+    {
+      "path": "reports/review-gates/book1-second-edition-20261002/1.3.1-review.md",
+      "bytes": 4896,
+      "sha256": "f246d290b130e3b7f21919ba313704591591cbef21be060902d7530794541d6b"
+    },
+    {
+      "path": "reports/review-gates/book1-second-edition-20261002/1.3.2-review.md",
+      "bytes": 4814,
+      "sha256": "6bdd1437e54959b1ec3bda14425f3f3a53971e88a1a788cb88b78aa974e8cbfb"
+    },
+    {
+      "path": "reports/review-gates/book1-second-edition-20261002/1.3.3-review.md",
+      "bytes": 4863,
+      "sha256": "691a2eda66a8e2498ecb1e5968459ad0bfa8be758428980d35aba50481c5db35"
+    },
+    {
+      "path": "reports/review-gates/book1-second-edition-20261002/1.3.4-review.md",
+      "bytes": 4787,
+      "sha256": "72efd4713cc7f6e1ae20fcf1f65bdf3cdeb6d7958f158d4ff0dc40a217f11b12"
+    },
+    {
       "path": "skills/econ-didactiek.md",
       "bytes": 20665,
       "sha256": "2363d76958e98861c1d1b158f442c9096eff16ae87e5f1b6b63a869bb34c3b21"
@@ -351,6 +411,11 @@
       "path": "Boek 1 - Grondslagen, vraag en aanbod/README.md",
       "bytes": 530,
       "sha256": "979932001fcf956b60dd953bba4bcab45589504ea95a96a1bcf9190094b2ef40"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/.gitattributes",
+      "bytes": 422,
+      "sha256": "25228da26b6ecdd96a216d55899fd5531be761f1c10f7ddd679262e260470317"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/Boek 1 Grondslagen, vraag en aanbod – boek.md",
@@ -2071,6 +2136,66 @@
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/page_conversion.csv",
       "bytes": 15812,
       "sha256": "366f2a78edf928dabd6ea6f31be6b59beb84d52817c3d02aa9cf1405952cc4af"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.1.1-textbook-review-manifest.json",
+      "bytes": 27994,
+      "sha256": "da14821a205e04494d9bbe01e85881438e59854088790f74e87a4f94f4990946"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.1.2-textbook-review-manifest.json",
+      "bytes": 27996,
+      "sha256": "3cfea6bad9110db0e5ac70fa2cab9a4ddca74495655f32c7daa65630c0b42aea"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.1.3-textbook-review-manifest.json",
+      "bytes": 27976,
+      "sha256": "faa1991ab79fc2fb92643488e7ff31e07eadeec21420fda2d657cdbcf71c0a62"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.1.4-textbook-review-manifest.json",
+      "bytes": 27944,
+      "sha256": "d74848b3df3ba66fc276c018150aad17e06f7c70b6ecef19767c2dcae14dbe1d"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.2.1-textbook-review-manifest.json",
+      "bytes": 30125,
+      "sha256": "e9ac04ceb9cbc427fa07081469e86b62a7ef5763c2d1b7f4cd9bc9a9d4150a90"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.2.2-textbook-review-manifest.json",
+      "bytes": 30071,
+      "sha256": "d4529288dee1f3eddd73111ee6777a902e4b7d447931887e2e47c5b7fa55f240"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.2.3-textbook-review-manifest.json",
+      "bytes": 30121,
+      "sha256": "4a4eba4c18b7b3a05574774a353397674dae87744b8264e87cbce840f78ab6b1"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.2.4-textbook-review-manifest.json",
+      "bytes": 30075,
+      "sha256": "248bf584ed3c66b2f45f84615c4ea8ede51c2da68ad611af4c19de532833449d"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.3.1-textbook-review-manifest.json",
+      "bytes": 32316,
+      "sha256": "806d1795cd7d57c99e4d0e3e4898a169862b8e8810041698ea014193039622da"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.3.2-textbook-review-manifest.json",
+      "bytes": 32296,
+      "sha256": "b4eb41f342cc912369c00289a9c40307e308d25397cbaa2a1cb256473f4dd817"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.3.3-textbook-review-manifest.json",
+      "bytes": 32334,
+      "sha256": "881ef359141801f6706c546a35123788a59f8877354f91507a5984df55e8bfa1"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.3.4-textbook-review-manifest.json",
+      "bytes": 32298,
+      "sha256": "5a469946e140ef49cfe66856c4408acab022be8d322c97a02fa2adf968b23626"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/source_hashes.json",

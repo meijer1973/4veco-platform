@@ -26,6 +26,7 @@ const BOOKS34_SIGNED_FILES = new Set(require('../books/books34-signed-revision-p
 const BOOKS34_FOLLOWUP_FILES = new Set(require('../books/books34-followups-revision-pin.json').revision_paths.map(p => p.toLowerCase()));
 const BOOK2_NOTATION_FILES = new Set(require('../books/book2-notation-revision-pin.json').revision_paths.map(p => p.toLowerCase()));
 const BOOK1_EDITION_FILES = new Set(require('../../references/owned/book1-second-edition-2026/revision.json').lessons.map(row => row.path.toLowerCase()));
+BOOK1_EDITION_FILES.add('book1-second-edition-20261002.json');
 const CATEGORY_LABELS = {
   partA_textbook: 'Part A textbook',
   partB_companion: 'Part B companion',
