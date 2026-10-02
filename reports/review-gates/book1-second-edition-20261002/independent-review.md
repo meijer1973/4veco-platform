@@ -6,9 +6,9 @@ Reviewer: independent agent `/root/review_b34_followups`, separate from the impl
 
 Reviewed the supplied source/research package, all twelve current owning manuscripts, all 114 exercises and their answers/continuations, worked teaching and preparation, figures, teacher plans, all chapter PDFs and complete-book assembly, target retrieval, archive/navigation and the finite integration boundary. Reviewer-authored files are confined to this review directory and external scratch; the reviewer did not author lesson or implementation changes.
 
-Accepted bases after the ordinary main synchronization are Platform `6d010e98610b5f7d1288af322cd228e160d39ada` and Lessons `10b2bab1ab1dc9592f2ea1e967b6cc2cd7c281c2`. The exact paired lesson candidate is `dedc536553814cbf79d8da84c5aa572de2df425e`. The final receipt covers 81 platform and 376 lesson changed paths, with full accepted-repository preservation outside its finite scope.
+Accepted bases after the ordinary main synchronization are Platform `6d010e98610b5f7d1288af322cd228e160d39ada` and Lessons `10b2bab1ab1dc9592f2ea1e967b6cc2cd7c281c2`. The exact paired lesson candidate is `4aa0ef410e9a39f928861dc6582430446c85e169`. The final receipt covers 81 platform and 376 lesson changed paths, with full accepted-repository preservation outside its finite scope.
 
-Review manifest SHA256: `dfdd48df652dcd993a3c8b86e01233f60406f47bbc1221ff0a053a68c97a0e35`
+Review manifest SHA256: `6e82912d5bcb0777810d57ea16e7484804eaba5a5706003768f5687d7a2348d5`
 
 Each linked paragraph report below has its own verified current-file snapshot. Those reports are included in the overall receipt; this overall report is excluded to avoid a circular hash.
 
@@ -140,3 +140,14 @@ The final classification repair adds only the exact generated outputs `reports/o
 The reviewer independently reran the 30 scope tests and the inspectable union check. All passed. The full base-to-candidate platform inventory has 85 paths and passes the native shared-lane check; the full lesson inventory has 377 paths, partitioned into exactly 376 textbook paths and the single shared `AGENTS.md` path. Both native lane checks pass, their disjoint union exactly equals the whole lesson Git delta, and no quality-ref mutation is hidden. These counts include receipt/review/head files excluded from the finite content receipt, explaining the difference from its 81 platform / 376 lesson rows. A single textbook-only command still rejects this intentional mixed instruction/publication PR; the explicit two-part closure is recorded rather than disabling that generic safeguard.
 
 Exactly the classifier and finite declaration differ from the preceding Windows-reviewed candidate. Every lesson inventory row remains identical, and all 85 currently bound platform input/receipt/review/head paths retain explicit exact-byte or LF checkout protection. Evidence: external `independent-lane-scope-union.json` and the reviewed declaration/script. The current manifest binding covers these final changes; the substantive verdict and remaining remote-CI/platform-first conditions are unchanged.
+
+
+### Linux counterbalanced-index regression closure
+
+The exact Book 1 CI at Platform `07ddfac1` completed all 2,527 bounded and 1,376 assembly checks and verified the twelve unchanged snapshots, but correctly failed the new mode-negative test. On Linux, a working 0644 file could cancel its staged 0755 mode in `git diff base`; the path then never reached the per-path guard. The prior Windows test success was therefore insufficient evidence for this case.
+
+The final helper now checks HEAD/base and staged/base differences for all four advisory paths before consulting working changed paths. This catches staged or committed changes even when working/index changes cancel them. The actual disposable working-file exception remains restricted to the same four paths and named compatibility environment; the content receipt and ordinary publication scope are unchanged.
+
+The reviewer inspected the failed Linux CI log and the exact two-file repair. Eighteen focused live/boundary tests passed independently, covering both `core.filemode=false` and `true`. A separate reviewer fixture independently demonstrated the old-versus-new behaviour under both settings: working `git diff base` was empty, the staged content differed, the original `07ddfac1` verifier accepted it, and the current verifier rejected it. The authored regression also rejects committed content cancelled by index/working bytes. Evidence: external `ci-07dd-book1-failed.log`, `final-counterbalanced-tests.log` and `independent-linux-cancellation-recheck.json`.
+
+The current receipt differs from the preceding review only in `book1-second-edition-revision.js` and its test. All 376 lesson rows, all paragraph evidence and inspected PDF bytes are unchanged. The final tracked current-review gate passes locally. Refreshed remote exact-pair, required platform and platform-first/final bundle results remain necessary; this local repair PASS does not relabel the previous failed CI run.
