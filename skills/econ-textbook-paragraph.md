@@ -29,7 +29,7 @@ review even for a small change. Revalidate foundation when its sources or the
 requested action change; reuse unaffected evidence with its named scope.
 
 **Book scope:** the linked Part A exercise-authoring contract applies to newly
-authored Book 2 and later theory paragraphs. Book 1 output is frozen: do not
+authored Book 2 and later theory paragraphs. Book 1 first-edition output is frozen: do not
 retrofit it and do not use this contract as a retroactive Book 1 content check.
 
 **Book foundation check:** before a Book 2 paragraph is planned or built, read
@@ -289,3 +289,9 @@ current-file binding, repair rechecks and publication boundaries. Record actual
 results and remaining defects; generated records do not supply missing approval
 or review. Authored quality evidence retains goal/eindterm/Bloom mappings,
 applicable standards and honest limitations.
+
+The owner-authorized Book 1 second edition (2026) follows the current Part A
+contract, including the normal supported route. Its source ownership, edition
+identity and bounded integration are documented in
+[Book 1 second edition](../docs/workflows/book1-second-edition.md). This does not retrofit first-edition outputs or
+transfer their review status to reused paragraph numbers.

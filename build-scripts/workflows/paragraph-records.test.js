@@ -58,12 +58,15 @@ test('foundation reports existing checker failures and missing local chapter evi
   expect(record.decision).toBe('BLOCKED');
   expect(record.failures).toContain('Local _chapter-plan.md is missing');
   expect(record.target.id).toBe('2.1.1');
-  expect(record.sources.every(source => source.actual_sha256 === source.sha256 || source.currentness === 'reviewed_structural_transition')).toBe(true);
-  const transitioned = record.sources.filter(source => source.currentness === 'reviewed_structural_transition');
-  // The signed successor refreshes exact authority source pins without promoting lifecycle.
-  expect(transitioned).toHaveLength(0);
-  expect(record.sources.every(source => source.actual_sha256 === source.sha256)).toBe(true);
-  expect(transitioned.every(source => source.structure_revision === 'book34-lesson-balance-v3-20260915' && source.sha256 !== source.actual_sha256)).toBe(true);
+  expect(record.sources.every(source => source.actual_sha256 === source.sha256 || ['reviewed_structural_transition','reviewed_book1_edition_transition'].includes(source.currentness))).toBe(true);
+  const transitioned = record.sources.filter(source => ['reviewed_structural_transition','reviewed_book1_edition_transition'].includes(source.currentness));
+  // Book 1's exact contract clarification does not repin Book 2's authority.
+  expect(transitioned).toHaveLength(1);
+  expect(transitioned[0].path).toBe('skills/econ-exercise-builder.md');
+  expect(transitioned[0].currentness).toBe('reviewed_book1_edition_transition');
+  const transition = require('../references/book1-authority-transition');
+  expect(transitioned[0].sha256).toBe(transition.BEFORE);
+  expect(transitioned[0].actual_sha256).toBe(transition.AFTER);
   expect(record.holds.every(hold => typeof hold.blocks_requested_action === 'boolean')).toBe(true);
   expect(record.lifecycle.interpretation).toMatch(/Historical/);
 });

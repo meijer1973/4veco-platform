@@ -105,12 +105,12 @@ test('Windows checkout preserves the exact historical pin and PV bytes', () => {
 test.each(['Historical platform pin changed x', 'Stale successor file x', 'Unreviewed Books 3/4 successor manifest'])('unrelated historical failure is never suppressed: %s', message => {
   const result = {passed: false, failures: [message]};
   jest.spyOn(historical, 'verify').mockReturnValue(result);
-  expect(current.verify()).toBe(result);
+  expect(current.verify({root: temp})).toBe(result);
 });
 test('an inventory error accompanied by another error is never suppressed', () => {
   const result = {passed: false, failures: ['Unexpected successor inventory', 'Missing source']};
   jest.spyOn(historical, 'verify').mockReturnValue(result);
-  expect(current.verify()).toBe(result);
+  expect(current.verify({root: temp})).toBe(result);
 });
 
 test('follow-up receipt authenticates the exact classroom scope insertion only', () => {
@@ -133,5 +133,5 @@ test.each(['Stale follow-up bytes x', 'Protected predecessor changed x', 'Stale 
   'Unreviewed follow-up manifest', 'False historical evidence'])('unrelated follow-up failure is never suppressed: %s', message => {
   const result = {passed: false, failures: [message]};
   jest.spyOn(historical, 'verify').mockReturnValue(result);
-  expect(current.verify()).toBe(result);
+  expect(current.verify({root: temp})).toBe(result);
 });

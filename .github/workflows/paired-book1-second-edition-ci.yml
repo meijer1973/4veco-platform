@@ -1,0 +1,99 @@
+name: paired-book1-second-edition-ci
+
+on:
+  pull_request:
+    paths:
+      - 'build-scripts/books/book1*'
+      - 'build-scripts/books/book1_second_edition/**'
+      - 'build-scripts/references/book1-edition*'
+      - 'references/owned/book1-second-edition-2026/**'
+      - 'reports/review-gates/book1-second-edition-20261002/**'
+      - '.github/workflows/paired-book1-second-edition-ci.yml'
+  workflow_dispatch:
+    inputs:
+      lesson_sha:
+        description: Exact paired lessons commit
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  verify-book1-pair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          path: 4veco-platform
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Select exact lesson head
+        id: pair
+        working-directory: 4veco-platform
+        env:
+          REQUESTED: ${{ inputs.lesson_sha }}
+        run: |
+          node - <<'JS'
+          const fs=require('fs');
+          const sha=process.env.REQUESTED||fs.readFileSync('build-scripts/books/book1-second-edition-lesson-head.txt','utf8').trim();
+          if(!/^[a-f0-9]{40}$/.test(sha))throw Error('Exact lesson SHA required');
+          fs.appendFileSync(process.env.GITHUB_OUTPUT,'sha='+sha+'\n');
+          JS
+      - uses: actions/checkout@v6
+        with:
+          repository: meijer1973/4veco-lessen
+          path: 4veco-lessen
+          ref: ${{ steps.pair.outputs.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 20
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install verification tools
+        working-directory: 4veco-platform
+        run: |
+          npm ci
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq libpango-1.0-0 libpangoft2-1.0-0 libcairo2
+          python -m pip install -r build-scripts/books/book1_second_edition/requirements.txt
+      - name: Authenticate exact pair and independent review
+        working-directory: 4veco-platform
+        env:
+          PLATFORM_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+          LESSON_SHA: ${{ steps.pair.outputs.sha }}
+        run: |
+          mkdir -p ../book1-ci-evidence
+          node - <<'JS'
+          const fs=require('fs'),{execFileSync}=require('child_process');
+          const head=cwd=>execFileSync('git',['rev-parse','HEAD'],{cwd,encoding:'utf8'}).trim();
+          if(head('.')!==process.env.PLATFORM_SHA||head('../4veco-lessen')!==process.env.LESSON_SHA)throw Error('Unexpected checkout pair');
+          const result=require('./build-scripts/books/book1-second-edition-revision').verify({requireTracked:true,requireReview:true});
+          if(!result.passed||result.state!=='book1-second-edition-20261002')throw Error(JSON.stringify(result));
+          fs.writeFileSync('../book1-ci-evidence/pair.json',JSON.stringify({platform:head('.'),lessons:head('../4veco-lessen'),verification:result},null,2)+'\n');
+          JS
+      - name: Verify saved sources, history, targets and all PDF navigation
+        working-directory: 4veco-platform
+        env:
+          BOOK1_EDITION_ROOT: ../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          python -m unittest discover -s build-scripts/books/book1_second_edition -p test_book1.py -v
+          python build-scripts/books/book1_second_edition/verify.py --lessons ../4veco-lessen --report ../book1-ci-evidence/bounded.json
+          python build-scripts/books/book1_second_edition/targets.py --lessons ../4veco-lessen --check
+          python build-scripts/books/book1_second_edition/review_snapshots.py --lessons ../4veco-lessen --check
+          python build-scripts/books/book1_second_edition/book/validate_book.py
+          cp "$BOOK1_EDITION_ROOT/qa/validation.json" ../book1-ci-evidence/assembly.json
+          npx jest build-scripts/references/book1-edition.test.js build-scripts/books/book1-second-edition-revision.test.js build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js --runInBand
+          git diff --check
+          git -C ../4veco-lessen diff --check
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: book1-second-edition-pair-evidence
+          path: book1-ci-evidence/

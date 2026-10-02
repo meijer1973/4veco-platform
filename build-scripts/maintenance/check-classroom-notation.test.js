@@ -146,6 +146,8 @@ test('standalone CLI publishes partitionInventory before a receipt requires it r
   const adapter = require.resolve('./check-classroom-edition');
   const original = require.resolve('./check-books34-v3-import');
   const script = `const Module=require('module');const adapter=${JSON.stringify(adapter)};
+    // Isolate the historical adapter under test from an installed successor.
+    const fs=require('fs'),exists=fs.existsSync;fs.existsSync=file=>String(file).endsWith('book1-second-edition-pin.json')?false:exists(file);
     require.cache[${JSON.stringify(original)}]={exports:{verify(){
       const api=require(adapter); if(typeof api.partitionInventory!=='function') throw Error('Incomplete recursive export');
       return {passed:true,failures:[]};}}};

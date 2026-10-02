@@ -183,7 +183,7 @@ describe('Part A exercise authoring source contract', () => {
     ['compact check of\n   current-content comprehension', 'Startopgaven comprehension role missing'],
     ['deliberately fades', 'normal guided/fading rule missing'],
     ['introduces no\n   new theory', 'closing-review rule missing'],
-    ['Book 1 output is frozen', 'Book 1 freeze missing'],
+    ['Book 1 first-edition output is frozen', 'Book 1 freeze missing'],
   ])('rejects removal of %s', (needle, failure) => {
     expectFailure(mutate('skills/econ-exercise-builder.md', needle), failure);
   });

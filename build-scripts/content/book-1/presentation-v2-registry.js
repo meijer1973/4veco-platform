@@ -33,11 +33,15 @@ const PRESENTATION_V2_DECKS = [
 ];
 
 function moduleRootFrom(options = {}) {
+  if (options.edition && options.edition !== 'book1-first-edition-2026') {
+    throw new Error('These companion models belong to Book 1 first edition; no second-edition acceptance is inherited.');
+  }
   return options.moduleRoot || process.env.MODULE_ROOT || DEFAULT_MODULE_ROOT;
 }
 
 function loadDeck(entry) {
-  return require(entry.modelPath);
+  const deck=require(entry.modelPath);
+  return {...deck,edition_id:'book1-first-edition-2026',second_edition_compatible:false};
 }
 
 function paragraphDir(moduleRoot, deck) {

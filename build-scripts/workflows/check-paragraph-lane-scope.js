@@ -25,6 +25,7 @@ const BOOK2_SIGNED_FILES = new Set(require('../books/book2-signed-revision-pin.j
 const BOOKS34_SIGNED_FILES = new Set(require('../books/books34-signed-revision-pin.json').revision_paths.map(p => p.toLowerCase()));
 const BOOKS34_FOLLOWUP_FILES = new Set(require('../books/books34-followups-revision-pin.json').revision_paths.map(p => p.toLowerCase()));
 const BOOK2_NOTATION_FILES = new Set(require('../books/book2-notation-revision-pin.json').revision_paths.map(p => p.toLowerCase()));
+const BOOK1_EDITION_FILES = new Set(require('../../references/owned/book1-second-edition-2026/revision.json').lessons.map(row => row.path.toLowerCase()));
 const CATEGORY_LABELS = {
   partA_textbook: 'Part A textbook',
   partB_companion: 'Part B companion',
@@ -205,6 +206,8 @@ function classifyPath(filePath) {
   if (isGeneratedIndexPath(normalized)) return { path: normalized, category: 'generated_indexes' };
   if (isReviewEvidencePath(normalized)) return { path: normalized, category: 'review_evidence' };
   if (isSharedPlatformPath(normalized)) return { path: normalized, category: 'shared_platform' };
+  // Only the finite second-edition receipt overrides generic index.html ownership.
+  if (BOOK1_EDITION_FILES.has(normalizedLower(normalized))) return { path: normalized, category: 'partA_textbook' };
   if (isPartBCompanionPath(normalized)) return { path: normalized, category: 'partB_companion' };
   if (isPartATextbookPath(normalized)) return { path: normalized, category: 'partA_textbook' };
   return { path: normalized, category: 'unknown' };

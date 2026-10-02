@@ -18,7 +18,7 @@ assignment surface for ordinary textbook paragraph production.
 For newly authored Book 2 and later theory paragraphs, the
 [exercise builder](../../skills/econ-exercise-builder.md) owns the operational
 Part A exercise contract. Follow its requirements for the affected scope;
-reuse valid plans and coverage when revising. Book 1 output is frozen and must
+reuse valid plans and coverage when revising. Book 1 first-edition output is frozen and must
 not be retrofitted.
 
 **Pedagogical-boundary inheritance:** use
@@ -168,3 +168,6 @@ The lane is closed only when:
 `complete` validation is not a normal textbook assignment. It is an integration
 verification state after Part B exists or a deliberately authorized complete
 bundle has review evidence for both lanes.
+
+The owner-authorized [Book 1 second edition](book1-second-edition.md) follows the current
+Part A contract and requires its own independent current-file review.

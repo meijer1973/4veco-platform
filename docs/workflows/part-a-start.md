@@ -35,7 +35,7 @@ coverage. Layout repair does not automatically load exercise-authoring skills.
    Use the [textbook skill](../../skills/econ-textbook-paragraph.md), its relevant
    didactic rules and the [exercise contract](../../skills/econ-exercise-builder.md).
    Read graph guidance when constructing graphs; consolidation or test-prep
-   skills when producing those paragraph types. Book 1 remains frozen.
+   skills when producing those paragraph types. Book 1 first-edition output remains frozen.
 3. **Render and inspect.** Copy the
    [thin PDF wrapper](../../build-scripts/templates/template-build-paragraph-pdf.py)
    to `build_pdf.py`, then run it with the adjacent platform checkout available.
@@ -73,3 +73,9 @@ coverage. Layout repair does not automatically load exercise-authoring skills.
 Record commands/results, actual skill use and useful friction as work proceeds.
 No separate quality reviewer, repeated review of unchanged pages, copied CI
 packets or index-only commits are required for this ordinary route.
+
+The owner-authorized Book 1 second edition (2026) follows the current Part A
+contract, including the normal supported route. Its source ownership, edition
+identity and bounded integration are documented in
+[Book 1 second edition](book1-second-edition.md). This does not retrofit first-edition outputs or
+transfer their review status to reused paragraph numbers.

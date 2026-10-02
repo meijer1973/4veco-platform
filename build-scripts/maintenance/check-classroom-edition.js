@@ -178,6 +178,9 @@ function verifyNotation(lessons, {root = ROOT, requireTracked = false} = {}) {
 }
 
 function verify(options = {}) {
+  const editionRoot=options.root || ROOT;
+  if(fs.existsSync(path.join(editionRoot,'build-scripts/books/book1-second-edition-pin.json')))
+    return require('../books/book1-second-edition-revision').verify({...options,root:editionRoot});
   const original = historical.verify(options);
   // Never suppress transport, structure, source, pin or other historical failures.
   const notation = require('../books/book2-notation-revision');

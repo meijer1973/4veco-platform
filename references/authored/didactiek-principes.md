@@ -646,7 +646,7 @@ No step-by-step procedure. Instead: a **model answer** showing one strong respon
 ### 10.1 Canonical section sequence (NEVER reorder)
 
 This authoring contract applies to newly authored Book 2 and later theory
-paragraphs. Book 1 output is frozen: do not retrofit it and do not run this
+paragraphs. Book 1 first-edition output is frozen: do not retrofit it and do not run this
 contract as a retroactive Book 1 content check.
 
 Begin with the paragraph title, motivating problem and theory, then use the
@@ -880,7 +880,7 @@ valid unchanged evidence. These dimensions do not require separate agents.
 
 **1.5 Exercise design:**
 - Backward-design alignment table covers every goal and target operation
-- Exact seven-heading order and exact `##` level for Book 2+; Book 1 remains frozen
+- Exact seven-heading order and exact `##` level for Book 2+; Book 1 first-edition output remains frozen
 - Both Startopgaven roles: taught-prerequisite retrieval + brief current-content check
 - Target exercise alignment with blueprint and the complete normal-route timing equation; explicit existing-book conflicts
 - Bloom progression (remember → calculate → explain → analyze → evaluate)
@@ -1126,3 +1126,9 @@ When designing any material, apply these rules:
 Stevenson and Zlotnick's study of seven leading introductory economics textbooks found that **77% of people mentioned are male**, only **6% of business leaders referenced are female**, and women in fictional examples are disproportionately placed in domestic or consumer roles while men handle analysis and decision-making.
 
 **Rule:** Deliberately craft examples representing the world students are entering, not the world of the past. Vary gender, cultural background, and roles in fictional contexts. Ensure women appear as entrepreneurs, analysts, and decision-makers, not only as consumers or household managers.
+
+The owner-authorized Book 1 second edition (2026) follows the current Part A
+contract, including the normal supported route. Its source ownership, edition
+identity and bounded integration are documented in
+[Book 1 second edition](../../docs/workflows/book1-second-edition.md). This does not retrofit first-edition outputs or
+transfer their review status to reused paragraph numbers.
