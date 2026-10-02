@@ -1,0 +1,714 @@
+{
+  "date": "2026-10-01T17:06:18.449141+00:00",
+  "reviewer": "independent review_workflow agent",
+  "verdict": "PASS within instructional review scope after coordinator 411-r1 repair; all five chapter41 handoffs now bound. Original cold411 P3 remains historical. 421 correction separately passes citation-only scope.",
+  "findings": [
+    {
+      "id": "CH41-01",
+      "priority": "P3",
+      "status": "resolved in coordinator repair 411-r1; preserved cold handoff still contains original finding",
+      "paragraph": "411",
+      "slide": 25,
+      "file": "C:\\wt\\ppt\\4veco-platform\\build-scripts\\content\\book-4\\presentation-411.mjs",
+      "lines": [
+        189,
+        190
+      ],
+      "title": "Distinguish an acceptable sketch from non-unique economic supply",
+      "scope": "Visible final caption and speaker-note wording; chart equation and target arithmetic are correct.",
+      "reason": "With q=25(P-4), LR P=8 gives q=100, market Q=20,000 and N=200. Horizontal aggregation fixes P=4+0.20Q with Q in thousands on the unconstrained branch. The source only requests an appropriate sketch and does not assert model non-uniqueness.",
+      "minimalRepair": "Remove the unqualified non-uniqueness sentence; describe an appropriate sketch through the new equilibrium. Notes may explain the exercise grades shift direction and equilibrium without requiring students to derive a supply formula. Preserve frozen original and bind any repaired source/PPTX/PDF separately.",
+      "initialStatus": "open in reviewed cold handoff",
+      "coordinatorFindingId": "B4-411-P3-01"
+    }
+  ],
+  "artifacts": [
+    {
+      "paragraph": "411",
+      "status": "frozen final cold handoff",
+      "folder": "C:\\wt\\ppt\\.book4\\review\\411",
+      "pptx": "C:\\wt\\ppt\\.book4\\review\\411\\4.1.1 Toetreding, uittreding en langetermijnevenwicht – presentatie.pptx",
+      "pptxSha256": "d3d0ecb395c17295ef0450db95ed025a9716778513d2b05ee2cc7aac5c686ac8",
+      "pdf": "C:\\wt\\ppt\\.book4\\review\\411\\4.1.1 Toetreding, uittreding en langetermijnevenwicht – presentatie.pdf",
+      "pdfSha256": "c9c9eda87b85ce1ca66d4bd41bd5bb35bcb2c78160c3569c69bd1d76b0515c2f",
+      "slides": 29,
+      "pdfPages": 29,
+      "inventorySha256": "ffac710160ac9e4ab3371518ad1879d8eb8060cfc5d6f48f606f3545c9a5d699",
+      "inventoryTextAndNotesMatchSavedXml": true,
+      "workbookParity": {
+        "charts": 10,
+        "references": 106,
+        "cellsCompared": 1566
+      }
+    },
+    {
+      "paragraph": "412",
+      "status": "frozen final cold handoff",
+      "folder": "C:\\wt\\ppt\\.book4\\review\\412",
+      "pptx": "C:\\wt\\ppt\\.book4\\review\\412\\4.1.2 Monopolie - kenmerken – presentatie.pptx",
+      "pptxSha256": "df76dc244d562a46d2f611d3864551b1bb19571e76c6191e7701b8b0f2a60584",
+      "pdf": "C:\\wt\\ppt\\.book4\\review\\412\\4.1.2 Monopolie - kenmerken – presentatie.pdf",
+      "pdfSha256": "66e4ea378b6c4067052cfd06b528e019bed0a26875cd71be349022853624052d",
+      "slides": 24,
+      "pdfPages": 24,
+      "inventorySha256": "20984a05f63234c4bfa98cb7acbc4e48bb3f5db7964bdddf11c9bb1aa1a6c6e6",
+      "inventoryTextAndNotesMatchSavedXml": true,
+      "workbookParity": {
+        "charts": 8,
+        "references": 36,
+        "cellsCompared": 122
+      }
+    },
+    {
+      "paragraph": "413",
+      "status": "frozen final cold handoff",
+      "folder": "C:\\wt\\ppt\\.book4\\review\\413",
+      "pptx": "C:\\wt\\ppt\\.book4\\review\\413\\4.1.3 Marginale opbrengst bij monopolie – presentatie.pptx",
+      "pptxSha256": "90d49caf084fb7e2b1b4c7f13299dc320443aa7fda2e7144afaef31522502788",
+      "pdf": "C:\\wt\\ppt\\.book4\\review\\413\\4.1.3 Marginale opbrengst bij monopolie – presentatie.pdf",
+      "pdfSha256": "fc170caaf306bcb6469bc5fc174b21b04e43be8b761c9e4e2a41b711d587850e",
+      "slides": 27,
+      "pdfPages": 27,
+      "inventorySha256": "69ce4bcc72eeedc73a744613fba20bdf55a2b8d36c3e6a5c5f109ce050d21ce3",
+      "inventoryTextAndNotesMatchSavedXml": true,
+      "workbookParity": {
+        "charts": 3,
+        "references": 10,
+        "cellsCompared": 90
+      }
+    },
+    {
+      "paragraph": "414",
+      "status": "candidate only; final handoff not bound",
+      "folder": "C:\\wt\\ppt\\.book4\\review\\preview-414-v2",
+      "pptx": "C:\\wt\\ppt\\.book4\\review\\preview-414-v2\\4.1.4 Winstmaximalisatie bij monopolie – presentatie.pptx",
+      "pptxSha256": "4661ecfc0bf641b1b724893862b98570eda74bd0a12e7f68a81f142111fc65c0",
+      "pdf": "C:\\wt\\ppt\\.book4\\review\\preview-414-v2\\4.1.4 Winstmaximalisatie bij monopolie – presentatie.pdf",
+      "pdfSha256": "c6af9a6fdeb64559c010b2fdd45ee73b257108a32e135171dfabe0ebf9dd56fd",
+      "slides": 27,
+      "pdfPages": 27,
+      "inventorySha256": "1c4bd17bfc8c7e206124b4d9e435b7f7d5256b92173b856ee4be01f44381a294",
+      "inventoryTextAndNotesMatchSavedXml": true,
+      "workbookParity": {
+        "charts": 6,
+        "references": 124,
+        "cellsCompared": 270
+      }
+    },
+    {
+      "paragraph": "415",
+      "status": "candidate only; final handoff not bound",
+      "folder": "C:\\wt\\ppt\\.book4\\review\\preview-415-v4",
+      "pptx": "C:\\wt\\ppt\\.book4\\review\\preview-415-v4\\4.1.5 Gemengde opgaven concurrentie en monopolie – presentatie.pptx",
+      "pptxSha256": "033f12e26fff8101098d118819eeac6e5035b571e71d0cfb9ec92e864ad14e94",
+      "pdf": "C:\\wt\\ppt\\.book4\\review\\preview-415-v4\\4.1.5 Gemengde opgaven concurrentie en monopolie – presentatie.pdf",
+      "pdfSha256": "71691d0016d9303e357c3d55e08d454f0b06b7253a43fc8e1cd64900ccb82921",
+      "slides": 25,
+      "pdfPages": 25,
+      "inventorySha256": "649596a1eb71264e9094aa0862cbc0cc9a3395728c444cbf4d2a1cf702f204ea",
+      "inventoryTextAndNotesMatchSavedXml": true,
+      "workbookParity": {
+        "charts": 4,
+        "references": 44,
+        "cellsCompared": 78
+      }
+    }
+  ],
+  "sourceBaselineLessons": "e734532a42b27732ac25ce990fc9448b12309d28",
+  "sourceChapterFilesUnchangedFromFoundationAudit": [
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/00 Inleiding.md",
+      "sha256": "d2c464a8a5976e32f4ea8dd041e7c07d60bacb4c62f865df6b73a2b3cb19ccf5",
+      "matchesRequestedLessonCommit": true
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/06 Overzicht.md",
+      "sha256": "6e04df26b8bca31bfb47d8ea67475f796c373f9800883e2f785f5abcd52f1330",
+      "matchesRequestedLessonCommit": true
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/4.1.1 manuscript.md",
+      "sha256": "7d80849940920bc83166692f39d89fec1c3eb909453ade5b6b55336aab17e797",
+      "matchesRequestedLessonCommit": true
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/4.1.2 manuscript.md",
+      "sha256": "739fc8fc31d2df3fcce02832e72df341c5be7544ff6c90fbe089e2f7cee99a3d",
+      "matchesRequestedLessonCommit": true
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/4.1.3 manuscript.md",
+      "sha256": "c4360e8f4b2bbf0ea576f80d8f2bb323c2fe34a7d5f90c375203ca629bddbfc1",
+      "matchesRequestedLessonCommit": true
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/4.1.4 manuscript.md",
+      "sha256": "65dd2923fd9c6544fce1e1a26d30969bf34abc4f0bd9bd8ad85cd3198db752b0",
+      "matchesRequestedLessonCommit": true
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/4.1.5 manuscript.md",
+      "sha256": "a75813115abe7117b6a0044960fc03a4861084949d86073b5e118e984d24bf3f",
+      "matchesRequestedLessonCommit": true
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/Antwoorden.md",
+      "sha256": "4048fa122764663e445145463d63bf4b9b2367b1aa8e34f0e62d1cf5486e394f",
+      "matchesRequestedLessonCommit": true
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/Docenteninformatie.md",
+      "sha256": "0dd614ec1357e51a40dd19b6bc0480549e37c912b2de56ca403a31c7cb0e7e92",
+      "matchesRequestedLessonCommit": true
+    }
+  ],
+  "routes": [
+    {
+      "id": "4.1.1",
+      "title": "Toetreding, uittreding en langetermijnevenwicht",
+      "type": "theory",
+      "manuscript": "edities/books34-v3/books/book-4/chapters/4.1/4.1.1 manuscript.md",
+      "manuscriptSha256": "7d80849940920bc83166692f39d89fec1c3eb909453ade5b6b55336aab17e797",
+      "bookPages": [
+        7,
+        15
+      ],
+      "chapterLocalPages": [
+        3,
+        11
+      ],
+      "startPage": 11,
+      "start": [
+        "1",
+        "2"
+      ],
+      "basis": [
+        "3",
+        "4"
+      ],
+      "independent": [
+        "5",
+        "6"
+      ],
+      "target": "7",
+      "targetSourceAndQuestionPages": [
+        14
+      ],
+      "answerTargetPages": [
+        6
+      ],
+      "bonus": [
+        "8"
+      ],
+      "repetition": [
+        "9",
+        "10"
+      ],
+      "allExercises": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "homework": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "openingStatus": "2: new normal-remuneration/economic-profit distinction; support p.7."
+    },
+    {
+      "id": "4.1.2",
+      "title": "Monopolie: kenmerken",
+      "type": "theory",
+      "manuscript": "edities/books34-v3/books/book-4/chapters/4.1/4.1.2 manuscript.md",
+      "manuscriptSha256": "739fc8fc31d2df3fcce02832e72df341c5be7544ff6c90fbe089e2f7cee99a3d",
+      "bookPages": [
+        16,
+        23
+      ],
+      "chapterLocalPages": [
+        12,
+        19
+      ],
+      "startPage": 19,
+      "start": [
+        "11",
+        "12"
+      ],
+      "basis": [
+        "13",
+        "14",
+        "15"
+      ],
+      "independent": [
+        "16",
+        "17"
+      ],
+      "target": "18",
+      "targetSourceAndQuestionPages": [
+        22
+      ],
+      "answerTargetPages": [
+        10
+      ],
+      "bonus": [
+        "19"
+      ],
+      "repetition": [
+        "20"
+      ],
+      "allExercises": [
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20"
+      ],
+      "homework": [
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18"
+      ],
+      "openingStatus": "12: apply new monopoly/market-boundary definition; support pp.16-17."
+    },
+    {
+      "id": "4.1.3",
+      "title": "Marginale opbrengst bij monopolie",
+      "type": "theory",
+      "manuscript": "edities/books34-v3/books/book-4/chapters/4.1/4.1.3 manuscript.md",
+      "manuscriptSha256": "c4360e8f4b2bbf0ea576f80d8f2bb323c2fe34a7d5f90c375203ca629bddbfc1",
+      "bookPages": [
+        24,
+        34
+      ],
+      "chapterLocalPages": [
+        20,
+        30
+      ],
+      "startPage": 29,
+      "start": [
+        "21",
+        "22"
+      ],
+      "basis": [
+        "23",
+        "24",
+        "25"
+      ],
+      "independent": [
+        "26",
+        "27"
+      ],
+      "target": "28",
+      "targetSourceAndQuestionPages": [
+        33
+      ],
+      "answerTargetPages": [
+        14,
+        15
+      ],
+      "bonus": [
+        "29"
+      ],
+      "repetition": [
+        "30"
+      ],
+      "allExercises": [
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30"
+      ],
+      "homework": [
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28"
+      ],
+      "openingStatus": "21 explicitly supplies the prior limited derivative rule. 22 references Luma worked example and needs pp.24,28; new uniform-price loss on earlier units."
+    },
+    {
+      "id": "4.1.4",
+      "title": "Winstmaximalisatie bij monopolie",
+      "type": "theory",
+      "manuscript": "edities/books34-v3/books/book-4/chapters/4.1/4.1.4 manuscript.md",
+      "manuscriptSha256": "65dd2923fd9c6544fce1e1a26d30969bf34abc4f0bd9bd8ad85cd3198db752b0",
+      "bookPages": [
+        35,
+        45
+      ],
+      "chapterLocalPages": [
+        31,
+        41
+      ],
+      "startPage": 41,
+      "start": [
+        "31",
+        "32"
+      ],
+      "basis": [
+        "33",
+        "34",
+        "35"
+      ],
+      "independent": [
+        "36",
+        "37"
+      ],
+      "target": "38",
+      "targetSourceAndQuestionPages": [
+        44
+      ],
+      "answerTargetPages": [
+        21,
+        22
+      ],
+      "bonus": [
+        "39"
+      ],
+      "repetition": [
+        "40"
+      ],
+      "allExercises": [
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40"
+      ],
+      "homework": [
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38"
+      ],
+      "openingStatus": "31-32 retrieve 4.1.3 P/GO versus MO and 3.2.3 marginal choice; do not claim whole monopoly optimization already taught."
+    },
+    {
+      "id": "4.1.5",
+      "title": "Gemengde opgaven: concurrentie en monopolie",
+      "type": "mixed",
+      "manuscript": "edities/books34-v3/books/book-4/chapters/4.1/4.1.5 manuscript.md",
+      "manuscriptSha256": "a75813115abe7117b6a0044960fc03a4861084949d86073b5e118e984d24bf3f",
+      "bookPages": [
+        46,
+        50
+      ],
+      "chapterLocalPages": [
+        42,
+        46
+      ],
+      "startPage": 46,
+      "start": [
+        "41"
+      ],
+      "basis": [],
+      "independent": [],
+      "target": "45",
+      "targetSourceAndQuestionPages": [
+        48,
+        49
+      ],
+      "answerTargetPages": [
+        25,
+        26
+      ],
+      "bonus": [],
+      "repetition": [],
+      "allExercises": [
+        "41",
+        "41A",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48"
+      ],
+      "homework": [
+        "41",
+        "41A",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48"
+      ],
+      "openingStatus": "Mixed retrieval; complete set includes inserted 41A."
+    }
+  ],
+  "recomputedMath": {
+    "411target": {
+      "initial": {
+        "q": 150.0,
+        "P": 10.0,
+        "TO": 1500.0,
+        "TK": 1250.0,
+        "profit": 250.0,
+        "profitAtZero": -200.0
+      },
+      "longRun": {
+        "q": 100.0,
+        "P": 8.0,
+        "TO": 800.0,
+        "TK": 800.0,
+        "profit": 0.0,
+        "profitAtZero": -200.0
+      },
+      "marketQThousands": 20,
+      "firmsAtLongRun": 200,
+      "aggregateInverseSupply": "P = 4 + 0.20 Q; Q in thousands of kg/week; unconstrained branch"
+    },
+    "412target": {
+      "P_at_60": 18.0,
+      "P_at_120": 12.0,
+      "q_at_18": 60.0
+    },
+    "413target": {
+      "TO_at_10_20_30": [
+        250.0,
+        400.0,
+        450.0
+      ],
+      "intervalAverage_20_30": 5,
+      "MO_at_20": 10,
+      "extraSales": 150,
+      "oldQuantityRevenueReduction": 100,
+      "netChange": 50
+    },
+    "414own": {
+      "q": 30.0,
+      "P": 27.0,
+      "TO": 810.0,
+      "TK": 495.0,
+      "profit": 315.0,
+      "profitAtZero": -90.0
+    },
+    "414capacity20": {
+      "q": 20.0,
+      "P": 30.0,
+      "TO": 600.0,
+      "TK": 330.0,
+      "profit": 270.0,
+      "profitAtZero": -90.0
+    },
+    "414ownHigherFixedCosts": {
+      "q": 30.0,
+      "P": 27.0,
+      "TO": 810.0,
+      "TK": 645.0,
+      "profit": 165.0,
+      "profitAtZero": -240.0
+    },
+    "414ownBothChanges": {
+      "q": 40.0,
+      "P": 33.0,
+      "TO": 1320.0,
+      "TK": 840.0,
+      "profit": 480.0,
+      "profitAtZero": -240.0
+    },
+    "414target": {
+      "q": 40.0,
+      "P": 30.0,
+      "TO": 1200.0,
+      "TK": 800.0,
+      "profit": 400.0,
+      "profitAtZero": -200.0
+    },
+    "415own": {
+      "q": 28.0,
+      "P": 19.0,
+      "TO": 532.0,
+      "TK": 310.0,
+      "profit": 222.0,
+      "profitAtZero": -72.0
+    },
+    "415targetMonopolist": {
+      "q": 40.0,
+      "P": 24.0,
+      "TO": 960.0,
+      "TK": 600.0,
+      "profit": 360.0,
+      "profitAtZero": -120.0
+    },
+    "415targetSeparatePriceTaker": {
+      "q": 50.0,
+      "P": 18.0,
+      "TO": 900.0,
+      "TK": 770.0,
+      "profit": 130.0,
+      "profitAtZero": -120.0
+    }
+  },
+  "visualReview": [
+    {
+      "paragraph": "411",
+      "slide": 25,
+      "path": "C:\\wt\\ppt\\.book4\\review\\preview-411-v4\\slide-25.png",
+      "sha256": "b0551fb3755af227cfae0de756cbb82fd58d5cd3d93034498ae6566c3d3a02ef"
+    },
+    {
+      "paragraph": "412",
+      "slide": 11,
+      "path": "C:\\wt\\ppt\\.book4\\review\\412\\slide-11.png",
+      "sha256": "d09f43ace69706018060193330caaf16beea32161be070cce612c7c4c6e01db2"
+    },
+    {
+      "paragraph": "413",
+      "slide": 13,
+      "path": "C:\\wt\\ppt\\.book4\\review\\413\\slide-13.png",
+      "sha256": "fc4b0b15eb70d2a5afe054e7d2ec23612dfee8468c9ff7f3caa1e5804ddbbe1c"
+    },
+    {
+      "paragraph": "414",
+      "slide": 9,
+      "path": "C:\\wt\\ppt\\.book4\\review\\preview-414-v2\\slide-09.png",
+      "sha256": "016e69c8a3c0fe89ff18c3f5b8a79838fe8cb0555445e637f312ecccbcbaa111"
+    },
+    {
+      "paragraph": "414",
+      "slide": 25,
+      "path": "C:\\wt\\ppt\\.book4\\review\\preview-414-v2\\slide-25.png",
+      "sha256": "74fb3f29f1bed4aac4d26a0b4dc9a97dbff827c0ff6932551a2854cc3fc6998a"
+    },
+    {
+      "paragraph": "415",
+      "slide": 4,
+      "path": "C:\\wt\\ppt\\.book4\\review\\preview-415-v4\\slide-04.png",
+      "sha256": "c55be5102c6809f9fedfc703647b045ad717faaa56d46c559a79ad50b7bd4e08"
+    },
+    {
+      "paragraph": "415",
+      "slide": 21,
+      "path": "C:\\wt\\ppt\\.book4\\review\\preview-415-v4\\slide-21.png",
+      "sha256": "71df360551036a18e7d49e3d59f2595984a4df74965e397574e81bc8b2ce96cb"
+    }
+  ],
+  "actualXmlTextNotesSlidesChecked": 132,
+  "limits": [
+    "All slide text and substantive notes reviewed; not a full visual review.",
+    "Seven supplied PNGs individually viewed; no complete PDF/native fidelity rerun. PDF page counts and slide25 PDF wording checked.",
+    "No new builder reproduction or broad source-code audit; source inspection scoped to precision concern and pedagogy references.",
+    "No merge authority, classroom timing measurement or textbook approval.",
+    "Current chapter41 binding uses coordinator411-r1 plus frozen412/413/414/415. 421 was reviewed only for the citation delta, not its whole instructional content."
+  ],
+  "inspected411BuilderSha256": "6863aa5443d31432aa81f85ce0839a774e6c96bd3d4515503222cd6ec27b4596",
+  "inspected411ManifestSha256": "a2b742e32dc004f3dd9eebb4f78facf5eca715a48ca3a0ef7ddf4f65aaa6cb89",
+  "initialVerdict": "One P3 precision finding; no blocking prerequisite, target-math or model-handoff gap found in reviewed chapter sequence. Candidates are not final-bound.",
+  "boundedFollowup": {
+    "date": "2026-10-01T17:09:52.049573+00:00",
+    "repairs": [
+      {
+        "paragraph": "411",
+        "kind": "coordinator precision wording repair",
+        "verdict": "PASS within bounded repair scope",
+        "pptx": "C:\\wt\\ppt\\.book4\\repairs\\411-r1\\final\\4.1.1 Toetreding, uittreding en langetermijnevenwicht – presentatie.pptx",
+        "pptxSha256": "e1567c845c6be83a57bfc2b41464ecc50fa04978e089a81f8970f46195da0ae3",
+        "pdf": "C:\\wt\\ppt\\.book4\\repairs\\411-r1\\final\\4.1.1 Toetreding, uittreding en langetermijnevenwicht – presentatie.pdf",
+        "pdfSha256": "689da9f11dc348db188f910ba41658613548f7adc903d52894a600ca308b2de4",
+        "inventorySha256": "776a0e2963782a2700e80f7b4d3db6ecebd083e14230f120dfb606c75daa4abb",
+        "builderSha256": "6863aa5443d31432aa81f85ce0839a774e6c96bd3d4515503222cd6ec27b4596",
+        "manifestSha256": "a2b742e32dc004f3dd9eebb4f78facf5eca715a48ca3a0ef7ddf4f65aaa6cb89",
+        "actualXmlInventoryMatch": true,
+        "changedSlideText": [
+          25
+        ],
+        "changedNotes": [
+          25
+        ],
+        "changedNativePngs": [
+          25
+        ],
+        "nativePngTotal": 29
+      },
+      {
+        "paragraph": "421",
+        "kind": "coordinator citation-only repair; no whole-deck verdict",
+        "verdict": "PASS within bounded repair scope",
+        "pptx": "C:\\wt\\ppt\\.book4\\repairs\\421-r1\\final\\4.2.1 Welvaartseffecten van monopolie – presentatie.pptx",
+        "pptxSha256": "cd6160db661fb9a81c731855817248568bc4deed8963e538e8b5a3fe96636a56",
+        "pdf": "C:\\wt\\ppt\\.book4\\repairs\\421-r1\\final\\4.2.1 Welvaartseffecten van monopolie – presentatie.pdf",
+        "pdfSha256": "cf7360c6bc659646b533c41fdb0d29cd5fc215b5591a4c3ebad87e7271a85a12",
+        "inventorySha256": "1e2454a2c487dd43937cf51b13ee65cf8a080fd950146b593944162e625d3b8e",
+        "builderSha256": "d00906b6e6eefefe7f820b39410d695e43232b561e08a6b4bca68b80effb87ea",
+        "manifestSha256": "8ce4bfa0ccce2681e006002c01a09e52457c98a1224b8d06ef072b70488eccd4",
+        "actualXmlInventoryMatch": true,
+        "changedSlideText": [],
+        "changedNotes": [
+          1,
+          5,
+          6,
+          17,
+          31
+        ],
+        "changedNativePngs": [],
+        "nativePngTotal": 31
+      }
+    ],
+    "finalColdConfirmations": [
+      {
+        "paragraph": "414",
+        "state": "frozen final cold handoff; exact reviewed candidate bytes",
+        "pptx": "C:\\wt\\ppt\\.book4\\review\\414\\4.1.4 Winstmaximalisatie bij monopolie – presentatie.pptx",
+        "pptxSha256": "4661ecfc0bf641b1b724893862b98570eda74bd0a12e7f68a81f142111fc65c0",
+        "pdf": "C:\\wt\\ppt\\.book4\\review\\414\\4.1.4 Winstmaximalisatie bij monopolie – presentatie.pdf",
+        "pdfSha256": "c6af9a6fdeb64559c010b2fdd45ee73b257108a32e135171dfabe0ebf9dd56fd",
+        "rootReviewSha256": "a7cc885658e52659a8fdca59c7b320a3ca694750d3f4ffffed8e729722e8e025"
+      },
+      {
+        "paragraph": "415",
+        "state": "frozen final cold handoff; exact reviewed candidate bytes",
+        "pptx": "C:\\wt\\ppt\\.book4\\review\\415\\4.1.5 Gemengde opgaven concurrentie en monopolie – presentatie.pptx",
+        "pptxSha256": "033f12e26fff8101098d118819eeac6e5035b571e71d0cfb9ec92e864ad14e94",
+        "pdf": "C:\\wt\\ppt\\.book4\\review\\415\\4.1.5 Gemengde opgaven concurrentie en monopolie – presentatie.pdf",
+        "pdfSha256": "71691d0016d9303e357c3d55e08d454f0b06b7253a43fc8e1cd64900ccb82921",
+        "rootReviewSha256": "e6566751f30bbb1f3a60cc1f63419da0b9dac367d37127a20b38dcd50331ad2c"
+      }
+    ],
+    "411Slide25NativeSha256": "f90fc96efff94c88711692be05d5a7bbc0983b3f885d333f3025016eaf03de2a",
+    "421ReferenceVerification": "Complete student PDF printed36 MO/MK amount,37 price on GO,38 profit,39 capacity,40 Coating Mira rising-MK example. Exact replacements only in builder/manifest; five notes corrected in actual saved package. No broader421 instructional verdict."
+  },
+  "initialLimits": [
+    "All slide text and substantive notes reviewed; not a full visual review.",
+    "Seven supplied PNGs individually viewed; no complete PDF/native fidelity rerun. PDF page counts and slide25 PDF wording checked.",
+    "No new builder reproduction or broad source-code audit; source inspection scoped to precision concern and pedagogy references.",
+    "414-v2 and415-v4 were requested candidates; no final handoff or later-byte acceptance.",
+    "No merge authority, classroom timing measurement or textbook approval."
+  ]
+}

@@ -1,0 +1,303 @@
+{
+  "calculationMethod": "Independent exact rational arithmetic from manuscript quantities; qualitative answers assessed in source-audit.md. 4.2.7 is split into two deliberately separate cases.",
+  "targets": {
+    "4.1.1": {
+      "units": "q kg/week; P EUR/kg; totals EUR/week",
+      "computed": {
+        "P0": 10,
+        "q0": 150,
+        "TO0": 1500,
+        "TK0": 1250,
+        "profit0": 250,
+        "Plong": 8,
+        "qlong": 100,
+        "TOlong": 800,
+        "TKlong": 800,
+        "profitLong": 0,
+        "normalRewardAlreadyInTK": 120,
+        "marketQ0kg": 15000,
+        "marketQlongKg": 20000
+      }
+    },
+    "4.1.2": {
+      "units": "q tickets/day; P EUR/ticket",
+      "computed": {
+        "P_at_60": 18,
+        "P_at_120": 12,
+        "q_at_P18": 60
+      }
+    },
+    "4.1.3": {
+      "units": "q kg/week; P/MO EUR/kg; TO EUR/week",
+      "computed": {
+        "TO10": 250,
+        "TO20": 400,
+        "TO30": 450,
+        "intervalMO20to30": 5,
+        "pointMO20": 10,
+        "extraSalesRevenue": 150,
+        "priceLossEarlierUnits": 100,
+        "netRevenueGain": 50
+      }
+    },
+    "4.1.4": {
+      "units": "q kg/week; P/GTK/MO/MK EUR/kg; totals EUR/week",
+      "computed": {
+        "q": 40,
+        "P": 30,
+        "MO_equals_MK": 20,
+        "TO": 1200,
+        "TK": 800,
+        "profit": 400,
+        "GTK": 20,
+        "profitAtZero": -200,
+        "wrong_q_P_equals_MK": 60,
+        "P_at60": 25,
+        "MO_at60": 10,
+        "MK_at60": 25,
+        "profit_at60": 250
+      }
+    },
+    "4.1.5": {
+      "units": "q kg/week; P EUR/kg; totals EUR/week; separate markets",
+      "computed": {
+        "monopolyq": 40,
+        "monopolyP": 24,
+        "monopolyTO": 960,
+        "monopolyTK": 600,
+        "monopolyProfit": 360,
+        "monopolyZeroProfit": -120,
+        "priceTakerq": 50,
+        "priceTakerTO": 900,
+        "priceTakerTK": 770,
+        "priceTakerProfit": 130
+      }
+    },
+    "4.2.1": {
+      "units": "Q sessions/week; P EUR/session; totals EUR/week",
+      "computed": {
+        "qm": 40,
+        "Pm": 60,
+        "qe": 60,
+        "Pe": 50,
+        "CSm": 400,
+        "PSm": 1200,
+        "profit": 1000,
+        "TSm": 1600,
+        "CSe": 900,
+        "PSe": 900,
+        "TSe": 1800,
+        "deadweight": 200,
+        "transfer": 400
+      }
+    },
+    "4.2.2": {
+      "units": "group Q visits/week; P EUR/visit; totals EUR/week",
+      "computed": {
+        "QA": 16,
+        "PA": 24,
+        "QB": 8,
+        "PB": 16,
+        "totalQ": 24,
+        "TOuniform": 480,
+        "TOgroups": 512,
+        "TVK": 192,
+        "TCK": 80,
+        "profitUniform": 208,
+        "profitGroups": 240,
+        "CSuniform": 208,
+        "CSgroups": 160,
+        "PSuniform": 288,
+        "PSgroups": 320,
+        "TSuniform": 496,
+        "TSgroups": 480,
+        "deltaTS": -16
+      }
+    },
+    "4.2.3": {
+      "units": "q meals/day; P EUR/meal; totals EUR/day",
+      "computed": {
+        "q": 48,
+        "P": 18,
+        "TO": 864,
+        "TK": 432,
+        "profit": 432,
+        "profitZero": -144
+      }
+    },
+    "4.2.4": {
+      "units": "Q services/day; P EUR/service; totals EUR/day",
+      "computed": {
+        "Q0": 30,
+        "P0": 30,
+        "CS0": 450,
+        "PS0": 450,
+        "externalAmount0": 600,
+        "social0": 300,
+        "Q1": 20,
+        "Pc": 40,
+        "Pp": 20,
+        "CS1": 200,
+        "PS1": 200,
+        "governmentSigned": 400,
+        "externalAmount1": 400,
+        "social1": 400,
+        "change": 100,
+        "lossTriangle": 100
+      }
+    },
+    "4.2.5": {
+      "units": "Q participants/month; P EUR/participant; totals EUR/month",
+      "computed": {
+        "Q0": 40,
+        "P0": 40,
+        "CS0": 400,
+        "PS0": 400,
+        "externalAmount0": 400,
+        "social0": 1200,
+        "Q1": 50,
+        "Pc": 35,
+        "Pp": 45,
+        "CS1": 625,
+        "PS1": 625,
+        "governmentSigned": -500,
+        "externalAmount1": 500,
+        "social1": 1250,
+        "change": 50,
+        "lossTriangle": 50
+      }
+    },
+    "4.2.6": {
+      "units": "Q services/day; P EUR/service; totals EUR/day",
+      "computed": {
+        "QH": 30,
+        "PcH": 35,
+        "PpH": 25,
+        "taxH": 300,
+        "socialH": 430,
+        "socialG": 410,
+        "advantageH": 20,
+        "producerAdvantageG": 300
+      }
+    },
+    "4.2.7-A": {
+      "units": "Q sessions/week; P EUR/session; totals EUR/week",
+      "computed": {
+        "qm": 20,
+        "Pm": 50,
+        "qe": 30,
+        "Pe": 40,
+        "CSm": 200,
+        "PSm": 600,
+        "profit": 500,
+        "TSm": 800,
+        "CSe": 450,
+        "PSe": 450,
+        "TSe": 900,
+        "deadweight": 100,
+        "transfer": 200
+      }
+    },
+    "4.2.7-B": {
+      "units": "Q services/day; P EUR/service; totals EUR/day; never add to A",
+      "computed": {
+        "Q0": 30,
+        "P0": 30,
+        "CS0": 450,
+        "PS0": 450,
+        "externalAmount0": 600,
+        "social0": 300,
+        "Q1": 20,
+        "Pc": 40,
+        "Pp": 20,
+        "CS1": 200,
+        "PS1": 200,
+        "governmentSigned": 400,
+        "externalAmount1": 400,
+        "social1": 400,
+        "change": 100,
+        "lossTriangle": 100
+      }
+    },
+    "4.3.1": {
+      "units": "production frames/week; labour hours/week; productivity frames/hour; labour cost EUR/frame",
+      "computed": {
+        "oldProductivity": 4,
+        "newHours": 600,
+        "oldCostPerFrame": 6,
+        "newCostPerFrame": {
+          "exact": "24/5",
+          "decimal": 4.8
+        },
+        "changeHours": 0
+      }
+    },
+    "4.3.2": {
+      "units": "population/sector counts persons, kept separate; w EUR/hour; participation percent",
+      "computed": {
+        "labourForce": 3500,
+        "grossParticipationPercent": 70,
+        "netParticipationPercent": 60,
+        "wSector": 14,
+        "LSector": 100
+      }
+    },
+    "4.3.3": {
+      "units": "region/sector counts persons, kept separate; w EUR/hour; unemployment percent",
+      "computed": {
+        "labourForce": 3000,
+        "unemploymentPercent": 10,
+        "observedDemandJobs": 2820,
+        "incorrectDifference": 180,
+        "oldw": 16,
+        "oldL": 84,
+        "neww": 13,
+        "newL": 66,
+        "demandAt16": 48,
+        "supplyAt16": 84,
+        "excessAt16": 36
+      }
+    },
+    "4.3.4": {
+      "units": "L persons; w EUR/hour; paid hours 25/person/week; payroll EUR/week",
+      "computed": {
+        "freew": 12,
+        "freeL": 100,
+        "floor": 14,
+        "demand": 80,
+        "supply": 120,
+        "excess": 40,
+        "employmentFall": 20,
+        "newEntrants": 20,
+        "oldPayroll": 30000,
+        "newPayroll": 28000,
+        "payrollChangePercent": {
+          "exact": "-20/3",
+          "decimal": -6.666666666666667
+        }
+      }
+    },
+    "4.3.5": {
+      "units": "population persons and separate sector L; w EUR/hour; unit labour cost EUR/product",
+      "computed": {
+        "population": 20000,
+        "labourForce": 14000,
+        "grossParticipationPercent": 70,
+        "unemploymentPercent": 10,
+        "oldw": 14,
+        "oldL": 100,
+        "neww": 16,
+        "newL": 120,
+        "oldCost": 3,
+        "newCost": {
+          "exact": "63/22",
+          "decimal": 2.8636363636363638
+        },
+        "costChangePercent": {
+          "exact": "-50/11",
+          "decimal": -4.545454545454546
+        }
+      }
+    }
+  }
+}

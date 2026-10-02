@@ -1,0 +1,61 @@
+{
+  "paragraph": "4.2.3",
+  "scope": "Coordinator read-only review of in-progress author candidate; not a completed cold handoff. No feedback sent to author.",
+  "reviewedAt": "2026-10-01T17:26:35.171245+00:00",
+  "pptxSha256": "aa3819e8dd117b4ca58246c49809b3489317563784bf54870f5dad4197352351",
+  "pdfSha256": "f3190fcb2926402d32c7f1d671a08146b0043b5f68f7c884f6a13a25913586dc",
+  "nativeRenderSlidesIndividuallyInspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "allSlideTextAndTeacherNotesRead": true,
+  "checks": [
+    "Read all24 native renders individually and all teacher notes, including questions/source bindings. All ordinary text/tables clear; native overview1/12/24 and14ptnotes/PDFtext checks pass.",
+    "Full current423 manuscript foundation already read. Actual start19–20p73, novel20enterprise-vs-brand supportp71 and retry in slide12 notes before basis21–22; independent23–24,target25p75,HW21–25. Bonus26/repetition27 remain extra.",
+    "Own Licht differentiated photography example P50−.5q,TK180+10q,cap60. TO50q−.5q²,MO50−q,MK10. q40P30TO1200TK580profit620 versusq0−180; marginal direction and capacity stated. Uniform price reset explicitly after422group discrimination.",
+    "Market classification taught2–4 before applying same firm calculus5–9. Many independent differentiated suppliers do not imply price taking; downward firm GO does not imply monopoly. Oligopoly reaction assumptions stated10,23; no universal oligopoly function invented.",
+    "Full target sources13–14 and all five questions15–16 before first answer17. Source/classification preserved. Puurq48P18TO864TK432profit432; q0−144 and cap80profit176. Derivatives and marginal sign checks correct. All units per firm/day, no unjustified marketQ or welfare comparison."
+  ],
+  "findings": [
+    {
+      "severity": "P3",
+      "slides": [
+        1,
+        2,
+        12,
+        24
+      ],
+      "finding": "Prerequisite citations use chapter-local412p12/13 and413p21–22 without labeling, while source note promises printed full-book. Correct to412p16/17 and413p25–26 after verifying source pages."
+    },
+    {
+      "severity": "P2",
+      "slides": [
+        8,
+        20
+      ],
+      "finding": "GO=P label touches/crosses descending demand curve, clearest G on target slide20. Check final labels also MO7/8/20."
+    }
+  ]
+}

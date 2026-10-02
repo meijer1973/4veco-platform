@@ -1,0 +1,13 @@
+{
+  "scope": "Explicit disposition of author files outside paragraph-local builder/output paths. Never combine shared implementation edits automatically.",
+  "decisions": [
+    {
+      "paragraph": "4.2.4",
+      "path": "reports/review-gates/classroom-presentation-424-20261001.md",
+      "sourceCommit": "4eb1af22e46ec2661fbadf58bcf5de26682ae804",
+      "sha256": "ef3bddf65dda771d686505ae55c6fc8e34ccf64c23fd56a1562b2b207f631b77",
+      "action": "include-unchanged",
+      "reason": "Read the full bounded author-run independent-review report. Its artifact hashes and scope agree with the completed handoff independently reviewed by the coordinator. Retain as paragraph evidence; this does not substitute for serialized batch review and makes no merge or classroom-effectiveness claim."
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "checkedAt": "2026-10-01T19:17:12.832937+00:00",
+  "scope": "Individual author PRs preserve original handoffs. Final consolidated pair, once reviewed and published, will carry selected/repaired delivery. No Book4 merge authorization.",
+  "pullRequests": [
+    {
+      "repository": "meijer1973/4veco-platform",
+      "headRefName": "codex/ppt-book4-retest-422-20261001",
+      "headRefOid": "cf241cf7be7d00ef7640ffb97d8d0fe7792a1dea",
+      "number": 300,
+      "state": "OPEN",
+      "title": "Build classroom PowerPoint for paragraph 4.2.2",
+      "url": "https://github.com/meijer1973/4veco-platform/pull/300"
+    },
+    {
+      "repository": "meijer1973/4veco-platform",
+      "headRefName": "codex/ppt-book4-433-20261001",
+      "headRefOid": "1b9fd94f1251f808a0706384da3eb1df5acdb6f6",
+      "number": 299,
+      "state": "OPEN",
+      "title": "Build classroom PowerPoint for paragraph 4.3.3",
+      "url": "https://github.com/meijer1973/4veco-platform/pull/299"
+    },
+    {
+      "repository": "meijer1973/4veco-platform",
+      "headRefName": "codex/ppt-book4-431-20261001",
+      "headRefOid": "6ef49d8e0a100fb1fa29bd1a2fc0f09fc82fb2a7",
+      "number": 298,
+      "state": "OPEN",
+      "title": "Build classroom PowerPoint source for paragraph 4.3.1",
+      "url": "https://github.com/meijer1973/4veco-platform/pull/298"
+    },
+    {
+      "repository": "meijer1973/4veco-platform",
+      "headRefName": "codex/ppt-book4-426-20261001",
+      "headRefOid": "acefe7313f94c95541c1a4b723a96160e57810f6",
+      "number": 297,
+      "state": "OPEN",
+      "title": "Build classroom PowerPoint for paragraph 4.2.6",
+      "url": "https://github.com/meijer1973/4veco-platform/pull/297"
+    },
+    {
+      "repository": "meijer1973/4veco-platform",
+      "headRefName": "codex/ppt-book4-425-20261001",
+      "headRefOid": "405340c33252748441e5e4415d7e2ecb09c54689",
+      "number": 296,
+      "state": "OPEN",
+      "title": "Add classroom PowerPoint source for paragraph 4.2.5",
+      "url": "https://github.com/meijer1973/4veco-platform/pull/296"
+    },
+    {
+      "repository": "meijer1973/4veco-platform",
+      "headRefName": "codex/ppt-book4-423-20261001",
+      "headRefOid": "9b66f738852eebb00fbaf4d1fff10fbe6232908a",
+      "number": 295,
+      "state": "OPEN",
+      "title": "Build classroom PowerPoint for paragraph 4.2.3",
+      "url": "https://github.com/meijer1973/4veco-platform/pull/295"
+    },
+    {
+      "repository": "meijer1973/4veco-platform",
+      "headRefName": "codex/ppt-book4-424-20261001",
+      "headRefOid": "4eb1af22e46ec2661fbadf58bcf5de26682ae804",
+      "number": 294,
+      "state": "OPEN",
+      "title": "Add classroom PowerPoint source for paragraph 4.2.4",
+      "url": "https://github.com/meijer1973/4veco-platform/pull/294"
+    },
+    {
+      "repository": "meijer1973/4veco-platform",
+      "headRefName": "codex/ppt-book4-421-20261001",
+      "headRefOid": "75226b7c1f9edfd046a8632105ebe1dfc5222968",
+      "number": 293,
+      "state": "OPEN",
+      "title": "Add classroom PowerPoint for paragraph 4.2.1",
+      "url": "https://github.com/meijer1973/4veco-platform/pull/293"
+    },
+    {
+      "repository": "meijer1973/4veco-platform",
+      "headRefName": "codex/ppt-book4-414-20261001",
+      "headRefOid": "4f584737056354949cbb09f05bad369cd809af80",
+      "number": 292,
+      "state": "OPEN",
+      "title": "Build the classroom PowerPoint for paragraph 4.1.4",
+      "url": "https://github.com/meijer1973/4veco-platform/pull/292"
+    },
+    {
+      "repository": "meijer1973/4veco-platform",
+      "headRefName": "codex/ppt-book4-415-20261001",
+      "headRefOid": "d3527f736e290d4fe9c423994dda4d5b8a5e8b50",
+      "number": 291,
+      "state": "OPEN",
+      "title": "Build classroom PowerPoint for paragraph 4.1.5",
+      "url": "https://github.com/meijer1973/4veco-platform/pull/291"
+    },
+    {
+      "repository": "meijer1973/4veco-platform",
+      "headRefName": "codex/ppt-book4-413-20261001",
+      "headRefOid": "d9b60147c64a0cdcdc136b1f95dc4c61ee7e7f77",
+      "number": 290,
+      "state": "OPEN",
+      "title": "Build classroom PowerPoint for paragraph 4.1.3",
+      "url": "https://github.com/meijer1973/4veco-platform/pull/290"
+    },
+    {
+      "repository": "meijer1973/4veco-platform",
+      "headRefName": "codex/ppt-book4-411-20261001",
+      "headRefOid": "2e09418db456cf78fb440c923d64b729590bc39e",
+      "number": 289,
+      "state": "OPEN",
+      "title": "Build classroom PowerPoint for Book 4 paragraph 4.1.1",
+      "url": "https://github.com/meijer1973/4veco-platform/pull/289"
+    },
+    {
+      "repository": "meijer1973/4veco-lessen",
+      "headRefName": "codex/ppt-book4-retest-422-20261001",
+      "headRefOid": "b3901b222fec37e4c9c1cfa5591ca212a84d441b",
+      "number": 97,
+      "state": "OPEN",
+      "title": "Add classroom PowerPoint and PDF for paragraph 4.2.2",
+      "url": "https://github.com/meijer1973/4veco-lessen/pull/97"
+    },
+    {
+      "repository": "meijer1973/4veco-lessen",
+      "headRefName": "codex/ppt-book4-433-20261001",
+      "headRefOid": "5b299bde068735b3524f26fa9c89dc04960a5301",
+      "number": 96,
+      "state": "OPEN",
+      "title": "Add classroom PowerPoint and PDF for paragraph 4.3.3",
+      "url": "https://github.com/meijer1973/4veco-lessen/pull/96"
+    },
+    {
+      "repository": "meijer1973/4veco-lessen",
+      "headRefName": "codex/ppt-book4-431-20261001",
+      "headRefOid": "10697e52f97d5ac7f35a0e63717cc21b24f5a5ca",
+      "number": 95,
+      "state": "OPEN",
+      "title": "Add paragraph 4.3.1 classroom PowerPoint and slide PDF",
+      "url": "https://github.com/meijer1973/4veco-lessen/pull/95"
+    },
+    {
+      "repository": "meijer1973/4veco-lessen",
+      "headRefName": "codex/ppt-book4-426-20261001",
+      "headRefOid": "4738e7d600a9d49b454a52aecb9bbfc51efe656e",
+      "number": 94,
+      "state": "OPEN",
+      "title": "Add classroom PowerPoint and PDF for paragraph 4.2.6",
+      "url": "https://github.com/meijer1973/4veco-lessen/pull/94"
+    },
+    {
+      "repository": "meijer1973/4veco-lessen",
+      "headRefName": "codex/ppt-book4-425-20261001",
+      "headRefOid": "999c34ea64d1407b040976a45bdc2fec23f0c479",
+      "number": 93,
+      "state": "OPEN",
+      "title": "Add paragraph 4.2.5 classroom PowerPoint and PDF",
+      "url": "https://github.com/meijer1973/4veco-lessen/pull/93"
+    },
+    {
+      "repository": "meijer1973/4veco-lessen",
+      "headRefName": "codex/ppt-book4-424-20261001",
+      "headRefOid": "e20f139370623178ed24bfe31483843855511d6f",
+      "number": 92,
+      "state": "OPEN",
+      "title": "Add paragraph 4.2.4 classroom PowerPoint and slide PDF",
+      "url": "https://github.com/meijer1973/4veco-lessen/pull/92"
+    },
+    {
+      "repository": "meijer1973/4veco-lessen",
+      "headRefName": "codex/ppt-book4-423-20261001",
+      "headRefOid": "310b00a0a5ff11016a6fda2989962848ffa34a34",
+      "number": 91,
+      "state": "OPEN",
+      "title": "Build classroom PowerPoint for paragraph 4.2.3",
+      "url": "https://github.com/meijer1973/4veco-lessen/pull/91"
+    },
+    {
+      "repository": "meijer1973/4veco-lessen",
+      "headRefName": "codex/ppt-book4-421-20261001",
+      "headRefOid": "82802ac0f428b64b4f385384e9e22eec69b0f93b",
+      "number": 90,
+      "state": "OPEN",
+      "title": "Add reviewed PowerPoint and PDF for paragraph 4.2.1",
+      "url": "https://github.com/meijer1973/4veco-lessen/pull/90"
+    },
+    {
+      "repository": "meijer1973/4veco-lessen",
+      "headRefName": "codex/ppt-book4-414-20261001",
+      "headRefOid": "140476bd1819abddf4763d8a9c6d6e07eff66e81",
+      "number": 89,
+      "state": "OPEN",
+      "title": "Add paragraph 4.1.4 classroom PowerPoint and PDF",
+      "url": "https://github.com/meijer1973/4veco-lessen/pull/89"
+    },
+    {
+      "repository": "meijer1973/4veco-lessen",
+      "headRefName": "codex/ppt-book4-413-20261001",
+      "headRefOid": "09ef1c752585330a5f4da22710aef1ab797e2bd3",
+      "number": 88,
+      "state": "OPEN",
+      "title": "Add paragraph 4.1.3 classroom PowerPoint and PDF",
+      "url": "https://github.com/meijer1973/4veco-lessen/pull/88"
+    },
+    {
+      "repository": "meijer1973/4veco-lessen",
+      "headRefName": "codex/ppt-book4-411-20261001",
+      "headRefOid": "ddd1c159f54dfe13409b5da79c56fb1c98ddc85c",
+      "number": 87,
+      "state": "OPEN",
+      "title": "Add classroom PowerPoint and PDF for paragraph 4.1.1",
+      "url": "https://github.com/meijer1973/4veco-lessen/pull/87"
+    }
+  ]
+}

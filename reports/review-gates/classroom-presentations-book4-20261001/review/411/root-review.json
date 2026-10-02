@@ -1,0 +1,26 @@
+{
+  "paragraph": "4.1.1",
+  "verdict": "PASS",
+  "scope": "Independent coordinator review of completed initial cold handoff. Author performed self-review and repairs before handoff; no coordinator feedback or content repair.",
+  "pptxSha256": "d3d0ecb395c17295ef0450db95ed025a9716778513d2b05ee2cc7aac5c686ac8",
+  "pdfSha256": "c9c9eda87b85ce1ca66d4bd41bd5bb35bcb2c78160c3569c69bd1d76b0515c2f",
+  "nativeRenderBinding": ".book4\\review\\preview-411-v4\\preview-bindings.json",
+  "previousCoverage": ".book4\\review\\preview-411-v3\\root-preview-review.json",
+  "changedNativeSlidesIndividuallyReinspected": [
+    7,
+    8,
+    13,
+    18,
+    25
+  ],
+  "remainingNativeSlidesByteIdenticalToReviewedPredecessor": 24,
+  "allSlideTextAndNotesIdenticalToReadPredecessor": true,
+  "unresolvedFindings": [],
+  "sourceFollowups": [
+    "SRC-411-CAP-01: inherited target graph extends beyond aggregate capacity; notes restrict relevant range, assessed answers feasible, sealed source unchanged."
+  ],
+  "limitations": [
+    "Desk review, no classroom timing or learning outcome evidence.",
+    "Shared filesystem cold authors are separate fresh threads/worktrees, not OS-isolated."
+  ]
+}

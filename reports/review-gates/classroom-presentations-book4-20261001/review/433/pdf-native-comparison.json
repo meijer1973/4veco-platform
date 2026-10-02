@@ -1,0 +1,149 @@
+{
+  "scope": "Compare a delivered PDF with already-inspected saved-PPTX native renders. Pixel comparison supports PDF consistency; it does not replace individual native-render review.",
+  "pptxSha256": "68432489e8021d049ffea929140e387fa47947b21774522dc8ecc7f148724ed7",
+  "pdfSha256": "4394b8376c3afdb38136a45802d21b16f13f1a9c868de42a9229bf6e8660e01b",
+  "nativeDirectory": ".book4\\review\\preview-433-v2",
+  "pages": [
+    {
+      "slide": 1,
+      "nativePngSha256": "93f7e5e69012eb1cf9ce2d411aade36ca7eb52c44a27b7c49a7ccdae53b702c6",
+      "meanAbsoluteRgbDifference": 2.1069608796296295
+    },
+    {
+      "slide": 2,
+      "nativePngSha256": "0663b3466d668f91463e135ee4e511aad35f83e651e9628788d98210d4d8a975",
+      "meanAbsoluteRgbDifference": 0.749287037037037
+    },
+    {
+      "slide": 3,
+      "nativePngSha256": "11591d67d635720ccdeaf1c5b24f123e4e56c334e91a13274478ae2f92ecc45e",
+      "meanAbsoluteRgbDifference": 1.5008550925925925
+    },
+    {
+      "slide": 4,
+      "nativePngSha256": "bfe700f50ae69f1f522487152c366dad927939e0d37c6948ce763b3b4165a93a",
+      "meanAbsoluteRgbDifference": 1.5456972222222223
+    },
+    {
+      "slide": 5,
+      "nativePngSha256": "d37b07a4c6ac57aa74cf6f28ae0eaa23b3aceeba216cdcd246a38023f8674701",
+      "meanAbsoluteRgbDifference": 1.5067162037037036
+    },
+    {
+      "slide": 6,
+      "nativePngSha256": "f1a9e674665e8e058ae6126635f986ded55127b8b7b86e967a7c9a41da7a56dc",
+      "meanAbsoluteRgbDifference": 2.217716898148148
+    },
+    {
+      "slide": 7,
+      "nativePngSha256": "c910e5cf5770e009b36b5a2edd653285bf1efdb2f7f139b9631bdbd3de0ec151",
+      "meanAbsoluteRgbDifference": 1.5077930555555557
+    },
+    {
+      "slide": 8,
+      "nativePngSha256": "4bd603c4aece15738c2106c6759fb6720353a368aa693593c55b25144ddf3686",
+      "meanAbsoluteRgbDifference": 1.0038921296296297
+    },
+    {
+      "slide": 9,
+      "nativePngSha256": "c51997448a461f199fde703a19073958d9a882279e3737a7f2b28483acbf21d5",
+      "meanAbsoluteRgbDifference": 1.324850925925926
+    },
+    {
+      "slide": 10,
+      "nativePngSha256": "5654630ef7db6d05257fae94db0cb401f813700892ed218b7a4cf99b3dbc64ab",
+      "meanAbsoluteRgbDifference": 0.5787585648148148
+    },
+    {
+      "slide": 11,
+      "nativePngSha256": "0758480bbde87e53a1840b69dd3b057fabb463611a23a951c4c88312aa3b9f4c",
+      "meanAbsoluteRgbDifference": 1.179392361111111
+    },
+    {
+      "slide": 12,
+      "nativePngSha256": "6d5f656f16aedbb7bab3aa413d38c170fce382f1a31c9f7fa813d5a1f09d3c52",
+      "meanAbsoluteRgbDifference": 0.824694212962963
+    },
+    {
+      "slide": 13,
+      "nativePngSha256": "091590304896ff220604cc948e52a9c5406886cf86903d03d19dfd7f425e9b4e",
+      "meanAbsoluteRgbDifference": 1.161344212962963
+    },
+    {
+      "slide": 14,
+      "nativePngSha256": "8948451434b2f82ed170d331c49f1201e15eff42a7dd0da07d16ba6ab623bea6",
+      "meanAbsoluteRgbDifference": 1.6836414351851852
+    },
+    {
+      "slide": 15,
+      "nativePngSha256": "125a2e773053b1befc1bdb56c575d32302fa54bc42d9696a4b2f8af9241e0891",
+      "meanAbsoluteRgbDifference": 0.6448601851851852
+    },
+    {
+      "slide": 16,
+      "nativePngSha256": "bc6583c99289ed3498f2754e2b5349f8ddc4354dd31cb6375a9531a1a0d24c4b",
+      "meanAbsoluteRgbDifference": 2.0951039351851852
+    },
+    {
+      "slide": 17,
+      "nativePngSha256": "1df689e2a389b76b13a235e31cc46b6d5eb23280cdbd285c42b9c9168976898c",
+      "meanAbsoluteRgbDifference": 1.1885768518518518
+    },
+    {
+      "slide": 18,
+      "nativePngSha256": "8dc79ba81b5374451bc36a3cc1049457143f822b5ebd2e08c96fd6899e11533b",
+      "meanAbsoluteRgbDifference": 1.7265185185185186
+    },
+    {
+      "slide": 19,
+      "nativePngSha256": "1ceca9cd7b41acb96c80e3b54b3ebd44e2cd8e76531ac87dcd8c7093bdd050d7",
+      "meanAbsoluteRgbDifference": 1.0228203703703704
+    },
+    {
+      "slide": 20,
+      "nativePngSha256": "fd3b5865db1801b914e5b85c0395eb2b961b15b77a3007712ef249616e0ca6cc",
+      "meanAbsoluteRgbDifference": 1.1282773148148149
+    },
+    {
+      "slide": 21,
+      "nativePngSha256": "759ddd9ace6ee0d2099481d2fea45db7099ed5e08496bbcdacfb546936ac8a38",
+      "meanAbsoluteRgbDifference": 0.9198502314814815
+    },
+    {
+      "slide": 22,
+      "nativePngSha256": "52743e36e368527e175dd13e8237f510c11475f44a11b60f7037a480216fb88f",
+      "meanAbsoluteRgbDifference": 1.1999194444444445
+    },
+    {
+      "slide": 23,
+      "nativePngSha256": "0e8c66e2d328883e38bc0c0783800ab1c39f2fba95f9d314c04f47a46401a45a",
+      "meanAbsoluteRgbDifference": 0.8514696759259259
+    },
+    {
+      "slide": 24,
+      "nativePngSha256": "45091973574f23349a3bd5b810bb27e94698050e30dca195038b8e31a4afb704",
+      "meanAbsoluteRgbDifference": 1.3472900462962962
+    },
+    {
+      "slide": 25,
+      "nativePngSha256": "7797fe89a8ce39da0e291d4863cd7db6813d15c4e98acd5a63f52cf64bd87363",
+      "meanAbsoluteRgbDifference": 0.8269046296296296
+    },
+    {
+      "slide": 26,
+      "nativePngSha256": "3281b7c88369f77f4604dc01dedcbee267fa377770836f2111501071d212481d",
+      "meanAbsoluteRgbDifference": 1.3280768518518518
+    },
+    {
+      "slide": 27,
+      "nativePngSha256": "a3c22596ea06efad14bb4cad29844b7990c3ef96b355e6a13bb8b28dd944018f",
+      "meanAbsoluteRgbDifference": 1.6143472222222222
+    },
+    {
+      "slide": 28,
+      "nativePngSha256": "d9c24e974c50dafb1b1f64faf5b470977b2482503ac4bc94ed7eee54d4cada5e",
+      "meanAbsoluteRgbDifference": 2.121934490740741
+    }
+  ],
+  "maximumMeanAbsoluteRgbDifference": 2.217716898148148
+}

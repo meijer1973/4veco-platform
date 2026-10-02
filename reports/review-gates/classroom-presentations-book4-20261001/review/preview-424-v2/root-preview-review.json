@@ -1,0 +1,59 @@
+{
+  "paragraph": "4.2.4",
+  "scope": "Coordinator read-only review of in-progress author candidate; not a completed cold handoff. No feedback sent to author.",
+  "reviewedAt": "2026-10-01T17:26:35.187874+00:00",
+  "pptxSha256": "9d28507ddca9b5ae3644a1a57049229054643298d0cc15bd34f4a5d6323fd243",
+  "pdfSha256": "93c3bfb11de34a770b20add1e04a12c9ef604ae897d47d7bfcd8f8424752830a",
+  "nativeRenderSlidesIndividuallyInspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26
+  ],
+  "allSlideTextAndTeacherNotesRead": true,
+  "checks": [
+    "Read all26 native renders individually and all teacher notes, including questions/source bindings. Non-graph text/tables clear; native overview1/15/26 and14ptnotes/PDFtext checks pass.",
+    "Full current424 manuscript foundation already read. Actual start28–29p83;28retrievesBook3tax,29newexternality supports definitionp77 and retry14/15notes before basis30–31,independent32–33,target34p86,HW30–34. Source localoffset52 explicitly distinguished.",
+    "New external third-party cost taught2; supply privateMK remains distinct from socialMK before incentive5. Own coatingPc80−Q,Pp16+Q,damage16,Q0=32P48; socialMK32+Q,Qe24. AtQ28 value52vs socialcost60. Loss triangle vertices(24,56),(32,48),(32,64),area64.",
+    "Own beforeCS512PS512damage512social512. Tax16 givesQ24Pc56Pp40,CS288PS288receipts384damage384social576,gain64. Horizontal arrow atPc80 A64→A+t48 distinct from verticaltaxatQ24. Receipt not compensation; externaldamage remainsreal. Separate privatecost+4,damage−7 variation9 resets10.",
+    "Full target sources16 and original blank3-line graph17/questions17–18 beforeanswers19+. ReinigingsdienstenV60−Q,AQ,damage20. BeforeQ30P30CS450PS450damage600social300. Tax20 givesQ20Pc40Pp20,CS200PS200receipts400damage400social400,gain100. Loss triangle(20,40),(30,30),(30,50) area100; taxshift atPc60 Q60→40.",
+    "Series transition explicit14: Book3 excluded external costs; here reduced harmful transactions raise socialsurplus. Not claim everytaxgood/everypersonwins. Model noadmin/fixed/otherexternal costs stated; neither taxrevenuenorremainingdamage omitted."
+  ],
+  "findings": [
+    {
+      "severity": "P2",
+      "slides": [
+        4,
+        5,
+        7,
+        11,
+        17,
+        21,
+        24
+      ],
+      "finding": "A=MKprivé, wrappedMKmaatschappelijk and some E labels cross their lines. In11 horizontal arrow crosses socialMK label. Author has independently announced own label repair; inspect later final before verdict."
+    }
+  ]
+}

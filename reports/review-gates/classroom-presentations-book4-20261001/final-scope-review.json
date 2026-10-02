@@ -1,0 +1,815 @@
+{
+  "verdict": "PASS",
+  "scope": "Independent final repository scope, portable inputs, selected-artifact identity and publication-evidence consistency review. Does not repeat economics/native-slide review, authorize merging or attest future final-pair CI.",
+  "reviewedAt": "2026-10-01T19:26:28.173Z",
+  "platform": {
+    "path": "C:\\wt\\ppt\\4veco-platform",
+    "head": "d1cb1fe3db3a70dc86682491771ed68a67f45526",
+    "branch": "codex/ppt-book4-20261001",
+    "untrackedFiles": 48,
+    "trackedUnstaged": "",
+    "trackedStaged": ""
+  },
+  "lessons": {
+    "path": "C:\\wt\\ppt\\4veco-lessen",
+    "head": "e734532a42b27732ac25ce990fc9448b12309d28",
+    "branch": "codex/ppt-book4-20261001",
+    "stagedFiles": 52,
+    "unstaged": ""
+  },
+  "checks": {
+    "selectedParagraphs": 17,
+    "selectedOutputIdentities": 98,
+    "coordinatorAddedTestFiles": 1,
+    "sourceBindings": 150,
+    "exactFinalReviewBindings": 17,
+    "finalSlides": 438,
+    "preservedPriorPresentationFiles": 29,
+    "preservedBook4SourceFiles": 335,
+    "validNewMapLinks": 51,
+    "nodeSyntaxBuilders": 17,
+    "pythonSyntaxFiles": 13,
+    "pairedPreservation": {
+      "passed": true,
+      "sealedFiles": 1561,
+      "book3Additions": 42,
+      "book4Additions": 51
+    },
+    "portableBuilderInputs": "PASS: all 17 use shared runtime.mjs and workspace(); runtime locations come from required environment variables; content reads are sibling-repository or import-relative; output writes remain under BUILD/FINAL.",
+    "unauthorizedSharedOrSourceChanges": "NONE"
+  },
+  "checkerRepair": {
+    "verdict": "PASS",
+    "source": "build-scripts/content/book-4/check-presentation-411.py",
+    "sourceSha256": "a446d74e7b11f63f80f06fd4ca2b4d1a64be6a316fa228020e8b92374a2c822d",
+    "test": "build-scripts/content/book-4/test-check-presentation-411.py",
+    "testSha256": "5f9bd911d3fefa5c555bf930de45ed964272e7a6926201dd45e32883a44220c8",
+    "testCommand": "python -X utf8 build-scripts/content/book-4/test-check-presentation-411.py <selected final 411 PPTX>",
+    "tests": 4,
+    "result": "PASS",
+    "scope": "Exact stage series name/count/order and nonempty/precise point checks close the missing trailing guide/marker acceptance. Saved PPTX/PDF/builder/manifest unchanged."
+  },
+  "issues": [],
+  "observations": [
+    "Absolute historic worktree paths in some lesson provenance records are historical location metadata, not executable input/output dependencies.",
+    "Selected 411/422 artifact passes are distinguished from author intermediate revisions, superseded original outcomes, five coordinator artifact repairs, and the separate coordinator 411 checker repair.",
+    "Foundation follow-ups remain explicit outside-scope source findings; all 335 Book4 source files and the sealed receipts remain unchanged."
+  ],
+  "publicationBoundary": "Final report materialization, committing and final-pair CI occur after this exact precommit snapshot and need coordinator completion; this review is not merge authority.",
+  "inputIdentities": [
+    {
+      "path": "C:\\wt\\ppt\\.book4\\final-selections.json",
+      "sha256": "8d131a83a586c21301073cb13c869fb3cdd913e0a0e5347d5380ed93c2e4be1d"
+    },
+    {
+      "path": "C:\\wt\\ppt\\.book4\\initial-runs.json",
+      "sha256": "87c898cc5bc45ca1de8f85253daa5d20a67e9e5baa821061bbdd410e2633291f"
+    },
+    {
+      "path": "C:\\wt\\ppt\\.book4\\assembly-overrides.json",
+      "sha256": "ba8de043ec16fc294773075032a78b775bf9088bb626dcd8b816f0413481185c"
+    },
+    {
+      "path": "C:\\wt\\ppt\\.book4\\foundation-followups.json",
+      "sha256": "b029a0822cc153e77ef514221937c43f8a2faaaba26a58e4cdb37b6e35b4235a"
+    },
+    {
+      "path": "C:\\wt\\ppt\\.book4\\review-template.md",
+      "sha256": "46801a9ad8d771e385abb43ad49d019b47273d87ebd39ea48ee66dfa79ff5748"
+    },
+    {
+      "path": "C:\\wt\\ppt\\.book4\\assembly-audit.json",
+      "sha256": "ce30921d08be428fcbbd6b334e7039b42d65c96ce185a0765fbae89538862746"
+    },
+    {
+      "path": "C:\\wt\\ppt\\.book4\\paired-preservation-final.json",
+      "sha256": "70eb0d0f3c95cd820b9c8e7c4beac66d6e8762ee7ecc67f2f64aca43eeb2d603"
+    },
+    {
+      "path": "C:\\wt\\ppt\\.book4\\shared-dispositions.json",
+      "sha256": "e1f42287f882f5a108a81b2880fdc82fbbdb85f5b9021071986ee53506a90869"
+    },
+    {
+      "path": "C:\\wt\\ppt\\.book4\\repairs\\411-checker-r1\\root-review.json",
+      "sha256": "6b4fb420f2cf6d42b2dbfe835e5223b092a1148d381a9742a2bf06c1cf88d042"
+    }
+  ],
+  "fileIdentities": [
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/check-presentation-411.py",
+      "sha256": "a446d74e7b11f63f80f06fd4ca2b4d1a64be6a316fa228020e8b92374a2c822d",
+      "selectedOriginalSha256": "6a6dbd839e6cf422d9ca339673ff9260bcb4d2b72b67c49393c963c76493fed8",
+      "coordinatorOverride": true
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-411.manifest.json",
+      "sha256": "2d03542017054f7d98dc292f0fd963c67c9a5a6011a15bf5eedc3d70713cc520",
+      "selectedOriginalSha256": "2d03542017054f7d98dc292f0fd963c67c9a5a6011a15bf5eedc3d70713cc520",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-411.mjs",
+      "sha256": "a561ac828df38449471e32b18cc0724fda0bbba7bbfd86d1e3d907e92a1e94d4",
+      "selectedOriginalSha256": "a561ac828df38449471e32b18cc0724fda0bbba7bbfd86d1e3d907e92a1e94d4",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.1 Toetreding, uittreding en langetermijnevenwicht – presentatie.pdf",
+      "sha256": "b14efb990a9092f32b1adbd270fa1ecf2de8099d6bcfee125ad339c787087ccf",
+      "selectedOriginalSha256": "b14efb990a9092f32b1adbd270fa1ecf2de8099d6bcfee125ad339c787087ccf",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.1 Toetreding, uittreding en langetermijnevenwicht – presentatie.pptx",
+      "sha256": "e78b159ae169dfe06c608f949546e1ab54bdb5c2fb1428464378b80adc0ba693",
+      "selectedOriginalSha256": "e78b159ae169dfe06c608f949546e1ab54bdb5c2fb1428464378b80adc0ba693",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/evidence/4.1.1-presentation.md",
+      "sha256": "68f74a98829960913342e90bb7062e0bfb08b46e0018561aea9198372ae1e271",
+      "selectedOriginalSha256": "68f74a98829960913342e90bb7062e0bfb08b46e0018561aea9198372ae1e271",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/check-presentation-412.py",
+      "sha256": "b9f6917e7fb79ac9b40a5335e2ff180e25521c178df0866aa33a679ff89e1884",
+      "selectedOriginalSha256": "b9f6917e7fb79ac9b40a5335e2ff180e25521c178df0866aa33a679ff89e1884",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-412.manifest.json",
+      "sha256": "66980debf8aaf4c89f3e557cdb0cfa81432cddf704a1f8fbc894bdca8cd77519",
+      "selectedOriginalSha256": "66980debf8aaf4c89f3e557cdb0cfa81432cddf704a1f8fbc894bdca8cd77519",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-412.mjs",
+      "sha256": "2770c43fc3121b70ad47e6cfd0af2b4c3de271f4b868aefbf39cc9a9d03d17e6",
+      "selectedOriginalSha256": "2770c43fc3121b70ad47e6cfd0af2b4c3de271f4b868aefbf39cc9a9d03d17e6",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.2 Monopolie - kenmerken – presentatie.pdf",
+      "sha256": "66e4ea378b6c4067052cfd06b528e019bed0a26875cd71be349022853624052d",
+      "selectedOriginalSha256": "66e4ea378b6c4067052cfd06b528e019bed0a26875cd71be349022853624052d",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.2 Monopolie - kenmerken – presentatie.pptx",
+      "sha256": "df76dc244d562a46d2f611d3864551b1bb19571e76c6191e7701b8b0f2a60584",
+      "selectedOriginalSha256": "df76dc244d562a46d2f611d3864551b1bb19571e76c6191e7701b8b0f2a60584",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/evidence/4.1.2-presentation.md",
+      "sha256": "034d6e402b0eae187303f293b8f0394210f8c5272fd652563663159429565446",
+      "selectedOriginalSha256": "034d6e402b0eae187303f293b8f0394210f8c5272fd652563663159429565446",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-413.mjs",
+      "sha256": "162552d7ff3bc9962e30cafb408d3b3d1de6bf34c2c09101cefa0bfae1cf5b43",
+      "selectedOriginalSha256": "162552d7ff3bc9962e30cafb408d3b3d1de6bf34c2c09101cefa0bfae1cf5b43",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-413.source.json",
+      "sha256": "0a928c1dd2b0c13914ef700afe8af5dd7776cd21162b24d8a015ca00c3d949b1",
+      "selectedOriginalSha256": "0a928c1dd2b0c13914ef700afe8af5dd7776cd21162b24d8a015ca00c3d949b1",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.3 Marginale opbrengst bij monopolie – presentatie.pdf",
+      "sha256": "fc170caaf306bcb6469bc5fc174b21b04e43be8b761c9e4e2a41b711d587850e",
+      "selectedOriginalSha256": "fc170caaf306bcb6469bc5fc174b21b04e43be8b761c9e4e2a41b711d587850e",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.3 Marginale opbrengst bij monopolie – presentatie.pptx",
+      "sha256": "90d49caf084fb7e2b1b4c7f13299dc320443aa7fda2e7144afaef31522502788",
+      "selectedOriginalSha256": "90d49caf084fb7e2b1b4c7f13299dc320443aa7fda2e7144afaef31522502788",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/evidence/4.1.3-presentation.md",
+      "sha256": "2456d5926bab23104c319cd9569f1e7e902132d8afe5fd2669eee395f5d2758a",
+      "selectedOriginalSha256": "2456d5926bab23104c319cd9569f1e7e902132d8afe5fd2669eee395f5d2758a",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/check-presentation-414.py",
+      "sha256": "2d9b078371f0fb3c2a38c7321dde3c626e5a918ee7ea14120d8c97d3af9dda70",
+      "selectedOriginalSha256": "2d9b078371f0fb3c2a38c7321dde3c626e5a918ee7ea14120d8c97d3af9dda70",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-414.manifest.json",
+      "sha256": "9b7c552c9cd377c0ed31e5973436bc1d161122303ec5f0cf5c93674f6c2f8d12",
+      "selectedOriginalSha256": "9b7c552c9cd377c0ed31e5973436bc1d161122303ec5f0cf5c93674f6c2f8d12",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-414.mjs",
+      "sha256": "754eeb8c141a677ac21b07fbf86b7921138c1bdea7bdf47d20851ba52e2c55b9",
+      "selectedOriginalSha256": "754eeb8c141a677ac21b07fbf86b7921138c1bdea7bdf47d20851ba52e2c55b9",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.4 Winstmaximalisatie bij monopolie – presentatie.pdf",
+      "sha256": "c6af9a6fdeb64559c010b2fdd45ee73b257108a32e135171dfabe0ebf9dd56fd",
+      "selectedOriginalSha256": "c6af9a6fdeb64559c010b2fdd45ee73b257108a32e135171dfabe0ebf9dd56fd",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.4 Winstmaximalisatie bij monopolie – presentatie.pptx",
+      "sha256": "4661ecfc0bf641b1b724893862b98570eda74bd0a12e7f68a81f142111fc65c0",
+      "selectedOriginalSha256": "4661ecfc0bf641b1b724893862b98570eda74bd0a12e7f68a81f142111fc65c0",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/evidence/4.1.4-presentation.md",
+      "sha256": "84003e37a6b2e9b069f6eceedb36b4407787045809765275f73cb7b5dfeb63f5",
+      "selectedOriginalSha256": "84003e37a6b2e9b069f6eceedb36b4407787045809765275f73cb7b5dfeb63f5",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/check-presentation-415.py",
+      "sha256": "5d4bee01c7e76b02643e3d164ebb8c5ee4a04fea227072bcf613a622802032ee",
+      "selectedOriginalSha256": "5d4bee01c7e76b02643e3d164ebb8c5ee4a04fea227072bcf613a622802032ee",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-415-package.py",
+      "sha256": "8e8b420d21969ff97ac657a877ad418726a30d2fe1df064cd6422c1a8a8d6fcf",
+      "selectedOriginalSha256": "8e8b420d21969ff97ac657a877ad418726a30d2fe1df064cd6422c1a8a8d6fcf",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-415.manifest.json",
+      "sha256": "180f8fa02fb4828653717b0db387e773057cb87f9c7b61c84941ad1b05b50baa",
+      "selectedOriginalSha256": "180f8fa02fb4828653717b0db387e773057cb87f9c7b61c84941ad1b05b50baa",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-415.mjs",
+      "sha256": "6e0202e8b5942eddaa200ba2ee753a0343958f70db2c69fda3e1f6152737e528",
+      "selectedOriginalSha256": "6e0202e8b5942eddaa200ba2ee753a0343958f70db2c69fda3e1f6152737e528",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.5 Gemengde opgaven concurrentie en monopolie – presentatie.pdf",
+      "sha256": "71691d0016d9303e357c3d55e08d454f0b06b7253a43fc8e1cd64900ccb82921",
+      "selectedOriginalSha256": "71691d0016d9303e357c3d55e08d454f0b06b7253a43fc8e1cd64900ccb82921",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.5 Gemengde opgaven concurrentie en monopolie – presentatie.pptx",
+      "sha256": "033f12e26fff8101098d118819eeac6e5035b571e71d0cfb9ec92e864ad14e94",
+      "selectedOriginalSha256": "033f12e26fff8101098d118819eeac6e5035b571e71d0cfb9ec92e864ad14e94",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/evidence/4.1.5-presentation.md",
+      "sha256": "be23688b0362355c16a60cf72023a524e1d67e52d0c9f3a7b122625b60b61350",
+      "selectedOriginalSha256": "be23688b0362355c16a60cf72023a524e1d67e52d0c9f3a7b122625b60b61350",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/check-presentation-421.py",
+      "sha256": "d5ba2482aa19a04c3f2fe31cfb3459b0743f53c2f9bb24fe977530eb2e0aefe5",
+      "selectedOriginalSha256": "d5ba2482aa19a04c3f2fe31cfb3459b0743f53c2f9bb24fe977530eb2e0aefe5",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-421.manifest.json",
+      "sha256": "8ce4bfa0ccce2681e006002c01a09e52457c98a1224b8d06ef072b70488eccd4",
+      "selectedOriginalSha256": "7b66bec7a919983b602d47f97f3c9ecfd3ac6b9396573f814648b05c5149a7c6",
+      "coordinatorOverride": true
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-421.mjs",
+      "sha256": "d00906b6e6eefefe7f820b39410d695e43232b561e08a6b4bca68b80effb87ea",
+      "selectedOriginalSha256": "4882b10d4f8ee5fcf90671035d8081021983e942b565d70e8fbd7450a6bb55f6",
+      "coordinatorOverride": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.1 Welvaartseffecten van monopolie – presentatie.pdf",
+      "sha256": "cf7360c6bc659646b533c41fdb0d29cd5fc215b5591a4c3ebad87e7271a85a12",
+      "selectedOriginalSha256": "09ed04dc50a801808486e6bec962a537633dad4a5b4615800bdb3b7a1d8d7e17",
+      "coordinatorOverride": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.1 Welvaartseffecten van monopolie – presentatie.pptx",
+      "sha256": "cd6160db661fb9a81c731855817248568bc4deed8963e538e8b5a3fe96636a56",
+      "selectedOriginalSha256": "01cdca3ffa4e503a6866bd1ec9ff487d02f18e76ffc233d079e8a5a253b4f5b9",
+      "coordinatorOverride": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/evidence/4.2.1-presentation.md",
+      "sha256": "f15279b661113747bdb6ba7cc7e2600f3d3e96cecdfc23051c132cece3066c02",
+      "selectedOriginalSha256": "30d509484a9f4780dd83b784441743abad59043d57875c92eb512d54f9d5a9a7",
+      "coordinatorOverride": true
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-422.manifest.json",
+      "sha256": "ae102ecb769e39ba2518a98c9d12f24da8330bad61e5c0db896093fa54a8adbc",
+      "selectedOriginalSha256": "ae102ecb769e39ba2518a98c9d12f24da8330bad61e5c0db896093fa54a8adbc",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-422.mjs",
+      "sha256": "0c668c8f6e33ac75e245c1c3620cb180a28473d0cfd8a6766e0e2798fa73fcfb",
+      "selectedOriginalSha256": "0c668c8f6e33ac75e245c1c3620cb180a28473d0cfd8a6766e0e2798fa73fcfb",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.2 Prijsdiscriminatie – presentatie.pdf",
+      "sha256": "d5001b44104097a0c4462ea5385a8dfc0debecfc113d6d57b7021c846f89b485",
+      "selectedOriginalSha256": "d5001b44104097a0c4462ea5385a8dfc0debecfc113d6d57b7021c846f89b485",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.2 Prijsdiscriminatie – presentatie.pptx",
+      "sha256": "3503f74dfc70bec83865a1502fa14bd97908e7abe6d83cbe930040610712091c",
+      "selectedOriginalSha256": "3503f74dfc70bec83865a1502fa14bd97908e7abe6d83cbe930040610712091c",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/evidence/4.2.2-presentation.md",
+      "sha256": "2c3828d6d0e426607f3bf062b445679dca802c74bc3394835051dd36adbac2b0",
+      "selectedOriginalSha256": "2c3828d6d0e426607f3bf062b445679dca802c74bc3394835051dd36adbac2b0",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-423.manifest.json",
+      "sha256": "a25397dfb3c791bac7b3e7e5f9ee19fcdaee1d67c286b6a9241ac31c6f61ca43",
+      "selectedOriginalSha256": "a25397dfb3c791bac7b3e7e5f9ee19fcdaee1d67c286b6a9241ac31c6f61ca43",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-423.mjs",
+      "sha256": "b82dff6b378cdf43c557b402365a1d861836c2962f48e9bea9618d4077597a99",
+      "selectedOriginalSha256": "88cadc7b927afccd07e730ec5a3ab8e0ce6e95b20565faa6b2dc844cd6e66bb5",
+      "coordinatorOverride": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.3 Marktvormen vergelijken – presentatie.pdf",
+      "sha256": "e2b56baf71e05b3ca0c6c0c2a44c15bb88bb49101520a64b27416f5061127685",
+      "selectedOriginalSha256": "950bd4f292d1aff352312a3699fdc6c0b678a4cc8707c941ba764758f5125ab7",
+      "coordinatorOverride": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.3 Marktvormen vergelijken – presentatie.pptx",
+      "sha256": "d0fa6c348406bd89242b7ba3e277ff40ad7f265e906d11ae3e2ca9dcc0227cdf",
+      "selectedOriginalSha256": "78f5ff10f5e37796cc700f940a768f3882fdaed322ca02b319329f2fddcfa310",
+      "coordinatorOverride": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/evidence/4.2.3-presentation.md",
+      "sha256": "2a3f956de3b01b77414fded5a9286e0e1f2a1909255ad16ac4702d7900efb132",
+      "selectedOriginalSha256": "d2ec49ef423fed1977df9e518e1bb347a15704ea7ed9d764d88272ccbac68c4f",
+      "coordinatorOverride": true
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/check-presentation-424.py",
+      "sha256": "0cdd5a723df898a65cd93b0306a1d76d6768545e2d0f7f055547c956ed3082fd",
+      "selectedOriginalSha256": "0cdd5a723df898a65cd93b0306a1d76d6768545e2d0f7f055547c956ed3082fd",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-424.manifest.json",
+      "sha256": "c72fe69f508ed563bd8d03df4c6dc840d02d8a88150f02098b346c9f5dcfae81",
+      "selectedOriginalSha256": "c72fe69f508ed563bd8d03df4c6dc840d02d8a88150f02098b346c9f5dcfae81",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-424.mjs",
+      "sha256": "f5c6f04a6eebef93fb15f269cfd146eabec98997db9d19d22d70a64f007449dc",
+      "selectedOriginalSha256": "f5c6f04a6eebef93fb15f269cfd146eabec98997db9d19d22d70a64f007449dc",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/review-gates/classroom-presentation-424-20261001.md",
+      "sha256": "ef3bddf65dda771d686505ae55c6fc8e34ccf64c23fd56a1562b2b207f631b77",
+      "selectedOriginalSha256": "ef3bddf65dda771d686505ae55c6fc8e34ccf64c23fd56a1562b2b207f631b77",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.4 Negatieve externe effecten – presentatie.pdf",
+      "sha256": "84b83ca68b2b91bcda6151a40974c7d3413f40ee2ed6579555090183678c9042",
+      "selectedOriginalSha256": "84b83ca68b2b91bcda6151a40974c7d3413f40ee2ed6579555090183678c9042",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.4 Negatieve externe effecten – presentatie.pptx",
+      "sha256": "1e0df648bba44290c041c2d0cb06a4b35136d08eef64f8b82e0787386a228eab",
+      "selectedOriginalSha256": "1e0df648bba44290c041c2d0cb06a4b35136d08eef64f8b82e0787386a228eab",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/evidence/4.2.4-presentation.md",
+      "sha256": "041fd8ab0a42a9d8b84de64061385ace1086f7fcc603b5491975bb5d7e9b5f04",
+      "selectedOriginalSha256": "041fd8ab0a42a9d8b84de64061385ace1086f7fcc603b5491975bb5d7e9b5f04",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-425-manifest.json",
+      "sha256": "72aef24db45fe33e255a08d2ab1e863c2567986cbded233604e1db926dc190ed",
+      "selectedOriginalSha256": "72aef24db45fe33e255a08d2ab1e863c2567986cbded233604e1db926dc190ed",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-425.mjs",
+      "sha256": "d69f1599fb1193bd1047752fc7fff6edb4fbbfb0e57dc1f3e6331850035953fa",
+      "selectedOriginalSha256": "0337b6f47ac9ff5787e89cabe679914f068cc30a0f2ca6da7fbdf46242b06dcf",
+      "coordinatorOverride": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.5 Positieve externe effecten – presentatie.pdf",
+      "sha256": "b67251d407aed4d2b7e4f7803cbd0001576d0c8fd8de1ab0605a4d9e6712d67b",
+      "selectedOriginalSha256": "e672ecdea4819c7e9362f5fea4e9e77c712d0006e600bf8d8e95b6373ceb473f",
+      "coordinatorOverride": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.5 Positieve externe effecten – presentatie.pptx",
+      "sha256": "0c38c87f0b02e65bf0691041d0ce434a66f80a34ce61c57e293e0bbde38795dd",
+      "selectedOriginalSha256": "5e437f3d88eea73a1f1212dae9c30821aeb69f1d0e29bdd002f63d4464b33bad",
+      "coordinatorOverride": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/evidence/4.2.5-presentation.md",
+      "sha256": "52add7d2538b78b1baca4e6cf4af4db39b792d599e36c3e2ce61c4b1301a396d",
+      "selectedOriginalSha256": "713774f77d5d564a55ff13e98c58230badcb19c515510484a98d94b1947203e8",
+      "coordinatorOverride": true
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-426.manifest.json",
+      "sha256": "08231abdc959e31fb7f2a0ba92794954a7f9f6defcdf9aa50715f884157abd98",
+      "selectedOriginalSha256": "08231abdc959e31fb7f2a0ba92794954a7f9f6defcdf9aa50715f884157abd98",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-426.mjs",
+      "sha256": "9d9043ea0063b011d447885029acc23e3f222faf6997d15dc65637a14fc0d449",
+      "selectedOriginalSha256": "9d9043ea0063b011d447885029acc23e3f222faf6997d15dc65637a14fc0d449",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.6 Overheidsingrijpen bij marktfalen – presentatie.pdf",
+      "sha256": "6455d45f759944e559823ff7b2131c3cd7218c2ca16e98b9ede4e1c0b95cfe71",
+      "selectedOriginalSha256": "6455d45f759944e559823ff7b2131c3cd7218c2ca16e98b9ede4e1c0b95cfe71",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.6 Overheidsingrijpen bij marktfalen – presentatie.pptx",
+      "sha256": "d92dadd97b1045b28593b14cb01c0224fc096a10d0022da988a2d36a12591112",
+      "selectedOriginalSha256": "d92dadd97b1045b28593b14cb01c0224fc096a10d0022da988a2d36a12591112",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/evidence/4.2.6-presentation.md",
+      "sha256": "3d6f2aa627d9db883f51ef012fea7c9698e8c750926d590e2e09ee1abe88da44",
+      "selectedOriginalSha256": "3d6f2aa627d9db883f51ef012fea7c9698e8c750926d590e2e09ee1abe88da44",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/check-presentation-427.py",
+      "sha256": "4ed99c6f1f3b74f7e06f63a3e7c02f6e04e304f35ec6252fe581aa159b66756b",
+      "selectedOriginalSha256": "4ed99c6f1f3b74f7e06f63a3e7c02f6e04e304f35ec6252fe581aa159b66756b",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-427.manifest.json",
+      "sha256": "c0a397c129dc4b807f529639c7fe027efc9cd23fd90464014ea35441ea7d531b",
+      "selectedOriginalSha256": "c0a397c129dc4b807f529639c7fe027efc9cd23fd90464014ea35441ea7d531b",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-427.mjs",
+      "sha256": "8a330e8ed77ba4c9e0f1d26a25a8851a65db9879f9a2d8924d10235a79eb3825",
+      "selectedOriginalSha256": "8a330e8ed77ba4c9e0f1d26a25a8851a65db9879f9a2d8924d10235a79eb3825",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.7 Gemengde opgaven - marktvormen en marktfalen – presentatie.pdf",
+      "sha256": "8fa7e56dd3953e546ff39f0179fc0a3cb6ef8418ed8aff1a39d22463b7e75f08",
+      "selectedOriginalSha256": "8fa7e56dd3953e546ff39f0179fc0a3cb6ef8418ed8aff1a39d22463b7e75f08",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.7 Gemengde opgaven - marktvormen en marktfalen – presentatie.pptx",
+      "sha256": "59044e61147cf8550b39496557dec5a62474a308d2b6c42ed08c08ae33f432ab",
+      "selectedOriginalSha256": "59044e61147cf8550b39496557dec5a62474a308d2b6c42ed08c08ae33f432ab",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/evidence/4.2.7-presentation.md",
+      "sha256": "adae0c13c27b449a0c6afdad28a1cf1657aa7e15ffdcea1d2f692aacee4448a3",
+      "selectedOriginalSha256": "adae0c13c27b449a0c6afdad28a1cf1657aa7e15ffdcea1d2f692aacee4448a3",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/check-presentation-431.py",
+      "sha256": "57a6cf334c94ea5d467e3cfa6fcbc155c021750d2cb79d38012b52e1731b8c58",
+      "selectedOriginalSha256": "57a6cf334c94ea5d467e3cfa6fcbc155c021750d2cb79d38012b52e1731b8c58",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-431.manifest.json",
+      "sha256": "20ef3baa9df125233619ba6674f63f4b5c217604d20f096a364387b6c4b4b4fc",
+      "selectedOriginalSha256": "20ef3baa9df125233619ba6674f63f4b5c217604d20f096a364387b6c4b4b4fc",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-431.mjs",
+      "sha256": "389dd34c2045c6524814698278ef9e2a8da7c55d38e6977be9c7a8e530959cb6",
+      "selectedOriginalSha256": "389dd34c2045c6524814698278ef9e2a8da7c55d38e6977be9c7a8e530959cb6",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.1 Arbeidsvraag en arbeidsproductiviteit – presentatie.pdf",
+      "sha256": "35ee1523974e592e11896a629e00fb7c12ae25947e08af94ec027564f1ba85ad",
+      "selectedOriginalSha256": "35ee1523974e592e11896a629e00fb7c12ae25947e08af94ec027564f1ba85ad",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.1 Arbeidsvraag en arbeidsproductiviteit – presentatie.pptx",
+      "sha256": "ccea0d15b4b961344b34b228858bed329856360251cbb52da2c4784741bd9414",
+      "selectedOriginalSha256": "ccea0d15b4b961344b34b228858bed329856360251cbb52da2c4784741bd9414",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/evidence/4.3.1-presentation.md",
+      "sha256": "a7a0be78ebd8edf6ccb1c753a4fb688b6037176dbdb7bea8d649665cfcf3d68b",
+      "selectedOriginalSha256": "a7a0be78ebd8edf6ccb1c753a4fb688b6037176dbdb7bea8d649665cfcf3d68b",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/check-presentation-432.py",
+      "sha256": "8c7c9a7823d450af8ea01f850f32163f9829b34d69d1d8af43df6462570af0fc",
+      "selectedOriginalSha256": "8c7c9a7823d450af8ea01f850f32163f9829b34d69d1d8af43df6462570af0fc",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-432.manifest.json",
+      "sha256": "e208c25bf0fd4e2b15400ce070f5b5db3187070e654f654c6c88e72286f5c2ab",
+      "selectedOriginalSha256": "e208c25bf0fd4e2b15400ce070f5b5db3187070e654f654c6c88e72286f5c2ab",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-432.mjs",
+      "sha256": "a9b104054b0c840e3c346c2e994bb1caec6ea4e8180fa56455c9992c3117a847",
+      "selectedOriginalSha256": "12a2f0e3e3c05c61bedc9ad96dda2ca45526db88e4d2e19b2f7e7ffc5b1da050",
+      "coordinatorOverride": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.2 Arbeidsaanbod, participatie en evenwicht – presentatie.pdf",
+      "sha256": "664e8a4be9bad3e6be4574ba298c400a37b1d710c3d2ef4f8adef420773a233f",
+      "selectedOriginalSha256": "cc0337db38fc94fb38df564a54e385889cc96a0bd37288b8bc307cb973e211fc",
+      "coordinatorOverride": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.2 Arbeidsaanbod, participatie en evenwicht – presentatie.pptx",
+      "sha256": "5f7318ebcc0b071c2d7d0fe3f6f2250aadadc44340cccd7fbca99805ba835769",
+      "selectedOriginalSha256": "6bfd832b5007f3ef83f792fe5b1e8f540ee121dbb8e92d81e7f314d6316c7741",
+      "coordinatorOverride": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/evidence/4.3.2-presentation.md",
+      "sha256": "44d402ea0bfbf63f5c5661ad13e248d2040113b6956cb9e35fbc87aee26080b5",
+      "selectedOriginalSha256": "2797d5106e1c6557ca7a3ae0be07a9ce893a870f971b96095e3c672644622cdb",
+      "coordinatorOverride": true
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/check-presentation-433.py",
+      "sha256": "2826c388a965748ae941f6f311c10cb18ff5a87a838a04e7b096e6e1b4d9eada",
+      "selectedOriginalSha256": "2826c388a965748ae941f6f311c10cb18ff5a87a838a04e7b096e6e1b4d9eada",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-433.manifest.json",
+      "sha256": "82a7c08cc607d18b9d725ebfe849a1ce28dda1073f3416b94de3166aa0fc3510",
+      "selectedOriginalSha256": "82a7c08cc607d18b9d725ebfe849a1ce28dda1073f3416b94de3166aa0fc3510",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-433.mjs",
+      "sha256": "7f40a37c61e05da7d5986f8a67a2b2c9679bf8daeee7bcfbf88bc50d61c1546a",
+      "selectedOriginalSha256": "7f40a37c61e05da7d5986f8a67a2b2c9679bf8daeee7bcfbf88bc50d61c1546a",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.3 Werkloosheid en veranderingen op de arbeidsmarkt – presentatie.pdf",
+      "sha256": "4394b8376c3afdb38136a45802d21b16f13f1a9c868de42a9229bf6e8660e01b",
+      "selectedOriginalSha256": "4394b8376c3afdb38136a45802d21b16f13f1a9c868de42a9229bf6e8660e01b",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.3 Werkloosheid en veranderingen op de arbeidsmarkt – presentatie.pptx",
+      "sha256": "68432489e8021d049ffea929140e387fa47947b21774522dc8ecc7f148724ed7",
+      "selectedOriginalSha256": "68432489e8021d049ffea929140e387fa47947b21774522dc8ecc7f148724ed7",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/evidence/4.3.3-presentation.md",
+      "sha256": "efe677c76fa5ee7ad2b42f85163984e0a2e43b8a70e21ac0606627ffc4fd4443",
+      "selectedOriginalSha256": "efe677c76fa5ee7ad2b42f85163984e0a2e43b8a70e21ac0606627ffc4fd4443",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/check-presentation-434.py",
+      "sha256": "1cf41bd8a8eb06c1b25e74c21dfdb0846d18d65a52e4724aca364072d5698120",
+      "selectedOriginalSha256": "1cf41bd8a8eb06c1b25e74c21dfdb0846d18d65a52e4724aca364072d5698120",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-434.manifest.json",
+      "sha256": "5844693a57934795821756ecfc6922d136cfb99ded02f5164c9898f5425c1099",
+      "selectedOriginalSha256": "5844693a57934795821756ecfc6922d136cfb99ded02f5164c9898f5425c1099",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-434.mjs",
+      "sha256": "bb49be74733bfdfb0bb3bba1f37aee685657bfd3abc7d63199eca5dfd27ecdc1",
+      "selectedOriginalSha256": "531f83fcb6e8434da5bf1c63f7270fb5ac2205f94755a3d559bd3124a847b60f",
+      "coordinatorOverride": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.4 Minimumloon – presentatie.pdf",
+      "sha256": "0a80b5e8ff166f57a684735ce8cefb4b3dbbf5b068cdf543a588772d421aa36b",
+      "selectedOriginalSha256": "c783569b2a8f1ed59fdee978a6886e9ff807a621507cc650baf02bf5756d968a",
+      "coordinatorOverride": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.4 Minimumloon – presentatie.pptx",
+      "sha256": "fdf98df78d78c0f6f23d98f7bee5461cf6910a1de5f72ed18cde532f67a74255",
+      "selectedOriginalSha256": "01c9add1633f1913c1cbee5902236a7a3e2c251d60d01b75ef66928b7953be52",
+      "coordinatorOverride": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/evidence/4.3.4-presentation.md",
+      "sha256": "adbaf437a88a4387801b27f4951f3e0a0d4dcd23a17b969575489bb6ecc30f7f",
+      "selectedOriginalSha256": "0c2400b7e69aacd61e3ddb245d52bc255f20c94c641001ac85a30a4362ef8993",
+      "coordinatorOverride": true
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-435.manifest.json",
+      "sha256": "68e07b7c2f7b5734afed340187e315c707b0b7a0e53a411f1f839c5203147ea0",
+      "selectedOriginalSha256": "68e07b7c2f7b5734afed340187e315c707b0b7a0e53a411f1f839c5203147ea0",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/presentation-435.mjs",
+      "sha256": "9c10de37d5c45e46a014b48717d81f4d763be45c64777af916276cc5bad02e56",
+      "selectedOriginalSha256": "9c10de37d5c45e46a014b48717d81f4d763be45c64777af916276cc5bad02e56",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.5 Gemengde opgaven arbeidsmarkt – presentatie.pdf",
+      "sha256": "455cabbb8b326c6498616d23dbed68f2c43b0b17ae983b6aee1cf067ab4a9e08",
+      "selectedOriginalSha256": "455cabbb8b326c6498616d23dbed68f2c43b0b17ae983b6aee1cf067ab4a9e08",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.5 Gemengde opgaven arbeidsmarkt – presentatie.pptx",
+      "sha256": "bc0e9d6f2b8cc12b2f0c1e76d1ea02f9517696f02618cecbd0f745a103f44016",
+      "selectedOriginalSha256": "bc0e9d6f2b8cc12b2f0c1e76d1ea02f9517696f02618cecbd0f745a103f44016",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/evidence/4.3.5-presentation.md",
+      "sha256": "390a9bda8db3fe9f915298cba49d8d2d1d9550d7f011ae7b8f59accad520362e",
+      "selectedOriginalSha256": "390a9bda8db3fe9f915298cba49d8d2d1d9550d7f011ae7b8f59accad520362e",
+      "coordinatorOverride": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-4/test-check-presentation-411.py",
+      "sha256": "5f9bd911d3fefa5c555bf930de45ed964272e7a6926201dd45e32883a44220c8",
+      "coordinatorAddition": true
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/maintenance/check-classroom-edition.js",
+      "sha256": "53edb0996901a57c27f43885350c48aa5de74de5471e6cb804f12b31155b8f2c",
+      "previouslyReviewedPreparation": true
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/maintenance/check-classroom-edition.test.js",
+      "sha256": "a6350cce4d9acb0c09d74694d348d9778b546fadec92d399a4c3d1d93fe7a0ce",
+      "previouslyReviewedPreparation": true
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "docs/workflows/classroom-presentation.md",
+      "sha256": "035eb844687c2bbb248d52bd57e8be8fb90736f0a7cd5dcf86b0fa4bcc8193f6",
+      "previouslyReviewedPreparation": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "RESEARCH_AGENT_MAP.md",
+      "sha256": "aa289b8cbd32973f695b01b4360b5ce510efd320f2d0a672654b99e7be87ad9b",
+      "previouslyReviewedPreparation": false
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "paragraph": "4.2.7",
+  "title": "Gemengde opgaven: marktvormen en marktfalen",
+  "manuscriptTitle": "Welke rekening hoort bij deze markt?",
+  "type": "gemengde opgaven",
+  "sourceEdition": "edities/books34-v3/books/book-4",
+  "sourceCommit": "e734532a42b27732ac25ce990fc9448b12309d28",
+  "platformBaseCommit": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+  "sources": [
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.7 manuscript.md",
+      "sha256": "04ff9cf133cafb6f0986d69ad3c4f2a93930a396b59fd9503822f15962b2e2d5"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/Antwoorden.md",
+      "sha256": "b77880f5e0c3e9252002c502b1cd101d4181773fa9968ea37d63e3d04cdf80f9"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/Docenteninformatie.md",
+      "sha256": "b7fed5653f6f8677eeeab66d84fc80f55d11455b84243f80d3f3a6e1d651a2ed"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.1 manuscript.md",
+      "sha256": "2761c18bb26b7e62d0436d623f388371eb1a4bbbe1f1a57d8170d16a45810305"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.2 manuscript.md",
+      "sha256": "980b9248d6ced542888be62403a717479b1909209ef871325461a423af8baee9"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.3 manuscript.md",
+      "sha256": "e83c2aa394758e939873e228074f4aeb169f326c170924cee100108e33af4a01"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.4 manuscript.md",
+      "sha256": "4589774bbf4209f36c852ef55be55e77c40d58395dd824502dbb8e5bb675647a"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.5 manuscript.md",
+      "sha256": "552967cbfcda43b2865f19417298dadee472081e67282182fe963fa55672e82b"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.6 manuscript.md",
+      "sha256": "a053ce87e6ac20703671514c05a6e44c91e81028469f2e13843801c32e9674ee"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/_assets/427_A.svg",
+      "sha256": "d134e29688966ff6a6d41884789b007659616f4650db6fce4bd425c559bb1558"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/_assets/427_B.svg",
+      "sha256": "37c3ad2c96f8977a2534d9d3ea000bce56ae9502ad267e48e9c0103441aeb9c8"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/_assets/427_answerA.svg",
+      "sha256": "c153c97027863e2bc825d6f5d8e403ea81e42a4668cfa53eec98ff151c234d9c"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/_assets/427_answerB.svg",
+      "sha256": "68e303b5ba5c9ada90846ab24698f833e996139f31c8b34ad5ad45eeee46aff3"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+      "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+    }
+  ],
+  "goals": [
+    "Passend model uit de bron kiezen",
+    "Surplus en gevolgen voor derden verbinden",
+    "Een beleidsconclusie onderbouwen en begrenzen"
+  ],
+  "printedPages": {
+    "start": 105,
+    "practice": [
+      106,
+      107
+    ],
+    "targetSources": 108,
+    "targetQuestions": 109,
+    "extraAndRetrieval": 110,
+    "chapterToBookOffset": 52,
+    "verified": "Complete student PDF footers, physical 105–110 = printed 105–110"
+  },
+  "assignment": {
+    "start": [
+      55
+    ],
+    "basis": [],
+    "independent": [
+      56,
+      57
+    ],
+    "target": 58,
+    "extra": [
+      59
+    ],
+    "retrieval": [
+      60
+    ],
+    "bonus": [],
+    "homework": [
+      55,
+      56,
+      57,
+      58,
+      59,
+      60
+    ],
+    "instruction": "Maken en nakijken",
+    "mapping": "Mixed route: no invented basis section; 59 remains extra mixed, 60 retains Herhaling label and is included in the classroom all-exercises homework."
+  },
+  "targetChoice": "58 joins monopoly, complete societal accounting, graphical welfare loss and the limits of a policy transfer. All sources and a–f precede answers.",
+  "prerequisites": [
+    {
+      "operations": "55a,58a–b,60a: MO=MK then P on demand; capacity, PS versus profit, CS and PS areas, efficient comparison and lost-surplus triangle",
+      "teaching": "4.2.1 manuscript: Dezelfde markt, twee verschillende vragen; Eerst de keuze van de monopolist; Dan de efficiënte hoeveelheid; Wat krijgt de aanbieder? (book pp.55–58). 4.1 supplies the original monopoly procedure.",
+      "lessonSupport": "Slides 2–4 recall method with independent practice-free example; target steps after independent work."
+    },
+    {
+      "operations": "55b,57,58c–e,60b–c: price wedge, all-unit budget/external totals and complete societal comparison",
+      "teaching": "4.2.4 manuscript: Voeg de schade per extra eenheid toe; Kijk breder dan CS+PS; Gebruik opnieuw de twee prijzen; Overheidsontvangsten blijven een overdracht (book pp.78–82). 4.2.5 De welvaartsrekening verandert, book p.91.",
+      "lessonSupport": "Slides 2 and 5 recall posts, units and before/after bookkeeping. Target B afterwards."
+    },
+    {
+      "operations": "55c,56,59a: group separation, one shared fixed cost, group distribution despite unchanged total Q",
+      "teaching": "4.2.2 Drie voorwaarden moeten passen; Constante kosten tel je eenmaal; Een prijsvergelijking uitwerken (book pp.63–65).",
+      "lessonSupport": "Slide 2 and teacher notes; textbook support available during start and practice."
+    },
+    {
+      "operations": "59b: distinguish market structure from downward individual demand",
+      "teaching": "4.2.3 market-form comparison and demand explanation, book pp.71–72.",
+      "lessonSupport": "Slide 2 notes refresh source characteristics; no title-only prerequisite claim."
+    },
+    {
+      "operations": "58f,57c–d,59c: policy criterion, transfers versus real resource costs and limiting conclusion",
+      "teaching": "4.2.5 private versus external benefit (book pp.88–91); 4.2.6 Kies een criterium and Een volledig, maar begrensd advies (book pp.99–100).",
+      "lessonSupport": "Slides 2,5 and 22; no new independent procedure."
+    }
+  ],
+  "teachingExamples": [
+    {
+      "id": "Filmzaal",
+      "origin": "Authored, not from the book",
+      "data": "P=54−Q; TK=40+6Q+0.5Q²; capacity 40 visits/week, no external effects. MO=54−2Q, MK=6+Q. Qm=16 Pm=38 profit344; PS384 CS128 TS512; Qe24 Pe30 TSe576 loss64.",
+      "purpose": "Refresh monopoly choice, surplus versus profit and efficient comparison without solving assigned work."
+    },
+    {
+      "id": "Maaltijdbezorging",
+      "origin": "Authored accounting-only example, not from the book",
+      "data": "Same week, levy €3, Q10→8; CS+PS75→48; external damage €3 per delivery; implementation 0→2. Before45; after48+24−24−2=46; change1. Underlying competitive model Pc=19−0.75Q and Pp=4+0.75Q.",
+      "purpose": "Refresh complete societal ledger; outcomes given, no unprovided functions inferred."
+    }
+  ],
+  "timing": "No measured one-lesson fit; unfinished route is homework.",
+  "scope": "Classroom PPTX and matching PDF only, scoped Part B. No Part A mutation."
+}

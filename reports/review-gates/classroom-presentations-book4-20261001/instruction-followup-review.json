@@ -1,0 +1,111 @@
+{
+  "instructionCommit": "d1cb1fe3db3a70dc86682491771ed68a67f45526",
+  "baseCommit": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+  "verdict": "PASS",
+  "reviewedAt": "2026-10-01T17:31:56.615Z",
+  "scope": "Independent instruction-only follow-up review plus specifically requested bounded legacy-preview checks. No artifact acceptance or proof of fresh-retest effectiveness.",
+  "instructionFile": "docs/workflows/classroom-presentation.md",
+  "instructionSha256": "035eb844687c2bbb248d52bd57e8be8fb90736f0a7cd5dcf86b0fa4bcc8193f6",
+  "instructionFindings": [],
+  "checks": {
+    "onlyInstructionFileChanged": true,
+    "addedLines": 14,
+    "diffCheck": "PASS",
+    "correctness": "PASS",
+    "clarity": "PASS",
+    "noParagraphSpecificAnswersOrCoaching": "PASS",
+    "coldSeedIsolation": "PASS",
+    "freshRetestEffectiveness": "NOT_YET_TESTED"
+  },
+  "seedChecks": [
+    {
+      "path": "C:\\wt\\ppt\\.book4\\retest-411",
+      "platformCommit": "d1cb1fe3db3a70dc86682491771ed68a67f45526",
+      "lessonsCommit": "e734532a42b27732ac25ce990fc9448b12309d28",
+      "clean": true,
+      "book4Builders": [],
+      "book4Decks": [],
+      "instructionSha256": "035eb844687c2bbb248d52bd57e8be8fb90736f0a7cd5dcf86b0fa4bcc8193f6"
+    },
+    {
+      "path": "C:\\wt\\ppt\\.book4\\retest-422",
+      "platformCommit": "d1cb1fe3db3a70dc86682491771ed68a67f45526",
+      "lessonsCommit": "e734532a42b27732ac25ce990fc9448b12309d28",
+      "clean": true,
+      "book4Builders": [],
+      "book4Decks": [],
+      "instructionSha256": "035eb844687c2bbb248d52bd57e8be8fb90736f0a7cd5dcf86b0fa4bcc8193f6"
+    }
+  ],
+  "legacyPreviewObservations": [
+    {
+      "id": "C422-LABELS",
+      "verdict": "FINDING",
+      "slides": [
+        6,
+        7,
+        17,
+        22
+      ],
+      "detail": "Actual curve/glyph contact: both panels on slides 6 and 17 place the demand line through the bottom of the V in Vraag. Slides 7 and 22 repeat that placement and the demand line also intersects the first P glyph of each price annotation. MO and MK tags are nearby but clear in the inspected panels. No wrapped-label defect was observed in this saved v6; the relevant issue is direct glyph clearance."
+    },
+    {
+      "id": "C422-NOTE5",
+      "verdict": "FINDING",
+      "slide": 5,
+      "detail": "The saved note cites prerequisite teaching at printed pages 32-33 of the complete Book 4 student PDF. Those pages are 4.1.3 independent exercises 26-27 and target exercise 28, not the named 4.1.4 teaching. Printed page 28 contains the worked P -> TO -> MO derivation; page 36 contains the 4.1.4 MO/MK method. This finding concerns the prerequisite anchor, not the authored example arithmetic."
+    },
+    {
+      "id": "C423-LABELS",
+      "verdict": "FINDING",
+      "slides": [
+        8,
+        20
+      ],
+      "detail": "The descending demand curve actually intersects the G glyph of the direct GO = P label, at its lower portion on slide 8 and more visibly through the lower-middle portion on slide 20. These are glyph/curve collisions rather than merely close bounding boxes."
+    }
+  ],
+  "sourceIdentities": [
+    {
+      "path": "C:\\wt\\ppt\\4veco-lessen\\edities\\books34-v3\\books\\book-4\\output\\Boek_4_Compleet_v3.pdf",
+      "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+    },
+    {
+      "path": "C:\\wt\\ppt\\.book4\\review\\preview-422-v6\\slide-06.png",
+      "sha256": "38b3aa6c3507cbcdf7ae5537d9e3101f6b9190afdf3f1ec5b58ad6735cf7a5a6"
+    },
+    {
+      "path": "C:\\wt\\ppt\\.book4\\review\\preview-422-v6\\slide-07.png",
+      "sha256": "a15a78b4ed46541a964581654acc2042272cb8207f8af28f9ec179310ea94dac"
+    },
+    {
+      "path": "C:\\wt\\ppt\\.book4\\review\\preview-422-v6\\slide-17.png",
+      "sha256": "325754d8f27a57d9b666f58d976fa022e00cfac0fe5a88278a19fabc2bd1e2f4"
+    },
+    {
+      "path": "C:\\wt\\ppt\\.book4\\review\\preview-422-v6\\slide-22.png",
+      "sha256": "f3ff435baebe140d7f4d4c549337e8d38158e9011bbf2e88803b86eca67f66b4"
+    },
+    {
+      "path": "C:\\wt\\ppt\\.book4\\review\\preview-423-v3\\slide-08.png",
+      "sha256": "7f5558db03aec1b190f578420496ae998ce601406c05b8f3e3fcdeb0246f4009"
+    },
+    {
+      "path": "C:\\wt\\ppt\\.book4\\review\\preview-423-v3\\slide-20.png",
+      "sha256": "6468e15dde5b3209918cd4f14899b58e3b1e7af200514f8b3ceb2659eed3b16f"
+    },
+    {
+      "path": "C:\\wt\\ppt\\.book4\\review\\preview-422-v6\\4.2.2 Prijsdiscriminatie – presentatie.pptx",
+      "sha256": "e2df4dd8d0f3142afed3e390297d2d0231caef74f2d8a434c1e66b34a05a4557"
+    },
+    {
+      "path": "C:\\wt\\ppt\\.book4\\review\\preview-423-v3\\4.2.3 Marktvormen vergelijken – presentatie.pptx",
+      "sha256": "78f5ff10f5e37796cc700f940a768f3882fdaed322ca02b319329f2fddcfa310"
+    }
+  ],
+  "limitations": [
+    "The instruction PASS does not accept either legacy deck.",
+    "The optional preview checks covered only the named pages and note 5.",
+    "No production, author worktree or textbook files were edited; no messages were sent to authors."
+  ]
+}

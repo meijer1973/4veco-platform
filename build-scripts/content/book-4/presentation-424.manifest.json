@@ -1,0 +1,182 @@
+{
+  "paragraph": "4.2.4",
+  "title": "Negatieve externe effecten",
+  "type": "theory",
+  "sourceEdition": "edities/books34-v3/books/book-4",
+  "sourceCommit": "e734532a42b27732ac25ce990fc9448b12309d28",
+  "platformBaseline": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+  "assignment": {
+    "start": [
+      28,
+      29
+    ],
+    "basis": [
+      30,
+      31
+    ],
+    "independent": [
+      32,
+      33
+    ],
+    "target": 34,
+    "homework": [
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "extra": [
+      35,
+      36
+    ]
+  },
+  "printedPages": {
+    "theory": [
+      77,
+      78,
+      79,
+      80
+    ],
+    "workedExample": [
+      81,
+      82
+    ],
+    "start": 83,
+    "basis": [
+      83,
+      84
+    ],
+    "independent": [
+      84,
+      85
+    ],
+    "target": 86
+  },
+  "pageVerification": "Complete student PDF printed footers inspected. Chapter-local pages 25–35 correspond to complete-book pages 77–87; complete PDF physical page and printed page coincide here.",
+  "goals": [
+    "Derde partij en negatief extern effect herkennen",
+    "Private en maatschappelijke marginale kosten onderscheiden",
+    "Heffingsuitkomst berekenen",
+    "Maatschappelijk surplus en verliesgebied bepalen"
+  ],
+  "teachingExample": {
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "context": "Concurrerende markt voor metaalcoating; omwonenden ondervinden niet-vergoede geurhinder",
+    "demand": "Pc = 80 - Q",
+    "supply": "Pp = 16 + Q",
+    "externalCostPerUnit": 16,
+    "taxPerUnit": 16,
+    "domain": [
+      0,
+      64
+    ],
+    "quantityUnit": "coatingbeurten per dag",
+    "priceUnit": "euro per coatingbeurt",
+    "assumptions": "Constante marginale schade; geen vaste kosten, uitvoeringskosten of andere externe effecten; overige omstandigheden gelijk",
+    "original": {
+      "Q": 32,
+      "P": 48,
+      "CS": 512,
+      "PS": 512,
+      "externalCost": 512,
+      "socialSurplus": 512
+    },
+    "taxed": {
+      "Q": 24,
+      "Pc": 56,
+      "Pp": 40,
+      "CS": 288,
+      "PS": 288,
+      "revenue": 384,
+      "externalCost": 384,
+      "socialSurplus": 576
+    },
+    "loss": 64,
+    "componentChangeExample": {
+      "private": 4,
+      "external": -7,
+      "social": -3
+    }
+  },
+  "prerequisiteTrace": [
+    {
+      "operation": "Start 28: heffingswig, marktvergelijking, beide prijzen en t maal Q",
+      "taughtBefore": "Book 3 §3.1.1 theory Geef de prijzen een eigen naam; Van gewenste ontvangst naar benodigde kopersprijs; worked example steps 1–5. §3.1.2 opening box Belastingopbrengst O and heading Geen verdwenen geld (local/printed p.10).",
+      "supportHere": "Refresh Pc=Pp+t, substitute into original supply and check the wedge before practice."
+    },
+    {
+      "operation": "Start 29: niet-vergoede schade aan een derde partij onderscheiden van een betaling of eigen kosten",
+      "newHere": "Book 4 §4.2.4 definition and warning, printed p.77",
+      "supportHere": "Opening overview explicitly labels 29 as exploration with theory p.77. Return to 29 before independent practice."
+    },
+    {
+      "operation": "30 and 32: vertical addition at equal Q; changes in both components",
+      "newHere": "§4.2.4 printed p.78 formula MK maatschappelijk=MK privé+externe kosten",
+      "supportHere": "Native progressive chart plus separate additive-change teaching example (+4,-7,-3)."
+    },
+    {
+      "operation": "30,33,34d: efficient quantity and original social-loss triangle",
+      "taughtBefore": "§4.2.1 sections Dan de efficiënte hoeveelheid and De gebieden uit elkaar houden teach demand=MK and bounded triangle",
+      "newHere": "Replace private by social MK, trace overproduction between Qe and Q0, printed pp.78–79,82",
+      "supportHere": "Demonstrate extra-unit comparison, both intersections and hatched triangle with calculated base and height."
+    },
+    {
+      "operation": "31,33,34c/e: CS, PS, revenue, residual harm and societal conclusion",
+      "taughtBefore": "Book 3 §3.1.2 theory: CS above Pc, PS below Pp, government receipt is a transfer; Book 4 §4.2.1: total surplus does not establish distribution",
+      "newHere": "Subtract total harm on every remaining unit, printed pp.79–82",
+      "supportHere": "Tables show all four components before/after; calculation and interpretation are separate."
+    },
+    {
+      "operation": "Scenario and representation reset",
+      "supportHere": "Overview distinguishes the authored coating example from actual reinigingsdiensten. Target source, domains and native basis graph appear before any target answers. Target supply begins at zero as in the book; authored supply has a positive intercept."
+    }
+  ],
+  "targetCoverage": {
+    "34a": "Third party, Q0=30, P0=30, harm600",
+    "34b": "Q1=20, Pc40, Pp20, revenue400, wedge20",
+    "34c": "Before450+450+0-600=300; after200+200+400-400=400",
+    "34d": "Qe20, bounded triangle Q20–30 between demand and social MK; base10 height20 loss100",
+    "34e": "Social surplus rises100; CS+PS alone omits transfer and harm; no Pareto or universal tax claim"
+  },
+  "timing": "Teacher guide advises two lessons of 55 minutes with flexible boundary and possible further overrun. Neither one-lesson nor 110-minute completion is established.",
+  "sourceConflicts": [],
+  "sources": [
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.4 manuscript.md",
+      "sha256": "4589774bbf4209f36c852ef55be55e77c40d58395dd824502dbb8e5bb675647a"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/Antwoorden.md",
+      "sha256": "b77880f5e0c3e9252002c502b1cd101d4181773fa9968ea37d63e3d04cdf80f9"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/Docenteninformatie.md",
+      "sha256": "b7fed5653f6f8677eeeab66d84fc80f55d11455b84243f80d3f3a6e1d651a2ed"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.1 manuscript.md",
+      "sha256": "2761c18bb26b7e62d0436d623f388371eb1a4bbbe1f1a57d8170d16a45810305"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/4.2.3 manuscript.md",
+      "sha256": "e83c2aa394758e939873e228074f4aeb169f326c170924cee100108e33af4a01"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.2/_assets/424_target.svg",
+      "sha256": "293f48422571adbd6171250079fd151c1bf8f6706871d3230689abe253a35010"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+      "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.1 manuscript.md",
+      "sha256": "938160312edc425888dd54b3207c932e0aa396c59411a30e6679865eb14fded8"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.2 manuscript.md",
+      "sha256": "fcf420689fff743c59776345c5e1043e960f0e0d792d279476797071c3e87757"
+    }
+  ]
+}

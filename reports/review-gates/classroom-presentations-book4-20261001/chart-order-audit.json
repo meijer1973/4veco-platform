@@ -1,0 +1,125 @@
+{
+  "scope": "Focused saved scatter-series/label child-order audit, not full OOXML validation.",
+  "artifacts": [
+    {
+      "paragraph": "4.1.1",
+      "pptxSha256": "e78b159ae169dfe06c608f949546e1ab54bdb5c2fb1428464378b80adc0ba693",
+      "scatterSeries": 53,
+      "labelCollections": 45,
+      "failures": []
+    },
+    {
+      "paragraph": "4.1.2",
+      "pptxSha256": "df76dc244d562a46d2f611d3864551b1bb19571e76c6191e7701b8b0f2a60584",
+      "scatterSeries": 18,
+      "labelCollections": 17,
+      "failures": []
+    },
+    {
+      "paragraph": "4.1.3",
+      "pptxSha256": "90d49caf084fb7e2b1b4c7f13299dc320443aa7fda2e7144afaef31522502788",
+      "scatterSeries": 5,
+      "labelCollections": 3,
+      "failures": []
+    },
+    {
+      "paragraph": "4.1.4",
+      "pptxSha256": "4661ecfc0bf641b1b724893862b98570eda74bd0a12e7f68a81f142111fc65c0",
+      "scatterSeries": 62,
+      "labelCollections": 36,
+      "failures": []
+    },
+    {
+      "paragraph": "4.1.5",
+      "pptxSha256": "033f12e26fff8101098d118819eeac6e5035b571e71d0cfb9ec92e864ad14e94",
+      "scatterSeries": 22,
+      "labelCollections": 4,
+      "failures": []
+    },
+    {
+      "paragraph": "4.2.1",
+      "pptxSha256": "cd6160db661fb9a81c731855817248568bc4deed8963e538e8b5a3fe96636a56",
+      "scatterSeries": 404,
+      "labelCollections": 84,
+      "failures": []
+    },
+    {
+      "paragraph": "4.2.2",
+      "pptxSha256": "3503f74dfc70bec83865a1502fa14bd97908e7abe6d83cbe930040610712091c",
+      "scatterSeries": 36,
+      "labelCollections": 27,
+      "failures": []
+    },
+    {
+      "paragraph": "4.2.3",
+      "pptxSha256": "d0fa6c348406bd89242b7ba3e277ff40ad7f265e906d11ae3e2ca9dcc0227cdf",
+      "scatterSeries": 20,
+      "labelCollections": 11,
+      "failures": []
+    },
+    {
+      "paragraph": "4.2.4",
+      "pptxSha256": "1e0df648bba44290c041c2d0cb06a4b35136d08eef64f8b82e0787386a228eab",
+      "scatterSeries": 102,
+      "labelCollections": 37,
+      "failures": []
+    },
+    {
+      "paragraph": "4.2.5",
+      "pptxSha256": "0c38c87f0b02e65bf0691041d0ce434a66f80a34ce61c57e293e0bbde38795dd",
+      "scatterSeries": 54,
+      "labelCollections": 27,
+      "failures": []
+    },
+    {
+      "paragraph": "4.2.6",
+      "pptxSha256": "d92dadd97b1045b28593b14cb01c0224fc096a10d0022da988a2d36a12591112",
+      "scatterSeries": 0,
+      "labelCollections": 0,
+      "failures": []
+    },
+    {
+      "paragraph": "4.2.7",
+      "pptxSha256": "59044e61147cf8550b39496557dec5a62474a308d2b6c42ed08c08ae33f432ab",
+      "scatterSeries": 27,
+      "labelCollections": 5,
+      "failures": []
+    },
+    {
+      "paragraph": "4.3.1",
+      "pptxSha256": "ccea0d15b4b961344b34b228858bed329856360251cbb52da2c4784741bd9414",
+      "scatterSeries": 25,
+      "labelCollections": 12,
+      "failures": []
+    },
+    {
+      "paragraph": "4.3.2",
+      "pptxSha256": "5f7318ebcc0b071c2d7d0fe3f6f2250aadadc44340cccd7fbca99805ba835769",
+      "scatterSeries": 26,
+      "labelCollections": 16,
+      "failures": []
+    },
+    {
+      "paragraph": "4.3.3",
+      "pptxSha256": "68432489e8021d049ffea929140e387fa47947b21774522dc8ecc7f148724ed7",
+      "scatterSeries": 82,
+      "labelCollections": 37,
+      "failures": []
+    },
+    {
+      "paragraph": "4.3.4",
+      "pptxSha256": "fdf98df78d78c0f6f23d98f7bee5461cf6910a1de5f72ed18cde532f67a74255",
+      "scatterSeries": 42,
+      "labelCollections": 24,
+      "failures": []
+    },
+    {
+      "paragraph": "4.3.5",
+      "pptxSha256": "bc0e9d6f2b8cc12b2f0c1e76d1ea02f9517696f02618cecbd0f745a103f44016",
+      "scatterSeries": 13,
+      "labelCollections": 6,
+      "failures": []
+    }
+  ],
+  "passed": true
+}

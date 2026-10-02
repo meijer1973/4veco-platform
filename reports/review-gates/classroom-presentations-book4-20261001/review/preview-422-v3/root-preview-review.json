@@ -1,0 +1,15 @@
+{
+  "paragraph":"4.2.2",
+  "scope":"Read-only v3 author candidate review; no feedback or coordinator edits; final handoff still required.",
+  "pptxSha256":"ac7f97a0da42f5c0a97a0f8a7902074148e0346943f7283bbfa3581204e731f2",
+  "pdfSha256":"1916ca2656c714f921c340c06237b16dfc9fc564d188d6fb14f7bfbf169345c0",
+  "nativeRenderSlidesIndividuallyInspected":[6,7,13,17,22],
+  "otherNativeSlidesByteIdenticalToReviewedV2":22,
+  "allNotesUnchanged":true,
+  "textChange":"Slide13 explicitly wraps the final question; wording unchanged.",
+  "priorReview":"../preview-422-v2/root-preview-review.json",
+  "findings":[
+    {"severity":"P3","slides":[5],"finding":"Wrong complete-book prerequisite citation32–33 persists; 4.1.4 method is36–37."},
+    {"severity":"P2","slides":[6,7,17,22],"finding":"MK still drawn through both MK labels; Vraag labels touch their curves. MO in B now crosses demand; slide22 also crosses priceguide. Price-versus-demand-label overlap on7 improved, but final full clearance not achieved."}
+  ]
+}

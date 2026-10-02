@@ -1,0 +1,70 @@
+{
+  "book3Bundle": "PPT-BOOK3-20261001",
+  "book3AuthorizationComment": 5934868272,
+  "mergedPair": [
+    {
+      "repository": "meijer1973/4veco-platform",
+      "merge_commit": "d81db9558cc24d0671da1b2b9ecc5cdf1a092dde",
+      "merged_at": "2026-10-01T15:40:59Z"
+    },
+    {
+      "repository": "meijer1973/4veco-lessen",
+      "merge_commit": "e734532a42b27732ac25ce990fc9448b12309d28",
+      "merged_at": "2026-10-01T15:42:42Z"
+    }
+  ],
+  "finalCi": {
+    "run_id": 36886697984,
+    "attempt": 2,
+    "url": "https://github.com/meijer1973/4veco-platform/actions/runs/36886697984",
+    "conclusion": "success",
+    "head_sha": "d81db9558cc24d0671da1b2b9ecc5cdf1a092dde",
+    "artifact_id": 11175529506,
+    "zip_sha256": "17f918c24fdf91c085d3255978e7be893c9b9f6d76e69b4a537403db8c080c2b",
+    "digest_verified": true,
+    "evidence_sha256": "85bd5910f4a6aa2ad418d511a573cb43663bcadfb24478f80d7404f62ffb45aa",
+    "exact_pair_validation": {
+      "ok": true,
+      "failures": [],
+      "evidence": {
+        "workflow": "platform-ci",
+        "job": "validate-platform",
+        "github_run_id": "36886697984",
+        "github_run_attempt": "2",
+        "github_ref": "refs/heads/main",
+        "github_sha": "d81db9558cc24d0671da1b2b9ecc5cdf1a092dde",
+        "platform": {
+          "repository": "meijer1973/4veco-platform",
+          "path": "4veco-platform",
+          "head_sha": "d81db9558cc24d0671da1b2b9ecc5cdf1a092dde",
+          "branch_or_ref": "remotes/origin/main"
+        },
+        "lessen": {
+          "repository": "meijer1973/4veco-lessen",
+          "path": "4veco-lessen",
+          "head_sha": "e734532a42b27732ac25ce990fc9448b12309d28",
+          "branch_or_ref": "main"
+        },
+        "node_version": "v20.20.2",
+        "python_version": "Python 3.13.15",
+        "package_lock_sha256": "b6b795d78e81c17a0edd41d8b657520d20055230f4c0f4cd3063a73921e2259e",
+        "created_at_utc": "2026-10-01T16:02:24.188Z"
+      }
+    },
+    "artifact_selection": {
+      "rule": "Exactly one unexpired diagnostics archive created during the successful attempt; prior-attempt archive remains separate.",
+      "attempt_started_at": "2026-10-01T15:58:57Z",
+      "attempt_updated_at": "2026-10-01T16:12:48Z",
+      "selected_artifact_created_at": "2026-10-01T16:12:41Z",
+      "all_artifact_ids": [
+        11175529506,
+        11175171715
+      ]
+    }
+  },
+  "finalVerificationTime": "2026-10-01T16:13:59.867462+00:00",
+  "productionStartedAfterBothMerges": true,
+  "productionStartedWhileFinalCiRetryWasPending": true,
+  "initialFailurePreserved": "../.book3/integration/revised-live.json",
+  "book4MergeAuthorized": false
+}

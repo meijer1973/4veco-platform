@@ -1,0 +1,33 @@
+{
+  "scope": "Read-only copy of in-progress author native PowerPoint output. Requires exact final-handoff binding before acceptance. No feedback provided to author.",
+  "source": "C:\\temp\\ppt427-v2",
+  "render": "C:\\temp\\ppt427-v2\\render",
+  "files": {
+    "4.2.7 Gemengde opgaven - marktvormen en marktfalen – presentatie.pdf": "532e00e1315b11d2bf807ccf0c62c6940e6c4e962e23aa6cdf567a66a465bd57",
+    "4.2.7 Gemengde opgaven - marktvormen en marktfalen – presentatie.pptx": "3778bc1ac3945954de0db16c73e626d15ee29fa611db778e75fbaafef7a07d13",
+    "slide-01.png": "0c09ea5eacf131c34cbb882a93f7377835732c194a4bd4e3fc781561936b98c6",
+    "slide-02.png": "f7bf828679f05ca92e11bb71084b6a26438d927332e9fd95084c090a5bedd9df",
+    "slide-03.png": "ba5f6f5c09641120d23a2cb9cdd47bfde7f143a1e4abf53df574af43bbfbe616",
+    "slide-04.png": "a97a3f745df1ba38b704a1601b26c71424fdfa31f2ca6ec57cf92c4aa4731914",
+    "slide-05.png": "5392aaf3be838ba8c86042f2ca29835e924064ba9332973e9efcbeff38865051",
+    "slide-06.png": "dd640896d8a46fd1de33b884f5402332eec04233c08b53a4cef424fce5a69341",
+    "slide-07.png": "390ad215d870378018b6f62472185eeb63f9c2a3feb122ecc375c5261cecd2c6",
+    "slide-08.png": "dd7d2826bc6d1fb5572947c70f81f8e1c28fd56b09c079ad713614bffd663255",
+    "slide-09.png": "480a29cfea4b44745530a6f62e8d6e6bd23b69d34bae90d60a3fbf7ce623f8c3",
+    "slide-10.png": "7dfb4f5634a6e5253b6fd81fb06527522da20c357de16e9b3931dfc2fed22d0d",
+    "slide-11.png": "c23a8d100a5e52e58cf844c95af883da1e5175e1fd4341a84e627b0cc85a0e7f",
+    "slide-12.png": "e75df52814b480edfbf023687d3f9f790e657e2eb97ff76d68e4d289a554d58a",
+    "slide-13.png": "9a8a9a7c47e38aa5fa08ff998a45f0f260d7b853a474506e53fac16020a77995",
+    "slide-14.png": "c074a6c98636cdf0e4450ed550c336c9475630693e42e425aff19ecabd566eb1",
+    "slide-15.png": "a17fe4911f84ac030c8b783dcd501350ed3d10f8e30092cd432c869b569c2d0a",
+    "slide-16.png": "552bc86a0d7cbd9fd4acc782df027cb9ad29b0d1a5649379e2f2cc4fa6690dde",
+    "slide-17.png": "1796a9cd7e8e0ba9ac46c777120cfa4f06840003d57b50f0c9364244d4181cfb",
+    "slide-18.png": "5b1dfa43950a1e4242e2d2ce7a3b71c55b8d42019a87f44fb98336e82cd0e6f5",
+    "slide-19.png": "d205c463aa1a4abbb59a8df18b006407e9fa5ec0b323f653ea4012e2be568baf",
+    "slide-20.png": "b290017b1eb5fb9bac06a1a21655583c60df42cf2413c05c72875571552709b8",
+    "slide-21.png": "4d464de249737a74f8a32a4a50b8127ccda68461e03dcf6268a5da93255df014",
+    "slide-22.png": "dd271f847cf873a5797a5daca6435234846e6eea25357e31bdb4d2a59435f3e1",
+    "slide-23.png": "a48881059603ffcb3a86d70dfbe55ca645d5930929ddb713acbddf2dcd29ad42",
+    "text-geometry.json": "574c86943920519ab4a8ce2100532a8a6d2a0040132a9a93ca37abaf014cf433"
+  }
+}

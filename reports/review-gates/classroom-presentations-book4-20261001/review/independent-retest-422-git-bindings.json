@@ -1,0 +1,38 @@
+[
+  {
+    "repository": "4veco-platform",
+    "commit": "cf241cf7be7d00ef7640ffb97d8d0fe7792a1dea",
+    "path": "build-scripts/content/book-4/presentation-422.manifest.json",
+    "sha256": "ae102ecb769e39ba2518a98c9d12f24da8330bad61e5c0db896093fa54a8adbc"
+  },
+  {
+    "repository": "4veco-platform",
+    "commit": "cf241cf7be7d00ef7640ffb97d8d0fe7792a1dea",
+    "path": "build-scripts/content/book-4/presentation-422.mjs",
+    "sha256": "0c668c8f6e33ac75e245c1c3620cb180a28473d0cfd8a6766e0e2798fa73fcfb"
+  },
+  {
+    "repository": "4veco-lessen",
+    "commit": "b3901b222fec37e4c9c1cfa5591ca212a84d441b",
+    "path": "RESEARCH_AGENT_MAP.md",
+    "sha256": "b27f5c29e28522e792e34965318c34278ac23c77d356bb464351d1ded4956bc9"
+  },
+  {
+    "repository": "4veco-lessen",
+    "commit": "b3901b222fec37e4c9c1cfa5591ca212a84d441b",
+    "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.2 Prijsdiscriminatie – presentatie.pdf",
+    "sha256": "d5001b44104097a0c4462ea5385a8dfc0debecfc113d6d57b7021c846f89b485"
+  },
+  {
+    "repository": "4veco-lessen",
+    "commit": "b3901b222fec37e4c9c1cfa5591ca212a84d441b",
+    "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.2 Prijsdiscriminatie – presentatie.pptx",
+    "sha256": "3503f74dfc70bec83865a1502fa14bd97908e7abe6d83cbe930040610712091c"
+  },
+  {
+    "repository": "4veco-lessen",
+    "commit": "b3901b222fec37e4c9c1cfa5591ca212a84d441b",
+    "path": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/evidence/4.2.2-presentation.md",
+    "sha256": "2c3828d6d0e426607f3bf062b445679dca802c74bc3394835051dd36adbac2b0"
+  }
+]

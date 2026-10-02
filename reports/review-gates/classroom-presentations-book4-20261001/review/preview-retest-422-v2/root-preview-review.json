@@ -1,0 +1,110 @@
+{
+  "paragraph": "4.2.2",
+  "verdict": "HISTORICAL_PREVIEW_REPAIR_REQUIRED",
+  "scope": "Read-only review of active cold author candidate; no feedback supplied to author. All native pages individually viewed and all slide text/full notes read, including questions, sources and extra paragraphs. Final handoff binding required.",
+  "pptxSha256": "5516b44d0a85e3304e6edf89414d781e84999706d8430af8a8e7e5976e41bf5c",
+  "pdfSha256": "36dd15b6ec69b9516f4763c9c287f2fa1732177a79810776bf8f6c379dc813e4",
+  "nativeRenderSlidesIndividuallyInspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27
+  ],
+  "allSlideTextAndTeacherNotesRead": true,
+  "nativeRenderBinding": "review/preview-retest-422-v2/preview-bindings.json",
+  "nativePngSha256": {
+    "slide-01.png": "adae8dee82d36c61974b2f032ee3562f8849236b990bbf5f1093c7f0276c6165",
+    "slide-02.png": "f4e685d127552be02e16ba051f984eda7113d7e4db41ae56dedff49e7dbe26bf",
+    "slide-03.png": "52d409cbdb076f8188efb8e56e86a7b2b32efe0e34354c784ee6d40d7bd9307d",
+    "slide-04.png": "94064bb12a00d9b2058c95253efc250f69f3560dfbe3a775a486aca73a52f304",
+    "slide-05.png": "7112185df5e1890a6fa241c092f0cec3bf8e1b1051e31363af952ba186a05753",
+    "slide-06.png": "ec6f2f8ae12ab3d08bf0bb75f6d15a903431ccdb2987364120bfde666135ce12",
+    "slide-07.png": "acbfca44f9f798352c2c74ca45bb27368c1e51661a7fa08efdaefd01fd0924df",
+    "slide-08.png": "e4e78fe612a2277df83d9cc7b62f3b4963977c7bef80805cf301f8b151eb874c",
+    "slide-09.png": "12f0ccf96728e3382eab03f14e7ff7afbdddb68a79cf8166379814106d728a70",
+    "slide-10.png": "11507d3ccd83f9b52711e33643469f1ab9340b883cd7e3fe6506b292a1b10625",
+    "slide-11.png": "b11a46327b31fa4eec70b97d425220446da605fb1cc4c432fbaab4394863f972",
+    "slide-12.png": "40a36aa31d34a6fbc7ef971e0da7102a7cc3354fb09399bf2a5bf998f2f0b675",
+    "slide-13.png": "affc65dd2599a95f9d3df20023dbd4092addaf1805e6d4d22a8df5167de58c6a",
+    "slide-14.png": "cc1e8c997dc7b3947feb2112ba0f60f0d2f22919594a4550f7906a2dd5587468",
+    "slide-15.png": "d120a2dc8eb76d60c0e9828ad7ab9ea2f3899791509b15292c059a073d104a82",
+    "slide-16.png": "8921297deb487770cd86f39cbbbe25312077b0335fb092d29284afd61fff1771",
+    "slide-17.png": "df9e180f59de57fdb0ea17a8156ba8031bd7d3952fcddd174b398a2c64a06940",
+    "slide-18.png": "c15aad64046ecf8de7d9b847e78017fdbe1027511bb36f8358f4df230e049c4d",
+    "slide-19.png": "39fee01e6f32f182afa2ac712330a86a074bb41ba7ce3d0f7f2e3a614bf48207",
+    "slide-20.png": "76be2f5774f5f3073423d7227134fc2cde8bf20885b79bfec2856f337ac5b240",
+    "slide-21.png": "b569e6cc3be3d9f5bf0b8a334e9aaf8b2ea346818b7a3a968a62a73b79185a93",
+    "slide-22.png": "ae51cc9eaf81cb743e2254eda82d0eaa4a08ddeeecadf74c8b26448eec57adf5",
+    "slide-23.png": "f29e8862ae599d09a44d3536fa3e75dcc839fd9ff38069202f64d3d7c72c5be8",
+    "slide-24.png": "5fc1ee2aa24dc580cc31217322bd85e6f60b01c155fa59dadef8375977d2462a",
+    "slide-25.png": "5b7228993e753a7045a7ca8d922d91cadde8ba89dcf844fd536cb16a067cd3d2",
+    "slide-26.png": "0e5245c95daa653593f2ccb4892795a068f35564feb0b42c99eebc803a1530ac",
+    "slide-27.png": "85deee24c3bc1db1f6bf7c49ed6295b0a0d092a4fc1c1a409d3c893130dccbbb"
+  },
+  "checks": [
+    "All27 native pages/fullnotes read. Actual fulltarget sources/questions before answers, exercises10-11/B12-13/I14-15/T16,homework12-16,extra17-18. Starts supported with actual textbook paragraphs and returned beforepractice. Actual completeBook4pages36-38,63-66,69 reread; all cited prerequisite methods correctly anchored.",
+    "Separate Speelatelier PA30-QA/PB18-QB,MK6,F36,cap48,domains30/18. Own baselineP15 given:QA15,QB3,TO270,TK144,w126,CS117,PS162,TS279. Discrimination QA12PA18,QB6PB12,TO288,TK144,w144,CS90,PS180,TS270. Totaloutput18same but allocation differs; profit+18 and welfare-9 distinguished. Direction/capacity and fixedcostonce explicit.",
+    "FilmLab full target PA40-QA/PB24-QB,MK8,F80,cap64,nocrossresale. QA16PA24/QB8PB16,TO512,TK272,w240 vs baselineP20 output24,TO480,w208. CS208->160,PS288->320,TS496->480. Bothdirection/capacitychecks,grouppricesnotelasticityproof,noexternalities scope correct. 421->422->423 continuity pass."
+  ],
+  "findings": [
+    {
+      "priority": "P2",
+      "slides": [
+        6,
+        7,
+        8,
+        17,
+        20,
+        21
+      ],
+      "detail": "MK label touches horizontal line; MO crossed by price guide on8/21. Author independently announced corrections before handoff; candidate finding is not completed cold failure."
+    },
+    {
+      "priority": "P3",
+      "slide": 24,
+      "detail": "Ambiguous sentence about subtracting80profit fromPS; formulas/table/notes correct. Author independently announced clarification before handoff."
+    }
+  ],
+  "unresolvedFindings": [
+    {
+      "priority": "P2",
+      "slides": [
+        6,
+        7,
+        8,
+        17,
+        20,
+        21
+      ],
+      "detail": "MK label touches horizontal line; MO crossed by price guide on8/21. Author independently announced corrections before handoff; candidate finding is not completed cold failure."
+    },
+    {
+      "priority": "P3",
+      "slide": 24,
+      "detail": "Ambiguous sentence about subtracting80profit fromPS; formulas/table/notes correct. Author independently announced clarification before handoff."
+    }
+  ]
+}

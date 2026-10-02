@@ -50,7 +50,7 @@ const ALLOWED = [
 ];
 function run(command, args, options = {}) {
   const result = spawnSync(command, args, { cwd: ROOT, encoding: 'utf8', maxBuffer: 16 * 1024 * 1024, ...options });
-  if (result.status !== 0) throw new Error(`${command} failed (${result.status}): ${result.stderr || result.error || ''}`);
+  if (result.status !== 0) throw new Error(`${command} failed (${result.status}): ${result.stderr || result.stdout || result.error || ''}`);
   return result.stdout;
 }
 const git = (...args) => run('git', args);
@@ -208,6 +208,11 @@ function jestArgs(paths, root = ROOT) {
   }
   return [...args, '--findRelatedTests', ...tests];
 }
+function checkDiffHygiene(base, head, root = ROOT) {
+  // Preserve committed CRLF evidence while still rejecting actual whitespace errors.
+  return run('git', ['-c', 'core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol',
+    'diff', '--check', base, head], { cwd: root });
+}
 function check(result) {
   if (!['maintenance', 'smoke'].includes(result.profile)) throw new Error('Focused checks require a maintenance or smoke plan');
   if (git('rev-parse', 'HEAD').trim() !== result.head) throw new Error('Head moved after CI selection');
@@ -219,7 +224,7 @@ function check(result) {
     } else if (file.endsWith('.json')) JSON.parse(fs.readFileSync(full, 'utf8'));
     else if (/\.ya?ml$/.test(file)) require('js-yaml').safeLoad(fs.readFileSync(full, 'utf8'), { json: false });
   }
-  git('diff', '--check', result.base, result.head);
+  checkDiffHygiene(result.base, result.head);
   const args = jestArgs(result.profile === 'smoke' ? [] : result.paths);
   const message = result.profile === 'smoke' ? 'Post-merge smoke: checking syntax/configuration and core CI tests; PR product validation is not repeated.'
     : args.includes('--findRelatedTests') ? 'Running affected Jest tests.'
@@ -250,4 +255,4 @@ function main(argv) {
 if (require.main === module) {
   try { main(process.argv.slice(2)); } catch (error) { console.error(error.message); process.exitCode = 1; }
 }
-module.exports = { classify, packageOnlyCiChanges, exerciseChecksumOnly, plan, check, jestArgs, HISTORICAL_WORKFLOW_TESTS };
+module.exports = { classify, packageOnlyCiChanges, exerciseChecksumOnly, plan, check, checkDiffHygiene, jestArgs, HISTORICAL_WORKFLOW_TESTS };

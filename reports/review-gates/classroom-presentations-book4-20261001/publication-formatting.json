@@ -1,0 +1,50 @@
+{
+  "path": "preparation-review.md",
+  "originalSha256": "40e0a18d7c6a953f63713bee5a648e4744757c9638fcde3f6f272876c24aaed3",
+  "publishedSha256": "4ff5b9245db5def842de0895a67780510d996475aafe1f507e4df7efd11d10b5",
+  "change": "Remove excess terminal blank line; all non-terminal bytes unchanged. Original private reviewer record preserved.",
+  "additionalTransports": [
+    {
+      "path": "review/independent-chapter43-review.md",
+      "originalSha256": "0151bbb2a2b51ad099dd5e83c8828d5a9830e15562767342e7057ae804279bd4",
+      "publishedSha256": "f589e32d321d310609f10723d5125f878a923678cf13ebaed115f4c402d9780b",
+      "change": "Only relative links to unchanged review crops relocated to the existing image-evidence area. All other bytes unchanged; private original retained.",
+      "links": [
+        {
+          "oldLink": "independent-434-v2-crop-9.png",
+          "newLink": "../../../sprints/classroom-presentations-book4-20261001/review/independent-434-v2-crop-9.png",
+          "sha256": "0f92813f7813378fa87a5f78a064525555a3ade98553f58c3813867aed52a128"
+        },
+        {
+          "oldLink": "independent-434-v2-crop-21.png",
+          "newLink": "../../../sprints/classroom-presentations-book4-20261001/review/independent-434-v2-crop-21.png",
+          "sha256": "d941aad50fb2ea8883211b8772e81a90ae6b54d44337dd3e9e2bc0917f78b084"
+        }
+      ]
+    },
+    {
+      "path": "review/independent-retest-422-review.md",
+      "originalSha256": "2c5b03f7b294633fee1988fc2182ad5f2595d03f104e27e72748cdd49c782d75",
+      "publishedSha256": "d2b120448ede0eabf547f7ba93bc6f09b25c915d1405eaf27d23bc510dd01d82",
+      "change": "Only relative links to unchanged review crops relocated to the existing image-evidence area. All other bytes unchanged; private original retained.",
+      "links": [
+        {
+          "oldLink": "independent-retest-422-v2-crop-6.png",
+          "newLink": "../../../sprints/classroom-presentations-book4-20261001/review/independent-retest-422-v2-crop-6.png",
+          "sha256": "3a5d3a6b1ec4a610675fa05ff3901df359051613055c9d97c9121e7e7f4192d1"
+        },
+        {
+          "oldLink": "independent-retest-422-v2-crop-8.png",
+          "newLink": "../../../sprints/classroom-presentations-book4-20261001/review/independent-retest-422-v2-crop-8.png",
+          "sha256": "3a2b2afe0838e8908332fbad2eb26730fc5e5bd2a114a233601ca7d22107a77b"
+        },
+        {
+          "oldLink": "independent-retest-422-v2-crop-21.png",
+          "newLink": "../../../sprints/classroom-presentations-book4-20261001/review/independent-retest-422-v2-crop-21.png",
+          "sha256": "d94c13a21c8ce9f21e93b55c7ee1a63b719e7320dfe5e6147600c85f07f05ecf"
+        }
+      ]
+    }
+  ],
+  "signedToolPreservation": "Original .gitattributes and lane-scope checker/test restored; no signed tool or receipt change. Existing reports/sprints ownership covers review crops. Reviewed CRLF bytes retained; branch diff whitespace checked with cr-at-eol while retaining blank-at-eol, blank-at-eof and space-before-tab checks."
+}

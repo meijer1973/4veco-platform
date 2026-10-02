@@ -1,0 +1,59 @@
+{
+  "scope": "Coordinator content review of actual complete slide text and teacher notes in teaching order. Final421,423–427 accepted;422 original has open visual/citation findings and awaits reviewed fresh retest. No complete-chapter acceptance yet.",
+  "transitions": [
+    {
+      "from": "4.2.1",
+      "to": "4.2.2",
+      "priorTeaching": "421 explicitly separates private profit selection, efficient quantity, CS/PS, transfers and surplus losses. 413/414 teach uniform-price MO and feasible profit maximization.",
+      "newTeaching": "422 teaches separated groups, prevention of resale, common constant MK and sufficient capacity before solving each group's MO=MK. The common-price comparison is given, not falsely claimed to be the global optimal common price.",
+      "boundary": "Fixed costs deducted once. Different group prices do not alone establish different elasticities; names or line slope alone do not prove responsiveness. More producer profit need not mean more total surplus. Actual target total quantity stays24 while allocation changes; welfare falls496→480.",
+      "supportedStart": "10–11 atp66; new fixed-cost/multiple-group and definition material supported byp64/p63, revisited14 beforepractice15.",
+      "artifactStatus": "Completed original blocked for note5 prerequisite citation and native label collisions. Content transition passes; fresh cold replacement still requires full review."
+    },
+    {
+      "from": "4.2.2",
+      "to": "4.2.3",
+      "priorTeaching": "412 establishes market boundary and monopoly;413/414 establish falling demand, uniform prices and private optimization;422 explicitly changes to separate group prices.",
+      "newTeaching": "423 resets to one uniform price and compares independent firms, product substitutability and entry. Differentiation can create a falling firm-demand curve without a monopoly. Classification precedes the own example and target calculation.",
+      "boundary": "Independent firms are not brands. Oligopoly requires attention to rival reactions and has no universal demand/MO equation. The target firmq is units per day, not marketQ. No welfare ranking from profit or price alone.",
+      "supportedStart": "19–20p73:20 uses the definition/tablep71 and is revisited at12 before basis21–22; homework21–25.",
+      "artifactStatus": "Final423-r2 accepted after two direct-label repairs. Economic curves, all text/notes and22other native pages unchanged."
+    },
+    {
+      "from": "4.2.3",
+      "to": "4.2.4",
+      "priorTeaching": "421 welfare accounting assumed no external effects; Book3 tax lessons supply the price wedge and receipts on actual taxed sales. 423 makes competition/market-power assumptions explicit.",
+      "newTeaching": "424 defines an unpaid third-party cost before constructing social MK above private MK. It evaluates an additional transaction, finds efficient quantity, then applies the familiar tax method to a different welfare ledger.",
+      "boundary": "Tax receipts are a transfer, not compensation automatically paid to victims. Remaining damage is still real and must be subtracted. A tax can now raise social surplus because the original market omitted damage; this does not contradict Book3's no-external-effects model.",
+      "supportedStart": "28–29p83; new third-party definition supportedp77, returned14/15 beforepractice. Target34 full source16, unanswered graph17 and questions17–18 precede answers19+.",
+      "artifactStatus": "Final original424 accepted, including author's own independent repairs before completed handoff."
+    },
+    {
+      "from": "4.2.4",
+      "to": "4.2.5",
+      "priorTeaching": "424 establishes private/social distinction, marginal social comparison, external cost totals and a complete public/third-party ledger. Book3§313 teaches subsidy wedge, all-sale spending and CS/PS using their respective prices.",
+      "newTeaching": "425 defines unpaid benefits to third parties, adds them to private willingness to pay and locates the efficient quantity. It explicitly contrasts the same subsidy with and without those external benefits.",
+      "boundary": "Spending and external benefits are distinct even when numerically equal. A lower-subsidy variant breaks that numerical equality. Private benefit+3 and external benefit−7 is a separate fixed-quantity comparison, not a new equilibrium. More production is not always better beyond the efficient quantity.",
+      "supportedStart": "37–38p94; novel38 supportedp88, returned14/15 before basis39–40. Full target43 source16–18 and allquestions19–20 precede answers21+.",
+      "artifactStatus": "Final425-r1 accepted after coordinator supply-label repair, independently rechecked. All28 final native pages covered by seven rechecked changes plus21byte-identical previously inspected pages; economic data/text/notes unchanged."
+    },
+    {
+      "from": "4.2.5",
+      "to": "4.2.6",
+      "priorTeaching": "421–425 distinguish welfare from producer gain, external costs/benefits and public transfers. Book3§314 teaches actual sales under a binding ceiling;426 refreshes that operation with a separate own example.",
+      "newTeaching": "426 teaches problem→mechanism→instrument and separates efficiency, distribution and budget before introducing execution as a real use of resources. Own example works the tax and quota accounts, then deducts implementation once and gives a conditional advice.",
+      "boundary": "Equal pre-execution surplus can have different distribution and implementation cost. Free permits, efficient allocation and compliance are explicit assumptions. A low price does not compensate third parties. Advice can change with compliance/cost assumptions; a producer preference need not imply council arithmetic is wrong.",
+      "supportedStart": "46–47p101 are supported byp100/99 and revisited11 beforepractice12. SourceA/B13–14 and allfivequestions15 precede answers16+; homework48–52.",
+      "artifactStatus": "Completed original accepted. All23 final native pages/text/notes identical to fully reviewedv1; route width2pt measurement has no visible clip/overlap, explicitly disclosed."
+    },
+    {
+      "from": "4.2.6",
+      "to": "4.2.7",
+      "priorTeaching": "421–426 have explicitly taught surplus accounting, model boundaries, discriminatory versus common prices, external costs/benefits and implementation costs. 413/414 supply the full feasible monopoly-choice method.",
+      "newTeaching": "Mixed427 retrieves the methods in slides2–5 with separate Filmzaal and Maaltijdbezorging authored examples, then applies them to two complete target source cases7–10 and all questions11–13 before answers14+.",
+      "boundary": "Studio Solo and Reiniging use different markets and week/day units; quantities and totals are never summed. Monopoly withheld trades and external-cost excess trades explain opposite effects of lower output. A tax appropriate to one market does not automatically solve the other. Public revenue does not prove victim compensation.",
+      "supportedStart": "Realstart55p105; same mixed55–60 assigned with59extra/60Herhaling and no invented basis list. Return to initial reasoning before continuingpractice6.",
+      "artifactStatus": "Completed original427 passes after author autonomous pre-handoff ledger/citation repair. No coordinator feedback/artifact change. Root final5/19 individually rechecked;other21PNGsidentical;notes2/5read;own functions independently recalculated."
+    }
+  ]
+}
