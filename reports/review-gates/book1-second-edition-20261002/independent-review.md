@@ -6,9 +6,9 @@ Reviewer: independent agent `/root/review_b34_followups`, separate from the impl
 
 Reviewed the supplied source/research package, all twelve current owning manuscripts, all 114 exercises and their answers/continuations, worked teaching and preparation, figures, teacher plans, all chapter PDFs and complete-book assembly, target retrieval, archive/navigation and the finite integration boundary. Reviewer-authored files are confined to this review directory and external scratch; the reviewer did not author lesson or implementation changes.
 
-Accepted bases after the ordinary main synchronization are Platform `6d010e98610b5f7d1288af322cd228e160d39ada` and Lessons `10b2bab1ab1dc9592f2ea1e967b6cc2cd7c281c2`. The exact paired lesson candidate is `f38a758da2d022fb6f4e7d195969dc67053548b8`. The final receipt covers 76 platform and 376 lesson changed paths, with full accepted-repository preservation outside its finite scope.
+Accepted bases after the ordinary main synchronization are Platform `6d010e98610b5f7d1288af322cd228e160d39ada` and Lessons `10b2bab1ab1dc9592f2ea1e967b6cc2cd7c281c2`. The exact paired lesson candidate is `c3b74e7fd02f25f09610e56f79f141d15c0adc95`. The final receipt covers 78 platform and 376 lesson changed paths, with full accepted-repository preservation outside its finite scope.
 
-Review manifest SHA256: `d1b23bb6b8df8687655e2675d51988b8b299f20842b0db50575b1566dce94fdc`
+Review manifest SHA256: `6fdf7a4e1f7181a73efa1b840b46701ee25acd17ee2d19e2f57f2a67ecf37e8a`
 
 Each linked paragraph report below has its own verified current-file snapshot. Those reports are included in the overall receipt; this overall report is excluded to avoid a circular hash.
 
@@ -73,6 +73,7 @@ The new landing/compatibility pages have 79 checked local links with no missing 
 | Historical paired-CI dispatch | Exact recognized old lesson trees execute the original verifier from immutable platform d81db955, retaining its pins/results. The author’s positive b9990d3 historical run was inspected; no invented historical state or evidence repin. |
 | LF serialization regression | Filesystem-only keyword arguments were removed from PyMuPDF TextWriter; the complete rebuilt current PDFs were inspected. |
 | Inherited book-manifest fields | Current dispatch references only E2 content ownership; old cover/preface/print-scope/colophon fields remain in the historical manifest. |
+| Historical CI fixture missing E2 receipt | `paired-paragraph-ci.test.js` now copies the receipt required by the scope checker into its miniature platform checkout. Only that test and its explicit finite allowlist entry changed. Reviewer-run fixture suite passed 5/5; original positive/stale/missing-evidence assertions remain intact. |
 
 The first-edition archive was independently compared to all 1,102 Git blobs at original accepted Lessons `e734532a42b27732ac25ce990fc9448b12309d28`: exact paths, sizes and bytes match the inventory/ZIP. The old Ben table/function conflict remains historical, while the new 1.2.3 target has coherent data and a separate identity. Old target review statuses, protected source/hold files and Part B companions were not retroactively approved or rewritten.
 
@@ -84,7 +85,7 @@ Main synchronization was independently audited: 373 upstream platform paths and 
 
 ## 6. Checks, flags and review limits
 
-Reviewer-run checks include: two initial JS suites 6/6; the later five relevant edition/boundary/outline/foundation/lane suites 144/144; all twelve current snapshot checks; target projection freshness; tracked final successor verification; archive-vs-Git, answer payload, SVG geometry, final render freshness, PDF links and local navigation audits. The author additionally reports 2,527 bounded checks and post-sync focused suites passing; those are supporting author verification, not relabelled independent review. Remote exact-pair/full CI was still pending when this report was written. An unchanged historical golden-ticket fixture’s local LF/CRLF CLI discrepancy is not silently repaired or treated as new curriculum authority; CI must report its actual environment result.
+Reviewer-run checks include: two initial JS suites 6/6; the later five relevant edition/boundary/outline/foundation/lane suites 144/144; all twelve current snapshot checks; target projection freshness; tracked final successor verification; archive-vs-Git, answer payload, SVG geometry, final render freshness, PDF links and local navigation audits. The author additionally reports 2,527 bounded checks and post-sync focused suites passing; those are supporting author verification, not relabelled independent review. Downloaded exact-pair evidence for Platform `02cbfb0d4b5fb736232994a4a07d557d4c7fa8f9` / Lessons `f38a758da2d022fb6f4e7d195969dc67053548b8` was inspected: 2,527 bounded checks and 1,376 assembly checks passed on the authenticated pair. A later historical workflow failed only when its miniature Jest fixture omitted the newly required receipt; that narrow test repair is now reviewed. Remote reruns for the refreshed candidate and required full CI remain pending; the earlier remote result is not presented as proof of those future runs. An unchanged historical golden-ticket fixture’s local LF/CRLF CLI discrepancy is not silently repaired or treated as new curriculum authority; CI must report its actual environment result.
 
 The substantive flags are:
 
@@ -94,3 +95,15 @@ The substantive flags are:
 - Browser visual testing of navigation pages was unavailable; all 79 local targets were checked. PDF content/render acceptance is complete, while browser and assistive-technology certification is not claimed.
 
 Detailed independent evidence is retained at `C:/wt/book 2/review/book1-second-edition-20261002/`: source-review notes, full original/final page renders, `independent_geometry.py/.json`, `independent-archive-audit.json`, `independent-answer-export-recheck.json`, `independent-navigation-audit.json`, `independent-base-sync.json` and `independent-final-freshness.json`. Subsequent substantive changes require this reviewer to recheck the affected dependencies and bind a new current digest.
+
+
+### Post-CI fixture recheck
+
+The previous substantive review remains preserved in Git at manifest `d1b23bb6b8df8687655e2675d51988b8b299f20842b0db50575b1566dce94fdc`. The fixture-stage receipt `080050f992e43edde708b326f43bf5fe5f58ef6c209a44f0b690d71271e228c6` changed the dependency copy and its finite allowance. The final receipt additionally includes the historical route workflow and the original-checker execution described below: exactly three platform paths differ from the initially reviewed candidate. All 376 lesson inventory rows, all twelve paragraph reports/snapshots and every inspected PDF hash are unchanged. The reviewer independently ran `npx jest build-scripts/ci/paired-paragraph-ci.test.js --runInBand`: 5/5 passed, including missing/stale-review rejection. No teaching or publication content changed. The workflow execution repair is described separately below. Evidence: external `independent-ci-fixture-recheck.json`, the downloaded `ci-book1-pair/` receipts and the historical failure log. The current manifest binding above covers this repair.
+
+
+### Historical route review execution
+
+A second historical CI failure was at the old direct 43-paragraph review command: it was comparing the current Book 1-amended skill to its original hash. The current helper now authenticates the recognized historical lesson tree, then invokes the unchanged `exercise-route-review.js` from immutable platform `d81db9558cc24d0671da1b2b9ecc5cdf1a092dde` with `check:true`. Only a passing original verifier and original review produce `historical_review`. The route workflow requires the historical route state and all 43 paragraph bindings, writes that proof as CI evidence and fails if it is absent. Its pre-successor branch retains the original check.
+
+The author’s actual positive run against Lessons `fdad5d8f62b7e12618e6a3b8d344c407c259ed35` was inspected: 1,291 historical files passed and the original checker returned 43 verified independent bindings. The reviewer checked the helper/workflow diff, failure propagation and unchanged original checker/report/pin paths. This preserves historical evidence rather than refreshing it to the new skill. Reviewer inventory comparison confirms that only `.github/workflows/paired-exercise-route-ci.yml`, `book1-second-edition-revision.js` and `paired-paragraph-ci.test.js` differ from the initial substantive-review candidate; lesson content, all 12 paragraph records and inspected PDFs remain unchanged. Evidence: `historical-route-check.log` and `independent-historical-review-recheck.json` in the external review directory. Current remote reruns remain a separate closure check.

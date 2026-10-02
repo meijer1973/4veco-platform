@@ -11,6 +11,11 @@
       "sha256": "964df055450d1e0d00fb3801ed857f5f7b931229ae2bba94c41a48dbbb064cc1"
     },
     {
+      "path": ".github/workflows/paired-exercise-route-ci.yml",
+      "bytes": 5082,
+      "sha256": "d80fee38c852c48c2570839f6554c85e4f5c2d76c3640efe33344fc6761d22e9"
+    },
+    {
       "path": "AGENTS.md",
       "bytes": 7100,
       "sha256": "cd610649c496fc61506507d3fea0afa8cda37616d920b52d4de54d6d2d6b73a3"
@@ -27,8 +32,8 @@
     },
     {
       "path": "build-scripts/books/book1-second-edition-revision.js",
-      "bytes": 10283,
-      "sha256": "f1ea94b930c09429dc0f9e3681c86712d81de50d00c3afa33b6110126158518e"
+      "bytes": 10661,
+      "sha256": "fda8db1f161892158e68126bde42b2d1a0ed2f20030c925c9ef009b30fedaa08"
     },
     {
       "path": "build-scripts/books/book1-second-edition-revision.test.js",
@@ -149,6 +154,11 @@
       "path": "build-scripts/books/build-book.py",
       "bytes": 2712,
       "sha256": "d66aec851ef141b7266cca2f69934473141ab3fe0d18d6477110413bead8d0b6"
+    },
+    {
+      "path": "build-scripts/ci/paired-paragraph-ci.test.js",
+      "bytes": 8544,
+      "sha256": "8baac0785b5d18d78e187a57055d136e95f87ab0afdc328ff74c49b56c85b30b"
     },
     {
       "path": "build-scripts/content/book-1/presentation-v2-registry.js",

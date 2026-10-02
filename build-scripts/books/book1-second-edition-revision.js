@@ -19,8 +19,8 @@ const P_EXACT=new Set(['AGENTS.md','docs/workflows/part-a-start.md','docs/workfl
  'build-scripts/content/book-1/presentation-v2-registry.js','build-scripts/books/build-book.py','build-scripts/platform/build-landing-page.js',
  'build-scripts/books/book-manifests/book-1.json','build-scripts/books/book-manifests/book-1-first-edition.json',
  'build-scripts/maintenance/check-classroom-edition.js','build-scripts/maintenance/check-classroom-notation.test.js','build-scripts/maintenance/check-books34-v3-import.js','build-scripts/workflows/check-paragraph-lane-scope.js',
- 'build-scripts/books/book1-second-edition-revision.js','build-scripts/books/book1-second-edition-revision.test.js','docs/workflows/book1-second-edition.md','.github/workflows/paired-book1-second-edition-ci.yml',
- 'build-scripts/maintenance/check-classroom-edition.test.js','build-scripts/references/books34-v3.test.js','build-scripts/workflows/paragraph-records.js','build-scripts/workflows/paragraph-records.test.js',
+ 'build-scripts/books/book1-second-edition-revision.js','build-scripts/books/book1-second-edition-revision.test.js','docs/workflows/book1-second-edition.md','.github/workflows/paired-book1-second-edition-ci.yml','.github/workflows/paired-exercise-route-ci.yml',
+ 'build-scripts/maintenance/check-classroom-edition.test.js','build-scripts/references/books34-v3.test.js','build-scripts/workflows/paragraph-records.js','build-scripts/workflows/paragraph-records.test.js','build-scripts/ci/paired-paragraph-ci.test.js',
  'references/data/rag/chunk_index.jsonl','references/data/owned-content-graph.json','reports/json/owned-content-coverage.json','reports/owned-content-coverage.md']);
 const L_EXACT=new Set(['AGENTS.md','index.html',BOOK+'/README.md',BOOK+'/index.html',BOOK+'/eerste-editie.html',...['md','html','pdf'].map(ext=>BOOK+'/Boek 1 Grondslagen, vraag en aanbod – boek.'+ext)]);
 const EXCLUDED_P=new Set([MANIFEST,PIN,REVIEW,HEAD]);
@@ -72,7 +72,7 @@ function historicalPair(root,lessons,requireTracked){
  const os=require('os'),parent=fs.mkdtempSync(path.join(os.tmpdir(),'book1-history-')),checkout=path.join(parent,'platform');
  try{
   git(root,['worktree','add','--detach',checkout,HISTORICAL_P]);
-  const script="const path=require('path');const result=require(path.join(process.argv[1],'build-scripts/maintenance/check-classroom-edition.js')).verify({root:process.argv[1],lessons:process.argv[2],requireTracked:process.argv[3]==='true'});process.stdout.write(JSON.stringify(result));";
+  const script="const path=require('path');const options={root:process.argv[1],lessons:process.argv[2],requireTracked:process.argv[3]==='true'};const result=require(path.join(options.root,'build-scripts/maintenance/check-classroom-edition.js')).verify(options);if(result.passed&&result.lesson_state==='exercise-route-revision'){const review=require(path.join(options.root,'build-scripts/books/exercise-route-review.js')).run({...options,check:true});result.historical_review={paragraphs:review.paragraphs,mode:review.mode};}process.stdout.write(JSON.stringify(result));";
   const result=JSON.parse(execFileSync(process.execPath,['-e',script,checkout,lessons,String(requireTracked)],{encoding:'utf8',maxBuffer:128*1024*1024,env:{...process.env,NODE_PATH:path.join(root,'node_modules')}}));
   return {...result,historical_verification:{platform:HISTORICAL_P,lessons:matched,mode:'original verifier in immutable accepted checkout'}};
  }finally{

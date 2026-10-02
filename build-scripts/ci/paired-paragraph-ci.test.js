@@ -56,6 +56,9 @@ test('complete paired command checks committed paragraph evidence and rejects a 
   const platform = fs.mkdtempSync(path.join(os.tmpdir(), 'paired-platform-'));
   const platformGit = (...args) => execFileSync('git', ['-C', platform, ...args], { encoding: 'utf8' }).trim();
   try {
+    const editionReceipt='references/owned/book1-second-edition-2026/revision.json';
+    fs.mkdirSync(path.dirname(path.join(platform,editionReceipt)),{recursive:true});
+    fs.copyFileSync(path.resolve(__dirname,'../..',editionReceipt),path.join(platform,editionReceipt));
     for (const file of ['scripts/validate-paragraph.js', 'scripts/lib/paragraph-types.js', 'scripts/lib/part-a-review-evidence.js', 'scripts/lib/committed-paragraph-files.js', 'build-scripts/ci/paired-paragraph-ci.js', 'build-scripts/workflows/check-paragraph-lane-scope.js', 'build-scripts/books/exercise-route-revision-pin.json', 'build-scripts/books/book2-signed-revision-pin.json', 'build-scripts/books/books34-signed-revision-pin.json', 'build-scripts/books/books34-followups-revision-pin.json', 'build-scripts/books/book2-notation-revision-pin.json']) {
       fs.mkdirSync(path.dirname(path.join(platform, file)), { recursive: true });
       fs.copyFileSync(path.resolve(__dirname, '../..', file), path.join(platform, file));
