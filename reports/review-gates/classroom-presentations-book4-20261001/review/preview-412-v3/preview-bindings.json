@@ -1,0 +1,33 @@
+{
+  "scope": "Read-only copy of in-progress author native PowerPoint output. Requires exact final-handoff binding before acceptance. No feedback provided to author.",
+  "source": "C:\\wt\\ppt\\.book4\\412\\scratch\\rev3",
+  "files": {
+    "4.1.2 Monopolie - kenmerken – presentatie.pdf": "8ed58818e16853fd27947929e53166d0ec70ea4f973770cd176e6adedaf493ad",
+    "4.1.2 Monopolie - kenmerken – presentatie.pptx": "924e759c0036b106b30381dae7ee408075a7a3ed4b6c947e64b70b836a318cd8",
+    "slide-01.png": "4789998ff233ae68509cc516840c2891cfe7b637b754b76779f5a2aea9c651b1",
+    "slide-02.png": "63ebcc6f23e1789ad11b568af4847f3d44435ac9b442018cbc1cb81a41933871",
+    "slide-03.png": "db9e301094d0863aca48c2efe10e264e36a255e2c1d27b09225a2516525781ed",
+    "slide-04.png": "4e8c25fc0cd70ab2703de285214d081bb5c1971517b007cdb88a33719e337e03",
+    "slide-05.png": "e403e859520bfa5455f90bb1ee8ef5f09026cdc48899f88b95fa72f37a00cedc",
+    "slide-06.png": "962ae5d3b7255a568d7c2eb5a68d189d67cf68cd64fe4585c67d9a1b3af4d6ce",
+    "slide-07.png": "3576cdab3649b6c1add5cee5a647ccbefb16f0339a1085255465e37829825534",
+    "slide-08.png": "9e8e49225e39c25d6b75cac0231964e5de0edd3a9bd65f70475bc6a90887f01f",
+    "slide-09.png": "5f3df3f6a25bb5e55f327d586851433a088ddf918734cc3b0a64f942d34ddfed",
+    "slide-10.png": "e872feb377bb642d5a1e8824df41704b983cd9195c82b0c6d944b4fde54c8adc",
+    "slide-11.png": "cdd9aa583a24ffc0c53f742159e59fc13689ad9085bfd665732f112faed327fb",
+    "slide-12.png": "7b336441c8f100298e19364a1b0a32ade342d80d31e0115156ee436fed098fb0",
+    "slide-13.png": "2d5e0a79b16123b9cffce27eb33b91c6d1ea4e25ce99cc585bb05a9056c9a910",
+    "slide-14.png": "2e404ad289bdea0d6be9de3f235eb6217254aadd2f3367c658e59df20a5257eb",
+    "slide-15.png": "453083ac88183ae0eb21a909e68de270e83d8d57e744805dc97eb2f774b779f4",
+    "slide-16.png": "ccaca3c5c47abee5140966aa8e0f49b3ae890f27820cbfc18afde0df028b9132",
+    "slide-17.png": "93c47841033a98589fa1bdd08ad8061fc2c23082b6f63f397e2668b6a4d7559f",
+    "slide-18.png": "dac3f3ed1a0821dd157ac877004619a6a76ae3147ea95e546b26c90e4de3cab9",
+    "slide-19.png": "650975fb115f1f8dff7aedebd7d21f673ea128162afc6bdc84d5c87ddec7e11b",
+    "slide-20.png": "45eae70f11239e3215f0fa11c248c496ffd17de9022acc2f936225bc90adb6e3",
+    "slide-21.png": "ce794b2c2f0510518f1bdf73430dccf2836ec82967412465c9a9eccb12614cae",
+    "slide-22.png": "234770c476b05f8ab295e0fb57d54ba9fb6c76ba86033678961617e02ff4f123",
+    "slide-23.png": "6ec6be4a2fead77ad19e11ef10e08cf1624e9e8d0ece7b1cba7a4860d1590c0d",
+    "slide-24.png": "30052e4b56c44a2afb217623864b0e7ac9e79a9ba0a247910e3cddc0f2ce6783",
+    "text-geometry.json": "b2ffd4d8e067c0661c259445f3a8363793659c0fcb07210992d7b24b0327ec3b"
+  }
+}

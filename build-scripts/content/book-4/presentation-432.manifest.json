@@ -1,0 +1,200 @@
+{
+  "paragraph": "4.3.2",
+  "title": "Arbeidsaanbod, participatie en evenwicht",
+  "type": "theory",
+  "scope": "Part B classroom PowerPoint and matching PDF only",
+  "edition": "books34-v3",
+  "lessonCommit": "e734532a42b27732ac25ce990fc9448b12309d28",
+  "platformBaseline": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+  "sources": [
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/4.3.2 manuscript.md",
+      "sha256": "64323fd7ca261d025bb5944f65032d72b6d7a97d124f1ded9a2abeeea5dd89e7"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/4.3.1 manuscript.md",
+      "sha256": "12f46259c226c4be4e651dd9a1fbe140a33c137756eca860482e19f41b49bfb7"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/Antwoorden.md",
+      "sha256": "e602feba92be7245eeb349393f6787a2eac044e8c12a956712f3ac507f658f9f"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/Docenteninformatie.md",
+      "sha256": "106f211aec0caa10c693014055874468e74b034a619d077bff30feb3ed1a8f85"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/eq_target.svg",
+      "sha256": "b050da4637ecc5b395f8f04ed6acbd6d4fc06d43e4919b1781a4f65b7d939656"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/eq_target_answer.svg",
+      "sha256": "2bd24dbfbd067cebd70c763f3d9791d79a69689c1822a38653b403e2bcf04ade"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.2-leerling-v3.pdf",
+      "sha256": "372f0b5e3d7083e0e2ce0181980f0d5dbc271a3eb6db43ca6c04a0c258374e80"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+      "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.4 manuscript.md",
+      "sha256": "77c8e3e3cbba0fae732cb904aa05be660e002bd378e1e049fd9e9155adbdef6c"
+    }
+  ],
+  "goals": [
+    "Classify employed, unemployed and non-participants with the stated age range",
+    "Calculate gross and net participation with the population denominator",
+    "Solve equilibrium wage, employment, plot E and explain actors and scope"
+  ],
+  "printedPages": {
+    "theory": [
+      124,
+      125,
+      126,
+      127
+    ],
+    "start": 128,
+    "basis": 128,
+    "independent": 129,
+    "target": 130,
+    "bonusAndRetrieval": 131
+  },
+  "pageVerification": "Complete student PDF physical pages 124–131 equal printed footer numbers. Chapter-local pages 12–19 are not the references shown in the deck.",
+  "assignment": {
+    "start": [
+      10,
+      11
+    ],
+    "basis": [
+      12,
+      13
+    ],
+    "independent": [
+      14,
+      15
+    ],
+    "target": 16,
+    "homework": [
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "extras": [
+      17,
+      18
+    ]
+  },
+  "prerequisiteTrace": [
+    {
+      "operations": "Equate linear functions, solve, substitute, check",
+      "usedBy": "10a,13,15,16b",
+      "earlierTeaching": "Book 3 §3.1.4 manuscript, Uitgewerkt voorbeeld / Een lage prijs analyseren (chapter page30), explicit equality and substitution. Refreshed with wage/person meaning on slides7–12. No assumption of demonstrated mastery."
+    },
+    {
+      "operations": "Part/whole times100%; choose denominator",
+      "usedBy": "10b,12,14,16a",
+      "support": "Slide5 explicitly introduces and explains the formula; slide6 demonstrates with own data. For start10b teacher notes provide the formula as a fragile-prerequisite refresh, rather than relying solely on an exercise as teaching evidence."
+    },
+    {
+      "operations": "Employers demand labour, households supply; persons vs hours",
+      "usedBy": "13b,15,16b–c",
+      "earlierTeaching": "§4.3.1 Wie koopt jouw werktijd? and Een uur is geen persoon (chapter p2–3 / complete book114–115); refresh slide7 and fixed20-hour assumption slide8."
+    },
+    {
+      "operations": "Population classification: no paid job, recently searched, directly available; age15 to75",
+      "usedBy": "11,12,14,16a",
+      "newTeaching": "§4.3.2 complete book124; start11 explicitly supported exploration using p124; slide3 teaches conditions; return to11 before basis on slide15."
+    },
+    {
+      "operations": "Bruto versus netto with same denominator",
+      "usedBy": "12,14,16a",
+      "newTeaching": "Book125; slides4–6 show population total, both numerators, substitution and reasonableness check."
+    },
+    {
+      "operations": "Q/P to L/w representation; equilibrium point and guides",
+      "usedBy": "13,15,16b",
+      "newTeaching": "Book126–127; slides7–12 change labels and units, show domain/assumptions, native numeric axes, solving, check, E and both guides."
+    },
+    {
+      "operations": "Observation vs hypothetical schedule, ceteris paribus, movement vs shift, free wage and matching",
+      "usedBy": "15,16b–c",
+      "newTeaching": "Book125–127; slides8–10 and13 cover these distinctions and the scope reset from region to separate sector."
+    }
+  ],
+  "authoredExample": {
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "context": "Dijkstad and separate labour market for baliemedewerkers",
+    "population": 2400,
+    "employed": 1560,
+    "unemployed": 240,
+    "nonParticipants": 600,
+    "labourForce": 1800,
+    "grossPercent": 75,
+    "netPercent": 65,
+    "demand": "Lᵥ=180−6w",
+    "supply": "Lₐ=−36+6w",
+    "domain": [
+      6,
+      30
+    ],
+    "hoursPerPersonPerWeek": 20,
+    "equilibrium": {
+      "wageEuroPerHour": 18,
+      "persons": 72
+    },
+    "separation": "Own context and data, no worked assigned practice before independent work. Does not carry a purported book exercise number or page attribution."
+  },
+  "actualTarget": {
+    "exercise": 16,
+    "name": "Waterstad en de bezorgsector",
+    "questions": [
+      "16a: labour force plus gross and net participation (3p)",
+      "16b: wage, employment, plot E (3p)",
+      "16c: identify demanders/suppliers and explain why model does not replace regional tally (2p)"
+    ],
+    "answers": {
+      "labourForce": 3500,
+      "grossPercent": 70,
+      "netPercent": 60,
+      "wageEuroPerHour": 14,
+      "persons": 100,
+      "E": [
+        100,
+        14
+      ]
+    },
+    "presentation": "Slides16–19 contain both complete sources, all three subquestions and the basis graph before any answer. Slides20–24 answer all operations."
+  },
+  "sourceFinding": {
+    "id": "SRC-432-01",
+    "status": "Named upstream source repair pending; book unchanged",
+    "file": "chapters/4.3/_assets/eq_target.svg (and answer figure)",
+    "finding": "Book graphic extends curves outside the explicitly stated wage domain4≤w≤24. Source equations, labels, tick scale and actual target are otherwise consistent.",
+    "deckTreatment": "Editable redraw preserves functions, units and axis scales but clips both curve segments to the explicit source domain. Domain is shown on the question graph and explained in notes. No source numbers or answers changed."
+  },
+  "overviewSlides": [
+    1,
+    15,
+    25
+  ],
+  "targetQuestionSlides": [
+    16,
+    17,
+    18,
+    19
+  ],
+  "targetAnswerSlides": [
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "planning": "Teacher guidance suggests two55-minute lessons provisionally; no measured timing or learning-effectiveness claim.",
+  "reproduction": "Use installed presentation runtime environment, authoring marker, then presentation-432.mjs with fresh PRESENTATION_WORKSPACE. Render saved final PPTX with build-scripts/presentations/render-powerpoint.ps1. See classroom recipe."
+}

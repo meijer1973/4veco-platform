@@ -1,0 +1,117 @@
+{
+  "paragraph": "4.1.5",
+  "title": "Gemengde opgaven: concurrentie en monopolie",
+  "type": "gemengde opgaven",
+  "edition": "books34-v3 / book34-lesson-balance-v3-20260915",
+  "lessonCommit": "e734532a42b27732ac25ce990fc9448b12309d28",
+  "platformCommit": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
+  "sources": {
+    "edities/books34-v3/books/book-4/chapters/4.1/4.1.5 manuscript.md": "a75813115abe7117b6a0044960fc03a4861084949d86073b5e118e984d24bf3f",
+    "edities/books34-v3/books/book-4/chapters/4.1/Antwoorden.md": "4048fa122764663e445145463d63bf4b9b2367b1aa8e34f0e62d1cf5486e394f",
+    "edities/books34-v3/books/book-4/chapters/4.1/Docenteninformatie.md": "0dd614ec1357e51a40dd19b6bc0480549e37c912b2de56ca403a31c7cb0e7e92",
+    "edities/books34-v3/books/book-4/chapters/4.1/4.1.1 manuscript.md": "7d80849940920bc83166692f39d89fec1c3eb909453ade5b6b55336aab17e797",
+    "edities/books34-v3/books/book-4/chapters/4.1/4.1.2 manuscript.md": "739fc8fc31d2df3fcce02832e72df341c5be7544ff6c90fbe089e2f7cee99a3d",
+    "edities/books34-v3/books/book-4/chapters/4.1/4.1.3 manuscript.md": "c4360e8f4b2bbf0ea576f80d8f2bb323c2fe34a7d5f90c375203ca629bddbfc1",
+    "edities/books34-v3/books/book-4/chapters/4.1/4.1.4 manuscript.md": "65dd2923fd9c6544fce1e1a26d30969bf34abc4f0bd9bd8ad85cd3198db752b0",
+    "edities/books34-v3/books/book-4/chapters/4.1/_assets/4.1.4_target.svg": "a35a985f73da21de7d88e698422674565b09f3e0b1d4c87dce6761d4e5264ed9",
+    "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8",
+    "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.5-leerling-v3.pdf": "330ce20a782829db940dac42a6f0cd1cf69b5c10258b4dec7b09ad6f79f384ef",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md": "135327f9170110864cd3b849821db55c0be2d4a5838fcb69f7e6fc2083d71369",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.2 Elasticiteit en omzet – paragraaf.md": "74c0c4df6d184c834040bbe0e5ed7229026db2f4a8beaa611ff7d58168c4ab3d"
+  },
+  "goals": [
+    "Model kiezen met bronbewijs",
+    "Haalbare q, prijs en winst berekenen",
+    "Foutmethode herkennen en verbeteren",
+    "Conclusies tot brongegevens beperken"
+  ],
+  "assignment": {
+    "start": [
+      "41"
+    ],
+    "startPrintedPage": 46,
+    "preparation": [
+      "41",
+      "41A",
+      "42",
+      "43",
+      "44"
+    ],
+    "basis": null,
+    "independent": "gemengde opgaven, geen aparte begeleide sectie",
+    "target": "45",
+    "targetSourcePrintedPage": 48,
+    "targetQuestionsPrintedPage": 49,
+    "furtherMixed": [
+      "46",
+      "47",
+      "48"
+    ],
+    "homework": [
+      "41",
+      "41A",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47",
+      "48"
+    ],
+    "homeworkAction": "Maken en nakijken",
+    "bonus": []
+  },
+  "pagination": "Complete student PDF printed footers verified visually: 46–50; manuscript edition_page is 42–46 and chapter-local guidance is not the complete-book pagination. No source mutation.",
+  "teachingExample": {
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "context": "Gel Nova, exclusief procedé zonder goede vervangers in afgebakende markt",
+    "P": "26 - 0.25q",
+    "TK": "0.125q² + 5q + 72",
+    "capacity": 36,
+    "unavoidableCost": 72,
+    "q": 28,
+    "price": 19,
+    "TO": 532,
+    "TK_at_optimum": 310,
+    "profit": 222,
+    "separateFromAssignedExercises": true
+  },
+  "prerequisites": [
+    {
+      "operation": "41: bronbewijs, afgebakende markt, vervangers en barrière",
+      "anchor": "4.1.2 manuscript: Kijk eerst welke markt bedoeld wordt; Waarom verschijnt niet meteen een tweede aanbieder?; Zo onderbouw je een bronantwoord; book pp.16–19",
+      "status": "retrieval; briefly revisit after attempt"
+    },
+    {
+      "operation": "41A: toetreding, aanbod, prijs, normale beloning",
+      "anchor": "4.1.1 manuscript: Meer aanbod, minder winst per bedrijf; Eerst één afspraak over het woord winst; pp.7–10",
+      "status": "previously taught; do not reveal assigned 41A answer in recap"
+    },
+    {
+      "operation": "42,43: GO/GTK to totals, winst vs omzet/break-even",
+      "anchor": "4.1.4 manuscript: Welke afzet geeft de meeste winst?; Stap 3: bereken de winst; pp.35,38",
+      "status": "recap in separate example and formula support"
+    },
+    {
+      "operation": "44: initial-value percentage convention and Ev; uniform price revenue effect",
+      "anchor": "Book 2 2.2.1 sections on percentage/elasticity and 2.2.2 on revenue; 4.1.3 pp.24–25",
+      "status": "formula reminder with no assigned answer"
+    },
+    {
+      "operation": "45b,46: P to TO to MO; TK to MK including constant derivative",
+      "anchor": "4.1.3 Eerst de totale opbrengst/Daarna de marginale opbrengst p.25; 4.1.4 Uitgewerkt voorbeeld p.40",
+      "status": "Gel Nova demonstration"
+    },
+    {
+      "operation": "45b–f,47: marginal crossing, capacity, q0, graph MO/MK to q to GO/price; changing capacity",
+      "anchor": "4.1.4 Stap 1–3 and capaciteit section pp.36–40",
+      "status": "Gel Nova demonstration, capacity boundary reminder; full actual 45 discussion later"
+    },
+    {
+      "operation": "48: profit vs society and missing constraints",
+      "anchor": "4.1.2 Begrens je conclusie; 4.1.4 scope of firm model; 4.1.5 closing box",
+      "status": "limit conclusions, no new welfare calculations"
+    }
+  ],
+  "scope": "Scoped Part B classroom presentation; does not establish full companion completeness or lesson timing."
+}

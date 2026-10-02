@@ -1,0 +1,49 @@
+{
+  "paragraph": "4.2.3",
+  "verdict": "PASS",
+  "scope": "Coordinator repair of completed cold handoff; original REPAIR_REQUIRED_P2 verdict retained.",
+  "reason": "B4-423-P2-01: move GO=P label anchors clear of the demand curves on slides8/20; economic curves, text, notes, source questions and answers unchanged.",
+  "pptxSha256": "d0fa6c348406bd89242b7ba3e277ff40ad7f265e906d11ae3e2ca9dcc0227cdf",
+  "pdfSha256": "e2b56baf71e05b3ca0c6c0c2a44c15bb88bb49101520a64b27416f5061127685",
+  "originalColdPptxSha256": "78f5ff10f5e37796cc700f940a768f3882fdaed322ca02b319329f2fddcfa310",
+  "nativeRenderSlidesReinspected": [
+    8,
+    20
+  ],
+  "unchangedNativeSlidesByteIdenticalToReviewedColdVersion": 22,
+  "allSlideTextAndNotesUnchanged": true,
+  "allEconomicSeriesUnchanged": true,
+  "chartChange": "Added invisible point anchors solely for direct GO=P labels. Coordinates rounded to four decimals after first coordinator build exposed a literal-precision workbook validation failure.",
+  "priorNativeReview": "review/preview-423-v3/root-preview-review.json",
+  "nativePngSha256": {
+    "slide-01.png": "ac76ddaeb5260aa633f6efa04cde482d2c97a17f4026bb3cc208b1e8ca939e93",
+    "slide-02.png": "f51a31b320ef125a86d9a395f172b6b7725e32f982f29204ad12dbdaed777a0c",
+    "slide-03.png": "a836698438f5adcad42079d27fd44743e5a6f2f6e4f306730ac485218712bc37",
+    "slide-04.png": "204ca41e1e09760ff41532ab2763bf83d130ea4bcc5d1e224d9f494c99d086fd",
+    "slide-05.png": "7bbdded3067210278a14eda9e369e3ed90872db3eb07dfde94c399d34c3fb777",
+    "slide-06.png": "11c7aef49c0fb7381b6242b6c7308ae8f3f1e8c58aacb0ec90987ee5aa8e21be",
+    "slide-07.png": "ce6d45bb98e8d09e9a254e3550f197dede8007188e452ea9d2387f8ec3d9d7b0",
+    "slide-08.png": "fa265e4e2aa3eb49a9d704a210392a6386466e4889b05df4a948c52caf9ba89d",
+    "slide-09.png": "6c6588e9a3ecf4f7ea92eaacfae7df6d5ef00e0f58810a6b9a533b15a30a7c55",
+    "slide-10.png": "77713d6d306bf86a543a88363e4e93d15c7224405ee2b803d3af892732c268bf",
+    "slide-11.png": "572cc7196ac860ba2f47f08d0f8c905b7f01a0569971ffedd943cad55d90d300",
+    "slide-12.png": "7f39d34f5a49a03eab02704a5979d36771bdfd8412e27d1cfbc6a58019bff961",
+    "slide-13.png": "6d129eed24290fa70314220b2f06b2a61fa8227c9a42b456a9f84ffae3747970",
+    "slide-14.png": "a911c58cc1abd913d55b636bb51350ce95f3506216a1611fae7f7dfd7b372f0e",
+    "slide-15.png": "f8f91bfde58be4de561569def970da17927299aa9026cb07aca91b2535d4fd52",
+    "slide-16.png": "7649baae668eb815cb9d10fc4a251f48dfe315135769929a0ffd48ee173e5336",
+    "slide-17.png": "a1ebe799d5cb7111b5939ef782412c12e52e4b752dbb7367a46bf6ae458c20ab",
+    "slide-18.png": "e3f6239e00dc736aebcd8b72f9d4663ffcbe638698bf1ab425f5dac2a372792e",
+    "slide-19.png": "6ee974dbedef0fca6c501d204d794283c2e62f345f5380ce44589a7a1b0d4fe6",
+    "slide-20.png": "fe5d1995f5c4357c44c7224adc06d36accebcde54b167b57d995121eac630a2d",
+    "slide-21.png": "b9e3479ad762a04b88cc3bcb2578fd8b1d900a65014e46ae17ccd34222ed3c57",
+    "slide-22.png": "11da3718db42d17284bf3896b67e40f3f10e12cedf15d9c6e7ed55359a1a7862",
+    "slide-23.png": "99284150b91605168eeeb6eaa4340ae008bd043eb1204e46b0d27cafd6ca4df6",
+    "slide-24.png": "aff9c3a8f114b059d8493b79cd8a740ce054cae0e773b566ff7a1d66322ae062"
+  },
+  "unresolvedFindings": [],
+  "reviewLimitations": [
+    "Desk review, no classroom trial or evidence of pupil mastery.",
+    "Cold authors share a filesystem; no OS isolation guarantee."
+  ]
+}

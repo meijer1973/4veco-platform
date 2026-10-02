@@ -1,0 +1,33 @@
+{
+  "scope": "Coordinator read all current Book4 manuscripts in full, including targets preceding exercise containers and later mixed/remedial material. Complements independent source-audit; not a full-book PDF visual certification.",
+  "sourceCommit": "e734532a42b27732ac25ce990fc9448b12309d28",
+  "manuscripts": {
+    "edities/books34-v3/books/book-4/chapters/4.1/4.1.1 manuscript.md": "7d80849940920bc83166692f39d89fec1c3eb909453ade5b6b55336aab17e797",
+    "edities/books34-v3/books/book-4/chapters/4.1/4.1.2 manuscript.md": "739fc8fc31d2df3fcce02832e72df341c5be7544ff6c90fbe089e2f7cee99a3d",
+    "edities/books34-v3/books/book-4/chapters/4.1/4.1.3 manuscript.md": "c4360e8f4b2bbf0ea576f80d8f2bb323c2fe34a7d5f90c375203ca629bddbfc1",
+    "edities/books34-v3/books/book-4/chapters/4.1/4.1.4 manuscript.md": "65dd2923fd9c6544fce1e1a26d30969bf34abc4f0bd9bd8ad85cd3198db752b0",
+    "edities/books34-v3/books/book-4/chapters/4.1/4.1.5 manuscript.md": "a75813115abe7117b6a0044960fc03a4861084949d86073b5e118e984d24bf3f",
+    "edities/books34-v3/books/book-4/chapters/4.2/4.2.1 manuscript.md": "2761c18bb26b7e62d0436d623f388371eb1a4bbbe1f1a57d8170d16a45810305",
+    "edities/books34-v3/books/book-4/chapters/4.2/4.2.2 manuscript.md": "980b9248d6ced542888be62403a717479b1909209ef871325461a423af8baee9",
+    "edities/books34-v3/books/book-4/chapters/4.2/4.2.3 manuscript.md": "e83c2aa394758e939873e228074f4aeb169f326c170924cee100108e33af4a01",
+    "edities/books34-v3/books/book-4/chapters/4.2/4.2.4 manuscript.md": "4589774bbf4209f36c852ef55be55e77c40d58395dd824502dbb8e5bb675647a",
+    "edities/books34-v3/books/book-4/chapters/4.2/4.2.5 manuscript.md": "552967cbfcda43b2865f19417298dadee472081e67282182fe963fa55672e82b",
+    "edities/books34-v3/books/book-4/chapters/4.2/4.2.6 manuscript.md": "a053ce87e6ac20703671514c05a6e44c91e81028469f2e13843801c32e9674ee",
+    "edities/books34-v3/books/book-4/chapters/4.2/4.2.7 manuscript.md": "04ff9cf133cafb6f0986d69ad3c4f2a93930a396b59fd9503822f15962b2e2d5",
+    "edities/books34-v3/books/book-4/chapters/4.3/4.3.1 manuscript.md": "12f46259c226c4be4e651dd9a1fbe140a33c137756eca860482e19f41b49bfb7",
+    "edities/books34-v3/books/book-4/chapters/4.3/4.3.2 manuscript.md": "64323fd7ca261d025bb5944f65032d72b6d7a97d124f1ded9a2abeeea5dd89e7",
+    "edities/books34-v3/books/book-4/chapters/4.3/4.3.3 manuscript.md": "4e16bc85b0ebef225cd588575d73adec0aa563795ead3f20d3642540ff7eaaee",
+    "edities/books34-v3/books/book-4/chapters/4.3/4.3.4 manuscript.md": "ab17d4ad601262503b7ddfa0435fc4f7168512ee79f4e2977c3e489693df80e4",
+    "edities/books34-v3/books/book-4/chapters/4.3/4.3.5 manuscript.md": "a9c5196872388d35c8b7814b72430d752beacc203b58e8469f686dadcd14f5a0"
+  },
+  "knownSourceFollowups": [
+    "SRC-411-CAP-01",
+    "SRC-433-REMEDIAL-01"
+  ],
+  "presentationProblemsAreSeparate": [
+    "411 nonuniqueness wording",
+    "421 complete-book prerequisite citations",
+    "422 candidate graph labels and prerequisite citation"
+  ],
+  "sourceEdits": false
+}

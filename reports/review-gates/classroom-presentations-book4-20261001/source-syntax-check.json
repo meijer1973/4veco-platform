@@ -1,0 +1,240 @@
+{
+  "passed": true,
+  "files": [
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/check-presentation-411.py",
+      "check": "ast.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/check-presentation-412.py",
+      "check": "ast.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/check-presentation-414.py",
+      "check": "ast.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/check-presentation-415.py",
+      "check": "ast.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/check-presentation-421.py",
+      "check": "ast.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/check-presentation-424.py",
+      "check": "ast.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/check-presentation-427.py",
+      "check": "ast.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/check-presentation-431.py",
+      "check": "ast.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/check-presentation-432.py",
+      "check": "ast.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/check-presentation-433.py",
+      "check": "ast.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/check-presentation-434.py",
+      "check": "ast.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-411.manifest.json",
+      "check": "json.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-411.mjs",
+      "check": "node --check",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-412.manifest.json",
+      "check": "json.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-412.mjs",
+      "check": "node --check",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-413.mjs",
+      "check": "node --check",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-413.source.json",
+      "check": "json.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-414.manifest.json",
+      "check": "json.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-414.mjs",
+      "check": "node --check",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-415-package.py",
+      "check": "ast.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-415.manifest.json",
+      "check": "json.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-415.mjs",
+      "check": "node --check",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-421.manifest.json",
+      "check": "json.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-421.mjs",
+      "check": "node --check",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-422.manifest.json",
+      "check": "json.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-422.mjs",
+      "check": "node --check",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-423.manifest.json",
+      "check": "json.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-423.mjs",
+      "check": "node --check",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-424.manifest.json",
+      "check": "json.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-424.mjs",
+      "check": "node --check",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-425-manifest.json",
+      "check": "json.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-425.mjs",
+      "check": "node --check",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-426.manifest.json",
+      "check": "json.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-426.mjs",
+      "check": "node --check",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-427.manifest.json",
+      "check": "json.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-427.mjs",
+      "check": "node --check",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-431.manifest.json",
+      "check": "json.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-431.mjs",
+      "check": "node --check",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-432.manifest.json",
+      "check": "json.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-432.mjs",
+      "check": "node --check",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-433.manifest.json",
+      "check": "json.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-433.mjs",
+      "check": "node --check",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-434.manifest.json",
+      "check": "json.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-434.mjs",
+      "check": "node --check",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-435.manifest.json",
+      "check": "json.parse",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/presentation-435.mjs",
+      "check": "node --check",
+      "passed": true
+    },
+    {
+      "path": "4veco-platform/build-scripts/content/book-4/test-check-presentation-411.py",
+      "check": "ast.parse",
+      "passed": true
+    }
+  ]
+}

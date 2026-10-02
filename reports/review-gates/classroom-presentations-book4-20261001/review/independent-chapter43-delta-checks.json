@@ -1,0 +1,205 @@
+{
+  "deltas": [
+    {
+      "transition": "434-v1-to-v2",
+      "allTextNotesIdentical": true,
+      "changedNativePages": [
+        6,
+        7,
+        9,
+        17,
+        21
+      ],
+      "chartDataChanges": {
+        "ppt/slides/charts/chart2.xml": {
+          "minimum = 16": {
+            "before": {
+              "x": [
+                "97"
+              ],
+              "y": [
+                "16"
+              ]
+            },
+            "after": {
+              "x": [
+                "105"
+              ],
+              "y": [
+                "16"
+              ]
+            }
+          }
+        },
+        "ppt/slides/charts/chart3.xml": {
+          "20": {
+            "before": {
+              "x": [
+                "0"
+              ],
+              "y": [
+                "20"
+              ]
+            },
+            "after": null
+          },
+          "w = 20": {
+            "before": null,
+            "after": {
+              "x": [
+                "103.2"
+              ],
+              "y": [
+                "20"
+              ]
+            }
+          }
+        },
+        "ppt/slides/charts/chart5.xml": {
+          "w = 14": {
+            "before": null,
+            "after": {
+              "x": [
+                "189.2"
+              ],
+              "y": [
+                "14"
+              ]
+            }
+          },
+          "14": {
+            "before": {
+              "x": [
+                "0"
+              ],
+              "y": [
+                "14"
+              ]
+            },
+            "after": null
+          }
+        }
+      },
+      "actualScatterChartsCompared": 5
+    },
+    {
+      "transition": "434-v2-to-r1",
+      "allTextNotesIdentical": true,
+      "changedNativePages": [
+        9,
+        21
+      ],
+      "chartDataChanges": {
+        "ppt/slides/charts/chart3.xml": {
+          "70": {
+            "before": {
+              "x": [
+                "70"
+              ],
+              "y": [
+                "0"
+              ]
+            },
+            "after": {
+              "x": [
+                "70"
+              ],
+              "y": [
+                "1.8"
+              ]
+            }
+          },
+          "50": {
+            "before": {
+              "x": [
+                "50"
+              ],
+              "y": [
+                "0"
+              ]
+            },
+            "after": {
+              "x": [
+                "50"
+              ],
+              "y": [
+                "1.8"
+              ]
+            }
+          }
+        },
+        "ppt/slides/charts/chart5.xml": {
+          "120": {
+            "before": {
+              "x": [
+                "120"
+              ],
+              "y": [
+                "0"
+              ]
+            },
+            "after": {
+              "x": [
+                "120"
+              ],
+              "y": [
+                "1.8"
+              ]
+            }
+          },
+          "80": {
+            "before": {
+              "x": [
+                "80"
+              ],
+              "y": [
+                "0"
+              ]
+            },
+            "after": {
+              "x": [
+                "80"
+              ],
+              "y": [
+                "1.8"
+              ]
+            }
+          }
+        }
+      },
+      "actualScatterChartsCompared": 5
+    },
+    {
+      "transition": "435-r2-to-r3",
+      "allTextNotesIdentical": true,
+      "changedNativePages": [
+        15
+      ],
+      "chartDataChanges": {
+        "ppt/slides/charts/chart1.xml": {
+          "Label E₀": {
+            "before": null,
+            "after": {
+              "x": [
+                "86"
+              ],
+              "y": [
+                "11.5"
+              ]
+            }
+          }
+        }
+      },
+      "actualScatterChartsCompared": 1
+    }
+  ],
+  "434FrozenOriginalMatchesV2": true,
+  "435ManifestSourcesMatchActual": 10,
+  "435ManifestHash": "68e07b7c2f7b5734afed340187e315c707b0b7a0e53a411f1f839c5203147ea0",
+  "435FinalBinding": {
+    "matchesR3": true,
+    "platformCommit": "55f04bbd641d0cffb893d202a6f291b395673e27",
+    "lessonsCommit": "76f24185c592bf22bfa9f4c12fb958385d6483ae",
+    "recordedSourceArtifactEvidenceGitBlobsVerified": true
+  }
+}

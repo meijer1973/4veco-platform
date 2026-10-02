@@ -1,0 +1,206 @@
+{
+  "paragraph": "4.1.1",
+  "title": "Toetreding, uittreding en langetermijnevenwicht",
+  "displayTitle": "Hoe lang blijft de winst?",
+  "type": "theory",
+  "edition": "books34-v3",
+  "lessonCommit": "e734532a42b27732ac25ce990fc9448b12309d28",
+  "platformBaseline": "d1cb1fe3db3a70dc86682491771ed68a67f45526",
+  "sources": [
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/4.1.1 manuscript.md",
+      "sha256": "7d80849940920bc83166692f39d89fec1c3eb909453ade5b6b55336aab17e797"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/Antwoorden.md",
+      "sha256": "4048fa122764663e445145463d63bf4b9b2367b1aa8e34f0e62d1cf5486e394f"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/Docenteninformatie.md",
+      "sha256": "0dd614ec1357e51a40dd19b6bc0480549e37c912b2de56ca403a31c7cb0e7e92"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/_assets/3.2.3_target.svg",
+      "sha256": "fb7c50589eac2ff53e993d5a044c72539d2a4b42f89e02f122e85406f71a84a7"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.2 manuscript.md",
+      "sha256": "992f1f64ee131c8c7a6c85dd517fc87724be5f825a1f9e497cd01f699645fdce"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.3 manuscript.md",
+      "sha256": "d46652e4ed48a368246ed70a0f1df0206752d95775e52c6de25df0088167fbd2"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+      "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+      "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+    }
+  ],
+  "assignment": {
+    "start": [
+      1,
+      2
+    ],
+    "basis": [
+      3,
+      4
+    ],
+    "independent": [
+      5,
+      6
+    ],
+    "target": 7,
+    "targetTitle": "Standaard koffiebonen",
+    "homework": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "homeworkInstruction": "Maken en nakijken",
+    "extra": [
+      8,
+      9,
+      10
+    ]
+  },
+  "printedPages": {
+    "theory": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "start": [
+      11
+    ],
+    "basis": [
+      11,
+      12
+    ],
+    "independent": [
+      13
+    ],
+    "target": [
+      14
+    ],
+    "verification": "Every cited printed footer inspected in complete-book PDF; physical page numbers coincide. Chapter edition_page values are not used."
+  },
+  "goals": [
+    "Explain entry and exit under stated assumptions",
+    "Draw supply and firm price changes; distinguish Q and q",
+    "Calculate long-run firm output and economic profit",
+    "Interpret normal remuneration and turnover"
+  ],
+  "prerequisiteTrace": [
+    {
+      "operation": "Differentiate quadratic TK; constant disappears from MK",
+      "neededFor": "1a,7a",
+      "priorTeaching": "Book 3 3.2.2 printed p.63, term-by-term explanation",
+      "lessonSupport": "Overview start cue and slide 4 demonstration"
+    },
+    {
+      "operation": "P=MO; compare MO/MK; capacity and q=0 checks; TO, TK, profit, GTK and units",
+      "neededFor": "1a-b,3c,4c,5a-c,6a,7a,d",
+      "priorTeaching": "Book 3 3.2.3 printed pp.70-72, actual worked explanation",
+      "lessonSupport": "Slides 4-5,8-9,11-13"
+    },
+    {
+      "operation": "Normal remuneration in TK; economic profit interpretation",
+      "neededFor": "2a-b,7e",
+      "status": "new",
+      "lessonSupport": "Visible opening support: 2 verkennen met theorie p.7; teacher notes require reading and revisit before basis; slide 2 introduces, slide 9 applies"
+    },
+    {
+      "operation": "Entry/exit shifts market supply; unchanged demand; market price transferred into horizontal firm P=GO=MO; unchanged MK/GTK; Q versus q",
+      "neededFor": "3a-b,4a-d,5b,6b,7b-c",
+      "status": "new",
+      "lessonSupport": "Book 4 pp.8-10; slides 6-13 show both directions with distinct authored example and aggregation checks"
+    },
+    {
+      "operation": "Given minimum GTK as long-run price and q; assumptions; totals and zero profit",
+      "neededFor": "5c,7c-e",
+      "status": "new",
+      "lessonSupport": "Book 4 p.10; slides 9-10. Minimum given; no new GTK differentiation procedure assumed."
+    }
+  ],
+  "authoredTeachingExample": {
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "context": "Vezelkorrels",
+    "TK": "0.05q^2+3q+45",
+    "normalRemuneration": 30,
+    "capacity": 100,
+    "beginPrice": 9,
+    "beginQFirm": 60,
+    "beginProfit": 135,
+    "minimumGTK": 6,
+    "minimumAtQ": 30,
+    "entryMarket": {
+      "Qunit": "1000 kg/week",
+      "demand": "P=15-Q",
+      "supply0": "P=3+Q",
+      "supply1": "P=3+Q/3",
+      "n0": 100,
+      "n1": 300
+    },
+    "exitVariant": {
+      "reset": "separate market; same TK; new fixed demand",
+      "price": 5,
+      "q": 20,
+      "profit": -25,
+      "demand": "P=9-Q",
+      "supply0": "P=3+0.5Q",
+      "supply1": "P=3+Q",
+      "n0": 200,
+      "n1": 100
+    }
+  },
+  "targetGraph": {
+    "actualAsset": "3.2.3_target.svg",
+    "demand": "P=16-0.4Q",
+    "supply0": "P=4+0.4Q",
+    "supply1": "P=4+0.2Q",
+    "Qunit": "1000 kg/week",
+    "aggregation": "100 firms of q150 initially; 200 firms of q100 finally. Editable supply lines clipped to total capacity. Original question figure unchanged."
+  },
+  "timing": "Two lessons of 55 minutes are provisional teacher guidance; no measured fit claimed. All work retained.",
+  "sourceConflicts": [
+    {
+      "id": "B4-411-SOURCE-GRAPH-CAPACITY",
+      "scope": "Extrapolated original supply above implied aggregate capacity; both requested equilibria unaffected",
+      "followup": "Part A source owner to bound or label extrapolated segment through owning generator",
+      "status": "recorded, source unchanged"
+    }
+  ],
+  "finalStructure": {
+    "slides": 28,
+    "overviews": [
+      1,
+      16,
+      28
+    ],
+    "nativeTables": 7,
+    "nativeCharts": 9,
+    "allTargetQuestions": [
+      17,
+      18,
+      19,
+      20
+    ],
+    "targetAnswers": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ]
+  },
+  "sourceFigureScope": "The supplied original target figure includes an extrapolated initial supply line beyond aggregate capacity inferred from its cost model. It is preserved as source evidence. The solution graphs stop supply at feasible capacity; all equilibrium and requested operations are within capacity. No textbook source was edited."
+}

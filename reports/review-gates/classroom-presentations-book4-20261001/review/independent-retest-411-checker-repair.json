@@ -1,0 +1,33 @@
+{
+  "verdict": "PASS",
+  "checkerSha256": "a446d74e7b11f63f80f06fd4ca2b4d1a64be6a316fa228020e8b92374a2c822d",
+  "testSha256": "5f9bd911d3fefa5c555bf930de45ed964272e7a6926201dd45e32883a44220c8",
+  "originalIndependentMutantsAgainstRepair": [
+    {
+      "file": "C:\\wt\\ppt\\.book4\\review\\preview-retest-411-v4\\4.1.1 Toetreding, uittreding en langetermijnevenwicht – presentatie.pptx",
+      "sha256": "e78b159ae169dfe06c608f949546e1ab54bdb5c2fb1428464378b80adc0ba693",
+      "returncode": 0,
+      "stdout": "{\"ok\": true, \"slides\": 28, \"nativeTables\": 7, \"nativeCharts\": 9, \"chartPointsChecked\": 1351, \"overviewParity\": [1, 16, 28], \"notes\": 28, \"checks\": [\"functions and guides\", \"supply aggregation and capacity\", \"long-run minimum and zero profit\", \"straight scatter intent\", \"notes and 14pt floor\", \"target ordering\"]}\n",
+      "stderr": ""
+    },
+    {
+      "file": "C:\\wt\\ppt\\.book4\\review\\independent-retest-411-v4-mutation-no-markers.pptx",
+      "sha256": "bbc33e487ed68ec914066a46847a6a2eefa365d3c164a1289737925d2a6013dd",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"C:\\wt\\ppt\\4veco-platform\\build-scripts\\content\\book-4\\check-presentation-411.py\", line 171, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\wt\\ppt\\4veco-platform\\build-scripts\\content\\book-4\\check-presentation-411.py\", line 99, in main\n    assert actual_names == expected, (number, 'series inventory', actual_names, expected)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: (24, 'series inventory', ['V', 'A₀', 'A₁', 'Hulplijn', 'Hulplijn'], ['V', 'A₀', 'A₁', 'Hulplijn', 'Hulplijn', 'E₀', 'E₁'])\n"
+    },
+    {
+      "file": "C:\\wt\\ppt\\.book4\\review\\independent-retest-411-v4-mutation-no-guides-or-markers.pptx",
+      "sha256": "33a20d0fb9e836c05bae98c4eb40d10c79e9bd84bd24feb45e040d722f5e7d91",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"C:\\wt\\ppt\\4veco-platform\\build-scripts\\content\\book-4\\check-presentation-411.py\", line 171, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\wt\\ppt\\4veco-platform\\build-scripts\\content\\book-4\\check-presentation-411.py\", line 99, in main\n    assert actual_names == expected, (number, 'series inventory', actual_names, expected)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: (24, 'series inventory', ['V', 'A₀', 'A₁'], ['V', 'A₀', 'A₁', 'Hulplijn', 'Hulplijn', 'E₀', 'E₁'])\n"
+    }
+  ],
+  "testSuite": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.643s\n\nOK\n"
+  }
+}

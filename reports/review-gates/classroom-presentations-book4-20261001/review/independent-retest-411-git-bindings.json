@@ -1,0 +1,44 @@
+[
+  {
+    "repository": "4veco-platform",
+    "commit": "3dbfd37fcc7f031342b5fd406d10cd355df30140",
+    "path": "build-scripts/content/book-4/check-presentation-411.py",
+    "sha256": "6a6dbd839e6cf422d9ca339673ff9260bcb4d2b72b67c49393c963c76493fed8"
+  },
+  {
+    "repository": "4veco-platform",
+    "commit": "3dbfd37fcc7f031342b5fd406d10cd355df30140",
+    "path": "build-scripts/content/book-4/presentation-411.manifest.json",
+    "sha256": "2d03542017054f7d98dc292f0fd963c67c9a5a6011a15bf5eedc3d70713cc520"
+  },
+  {
+    "repository": "4veco-platform",
+    "commit": "3dbfd37fcc7f031342b5fd406d10cd355df30140",
+    "path": "build-scripts/content/book-4/presentation-411.mjs",
+    "sha256": "a561ac828df38449471e32b18cc0724fda0bbba7bbfd86d1e3d907e92a1e94d4"
+  },
+  {
+    "repository": "4veco-lessen",
+    "commit": "5f3b38ef43c4ece540143659dd0ecb470d7117d9",
+    "path": "RESEARCH_AGENT_MAP.md",
+    "sha256": "83c853d3abfc1ff580cb4766098b4c74f3fc41b794b0b2f7838706531d48dc61"
+  },
+  {
+    "repository": "4veco-lessen",
+    "commit": "5f3b38ef43c4ece540143659dd0ecb470d7117d9",
+    "path": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.1 Toetreding, uittreding en langetermijnevenwicht – presentatie.pdf",
+    "sha256": "b14efb990a9092f32b1adbd270fa1ecf2de8099d6bcfee125ad339c787087ccf"
+  },
+  {
+    "repository": "4veco-lessen",
+    "commit": "5f3b38ef43c4ece540143659dd0ecb470d7117d9",
+    "path": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.1 Toetreding, uittreding en langetermijnevenwicht – presentatie.pptx",
+    "sha256": "e78b159ae169dfe06c608f949546e1ab54bdb5c2fb1428464378b80adc0ba693"
+  },
+  {
+    "repository": "4veco-lessen",
+    "commit": "5f3b38ef43c4ece540143659dd0ecb470d7117d9",
+    "path": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/evidence/4.1.1-presentation.md",
+    "sha256": "68f74a98829960913342e90bb7062e0bfb08b46e0018561aea9198372ae1e271"
+  }
+]

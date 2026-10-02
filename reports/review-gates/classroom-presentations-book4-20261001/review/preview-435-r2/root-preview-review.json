@@ -1,0 +1,72 @@
+{
+  "paragraph": "4.3.5",
+  "verdict": "HISTORICAL_PREVIEW_REPAIR_REQUIRED",
+  "scope": "In-progress author r2 preview; not completed cold failure. All20 native pages inspected, E0 label overlaps vertical guide on15. Author autonomously fixed inr3 before completed handoff.",
+  "pptxSha256": "d5cc85adde441401e3155bd34dee588a66ae6806507022035683cce7a2922580",
+  "pdfSha256": "95176d3f352a9153f8f116f2cbe955b7ab70e180cb0798e6712eb322d0e5d188",
+  "nativeRenderSlidesIndividuallyInspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "allSlideTextAndTeacherNotesRead": true,
+  "nativeRenderBinding": "review/preview-435-r2/preview-bindings.json",
+  "nativePngSha256": {
+    "slide-01.png": "3d141d24279754d2faab4c8303116d4be3e5ecd7dd54d67c4a4ca6b99f0b5dd6",
+    "slide-02.png": "29b0d7bfa9cbcac437a461fd84427fc40bd2fe91486de64618a78a33684704d4",
+    "slide-03.png": "19f1aeac6b2fa475ecc49575fa2023b9ddae1a1a35c6d5aa0e04e49717079422",
+    "slide-04.png": "7dd3300a367611d837af4ad74c30b810deda0a85ccd84461a939a9746c19e903",
+    "slide-05.png": "fa2fe8b05c6e11b2a999587b237faa47d4cce541283ca4f40186f22fb6222bf0",
+    "slide-06.png": "855fa454771f74eba46809b6ba06e229f8e3a4a812279f8245b5a86c476e9393",
+    "slide-07.png": "eb5b0950a9b6b58ef6c90f12ebc0c095544e5cdf4b8b23439eb1c2ce4d2487f7",
+    "slide-08.png": "aa8a0e8c36c33beeb5780ea75c280e33a54c9e9508a17fafcd3eec0ef5ae416b",
+    "slide-09.png": "b849a4074d1d38f7bc7fee7554594cec9c2a3430af8f9524730d77aded7c1256",
+    "slide-10.png": "9d8ba0a64e2f106a609e11f76dd9d06c7c5e2380adeabfd562cd75cfd700069c",
+    "slide-11.png": "bc945911f994ed68585e59680da29e59cd486205584e47a44e19cace6d832092",
+    "slide-12.png": "97aa4ab2e1f2b1b7f1a89e909e23631cdebb854ab44a0c00d59057149e9d45f3",
+    "slide-13.png": "f17f9fc0cf7112435c195864b38bfb54498698faec49d83c5c2a4c2fa060cf08",
+    "slide-14.png": "b7e35f6ff12d5ba719a2e6e32a32ab08329713db688491eb905eaf432bebac93",
+    "slide-15.png": "8718b0fbbacb0fac283612d155d3de91df0f5a9a7842487a30a9bab42d0ddd16",
+    "slide-16.png": "ca5de7a35446f7ac7b0b83c2136431835d540a16a900edba998e2458c2c057c5",
+    "slide-17.png": "d2fa2f0e9fbc438e7cf70982cf4fcc0b7e8384a6f200764075a8f91dedeb435d",
+    "slide-18.png": "864c47eadce80e5d11a35b87dea509286c02112a5e7dd246174928669e63a98b",
+    "slide-19.png": "389598e9ab0635538339b14c85557257c809e31c5b46e26a22992e409125636f",
+    "slide-20.png": "d1ac7d4721d60190bbcf8498c1293492079cbf39c935fefd7120aa9b8b83aff8"
+  },
+  "findings": [
+    {
+      "slide": 15,
+      "detail": "E0 bottom-centered label on vertical guide; author moved to invisible86/11.5anchor."
+    }
+  ],
+  "unresolvedFindings": [
+    {
+      "slide": 15,
+      "detail": "E0 bottom-centered label on vertical guide; author moved to invisible86/11.5anchor."
+    }
+  ],
+  "checks": [
+    "Mixed start37p150 retrieves fte,unitcosts and unemployment denominators taught431-433; no invented exercise1 or basis section. Short independent own example and minimum-wage procedure recap2-4 beforepractice5. HW37-41 retains41bonus. Actual printed149/150/152/153 checked, chapter offset112 correct; preview-only footer concern independently disproved, no source footer defect.",
+    "Own printing shop2400posters constant, productivity12to15 =>200to160hours;hourcost30to33 =>2.50to2.20perposter (-12%). Explicit hours not persons, fixedorders condition, profit also depends revenues/othercosts. Assigned37answers onlynotes afterownattempt:4fte8persons;40/(960+40)=4%;productivitycanoutpacehourcosts.",
+    "FulltargetA6/B7/originalfigure8/C9/allquestions10-11 precede solutions12+. Exact populations12600working+1400unemployed=14000workforce,total20000,gross70%,unemployment10%. Regional denominator distinct from separate sector and company.",
+    "Sector Lv240-10w to280-10w,La-40+10w,domain4-24,persons20hours/week;old100/14,new120/16,checkbothfunctions. Orders shift demand by40 atcommonwage; wage change is result and movement alongunchangedsupply, equilibriumquantity+20 not40. Originalsourcefigure retained with explicitdomain warning; editableanswer curves clippedto4-24, sameaxislimits, both correct points/guides.",
+    "Separatecompany C24/8=3;25.20/8.8=63/22=2.863636,change=-4.54545%. Unrounded intermediate;ratio1.05/1.10,not5%-10%. No guaranteejobsorprofit withoutorders/othercosts; personsalsohours/person. No new unexplained prerequisite in this mixed lesson."
+  ]
+}

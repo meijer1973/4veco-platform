@@ -1,0 +1,83 @@
+{
+  "paragraph": "4.2.1",
+  "scope": "Root read-only preview of author v2 before completed handoff; no feedback sent.",
+  "pptxSha256": "996fe3329e93e284f51f2b7a4a2f596f5ebbdef93aa115d6685bcacb3daecc78",
+  "nativeRenderSlidesIndividuallyInspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "allSlideTextAndTeacherNotesRead": true,
+  "sourceRead": "Full current-v3 4.2.1 manuscript plus independent answers/guide foundation audit.",
+  "findings": [
+    {
+      "severity": "P2",
+      "slides": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        13,
+        14,
+        19,
+        22,
+        23,
+        24,
+        25,
+        28,
+        29
+      ],
+      "finding": "Vraag=GO direct label touches demand-line end in draft render; move away from curve."
+    },
+    {
+      "severity": "P3",
+      "slides": [
+        1,
+        5,
+        6,
+        17,
+        31
+      ],
+      "finding": "Notes cite prerequisite4.1.4 as complete-bookp32-36/p33; these are chapter-local numbers. Printed corresponding method pages are36-40/p37. Check final notes and manifest."
+    }
+  ],
+  "checks": [
+    "Start1 retrieves414 monopoly method; novel start2 transfer-versus-loss gets theory55-57 support and explicit return16/17 before practice.",
+    "Own example separate: P96-Q, TK144+24Q+.5Q^2, cap60; Qm24/Pm72, Qe36/Pe60. CS288,PS864,profit720,TS1152 versus efficientCS648/PS648/profit504/TS1296.",
+    "Own transfer288, lost transactions144 split72+72; deltasCS-360/PS+216/TS-144. Correct surplus versus profit and normative limits.",
+    "TargetVR fullsource18/graph19/allquestions20-21 beforeanswer22. Qm40/P60, efficient60/P50;CS400PS1200profit1000TS1600 versus1800,loss200,transfer400. All arithmetic independently recalculated.",
+    "New social choice P=MK justified by marginal joint gain7; distinguishes earlier privateMO=MK. Unchanged costs/quality/noexternal assumptions explicit; q/Q bridge notes2.",
+    "All31 native pages individually inspected; hatched areas bounded to correct curves, labels/typography otherwise readable, note font14 andoverview parity checked.",
+    "No missing source prerequisite found. Wrong prerequisite page references are presentation conversion details, not textbook teaching gaps."
+  ]
+}

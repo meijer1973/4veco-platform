@@ -1,0 +1,25 @@
+{
+  "verdict": "PASS",
+  "scope": "Coordinator checker-only hardening after completed fresh cold run. Original/final deck, PDF, builder, manifest and lesson evidence remain unchanged. Cold artifact PASS does not erase original code finding.",
+  "originalCheckerSha256": "6a6dbd839e6cf422d9ca339673ff9260bcb4d2b72b67c49393c963c76493fed8",
+  "repairedCheckerSha256": "a446d74e7b11f63f80f06fd4ca2b4d1a64be6a316fa228020e8b92374a2c822d",
+  "testFile": "build-scripts/content/book-4/test-check-presentation-411.py",
+  "testSha256": "5f9bd911d3fefa5c555bf930de45ed964272e7a6926201dd45e32883a44220c8",
+  "pptxSha256": "e78b159ae169dfe06c608f949546e1ab54bdb5c2fb1428464378b80adc0ba693",
+  "pdfSha256": "b14efb990a9092f32b1adbd270fa1ecf2de8099d6bcfee125ad339c787087ccf",
+  "regressionCommand": "python build-scripts/content/book-4/test-check-presentation-411.py FINAL.pptx",
+  "tests": 4,
+  "exitCode": 0,
+  "output": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.712s\n\nOK\n",
+  "finding": "Truncating zip accepted omitted trailing market equilibrium markers, or guides plus markers.",
+  "repair": "Require exact expected series count/name/order for each stage and minimum/precise point counts before positional economic checks.",
+  "negativeControls": [
+    "remove both slide24equilibrium markers",
+    "remove both slide24guides and both markers",
+    "change final marker name to duplicate E0"
+  ],
+  "positiveControl": "Exact selected saved presentation passes.",
+  "independentReview": "review/independent-retest-411-review.json",
+  "independentReviewSha256": "a25ddf24e6851b9f1c2cf79f9a572801ea6de42e22e6f122e0b2c4df17f938e3",
+  "unresolvedFindings": []
+}

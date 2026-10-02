@@ -1,0 +1,90 @@
+{
+  "paragraph": "4.2.2",
+  "scope": "Coordinator review of completed original cold handoff. Exact bytes match individually reviewed v6 candidate and earlier bound unchanged pages. No feedback supplied before handoff.",
+  "reviewedAt": "2026-10-01T17:26:35.144691+00:00",
+  "pptxSha256": "e2df4dd8d0f3142afed3e390297d2d0231caef74f2d8a434c1e66b34a05a4557",
+  "pdfSha256": "bf1906e1911db0f9e825ea589a2514a23230f132bc53cbaf24164c01998e7cad",
+  "nativeRenderSlidesIndividuallyInspected": [
+    6,
+    7,
+    17,
+    22
+  ],
+  "allSlideTextAndTeacherNotesRead": true,
+  "checks": [
+    "All substantive text and notes identical to v3; only chart-data label placement changes. Earlier full v2 review and v3 changed-page inspection remain applicable.",
+    "MK and MO labels and price guides now separated in all four panels. Demand labels still touch demand lines; group B Vraag particularly overlaps the line on slide6/7, group A Vraag on slide6/7, and target Vraag labels17/22. Equations/scale/calculations unchanged."
+  ],
+  "findings": [
+    {
+      "severity": "P3",
+      "slides": [
+        5
+      ],
+      "finding": "Prerequisite4.1.4p32–33 still chapter-local rather than complete-book36–37."
+    },
+    {
+      "severity": "P2",
+      "slides": [
+        6,
+        7,
+        17,
+        22
+      ],
+      "finding": "Vraag glyphs intersect demand lines in both panels on6/7/17/22; price annotation first P glyph also intersects demand on7/22. Confirmed by independent reviewer."
+    }
+  ],
+  "priorReview": "C:\\wt\\ppt\\.book4\\review\\preview-422-v3\\root-preview-review.json",
+  "otherNativeSlidesByteIdenticalToPrior": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    18,
+    19,
+    20,
+    21,
+    23,
+    24,
+    25,
+    26,
+    27
+  ],
+  "allVisibleTextAndNotesIdenticalToPrior": true,
+  "verdict": "REPAIR_REQUIRED",
+  "nativeRenderBinding": ".book4/review/preview-422-v6/preview-bindings.json",
+  "findingIds": [
+    "B4-422-P3-01",
+    "B4-422-P2-01"
+  ],
+  "unresolvedFindings": [
+    {
+      "severity": "P3",
+      "slides": [
+        5
+      ],
+      "finding": "Prerequisite4.1.4p32–33 still chapter-local rather than complete-book36–37."
+    },
+    {
+      "severity": "P2",
+      "slides": [
+        6,
+        7,
+        17,
+        22
+      ],
+      "finding": "Vraag glyphs intersect demand lines in both panels on6/7/17/22; price annotation first P glyph also intersects demand on7/22. Confirmed by independent reviewer."
+    }
+  ],
+  "independentConfirmation": ".book4/instruction-followup-review.json"
+}

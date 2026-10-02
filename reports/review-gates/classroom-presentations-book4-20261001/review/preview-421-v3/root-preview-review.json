@@ -1,0 +1,58 @@
+{
+  "paragraph": "4.2.1",
+  "scope": "Read-only review of author v3 preview; not final handoff. No coordinator feedback.",
+  "pptxSha256": "01cdca3ffa4e503a6866bd1ec9ff487d02f18e76ffc233d079e8a5a253b4f5b9",
+  "nativeRenderSlidesIndividuallyInspected": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    11,
+    13,
+    14,
+    19,
+    22,
+    23,
+    24,
+    25,
+    28,
+    29
+  ],
+  "otherNativeSlidesByteIdenticalToReviewedV2": [
+    1,
+    2,
+    3,
+    4,
+    10,
+    12,
+    15,
+    16,
+    17,
+    18,
+    20,
+    21,
+    26,
+    27,
+    30,
+    31
+  ],
+  "allTextAndNotesByteIdenticalToReviewedV2": true,
+  "resolvedDraftFindings": [
+    "Demand direct label moved clear of line in all15 chart renders."
+  ],
+  "findings": [
+    {
+      "severity": "P3",
+      "slides": [
+        1,
+        5,
+        6,
+        17,
+        31
+      ],
+      "finding": "Notes cite prerequisite4.1.4 as complete-bookp32-36/p33; these are chapter-local numbers. Printed corresponding method pages are36-40/p37. Check final notes and manifest."
+    }
+  ],
+  "priorReview": "../preview-421-v2/root-preview-review.json"
+}

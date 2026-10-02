@@ -1,0 +1,26 @@
+{
+  "preparedAt": "2026-10-01T17:18:58.178615+00:00",
+  "worktreeToolFallback": "list_artifacts had no managed worktrees; create_worktree(name=book4-retest,ref=d1cb1fe3) returned Not a git repository for task folder. Manual paired Git worktrees preserve frozen originals.",
+  "instructionCommit": "d1cb1fe3db3a70dc86682491771ed68a67f45526",
+  "instructionChangeScope": "General cross-chapter reference verification, linked-model consistency and paired chart label clearance; no paragraph-specific values or answer plan.",
+  "recipeSha256": "035eb844687c2bbb248d52bd57e8be8fb90736f0a7cd5dcf86b0fa4bcc8193f6",
+  "status": "Prepared only; fresh CLI authors not started. Independent instruction review still required.",
+  "retests": [
+    {
+      "paragraph": "4.1.1",
+      "folder": "C:\\wt\\ppt\\.book4\\retest-411",
+      "prompt": "Build the PowerPoint for paragraph 4.1.1.",
+      "platform": "d1cb1fe3db3a70dc86682491771ed68a67f45526",
+      "lessons": "e734532a42b27732ac25ce990fc9448b12309d28",
+      "noNewBook4OutputsInSeed": true
+    },
+    {
+      "paragraph": "4.2.2",
+      "folder": "C:\\wt\\ppt\\.book4\\retest-422",
+      "prompt": "Build the PowerPoint for paragraph 4.2.2.",
+      "platform": "d1cb1fe3db3a70dc86682491771ed68a67f45526",
+      "lessons": "e734532a42b27732ac25ce990fc9448b12309d28",
+      "noNewBook4OutputsInSeed": true
+    }
+  ]
+}

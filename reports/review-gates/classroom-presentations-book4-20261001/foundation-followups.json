@@ -1,0 +1,63 @@
+{
+  "scope": "Separate textbook follow-ups identified during Book 4 source and presentation review. No source change is made or authorized by this presentation batch.",
+  "sourceLessonCommit": "e734532a42b27732ac25ce990fc9448b12309d28",
+  "findings": [
+    {
+      "id": "SRC-411-CAP-01",
+      "paragraph": "4.1.1",
+      "location": "Target exercise 7 market graph, complete student book page 14",
+      "finding": "The original market supply line extends above the implied aggregate capacity: the initial equilibrium implies 100 identical firms, each with capacity 250 kg/week, hence Q <= 25 thousand kg/week. The displayed continuation above P = 14 exceeds that capacity.",
+      "impact": "Both assessed equilibria are feasible. The selected fresh presentation preserves the original figure, clips its editable initial supply to 25 thousand kg, and explicitly explains the source extrapolation in note24.",
+      "disposition": "Record for a separate source-authorized graph/domain clarification. Do not silently alter the sealed textbook or infer an infeasible optimum.",
+      "evidence": [
+        "review/independent-chapter41-review.md",
+        "repairs/411-r1/root-review.json",
+        "review/preview-retest-411-v4/root-preview-review.json"
+      ]
+    },
+    {
+      "id": "SRC-433-REMEDIAL-01",
+      "paragraph": "4.3.3",
+      "location": "Chapter 4.3 Antwoorden.md, exercise 27; complete answer book page 62",
+      "finding": "The correct TO/MO solution ends with a remedial reference to paragraph 4.1.2. That paragraph teaches monopoly characteristics; the actual TO-to-MO derivation is in paragraph 4.1.3, student pages 24 to 28.",
+      "impact": "Editorial prerequisite-reference error. The mathematical answer is correct and the needed teaching exists in the book.",
+      "disposition": "Use the actual teaching anchor in any presentation prerequisite note, distinguish it from the stale answer-book citation, and retain the textbook correction as a separate task.",
+      "evidence": [
+        "source-audit.md",
+        "independent-source-bindings.json"
+      ]
+    },
+    {
+      "id": "SRC-43-DOMAINS-01",
+      "paragraphs": [
+        "4.3.2",
+        "4.3.3",
+        "4.3.4",
+        "4.3.5"
+      ],
+      "location": "Chapter4.3 _assets eq_target.svg,shift_target.svg,floor_target.svg,mixed_base.svg; target source figures in complete student bookp130,139,147,152",
+      "finding": "Four labour-market source figures extrapolate linear functions outside the explicitly stated wage domains:432w4-24,433w2-24,434w2-22,435w4-24. The linear equations and assessed equilibria remain consistent within those ranges.",
+      "impact": "Nonblocking source-figure/domain cleanup. Presentations432-434 clip editable target curves to the stated range;435 retains the original figure with an explicit domain warning, then clips its editable answer graph. No invalid extrapolated intersection is used for an answer.",
+      "disposition": "Keep separate for source-authorized editorial work. Do not repin, redraw or change sealed textbook assets in this presentation batch.",
+      "evidence": [
+        "review/independent-chapter43-review.md",
+        "review/435/root-review.json",
+        "review/434/root-review.json",
+        "review/433/root-review.json"
+      ]
+    },
+    {
+      "id": "SRC-435-ANSWER-IDS-01",
+      "paragraph": "4.3.5",
+      "location": "Chapter4.3 Antwoorden.md line50, mixed exercises37-41",
+      "finding": "Outer data-answer-exercise and h3 answer IDs remain46-50 although visible exercise headings and per-part data-answer keys correctly say37-41.",
+      "impact": "Navigation/metadata cleanup. Current presentation preserves actual exercise numbers37-41 and full correct target40 answers; no mathematical or prerequisite gap.",
+      "disposition": "Retain for separate source-authorized correction; do not edit sealed answer source in this batch.",
+      "evidence": [
+        "review/independent-chapter43-review.md",
+        "review/independent-series-review.md"
+      ]
+    }
+  ],
+  "limitations": "Source review covered all 17 manuscripts and chapter answers/guidance, plus selected high-risk printed figures; it is not visual certification of every textbook page. Final presentation-specific source dispositions are recorded in the full batch review."
+}

@@ -1,0 +1,226 @@
+{
+  "date": "2026-10-01",
+  "artifacts": [
+    {
+      "key": "421",
+      "pptx": "C:\\wt\\ppt\\.book4\\repairs\\421-r1\\final\\4.2.1 Welvaartseffecten van monopolie – presentatie.pptx",
+      "pdf": "C:\\wt\\ppt\\.book4\\repairs\\421-r1\\final\\4.2.1 Welvaartseffecten van monopolie – presentatie.pdf",
+      "pptxSha256": "cd6160db661fb9a81c731855817248568bc4deed8963e538e8b5a3fe96636a56",
+      "pdfSha256": "cf7360c6bc659646b533c41fdb0d29cd5fc215b5591a4c3ebad87e7271a85a12",
+      "slides": 31,
+      "inventoryMatchesActualSlideNotes": true,
+      "workbookParity": {
+        "ok": true,
+        "charts": 15,
+        "references": 808,
+        "cellsCompared": 1486,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx",
+          "ppt/embeddings/chart-data-snapshot-007.xlsx",
+          "ppt/embeddings/chart-data-snapshot-008.xlsx",
+          "ppt/embeddings/chart-data-snapshot-009.xlsx",
+          "ppt/embeddings/chart-data-snapshot-010.xlsx",
+          "ppt/embeddings/chart-data-snapshot-011.xlsx",
+          "ppt/embeddings/chart-data-snapshot-012.xlsx",
+          "ppt/embeddings/chart-data-snapshot-013.xlsx",
+          "ppt/embeddings/chart-data-snapshot-014.xlsx",
+          "ppt/embeddings/chart-data-snapshot-015.xlsx"
+        ]
+      }
+    },
+    {
+      "key": "422",
+      "pptx": "C:\\wt\\ppt\\.book4\\review\\422\\4.2.2 Prijsdiscriminatie – presentatie.pptx",
+      "pdf": "C:\\wt\\ppt\\.book4\\review\\422\\4.2.2 Prijsdiscriminatie – presentatie.pdf",
+      "pptxSha256": "e2df4dd8d0f3142afed3e390297d2d0231caef74f2d8a434c1e66b34a05a4557",
+      "pdfSha256": "bf1906e1911db0f9e825ea589a2514a23230f132bc53cbaf24164c01998e7cad",
+      "slides": 27,
+      "inventoryMatchesActualSlideNotes": true,
+      "workbookParity": {
+        "ok": true,
+        "charts": 8,
+        "references": 68,
+        "cellsCompared": 184,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx",
+          "ppt/embeddings/chart-data-snapshot-007.xlsx",
+          "ppt/embeddings/chart-data-snapshot-008.xlsx"
+        ]
+      }
+    },
+    {
+      "key": "423",
+      "pptx": "C:\\wt\\ppt\\.book4\\repairs\\423-r2\\native\\4.2.3 Marktvormen vergelijken – presentatie.pptx",
+      "pdf": "C:\\wt\\ppt\\.book4\\repairs\\423-r2\\native\\4.2.3 Marktvormen vergelijken – presentatie.pdf",
+      "pptxSha256": "d0fa6c348406bd89242b7ba3e277ff40ad7f265e906d11ae3e2ca9dcc0227cdf",
+      "pdfSha256": "e2b56baf71e05b3ca0c6c0c2a44c15bb88bb49101520a64b27416f5061127685",
+      "slides": 24,
+      "inventoryMatchesActualSlideNotes": true,
+      "workbookParity": {
+        "ok": true,
+        "charts": 3,
+        "references": 40,
+        "cellsCompared": 66,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx"
+        ]
+      }
+    },
+    {
+      "key": "424",
+      "pptx": "C:\\wt\\ppt\\.book4\\review\\424\\4.2.4 Negatieve externe effecten – presentatie.pptx",
+      "pdf": "C:\\wt\\ppt\\.book4\\review\\424\\4.2.4 Negatieve externe effecten – presentatie.pdf",
+      "pptxSha256": "1e0df648bba44290c041c2d0cb06a4b35136d08eef64f8b82e0787386a228eab",
+      "pdfSha256": "84b83ca68b2b91bcda6151a40974c7d3413f40ee2ed6579555090183678c9042",
+      "slides": 26,
+      "inventoryMatchesActualSlideNotes": true,
+      "workbookParity": {
+        "ok": true,
+        "charts": 7,
+        "references": 204,
+        "cellsCompared": 358,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx",
+          "ppt/embeddings/chart-data-snapshot-007.xlsx"
+        ]
+      }
+    },
+    {
+      "key": "425",
+      "pptx": "C:\\wt\\ppt\\.book4\\review\\425\\4.2.5 Positieve externe effecten – presentatie.pptx",
+      "pdf": "C:\\wt\\ppt\\.book4\\review\\425\\4.2.5 Positieve externe effecten – presentatie.pdf",
+      "pptxSha256": "5e437f3d88eea73a1f1212dae9c30821aeb69f1d0e29bdd002f63d4464b33bad",
+      "pdfSha256": "e672ecdea4819c7e9362f5fea4e9e77c712d0006e600bf8d8e95b6373ceb473f",
+      "slides": 28,
+      "inventoryMatchesActualSlideNotes": true,
+      "workbookParity": {
+        "ok": true,
+        "charts": 7,
+        "references": 94,
+        "cellsCompared": 544,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx",
+          "ppt/embeddings/chart-data-snapshot-007.xlsx"
+        ]
+      }
+    },
+    {
+      "key": "426",
+      "pptx": "C:\\wt\\ppt\\.book4\\review\\426\\4.2.6 Overheidsingrijpen bij marktfalen – presentatie.pptx",
+      "pdf": "C:\\wt\\ppt\\.book4\\review\\426\\4.2.6 Overheidsingrijpen bij marktfalen – presentatie.pdf",
+      "pptxSha256": "d92dadd97b1045b28593b14cb01c0224fc096a10d0022da988a2d36a12591112",
+      "pdfSha256": "6455d45f759944e559823ff7b2131c3cd7218c2ca16e98b9ede4e1c0b95cfe71",
+      "slides": 23,
+      "inventoryMatchesActualSlideNotes": true,
+      "workbookParity": {
+        "ok": true,
+        "charts": 0,
+        "references": 0,
+        "cellsCompared": 0,
+        "workbooks": []
+      }
+    },
+    {
+      "key": "427",
+      "pptx": "C:\\wt\\ppt\\.book4\\review\\preview-427-v2\\4.2.7 Gemengde opgaven - marktvormen en marktfalen – presentatie.pptx",
+      "pdf": "C:\\wt\\ppt\\.book4\\review\\preview-427-v2\\4.2.7 Gemengde opgaven - marktvormen en marktfalen – presentatie.pdf",
+      "pptxSha256": "3778bc1ac3945954de0db16c73e626d15ee29fa611db778e75fbaafef7a07d13",
+      "pdfSha256": "532e00e1315b11d2bf807ccf0c62c6940e6c4e962e23aa6cdf567a66a465bd57",
+      "slides": 23,
+      "inventoryMatchesActualSlideNotes": true,
+      "workbookParity": {
+        "ok": true,
+        "charts": 5,
+        "references": 54,
+        "cellsCompared": 108,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx"
+        ]
+      }
+    },
+    {
+      "key": "425-r1",
+      "pptx": "C:\\wt\\ppt\\.book4\\repairs\\425-r1\\native\\4.2.5 Positieve externe effecten – presentatie.pptx",
+      "pdf": "C:\\wt\\ppt\\.book4\\repairs\\425-r1\\native\\4.2.5 Positieve externe effecten – presentatie.pdf",
+      "pptxSha256": "0c38c87f0b02e65bf0691041d0ce434a66f80a34ce61c57e293e0bbde38795dd",
+      "pdfSha256": "b67251d407aed4d2b7e4f7803cbd0001576d0c8fd8de1ab0605a4d9e6712d67b",
+      "slides": 28,
+      "inventoryMatchesActualSlideNotes": true,
+      "workbookParity": {
+        "ok": true,
+        "charts": 7,
+        "references": 108,
+        "cellsCompared": 558,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx",
+          "ppt/embeddings/chart-data-snapshot-006.xlsx",
+          "ppt/embeddings/chart-data-snapshot-007.xlsx"
+        ]
+      }
+    },
+    {
+      "key": "427-final",
+      "pptx": "C:\\wt\\ppt\\.book4\\review\\427\\4.2.7 Gemengde opgaven - marktvormen en marktfalen – presentatie.pptx",
+      "pdf": "C:\\wt\\ppt\\.book4\\review\\427\\4.2.7 Gemengde opgaven - marktvormen en marktfalen – presentatie.pdf",
+      "pptxSha256": "59044e61147cf8550b39496557dec5a62474a308d2b6c42ed08c08ae33f432ab",
+      "pdfSha256": "8fa7e56dd3953e546ff39f0179fc0a3cb6ef8418ed8aff1a39d22463b7e75f08",
+      "slides": 23,
+      "inventoryMatchesActualSlideNotes": true,
+      "workbookParity": {
+        "ok": true,
+        "charts": 5,
+        "references": 54,
+        "cellsCompared": 108,
+        "workbooks": [
+          "ppt/embeddings/chart-data-snapshot-001.xlsx",
+          "ppt/embeddings/chart-data-snapshot-002.xlsx",
+          "ppt/embeddings/chart-data-snapshot-003.xlsx",
+          "ppt/embeddings/chart-data-snapshot-004.xlsx",
+          "ppt/embeddings/chart-data-snapshot-005.xlsx"
+        ]
+      }
+    }
+  ],
+  "423Repair": {
+    "textNotesEconomicSeriesIdentical": true,
+    "newLabelOnlySeriesOnPages": [
+      8,
+      20
+    ],
+    "changedNativePages": [
+      8,
+      20
+    ]
+  },
+  "unchangedChapter42SourceFiles": 11
+}

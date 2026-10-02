@@ -1,0 +1,508 @@
+{
+  "state": "FINAL_HASH_PENDING_GIT_BINDING",
+  "pptx": "C:\\wt\\ppt\\.book4\\review\\preview-retest-422-v5\\4.2.2 Prijsdiscriminatie â€“ presentatie.pptx",
+  "pdf": "C:\\wt\\ppt\\.book4\\review\\preview-retest-422-v5\\4.2.2 Prijsdiscriminatie â€“ presentatie.pdf",
+  "pptxSha256": "3503f74dfc70bec83865a1502fa14bd97908e7abe6d83cbe930040610712091c",
+  "pdfSha256": "d5001b44104097a0c4462ea5385a8dfc0debecfc113d6d57b7021c846f89b485",
+  "slides": 27,
+  "pdfPages": 27,
+  "workbookParity": {
+    "ok": true,
+    "charts": 7,
+    "references": 72,
+    "cellsCompared": 156,
+    "workbooks": [
+      "ppt/embeddings/chart-data-snapshot-001.xlsx",
+      "ppt/embeddings/chart-data-snapshot-002.xlsx",
+      "ppt/embeddings/chart-data-snapshot-003.xlsx",
+      "ppt/embeddings/chart-data-snapshot-004.xlsx",
+      "ppt/embeddings/chart-data-snapshot-005.xlsx",
+      "ppt/embeddings/chart-data-snapshot-006.xlsx",
+      "ppt/embeddings/chart-data-snapshot-007.xlsx"
+    ]
+  },
+  "previousVersion": "v2",
+  "changedNativePages": [
+    1,
+    6,
+    7,
+    8,
+    14,
+    17,
+    20,
+    21,
+    24,
+    27
+  ],
+  "changedTextPages": [
+    1,
+    14,
+    24,
+    27
+  ],
+  "changedNotesPages": [
+    1,
+    14,
+    27
+  ],
+  "actualXmlTextNotesMatchInventory": true,
+  "chartData": [
+    {
+      "slide": 6,
+      "part": "ppt/slides/charts/chart1.xml",
+      "series": [
+        {
+          "name": "MO",
+          "x": [
+            0.0,
+            15.0
+          ],
+          "y": [
+            30.0,
+            0.0
+          ]
+        },
+        {
+          "name": "MK",
+          "x": [
+            0.0,
+            26.24,
+            32.0
+          ],
+          "y": [
+            6.0,
+            6.0,
+            6.0
+          ]
+        },
+        {
+          "name": "Q gekozen",
+          "x": [
+            12.0,
+            12.0
+          ],
+          "y": [
+            0.0,
+            6.0
+          ]
+        },
+        {
+          "name": "MO label",
+          "x": [
+            4.56
+          ],
+          "y": [
+            13.2
+          ]
+        }
+      ]
+    },
+    {
+      "slide": 7,
+      "part": "ppt/slides/charts/chart2.xml",
+      "series": [
+        {
+          "name": "Vraag / GO",
+          "x": [
+            0.0,
+            18.6,
+            30.0
+          ],
+          "y": [
+            30.0,
+            11.4,
+            0.0
+          ]
+        },
+        {
+          "name": "MO",
+          "x": [
+            0.0,
+            15.0
+          ],
+          "y": [
+            30.0,
+            0.0
+          ]
+        },
+        {
+          "name": "MK",
+          "x": [
+            0.0,
+            26.24,
+            32.0
+          ],
+          "y": [
+            6.0,
+            6.0,
+            6.0
+          ]
+        },
+        {
+          "name": "Q gekozen",
+          "x": [
+            12.0,
+            12.0
+          ],
+          "y": [
+            0.0,
+            18.0
+          ]
+        },
+        {
+          "name": "P op GO",
+          "x": [
+            0.0,
+            12.0
+          ],
+          "y": [
+            18.0,
+            18.0
+          ]
+        },
+        {
+          "name": "MO label",
+          "x": [
+            4.56
+          ],
+          "y": [
+            13.2
+          ]
+        }
+      ]
+    },
+    {
+      "slide": 8,
+      "part": "ppt/slides/charts/chart3.xml",
+      "series": [
+        {
+          "name": "Vraag / GO",
+          "x": [
+            0.0,
+            11.16,
+            18.0
+          ],
+          "y": [
+            18.0,
+            6.84,
+            0.0
+          ]
+        },
+        {
+          "name": "MO",
+          "x": [
+            0.0,
+            9.0
+          ],
+          "y": [
+            18.0,
+            0.0
+          ]
+        },
+        {
+          "name": "MK",
+          "x": [
+            0.0,
+            26.24,
+            32.0
+          ],
+          "y": [
+            6.0,
+            6.0,
+            6.0
+          ]
+        },
+        {
+          "name": "Q gekozen",
+          "x": [
+            6.0,
+            6.0
+          ],
+          "y": [
+            0.0,
+            12.0
+          ]
+        },
+        {
+          "name": "P op GO",
+          "x": [
+            0.0,
+            6.0
+          ],
+          "y": [
+            12.0,
+            12.0
+          ]
+        },
+        {
+          "name": "MO label",
+          "x": [
+            1.2
+          ],
+          "y": [
+            7.92
+          ]
+        }
+      ]
+    },
+    {
+      "slide": 17,
+      "part": "ppt/slides/charts/chart4.xml",
+      "series": [
+        {
+          "name": "Vraag / GO",
+          "x": [
+            0.0,
+            24.8,
+            40.0
+          ],
+          "y": [
+            40.0,
+            15.2,
+            0.0
+          ]
+        },
+        {
+          "name": "MO",
+          "x": [
+            0.0,
+            20.0
+          ],
+          "y": [
+            40.0,
+            0.0
+          ]
+        },
+        {
+          "name": "MK",
+          "x": [
+            0.0,
+            32.8,
+            40.0
+          ],
+          "y": [
+            8.0,
+            8.0,
+            8.0
+          ]
+        },
+        {
+          "name": "MO label",
+          "x": [
+            6.4
+          ],
+          "y": [
+            17.6
+          ]
+        }
+      ]
+    },
+    {
+      "slide": 17,
+      "part": "ppt/slides/charts/chart5.xml",
+      "series": [
+        {
+          "name": "Vraag / GO",
+          "x": [
+            0.0,
+            14.88,
+            24.0
+          ],
+          "y": [
+            24.0,
+            9.12,
+            0.0
+          ]
+        },
+        {
+          "name": "MO",
+          "x": [
+            0.0,
+            12.0
+          ],
+          "y": [
+            24.0,
+            0.0
+          ]
+        },
+        {
+          "name": "MK",
+          "x": [
+            0.0,
+            32.8,
+            40.0
+          ],
+          "y": [
+            8.0,
+            8.0,
+            8.0
+          ]
+        },
+        {
+          "name": "MO label",
+          "x": [
+            1.92
+          ],
+          "y": [
+            10.56
+          ]
+        }
+      ]
+    },
+    {
+      "slide": 20,
+      "part": "ppt/slides/charts/chart6.xml",
+      "series": [
+        {
+          "name": "Vraag / GO",
+          "x": [
+            0.0,
+            24.8,
+            40.0
+          ],
+          "y": [
+            40.0,
+            15.2,
+            0.0
+          ]
+        },
+        {
+          "name": "MO",
+          "x": [
+            0.0,
+            20.0
+          ],
+          "y": [
+            40.0,
+            0.0
+          ]
+        },
+        {
+          "name": "MK",
+          "x": [
+            0.0,
+            32.8,
+            40.0
+          ],
+          "y": [
+            8.0,
+            8.0,
+            8.0
+          ]
+        },
+        {
+          "name": "Q gekozen",
+          "x": [
+            16.0,
+            16.0
+          ],
+          "y": [
+            0.0,
+            24.0
+          ]
+        },
+        {
+          "name": "P op GO",
+          "x": [
+            0.0,
+            16.0
+          ],
+          "y": [
+            24.0,
+            24.0
+          ]
+        },
+        {
+          "name": "MO label",
+          "x": [
+            6.4
+          ],
+          "y": [
+            17.6
+          ]
+        }
+      ]
+    },
+    {
+      "slide": 21,
+      "part": "ppt/slides/charts/chart7.xml",
+      "series": [
+        {
+          "name": "Vraag / GO",
+          "x": [
+            0.0,
+            14.88,
+            24.0
+          ],
+          "y": [
+            24.0,
+            9.12,
+            0.0
+          ]
+        },
+        {
+          "name": "MO",
+          "x": [
+            0.0,
+            12.0
+          ],
+          "y": [
+            24.0,
+            0.0
+          ]
+        },
+        {
+          "name": "MK",
+          "x": [
+            0.0,
+            32.8,
+            40.0
+          ],
+          "y": [
+            8.0,
+            8.0,
+            8.0
+          ]
+        },
+        {
+          "name": "Q gekozen",
+          "x": [
+            8.0,
+            8.0
+          ],
+          "y": [
+            0.0,
+            16.0
+          ]
+        },
+        {
+          "name": "P op GO",
+          "x": [
+            0.0,
+            8.0
+          ],
+          "y": [
+            16.0,
+            16.0
+          ]
+        },
+        {
+          "name": "MO label",
+          "x": [
+            1.92
+          ],
+          "y": [
+            10.56
+          ]
+        }
+      ]
+    }
+  ],
+  "sourceFilesMatched": 8,
+  "observedSourceHashes": {
+    "presentation-422.manifest.json": "ae102ecb769e39ba2518a98c9d12f24da8330bad61e5c0db896093fa54a8adbc",
+    "presentation-422.mjs": "0c668c8f6e33ac75e245c1c3620cb180a28473d0cfd8a6766e0e2798fa73fcfb"
+  },
+  "economicCurvesIndependentlyChecked": true,
+  "dataChangeScope": "All GO/MO/MK formulas and domains preserved. Seven collinear intermediate MO label points removed; seven invisible MO-label anchor series added. Cache/workbook parity rechecked after these actual data changes."
+}

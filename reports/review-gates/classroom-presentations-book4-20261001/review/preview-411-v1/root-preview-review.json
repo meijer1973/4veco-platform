@@ -1,0 +1,68 @@
+{
+  "paragraph": "4.1.1",
+  "scope": "In-progress first native render; not completed cold-handoff acceptance. No feedback sent to author.",
+  "pptxSha256": "4c3293c8a8b72340a9c514b8141af2a190cb69af175b0f7fbbc17d0859c74290",
+  "slidesIndividuallyViewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "substantiveSlideAndNoteTextRead": true,
+  "findings": [
+    {
+      "priority": 2,
+      "slides": [
+        7,
+        8,
+        13
+      ],
+      "finding": "Authored inverse supplies have price intercept 3, while all identical firms have MK=0.20q+1. They cannot be fixed-count horizontal sums of that firm supply. Equilibrium arithmetic alone is insufficient. Textbook entry figure has common intercept 2 matching its individual MK, so this is an authored-example conversion defect."
+    },
+    {
+      "priority": 2,
+      "slides": [
+        8,
+        10,
+        13,
+        19,
+        25,
+        26
+      ],
+      "finding": "Direct graph labels touch or cross curves, especially E1 and P1=GO=MO, plus GTK on the new price line."
+    }
+  ],
+  "positiveChecks": [
+    "Complete real target context and all a-e before solutions, slides17-21 then22-28",
+    "Start2 supported by printedp7; returnbeforepractice onslide15",
+    "Separate authored Cellulosekorrels example, full guided homework3-7",
+    "Correct target price10,q150,profit250; longrunprice8,q100,TO=TK800 and normalreward120 retained",
+    "29slides and29notes, explicit notesfont14pt, overviewparity, PDFtextmatch"
+  ],
+  "authorSelfReviewObservation": "Author later independently reported and began correcting the same supply-model and label defects before final handoff. Preserve as drafting/self-review history, not a failed completed cold handoff."
+}

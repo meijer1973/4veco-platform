@@ -1,0 +1,49 @@
+{
+  "paragraph": "4.1.1",
+  "scope": "Author draft revision3, not final handoff. No coordinator feedback.",
+  "pptxSha256": "f9c44c28ed55f0509e48faece8b8e60ee59d912bcf9acd5eda571dba3aa95d8a",
+  "unchangedRenderCoverage": "19 native render PNGs byte-identical to individually reviewed v1",
+  "reinspectedChangedSlides": [
+    7,
+    8,
+    9,
+    10,
+    13,
+    14,
+    18,
+    19,
+    25,
+    26
+  ],
+  "changedNotesRead": [
+    7,
+    8,
+    13,
+    18,
+    25
+  ],
+  "slideTextUnchanged": true,
+  "resolved": [
+    "Market supplies now P=1+0.25Q, P=1+0.075Q and P=1+0.04Q; all match MK intercept1 and horizontal aggregation",
+    "Previous E1/curve and P1/GTK collisions removed",
+    "Question market plot removes added answer guides; notes disclose inherited source capacity-extension limitation"
+  ],
+  "remaining": [
+    {
+      "priority": 2,
+      "slides": [
+        7,
+        8
+      ],
+      "finding": "A0 label now overlaps/touches E0 label after slope change."
+    },
+    {
+      "priority": 2,
+      "slides": [
+        13
+      ],
+      "finding": "E1 label overlaps A0 label."
+    }
+  ],
+  "authorContinuesSelfReview": true
+}
