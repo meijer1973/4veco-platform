@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "revision": "book1-second-edition-20261002",
+  "reason": "The owner-authorized Book 1 edition replaces the current reading edition while retaining first-edition history. Its lesson AGENTS.md clarification is shared instruction maintenance accompanying the Part A publication.",
+  "lesson_scope": {
+    "primary_lane": "textbook",
+    "shared_instruction_paths": [
+      "AGENTS.md"
+    ],
+    "bound_by": "book1-second-edition-20261002.json"
+  },
+  "platform_scope": {
+    "lane": "shared",
+    "generated_reports": [
+      "reports/owned-content-coverage.md",
+      "reports/json/owned-content-coverage.json"
+    ]
+  },
+  "review_required": "reports/review-gates/book1-second-edition-20261002/independent-review.md",
+  "human_visibility": true,
+  "verification": "Classify the complete Git changed-path inventory. Require exactly AGENTS.md in the lesson shared set, then validate that set in the shared lane and all remaining lesson paths in the textbook lane. Validate the complete platform inventory in the shared lane. The bounded revision verifier independently authenticates every changed byte; no companion exception is granted.",
+  "limitation": "The single textbook-lane command rejects this intentional mixed instruction/publication PR. This declaration records that exception; it does not change generic lane rules or confer merge authority."
+}

@@ -237,8 +237,8 @@
     },
     {
       "path": "build-scripts/workflows/check-paragraph-lane-scope.js",
-      "bytes": 23037,
-      "sha256": "8c6b9461bab499920def3b579eb5544cae01e47b06ab633328681f81aadc36d3"
+      "bytes": 23122,
+      "sha256": "bd3d7eb4cf1b93aab8b1ef185e051038468aafb388d9826a8a8cc8a5a8e4b0bb"
     },
     {
       "path": "build-scripts/workflows/check-part-a-exercise-authoring-contract.js",
@@ -294,6 +294,11 @@
       "path": "references/data/rag/chunk_index.jsonl",
       "bytes": 3056851,
       "sha256": "cceaaa1850aac2aa2daddfe2fe3f24c98ea5cf4a4fa8bfe71e1789410e5170e0"
+    },
+    {
+      "path": "references/owned/book1-second-edition-2026/lane-scope.json",
+      "bytes": 1383,
+      "sha256": "fd5adb16b42b125c1c646f9715d985331d728680906d0d2210c2e910da7d1f73"
     },
     {
       "path": "references/owned/book1-second-edition-2026/received/Boek_1_Compleet_Tweede_editie_Bronpakket(1).zip",

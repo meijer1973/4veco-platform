@@ -76,6 +76,8 @@ const SHARED_PLATFORM_EXACT_FILES = new Set([
 ]);
 
 const GENERATED_INDEX_FILES = new Set([
+  'reports/owned-content-coverage.md',
+  'reports/json/owned-content-coverage.json',
   'reports/begrippen-coverage.md',
   'reports/github-agent-current-platform.md',
   'reports/github-agent-current-platform.json',
