@@ -42,13 +42,13 @@
     },
     {
       "path": "build-scripts/books/book1-second-edition-revision.js",
-      "bytes": 11884,
-      "sha256": "32972c716395982cc0faccea0739745cb78ac400e748b5fe4521e24f034bb6ae"
+      "bytes": 12047,
+      "sha256": "97e67a03cd4052f181228ab9c905829a8bd3c474a1bcc017e817268777a4f8a5"
     },
     {
       "path": "build-scripts/books/book1-second-edition-revision.test.js",
-      "bytes": 4332,
-      "sha256": "898434562e81b660019afdd3b0c5b872458c664b10410c891f1c1e5f3d97f349"
+      "bytes": 4701,
+      "sha256": "771f84a95f81b63108af6d0f890913c17a475b8812f79f63533b75b4b327a18e"
     },
     {
       "path": "build-scripts/books/book1_second_edition/book/build_book.py",
@@ -262,8 +262,8 @@
     },
     {
       "path": "docs/workflows/book1-second-edition.md",
-      "bytes": 3036,
-      "sha256": "2e0538205603ea6bc27bb8a90b2b2392887618116ea95cdb520312691a798680"
+      "bytes": 3061,
+      "sha256": "c64079d7944a9318e9904c4ceb29897e6b038fd17732fb1856c70872df0e5e99"
     },
     {
       "path": "docs/workflows/part-a-start.md",

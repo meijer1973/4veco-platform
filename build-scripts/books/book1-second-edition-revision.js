@@ -24,7 +24,7 @@ const P_EXACT=new Set(['.gitattributes','AGENTS.md','docs/workflows/part-a-start
  'references/data/rag/chunk_index.jsonl','references/data/owned-content-graph.json','reports/json/owned-content-coverage.json','reports/owned-content-coverage.md']);
 const L_EXACT=new Set(['AGENTS.md','index.html',BOOK+'/README.md',BOOK+'/index.html',BOOK+'/eerste-editie.html',...['md','html','pdf'].map(ext=>BOOK+'/Boek 1 Grondslagen, vraag en aanbod – boek.'+ext)]);
 const EXCLUDED_P=new Set([MANIFEST,PIN,REVIEW,HEAD]);
-const ADVISORY_INDEXES=new Set(['platform','lessen'].flatMap(repo=>['md','json'].map(ext=>`reports/github-agent-current-${repo}.${ext}`)));
+const ADVISORY_INDEXES=new Set(['platform','lessen'].flatMap(repo=>['md','json'].map(ext=>`reports/github-agent-index-${repo}.${ext}`)));
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 const git=(root,args)=>execFileSync('git',args,{cwd:root,encoding:'utf8',maxBuffer:128*1024*1024});
 function allowed(file,repo){
@@ -63,8 +63,11 @@ function checkRows(root,base,records,excluded,repo,requireTracked){
   if(!trustedBundle||repo!=='platform'||!ADVISORY_INDEXES.has(file)||records.some(r=>r.path===file))return true;
   try{
    const stat=fs.lstatSync(path.join(root,file));if(!stat.isFile()||stat.isSymbolicLink())return true;
-   const original=git(root,['rev-parse',base+':'+file]).trim();
-   return git(root,['rev-parse','HEAD:'+file]).trim()!==original||git(root,['rev-parse',':'+file]).trim()!==original;
+   // Require an existing base entry and no staged/committed content OR mode
+   // change. Blob equality alone would silently accept chmod-only edits.
+   git(root,['rev-parse',base+':'+file]);
+   return Boolean(git(root,['diff','--name-only',base,'HEAD','--',file]).trim()
+    ||git(root,['diff','--cached','--name-only',base,'--',file]).trim());
   }catch{return true;}
  });
  if(JSON.stringify(actual)!==JSON.stringify(records.map(r=>r.path)))throw Error('Unreviewed '+repo+' changed-path inventory');

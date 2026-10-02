@@ -12,7 +12,7 @@ test('only disposable trusted-bundle navigation refreshes may differ from commit
  const root=fs.mkdtempSync(path.join(os.tmpdir(),'book1-navigation-'));
  const git=(...args)=>execFileSync('git',args,{cwd:root,encoding:'utf8'}).trim();
  const oldMode=process.env.FOURVECO_INDEX_VIEW_MODE,oldBranch=process.env.FOURVECO_PLATFORM_SOURCE_BRANCH;
- const file='reports/github-agent-current-platform.json',target=path.join(root,file);
+ const file='reports/github-agent-index-platform.json',target=path.join(root,file);
  try{
   git('init','-q');git('config','user.email','test@example.invalid');git('config','user.name','Test');git('config','core.autocrlf','false');
   fs.mkdirSync(path.dirname(target));fs.writeFileSync(target,'accepted\n');git('add','.');git('commit','-qm','base');const base=git('rev-parse','HEAD');
@@ -27,7 +27,12 @@ test('only disposable trusted-bundle navigation refreshes may differ from commit
   const spy=jest.spyOn(fs,'lstatSync').mockImplementation(p=>p===target?{isFile:()=>true,isSymbolicLink:()=>true}:original(p));
   expect(check).toThrow('changed-path');spy.mockRestore();
   fs.writeFileSync(path.join(root,'reports/unknown.json'),'unreviewed');expect(check).toThrow('changed-path');fs.unlinkSync(path.join(root,'reports/unknown.json'));
-  fs.writeFileSync(path.join(root,'reports/github-agent-current-lessen.json'),'untracked advisory');expect(check).toThrow('changed-path');fs.unlinkSync(path.join(root,'reports/github-agent-current-lessen.json'));
+  fs.writeFileSync(path.join(root,'reports/github-agent-index-lessen.json'),'untracked advisory');expect(check).toThrow('changed-path');fs.unlinkSync(path.join(root,'reports/github-agent-index-lessen.json'));
+  fs.writeFileSync(target,'accepted\n');
+  git('update-index','--chmod=+x',file);expect(check).toThrow('changed-path');
+  git('commit','-qm','unreviewed navigation mode');expect(check).toThrow('changed-path');
+  git('update-index','--chmod=-x',file);git('commit','-qm','restore mode');
+  fs.writeFileSync(target,'trusted generated navigation\n');expect(check).not.toThrow();
   git('add',file);expect(check).toThrow('changed-path');
   git('commit','-qm','unreviewed navigation');expect(check).toThrow('changed-path');
  }finally{

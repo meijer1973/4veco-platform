@@ -38,7 +38,8 @@ alone cannot confer a new independent PASS. No merge is authorized by this page.
 The trusted bundle workflow regenerates four advisory agent-navigation indexes
 and checks their freshness before validation. Only in that named compatibility
 environment may unstaged, regular-file refreshes be disregarded by the edition
-inventory, and only while both HEAD and index blobs equal the accepted base.
+inventory, and only while both HEAD and index entries (bytes and file modes)
+equal the accepted base.
 Staged/committed changes, deletions, symlinks and other paths remain rejected.
 This grants no acceptance to navigation contents, no lesson-file exception and
 no permission to publish a refreshed index. The ordinary record command still
