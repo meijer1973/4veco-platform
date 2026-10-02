@@ -13,7 +13,7 @@ const MANIFEST='references/owned/book1-second-edition-2026/revision.json',LESSON
 const PIN='build-scripts/books/book1-second-edition-pin.json';
 const REVIEW='reports/review-gates/book1-second-edition-20261002/independent-review.md';
 const HEAD='build-scripts/books/book1-second-edition-lesson-head.txt';
-const P_EXACT=new Set(['AGENTS.md','docs/workflows/part-a-start.md','docs/workflows/textbook-paragraph-lane.md','skills/econ-paragraph-review.md','skills/econ-didactiek.md','skills/econ-exercise-builder.md','skills/econ-textbook-paragraph.md','references/authored/didactiek-principes.md','references/authored/vraagtypen-en-opgaveontwerp.md',
+const P_EXACT=new Set(['.gitattributes','AGENTS.md','docs/workflows/part-a-start.md','docs/workflows/textbook-paragraph-lane.md','skills/econ-paragraph-review.md','skills/econ-didactiek.md','skills/econ-exercise-builder.md','skills/econ-textbook-paragraph.md','references/authored/didactiek-principes.md','references/authored/vraagtypen-en-opgaveontwerp.md',
  'build-scripts/workflows/check-part-a-exercise-authoring-contract.js','build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js',
  'build-scripts/rag/build-chunks.js','build-scripts/references/build-owned-content-graph.js','build-scripts/references/book1-edition.js','build-scripts/references/book1-edition.test.js','build-scripts/references/book1-authority-transition.js','build-scripts/workflows/check-book-outline-currentness.js',
  'build-scripts/content/book-1/presentation-v2-registry.js','build-scripts/books/build-book.py','build-scripts/platform/build-landing-page.js',
@@ -24,6 +24,7 @@ const P_EXACT=new Set(['AGENTS.md','docs/workflows/part-a-start.md','docs/workfl
  'references/data/rag/chunk_index.jsonl','references/data/owned-content-graph.json','reports/json/owned-content-coverage.json','reports/owned-content-coverage.md']);
 const L_EXACT=new Set(['AGENTS.md','index.html',BOOK+'/README.md',BOOK+'/index.html',BOOK+'/eerste-editie.html',...['md','html','pdf'].map(ext=>BOOK+'/Boek 1 Grondslagen, vraag en aanbod – boek.'+ext)]);
 const EXCLUDED_P=new Set([MANIFEST,PIN,REVIEW,HEAD]);
+const ADVISORY_INDEXES=new Set(['platform','lessen'].flatMap(repo=>['md','json'].map(ext=>`reports/github-agent-current-${repo}.${ext}`)));
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 const git=(root,args)=>execFileSync('git',args,{cwd:root,encoding:'utf8',maxBuffer:128*1024*1024});
 function allowed(file,repo){
@@ -53,7 +54,20 @@ function record({root=ROOT,lessons=path.resolve(root,'../4veco-lessen')}={}){
  return {revision:REVISION,manifest_sha256:sha(bytes),platform_files:doc.platform.length,lesson_files:doc.lessons.length};
 }
 function checkRows(root,base,records,excluded,repo,requireTracked){
- if(JSON.stringify(changes(root,base,excluded))!==JSON.stringify(records.map(r=>r.path)))throw Error('Unreviewed '+repo+' changed-path inventory');
+ // The trusted bundle workflow refreshes four advisory navigation indexes.
+ // Ignore only disposable working-copy refreshes, never an unreviewed commit,
+ // staged edit, deletion from the index or arbitrary extra file.
+ const actual=changes(root,base,excluded).filter(file=>{
+  const trustedBundle=process.env.FOURVECO_INDEX_VIEW_MODE==='complete-only'
+   && /^compatibility\/(platform-first|lesson-first|bundle-final)\/platform$/.test(process.env.FOURVECO_PLATFORM_SOURCE_BRANCH||'');
+  if(!trustedBundle||repo!=='platform'||!ADVISORY_INDEXES.has(file)||records.some(r=>r.path===file))return true;
+  try{
+   const stat=fs.lstatSync(path.join(root,file));if(!stat.isFile()||stat.isSymbolicLink())return true;
+   const original=git(root,['rev-parse',base+':'+file]).trim();
+   return git(root,['rev-parse','HEAD:'+file]).trim()!==original||git(root,['rev-parse',':'+file]).trim()!==original;
+  }catch{return true;}
+ });
+ if(JSON.stringify(actual)!==JSON.stringify(records.map(r=>r.path)))throw Error('Unreviewed '+repo+' changed-path inventory');
  for(const r of records){
   if(!allowed(r.path,repo))throw Error('Out-of-scope '+repo+' file '+r.path);
   const b=fs.readFileSync(safe(root,r.path));if(b.length!==r.bytes||sha(b)!==r.sha256)throw Error('Stale '+repo+' bytes '+r.path);
