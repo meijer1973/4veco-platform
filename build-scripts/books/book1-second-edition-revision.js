@@ -54,6 +54,14 @@ function record({root=ROOT,lessons=path.resolve(root,'../4veco-lessen')}={}){
  return {revision:REVISION,manifest_sha256:sha(bytes),platform_files:doc.platform.length,lesson_files:doc.lessons.length};
 }
 function checkRows(root,base,records,excluded,repo,requireTracked){
+ // Inspect these entries even when a working-copy edit cancels a staged or
+ // committed edit in `git diff base` (including executable modes on Linux).
+ if(repo==='platform')for(const file of ADVISORY_INDEXES){
+  if(records.some(r=>r.path===file))continue;
+  if(git(root,['diff','--name-only',base,'HEAD','--',file]).trim()
+   ||git(root,['diff','--cached','--name-only',base,'--',file]).trim())
+   throw Error('Unreviewed platform changed-path inventory: committed/staged navigation '+file);
+ }
  // The trusted bundle workflow refreshes four advisory navigation indexes.
  // Ignore only disposable working-copy refreshes, never an unreviewed commit,
  // staged edit, deletion from the index or arbitrary extra file.

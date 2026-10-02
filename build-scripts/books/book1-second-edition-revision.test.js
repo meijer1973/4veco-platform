@@ -8,13 +8,13 @@ test('scope protects other books, held evidence and first-edition companion file
  expect(r.allowed('build-scripts/books/book2-notation-revision-pin.json','platform')).toBe(false);
 });
 
-test('only disposable trusted-bundle navigation refreshes may differ from committed evidence',()=>{
+test.each([false,true])('only disposable navigation refreshes may differ (core.filemode=%s)',fileMode=>{
  const root=fs.mkdtempSync(path.join(os.tmpdir(),'book1-navigation-'));
  const git=(...args)=>execFileSync('git',args,{cwd:root,encoding:'utf8'}).trim();
  const oldMode=process.env.FOURVECO_INDEX_VIEW_MODE,oldBranch=process.env.FOURVECO_PLATFORM_SOURCE_BRANCH;
  const file='reports/github-agent-index-platform.json',target=path.join(root,file);
  try{
-  git('init','-q');git('config','user.email','test@example.invalid');git('config','user.name','Test');git('config','core.autocrlf','false');
+  git('init','-q');git('config','user.email','test@example.invalid');git('config','user.name','Test');git('config','core.autocrlf','false');git('config','core.filemode',String(fileMode));
   fs.mkdirSync(path.dirname(target));fs.writeFileSync(target,'accepted\n');git('add','.');git('commit','-qm','base');const base=git('rev-parse','HEAD');
   const check=()=>r.checkRows(root,base,[],new Set(),'platform',true);
   fs.writeFileSync(target,'trusted generated navigation\n');
@@ -34,7 +34,9 @@ test('only disposable trusted-bundle navigation refreshes may differ from commit
   git('update-index','--chmod=-x',file);git('commit','-qm','restore mode');
   fs.writeFileSync(target,'trusted generated navigation\n');expect(check).not.toThrow();
   git('add',file);expect(check).toThrow('changed-path');
+  fs.writeFileSync(target,'accepted\n');expect(check).toThrow('changed-path');
   git('commit','-qm','unreviewed navigation');expect(check).toThrow('changed-path');
+  git('add',file);expect(check).toThrow('changed-path');
  }finally{
   if(oldMode===undefined)delete process.env.FOURVECO_INDEX_VIEW_MODE;else process.env.FOURVECO_INDEX_VIEW_MODE=oldMode;
   if(oldBranch===undefined)delete process.env.FOURVECO_PLATFORM_SOURCE_BRANCH;else process.env.FOURVECO_PLATFORM_SOURCE_BRANCH=oldBranch;

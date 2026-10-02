@@ -42,13 +42,13 @@
     },
     {
       "path": "build-scripts/books/book1-second-edition-revision.js",
-      "bytes": 12047,
-      "sha256": "97e67a03cd4052f181228ab9c905829a8bd3c474a1bcc017e817268777a4f8a5"
+      "bytes": 12544,
+      "sha256": "f907c7783f7507066d20b1edd2cc59ba5296475c1749b26741e76547bfba5824"
     },
     {
       "path": "build-scripts/books/book1-second-edition-revision.test.js",
-      "bytes": 4701,
-      "sha256": "771f84a95f81b63108af6d0f890913c17a475b8812f79f63533b75b4b327a18e"
+      "bytes": 4889,
+      "sha256": "ccd117332676963f409f9904a3e90bf49be98bca2c3c7a6bfb7f42627819c228"
     },
     {
       "path": "build-scripts/books/book1_second_edition/book/build_book.py",
