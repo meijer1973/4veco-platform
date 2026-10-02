@@ -11,6 +11,11 @@
       "sha256": "964df055450d1e0d00fb3801ed857f5f7b931229ae2bba94c41a48dbbb064cc1"
     },
     {
+      "path": ".github/workflows/paired-books34-signed-ci.yml",
+      "bytes": 5431,
+      "sha256": "8bee9eb33b5c0d9241c0528f8debfdbc7ced436784e2b5747a8f1a0e72b5e2ff"
+    },
+    {
       "path": ".github/workflows/paired-exercise-route-ci.yml",
       "bytes": 5082,
       "sha256": "d80fee38c852c48c2570839f6554c85e4f5c2d76c3640efe33344fc6761d22e9"
@@ -32,8 +37,8 @@
     },
     {
       "path": "build-scripts/books/book1-second-edition-revision.js",
-      "bytes": 10661,
-      "sha256": "fda8db1f161892158e68126bde42b2d1a0ed2f20030c925c9ef009b30fedaa08"
+      "bytes": 10827,
+      "sha256": "e42a1f7e0670a8860eea6c64bd5c19b6f147ca65a5781b7cfdbc397162763c7e"
     },
     {
       "path": "build-scripts/books/book1-second-edition-revision.test.js",
