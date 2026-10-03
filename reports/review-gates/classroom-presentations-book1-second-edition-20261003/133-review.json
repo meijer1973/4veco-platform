@@ -1,0 +1,299 @@
+{
+  "paragraph": "1.3.3",
+  "verdict": "PASS",
+  "reviewer": "root coordinator, independent of cold author",
+  "source_hash_checks": [
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/1.3.3 Verschuivingen en nieuw evenwicht – paragraaf.md",
+      "sha256": "b73b16fbf10b8a71613a407befa819bdab1551592c50d78ef558150a696b0f68",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/Antwoorden.md",
+      "sha256": "1cb6fce9da344dff9e98ea826b6e89e5d61ade745116c9b0ddef7bd0c68d2540",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/Docenteninformatie.md",
+      "sha256": "854e7e555300b8bc0eff5a7dc8e549171c899ba2098523c1b665a98e6ceb8847",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/1.3.2 Marktevenwicht – paragraaf.md",
+      "sha256": "454d8aaf6aabd7d220fdc4969a033e9037b2dca5be066d80ca8c62374de2860a",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/1.3.1 Aanbod en aanbodfactoren – paragraaf.md",
+      "sha256": "a877af4743b94775279f04bda37a1956e5aa19d36ed4dac1de031b43733f458d",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.2 Vraagfactoren – paragraaf.md",
+      "sha256": "57fe7dacb96f888b82d170bd55060c129fcd8effbae8fbed89c8a4eacd8f6c7a",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/1.1.2 Verhoudingen, percentages en indexcijfers – paragraaf.md",
+      "sha256": "e10b272612bb096e6b2e2628f67198eaa3f4f123c4b6f7c420eb006312059335",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/boek/Boek_1_Compleet_Tweede_editie.pdf",
+      "sha256": "2a2261b98f4a1c0a186a119120ae1b8c70e8d7860712e03eb711d1ab07efc676",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/student_page_map.json",
+      "sha256": "58eb9bf1d50227226e284099357e33e59a10bd433aa86f9bc7f3bf5c03b26691",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.3_ex_31.svg",
+      "sha256": "6366429d2e8501ebfd67868b0ee8d67d50c5d384525bb9771932b0a22ac87d20",
+      "passed": true
+    }
+  ],
+  "slides_reviewed_individually": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27
+  ],
+  "notes_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27
+  ],
+  "saved_file_audit": {
+    "pptxSha256": "e902d66a69c1f60afdc8ca642662ebb77c8c97270248c4591cdde7ca6c2722ed",
+    "pdfSha256": "6903cfddbfffaa0bec1bca25b7bad556c37beba0a448363e7f3a56f13da91212",
+    "slideCount": 27,
+    "pdfPageCount": 27,
+    "notesCount": 27,
+    "minimumExplicitNotesFontPt": 14.0,
+    "nativeTableCount": 10,
+    "nativeChartCount": 7,
+    "overviewSlides": [
+      1,
+      14,
+      27
+    ],
+    "overviewContentGeometryParity": true,
+    "pdfTextMismatches": []
+  },
+  "native_render_hashes": [
+    {
+      "slide": 1,
+      "sha256": "4d3138f6ed67994060a9bbc737109c9cc457d8e5b4f761611c5e547174e39231"
+    },
+    {
+      "slide": 2,
+      "sha256": "181c705b86edb166c5fb6172e6ef8cf69605dd9dcb4f42b8af427da5da04d958"
+    },
+    {
+      "slide": 3,
+      "sha256": "1ce24873e24f2c4a6c8ee1648ba71d2eee6079521190399872c03cb8e8d5faaf"
+    },
+    {
+      "slide": 4,
+      "sha256": "ccb4db3f965d51eb63c6f1f870cf3d0028490ebe353c9581a0bb24a5b980aa0f"
+    },
+    {
+      "slide": 5,
+      "sha256": "4e67592bfa0707af34a3e73698f2bf8fc2d1fcadea6c42d64daea958fe1bc3eb"
+    },
+    {
+      "slide": 6,
+      "sha256": "8f60623ae7b5897fd73683908d49c620df1772fe551aaf7e8cd21d0d1cf8fb5d"
+    },
+    {
+      "slide": 7,
+      "sha256": "def22fdfcbb58d7eff665b76922c8b31bcfa230c8dd597a373d4b2dd65721bc8"
+    },
+    {
+      "slide": 8,
+      "sha256": "847b8ee0aa5844e0a9eb19d7fc9784d68ed0d9243a24ebf1c94e0746ef947c5f"
+    },
+    {
+      "slide": 9,
+      "sha256": "a83cd90fd05299ddfc764cb4416d97cdc4a33ed2ef9ce967f33e31da1ae631fd"
+    },
+    {
+      "slide": 10,
+      "sha256": "b7d95ce7536ff79767c6a8de67bccc3f367793edba6de0678e42d0f49d9d9a85"
+    },
+    {
+      "slide": 11,
+      "sha256": "7c0060434c038e8b938d65ea1273044bc93850398a9353cd8e7d99901403e66a"
+    },
+    {
+      "slide": 12,
+      "sha256": "ed52fbf7a696d63df9620408814c52943860d96ad7d48994248aca4015d1f145"
+    },
+    {
+      "slide": 13,
+      "sha256": "0d58e21000f4054e89aeb8a083d8a95be3bcbaf2f5d28963316d1908b3d87d03"
+    },
+    {
+      "slide": 14,
+      "sha256": "79bdbb6c18f0004b86d7b0000f25909da72e36132026f9bad67acd9a2a63b3b6"
+    },
+    {
+      "slide": 15,
+      "sha256": "57176cf473a2d069d8175dd9e5c41f6effb1764cba898da51e0327de86ab84e9"
+    },
+    {
+      "slide": 16,
+      "sha256": "29ad6f33472d02d061a1e29cb91c3a486e8e67553f2f7ba03cd1152f4eff5203"
+    },
+    {
+      "slide": 17,
+      "sha256": "d1ded4398b6668cf8c0691423dddcee519d63dd25b94ddcbdb4fa1ac9675df3b"
+    },
+    {
+      "slide": 18,
+      "sha256": "554f2e9ba5bea8e00aeca619997eaae5e2a0d7ade4c6ca49760bd624b1fa301d"
+    },
+    {
+      "slide": 19,
+      "sha256": "a99d8c55200d502e942e61332878be49e020b811b1c037e24c1744410c336cf8"
+    },
+    {
+      "slide": 20,
+      "sha256": "914011d8e4a2fa0ef04fe03861777912a1a4fe8c08e7db7c3967f22a8fb0e55b"
+    },
+    {
+      "slide": 21,
+      "sha256": "4ad4127a744588e2bd011fc159c71ac751f08b03d2e9d09d42f4e709445549e8"
+    },
+    {
+      "slide": 22,
+      "sha256": "f868010b206d88bd59c127c0e6e81f395798121d831c76a419c03f998fe3b03f"
+    },
+    {
+      "slide": 23,
+      "sha256": "070fb02a7cf0378c0699cfcea2fbed8f0182bb1080d0d01f9ba3de411104e439"
+    },
+    {
+      "slide": 24,
+      "sha256": "c4b3c0c8b1b0df39cd936e1e3aadb4d3ecad3932e9badc1821d34f4fef2f9add"
+    },
+    {
+      "slide": 25,
+      "sha256": "c330e4e2c7abc5f70d6d89283ac57f3e2d5bb8c31ffe26c0c6d949094683724e"
+    },
+    {
+      "slide": 26,
+      "sha256": "3a3abbceadf72b7ede12f216df9b612c2f475a56ed571bf76e60080d780fed07"
+    },
+    {
+      "slide": 27,
+      "sha256": "56b3efcd596e84d91c92f44785db9848bf858c4d300c69ac1df841b18a151cb5"
+    }
+  ],
+  "changes_after_handoff": "None. Selected final v4 PPTX/PDF unchanged. Manifest already follows corrected filename instruction.",
+  "limits": "Individual artifact and planned-teaching review only. Complete serialized series review remains pending; no classroom timing or learning-effect measurement.",
+  "pdf_visual_samples": [
+    9,
+    13,
+    25
+  ],
+  "target_review": "Full real context/domains/units15, unmarked original figure16, all actual questions a-c17/d-e18 before answers19-26. Checked printed complete-book p116 and manuscript.",
+  "independent_arithmetic": {
+    "authored_old_P_Q": [
+      14,
+      30
+    ],
+    "authored_demand_shift_at_old_P_Qv_Qa_shortage": [
+      48,
+      30,
+      18
+    ],
+    "authored_new_demand_P_Q": [
+      17,
+      39
+    ],
+    "authored_Q_change_percent": 30,
+    "authored_separate_supply_Qa_at_P14": 12,
+    "authored_supply_new_P_Q": [
+      17,
+      21
+    ],
+    "target_old_P_Q": [
+      12,
+      40
+    ],
+    "target_new_P_Q": [
+      14,
+      50
+    ],
+    "target_at_old_P_Qv_Qa_shortage": [
+      60,
+      40,
+      20
+    ],
+    "target_Q_change_percent": 25
+  },
+  "chart_review": "All seven saved chart caches read. Curves/domains, equilibrium markers and guides, old-price horizontal arrows and unchanged-curve movement arrows agree with independently calculated points. Offset label-only series are distinct from true marker series. Native workbook check passed7charts/184references/304cells.",
+  "teaching_review": [
+    "Retrieves1.3.2 equality/both-function checks and1.1.2 old-base percentages. Supported start24 uses108-109 then explicitly revisits before basis13/14.",
+    "Slides6-9 compare changed demand at old fixed price before calculating new equilibrium. Higher price is a reaction to more buyers, and the new48 demand plan is distinguished from final39 equilibrium.",
+    "Slides10-12 explicitly reset to original demand before input-cost scenario; supply moves left and buyers react along unchanged demand. A price rise alone does not identify cause.",
+    "Slide13 uses an explicitly separate qualitative reverse-direction case to teach combination before guided27: both Q effects down, P effects opposing/unknown. Does not invent magnitude or equate unknown with unchanged.",
+    "Target25 separates horizontal40->60 atP12 from along-A movement(40,12)->(50,14);target26 returns to unchanged supply equation."
+  ],
+  "source_observation": {
+    "id": "Book1-133-op27-scaffold",
+    "finding": "Student pp108-111 work single shifts; guided27 supplies a,b decomposition before c,d combining both right shifts, without a preceding worked double-shift model.",
+    "disposition": "Reviewed presentation13 adds a distinct reverse-direction scaffold before this exercise. This is sufficient for the planned presentation route; preserve as a textbook worked-example opportunity, not evidence of an independently taught prior skill. No source edit in this task."
+  },
+  "author_self_review": "Author independently adjusted graph labels and encoded source URLs before final v4 handoff. Root first inspected all27v3renders, then verified23finalrenders byte-identical and independently inspected changed9,11,24,25. All final notes differ from read v3 only in equivalent URL encoding. No parent artifact repair."
+}
