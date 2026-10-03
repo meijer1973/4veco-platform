@@ -1,5 +1,5 @@
 {
-  "status": "Final shared-code local suite PASS; remote published-pair CI recorded separately",
+  "status": "Recorded full-suite PASS before the later historical dependency-bridge repair; repair independently reviewed with16/16 focused tests; final remote published-pair CI recorded separately",
   "command": "npm run check:platform -- --maxWorkers=2 --json --outputFile=C:/wt/ppt/.book1/jest-final-r2.json",
   "exit_code": 0,
   "results": {
@@ -15,7 +15,7 @@
   },
   "raw_result_sha256": "26b02a8d8c4a10dab42525a9ebe9acc8565a51e98b3eb2701f3802b19c2507da",
   "started_platform_head": "cc678ddd",
-  "scope": "All shared implementation, including the finite retirement classifier, is unchanged since run start. Later additions are paragraph builders/manifests/review records. Remote CI must bind final published heads.",
+  "scope": "Full-suite result covers the recorded shared implementation except the later historical dependency-bridge repair. The repair has independent focused validation in ci-repair-review.json. Final exact-head remote CI must include all changes.",
   "independent_reviews": [
     {
       "reviewer": "book1_scope_adapter agent",
@@ -60,5 +60,12 @@
       "historical_capture_attests_current_retired_pages": false
     },
     "publication_requirement": "Full wrapper at the final published pair remains a separate remote-CI check."
+  },
+  "historical_dependency_bridge_repair": {
+    "reason": "Linux top-level node_modules symlink was visible to original historical Git inventory",
+    "change": "Real ignored node_modules directory with links to package directories; no historical source/pin/allowlist edits",
+    "independent_review": "ci-repair-review.md",
+    "focused_tests_passed": 16,
+    "remote_validation": "pending on final published head"
   }
 }

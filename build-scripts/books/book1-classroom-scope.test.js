@@ -86,3 +86,29 @@ test('lesson map replacement is finite and derives twelve links from sealed PDF 
   expect(result).toContain('1.3.4%20Title%203-4%20%E2%80%93%20presentatie.pptx');
   expect(()=>r.lessonMap(Buffer.from(before),new Set([...inventory].slice(1)))).toThrow('twelve');
 });
+
+
+test('historical dependency bridge is ignored as a real directory and resolves plain and scoped modules', () => {
+  const f = fixture(), packages = fs.mkdtempSync(path.join(os.tmpdir(), 'book1-dependencies-'));
+  const destination = path.join(f.root, 'node_modules');
+  try {
+    f.write('.gitignore', 'node_modules/\n'); f.git('add', '.gitignore'); f.git('commit', '-qm', 'ignore runtime dependencies');
+    for (const name of ['plain', '@scope/part']) {
+      const folder = path.join(packages, name); fs.mkdirSync(folder, {recursive: true});
+      fs.writeFileSync(path.join(folder, 'index.js'), 'module.exports=' + JSON.stringify(name));
+    }
+    r.linkHistoricalDependencies(packages, destination);
+    expect(fs.lstatSync(destination).isSymbolicLink()).toBe(false);
+    expect(f.git('ls-files', '--others', '--exclude-standard')).toBe('');
+    const script = "console.log(JSON.stringify([require('plain'),require('@scope/part')]))";
+    expect(JSON.parse(execFileSync(process.execPath, ['-e', script], {cwd: f.root, encoding: 'utf8', env: {...process.env, NODE_PATH: destination}}))).toEqual(['plain', '@scope/part']);
+    f.write('unexpected.txt', 'still detected');
+    expect(f.git('ls-files', '--others', '--exclude-standard')).toBe('unexpected.txt');
+    r.unlinkHistoricalDependencies(destination);
+    expect(fs.existsSync(destination)).toBe(false);
+    expect(fs.readFileSync(path.join(packages, 'plain/index.js'), 'utf8')).toBe('module.exports="plain"');
+  } finally {
+    r.unlinkHistoricalDependencies(destination);
+    f.close(); fs.rmSync(packages, {recursive: true, force: true});
+  }
+});

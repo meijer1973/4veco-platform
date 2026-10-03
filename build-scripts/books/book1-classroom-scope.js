@@ -186,6 +186,33 @@ function verifyChanges({root, base, repo, sealed = new Set(), requireTracked = f
   return result;
 }
 
+function linkHistoricalDependencies(source, destination) {
+  // A top-level symlink is not ignored by the historical node_modules/ rule
+  // on Linux. Keep a real ignored directory and link only its package folders.
+  // The nested immutable verifier resolves NODE_PATH through this exact path.
+  fs.mkdirSync(destination);
+  try {
+    for (const name of fs.readdirSync(source)) {
+      const target = path.join(source, name);
+      if (fs.statSync(target).isDirectory())
+        fs.symlinkSync(path.resolve(target), path.join(destination, name), process.platform === 'win32' ? 'junction' : 'dir');
+    }
+  } catch (error) {
+    unlinkHistoricalDependencies(destination);
+    throw error;
+  }
+}
+
+function unlinkHistoricalDependencies(destination) {
+  if (!fs.existsSync(destination)) return;
+  for (const name of fs.readdirSync(destination)) {
+    const target = path.join(destination, name);
+    assert(fs.lstatSync(target).isSymbolicLink(), 'Unexpected historical dependency entry: ' + target);
+    fs.unlinkSync(target);
+  }
+  fs.rmdirSync(destination);
+}
+
 function historicalPredecessor(root, lessons, requireTracked) {
   // Older named paired workflows still validate their original lesson payload.
   // Execute the accepted adapter at its immutable platform commit; do not
@@ -199,14 +226,14 @@ function historicalPredecessor(root, lessons, requireTracked) {
     // Supply dependencies without copying or modifying historical source bytes.
     const modules = [path.join(root, 'node_modules'), ...(process.env.NODE_PATH || '').split(path.delimiter)]
       .find(folder => folder && fs.existsSync(folder));
-    if (modules) fs.symlinkSync(path.resolve(modules), dependencies, process.platform === 'win32' ? 'junction' : 'dir');
+    if (modules) linkHistoricalDependencies(modules, dependencies);
     const script = "const path=require('path');const root=process.argv[1];const result=require(path.join(root,'build-scripts/books/book1-second-edition-revision')).verify({root,lessons:process.argv[2],requireTracked:process.argv[3]==='true'});process.stdout.write(JSON.stringify(result));";
     const result = JSON.parse(execFileSync(process.execPath, ['-e', script, checkout, lessons, String(requireTracked)],
       {encoding: 'utf8', maxBuffer: 256 * 1024 * 1024, env: {...process.env, NODE_PATH: path.join(root, 'node_modules')}}));
     assert(result.passed, result.failures?.join('; ') || 'Historical predecessor rejected');
     return {...result, classroom_predecessor_verification: {platform: PLATFORM_BASE, mode: 'original verifier at immutable accepted commit'}};
   } finally {
-    if (fs.existsSync(dependencies) && fs.lstatSync(dependencies).isSymbolicLink()) fs.unlinkSync(dependencies);
+    unlinkHistoricalDependencies(dependencies);
     if (fs.existsSync(checkout)) git(root, ['worktree', 'remove', checkout]);
     fs.rmdirSync(parent);
   }
@@ -248,7 +275,7 @@ function verify({root = ROOT, lessons = path.resolve(root, '../4veco-lessen'), r
 }
 
 module.exports = {ROOT, PLATFORM_BASE, LESSON_BASE, REVISION, BOOK, EDITION, RETIRED, LEGACY_ENTRIES, P_EXACT,
-  safeFile, changedPaths, platformPath, isAddition, retireLinks, lessonMap, verifyChanges, verify};
+  safeFile, changedPaths, platformPath, isAddition, retireLinks, lessonMap, verifyChanges, verify, linkHistoricalDependencies, unlinkHistoricalDependencies};
 if (require.main === module) {
   const result = verify({requireTracked: process.argv.includes('--require-tracked')});
   console.log(JSON.stringify(result, null, 2));
