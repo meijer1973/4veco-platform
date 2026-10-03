@@ -33,6 +33,8 @@ const P_EXACT = new Set([
   'engines/tests/presentatie-html-shape.test.js', 'engines/tests/l1-5d-v2-mobile-fixes.test.js', 'engines/tests/l1-6r-dual-coding.test.js',
   'build-scripts/content/book-1/historical-presentation-test-fixtures.js',
   'build-scripts/presentations/render-powerpoint.ps1',
+  'build-scripts/workflows/check-paragraph-lane-scope.js',
+  'build-scripts/workflows/check-paragraph-lane-scope.test.js',
 ]);
 const ADVISORY = new Set(['platform', 'lessen'].flatMap(repo => ['md', 'json'].map(ext => `reports/github-agent-index-${repo}.${ext}`)));
 const git = (root, args) => execFileSync('git', ['-c', 'core.longpaths=true', ...args], {cwd: root, maxBuffer: 256 * 1024 * 1024});

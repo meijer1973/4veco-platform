@@ -27,6 +27,9 @@ const BOOKS34_FOLLOWUP_FILES = new Set(require('../books/books34-followups-revis
 const BOOK2_NOTATION_FILES = new Set(require('../books/book2-notation-revision-pin.json').revision_paths.map(p => p.toLowerCase()));
 const BOOK1_EDITION_FILES = new Set(require('../../references/owned/book1-second-edition-2026/revision.json').lessons.map(row => row.path.toLowerCase()));
 BOOK1_EDITION_FILES.add('book1-second-edition-20261002.json');
+// Ownership of the finite retired classroom surface only. The separate
+// Book 1 scope adapter still requires deletion and protects sealed source bytes.
+const BOOK1_RETIRED_PRESENTATIONS = new Set([...require('../books/book1-classroom-scope').RETIRED].map(p => p.toLowerCase()));
 const CATEGORY_LABELS = {
   partA_textbook: 'Part A textbook',
   partB_companion: 'Part B companion',
@@ -177,6 +180,7 @@ function isSharedPlatformPath(filePath) {
 
 function isPartBCompanionPath(filePath) {
   const p = normalizedLower(filePath);
+  if (BOOK1_RETIRED_PRESENTATIONS.has(p)) return true;
   const base = basenameLower(filePath);
   if (base === '_paragraph-plan.md') return true;
   if (base === 'index.html') return true;
