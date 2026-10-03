@@ -35,7 +35,7 @@ const P_EXACT = new Set([
   'build-scripts/presentations/render-powerpoint.ps1',
 ]);
 const ADVISORY = new Set(['platform', 'lessen'].flatMap(repo => ['md', 'json'].map(ext => `reports/github-agent-index-${repo}.${ext}`)));
-const git = (root, args) => execFileSync('git', args, {cwd: root, maxBuffer: 256 * 1024 * 1024});
+const git = (root, args) => execFileSync('git', ['-c', 'core.longpaths=true', ...args], {cwd: root, maxBuffer: 256 * 1024 * 1024});
 const names = bytes => bytes.toString('utf8').split('\0').filter(Boolean);
 const lf = bytes => bytes.toString('utf8').replace(/\r\n/g, '\n');
 
@@ -94,6 +94,31 @@ function retireLinks(file, bytes) {
   return text.replace(pattern, '');
 }
 
+function lessonMap(before, sealed) {
+  const original = lf(before).trimEnd();
+  assert.equal(original.split('Book 1 output remains frozen;').length, 2, 'Expected one old Book 1 map status');
+  const prefix = EDITION + '/paragrafen/';
+  const sources = [...sealed].filter(file => file.startsWith(prefix) && /^H[123]\/1\.[123]\.[1234] [^/]+ – (paragraaf|opgaven)\.pdf$/.test(file.slice(prefix.length))).sort();
+  assert.equal(sources.length, 12, 'Expected twelve sealed paragraph PDF stems');
+  const quote = file => file.split('/').map(encodeURIComponent).join('/');
+  const rows = sources.map(file => {
+    const stem = file.replace(/ – (paragraaf|opgaven)\.pdf$/, ''), title = path.posix.basename(stem), id = title.split(' ')[0];
+    const evidence = path.posix.dirname(stem) + '/evidence/' + id + '-presentation.md';
+    return `| ${title} | [PowerPoint](${quote(stem + ' – presentatie.pptx')}) | [Slide PDF](${quote(stem + ' – presentatie.pdf')}) | [Review](${quote(evidence)}) |`;
+  });
+  const block = [
+    '', '<!-- BOOK1-CLASSROOM-START -->', '## Book 1 second-edition classroom presentations', '',
+    'Current second-edition presentations live beside the sealed student paragraph PDFs',
+    'in `Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H*/`.',
+    'First-edition presentations have been retired from the active folders; their',
+    'historical archive remains preserved. The platform owns the builders and the',
+    '[production and continuity review](https://github.com/meijer1973/4veco-platform/blob/codex/ppt-book1-second-edition-20261003/reports/review-gates/classroom-presentations-book1-second-edition-20261003/review.md).', '',
+    '| Paragraph | Editable presentation | Projection/print copy | Evidence |', '|---|---|---|---|',
+    ...rows, '<!-- BOOK1-CLASSROOM-END -->', '',
+  ].join('\n');
+  return original.replace('Book 1 output remains frozen;', 'Book 1 first-edition textbook output remains frozen;') + '\n' + block;
+}
+
 function disposableNavigation(root, base, file) {
   if (!ADVISORY.has(file) || process.env.FOURVECO_INDEX_VIEW_MODE !== 'complete-only'
     || !/^compatibility\/(platform-first|lesson-first|bundle-final)\/platform$/.test(process.env.FOURVECO_PLATFORM_SOURCE_BRANCH || '')) return false;
@@ -119,7 +144,7 @@ function checkRetirementVersions(root, file, before, after = null) {
 }
 
 function verifyChanges({root, base, repo, sealed = new Set(), requireTracked = false}) {
-  const changes = changedPaths(root, base), result = {additions: [], removals: [], entry_changes: [], platform_changes: []};
+  const changes = changedPaths(root, base), result = {additions: [], removals: [], entry_changes: [], navigation_changes: [], platform_changes: []};
   for (const file of changes) {
     if (repo === 'platform' && disposableNavigation(root, base, file)) continue;
     const exists = fs.existsSync(path.join(root, file));
@@ -136,6 +161,11 @@ function verifyChanges({root, base, repo, sealed = new Set(), requireTracked = f
     if (repo === 'platform') {
       assert(platformPath(file), 'Outside Book 1 classroom platform scope: ' + file);
       result.platform_changes.push(file);
+    } else if (file === 'RESEARCH_AGENT_MAP.md') {
+      const before = git(root, ['show', base + ':' + file]), after = lessonMap(before, sealed);
+      assert.equal(lf(bytes), after, 'Unexpected lesson map edit');
+      checkRetirementVersions(root, file, before, after);
+      result.navigation_changes.push(file);
     } else if (LEGACY_ENTRIES.has(file)) {
       const before = git(root, ['show', base + ':' + file]), after = retireLinks(file, before);
       assert.equal(lf(bytes), after, 'Unexpected legacy entry edit: ' + file);
@@ -216,7 +246,7 @@ function verify({root = ROOT, lessons = path.resolve(root, '../4veco-lessen'), r
 }
 
 module.exports = {ROOT, PLATFORM_BASE, LESSON_BASE, REVISION, BOOK, EDITION, RETIRED, LEGACY_ENTRIES, P_EXACT,
-  safeFile, changedPaths, platformPath, isAddition, retireLinks, verifyChanges, verify};
+  safeFile, changedPaths, platformPath, isAddition, retireLinks, lessonMap, verifyChanges, verify};
 if (require.main === module) {
   const result = verify({requireTracked: process.argv.includes('--require-tracked')});
   console.log(JSON.stringify(result, null, 2));

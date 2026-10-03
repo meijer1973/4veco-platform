@@ -76,3 +76,13 @@ test('retirement transformer preserves unrelated text and accepts exactly one ti
   const prerequisite=[...r.LEGACY_ENTRIES].find(file=>!file.endsWith('/index.html'));
   expect(r.retireLinks(prerequisite,Buffer.from('Ga verder of bekijk de <a href="old%20presentatie.pptx">Presentatie</a>.'))).toBe('Ga verder.');
 });
+
+test('lesson map replacement is finite and derives twelve links from sealed PDF stems',()=>{
+  const inventory=new Set([1,2,3].flatMap(ch=>[1,2,3,4].map(p=>`${r.EDITION}/paragrafen/H${ch}/1.${ch}.${p} Title ${ch}-${p} – ${p===4?'opgaven':'paragraaf'}.pdf`)));
+  const before='Keep this line.\nBook 1 output remains frozen; and keep this suffix.\n';
+  const result=r.lessonMap(Buffer.from(before),inventory);
+  expect(result.startsWith('Keep this line.\nBook 1 first-edition textbook output remains frozen; and keep this suffix.\n\n')).toBe(true);
+  expect((result.match(/\[PowerPoint\]/g)||[])).toHaveLength(12);
+  expect(result).toContain('1.3.4%20Title%203-4%20%E2%80%93%20presentatie.pptx');
+  expect(()=>r.lessonMap(Buffer.from(before),new Set([...inventory].slice(1)))).toThrow('twelve');
+});
