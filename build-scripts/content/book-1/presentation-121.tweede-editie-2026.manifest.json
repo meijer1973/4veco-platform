@@ -1,0 +1,227 @@
+{
+  "paragraph": "1.2.1",
+  "title": "Betalingsbereidheid en individuele vraag",
+  "type": "theory",
+  "edition": "Boek 1 tweede editie 2026",
+  "lessonCommit": "173aa9a803897965c572df2c4e7f83cdb135eb1c",
+  "platformBaseline": "dbaf16bf02db94e27ba418dd4dd0684a1a29e0bb",
+  "sources": [
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.1 Betalingsbereidheid en individuele vraag – paragraaf.md",
+      "sha256": "bcfa8e2586e1fed8c7a7aa5b1f6c571a800e0ee5da5d278e5c0ef2b349484e88"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/Antwoorden.md",
+      "sha256": "f84d1a278537a2f3d8318c7b59f689a139421a631762c5926ffcbc3ad1690827"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/Docenteninformatie.md",
+      "sha256": "e3646b257412ad67beaae17591d62706f5ff29fe9ac0ffc944fe3254168b4ff2"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/1.1.3 Tabellen, grafieken en formules – paragraaf.md",
+      "sha256": "989672f574c9454c3bf44bcea4ec061e68bb9336efa9b2a93c2a8ab581daa206"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/boek/Boek_1_Compleet_Tweede_editie.pdf",
+      "sha256": "2a2261b98f4a1c0a186a119120ae1b8c70e8d7860712e03eb711d1ab07efc676"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/student_page_map.json",
+      "sha256": "58eb9bf1d50227226e284099357e33e59a10bd433aa86f9bc7f3bf5c03b26691"
+    }
+  ],
+  "assignment": {
+    "start": [
+      1,
+      2
+    ],
+    "basis": [
+      3,
+      4,
+      5
+    ],
+    "independent": [
+      6,
+      7
+    ],
+    "target": [
+      8
+    ],
+    "homework": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "homeworkInstruction": "Maken en nakijken",
+    "extra": [
+      9,
+      10,
+      11
+    ]
+  },
+  "printedPages": {
+    "theory": [
+      46,
+      47,
+      48,
+      49
+    ],
+    "workedExample": [
+      50,
+      51
+    ],
+    "start": 52,
+    "basis": [
+      53,
+      54
+    ],
+    "independent": 55,
+    "target": 56,
+    "priorGraph": [
+      24,
+      25
+    ],
+    "priorFormula": 27
+  },
+  "pageVerification": "Complete student PDF text/printed footers inspected for all cited pages. Physical PDF indices equal these printed pages for the inspected content; the chapter map was used only for discovery.",
+  "goals": [
+    "Per extra eenheid de betalingsbereidheid met de prijs vergelijken, inclusief gelijkheid.",
+    "Met q = a − bP hoeveelheid, prijs en snijpunten berekenen en controleren.",
+    "Een lineaire vraaglijn tekenen en de prijsreactie en beperkingen verklaren."
+  ],
+  "prerequisites": [
+    {
+      "operation": "Invullen, vermenigvuldigen eerst; terugrekenen door dezelfde bewerking aan beide kanten; controle",
+      "earlierTeaching": "§1.1.3, p. 27: Een formule invullen en terugrekenen",
+      "practice": "1a–b; 3–6; 8b–d",
+      "lessonSupport": "slide 3 refresh; slides 7–10 demonstrate new q/P use and negative coefficient"
+    },
+    {
+      "operation": "Assen, eenheden, gelijkmatige schaal en coördinaten in (hoeveelheid; prijs)",
+      "earlierTeaching": "§1.1.3 p. 24–25: Van tabel naar grafiek; Punten plaatsen en de schaal controleren",
+      "practice": "2b; 3–4; 6c; 8d–e",
+      "lessonSupport": "slides 10–13 explicitly calculate intercepts and construct/check the demand graph"
+    },
+    {
+      "operation": "Betalingsbereidheid voor een extra eenheid, gelijkheid en voldoende budget",
+      "earlierTeaching": null,
+      "practice": "2a; 5b; 7; 8a",
+      "lessonSupport": "2a is supported exploration with theory p. 46 named on all shared overviews; redo 2a after slides 4–5 before basiswork"
+    },
+    {
+      "operation": "Aparte discrete versus lineaire situatie, individueel q, periode, ceteris paribus, geldigheidsinterval",
+      "earlierTeaching": null,
+      "practice": "3–8",
+      "lessonSupport": "slides 4–6 and 10–14"
+    },
+    {
+      "operation": "Vraag versus feitelijke aankoop; eigen prijsreactie zonder veranderde betalingsbereidheid",
+      "earlierTeaching": null,
+      "practice": "3c; 6d; 7c; 8f",
+      "lessonSupport": "slides 5, 7, 14"
+    }
+  ],
+  "teachingExamples": [
+    {
+      "slides": [
+        3
+      ],
+      "context": "Materiaalhuur",
+      "data": "T=7+3n; n=5 => T=22; T=31 => n=8; hele n 0–20",
+      "authored": true
+    },
+    {
+      "slides": [
+        4,
+        5
+      ],
+      "context": "Lotte, zakjes bloemenzaad",
+      "data": "per extra zakje 11,8,6,3 euro; price 6 =>3, price9=>1; surplus at6 =7 euro, introductory only",
+      "authored": true
+    },
+    {
+      "slides": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "context": "Samira, losse thee",
+      "data": "q=24−3P; q ons per maand, P euro per ons; 0≤P≤8; points (18;2),(6;6); q9=>P5; intercepts(24;0),(0;8)",
+      "authored": true
+    }
+  ],
+  "target": {
+    "number": 8,
+    "sourcePage": 56,
+    "title": "Fotoprints en een sapmodel",
+    "questionSlides": [
+      16,
+      17,
+      18
+    ],
+    "answerSlides": [
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "allSubquestions": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f"
+    ],
+    "expected": {
+      "a": "3 prints with equality included",
+      "b": [
+        12,
+        8
+      ],
+      "c": 3.5,
+      "d": [
+        [
+          20,
+          0
+        ],
+        [
+          0,
+          5
+        ]
+      ],
+      "e": {
+        "points": [
+          [
+            12,
+            2
+          ],
+          [
+            8,
+            3
+          ]
+        ],
+        "axes": "q liter per maand; P euro per liter"
+      },
+      "f": "4 liter per maand minder gevraagd; ceteris paribus; actual purchase not established"
+    }
+  },
+  "overviewSlides": [
+    1,
+    15,
+    25
+  ],
+  "scope": "Classroom Part B PPTX and matching slide PDF only. Textbook/manuscripts preserved. No classroom timing or measured mastery claim."
+}
