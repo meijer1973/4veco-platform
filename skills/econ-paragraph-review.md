@@ -12,7 +12,7 @@ independence, evidence, verdicts and publication boundaries. A focused draft
 review may stop at its requested findings; it does not establish full paragraph
 acceptance. For revisions, inspect changed material and affected dependencies,
 reuse named prior evidence and fill any remaining required coverage before a
-current paragraph PASS. Book 1 output is frozen; do not retrofit it through the
+current paragraph PASS. Book 1 first-edition output is frozen; do not retrofit it through the
 new Book 2+ theory-paragraph contract.
 
 ## Review dimensions
@@ -147,3 +147,6 @@ Use an identifiable report per paragraph when claiming paragraph closure; retain
 whatever concise form makes coverage and reused evidence clear. There is no quota
 of strengths, examples or report length. Never erase a failure's history or let a
 new manifest stand in for substantive rechecking.
+
+The owner-authorized [Book 1 second edition](../docs/workflows/book1-second-edition.md) follows the current
+Part A contract and requires its own independent current-file review.

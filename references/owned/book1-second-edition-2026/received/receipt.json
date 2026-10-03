@@ -1,0 +1,18 @@
+{
+  "received": "2026-10-02",
+  "source": "Owner attachments; immutable original delivery and independent research, not current review approval",
+  "platform_base": "d81db9558cc24d0671da1b2b9ecc5cdf1a092dde",
+  "lessons_base": "e734532a42b27732ac25ce990fc9448b12309d28",
+  "files": [
+    {
+      "file": "Boek_1_Compleet_Tweede_editie_Bronpakket(1).zip",
+      "sha256": "511d95fdbba6185594a74f183e66f4777f32dd3824739a8924510e0bb2499a0b",
+      "bytes": 17569469
+    },
+    {
+      "file": "Boek_1_onderzoeksdossier.zip",
+      "sha256": "57825f68fe6ab586af60bedd3cdefb0b3d2853a1d49af83615c9b506401729e3",
+      "bytes": 212430
+    }
+  ]
+}

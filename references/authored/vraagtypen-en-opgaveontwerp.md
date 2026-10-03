@@ -14,7 +14,7 @@ formats, scoring, and answer-model conventions** used in the 4veco platform.
 It is not a competing source for paragraph exercise sequence. For newly
 authored Book 2+ Part A theory paragraphs, `skills/econ-exercise-builder.md`
 owns the operational seven-section sequence, route, timing, and backward-design
-contract. Book 1 output remains frozen and is not retrofitted.
+contract. Book 1 first-edition output remains frozen and is not retrofitted.
 
 ---
 
@@ -541,3 +541,9 @@ Required for all practice tests and timed tests (5.4); optional for consolidatio
 | Pass 2 | Mathematical/conceptual precision | FAILs must be fixed |
 
 Reviews must be run by an independent agent, not by the builder.
+
+The owner-authorized Book 1 second edition (2026) follows the current Part A
+contract, including the normal supported route. Its source ownership, edition
+identity and bounded integration are documented in
+[Book 1 second edition](../../docs/workflows/book1-second-edition.md). This does not retrofit first-edition outputs or
+transfer their review status to reused paragraph numbers.

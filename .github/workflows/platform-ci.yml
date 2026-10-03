@@ -144,6 +144,13 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r .github/ci-python-requirements.txt
 
+      - name: Cache pinned LibreOffice installer
+        if: steps.ci-scope.outputs.maintenance != 'true'
+        uses: actions/cache@v4
+        with:
+          path: ${{ runner.temp }}/libreoffice-installer
+          key: libreoffice-windows-x64-${{ hashFiles('4veco-platform/build-scripts/ci/libreoffice-installer.json') }}
+
       - name: Install presentation proof tools
         if: steps.ci-scope.outputs.maintenance != 'true'
         env:
@@ -165,10 +172,7 @@ jobs:
               }
             }
           }
-          Invoke-WithRetry -Label "LibreOffice install" -ScriptBlock {
-            choco install libreoffice-fresh -y --no-progress
-            if ($LASTEXITCODE -ne 0) { throw "choco exited with $LASTEXITCODE" }
-          }
+          ./build-scripts/ci/install-libreoffice.ps1 -CacheDirectory (Join-Path $env:RUNNER_TEMP 'libreoffice-installer') -ArtifactDirectory '..\ci-artifacts'
           $popplerRoot = Join-Path $env:RUNNER_TEMP "poppler"
           New-Item -ItemType Directory -Force -Path $popplerRoot | Out-Null
           $headers = @{
@@ -190,9 +194,7 @@ jobs:
           }
           Expand-Archive -LiteralPath $popplerZip -DestinationPath $popplerRoot -Force
           $soffice = "C:\Program Files\LibreOffice\program\soffice.exe"
-          if (-not (Test-Path -LiteralPath $soffice)) {
-            $soffice = (Get-ChildItem -Path "C:\Program Files" -Filter soffice.exe -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1).FullName
-          }
+          if (-not (Test-Path -LiteralPath $soffice -PathType Leaf)) { throw "Verified LibreOffice executable is missing" }
           $pdftoppm = (Get-ChildItem -Path $popplerRoot -Filter pdftoppm.exe -Recurse -File -ErrorAction SilentlyContinue | Select-Object -First 1).FullName
           if (-not $pdftoppm) {
             $pdftoppm = (Get-Command pdftoppm -ErrorAction SilentlyContinue).Source

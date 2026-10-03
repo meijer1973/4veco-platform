@@ -80,10 +80,12 @@ function targetChunks(targets, sourceOptions) {
     const text = [record.id, record.paragraph_title, record.record_status, target.context || '',
       `Required skills: ${requiredSkills.join(', ') || 'unmapped'}. Exam codes: ${examCodes.join(', ') || 'unmapped'}.`,
       ...(target.subquestions || []).map(q => `${q.label}. ${q.prompt}`)].join('\n');
-    return {...chunk({chunkId:`target-exercise:${record.structure_revision || targets.blueprint_version}:${record.id}`,
-      sourcePath:'references/authored/course-target-exercises.json',sourceType:'target_exercise',
+    const edition=record.edition_id || (record.module===1 ? 'book1-first-edition-2026' : null);
+    return {...chunk({chunkId:`target-exercise:${edition || record.structure_revision || targets.blueprint_version}:${record.id}`,
+      sourcePath:record.source_path || 'references/authored/course-target-exercises.json',sourceType:'target_exercise',
       authorityLevel:'authored_judgement',entityIds:[record.id, ...requiredSkills, ...examCodes],
-      curriculumAuthority:record.record_status==='reviewed_final',text}),
+      curriculumAuthority:record.module!==1 && record.record_status==='reviewed_final',text}),
+      ...(edition ? {edition_id:edition,record_id:edition+':'+record.id} : {}),
       record_status:record.record_status,structure_revision:record.structure_revision || null,
       required_skills:requiredSkills,exam_codes:examCodes,
       ...(consumed ? {target:consumed} : {})};
@@ -94,7 +96,7 @@ function main(output = OUT) {
   const units = readJson('references/machine/micro-teaching-units.json', []);
   const terms = readJson('references/machine/begrippen.json', { terms: {} }).terms || {};
   const exams = readJson('references/external/exam-questions.json', []);
-  const targets = readJson('references/authored/course-target-exercises.json', {});
+  const targets = require('../references/book1-edition').selectedTargets(readJson('references/authored/course-target-exercises.json', {}));
   const graph = readJson('references/data/alignment-graph.json', { edges: [] });
   const ownedContentGraph = readJson('references/data/owned-content-graph.json', { edges: [] });
   const evidence = readJson('references/data/evidence-anchors.json', { evidence_anchors: [] });

@@ -91,7 +91,16 @@ jobs:
           node build-scripts/maintenance/check-books34-v3-import.js --require-tracked
           npx jest build-scripts/books/books34-signed-revision.test.js build-scripts/workflows/check-paragraph-lane-scope.test.js build-scripts/ci/paired-paragraph-ci.test.js --runInBand
           node -e "const r=require('./build-scripts/books/books34-signed-revision'),s=require('./build-scripts/workflows/check-paragraph-lane-scope');const result=s.checkLaneScope({lane:'textbook',changedPaths:r.changedPaths('../4veco-lessen')});if(!result.ok)throw Error(JSON.stringify(result));"
-          node build-scripts/books/books34-signed-review.js --check
+          node - <<'JS'
+          const fs=require('fs');
+          if(fs.existsSync('build-scripts/books/book1-second-edition-pin.json')){
+            const result=require('./build-scripts/books/book1-second-edition-revision').verify({requireTracked:true});
+            if(!result.passed||result.lesson_state!=='books34-signed-retrieval-20260926'||result.historical_review?.paragraphs!==6)throw Error(JSON.stringify(result));
+            fs.writeFileSync('../signed-ci-evidence/historical-review.json',JSON.stringify(result,null,2)+'\n');
+          }else{
+            require('./build-scripts/books/books34-signed-review').run({check:true});
+          }
+          JS
       - name: Publish exact-pair evidence
         if: always()
         uses: actions/upload-artifact@v4

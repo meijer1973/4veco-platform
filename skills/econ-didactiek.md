@@ -13,7 +13,7 @@ General didactic principles for economics education. This skill is format-indepe
 **Book 2+ Part A inheritance:** apply the
 [exercise contract](econ-exercise-builder.md) for sequence, target coverage,
 paper support, fading and timing. This skill adds pedagogical reasoning, not
-another paragraph structure. Book 1 is frozen and must not be retrofitted.
+another paragraph structure. Book 1 first-edition output is frozen and must not be retrofitted.
 
 ---
 
@@ -379,3 +379,9 @@ Verdieping:           "De ECB verlaagt de rente. Bouw een keten van minimaal 5 s
 ---
 
 *This skill defines WHAT to teach and WHY. For HOW to package it, see the relevant product skill: econ-word-templates (Word), econ-pptx-templates (PowerPoint), economic-graph (graphs/diagrams), or the textbook-builder skill (textbooks).*
+
+The owner-authorized Book 1 second edition (2026) follows the current Part A
+contract, including the normal supported route. Its source ownership, edition
+identity and bounded integration are documented in
+[Book 1 second edition](../docs/workflows/book1-second-edition.md). This does not retrofit first-edition outputs or
+transfer their review status to reused paragraph numbers.

@@ -13,7 +13,7 @@ the work expands into their scope.
   student-facing outputs under `Boek N - titel/`.
 - Repair generated outputs through their source and owning platform tool.
   Copied lesson `shared/` engines are not authoritative. New work uses the
-  markdown-native route; Book 1 remains frozen.
+  markdown-native route; Book 1 first-edition output remains frozen.
 - The external legacy Module 3 target remains protected by
   [R9.0/R9.01](references/reference-team-roadmap.md). A past September 2026 date
   does not release it: changes to that target or storage need explicit authority.
@@ -90,3 +90,9 @@ Search current source first. `archive/` is excluded from default searches;
 use [archive navigation](archive/README.md) for provenance or named historical
 work. Archived instructions are not current policy, and archiving does not
 close an outstanding obligation.
+
+The owner-authorized Book 1 second edition (2026) follows the current Part A
+contract, including the normal supported route. Its source ownership, edition
+identity and bounded integration are documented in
+[Book 1 second edition](docs/workflows/book1-second-edition.md). This does not retrofit first-edition outputs or
+transfer their review status to reused paragraph numbers.

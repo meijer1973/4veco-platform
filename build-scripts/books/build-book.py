@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import argparse
 import sys
+import json, subprocess
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
@@ -42,6 +43,7 @@ def main() -> None:
         default=".",
         help="Path to 4veco-platform root (default: current directory).",
     )
+    parser.add_argument('--fonts', help='Local Lato font directory for Book 1 second edition')
     args = parser.parse_args()
 
     platform_root = Path(args.platform_root).resolve()
@@ -59,6 +61,15 @@ def main() -> None:
     )
     if not manifest_path.exists():
         sys.exit(f"ERROR: manifest not found: {manifest_path}")
+
+    manifest=json.loads(manifest_path.read_text(encoding='utf8'))
+    if manifest.get('current_edition')=='book1-second-edition-2026':
+        if not args.fonts:
+            parser.error('Book 1 now uses the second-edition manuscript builder; supply --fonts <Lato directory>')
+        directory=platform_root/'build-scripts/books/book1_second_edition'
+        subprocess.run([sys.executable,'-X','utf8',str(directory/'rebuild.py'),'--lessons',str(lessen_root),'--fonts',args.fonts],check=True)
+        subprocess.run([sys.executable,'-X','utf8',str(directory/'publish.py'),'--lessons',str(lessen_root)],check=True)
+        return
 
     try:
         build_book(manifest_path, lessen_root, platform_root)

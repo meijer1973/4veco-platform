@@ -87,8 +87,20 @@ jobs:
         run: |
           python -m unittest discover -s build-scripts/books -p test_book2_chat.py -v
           python -X utf8 build-scripts/books/verify_exercise_routes.py --report-dir ../route-ci-evidence
-          node build-scripts/maintenance/check-books34-v3-import.js --require-tracked
-          node build-scripts/books/exercise-route-review.js --check
+          node - <<'JS'
+          const fs=require('fs');
+          if(fs.existsSync('build-scripts/books/book1-second-edition-pin.json')){
+            // Authenticate historical review against its actual original sources.
+            // The successor runs the unchanged checker in the immutable checkout.
+            const result=require('./build-scripts/books/book1-second-edition-revision').verify({requireTracked:true});
+            if(!result.passed||result.lesson_state!=='exercise-route-revision'||result.historical_review?.paragraphs!==43)throw Error(JSON.stringify(result));
+            fs.writeFileSync('../route-ci-evidence/historical-review.json',JSON.stringify(result,null,2)+'\n');
+          }else{
+            const result=require('./build-scripts/maintenance/check-books34-v3-import').verify({requireTracked:true});
+            if(!result.passed)throw Error(JSON.stringify(result));
+            require('./build-scripts/books/exercise-route-review').run({check:true});
+          }
+          JS
       - name: Publish exact-pair evidence
         if: always()
         uses: actions/upload-artifact@v4

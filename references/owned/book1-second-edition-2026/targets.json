@@ -1,0 +1,1161 @@
+{
+  "edition_id": "book1-second-edition-2026",
+  "owner_authority": "2026-10-02: integrate the attached new Book 1 edition",
+  "legacy_registry": "references/authored/course-target-exercises.json",
+  "legacy_relation": "historical first-edition records; IDs do not establish equivalence",
+  "exercises": [
+    {
+      "id": "1.1.1",
+      "edition_id": "book1-second-edition-2026",
+      "record_id": "book1-second-edition-2026:1.1.1",
+      "module": 1,
+      "chapter": 1,
+      "paragraph_title": "Schaarste, keuzes en alternatieve kosten",
+      "paragraph_kind": "theory",
+      "record_status": "candidate_review_ready",
+      "curriculum_authority": false,
+      "approval_inherited": false,
+      "required_skills": [],
+      "exam_codes": [],
+      "authority_note": "Owner-selected second-edition target; no old reviewed_final status, machine mapping or CvTE approval inherited.",
+      "source_path": "references/owned/book1-second-edition-2026/targets.json",
+      "source_locator": {
+        "repository": "meijer1973/4veco-lessen",
+        "manuscript": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/1.1.1 Schaarste, keuzes en alternatieve kosten – paragraaf.md",
+        "manuscript_sha256": "249ad3b06b6e717c1a0f1c3c0c1174fd99d1df45e751807c5ac0b4d8b7d2a492",
+        "answers": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/Antwoorden.md",
+        "answers_sha256": "dc89980240843ea5fa1d01fe68d33e7d3621ce5938fd7314f7e234bd204facd0",
+        "exercise_number": 7
+      },
+      "target_exercise": {
+        "title": "Eén aula, twee plannen",
+        "context": "Opgave 7 · Eén aula, twee plannen Een school organiseert een activiteit voor een goed doel. De aula is vrijdag drie uur beschikbaar. De school kiest een muziekmiddag óf een ruilmarkt. Elk plan gebruikt de aula de volledige drie uur. De school kan beide plannen uitvoeren, maar niet tegelijk. Het doel is zoveel mogelijk geld voor het goede doel overhouden . In de bedragen zijn alle uitgaven voor de activiteit al verrekend. De aula is gratis. Plan Bedrag over per uur Verwacht aantal deelnemers Muziekmiddag € 70 90 Ruilmarkt € 90 60",
+        "context_html": "<div class=\"exercise target\" id=\"ex7\"><h3>Opgave 7 · Eén aula, twee plannen</h3><p>Een school organiseert een activiteit voor een goed doel. De aula is vrijdag drie uur beschikbaar. De school kiest een muziekmiddag óf een ruilmarkt. Elk plan gebruikt de aula de volledige drie uur. De school kan beide plannen uitvoeren, maar niet tegelijk.</p>\n<p>Het doel is <strong>zoveel mogelijk geld voor het goede doel overhouden</strong>. In de bedragen zijn alle uitgaven voor de activiteit al verrekend. De aula is gratis.</p>\n<table class=\"\"><thead><tr><th>Plan</th><th>Bedrag over per uur</th><th>Verwacht aantal deelnemers</th></tr></thead><tbody><tr><td>Muziekmiddag</td><td>€ 70</td><td>90</td></tr><tr><td>Ruilmarkt</td><td>€ 90</td><td>60</td></tr></tbody></table></div>",
+        "source_assets": [],
+        "answer_html": "<h3 id=\"ans7\">Opgave 7 · Eén aula, twee plannen</h3><div class=\"answer-item\"><p><strong>a.</strong> De <strong>aula gedurende die drie uur</strong> is schaars. Beide activiteiten vragen hetzelfde tijdvak en kunnen niet worden gecombineerd.</p>\n<p class=\"why\"><strong>Waarom:</strong> De school kan niet aan beide wensen tegelijk voldoen met de beschikbare ruimte.</p>\n</div><div class=\"answer-item\"><p><strong>b.</strong> Muziek: 3 × € 70 = <strong>€ 210</strong>. Ruilmarkt: 3 × € 90 = <strong>€ 270</strong>. Kies de <strong>ruilmarkt</strong>.</p>\n<p class=\"why\"><strong>Waarom:</strong> Bij het gelddoel telt het totale bedrag voor het goede doel.</p>\n</div><div class=\"answer-item\"><p><strong>c.</strong> De <strong>muziekmiddag</strong> wordt opgegeven. De alternatieve kosten zijn <strong>€ 210</strong>, niet € 60.</p>\n<p class=\"why\"><strong>Waarom:</strong> € 210 is de waarde van het beste andere haalbare gebruik; € 60 is alleen het verschil.</p>\n</div><div class=\"answer-item\"><p><strong>d.</strong> De huurbetaling is € 0. Toch vervalt de muziekmiddag die € 210 kon opleveren. Er zijn dus wel alternatieve kosten.</p>\n<p class=\"why\"><strong>Waarom:</strong> Gratis toegang tot een middel neemt het keuzeprobleem niet weg.</p>\n</div><div class=\"answer-item\"><p><strong>e.</strong> De <strong>muziekmiddag</strong>: 90 deelnemers in plaats van 60.</p>\n<p class=\"why\"><strong>Waarom:</strong> Een ander doel kan bij dezelfde mogelijkheden tot een andere keuze leiden.</p>\n</div>\n PAGE {\"section\": \"1.1.1\", \"title\": \"Denkertje en herhaling\"} \n",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Welk middel is schaars? Leg uit waarom de school moet kiezen.",
+            "answer": [
+              "De **aula gedurende die drie uur** is schaars. Beide activiteiten vragen hetzelfde tijdvak en kunnen niet worden gecombineerd.",
+              "De school kan niet aan beide wensen tegelijk voldoen met de beschikbare ruimte."
+            ]
+          },
+          {
+            "label": "b",
+            "prompt": "Bereken voor beide plannen hoeveel geld overblijft. Welk plan past bij het genoemde doel?",
+            "answer": [
+              "Muziek: 3 × € 70 = **€ 210**. Ruilmarkt: 3 × € 90 = **€ 270**. Kies de **ruilmarkt**.",
+              "Bij het gelddoel telt het totale bedrag voor het goede doel."
+            ]
+          },
+          {
+            "label": "c",
+            "prompt": "Wat zijn de alternatieve kosten van de keuze uit b? Benoem de gemiste activiteit en het bedrag.",
+            "answer": [
+              "De **muziekmiddag** wordt opgegeven. De alternatieve kosten zijn **€ 210**, niet € 60.",
+              "€ 210 is de waarde van het beste andere haalbare gebruik; € 60 is alleen het verschil."
+            ]
+          },
+          {
+            "label": "d",
+            "prompt": "Een leerling zegt: “De aula is gratis, dus deze keuze heeft geen alternatieve kosten.” Leg uit waarom dit niet klopt.",
+            "answer": [
+              "De huurbetaling is € 0. Toch vervalt de muziekmiddag die € 210 kon opleveren. Er zijn dus wel alternatieve kosten.",
+              "Gratis toegang tot een middel neemt het keuzeprobleem niet weg."
+            ]
+          },
+          {
+            "label": "e",
+            "prompt": "Het doel verandert in “zoveel mogelijk leerlingen laten deelnemen”. Welk plan kies je dan? Gebruik een gegeven uit de tabel.",
+            "answer": [
+              "De **muziekmiddag**: 90 deelnemers in plaats van 60.",
+              "Een ander doel kan bij dezelfde mogelijkheden tot een andere keuze leiden."
+            ]
+          }
+        ]
+      },
+      "review_scope": "Current-file Part A review is recorded separately; no curriculum-authority promotion."
+    },
+    {
+      "id": "1.1.2",
+      "edition_id": "book1-second-edition-2026",
+      "record_id": "book1-second-edition-2026:1.1.2",
+      "module": 1,
+      "chapter": 1,
+      "paragraph_title": "Verhoudingen, percentages en indexcijfers",
+      "paragraph_kind": "theory",
+      "record_status": "candidate_review_ready",
+      "curriculum_authority": false,
+      "approval_inherited": false,
+      "required_skills": [],
+      "exam_codes": [],
+      "authority_note": "Owner-selected second-edition target; no old reviewed_final status, machine mapping or CvTE approval inherited.",
+      "source_path": "references/owned/book1-second-edition-2026/targets.json",
+      "source_locator": {
+        "repository": "meijer1973/4veco-lessen",
+        "manuscript": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/1.1.2 Verhoudingen, percentages en indexcijfers – paragraaf.md",
+        "manuscript_sha256": "e10b272612bb096e6b2e2628f67198eaa3f4f123c4b6f7c420eb006312059335",
+        "answers": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/Antwoorden.md",
+        "answers_sha256": "dc89980240843ea5fa1d01fe68d33e7d3621ce5938fd7314f7e234bd204facd0",
+        "exercise_number": 18
+      },
+      "target_exercise": {
+        "title": "Een workshop voor scholieren",
+        "context": "Opgave 18 · Een workshop voor scholieren Een cultureel centrum vergelijkt zijn workshopprijs en het aandeel leerlingen dat deelneemt. Gebruik voor de prijsindex jaar 1 als basis . Alle bedragen en aantallen zijn voor deze opgave gegeven. In jaar 3 betaalt het centrum € 216 aan materiaal voor de 36 deelnemers. Na jaar 3 wil het de workshopprijs met 8% verhogen. Gegeven Jaar 1 Jaar 2 Jaar 3 Prijs per workshop € 10 € 12 € 15 Leerlingen die konden deelnemen 120 150 150 Werkelijke deelnemers 24 30 36",
+        "context_html": "<div class=\"exercise target\" id=\"ex18\"><h3>Opgave 18 · Een workshop voor scholieren</h3><p>Een cultureel centrum vergelijkt zijn workshopprijs en het aandeel leerlingen dat deelneemt. Gebruik voor de <strong>prijsindex jaar 1 als basis</strong>. Alle bedragen en aantallen zijn voor deze opgave gegeven.</p>\n<p>In jaar 3 betaalt het centrum € 216 aan materiaal voor de 36 deelnemers. Na jaar 3 wil het de workshopprijs met 8% verhogen.</p>\n<table class=\"\"><thead><tr><th>Gegeven</th><th>Jaar 1</th><th>Jaar 2</th><th>Jaar 3</th></tr></thead><tbody><tr><td>Prijs per workshop</td><td>€ 10</td><td>€ 12</td><td>€ 15</td></tr><tr><td>Leerlingen die konden deelnemen</td><td>120</td><td>150</td><td>150</td></tr><tr><td>Werkelijke deelnemers</td><td>24</td><td>30</td><td>36</td></tr></tbody></table></div>",
+        "source_assets": [],
+        "answer_html": "<h3 id=\"ans18\">Opgave 18 · Een workshop voor scholieren</h3><div class=\"answer-item\"><p><strong>a.</strong> € 216 / 36 = <strong>€ 6 per deelnemer</strong>.</p>\n<p class=\"why\"><strong>Waarom:</strong> Een bedrag per deelnemer is het totaal verdeeld over de deelnemers.</p>\n</div><div class=\"answer-item\"><p><strong>b.</strong> € 12 − € 10 = <strong>€ 2</strong>. (12 − 10) / 10 × 100% = <strong>20%</strong>.</p>\n<p class=\"why\"><strong>Waarom:</strong> De oude prijs in deze vergelijking is € 10.</p>\n</div><div class=\"answer-item\"><p><strong>c.</strong> € 15 × 1,08 = <strong>€ 16,20</strong>.</p>\n<p class=\"why\"><strong>Waarom:</strong> De aangekondigde verhoging is 8% van de prijs van jaar 3.</p>\n</div><div class=\"answer-item\"><p><strong>d.</strong> Jaar 2: 12 / 10 × 100 = <strong>120</strong>. Jaar 3: 15 / 10 × 100 = <strong>150</strong>.</p>\n<p class=\"why\"><strong>Waarom:</strong> De twee indexcijfers hebben dezelfde prijs uit jaar 1 als basis.</p>\n</div><div class=\"answer-item\"><p><strong>e.</strong> 150 − 120 = <strong>30 indexpunten</strong>. (150 − 120) / 120 × 100% = <strong>25%</strong>.</p>\n<p class=\"why\"><strong>Waarom:</strong> Het verschil van 30 wordt voor deze groei vergeleken met de oude index 120.</p>\n</div><div class=\"answer-item\"><p><strong>f.</strong> Jaar 1: 24 / 120 × 100% = <strong>20%</strong>. Jaar 3: 36 / 150 × 100% = <strong>24%</strong>. Verschil: <strong>4 procentpunten</strong>.</p>\n<p class=\"why\"><strong>Waarom:</strong> Gebruik bij elk jaar zijn eigen totaal aantal leerlingen.</p>\n</div><div class=\"answer-item\"><p><strong>g.</strong> Het bericht is onjuist. (24 − 20) / 20 × 100% = <strong>20% relatieve stijging</strong> van het aandeel. Correct is ook: +4 procentpunten.</p>\n<p class=\"why\"><strong>Waarom:</strong> Het bericht verwart een verschil in procentpunten met een procentuele verandering.</p>\n</div>\n PAGE {\"section\": \"1.1.2\", \"title\": \"Denkertje en herhaling\"} \n",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Bereken het materiaalbedrag per deelnemer in jaar 3.",
+            "answer": [
+              "€ 216 / 36 = **€ 6 per deelnemer**.",
+              "Een bedrag per deelnemer is het totaal verdeeld over de deelnemers."
+            ]
+          },
+          {
+            "label": "b",
+            "prompt": "Bereken de absolute en procentuele prijsverandering van jaar 1 naar jaar 2.",
+            "answer": [
+              "€ 12 − € 10 = **€ 2**. (12 − 10) / 10 × 100% = **20%**.",
+              "De oude prijs in deze vergelijking is € 10."
+            ]
+          },
+          {
+            "label": "c",
+            "prompt": "Bereken de aangekondigde workshopprijs na jaar 3.",
+            "answer": [
+              "€ 15 × 1,08 = **€ 16,20**.",
+              "De aangekondigde verhoging is 8% van de prijs van jaar 3."
+            ]
+          },
+          {
+            "label": "d",
+            "prompt": "Bereken de prijsindexcijfers van jaar 2 en jaar 3.",
+            "answer": [
+              "Jaar 2: 12 / 10 × 100 = **120**. Jaar 3: 15 / 10 × 100 = **150**.",
+              "De twee indexcijfers hebben dezelfde prijs uit jaar 1 als basis."
+            ]
+          },
+          {
+            "label": "e",
+            "prompt": "Bereken met die indexcijfers de prijsverandering van jaar 2 naar jaar 3 in indexpunten én in procenten.",
+            "answer": [
+              "150 − 120 = **30 indexpunten**. (150 − 120) / 120 × 100% = **25%**.",
+              "Het verschil van 30 wordt voor deze groei vergeleken met de oude index 120."
+            ]
+          },
+          {
+            "label": "f",
+            "prompt": "Bereken het deelnamepercentage in jaar 1 en jaar 3. Hoeveel procentpunten is de verandering?",
+            "answer": [
+              "Jaar 1: 24 / 120 × 100% = **20%**. Jaar 3: 36 / 150 × 100% = **24%**. Verschil: **4 procentpunten**.",
+              "Gebruik bij elk jaar zijn eigen totaal aantal leerlingen."
+            ]
+          },
+          {
+            "label": "g",
+            "prompt": "Een bericht luidt: “Het aandeel deelnemers is met 4% gestegen.” Beoordeel dit bericht met een berekening.",
+            "answer": [
+              "Het bericht is onjuist. (24 − 20) / 20 × 100% = **20% relatieve stijging** van het aandeel. Correct is ook: +4 procentpunten.",
+              "Het bericht verwart een verschil in procentpunten met een procentuele verandering."
+            ]
+          }
+        ]
+      },
+      "review_scope": "Current-file Part A review is recorded separately; no curriculum-authority promotion."
+    },
+    {
+      "id": "1.1.3",
+      "edition_id": "book1-second-edition-2026",
+      "record_id": "book1-second-edition-2026:1.1.3",
+      "module": 1,
+      "chapter": 1,
+      "paragraph_title": "Tabellen, grafieken en formules",
+      "paragraph_kind": "theory",
+      "record_status": "candidate_review_ready",
+      "curriculum_authority": false,
+      "approval_inherited": false,
+      "required_skills": [],
+      "exam_codes": [],
+      "authority_note": "Owner-selected second-edition target; no old reviewed_final status, machine mapping or CvTE approval inherited.",
+      "source_path": "references/owned/book1-second-edition-2026/targets.json",
+      "source_locator": {
+        "repository": "meijer1973/4veco-lessen",
+        "manuscript": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/1.1.3 Tabellen, grafieken en formules – paragraaf.md",
+        "manuscript_sha256": "989672f574c9454c3bf44bcea4ec061e68bb9336efa9b2a93c2a8ab581daa206",
+        "answers": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/Antwoorden.md",
+        "answers_sha256": "dc89980240843ea5fa1d01fe68d33e7d3621ce5938fd7314f7e234bd204facd0",
+        "exercise_number": 30
+      },
+      "target_exercise": {
+        "title": "Reserveren, huren en meten",
+        "context": "Opgave 30 · Reserveren, huren en meten Bron A. Een verhuurder gebruikt onderstaande reserveringstabel voor één middag. De overige omstandigheden blijven gelijk. Tussen de punten geldt een rechte lijn. Bron B. Voor de huur van verlichting geldt T = 8 + 2n. T is het bedrag in euro; n het aantal lampjes, van 0 tot en met 30. Bron C. De figuur is een plattegrond met posities in meters. Bron A: P (€ per reservering) 2 5 8 Q (reserveringen per middag) 100 70 40 Figuur 21 · Bron C: de te berekenen oppervlaktes, zonder uitkomsten.\nFigure data from the source: [{\"path\": \"Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_ex_30.svg\", \"sha256\": \"2e3747d21f896628239147323f6e7fd296fa4d3a09ce3b55a0546d5165bdd9b7\", \"alt\": \"Figuur 21 · Bron C: de te berekenen oppervlaktes, zonder uitkomsten.\", \"geometry\": {\"file\": \"1.1.3_ex_30\", \"kind\": \"instruction\", \"width\": 720, \"height\": 345, \"type\": \"area\", \"panels\": [{\"vertices\": [[2, 4], [8, 4], [8, 8], [2, 8]], \"area\": 24.0, \"plot\": [50, 312, 56, 267], \"max\": [10, 9]}, {\"vertices\": [[2, 4], [8, 4], [2, 8]], \"area\": 12.0, \"plot\": [409, 671, 56, 267], \"max\": [10, 9]}], \"solution\": false}}]",
+        "context_html": "<div class=\"exercise target\" id=\"ex30\"><h3>Opgave 30 · Reserveren, huren en meten</h3><p><strong>Bron A.</strong> Een verhuurder gebruikt onderstaande reserveringstabel voor één middag. De overige omstandigheden blijven gelijk. Tussen de punten geldt een rechte lijn.</p>\n<p><strong>Bron B.</strong> Voor de huur van verlichting geldt T = 8 + 2n. T is het bedrag in euro; n het aantal lampjes, van 0 tot en met 30.</p>\n<p><strong>Bron C.</strong> De figuur is een plattegrond met posities in meters.</p>\n<table class=\"\"><thead><tr><th>Bron A: P (€ per reservering)</th><th>2</th><th>5</th><th>8</th></tr></thead><tbody><tr><td>Q (reserveringen per middag)</td><td>100</td><td>70</td><td>40</td></tr></tbody></table><figure class=\"compact\"><img alt=\"Figuur 21 · Bron C: de te berekenen oppervlaktes, zonder uitkomsten.\" src=\"_assets/1.1.3_ex_30.svg\"/><figcaption>Figuur 21 · Bron C: de te berekenen oppervlaktes, zonder uitkomsten.</figcaption></figure></div>",
+        "source_assets": [
+          {
+            "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_ex_30.svg",
+            "sha256": "2e3747d21f896628239147323f6e7fd296fa4d3a09ce3b55a0546d5165bdd9b7",
+            "alt": "Figuur 21 · Bron C: de te berekenen oppervlaktes, zonder uitkomsten.",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"720\" height=\"345\" viewBox=\"0 0 720 345\"><defs><marker id=\"arrow\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto-start-reverse\"><path d=\"M0,0 L7,3.5 L0,7Z\" fill=\"#183247\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"720\" height=\"345\" rx=\"8\" fill=\"#f7fafb\" stroke=\"none\"/><text x=\"360.000\" y=\"26.000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"20\" fill=\"#17688f\" text-anchor=\"middle\" font-weight=\"700\" >Een rechthoek en een driehoek op een plattegrond</text><line x1=\"50.00000\" y1=\"267.00000\" x2=\"50.00000\" y2=\"56.00000\" stroke=\"#183247\" stroke-width=\"1.5\" marker-end=\"url(#arrow)\"/><line x1=\"50.00000\" y1=\"267.00000\" x2=\"316.00000\" y2=\"267.00000\" stroke=\"#183247\" stroke-width=\"1.5\" marker-end=\"url(#arrow)\"/><text x=\"178.000\" y=\"321.000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >Horizontale positie (m)</text><text x=\"15.000\" y=\"166.000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" transform=\"rotate(-90 15 166)\">Verticale positie (m)</text><text x=\"50.000\" y=\"288.000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >0</text><line x1=\"50.00000\" y1=\"267.00000\" x2=\"50.00000\" y2=\"173.22222\" stroke=\"#8a9ca7\" stroke-width=\"1\" stroke-dasharray=\"4,4\" /><text x=\"102.400\" y=\"288.000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >2</text><line x1=\"102.40000\" y1=\"267.00000\" x2=\"102.40000\" y2=\"173.22222\" stroke=\"#8a9ca7\" stroke-width=\"1\" stroke-dasharray=\"4,4\" /><text x=\"259.600\" y=\"288.000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >8</text><line x1=\"259.60000\" y1=\"267.00000\" x2=\"259.60000\" y2=\"173.22222\" stroke=\"#8a9ca7\" stroke-width=\"1\" stroke-dasharray=\"4,4\" /><text x=\"43.000\" y=\"178.222\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"end\" font-weight=\"400\" >4</text><line x1=\"50.00000\" y1=\"173.22222\" x2=\"102.40000\" y2=\"173.22222\" stroke=\"#8a9ca7\" stroke-width=\"1\" stroke-dasharray=\"4,4\" /><text x=\"43.000\" y=\"84.444\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"end\" font-weight=\"400\" >8</text><line x1=\"50.00000\" y1=\"79.44444\" x2=\"102.40000\" y2=\"79.44444\" stroke=\"#8a9ca7\" stroke-width=\"1\" stroke-dasharray=\"4,4\" /><polygon points=\"102.40000,173.22222 259.60000,173.22222 259.60000,79.44444 102.40000,79.44444\" fill=\"#17688f\" fill-opacity=\"0.16\" stroke=\"#17688f\" stroke-width=\"2\" data-role=\"area\" data-index=\"0\"/><line x1=\"409.00000\" y1=\"267.00000\" x2=\"409.00000\" y2=\"56.00000\" stroke=\"#183247\" stroke-width=\"1.5\" marker-end=\"url(#arrow)\"/><line x1=\"409.00000\" y1=\"267.00000\" x2=\"675.00000\" y2=\"267.00000\" stroke=\"#183247\" stroke-width=\"1.5\" marker-end=\"url(#arrow)\"/><text x=\"537.000\" y=\"321.000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >Horizontale positie (m)</text><text x=\"374.000\" y=\"166.000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" transform=\"rotate(-90 374 166)\">Verticale positie (m)</text><text x=\"409.000\" y=\"288.000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >0</text><line x1=\"409.00000\" y1=\"267.00000\" x2=\"409.00000\" y2=\"173.22222\" stroke=\"#8a9ca7\" stroke-width=\"1\" stroke-dasharray=\"4,4\" /><text x=\"461.400\" y=\"288.000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >2</text><line x1=\"461.40000\" y1=\"267.00000\" x2=\"461.40000\" y2=\"173.22222\" stroke=\"#8a9ca7\" stroke-width=\"1\" stroke-dasharray=\"4,4\" /><text x=\"618.600\" y=\"288.000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >8</text><line x1=\"618.60000\" y1=\"267.00000\" x2=\"618.60000\" y2=\"173.22222\" stroke=\"#8a9ca7\" stroke-width=\"1\" stroke-dasharray=\"4,4\" /><text x=\"402.000\" y=\"178.222\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"end\" font-weight=\"400\" >4</text><line x1=\"409.00000\" y1=\"173.22222\" x2=\"461.40000\" y2=\"173.22222\" stroke=\"#8a9ca7\" stroke-width=\"1\" stroke-dasharray=\"4,4\" /><text x=\"402.000\" y=\"84.444\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"end\" font-weight=\"400\" >8</text><line x1=\"409.00000\" y1=\"79.44444\" x2=\"461.40000\" y2=\"79.44444\" stroke=\"#8a9ca7\" stroke-width=\"1\" stroke-dasharray=\"4,4\" /><polygon points=\"461.40000,173.22222 618.60000,173.22222 461.40000,79.44444\" fill=\"#227064\" fill-opacity=\"0.16\" stroke=\"#227064\" stroke-width=\"2\" data-role=\"area\" data-index=\"1\"/></svg>",
+            "geometry": {
+              "file": "1.1.3_ex_30",
+              "kind": "instruction",
+              "width": 720,
+              "height": 345,
+              "type": "area",
+              "panels": [
+                {
+                  "vertices": [
+                    [
+                      2,
+                      4
+                    ],
+                    [
+                      8,
+                      4
+                    ],
+                    [
+                      8,
+                      8
+                    ],
+                    [
+                      2,
+                      8
+                    ]
+                  ],
+                  "area": 24.0,
+                  "plot": [
+                    50,
+                    312,
+                    56,
+                    267
+                  ],
+                  "max": [
+                    10,
+                    9
+                  ]
+                },
+                {
+                  "vertices": [
+                    [
+                      2,
+                      4
+                    ],
+                    [
+                      8,
+                      4
+                    ],
+                    [
+                      2,
+                      8
+                    ]
+                  ],
+                  "area": 12.0,
+                  "plot": [
+                    409,
+                    671,
+                    56,
+                    267
+                  ],
+                  "max": [
+                    10,
+                    9
+                  ]
+                }
+              ],
+              "solution": false
+            }
+          }
+        ],
+        "answer_html": "<h3 id=\"ans30\">Opgave 30 · Reserveren, huren en meten</h3><div class=\"answer-item\"><p><strong>a.</strong> Zie de antwoordgrafiek: <strong>(100; 2), (70; 5), (40; 8)</strong>. Q staat horizontaal in reserveringen per middag; P verticaal in euro per reservering.</p>\n<p class=\"why\"><strong>Waarom:</strong> Je neemt de waarden uit één rij/kolomcombinatie samen, zonder de assen om te draaien.</p>\n</div><div class=\"answer-item\"><p><strong>b.</strong> Q = 100 − (4 − 2) / (5 − 2) × (100 − 70) = 100 − 20 = <strong>80 reserveringen per middag</strong>.</p>\n<p class=\"why\"><strong>Waarom:</strong> € 4 ligt op twee derde van het prijsinterval € 2–€ 5.</p>\n</div><div class=\"answer-item\"><p><strong>c.</strong> (70 − 100) / 100 × 100% = <strong>−30%</strong>, dus de uitspraak is onjuist.</p>\n<p class=\"why\"><strong>Waarom:</strong> Je deelt de afname door het oude aantal 100. Delen door het nieuwe aantal 70 zou de verkeerde basis gebruiken.</p>\n</div><figure><img alt=\"A4 · Opgave 30a–c: de interpolatie ligt op het gegeven rechte segment.\" src=\"_assets/1.1.3_ans_30.svg\"/><figcaption>A4 · Opgave 30a–c: de interpolatie ligt op het gegeven rechte segment.</figcaption></figure>\n PAGE {\"section\": \"1.1.3\", \"title\": \"Doeloefening · bron B en C\"} \n<h3 id=\"ans30cont\">Opgave 30 · Reserveren, huren en meten — vervolg</h3><div class=\"answer-item\"><p><strong>d.</strong> T = 8 + 2 × 6 = <strong>€ 20</strong>.</p>\n<p class=\"why\"><strong>Waarom:</strong> Vermenigvuldig het aantal eerst met 2 en tel daarna 8 op.</p>\n</div><div class=\"answer-item\"><p><strong>e.</strong> 32 = 8 + 2n → 24 = 2n → n = <strong>12 lampjes</strong>. Controle: 8 + 2 × 12 = € 32.</p>\n<p class=\"why\"><strong>Waarom:</strong> De teruggevonden waarde geeft het gevraagde bedrag en ligt tussen 0 en 30.</p>\n</div><div class=\"answer-item\"><p><strong>f.</strong> Basis = 8 − 2 = <strong>6 m</strong>. Hoogte = 8 − 4 = <strong>4 m</strong>. Rechthoek = 6 × 4 = <strong>24 m²</strong>.</p>\n<p class=\"why\"><strong>Waarom:</strong> De hoogte begint bij 4 meter, niet bij 0.</p>\n</div><div class=\"answer-item\"><p><strong>g.</strong> Driehoek = ½ × (8 − 2) × (8 − 4) = ½ × 6 × 4 = <strong>12 m²</strong>.</p>\n<p class=\"why\"><strong>Waarom:</strong> Bij dezelfde basis en hoogte is de driehoek half zo groot als de rechthoek.</p>\n</div><figure><img alt=\"A5 · Opgave 30f–g: gebruik de verschillen tussen de asposities.\" src=\"_assets/1.1.3_ans_30_area.svg\"/><figcaption>A5 · Opgave 30f–g: gebruik de verschillen tussen de asposities.</figcaption></figure>\n PAGE {\"section\": \"1.1.3\", \"title\": \"Denkertje en herhaling\"} \n",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Teken bij bron A zelf een prijs–hoeveelheidsgrafiek op ruitjespapier, met schalen, eenheden en de drie punten.",
+            "answer": [
+              "Zie de antwoordgrafiek: **(100; 2), (70; 5), (40; 8)**. Q staat horizontaal in reserveringen per middag; P verticaal in euro per reservering.",
+              "Je neemt de waarden uit één rij/kolomcombinatie samen, zonder de assen om te draaien."
+            ]
+          },
+          {
+            "label": "b",
+            "prompt": "Bepaal met lineaire interpolatie Q bij P = € 4.",
+            "answer": [
+              "Q = 100 − (4 − 2) / (5 − 2) × (100 − 70) = 100 − 20 = **80 reserveringen per middag**.",
+              "€ 4 ligt op twee derde van het prijsinterval € 2–€ 5."
+            ]
+          },
+          {
+            "label": "c",
+            "prompt": "Een bericht stelt: “Tussen P = € 2 en P = € 5 daalt het aantal met ongeveer 43%.” Controleer de uitspraak.",
+            "answer": [
+              "(70 − 100) / 100 × 100% = **−30%**, dus de uitspraak is onjuist.",
+              "Je deelt de afname door het oude aantal 100. Delen door het nieuwe aantal 70 zou de verkeerde basis gebruiken."
+            ]
+          },
+          {
+            "label": "d",
+            "prompt": "Bereken met bron B het bedrag bij n = 6.",
+            "answer": [
+              "T = 8 + 2 × 6 = **€ 20**.",
+              "Vermenigvuldig het aantal eerst met 2 en tel daarna 8 op."
+            ]
+          },
+          {
+            "label": "e",
+            "prompt": "Bereken met bron B het aantal lampjes bij T = € 32. Controleer.",
+            "answer": [
+              "32 = 8 + 2n → 24 = 2n → n = **12 lampjes**. Controle: 8 + 2 × 12 = € 32.",
+              "De teruggevonden waarde geeft het gevraagde bedrag en ligt tussen 0 en 30."
+            ]
+          },
+          {
+            "label": "f",
+            "prompt": "Bereken met bron C de oppervlakte van de rechthoek.",
+            "answer": [
+              "Basis = 8 − 2 = **6 m**. Hoogte = 8 − 4 = **4 m**. Rechthoek = 6 × 4 = **24 m²**.",
+              "De hoogte begint bij 4 meter, niet bij 0."
+            ]
+          },
+          {
+            "label": "g",
+            "prompt": "Bereken met bron C de oppervlakte van de driehoek. Laat zien welke basis en hoogte je gebruikt.",
+            "answer": [
+              "Driehoek = ½ × (8 − 2) × (8 − 4) = ½ × 6 × 4 = **12 m²**.",
+              "Bij dezelfde basis en hoogte is de driehoek half zo groot als de rechthoek."
+            ]
+          }
+        ]
+      },
+      "review_scope": "Current-file Part A review is recorded separately; no curriculum-authority promotion."
+    },
+    {
+      "id": "1.1.4",
+      "edition_id": "book1-second-edition-2026",
+      "record_id": "book1-second-edition-2026:1.1.4",
+      "module": 1,
+      "chapter": 1,
+      "paragraph_title": "Gemengde opgaven",
+      "paragraph_kind": "gemengde_opgaven",
+      "record_status": "candidate_review_ready",
+      "curriculum_authority": false,
+      "approval_inherited": false,
+      "required_skills": [],
+      "exam_codes": [],
+      "authority_note": "Owner-selected second-edition target; no old reviewed_final status, machine mapping or CvTE approval inherited.",
+      "source_path": "references/owned/book1-second-edition-2026/targets.json",
+      "source_locator": {
+        "repository": "meijer1973/4veco-lessen",
+        "manuscript": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/1.1.4 Gemengde opgaven – opgaven.md",
+        "manuscript_sha256": "8da28b45850637e4bc586832116c67ec34b3b15e6df47124a7d8b1ec51b082ef",
+        "answers": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/Antwoorden.md",
+        "answers_sha256": "dc89980240843ea5fa1d01fe68d33e7d3621ce5938fd7314f7e234bd204facd0",
+        "exercise_number": 36
+      },
+      "target_exercise": {
+        "title": "Een schoolactiviteit plannen",
+        "context": "Doeloefening · Bronnen bij opgave 36 Eén school, twee beslissingen. De middagactiviteit en de avondvoorstelling zijn afzonderlijke plannen. Ze vinden niet in hetzelfde tijdvak plaats. Gebruik per vraag de passende bron. De vragen staan op de pagina hiernaast. Bron A · Middagactiviteit De aula is twee uur beschikbaar. De school kiest een boekenruil óf een cultuuratelier. Elk plan vraagt de volledige twee uur. Ze kunnen niet worden gecombineerd. Beide plannen zijn uitvoerbaar. Het doel is het hoogste bedrag voor een goed doel . De bedragen in de tabel zijn wat na alle uitgaven overblijft. Plan Bedrag over per uur Boekenruil € 60 Cultuuratelier € 75 Bron B · Een aparte avondvoorstelling Voor de avond stelt de commissie een ticketprijs voor. Het onderstaande model voorspelt het aantal bezoekers. Andere omstandigheden blijven gelijk. Tussen de drie punten neemt de commissie een rechte lijn aan. De zaal heeft voldoende plaatsen voor alle getoonde aantallen. Ticketprijs P (€ per bezoeker) 4 6 8 Verwacht aantal Q (per avond) 180 140 100 Een voorstel is een prijs van € 7 . Voor de beoordeling van dit voorstel is het doel: minstens 130 bezoekers . Bron C · Prijsvergelijking tussen jaren De prijs voor dezelfde jaarlijkse voorstelling was in het basisjaar € 4, in jaar 2 € 4,80 en in jaar 3 € 6. Gebruik het basisjaar als index 100. Dit is een vergelijking tussen jaren, niet de prijskeuze van € 7 uit bron B. Een bericht stelt: “De prijsindex stijgt van jaar 2 naar jaar 3 met 30 punten. Een ticket is dus 30% duurder geworden.” Alle bronnen zijn geconstrueerde gegevens voor deze opgave. Opgave 36 · Een schoolactiviteit plannen Gebruik de bronnen op de pagina hiernaast. Schrijf bij elke berekening welke waarden je gebruikt en geef de juiste eenheid.",
+        "context_html": "<div class=\"page-title\">Doeloefening · Bronnen bij opgave 36</div><p><strong>Eén school, twee beslissingen.</strong> De middagactiviteit en de avondvoorstelling zijn afzonderlijke plannen. Ze vinden niet in hetzelfde tijdvak plaats. Gebruik per vraag de passende bron. De vragen staan op de pagina hiernaast.</p>\n<div class=\"source\"><p><strong>Bron A · Middagactiviteit</strong></p><p>De aula is twee uur beschikbaar. De school kiest een boekenruil óf een cultuuratelier. Elk plan vraagt de volledige twee uur. Ze kunnen niet worden gecombineerd. Beide plannen zijn uitvoerbaar. Het doel is <strong>het hoogste bedrag voor een goed doel</strong>. De bedragen in de tabel zijn wat na alle uitgaven overblijft.</p>\n<table class=\"\"><thead><tr><th>Plan</th><th>Bedrag over per uur</th></tr></thead><tbody><tr><td>Boekenruil</td><td>€ 60</td></tr><tr><td>Cultuuratelier</td><td>€ 75</td></tr></tbody></table></div><div class=\"source\"><p><strong>Bron B · Een aparte avondvoorstelling</strong></p><p>Voor de avond stelt de commissie een ticketprijs voor. Het onderstaande model voorspelt het aantal bezoekers. Andere omstandigheden blijven gelijk. Tussen de drie punten neemt de commissie een rechte lijn aan. De zaal heeft voldoende plaatsen voor alle getoonde aantallen.</p>\n<table class=\"\"><thead><tr><th>Ticketprijs P (€ per bezoeker)</th><th>4</th><th>6</th><th>8</th></tr></thead><tbody><tr><td>Verwacht aantal Q (per avond)</td><td>180</td><td>140</td><td>100</td></tr></tbody></table><p>Een voorstel is een prijs van <strong>€ 7</strong>. Voor de beoordeling van dit voorstel is het doel: <strong>minstens 130 bezoekers</strong>.</p>\n</div><div class=\"source\"><p><strong>Bron C · Prijsvergelijking tussen jaren</strong></p><p>De prijs voor dezelfde jaarlijkse voorstelling was in het basisjaar € 4, in jaar 2 € 4,80 en in jaar 3 € 6. Gebruik het basisjaar als index 100. Dit is een vergelijking tussen jaren, niet de prijskeuze van € 7 uit bron B.</p>\n<p>Een bericht stelt: “De prijsindex stijgt van jaar 2 naar jaar 3 met 30 punten. Een ticket is dus 30% duurder geworden.”</p>\n</div><p class=\"note\">Alle bronnen zijn geconstrueerde gegevens voor deze opgave.</p>\n<div class=\"exercise target\" id=\"ex36\"><h3>Opgave 36 · Een schoolactiviteit plannen</h3><p>Gebruik de bronnen op de pagina hiernaast. Schrijf bij elke berekening welke waarden je gebruikt en geef de juiste eenheid.</p>\n</div>",
+        "source_assets": [],
+        "answer_html": "<h3 id=\"ans36\">Opgave 36 · Een schoolactiviteit plannen</h3><div class=\"answer-item\"><p><strong>a.</strong> De <strong>aula gedurende twee uur</strong> is beperkt; beide plannen vragen het hele tijdvak. Boekenruil: 2 × € 60 = <strong>€ 120</strong>. Cultuuratelier: 2 × € 75 = <strong>€ 150</strong>. Kies <strong>cultuuratelier</strong>.</p>\n<p class=\"why\"><strong>Waarom:</strong> De hoogste totale opbrengst voor het goede doel is het opgegeven criterium.</p>\n</div><div class=\"answer-item\"><p><strong>b.</strong> De alternatieve kosten zijn <strong>€ 120</strong>, de gemiste boekenruil. € 150 − € 120 = € 30 is alleen het voordeel in geld ten opzichte van dat alternatief.</p>\n<p class=\"why\"><strong>Waarom:</strong> De waarde van wat je laat liggen en het verschil tussen de opties beantwoorden verschillende vragen.</p>\n</div><div class=\"answer-item\"><p><strong>c.</strong> Zie de antwoordgrafiek met <strong>(180; 4), (140; 6), (100; 8)</strong>. Q staat horizontaal, in bezoekers per avond; P verticaal, in euro per bezoeker.</p>\n<p class=\"why\"><strong>Waarom:</strong> De grafiek moet de gegevens uit bron B weergeven, niet de jaarvergelijking uit C.</p>\n</div><div class=\"answer-item\"><p><strong>d.</strong> € 7 ligt halverwege € 6 en € 8. Q = 140 − ½ × (140 − 100) = <strong>120 bezoekers per avond</strong>.</p>\n<p class=\"why\"><strong>Waarom:</strong> Tussen de punten is expliciet een rechte lijn aangenomen.</p>\n</div><figure><img alt=\"A6 · Opgave 36c–d: de grafiek hoort bij bron B, niet bij bron C.\" src=\"_assets/1.1.4_ans_36.svg\"/><figcaption>A6 · Opgave 36c–d: de grafiek hoort bij bron B, niet bij bron C.</figcaption></figure>\n PAGE {\"section\": \"1.1.4\", \"title\": \"Doeloefening · indexen en advies\"} \n<h3 id=\"ans36cont\">Opgave 36 · Een schoolactiviteit plannen — vervolg</h3><div class=\"answer-item\"><p><strong>e.</strong> Jaar 2: 4,80 / 4 × 100 = <strong>120</strong>. Jaar 3: 6 / 4 × 100 = <strong>150</strong>. Groei: (150 − 120) / 120 × 100% = <strong>25%</strong>.</p>\n<p class=\"why\"><strong>Waarom:</strong> Voor de index gebruikt elk jaar € 4; voor de groei vanaf jaar 2 gebruik je index 120.</p>\n</div><div class=\"answer-item\"><p><strong>f.</strong> “De prijsindex stijgt met <strong>30 indexpunten</strong>; een ticket wordt ten opzichte van jaar 2 <strong>25% duurder</strong>.”</p>\n<p class=\"why\"><strong>Waarom:</strong> Een puntenverschil is pas een procentuele verandering nadat je door de oude waarde hebt gedeeld.</p>\n</div><div class=\"answer-item\"><p><strong>g.</strong> Volgens het model <strong>niet</strong>: bij € 7 worden <strong>120</strong> bezoekers verwacht, minder dan de gewenste 130. Advies: kies dit voorstel niet als dat bezoekersdoel leidend is. De verwachting hangt af van gelijkblijvende omstandigheden en de rechte-lijnaanname.</p>\n<p class=\"why\"><strong>Waarom:</strong> Het model ondersteunt een voorwaardelijk advies, geen garantie over het werkelijke bezoekersaantal.</p>\n</div><div class=\"box\"><p><strong>Een goed onderbouwd antwoord</strong></p><p>Bron A ondersteunt de keuze voor de middag. Bron B ondersteunt het bezoekersadvies bij € 7. Bron C ondersteunt de prijsvergelijking tussen jaren. De gegevens zijn niet onderling uitwisselbaar.</p>\n</div>\n PAGE {\"section\": \"1.1.4\", \"title\": \"Extra gemengde oefening\"} \n",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Leg met bron A uit waarom de school moet kiezen. Bereken beide totaalbedragen en bepaal welk plan bij het doel past.",
+            "answer": [
+              "De **aula gedurende twee uur** is beperkt; beide plannen vragen het hele tijdvak. Boekenruil: 2 × € 60 = **€ 120**. Cultuuratelier: 2 × € 75 = **€ 150**. Kies **cultuuratelier**.",
+              "De hoogste totale opbrengst voor het goede doel is het opgegeven criterium."
+            ]
+          },
+          {
+            "label": "b",
+            "prompt": "Noem de alternatieve kosten van de keuze uit a. Verklaar waarom het verschil tussen beide geldbedragen niet hetzelfde is.",
+            "answer": [
+              "De alternatieve kosten zijn **€ 120**, de gemiste boekenruil. € 150 − € 120 = € 30 is alleen het voordeel in geld ten opzichte van dat alternatief.",
+              "De waarde van wat je laat liggen en het verschil tussen de opties beantwoorden verschillende vragen."
+            ]
+          },
+          {
+            "label": "c",
+            "prompt": "Teken met bron B zelf een grafiek op ruitjespapier. Benoem de assen en eenheden, kies een schaal en teken de punten en rechte lijnstukken.",
+            "answer": [
+              "Zie de antwoordgrafiek met **(180; 4), (140; 6), (100; 8)**. Q staat horizontaal, in bezoekers per avond; P verticaal, in euro per bezoeker.",
+              "De grafiek moet de gegevens uit bron B weergeven, niet de jaarvergelijking uit C."
+            ]
+          },
+          {
+            "label": "d",
+            "prompt": "Bepaal met lineaire interpolatie het verwachte aantal bezoekers bij een ticketprijs van € 7.",
+            "answer": [
+              "€ 7 ligt halverwege € 6 en € 8. Q = 140 − ½ × (140 − 100) = **120 bezoekers per avond**.",
+              "Tussen de punten is expliciet een rechte lijn aangenomen."
+            ]
+          },
+          {
+            "label": "e",
+            "prompt": "Bereken met bron C de prijsindexcijfers van jaar 2 en jaar 3. Bereken vervolgens de procentuele prijsverandering tussen die twee jaren.",
+            "answer": [
+              "Jaar 2: 4,80 / 4 × 100 = **120**. Jaar 3: 6 / 4 × 100 = **150**. Groei: (150 − 120) / 120 × 100% = **25%**.",
+              "Voor de index gebruikt elk jaar € 4; voor de groei vanaf jaar 2 gebruik je index 120."
+            ]
+          },
+          {
+            "label": "f",
+            "prompt": "Beoordeel het bericht in bron C. Schrijf een verbeterde zin.",
+            "answer": [
+              "“De prijsindex stijgt met **30 indexpunten**; een ticket wordt ten opzichte van jaar 2 **25% duurder**.”",
+              "Een puntenverschil is pas een procentuele verandering nadat je door de oude waarde hebt gedeeld."
+            ]
+          },
+          {
+            "label": "g",
+            "prompt": "Past het prijsvoorstel van € 7 bij het doel in bron B? Geef een advies met het berekende aantal en één beperking van het model.",
+            "answer": [
+              "Volgens het model **niet**: bij € 7 worden **120** bezoekers verwacht, minder dan de gewenste 130. Advies: kies dit voorstel niet als dat bezoekersdoel leidend is. De verwachting hangt af van gelijkblijvende omstandigheden en de rechte-lijnaanname.",
+              "Het model ondersteunt een voorwaardelijk advies, geen garantie over het werkelijke bezoekersaantal."
+            ]
+          }
+        ]
+      },
+      "review_scope": "Current-file Part A review is recorded separately; no curriculum-authority promotion."
+    },
+    {
+      "id": "1.2.1",
+      "edition_id": "book1-second-edition-2026",
+      "record_id": "book1-second-edition-2026:1.2.1",
+      "module": 1,
+      "chapter": 2,
+      "paragraph_title": "Betalingsbereidheid en individuele vraag",
+      "paragraph_kind": "theory",
+      "record_status": "candidate_review_ready",
+      "curriculum_authority": false,
+      "approval_inherited": false,
+      "required_skills": [],
+      "exam_codes": [],
+      "authority_note": "Owner-selected second-edition target; no old reviewed_final status, machine mapping or CvTE approval inherited.",
+      "source_path": "references/owned/book1-second-edition-2026/targets.json",
+      "source_locator": {
+        "repository": "meijer1973/4veco-lessen",
+        "manuscript": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.1 Betalingsbereidheid en individuele vraag – paragraaf.md",
+        "manuscript_sha256": "bcfa8e2586e1fed8c7a7aa5b1f6c571a800e0ee5da5d278e5c0ef2b349484e88",
+        "answers": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/Antwoorden.md",
+        "answers_sha256": "f84d1a278537a2f3d8318c7b59f689a139421a631762c5926ffcbc3ad1690827",
+        "exercise_number": 8
+      },
+      "target_exercise": {
+        "title": "Fotoprints en een sapmodel",
+        "context": "Opgave 8 · Fotoprints en een sapmodel Bron A. Iris wil voor vier extra fotoprints maximaal € 12, € 9, € 5 en € 2 betalen. Elke print kost € 5. Zij heeft voldoende budget; bij gelijkheid koopt zij ook. Bron B — een andere situatie. Voor Amir geldt q = 20 − 4P. q is sap in liter per maand, P euro per liter. De functie geldt voor 0 ≤ P ≤ 5. Alle overige omstandigheden blijven gelijk.",
+        "context_html": "<div class=\"exercise target\" id=\"ex8\"><h3>Opgave 8 · Fotoprints en een sapmodel</h3><p><strong>Bron A.</strong> Iris wil voor vier extra fotoprints maximaal € 12, € 9, € 5 en € 2 betalen. Elke print kost € 5. Zij heeft voldoende budget; bij gelijkheid koopt zij ook.</p>\n<p><strong>Bron B — een andere situatie.</strong> Voor Amir geldt q = 20 − 4P. q is sap in liter per maand, P euro per liter. De functie geldt voor 0 ≤ P ≤ 5. Alle overige omstandigheden blijven gelijk.</p>\n</div>",
+        "source_assets": [],
+        "answer_html": "<h3 id=\"ans8\">Opgave 8 · Fotoprints en een sapmodel</h3><div class=\"answer-item\"><p><strong>a.</strong> <strong>3 fotoprints</strong>. De waarden € 12, € 9 en € 5 zijn minstens de prijs van € 5; de vierde waarde van € 2 is lager.</p>\n<p class=\"why\"><strong>Waarom:</strong> De gelijkheidsafspraak bepaalt dat Iris ook de derde print koopt.</p>\n</div><div class=\"answer-item\"><p><strong>b.</strong> Bij € 2: q = 20 − 4 × 2 = <strong>12 liter per maand</strong>. Bij € 3: q = 20 − 4 × 3 = <strong>8 liter per maand</strong>.</p>\n<p class=\"why\"><strong>Waarom:</strong> Je verandert alleen de eigen prijs in één en dezelfde vraagfunctie.</p>\n</div><div class=\"answer-item\"><p><strong>c.</strong> 6 = 20 − 4P → 6 + 4P = 20 → 4P = 14 → P = <strong>€ 3,50 per liter</strong>. Controle: 20 − 4 × 3,50 = 6 liter.</p>\n<p class=\"why\"><strong>Waarom:</strong> De uitkomst blijft binnen de geldige prijsgrenzen.</p>\n</div><div class=\"answer-item\"><p><strong>d.</strong> P = 0 → q = 20: <strong>(20; 0)</strong>. q = 0 → 4P = 20 → P = 5: <strong>(0; 5)</strong>.</p>\n<p class=\"why\"><strong>Waarom:</strong> Een snijpunt met een as heeft nul als de andere coördinaat.</p>\n</div><div class=\"answer-item\"><p><strong>e.</strong> Teken q horizontaal (liter per maand), P verticaal (€ per liter). Verbind <strong>(20; 0)</strong> met <strong>(0; 5)</strong>; markeer <strong>(12; 2)</strong> en <strong>(8; 3)</strong>.</p>\n<p class=\"why\"><strong>Waarom:</strong> Een controlepunt uit de functie moet exact op de getekende lijn liggen.</p>\n</div><div class=\"answer-item\"><p><strong>f.</strong> De gevraagde hoeveelheid daalt <strong>met 4 liter, van 12 naar 8 liter per maand</strong>, ceteris paribus. De feitelijke aankoop is niet bepaald: beschikbaarheid en de werkelijk geldende prijs ontbreken.</p>\n<p class=\"why\"><strong>Waarom:</strong> Een vraagrelatie beschrijft het gedrag bij veronderstelde prijzen; zij bevat geen aanbodinformatie.</p>\n</div><figure><img alt=\"Antwoordfiguur · Opgave 8. De schalen mogen anders zijn, maar de coördinaten en het getekende interval moeten kloppen.\" src=\"_assets/1.2.1_ans_8.svg\"/><figcaption>Antwoordfiguur · Opgave 8. De schalen mogen anders zijn, maar de coördinaten en het getekende interval moeten kloppen.</figcaption></figure>\n PAGE {\"section\": \"1.2.1\", \"title\": \"Denkertje en herhaling\"} \n",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Hoeveel fotoprints koopt Iris volgens bron A? Leg uit.",
+            "answer": [
+              "**3 fotoprints**. De waarden € 12, € 9 en € 5 zijn minstens de prijs van € 5; de vierde waarde van € 2 is lager.",
+              "De gelijkheidsafspraak bepaalt dat Iris ook de derde print koopt."
+            ]
+          },
+          {
+            "label": "b",
+            "prompt": "Bereken met bron B de gevraagde hoeveelheid bij P = € 2 en bij P = € 3.",
+            "answer": [
+              "Bij € 2: q = 20 − 4 × 2 = **12 liter per maand**. Bij € 3: q = 20 − 4 × 3 = **8 liter per maand**.",
+              "Je verandert alleen de eigen prijs in één en dezelfde vraagfunctie."
+            ]
+          },
+          {
+            "label": "c",
+            "prompt": "Bereken de prijs die hoort bij q = 6 liter per maand. Controleer je antwoord.",
+            "answer": [
+              "6 = 20 − 4P → 6 + 4P = 20 → 4P = 14 → P = **€ 3,50 per liter**. Controle: 20 − 4 × 3,50 = 6 liter.",
+              "De uitkomst blijft binnen de geldige prijsgrenzen."
+            ]
+          },
+          {
+            "label": "d",
+            "prompt": "Bereken beide snijpunten van de vraaglijn uit bron B.",
+            "answer": [
+              "P = 0 → q = 20: **(20; 0)**. q = 0 → 4P = 20 → P = 5: **(0; 5)**.",
+              "Een snijpunt met een as heeft nul als de andere coördinaat."
+            ]
+          },
+          {
+            "label": "e",
+            "prompt": "Teken die vraaglijn in je schrift en markeer de twee punten uit b. Vermeld variabelen, eenheden en een bruikbare schaal.",
+            "answer": [
+              "Teken q horizontaal (liter per maand), P verticaal (€ per liter). Verbind **(20; 0)** met **(0; 5)**; markeer **(12; 2)** en **(8; 3)**.",
+              "Een controlepunt uit de functie moet exact op de getekende lijn liggen."
+            ]
+          },
+          {
+            "label": "f",
+            "prompt": "Leg uit wat de prijsstijging van € 2 naar € 3 voor Amirs vraag betekent. Kun je daarmee ook zijn feitelijke aankoop vaststellen?",
+            "answer": [
+              "De gevraagde hoeveelheid daalt **met 4 liter, van 12 naar 8 liter per maand**, ceteris paribus. De feitelijke aankoop is niet bepaald: beschikbaarheid en de werkelijk geldende prijs ontbreken.",
+              "Een vraagrelatie beschrijft het gedrag bij veronderstelde prijzen; zij bevat geen aanbodinformatie."
+            ]
+          }
+        ]
+      },
+      "review_scope": "Current-file Part A review is recorded separately; no curriculum-authority promotion."
+    },
+    {
+      "id": "1.2.2",
+      "edition_id": "book1-second-edition-2026",
+      "record_id": "book1-second-edition-2026:1.2.2",
+      "module": 1,
+      "chapter": 2,
+      "paragraph_title": "Vraagfactoren",
+      "paragraph_kind": "theory",
+      "record_status": "candidate_review_ready",
+      "curriculum_authority": false,
+      "approval_inherited": false,
+      "required_skills": [],
+      "exam_codes": [],
+      "authority_note": "Owner-selected second-edition target; no old reviewed_final status, machine mapping or CvTE approval inherited.",
+      "source_path": "references/owned/book1-second-edition-2026/targets.json",
+      "source_locator": {
+        "repository": "meijer1973/4veco-lessen",
+        "manuscript": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.2 Vraagfactoren – paragraaf.md",
+        "manuscript_sha256": "57fe7dacb96f888b82d170bd55060c129fcd8effbae8fbed89c8a4eacd8f6c7a",
+        "answers": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/Antwoorden.md",
+        "answers_sha256": "f84d1a278537a2f3d8318c7b59f689a139421a631762c5926ffcbc3ad1690827",
+        "exercise_number": 19
+      },
+      "target_exercise": {
+        "title": "Filmhuis Lumi",
+        "context": "Opgave 19 · Filmhuis Lumi Voor filmbezoeken geldt eerst Q = 100 − 5P, voor 0 ≤ P ≤ 20. Q is bezoeken per week; P is euro per bezoek. Lumi verhoogt de prijs van € 8 naar € 10. Tegelijk worden kaartjes van een nabijgelegen bioscoop duurder. Volgens de bron zijn die bezoeken substituten. Hierdoor worden bij Lumi bij elke onderzochte prijs 20 bezoeken extra gevraagd. Neem aan dat de nieuwe vraaglijn recht blijft tot de gevraagde hoeveelheid nul is. Verder blijven de omstandigheden gelijk. Figuur 16 · Voeg de nieuwe lijn en de gevraagde punten zelf toe.\nFigure data from the source: [{\"path\": \"Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.2_ex_19.svg\", \"sha256\": \"9f789d70118a14434d0aaa1303db6151e7d77737653807603fb88f278967e038\", \"alt\": \"Figuur 16 · Voeg de nieuwe lijn en de gevraagde punten zelf toe.\", \"geometry\": {\"file\": \"1.2.2_ex_19\", \"kind\": \"instruction\", \"width\": 720, \"height\": 340, \"type\": \"chart\", \"plot\": {\"ox\": 82, \"by\": 270, \"top\": 53, \"ex\": 620, \"xmax\": 120, \"ymax\": 24}, \"curves\": [{\"name\": \"V0\", \"a\": 100, \"b\": 5, \"pmin\": 0, \"pmax\": 20.0, \"drawn\": true, \"endpoints\": [[100, 0], [0.0, 20.0]]}], \"marks\": []}}]",
+        "context_html": "<div class=\"exercise target\" id=\"ex19\"><h3>Opgave 19 · Filmhuis Lumi</h3><p>Voor filmbezoeken geldt eerst Q = 100 − 5P, voor 0 ≤ P ≤ 20. Q is bezoeken per week; P is euro per bezoek. Lumi verhoogt de prijs van € 8 naar € 10. Tegelijk worden kaartjes van een nabijgelegen bioscoop duurder. Volgens de bron zijn die bezoeken substituten. Hierdoor worden bij Lumi bij elke onderzochte prijs 20 bezoeken extra gevraagd. Neem aan dat de nieuwe vraaglijn recht blijft tot de gevraagde hoeveelheid nul is. Verder blijven de omstandigheden gelijk.</p>\n<figure><img alt=\"Figuur 16 · Voeg de nieuwe lijn en de gevraagde punten zelf toe.\" src=\"_assets/1.2.2_ex_19.svg\"/><figcaption>Figuur 16 · Voeg de nieuwe lijn en de gevraagde punten zelf toe.</figcaption></figure></div>",
+        "source_assets": [
+          {
+            "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.2_ex_19.svg",
+            "sha256": "9f789d70118a14434d0aaa1303db6151e7d77737653807603fb88f278967e038",
+            "alt": "Figuur 16 · Voeg de nieuwe lijn en de gevraagde punten zelf toe.",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"720\" height=\"340\" viewBox=\"0 0 720 340\"><defs><marker id=\"arrow\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto-start-reverse\"><path d=\"M0,0 L7,3.5 L0,7Z\" fill=\"#183247\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"720\" height=\"340\" fill=\"#f7fafb\" stroke=\"none\" rx=\"7\"/><text x=\"360.00000\" y=\"26.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"20\" fill=\"#17688f\" text-anchor=\"middle\" font-weight=\"700\" >Beginlijn voor filmbezoeken</text><line x1=\"82.00000\" y1=\"270.00000\" x2=\"82.00000\" y2=\"274.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"82.00000\" y=\"292.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >0</text><line x1=\"171.66667\" y1=\"53.00000\" x2=\"171.66667\" y2=\"270.00000\" stroke=\"#e2eaf0\" stroke-width=\"0.8\" /><line x1=\"171.66667\" y1=\"270.00000\" x2=\"171.66667\" y2=\"274.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"171.66667\" y=\"292.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >20</text><line x1=\"261.33333\" y1=\"53.00000\" x2=\"261.33333\" y2=\"270.00000\" stroke=\"#e2eaf0\" stroke-width=\"0.8\" /><line x1=\"261.33333\" y1=\"270.00000\" x2=\"261.33333\" y2=\"274.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"261.33333\" y=\"292.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >40</text><line x1=\"351.00000\" y1=\"53.00000\" x2=\"351.00000\" y2=\"270.00000\" stroke=\"#e2eaf0\" stroke-width=\"0.8\" /><line x1=\"351.00000\" y1=\"270.00000\" x2=\"351.00000\" y2=\"274.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"351.00000\" y=\"292.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >60</text><line x1=\"440.66667\" y1=\"53.00000\" x2=\"440.66667\" y2=\"270.00000\" stroke=\"#e2eaf0\" stroke-width=\"0.8\" /><line x1=\"440.66667\" y1=\"270.00000\" x2=\"440.66667\" y2=\"274.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"440.66667\" y=\"292.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >80</text><line x1=\"530.33333\" y1=\"53.00000\" x2=\"530.33333\" y2=\"270.00000\" stroke=\"#e2eaf0\" stroke-width=\"0.8\" /><line x1=\"530.33333\" y1=\"270.00000\" x2=\"530.33333\" y2=\"274.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"530.33333\" y=\"292.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >100</text><line x1=\"620.00000\" y1=\"53.00000\" x2=\"620.00000\" y2=\"270.00000\" stroke=\"#e2eaf0\" stroke-width=\"0.8\" /><line x1=\"620.00000\" y1=\"270.00000\" x2=\"620.00000\" y2=\"274.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"620.00000\" y=\"292.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >120</text><line x1=\"78.00000\" y1=\"270.00000\" x2=\"82.00000\" y2=\"270.00000\" stroke=\"#183247\" stroke-width=\"1\" /><line x1=\"82.00000\" y1=\"233.83333\" x2=\"620.00000\" y2=\"233.83333\" stroke=\"#e2eaf0\" stroke-width=\"0.8\" /><line x1=\"78.00000\" y1=\"233.83333\" x2=\"82.00000\" y2=\"233.83333\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"72.00000\" y=\"238.83333\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"end\" font-weight=\"400\" >4</text><line x1=\"82.00000\" y1=\"197.66667\" x2=\"620.00000\" y2=\"197.66667\" stroke=\"#e2eaf0\" stroke-width=\"0.8\" /><line x1=\"78.00000\" y1=\"197.66667\" x2=\"82.00000\" y2=\"197.66667\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"72.00000\" y=\"202.66667\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"end\" font-weight=\"400\" >8</text><line x1=\"82.00000\" y1=\"161.50000\" x2=\"620.00000\" y2=\"161.50000\" stroke=\"#e2eaf0\" stroke-width=\"0.8\" /><line x1=\"78.00000\" y1=\"161.50000\" x2=\"82.00000\" y2=\"161.50000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"72.00000\" y=\"166.50000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"end\" font-weight=\"400\" >12</text><line x1=\"82.00000\" y1=\"125.33333\" x2=\"620.00000\" y2=\"125.33333\" stroke=\"#e2eaf0\" stroke-width=\"0.8\" /><line x1=\"78.00000\" y1=\"125.33333\" x2=\"82.00000\" y2=\"125.33333\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"72.00000\" y=\"130.33333\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"end\" font-weight=\"400\" >16</text><line x1=\"82.00000\" y1=\"89.16667\" x2=\"620.00000\" y2=\"89.16667\" stroke=\"#e2eaf0\" stroke-width=\"0.8\" /><line x1=\"78.00000\" y1=\"89.16667\" x2=\"82.00000\" y2=\"89.16667\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"72.00000\" y=\"94.16667\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"end\" font-weight=\"400\" >20</text><line x1=\"82.00000\" y1=\"53.00000\" x2=\"620.00000\" y2=\"53.00000\" stroke=\"#e2eaf0\" stroke-width=\"0.8\" /><line x1=\"78.00000\" y1=\"53.00000\" x2=\"82.00000\" y2=\"53.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"72.00000\" y=\"58.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"end\" font-weight=\"400\" >24</text><line x1=\"82.00000\" y1=\"270.00000\" x2=\"632.00000\" y2=\"270.00000\" stroke=\"#183247\" stroke-width=\"1.6\" marker-end=\"url(#arrow)\"/><line x1=\"82.00000\" y1=\"270.00000\" x2=\"82.00000\" y2=\"44.00000\" stroke=\"#183247\" stroke-width=\"1.6\" marker-end=\"url(#arrow)\"/><text x=\"351.00000\" y=\"324.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"17\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >Q (bezoeken per week)</text><text x=\"23.00000\" y=\"161.50000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"17\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" transform=\"rotate(-90 23 161.5)\">P (€ per bezoek)</text><line x1=\"530.33333\" y1=\"270.00000\" x2=\"82.00000\" y2=\"89.16667\" stroke=\"#17688f\" stroke-width=\"2.7\" data-curve=\"V0\"/><text x=\"542.33333\" y=\"259.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"17\" fill=\"#17688f\" text-anchor=\"start\" font-weight=\"700\" >V₀</text></svg>",
+            "geometry": {
+              "file": "1.2.2_ex_19",
+              "kind": "instruction",
+              "width": 720,
+              "height": 340,
+              "type": "chart",
+              "plot": {
+                "ox": 82,
+                "by": 270,
+                "top": 53,
+                "ex": 620,
+                "xmax": 120,
+                "ymax": 24
+              },
+              "curves": [
+                {
+                  "name": "V0",
+                  "a": 100,
+                  "b": 5,
+                  "pmin": 0,
+                  "pmax": 20.0,
+                  "drawn": true,
+                  "endpoints": [
+                    [
+                      100,
+                      0
+                    ],
+                    [
+                      0.0,
+                      20.0
+                    ]
+                  ]
+                }
+              ],
+              "marks": []
+            }
+          }
+        ],
+        "answer_html": "<h3 id=\"ans19\">Opgave 19 · Filmhuis Lumi</h3><div class=\"answer-item\"><p><strong>a.</strong> Oud: 100 − 5 × 8 = <strong>60 bezoeken per week</strong>. Alleen de eigen prijs: 100 − 5 × 10 = <strong>50 bezoeken per week</strong>. Beweging langs V₀ naar minder bezoeken.</p>\n<p class=\"why\"><strong>Waarom:</strong> De eigen prijsstijging wordt eerst los bekeken.</p>\n</div><div class=\"answer-item\"><p><strong>b.</strong> De factor is de <strong>prijs van een substituut</strong>: de andere bioscoop wordt duurder. De vraag naar Lumi verschuift <strong>naar rechts</strong>.</p>\n<p class=\"why\"><strong>Waarom:</strong> Het product waarvan de prijs verandert is niet Lumi’s eigen filmbezoek.</p>\n</div><div class=\"answer-item\"><p><strong>c.</strong> Nieuwe lijn: <strong>Q = 120 − 5P</strong>, voor 0 ≤ P ≤ 24. A = <strong>(60; 8)</strong>; B = <strong>(50; 10)</strong>; C = <strong>(70; 10)</strong>.</p>\n<p class=\"why\"><strong>Waarom:</strong> Alleen C bevat beide veranderingen; B is een analytische tussenstap.</p>\n</div><div class=\"answer-item\"><p><strong>d.</strong> Q nieuw = 120 − 5 × 10 = <strong>70 bezoeken per week</strong>. Verandering: 70 − 60 = <strong>10 bezoeken meer</strong>. De effecten werken elkaar tegen: −10 + 20 = +10.</p>\n<p class=\"why\"><strong>Waarom:</strong> De bron geeft de omvang van beide effecten; daarom kan hier wel een netto-uitkomst worden berekend.</p>\n</div><div class=\"answer-item\"><p><strong>e.</strong> <strong>Onjuist.</strong> Lumi’s eigen prijsstijging verplaatst het punt op V₀ van 60 naar 50 bezoeken. De prijs van het substituut veroorzaakt de verschuiving naar V₁.</p>\n<p class=\"why\"><strong>Waarom:</strong> De uiteindelijke stijging naar 70 bewijst niet dat een hogere eigen prijs de vraaglijn naar rechts verschuift.</p>\n</div><figure><img alt=\"Antwoordfiguur · Opgave 19. De schalen mogen anders zijn, maar de coördinaten en het getekende interval moeten kloppen.\" src=\"_assets/1.2.2_ans_19.svg\"/><figcaption>Antwoordfiguur · Opgave 19. De schalen mogen anders zijn, maar de coördinaten en het getekende interval moeten kloppen.</figcaption></figure>\n PAGE {\"section\": \"1.2.2\", \"title\": \"Denkertje en herhaling\"} \n",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Bereken Q vóór de veranderingen en na alleen de eigen prijsstijging. Benoem de grafische verandering.",
+            "answer": [
+              "Oud: 100 − 5 × 8 = **60 bezoeken per week**. Alleen de eigen prijs: 100 − 5 × 10 = **50 bezoeken per week**. Beweging langs V₀ naar minder bezoeken.",
+              "De eigen prijsstijging wordt eerst los bekeken."
+            ]
+          },
+          {
+            "label": "b",
+            "prompt": "Welke specifieke factor veroorzaakt de andere verandering? Benoem de richting van de verschuiving.",
+            "answer": [
+              "De factor is de **prijs van een substituut**: de andere bioscoop wordt duurder. De vraag naar Lumi verschuift **naar rechts**.",
+              "Het product waarvan de prijs verandert is niet Lumi’s eigen filmbezoek."
+            ]
+          },
+          {
+            "label": "c",
+            "prompt": "Teken de nieuwe vraaglijn in de figuur. Markeer A (oud), B (alleen de eigen prijsstijging) en C (beide veranderingen). Noteer hun coördinaten.",
+            "answer": [
+              "Nieuwe lijn: **Q = 120 − 5P**, voor 0 ≤ P ≤ 24. A = **(60; 8)**; B = **(50; 10)**; C = **(70; 10)**.",
+              "Alleen C bevat beide veranderingen; B is een analytische tussenstap."
+            ]
+          },
+          {
+            "label": "d",
+            "prompt": "Bereken de uiteindelijke hoeveelheid en de verandering ten opzichte van het begin. Werken de twee effecten elkaar tegen of versterken ze elkaar?",
+            "answer": [
+              "Q nieuw = 120 − 5 × 10 = **70 bezoeken per week**. Verandering: 70 − 60 = **10 bezoeken meer**. De effecten werken elkaar tegen: −10 + 20 = +10.",
+              "De bron geeft de omvang van beide effecten; daarom kan hier wel een netto-uitkomst worden berekend."
+            ]
+          },
+          {
+            "label": "e",
+            "prompt": "Beoordeel: “De hogere prijs van Lumi verschuift zijn vraaglijn naar rechts.” Gebruik je uitkomsten.",
+            "answer": [
+              "**Onjuist.** Lumi’s eigen prijsstijging verplaatst het punt op V₀ van 60 naar 50 bezoeken. De prijs van het substituut veroorzaakt de verschuiving naar V₁.",
+              "De uiteindelijke stijging naar 70 bewijst niet dat een hogere eigen prijs de vraaglijn naar rechts verschuift."
+            ]
+          }
+        ]
+      },
+      "review_scope": "Current-file Part A review is recorded separately; no curriculum-authority promotion."
+    },
+    {
+      "id": "1.2.3",
+      "edition_id": "book1-second-edition-2026",
+      "record_id": "book1-second-edition-2026:1.2.3",
+      "module": 1,
+      "chapter": 2,
+      "paragraph_title": "Van individuele naar collectieve vraag",
+      "paragraph_kind": "theory",
+      "record_status": "candidate_review_ready",
+      "curriculum_authority": false,
+      "approval_inherited": false,
+      "required_skills": [],
+      "exam_codes": [],
+      "authority_note": "Owner-selected second-edition target; no old reviewed_final status, machine mapping or CvTE approval inherited.",
+      "source_path": "references/owned/book1-second-edition-2026/targets.json",
+      "source_locator": {
+        "repository": "meijer1973/4veco-lessen",
+        "manuscript": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.3 Van individuele naar collectieve vraag – paragraaf.md",
+        "manuscript_sha256": "133078fafc4d48401e9c232786c82296a970053f92363d9a71c33c897ca16064",
+        "answers": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/Antwoorden.md",
+        "answers_sha256": "f84d1a278537a2f3d8318c7b59f689a139421a631762c5926ffcbc3ad1690827",
+        "exercise_number": 30
+      },
+      "target_exercise": {
+        "title": "Reserveringen bij een spellenclub",
+        "context": "Opgave 30 · Reserveringen bij een spellenclub Een spellenclub onderzoekt de vraag van twee afzonderlijke groepen. Q A = 18 − 3P, geldig voor 0 ≤ P ≤ 6. Q B = 24 − 2P, geldig voor 0 ≤ P ≤ 12. Q is reserveringen per week; P is euro per reservering. Boven de eigen koopgrens vraagt de groep nul. De overige omstandigheden blijven gelijk. P (€ per reservering) Q A Q B Q samen 0 … … … 2 … … … 4 … … … 6 … … …",
+        "context_html": "<div class=\"exercise target\" id=\"ex30\"><h3>Opgave 30 · Reserveringen bij een spellenclub</h3><p>Een spellenclub onderzoekt de vraag van twee afzonderlijke groepen. Q<sub>A</sub> = 18 − 3P, geldig voor 0 ≤ P ≤ 6. Q<sub>B</sub> = 24 − 2P, geldig voor 0 ≤ P ≤ 12. Q is reserveringen per week; P is euro per reservering. Boven de eigen koopgrens vraagt de groep nul. De overige omstandigheden blijven gelijk.</p>\n<table class=\"\"><thead><tr><th>P (€ per reservering)</th><th>Q<sub>A</sub></th><th>Q<sub>B</sub></th><th>Q samen</th></tr></thead><tbody><tr><td>0</td><td>…</td><td>…</td><td>…</td></tr><tr><td>2</td><td>…</td><td>…</td><td>…</td></tr><tr><td>4</td><td>…</td><td>…</td><td>…</td></tr><tr><td>6</td><td>…</td><td>…</td><td>…</td></tr></tbody></table></div>",
+        "source_assets": [],
+        "answer_html": "<h3 id=\"ans30\">Opgave 30 · Reserveringen bij een spellenclub</h3><div class=\"answer-item\"><p><strong>a.</strong> Bij P = 0: A <strong>18</strong>, B <strong>24</strong>, samen <strong>42</strong>. Bij P = 2: <strong>12, 20, 32</strong>. Bij P = 4: <strong>6, 16, 22</strong>. Bij P = 6: <strong>0, 12, 12</strong> reserveringen per week.</p>\n<p class=\"why\"><strong>Waarom:</strong> Iedere tabelrij hoort bij één gemeenschappelijke prijs.</p>\n</div><div class=\"answer-item\"><p><strong>b.</strong> Q = (18 − 3P) + (24 − 2P) = <strong>42 − 5P</strong>, voor <strong>0 ≤ P ≤ 6</strong>. Bij € 4: Q = 42 − 5 × 4 = <strong>22 reserveringen per week</strong>.</p>\n<p class=\"why\"><strong>Waarom:</strong> De controle verbindt de opgetelde formule met de afzonderlijke brongegevens.</p>\n</div><div class=\"answer-item\"><p><strong>c.</strong> Verbind <strong>(42; 0)</strong> en <strong>(12; 6)</strong>. Markeer <strong>(22; 4)</strong>. Zet Q horizontaal (reserveringen per week) en P verticaal (€ per reservering).</p>\n<p class=\"why\"><strong>Waarom:</strong> Je tekent alleen het interval waarvoor de somfunctie geldt.</p>\n</div><div class=\"answer-item\"><p><strong>d.</strong> A: <strong>0</strong>, omdat € 8 boven zijn grens van € 6 ligt. B: 24 − 2 × 8 = <strong>8</strong>. Samen <strong>8 reserveringen per week</strong>.</p>\n<p class=\"why\"><strong>Waarom:</strong> De overgebleven vraag van B telt volledig mee.</p>\n</div><div class=\"answer-item\"><p><strong>e.</strong> De verlengde somfunctie geeft 42 − 5 × 8 = 2, maar bevat dan een negatieve bijdrage van A: 18 − 3 × 8 = −6. De geldige berekening is <strong>0 + 8 = 8</strong>.</p>\n<p class=\"why\"><strong>Waarom:</strong> De teken- en formulegrens beschermt tegen het aftrekken van niet-bestaande negatieve reserveringen.</p>\n</div><figure><img alt=\"Antwoordfiguur · Opgave 30. De schalen mogen anders zijn, maar de coördinaten en het getekende interval moeten kloppen.\" src=\"_assets/1.2.3_ans_30.svg\"/><figcaption>Antwoordfiguur · Opgave 30. De schalen mogen anders zijn, maar de coördinaten en het getekende interval moeten kloppen.</figcaption></figure>\n PAGE {\"section\": \"1.2.3\", \"title\": \"Denkertje en herhaling\"} \n",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Neem de tabel over en vul alle lege hoeveelheden in.",
+            "answer": [
+              "Bij P = 0: A **18**, B **24**, samen **42**. Bij P = 2: **12, 20, 32**. Bij P = 4: **6, 16, 22**. Bij P = 6: **0, 12, 12** reserveringen per week.",
+              "Iedere tabelrij hoort bij één gemeenschappelijke prijs."
+            ]
+          },
+          {
+            "label": "b",
+            "prompt": "Stel de gezamenlijke vraagfunctie op voor 0 ≤ P ≤ 6. Controleer de formule met de tabelwaarde bij € 4.",
+            "answer": [
+              "Q = (18 − 3P) + (24 − 2P) = **42 − 5P**, voor **0 ≤ P ≤ 6**. Bij € 4: Q = 42 − 5 × 4 = **22 reserveringen per week**.",
+              "De controle verbindt de opgetelde formule met de afzonderlijke brongegevens."
+            ]
+          },
+          {
+            "label": "c",
+            "prompt": "Teken in je schrift de gezamenlijke vraag voor 0 ≤ P ≤ 6. Noteer de eindpunten en markeer het punt bij € 4.",
+            "answer": [
+              "Verbind **(42; 0)** en **(12; 6)**. Markeer **(22; 4)**. Zet Q horizontaal (reserveringen per week) en P verticaal (€ per reservering).",
+              "Je tekent alleen het interval waarvoor de somfunctie geldt."
+            ]
+          },
+          {
+            "label": "d",
+            "prompt": "Bereken de gezamenlijke vraag bij P = € 8.",
+            "answer": [
+              "A: **0**, omdat € 8 boven zijn grens van € 6 ligt. B: 24 − 2 × 8 = **8**. Samen **8 reserveringen per week**.",
+              "De overgebleven vraag van B telt volledig mee."
+            ]
+          },
+          {
+            "label": "e",
+            "prompt": "Een leerling trekt de lijn uit c door en vindt bij € 8 een gezamenlijke vraag van 2 reserveringen. Leg uit waarom dit onjuist is.",
+            "answer": [
+              "De verlengde somfunctie geeft 42 − 5 × 8 = 2, maar bevat dan een negatieve bijdrage van A: 18 − 3 × 8 = −6. De geldige berekening is **0 + 8 = 8**.",
+              "De teken- en formulegrens beschermt tegen het aftrekken van niet-bestaande negatieve reserveringen."
+            ]
+          }
+        ]
+      },
+      "review_scope": "Current-file Part A review is recorded separately; no curriculum-authority promotion."
+    },
+    {
+      "id": "1.2.4",
+      "edition_id": "book1-second-edition-2026",
+      "record_id": "book1-second-edition-2026:1.2.4",
+      "module": 1,
+      "chapter": 2,
+      "paragraph_title": "Gemengde opgaven",
+      "paragraph_kind": "gemengde_opgaven",
+      "record_status": "candidate_review_ready",
+      "curriculum_authority": false,
+      "approval_inherited": false,
+      "required_skills": [],
+      "exam_codes": [],
+      "authority_note": "Owner-selected second-edition target; no old reviewed_final status, machine mapping or CvTE approval inherited.",
+      "source_path": "references/owned/book1-second-edition-2026/targets.json",
+      "source_locator": {
+        "repository": "meijer1973/4veco-lessen",
+        "manuscript": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.4 Gemengde opgaven – opgaven.md",
+        "manuscript_sha256": "f3f8afc64a17d8552b5f67708c4bc6a908254e707cd71aa3ef6cb0c7a01367a9",
+        "answers": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/Antwoorden.md",
+        "answers_sha256": "f84d1a278537a2f3d8318c7b59f689a139421a631762c5926ffcbc3ad1690827",
+        "exercise_number": 37
+      },
+      "target_exercise": {
+        "title": "Tafeltennistijd bij Club Noord",
+        "context": "Doeloefening Opgave 37 · Tafeltennistijd bij Club Noord De vragen staan op de tegenoverliggende pagina. Alle cijfers zijn geconstrueerde modelgegevens. De club onderzoekt uitsluitend de vraag; deze bronnen bevatten geen informatie over aanbod of beschikbaarheid. Bron A · Twee groepen, één prijs Groep A en groep B vragen halfuren tafeltennistijd. Iedereen betaalt dezelfde prijs P, in euro per halfuur. Q A = 24 − 3P, voor 0 ≤ P ≤ 8. Q B = 36 − 3P, voor 0 ≤ P ≤ 12. De hoeveelheden zijn halfuren per week . Boven de eigen koopgrens vraagt een groep nul. De oude prijs is € 4 per halfuur. Andere omstandigheden zijn aanvankelijk gelijk. Bron B · Twee veranderingen De club verhoogt P naar € 6. Tegelijk wordt bowlen duurder. De bron beschouwt bowlen voor deze kopers als substituut. Daardoor neemt de gezamenlijke vraag naar tafeltennistijd bij elke prijs van € 0 tot en met € 8 met 12 halfuren per week toe . Alle overige omstandigheden blijven gelijk. Bron C · Eén koper binnen groep A Sem is al meegeteld in groep A. Voor zijn eerste vier extra halfuren heeft hij maximaal € 7, € 6, € 4 en € 2 per halfuur over. Bij gelijkheid wil hij kopen. Zijn budget beperkt hem niet extra. Figuur 22 · Alleen de oorspronkelijke gezamenlijke lijn voor 0 ≤ P ≤ € 8 staat er. De antwoordmarkeringen voeg je zelf toe. Opgave 37 · Tafeltennistijd bij Club Noord Gebruik de bronnen en figuur 22 op de tegenoverliggende pagina. Vermeld bij berekeningen de eenheid en bij verklaringen de specifieke oorzaak.\nFigure data from the source: [{\"path\": \"Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.4_ex_37.svg\", \"sha256\": \"be1ed31cb8c88a7e41b87426273817acd7b97bf32d9775faa3718f730821b860\", \"alt\": \"Figuur 22 · Alleen de oorspronkelijke gezamenlijke lijn voor 0 ≤ P ≤ € 8 staat er. De antwoordmarkeringen voeg je zelf toe.\", \"geometry\": {\"file\": \"1.2.4_ex_37\", \"kind\": \"instruction\", \"width\": 720, \"height\": 340, \"type\": \"chart\", \"plot\": {\"ox\": 82, \"by\": 270, \"top\": 53, \"ex\": 620, \"xmax\": 72, \"ymax\": 12}, \"curves\": [{\"name\": \"V0\", \"a\": 60, \"b\": 6, \"pmin\": 0, \"pmax\": 8, \"drawn\": true, \"endpoints\": [[60, 0], [12, 8]]}], \"marks\": []}}]",
+        "context_html": "<h2>Doeloefening</h2>\n<p><strong>Opgave 37 · Tafeltennistijd bij Club Noord</strong></p>\n<p>De vragen staan op de tegenoverliggende pagina. Alle cijfers zijn geconstrueerde modelgegevens. De club onderzoekt uitsluitend de vraag; deze bronnen bevatten geen informatie over aanbod of beschikbaarheid.</p>\n<div class=\"source\"><p><strong>Bron A · Twee groepen, één prijs</strong></p><p>Groep A en groep B vragen halfuren tafeltennistijd. Iedereen betaalt dezelfde prijs P, in euro per halfuur.</p>\n<p>Q<sub>A</sub> = 24 − 3P, voor 0 ≤ P ≤ 8.<br/>\nQ<sub>B</sub> = 36 − 3P, voor 0 ≤ P ≤ 12.</p>\n<p>De hoeveelheden zijn halfuren <strong>per week</strong>. Boven de eigen koopgrens vraagt een groep nul. De oude prijs is € 4 per halfuur. Andere omstandigheden zijn aanvankelijk gelijk.</p>\n</div><div class=\"source\"><p><strong>Bron B · Twee veranderingen</strong></p><p>De club verhoogt P naar € 6. Tegelijk wordt bowlen duurder. De bron beschouwt bowlen voor deze kopers als substituut. Daardoor neemt de gezamenlijke vraag naar tafeltennistijd <strong>bij elke prijs van € 0 tot en met € 8 met 12 halfuren per week toe</strong>. Alle overige omstandigheden blijven gelijk.</p>\n</div><div class=\"source\"><p><strong>Bron C · Eén koper binnen groep A</strong></p><p>Sem is al meegeteld in groep A. Voor zijn eerste vier extra halfuren heeft hij maximaal € 7, € 6, € 4 en € 2 per halfuur over. Bij gelijkheid wil hij kopen. Zijn budget beperkt hem niet extra.</p>\n</div><figure><img alt=\"Figuur 22 · Alleen de oorspronkelijke gezamenlijke lijn voor 0 ≤ P ≤ € 8 staat er. De antwoordmarkeringen voeg je zelf toe.\" src=\"_assets/1.2.4_ex_37.svg\"/><figcaption>Figuur 22 · Alleen de oorspronkelijke gezamenlijke lijn voor 0 ≤ P ≤ € 8 staat er. De antwoordmarkeringen voeg je zelf toe.</figcaption></figure>\n<div class=\"exercise target\" id=\"ex37\"><h3>Opgave 37 · Tafeltennistijd bij Club Noord</h3><p>Gebruik de bronnen en figuur 22 op de tegenoverliggende pagina. Vermeld bij berekeningen de eenheid en bij verklaringen de specifieke oorzaak.</p>\n</div>",
+        "source_assets": [
+          {
+            "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.4_ex_37.svg",
+            "sha256": "be1ed31cb8c88a7e41b87426273817acd7b97bf32d9775faa3718f730821b860",
+            "alt": "Figuur 22 · Alleen de oorspronkelijke gezamenlijke lijn voor 0 ≤ P ≤ € 8 staat er. De antwoordmarkeringen voeg je zelf toe.",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"720\" height=\"340\" viewBox=\"0 0 720 340\"><defs><marker id=\"arrow\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto-start-reverse\"><path d=\"M0,0 L7,3.5 L0,7Z\" fill=\"#183247\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"720\" height=\"340\" fill=\"#f7fafb\" stroke=\"none\" rx=\"7\"/><text x=\"360.00000\" y=\"26.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"20\" fill=\"#17688f\" text-anchor=\"middle\" font-weight=\"700\" >Oorspronkelijke vraag naar tafeltennistijd</text><line x1=\"82.00000\" y1=\"270.00000\" x2=\"82.00000\" y2=\"274.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"82.00000\" y=\"292.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >0</text><line x1=\"171.66667\" y1=\"53.00000\" x2=\"171.66667\" y2=\"270.00000\" stroke=\"#e2eaf0\" stroke-width=\"0.8\" /><line x1=\"171.66667\" y1=\"270.00000\" x2=\"171.66667\" y2=\"274.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"171.66667\" y=\"292.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >12</text><line x1=\"261.33333\" y1=\"53.00000\" x2=\"261.33333\" y2=\"270.00000\" stroke=\"#e2eaf0\" stroke-width=\"0.8\" /><line x1=\"261.33333\" y1=\"270.00000\" x2=\"261.33333\" y2=\"274.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"261.33333\" y=\"292.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >24</text><line x1=\"351.00000\" y1=\"53.00000\" x2=\"351.00000\" y2=\"270.00000\" stroke=\"#e2eaf0\" stroke-width=\"0.8\" /><line x1=\"351.00000\" y1=\"270.00000\" x2=\"351.00000\" y2=\"274.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"351.00000\" y=\"292.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >36</text><line x1=\"440.66667\" y1=\"53.00000\" x2=\"440.66667\" y2=\"270.00000\" stroke=\"#e2eaf0\" stroke-width=\"0.8\" /><line x1=\"440.66667\" y1=\"270.00000\" x2=\"440.66667\" y2=\"274.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"440.66667\" y=\"292.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >48</text><line x1=\"530.33333\" y1=\"53.00000\" x2=\"530.33333\" y2=\"270.00000\" stroke=\"#e2eaf0\" stroke-width=\"0.8\" /><line x1=\"530.33333\" y1=\"270.00000\" x2=\"530.33333\" y2=\"274.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"530.33333\" y=\"292.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >60</text><line x1=\"620.00000\" y1=\"53.00000\" x2=\"620.00000\" y2=\"270.00000\" stroke=\"#e2eaf0\" stroke-width=\"0.8\" /><line x1=\"620.00000\" y1=\"270.00000\" x2=\"620.00000\" y2=\"274.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"620.00000\" y=\"292.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >72</text><line x1=\"78.00000\" y1=\"270.00000\" x2=\"82.00000\" y2=\"270.00000\" stroke=\"#183247\" stroke-width=\"1\" /><line x1=\"82.00000\" y1=\"233.83333\" x2=\"620.00000\" y2=\"233.83333\" stroke=\"#e2eaf0\" stroke-width=\"0.8\" /><line x1=\"78.00000\" y1=\"233.83333\" x2=\"82.00000\" y2=\"233.83333\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"72.00000\" y=\"238.83333\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"end\" font-weight=\"400\" >2</text><line x1=\"82.00000\" y1=\"197.66667\" x2=\"620.00000\" y2=\"197.66667\" stroke=\"#e2eaf0\" stroke-width=\"0.8\" /><line x1=\"78.00000\" y1=\"197.66667\" x2=\"82.00000\" y2=\"197.66667\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"72.00000\" y=\"202.66667\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"end\" font-weight=\"400\" >4</text><line x1=\"82.00000\" y1=\"161.50000\" x2=\"620.00000\" y2=\"161.50000\" stroke=\"#e2eaf0\" stroke-width=\"0.8\" /><line x1=\"78.00000\" y1=\"161.50000\" x2=\"82.00000\" y2=\"161.50000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"72.00000\" y=\"166.50000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"end\" font-weight=\"400\" >6</text><line x1=\"82.00000\" y1=\"125.33333\" x2=\"620.00000\" y2=\"125.33333\" stroke=\"#e2eaf0\" stroke-width=\"0.8\" /><line x1=\"78.00000\" y1=\"125.33333\" x2=\"82.00000\" y2=\"125.33333\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"72.00000\" y=\"130.33333\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"end\" font-weight=\"400\" >8</text><line x1=\"82.00000\" y1=\"89.16667\" x2=\"620.00000\" y2=\"89.16667\" stroke=\"#e2eaf0\" stroke-width=\"0.8\" /><line x1=\"78.00000\" y1=\"89.16667\" x2=\"82.00000\" y2=\"89.16667\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"72.00000\" y=\"94.16667\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"end\" font-weight=\"400\" >10</text><line x1=\"82.00000\" y1=\"53.00000\" x2=\"620.00000\" y2=\"53.00000\" stroke=\"#e2eaf0\" stroke-width=\"0.8\" /><line x1=\"78.00000\" y1=\"53.00000\" x2=\"82.00000\" y2=\"53.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"72.00000\" y=\"58.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"end\" font-weight=\"400\" >12</text><line x1=\"82.00000\" y1=\"270.00000\" x2=\"632.00000\" y2=\"270.00000\" stroke=\"#183247\" stroke-width=\"1.6\" marker-end=\"url(#arrow)\"/><line x1=\"82.00000\" y1=\"270.00000\" x2=\"82.00000\" y2=\"44.00000\" stroke=\"#183247\" stroke-width=\"1.6\" marker-end=\"url(#arrow)\"/><text x=\"351.00000\" y=\"324.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"17\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >Q (halfuren per week)</text><text x=\"23.00000\" y=\"161.50000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"17\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" transform=\"rotate(-90 23 161.5)\">P (€ per halfuur)</text><line x1=\"530.33333\" y1=\"270.00000\" x2=\"171.66667\" y2=\"125.33333\" stroke=\"#17688f\" stroke-width=\"2.7\" data-curve=\"V0\"/><text x=\"542.33333\" y=\"259.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"17\" fill=\"#17688f\" text-anchor=\"start\" font-weight=\"700\" >V₀</text></svg>",
+            "geometry": {
+              "file": "1.2.4_ex_37",
+              "kind": "instruction",
+              "width": 720,
+              "height": 340,
+              "type": "chart",
+              "plot": {
+                "ox": 82,
+                "by": 270,
+                "top": 53,
+                "ex": 620,
+                "xmax": 72,
+                "ymax": 12
+              },
+              "curves": [
+                {
+                  "name": "V0",
+                  "a": 60,
+                  "b": 6,
+                  "pmin": 0,
+                  "pmax": 8,
+                  "drawn": true,
+                  "endpoints": [
+                    [
+                      60,
+                      0
+                    ],
+                    [
+                      12,
+                      8
+                    ]
+                  ]
+                }
+              ],
+              "marks": []
+            }
+          }
+        ],
+        "answer_html": "<h3 id=\"ans37\">Opgave 37 · Tafeltennistijd bij Club Noord</h3><div class=\"answer-item\"><p><strong>a.</strong> Q = (24 − 3P) + (36 − 3P) = <strong>60 − 6P</strong>, voor <strong>0 ≤ P ≤ 8</strong>. Bij € 4: Q = 60 − 6 × 4 = <strong>36 halfuren per week</strong>. Controle: A = 24 − 12 = 12; B = 36 − 12 = 24; samen 12 + 24 = 36.</p>\n<p class=\"why\"><strong>Waarom:</strong> Dezelfde prijs, periode en eenheid maken optellen mogelijk.</p>\n</div><div class=\"answer-item\"><p><strong>b.</strong> 30 = 60 − 6P → 6P = 30 → P = <strong>€ 5 per halfuur</strong>. Controle: 60 − 6 × 5 = 30 halfuren per week.</p>\n<p class=\"why\"><strong>Waarom:</strong> De gevraagde prijs valt binnen het interval waarin beide regels geldig zijn.</p>\n</div><div class=\"answer-item\"><p><strong>c.</strong> Alleen de eigen prijs: Q = 60 − 6 × 6 = <strong>24 halfuren per week</strong>, dus 12 minder door beweging langs V₀. Het andere effect komt door de <strong>hogere prijs van het substituut bowlen</strong>: een verschuiving naar rechts met 12 halfuren bij elke prijs.</p>\n<p class=\"why\"><strong>Waarom:</strong> De oorzaak van de verschuiving is niet een veranderde tafeltennisprijs of onbenoemde smaak.</p>\n</div><div class=\"box\"><p><strong>Bronnen uit elkaar houden</strong></p><p>Bron A bevat de oorspronkelijke groepsfuncties. Bron B beschrijft de twee veranderingen. Bron C is één koper die al bij A is meegeteld. Gebruik de bron die de vraag daadwerkelijk ondersteunt.</p>\n</div>\n PAGE {\"section\": \"1.2.4\", \"title\": \"Doeloefening · grafiek en conclusie\"} \n<h3 id=\"ans37cont\">Opgave 37 · Tafeltennistijd bij Club Noord — vervolg</h3><div class=\"answer-item\"><p><strong>d.</strong> V₁: <strong>Q = 72 − 6P</strong>, alleen voor 0 ≤ P ≤ 8. A = <strong>(36; 4)</strong>; B = <strong>(24; 6)</strong>; C = <strong>(36; 6)</strong>. Bij P = 0 begint V₁ op (72; 0), bij P = 8 eindigt het gevraagde deel op (24; 8).</p>\n<p class=\"why\"><strong>Waarom:</strong> A en C hebben dezelfde hoeveelheid maar verschillende prijzen en liggen op verschillende lijnen.</p>\n</div><div class=\"answer-item\"><p><strong>e.</strong> Q nieuw = 72 − 6 × 6 = <strong>36 halfuren per week</strong>. De uitspraak is <strong>onjuist</strong>: het eigen-prijseffect is −12; het substituuteffect is +12. Ze heffen elkaar hier precies op.</p>\n<p class=\"why\"><strong>Waarom:</strong> Een nulverandering in het totaal bewijst niet dat de afzonderlijke effecten nul zijn.</p>\n</div><div class=\"answer-item\"><p><strong>f.</strong> Sem wil <strong>2 halfuren</strong>: € 7 en € 6 zijn minstens € 6; € 4 en € 2 niet. <strong>Niet nogmaals optellen</strong>, want hij zit al in groep A.</p>\n<p class=\"why\"><strong>Waarom:</strong> De individuele koopbeslissing is een deel van de bron, geen extra koper buiten de beide groepen.</p>\n</div><figure><img alt=\"Antwoordfiguur · Opgave 37. De schalen mogen anders zijn, maar de coördinaten en het getekende interval moeten kloppen.\" src=\"_assets/1.2.4_ans_37.svg\"/><figcaption>Antwoordfiguur · Opgave 37. De schalen mogen anders zijn, maar de coördinaten en het getekende interval moeten kloppen.</figcaption></figure>\n PAGE {\"section\": \"1.2.4\", \"title\": \"Fouten repareren\"} \n",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Stel uit bron A de gezamenlijke vraagfunctie op voor 0 ≤ P ≤ 8. Bereken de oude vraag bij € 4 en controleer door beide groepen afzonderlijk te berekenen.",
+            "answer": [
+              "Q = (24 − 3P) + (36 − 3P) = **60 − 6P**, voor **0 ≤ P ≤ 8**. Bij € 4: Q = 60 − 6 × 4 = **36 halfuren per week**. Controle: A = 24 − 12 = 12; B = 36 − 12 = 24; samen 12 + 24 = 36.",
+              "Dezelfde prijs, periode en eenheid maken optellen mogelijk."
+            ]
+          },
+          {
+            "label": "b",
+            "prompt": "Welke prijs hoort volgens de oorspronkelijke gezamenlijke functie bij Q = 30 halfuren per week? Controleer je antwoord.",
+            "answer": [
+              "30 = 60 − 6P → 6P = 30 → P = **€ 5 per halfuur**. Controle: 60 − 6 × 5 = 30 halfuren per week.",
+              "De gevraagde prijs valt binnen het interval waarin beide regels geldig zijn."
+            ]
+          },
+          {
+            "label": "c",
+            "prompt": "Bekijk de twee veranderingen uit bron B afzonderlijk. Bereken eerst de hoeveelheid na alleen de eigen prijsstijging. Benoem daarna de specifieke factor en de richting van het andere effect.",
+            "answer": [
+              "Alleen de eigen prijs: Q = 60 − 6 × 6 = **24 halfuren per week**, dus 12 minder door beweging langs V₀. Het andere effect komt door de **hogere prijs van het substituut bowlen**: een verschuiving naar rechts met 12 halfuren bij elke prijs.",
+              "De oorzaak van de verschuiving is niet een veranderde tafeltennisprijs of onbenoemde smaak."
+            ]
+          },
+          {
+            "label": "d",
+            "prompt": "Teken de nieuwe gezamenlijke vraaglijn voor 0 ≤ P ≤ 8 in figuur 22. Markeer A (oud), B (alleen de eigen prijsstijging) en C (beide veranderingen); noteer de coördinaten.",
+            "answer": [
+              "V₁: **Q = 72 − 6P**, alleen voor 0 ≤ P ≤ 8. A = **(36; 4)**; B = **(24; 6)**; C = **(36; 6)**. Bij P = 0 begint V₁ op (72; 0), bij P = 8 eindigt het gevraagde deel op (24; 8).",
+              "A en C hebben dezelfde hoeveelheid maar verschillende prijzen en liggen op verschillende lijnen."
+            ]
+          },
+          {
+            "label": "e",
+            "prompt": "Bereken de uiteindelijke gezamenlijke vraag. Beoordeel daarmee de uitspraak: “Het totaal blijft gelijk, dus de eigen prijsstijging heeft geen effect.”",
+            "answer": [
+              "Q nieuw = 72 − 6 × 6 = **36 halfuren per week**. De uitspraak is **onjuist**: het eigen-prijseffect is −12; het substituuteffect is +12. Ze heffen elkaar hier precies op.",
+              "Een nulverandering in het totaal bewijst niet dat de afzonderlijke effecten nul zijn."
+            ]
+          },
+          {
+            "label": "f",
+            "prompt": "Hoeveel halfuren wil Sem volgens bron C bij € 6 kopen? Mag je die hoeveelheid nog bij de uitkomst van e optellen? Leg uit.",
+            "answer": [
+              "Sem wil **2 halfuren**: € 7 en € 6 zijn minstens € 6; € 4 en € 2 niet. **Niet nogmaals optellen**, want hij zit al in groep A.",
+              "De individuele koopbeslissing is een deel van de bron, geen extra koper buiten de beide groepen."
+            ]
+          }
+        ]
+      },
+      "review_scope": "Current-file Part A review is recorded separately; no curriculum-authority promotion."
+    },
+    {
+      "id": "1.3.1",
+      "edition_id": "book1-second-edition-2026",
+      "record_id": "book1-second-edition-2026:1.3.1",
+      "module": 1,
+      "chapter": 3,
+      "paragraph_title": "Aanbod en aanbodfactoren",
+      "paragraph_kind": "theory",
+      "record_status": "candidate_review_ready",
+      "curriculum_authority": false,
+      "approval_inherited": false,
+      "required_skills": [],
+      "exam_codes": [],
+      "authority_note": "Owner-selected second-edition target; no old reviewed_final status, machine mapping or CvTE approval inherited.",
+      "source_path": "references/owned/book1-second-edition-2026/targets.json",
+      "source_locator": {
+        "repository": "meijer1973/4veco-lessen",
+        "manuscript": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/1.3.1 Aanbod en aanbodfactoren – paragraaf.md",
+        "manuscript_sha256": "a877af4743b94775279f04bda37a1956e5aa19d36ed4dac1de031b43733f458d",
+        "answers": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/Antwoorden.md",
+        "answers_sha256": "1cb6fce9da344dff9e98ea826b6e89e5d61ade745116c9b0ddef7bd0c68d2540",
+        "exercise_number": 9
+      },
+      "target_exercise": {
+        "title": "Atelier Sprint",
+        "context": "Opgave 9 · Atelier Sprint Eén atelier maakt sporttassen. Eerst geldt q = 4P − 40, voor 10 ≤ P ≤ 30. q is tassen per maand; P is euro per tas. De verkoopprijs stijgt van € 20 naar € 24. Tegelijk wordt stof duurder. Het nieuwe aanbod is q = 4P − 52, voor 13 ≤ P ≤ 30. Verder verandert er niets. Figuur 8 · Gebruik de gegeven beginlijn; voeg de nieuwe lijn en alle markeringen zelf toe.\nFigure data from the source: [{\"path\": \"Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.1_ex_9.svg\", \"sha256\": \"bfb09916f6e213516b5a4751fd230235248499cd3ea6d1d1f11123182b874b3a\", \"alt\": \"Figuur 8 · Gebruik de gegeven beginlijn; voeg de nieuwe lijn en alle markeringen zelf toe.\", \"geometry\": {\"name\": \"1.3.1_ex_9\", \"kind\": \"instruction\", \"height\": 235, \"type\": \"linear\", \"plot\": {\"ox\": 84, \"ex\": 634, \"by\": 168, \"top\": 51, \"xmax\": 80, \"ymax\": 32}, \"curves\": [{\"name\": \"A0\", \"a\": -40, \"b\": 4, \"label\": \"A₀\", \"col\": \"#227064\", \"domain\": [10, 30], \"dash\": \"\", \"p_lo\": 10, \"p_hi\": 30, \"drawn\": true}], \"marks\": [], \"gap\": null}}]",
+        "context_html": "<div class=\"exercise target\" id=\"ex9\"><h3>Opgave 9 · Atelier Sprint</h3><p>Eén atelier maakt sporttassen. Eerst geldt q = 4P − 40, voor 10 ≤ P ≤ 30. q is tassen per maand; P is euro per tas. De verkoopprijs stijgt van € 20 naar € 24. Tegelijk wordt stof duurder. Het nieuwe aanbod is q = 4P − 52, voor 13 ≤ P ≤ 30. Verder verandert er niets.</p>\n<figure><img alt=\"Figuur 8 · Gebruik de gegeven beginlijn; voeg de nieuwe lijn en alle markeringen zelf toe.\" src=\"_assets/1.3.1_ex_9.svg\"/><figcaption>Figuur 8 · Gebruik de gegeven beginlijn; voeg de nieuwe lijn en alle markeringen zelf toe.</figcaption></figure></div>",
+        "source_assets": [
+          {
+            "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.1_ex_9.svg",
+            "sha256": "bfb09916f6e213516b5a4751fd230235248499cd3ea6d1d1f11123182b874b3a",
+            "alt": "Figuur 8 · Gebruik de gegeven beginlijn; voeg de nieuwe lijn en alle markeringen zelf toe.",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"720\" height=\"235\" viewBox=\"0 0 720 235\"><defs><marker id=\"arr\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto-start-reverse\"><path d=\"M0,0 L7,3.5 L0,7Z\" fill=\"#183247\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"720\" height=\"235\" rx=\"6\" fill=\"#f7fafb\"/><text x=\"360.00000\" y=\"27.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"19\" fill=\"#17688f\" text-anchor=\"middle\" font-weight=\"700\" >Aanbod van één tassenatelier: de beginlijn</text><line x1=\"84.00000\" y1=\"168.00000\" x2=\"84.00000\" y2=\"173.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"84.00000\" y=\"191.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >0</text><line x1=\"221.50000\" y1=\"168.00000\" x2=\"221.50000\" y2=\"51.00000\" stroke=\"#e1e9ee\" stroke-width=\"0.8\" /><line x1=\"221.50000\" y1=\"168.00000\" x2=\"221.50000\" y2=\"173.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"221.50000\" y=\"191.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >20</text><line x1=\"359.00000\" y1=\"168.00000\" x2=\"359.00000\" y2=\"51.00000\" stroke=\"#e1e9ee\" stroke-width=\"0.8\" /><line x1=\"359.00000\" y1=\"168.00000\" x2=\"359.00000\" y2=\"173.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"359.00000\" y=\"191.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >40</text><line x1=\"496.50000\" y1=\"168.00000\" x2=\"496.50000\" y2=\"51.00000\" stroke=\"#e1e9ee\" stroke-width=\"0.8\" /><line x1=\"496.50000\" y1=\"168.00000\" x2=\"496.50000\" y2=\"173.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"496.50000\" y=\"191.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >60</text><line x1=\"634.00000\" y1=\"168.00000\" x2=\"634.00000\" y2=\"51.00000\" stroke=\"#e1e9ee\" stroke-width=\"0.8\" /><line x1=\"634.00000\" y1=\"168.00000\" x2=\"634.00000\" y2=\"173.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"634.00000\" y=\"191.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >80</text><line x1=\"80.00000\" y1=\"168.00000\" x2=\"84.00000\" y2=\"168.00000\" stroke=\"#183247\" stroke-width=\"1\" /><line x1=\"84.00000\" y1=\"138.75000\" x2=\"634.00000\" y2=\"138.75000\" stroke=\"#e1e9ee\" stroke-width=\"0.8\" /><text x=\"73.00000\" y=\"143.75000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"end\" font-weight=\"400\" >8</text><line x1=\"80.00000\" y1=\"138.75000\" x2=\"84.00000\" y2=\"138.75000\" stroke=\"#183247\" stroke-width=\"1\" /><line x1=\"84.00000\" y1=\"109.50000\" x2=\"634.00000\" y2=\"109.50000\" stroke=\"#e1e9ee\" stroke-width=\"0.8\" /><text x=\"73.00000\" y=\"114.50000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"end\" font-weight=\"400\" >16</text><line x1=\"80.00000\" y1=\"109.50000\" x2=\"84.00000\" y2=\"109.50000\" stroke=\"#183247\" stroke-width=\"1\" /><line x1=\"84.00000\" y1=\"80.25000\" x2=\"634.00000\" y2=\"80.25000\" stroke=\"#e1e9ee\" stroke-width=\"0.8\" /><text x=\"73.00000\" y=\"85.25000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"end\" font-weight=\"400\" >24</text><line x1=\"80.00000\" y1=\"80.25000\" x2=\"84.00000\" y2=\"80.25000\" stroke=\"#183247\" stroke-width=\"1\" /><line x1=\"84.00000\" y1=\"51.00000\" x2=\"634.00000\" y2=\"51.00000\" stroke=\"#e1e9ee\" stroke-width=\"0.8\" /><text x=\"73.00000\" y=\"56.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"end\" font-weight=\"400\" >32</text><line x1=\"80.00000\" y1=\"51.00000\" x2=\"84.00000\" y2=\"51.00000\" stroke=\"#183247\" stroke-width=\"1\" /><line x1=\"84.00000\" y1=\"168.00000\" x2=\"646.00000\" y2=\"168.00000\" stroke=\"#183247\" stroke-width=\"1.6\" marker-end=\"url(#arr)\"/><line x1=\"84.00000\" y1=\"168.00000\" x2=\"84.00000\" y2=\"42.00000\" stroke=\"#183247\" stroke-width=\"1.6\" marker-end=\"url(#arr)\"/><text x=\"359.00000\" y=\"223.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"16\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >q (sporttassen per maand)</text><text x=\"22.00000\" y=\"109.50000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"16\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" transform=\"rotate(-90 22 109.5)\">P (€ per tas)</text><line x1=\"84.00000\" y1=\"131.43750\" x2=\"634.00000\" y2=\"58.31250\" stroke=\"#227064\" stroke-width=\"2.7\" data-curve=\"A0\"/><text x=\"592.50000\" y=\"56.89375\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"17\" fill=\"#227064\" text-anchor=\"start\" font-weight=\"700\" >A₀</text></svg>",
+            "geometry": {
+              "name": "1.3.1_ex_9",
+              "kind": "instruction",
+              "height": 235,
+              "type": "linear",
+              "plot": {
+                "ox": 84,
+                "ex": 634,
+                "by": 168,
+                "top": 51,
+                "xmax": 80,
+                "ymax": 32
+              },
+              "curves": [
+                {
+                  "name": "A0",
+                  "a": -40,
+                  "b": 4,
+                  "label": "A₀",
+                  "col": "#227064",
+                  "domain": [
+                    10,
+                    30
+                  ],
+                  "dash": "",
+                  "p_lo": 10,
+                  "p_hi": 30,
+                  "drawn": true
+                }
+              ],
+              "marks": [],
+              "gap": null
+            }
+          }
+        ],
+        "answer_html": "<h3 id=\"answer9\">Opgave 9 · Atelier Sprint</h3><div class=\"answer-item\"><p><strong>a.</strong> Oud: 4 × 20 − 40 = <strong>40 tassen per maand</strong>. Alleen prijs: 4 × 24 − 40 = <strong>56 tassen per maand</strong>. De 4 is <strong>4 extra tassen per maand per euro prijsstijging</strong>. <strong>Waarom:</strong> dit is de reactie langs A₀.</p>\n</div><div class=\"answer-item\"><p><strong>b.</strong> De <strong>prijs van stof, een productiemiddel</strong>, stijgt. A verschuift naar links. Bij € 20 nieuw: 4 × 20 − 52 = <strong>28 tassen per maand</strong>. <strong>Waarom:</strong> bij dezelfde verkoopprijs is het nieuwe aanbod 12 tassen lager.</p>\n</div><div class=\"answer-item\"><p><strong>c.</strong> A₁: van <strong>(0; 13)</strong> tot <strong>(68; 30)</strong>. R = <strong>(40; 20)</strong>, S = <strong>(56; 24)</strong>, T = <strong>(44; 24)</strong>. <strong>Waarom:</strong> de uiteindelijke prijs moet in de nieuwe functie worden ingevuld; S hoort nog bij de oude omstandigheden.</p>\n</div><div class=\"answer-item\"><p><strong>d.</strong> Uiteindelijk: 4 × 24 − 52 = <strong>44 tassen per maand</strong>. Verandering: 44 − 40 = <strong>+4 tassen per maand</strong>. De effecten werken tegen elkaar: <strong>+16</strong> door de verkoopprijs en <strong>−12</strong> door de stofprijs. <strong>Waarom:</strong> hier is het positieve prijseffect groter dan de afname door duurdere stof.</p>\n</div><div class=\"answer-item\"><p><strong>e.</strong> <strong>Onjuist:</strong> de verkoopprijs veroorzaakt de beweging R → S langs A₀. Duurdere stof verschuift de lijn naar links. <strong>Waarom:</strong> de eigen verkoopprijs en de prijs van een productiemiddel zijn verschillende oorzaken.</p>\n</div><figure><img alt=\"Antwoordfiguur bij opgave 9 · Assen, lijnen en coördinaten volgen het lesmodel.\" src=\"_assets/1.3.1_ans_9.svg\"/><figcaption>Antwoordfiguur bij opgave 9 · Assen, lijnen en coördinaten volgen het lesmodel.</figcaption></figure>\n PAGE {\"section\": \"Antwoorden\", \"title\": \"1.3.1–1.3.2 · Begrippen en ophalen\"} \n",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Bereken q vóór de veranderingen en na alleen de verkoopprijsstijging. Wat betekent de 4 in de functie?",
+            "answer": "Oud: 4 × 20 − 40 = **40 tassen per maand**. Alleen prijs: 4 × 24 − 40 = **56 tassen per maand**. De 4 is **4 extra tassen per maand per euro prijsstijging**. **Waarom:** dit is de reactie langs A₀."
+          },
+          {
+            "label": "b",
+            "prompt": "Welke factor verschuift A? Bereken ter vergelijking het nieuwe aanbod bij de oude prijs van € 20.",
+            "answer": "De **prijs van stof, een productiemiddel**, stijgt. A verschuift naar links. Bij € 20 nieuw: 4 × 20 − 52 = **28 tassen per maand**. **Waarom:** bij dezelfde verkoopprijs is het nieuwe aanbod 12 tassen lager."
+          },
+          {
+            "label": "c",
+            "prompt": "Teken A₁. Markeer R (oud), S (alleen hogere verkoopprijs) en T (beide veranderingen), met hun coördinaten.",
+            "answer": "A₁: van **(0; 13)** tot **(68; 30)**. R = **(40; 20)**, S = **(56; 24)**, T = **(44; 24)**. **Waarom:** de uiteindelijke prijs moet in de nieuwe functie worden ingevuld; S hoort nog bij de oude omstandigheden."
+          },
+          {
+            "label": "d",
+            "prompt": "Bereken de uiteindelijke hoeveelheid en de verandering ten opzichte van het begin. Leg uit hoe de effecten samenwerken of tegenwerken.",
+            "answer": "Uiteindelijk: 4 × 24 − 52 = **44 tassen per maand**. Verandering: 44 − 40 = **+4 tassen per maand**. De effecten werken tegen elkaar: **+16** door de verkoopprijs en **−12** door de stofprijs. **Waarom:** hier is het positieve prijseffect groter dan de afname door duurdere stof."
+          },
+          {
+            "label": "e",
+            "prompt": "Beoordeel: “De hogere verkoopprijs verschuift de aanbodlijn naar rechts.”",
+            "answer": "**Onjuist:** de verkoopprijs veroorzaakt de beweging R → S langs A₀. Duurdere stof verschuift de lijn naar links. **Waarom:** de eigen verkoopprijs en de prijs van een productiemiddel zijn verschillende oorzaken."
+          }
+        ]
+      },
+      "review_scope": "Current-file Part A review is recorded separately; no curriculum-authority promotion."
+    },
+    {
+      "id": "1.3.2",
+      "edition_id": "book1-second-edition-2026",
+      "record_id": "book1-second-edition-2026:1.3.2",
+      "module": 1,
+      "chapter": 3,
+      "paragraph_title": "Marktevenwicht",
+      "paragraph_kind": "theory",
+      "record_status": "candidate_review_ready",
+      "curriculum_authority": false,
+      "approval_inherited": false,
+      "required_skills": [],
+      "exam_codes": [],
+      "authority_note": "Owner-selected second-edition target; no old reviewed_final status, machine mapping or CvTE approval inherited.",
+      "source_path": "references/owned/book1-second-edition-2026/targets.json",
+      "source_locator": {
+        "repository": "meijer1973/4veco-lessen",
+        "manuscript": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/1.3.2 Marktevenwicht – paragraaf.md",
+        "manuscript_sha256": "454d8aaf6aabd7d220fdc4969a033e9037b2dca5be066d80ca8c62374de2860a",
+        "answers": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/Antwoorden.md",
+        "answers_sha256": "1cb6fce9da344dff9e98ea826b6e89e5d61ade745116c9b0ddef7bd0c68d2540",
+        "exercise_number": 20
+      },
+      "target_exercise": {
+        "title": "Een markt voor herbruikbare bekers",
+        "context": "Opgave 20 · Een markt voor herbruikbare bekers Een markt verkoopt één soort herbruikbare beker. Veel kleine kopers en verkopers kunnen elkaar vinden. De overige omstandigheden blijven gelijk. Q v = 150 − 10P, voor 0 ≤ P ≤ 15. Q a = 5P − 30, voor 6 ≤ P ≤ 15. Q is bekers per week; P is euro per beker.",
+        "context_html": "<div class=\"exercise target\" id=\"ex20\"><h3>Opgave 20 · Een markt voor herbruikbare bekers</h3><p>Een markt verkoopt één soort herbruikbare beker. Veel kleine kopers en verkopers kunnen elkaar vinden. De overige omstandigheden blijven gelijk. Q<sub>v</sub> = 150 − 10P, voor 0 ≤ P ≤ 15. Q<sub>a</sub> = 5P − 30, voor 6 ≤ P ≤ 15. Q is bekers per week; P is euro per beker.</p>\n</div>",
+        "source_assets": [],
+        "answer_html": "<h3 id=\"answer20\">Opgave 20 · Een markt voor herbruikbare bekers</h3><div class=\"answer-item\"><p><strong>a.</strong> 150 − 10P = 5P − 30 → 150 = 15P − 30 (+10P aan beide kanten) → 180 = 15P (+30) → P = <strong>€ 12 per beker</strong> (delen door 15). <strong>Waarom:</strong> de gelijkheid zoekt één prijs voor dezelfde hoeveelheid in beide plannen.</p>\n</div><div class=\"answer-item\"><p><strong>b.</strong> Q<sub>v</sub> = 150 − 10 × 12 = <strong>30 bekers per week</strong>. Controle: Q<sub>a</sub> = 5 × 12 − 30 = <strong>30</strong>. Bij <strong>€ 12 per beker</strong> sluiten beide plannen voor <strong>30 bekers per week</strong> aan. <strong>Waarom:</strong> gelijkheid van de hoeveelheden is precies de evenwichtsvoorwaarde.</p>\n</div>\n PAGE {\"section\": \"Antwoorden\", \"title\": \"1.3.2 · Doeloefening: grafiek en transacties\"} \n<h3 class=\"continuation\" id=\"answer20\">Opgave 20 · Een markt voor herbruikbare bekers (vervolg)</h3><div class=\"answer-item\"><p><strong>c.</strong> V door <strong>(0; 15)</strong> en <strong>(150; 0)</strong>; A door <strong>(0; 6)</strong> en <strong>(45; 15)</strong>. E = <strong>(30; 12)</strong>. Q horizontaal, P verticaal, met juiste eenheden en schalen. <strong>Waarom:</strong> het evenwicht is het gemeenschappelijke punt, niet een snijpunt met een as.</p>\n</div><div class=\"answer-item\"><p><strong>d.</strong> Bij € 10: Q<sub>v</sub> = 150 − 10 × 10 = <strong>50</strong>; Q<sub>a</sub> = 5 × 10 − 30 = <strong>20</strong>. Vraagoverschot: 50 − 20 = <strong>30 bekers per week</strong>. Verkoop volgens de afspraak: <strong>20 bekers per week</strong>. <strong>Waarom:</strong> ontbrekende bekers worden niet verkocht; alle 20 aangeboden bekers wel.</p>\n</div><div class=\"answer-item\"><p><strong>e.</strong> <strong>Opwaartse prijsdruk.</strong> Kopers concurreren om het kleinere aanbod. Als P stijgt, daalt Q<sub>v</sub> langs V en stijgt Q<sub>a</sub> langs A, totdat de plannen aansluiten. <strong>Waarom:</strong> de omstandigheden achter de lijnen veranderen niet; er ontstaan geen verschuivingen.</p>\n</div><figure><img alt=\"Antwoordfiguur bij opgave 20 · Assen, lijnen en coördinaten volgen het lesmodel.\" src=\"_assets/1.3.2_ans_20.svg\"/><figcaption>Antwoordfiguur bij opgave 20 · Assen, lijnen en coördinaten volgen het lesmodel.</figcaption></figure>\n PAGE {\"section\": \"Antwoorden\", \"title\": \"1.3.2–1.3.3 · Betekenis en startwerk\"} \n",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Bereken de evenwichtsprijs. Laat je algebraïsche stappen zien.",
+            "answer": "150 − 10P = 5P − 30 → 150 = 15P − 30 (+10P aan beide kanten) → 180 = 15P (+30) → P = **€ 12 per beker** (delen door 15). **Waarom:** de gelijkheid zoekt één prijs voor dezelfde hoeveelheid in beide plannen."
+          },
+          {
+            "label": "b",
+            "prompt": "Bereken de evenwichtshoeveelheid en controleer die met beide functies. Leg de uitkomst uit in een zin met eenheden.",
+            "answer": "Q<sub>v</sub> = 150 − 10 × 12 = **30 bekers per week**. Controle: Q<sub>a</sub> = 5 × 12 − 30 = **30**. Bij **€ 12 per beker** sluiten beide plannen voor **30 bekers per week** aan. **Waarom:** gelijkheid van de hoeveelheden is precies de evenwichtsvoorwaarde."
+          },
+          {
+            "label": "c",
+            "prompt": "Teken zelf beide lijnen in één marktgrafiek. Geef de assen, eenheden, schaal, E en hulplijnen naar de evenwichtsprijs en -hoeveelheid aan.",
+            "answer": "V door **(0; 15)** en **(150; 0)**; A door **(0; 6)** en **(45; 15)**. E = **(30; 12)**. Q horizontaal, P verticaal, met juiste eenheden en schalen. **Waarom:** het evenwicht is het gemeenschappelijke punt, niet een snijpunt met een as."
+          },
+          {
+            "label": "d",
+            "prompt": "Aan het begin geldt nog een prijs van € 10. Bereken Qᵥ, Qₐ en het tekort of overschot bij die prijs. Hoeveel bekers worden verkocht als al het aanbod een koper vindt, er geen andere voorraad is en niets anders de verkoop belemmert?",
+            "answer": "Bij € 10: Q<sub>v</sub> = 150 − 10 × 10 = **50**; Q<sub>a</sub> = 5 × 10 − 30 = **20**. Vraagoverschot: 50 − 20 = **30 bekers per week**. Verkoop volgens de afspraak: **20 bekers per week**. **Waarom:** ontbrekende bekers worden niet verkocht; alle 20 aangeboden bekers wel."
+          },
+          {
+            "label": "e",
+            "prompt": "De prijs kan zich daarna aanpassen. Verklaar de richting van de prijsdruk en de reacties van kopers en verkopers langs de bestaande lijnen.",
+            "answer": "**Opwaartse prijsdruk.** Kopers concurreren om het kleinere aanbod. Als P stijgt, daalt Q<sub>v</sub> langs V en stijgt Q<sub>a</sub> langs A, totdat de plannen aansluiten. **Waarom:** de omstandigheden achter de lijnen veranderen niet; er ontstaan geen verschuivingen."
+          }
+        ]
+      },
+      "review_scope": "Current-file Part A review is recorded separately; no curriculum-authority promotion."
+    },
+    {
+      "id": "1.3.3",
+      "edition_id": "book1-second-edition-2026",
+      "record_id": "book1-second-edition-2026:1.3.3",
+      "module": 1,
+      "chapter": 3,
+      "paragraph_title": "Verschuivingen en nieuw evenwicht",
+      "paragraph_kind": "theory",
+      "record_status": "candidate_review_ready",
+      "curriculum_authority": false,
+      "approval_inherited": false,
+      "required_skills": [],
+      "exam_codes": [],
+      "authority_note": "Owner-selected second-edition target; no old reviewed_final status, machine mapping or CvTE approval inherited.",
+      "source_path": "references/owned/book1-second-edition-2026/targets.json",
+      "source_locator": {
+        "repository": "meijer1973/4veco-lessen",
+        "manuscript": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/1.3.3 Verschuivingen en nieuw evenwicht – paragraaf.md",
+        "manuscript_sha256": "b73b16fbf10b8a71613a407befa819bdab1551592c50d78ef558150a696b0f68",
+        "answers": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/Antwoorden.md",
+        "answers_sha256": "1cb6fce9da344dff9e98ea826b6e89e5d61ade745116c9b0ddef7bd0c68d2540",
+        "exercise_number": 31
+      },
+      "target_exercise": {
+        "title": "Meer kopers van oplaadkabels",
+        "context": "Opgave 31 · Meer kopers van oplaadkabels Een regionale markt heeft Q v,0 = 100 − 5P (0 ≤ P ≤ 20) en Q a = 5P − 20 (4 ≤ P ≤ 24). Q is kabels per week; P is euro per kabel. Er komen meer kopers. Alleen daardoor wordt Q v,1 = 120 − 5P (0 ≤ P ≤ 24). De omstandigheden van de aanbieders blijven gelijk. Figuur 24 · De oorspronkelijke lijnen zijn gegeven; de nieuwe lijn en uitkomsten ontbreken.\nFigure data from the source: [{\"path\": \"Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.3_ex_31.svg\", \"sha256\": \"6366429d2e8501ebfd67868b0ee8d67d50c5d384525bb9771932b0a22ac87d20\", \"alt\": \"Figuur 24 · De oorspronkelijke lijnen zijn gegeven; de nieuwe lijn en uitkomsten ontbreken.\", \"geometry\": {\"name\": \"1.3.3_ex_31\", \"kind\": \"instruction\", \"height\": 233, \"type\": \"linear\", \"plot\": {\"ox\": 84, \"ex\": 634, \"by\": 166, \"top\": 51, \"xmax\": 120, \"ymax\": 24}, \"curves\": [{\"name\": \"V0\", \"a\": 100, \"b\": -5, \"label\": \"V₀\", \"col\": \"#17688f\", \"domain\": [0, 20], \"dash\": \"\", \"p_lo\": 0, \"p_hi\": 20, \"drawn\": true}, {\"name\": \"A\", \"a\": -20, \"b\": 5, \"label\": \"A\", \"col\": \"#227064\", \"domain\": [4, 24], \"dash\": \"\", \"p_lo\": 4, \"p_hi\": 24, \"drawn\": true}], \"marks\": [], \"gap\": null}}]",
+        "context_html": "<div class=\"exercise target\" id=\"ex31\"><h3>Opgave 31 · Meer kopers van oplaadkabels</h3><p>Een regionale markt heeft Q<sub>v,0</sub> = 100 − 5P (0 ≤ P ≤ 20) en Q<sub>a</sub> = 5P − 20 (4 ≤ P ≤ 24). Q is kabels per week; P is euro per kabel. Er komen meer kopers. Alleen daardoor wordt Q<sub>v,1</sub> = 120 − 5P (0 ≤ P ≤ 24). De omstandigheden van de aanbieders blijven gelijk.</p>\n<figure><img alt=\"Figuur 24 · De oorspronkelijke lijnen zijn gegeven; de nieuwe lijn en uitkomsten ontbreken.\" src=\"_assets/1.3.3_ex_31.svg\"/><figcaption>Figuur 24 · De oorspronkelijke lijnen zijn gegeven; de nieuwe lijn en uitkomsten ontbreken.</figcaption></figure></div>",
+        "source_assets": [
+          {
+            "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.3_ex_31.svg",
+            "sha256": "6366429d2e8501ebfd67868b0ee8d67d50c5d384525bb9771932b0a22ac87d20",
+            "alt": "Figuur 24 · De oorspronkelijke lijnen zijn gegeven; de nieuwe lijn en uitkomsten ontbreken.",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"720\" height=\"233\" viewBox=\"0 0 720 233\"><defs><marker id=\"arr\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto-start-reverse\"><path d=\"M0,0 L7,3.5 L0,7Z\" fill=\"#183247\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"720\" height=\"233\" rx=\"6\" fill=\"#f7fafb\"/><text x=\"360.00000\" y=\"27.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"19\" fill=\"#17688f\" text-anchor=\"middle\" font-weight=\"700\" >Oplaadkabels: de oorspronkelijke vraag en het aanbod</text><line x1=\"84.00000\" y1=\"166.00000\" x2=\"84.00000\" y2=\"171.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"84.00000\" y=\"189.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >0</text><line x1=\"175.66667\" y1=\"166.00000\" x2=\"175.66667\" y2=\"51.00000\" stroke=\"#e1e9ee\" stroke-width=\"0.8\" /><line x1=\"175.66667\" y1=\"166.00000\" x2=\"175.66667\" y2=\"171.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"175.66667\" y=\"189.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >20</text><line x1=\"267.33333\" y1=\"166.00000\" x2=\"267.33333\" y2=\"51.00000\" stroke=\"#e1e9ee\" stroke-width=\"0.8\" /><line x1=\"267.33333\" y1=\"166.00000\" x2=\"267.33333\" y2=\"171.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"267.33333\" y=\"189.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >40</text><line x1=\"359.00000\" y1=\"166.00000\" x2=\"359.00000\" y2=\"51.00000\" stroke=\"#e1e9ee\" stroke-width=\"0.8\" /><line x1=\"359.00000\" y1=\"166.00000\" x2=\"359.00000\" y2=\"171.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"359.00000\" y=\"189.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >60</text><line x1=\"450.66667\" y1=\"166.00000\" x2=\"450.66667\" y2=\"51.00000\" stroke=\"#e1e9ee\" stroke-width=\"0.8\" /><line x1=\"450.66667\" y1=\"166.00000\" x2=\"450.66667\" y2=\"171.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"450.66667\" y=\"189.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >80</text><line x1=\"542.33333\" y1=\"166.00000\" x2=\"542.33333\" y2=\"51.00000\" stroke=\"#e1e9ee\" stroke-width=\"0.8\" /><line x1=\"542.33333\" y1=\"166.00000\" x2=\"542.33333\" y2=\"171.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"542.33333\" y=\"189.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >100</text><line x1=\"634.00000\" y1=\"166.00000\" x2=\"634.00000\" y2=\"51.00000\" stroke=\"#e1e9ee\" stroke-width=\"0.8\" /><line x1=\"634.00000\" y1=\"166.00000\" x2=\"634.00000\" y2=\"171.00000\" stroke=\"#183247\" stroke-width=\"1\" /><text x=\"634.00000\" y=\"189.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >120</text><line x1=\"80.00000\" y1=\"166.00000\" x2=\"84.00000\" y2=\"166.00000\" stroke=\"#183247\" stroke-width=\"1\" /><line x1=\"84.00000\" y1=\"146.83333\" x2=\"634.00000\" y2=\"146.83333\" stroke=\"#e1e9ee\" stroke-width=\"0.8\" /><text x=\"73.00000\" y=\"151.83333\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"end\" font-weight=\"400\" >4</text><line x1=\"80.00000\" y1=\"146.83333\" x2=\"84.00000\" y2=\"146.83333\" stroke=\"#183247\" stroke-width=\"1\" /><line x1=\"84.00000\" y1=\"127.66667\" x2=\"634.00000\" y2=\"127.66667\" stroke=\"#e1e9ee\" stroke-width=\"0.8\" /><text x=\"73.00000\" y=\"132.66667\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"end\" font-weight=\"400\" >8</text><line x1=\"80.00000\" y1=\"127.66667\" x2=\"84.00000\" y2=\"127.66667\" stroke=\"#183247\" stroke-width=\"1\" /><line x1=\"84.00000\" y1=\"108.50000\" x2=\"634.00000\" y2=\"108.50000\" stroke=\"#e1e9ee\" stroke-width=\"0.8\" /><text x=\"73.00000\" y=\"113.50000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"end\" font-weight=\"400\" >12</text><line x1=\"80.00000\" y1=\"108.50000\" x2=\"84.00000\" y2=\"108.50000\" stroke=\"#183247\" stroke-width=\"1\" /><line x1=\"84.00000\" y1=\"89.33333\" x2=\"634.00000\" y2=\"89.33333\" stroke=\"#e1e9ee\" stroke-width=\"0.8\" /><text x=\"73.00000\" y=\"94.33333\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"end\" font-weight=\"400\" >16</text><line x1=\"80.00000\" y1=\"89.33333\" x2=\"84.00000\" y2=\"89.33333\" stroke=\"#183247\" stroke-width=\"1\" /><line x1=\"84.00000\" y1=\"70.16667\" x2=\"634.00000\" y2=\"70.16667\" stroke=\"#e1e9ee\" stroke-width=\"0.8\" /><text x=\"73.00000\" y=\"75.16667\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"end\" font-weight=\"400\" >20</text><line x1=\"80.00000\" y1=\"70.16667\" x2=\"84.00000\" y2=\"70.16667\" stroke=\"#183247\" stroke-width=\"1\" /><line x1=\"84.00000\" y1=\"51.00000\" x2=\"634.00000\" y2=\"51.00000\" stroke=\"#e1e9ee\" stroke-width=\"0.8\" /><text x=\"73.00000\" y=\"56.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"15\" fill=\"#183247\" text-anchor=\"end\" font-weight=\"400\" >24</text><line x1=\"80.00000\" y1=\"51.00000\" x2=\"84.00000\" y2=\"51.00000\" stroke=\"#183247\" stroke-width=\"1\" /><line x1=\"84.00000\" y1=\"166.00000\" x2=\"646.00000\" y2=\"166.00000\" stroke=\"#183247\" stroke-width=\"1.6\" marker-end=\"url(#arr)\"/><line x1=\"84.00000\" y1=\"166.00000\" x2=\"84.00000\" y2=\"42.00000\" stroke=\"#183247\" stroke-width=\"1.6\" marker-end=\"url(#arr)\"/><text x=\"359.00000\" y=\"221.00000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"16\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" >Q (kabels per week)</text><text x=\"22.00000\" y=\"108.50000\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"16\" fill=\"#183247\" text-anchor=\"middle\" font-weight=\"400\" transform=\"rotate(-90 22 108.5)\">P (€ per kabel)</text><line x1=\"542.33333\" y1=\"166.00000\" x2=\"84.00000\" y2=\"70.16667\" stroke=\"#17688f\" stroke-width=\"2.7\" data-curve=\"V0\"/><text x=\"504.50000\" y=\"150.41667\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"17\" fill=\"#17688f\" text-anchor=\"start\" font-weight=\"700\" >V₀</text><line x1=\"84.00000\" y1=\"146.83333\" x2=\"542.33333\" y2=\"51.00000\" stroke=\"#227064\" stroke-width=\"2.7\" data-curve=\"A\"/><text x=\"509.08333\" y=\"51.62500\" font-family=\"Lato, DejaVu Sans, sans-serif\" font-size=\"17\" fill=\"#227064\" text-anchor=\"start\" font-weight=\"700\" >A</text></svg>",
+            "geometry": {
+              "name": "1.3.3_ex_31",
+              "kind": "instruction",
+              "height": 233,
+              "type": "linear",
+              "plot": {
+                "ox": 84,
+                "ex": 634,
+                "by": 166,
+                "top": 51,
+                "xmax": 120,
+                "ymax": 24
+              },
+              "curves": [
+                {
+                  "name": "V0",
+                  "a": 100,
+                  "b": -5,
+                  "label": "V₀",
+                  "col": "#17688f",
+                  "domain": [
+                    0,
+                    20
+                  ],
+                  "dash": "",
+                  "p_lo": 0,
+                  "p_hi": 20,
+                  "drawn": true
+                },
+                {
+                  "name": "A",
+                  "a": -20,
+                  "b": 5,
+                  "label": "A",
+                  "col": "#227064",
+                  "domain": [
+                    4,
+                    24
+                  ],
+                  "dash": "",
+                  "p_lo": 4,
+                  "p_hi": 24,
+                  "drawn": true
+                }
+              ],
+              "marks": [],
+              "gap": null
+            }
+          }
+        ],
+        "answer_html": "<h3 id=\"answer31\">Opgave 31 · Meer kopers van oplaadkabels</h3><div class=\"answer-item\"><p><strong>a.</strong> 100 − 5P = 5P − 20 → 120 = 10P → <strong>P₀ = € 12</strong>. Q<sub>v,0</sub> = 100 − 60 = <strong>40</strong>; Q<sub>a</sub> = 60 − 20 = <strong>40 kabels per week</strong>. <strong>Waarom:</strong> de twee oorspronkelijke plannen zijn gelijk.</p>\n</div><div class=\"answer-item\"><p><strong>b.</strong> <strong>Aantal vragers.</strong> Bij € 12: Q<sub>v,1</sub> = 120 − 60 = <strong>60</strong>, Q<sub>a</sub> = 60 − 20 = <strong>40</strong>. Vraagoverschot: <strong>20 kabels per week</strong>; opwaartse druk. <strong>Waarom:</strong> meer kopers vragen bij dezelfde prijs meer, terwijl de aanbieders hun oorspronkelijke plan behouden.</p>\n</div><div class=\"answer-item\"><p><strong>c.</strong> 120 − 5P = 5P − 20 → 140 = 10P → <strong>P₁ = € 14</strong>. Q<sub>v,1</sub> = 120 − 70 = <strong>50</strong>; controle Q<sub>a</sub> = 70 − 20 = <strong>50 kabels per week</strong>. Verandering: (50 − 40) / 40 × 100% = <strong>25% stijging</strong>. <strong>Waarom:</strong> de nieuwe prijs brengt beide plannen weer samen.</p>\n</div><div class=\"answer-item\"><p><strong>d.</strong> V₁ door <strong>(0; 24)</strong> en <strong>(120; 0)</strong>. E₀ = <strong>(40; 12)</strong>; E₁ = <strong>(50; 14)</strong>. Een horizontale pijl bij € 12 loopt van 40 naar 60; de andere pijl loopt van E₀ naar E₁ langs A. <strong>Waarom:</strong> de eerste pijl toont de veranderde vraag, de tweede de prijsreactie van verkopers.</p>\n</div><div class=\"answer-item\"><p><strong>e.</strong> <strong>Onjuist.</strong> A blijft Q<sub>a</sub> = 5P − 20. Alleen P stijgt van € 12 naar € 14; daarom wordt Q<sub>a</sub> groter langs dezelfde lijn. <strong>Waarom:</strong> de aanbodfactoren zijn niet veranderd.</p>\n</div><figure><img alt=\"Antwoordfiguur bij opgave 31 · Assen, lijnen en coördinaten volgen het lesmodel.\" src=\"_assets/1.3.3_ans_31.svg\"/><figcaption>Antwoordfiguur bij opgave 31 · Assen, lijnen en coördinaten volgen het lesmodel.</figcaption></figure>\n PAGE {\"section\": \"Antwoorden\", \"title\": \"1.3.3 · Verklaren en herhalen\"} \n",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Bereken het oude evenwicht en controleer met beide functies.",
+            "answer": "100 − 5P = 5P − 20 → 120 = 10P → **P₀ = € 12**. Q<sub>v,0</sub> = 100 − 60 = **40**; Q<sub>a</sub> = 60 − 20 = **40 kabels per week**. **Waarom:** de twee oorspronkelijke plannen zijn gelijk."
+          },
+          {
+            "label": "b",
+            "prompt": "Benoem de specifieke factor. Bereken na de verandering beide plannen bij de oude prijs en verklaar de prijsdruk.",
+            "answer": "**Aantal vragers.** Bij € 12: Q<sub>v,1</sub> = 120 − 60 = **60**, Q<sub>a</sub> = 60 − 20 = **40**. Vraagoverschot: **20 kabels per week**; opwaartse druk. **Waarom:** meer kopers vragen bij dezelfde prijs meer, terwijl de aanbieders hun oorspronkelijke plan behouden."
+          },
+          {
+            "label": "c",
+            "prompt": "Bereken het nieuwe evenwicht en controleer. Bereken de procentuele verandering van Q.",
+            "answer": "120 − 5P = 5P − 20 → 140 = 10P → **P₁ = € 14**. Q<sub>v,1</sub> = 120 − 70 = **50**; controle Q<sub>a</sub> = 70 − 20 = **50 kabels per week**. Verandering: (50 − 40) / 40 × 100% = **25% stijging**. **Waarom:** de nieuwe prijs brengt beide plannen weer samen."
+          },
+          {
+            "label": "d",
+            "prompt": "Voeg V₁ toe. Markeer E₀ en E₁ met coördinaten. Laat met pijlen de verschuiving bij de oude prijs en de beweging langs A zien.",
+            "answer": "V₁ door **(0; 24)** en **(120; 0)**. E₀ = **(40; 12)**; E₁ = **(50; 14)**. Een horizontale pijl bij € 12 loopt van 40 naar 60; de andere pijl loopt van E₀ naar E₁ langs A. **Waarom:** de eerste pijl toont de veranderde vraag, de tweede de prijsreactie van verkopers."
+          },
+          {
+            "label": "e",
+            "prompt": "Beoordeel: “De grotere aangeboden hoeveelheid komt door een verschuiving van de aanbodlijn.”",
+            "answer": "**Onjuist.** A blijft Q<sub>a</sub> = 5P − 20. Alleen P stijgt van € 12 naar € 14; daarom wordt Q<sub>a</sub> groter langs dezelfde lijn. **Waarom:** de aanbodfactoren zijn niet veranderd."
+          }
+        ]
+      },
+      "review_scope": "Current-file Part A review is recorded separately; no curriculum-authority promotion."
+    },
+    {
+      "id": "1.3.4",
+      "edition_id": "book1-second-edition-2026",
+      "record_id": "book1-second-edition-2026:1.3.4",
+      "module": 1,
+      "chapter": 3,
+      "paragraph_title": "Gemengde opgaven",
+      "paragraph_kind": "gemengde_opgaven",
+      "record_status": "candidate_review_ready",
+      "curriculum_authority": false,
+      "approval_inherited": false,
+      "required_skills": [],
+      "exam_codes": [],
+      "authority_note": "Owner-selected second-edition target; no old reviewed_final status, machine mapping or CvTE approval inherited.",
+      "source_path": "references/owned/book1-second-edition-2026/targets.json",
+      "source_locator": {
+        "repository": "meijer1973/4veco-lessen",
+        "manuscript": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/1.3.4 Gemengde opgaven – opgaven.md",
+        "manuscript_sha256": "cba21bfe1a43659226670996a603dc6d2e3ca17865f1d3cab0487c0ffebd2d7e",
+        "answers": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/Antwoorden.md",
+        "answers_sha256": "1cb6fce9da344dff9e98ea826b6e89e5d61ade745116c9b0ddef7bd0c68d2540",
+        "exercise_number": 37
+      },
+      "target_exercise": {
+        "title": "De linnen boodschappentas",
+        "context": "Doeloefening Opgave 37 · De linnen boodschappentas Gebruik deze vier bronnen bij de vragen op de rechterpagina. De gegevens zijn voor dit lesmodel gemaakt. Een deel van de informatie is niet nodig voor de berekeningen. Bron A · De oorspronkelijke markt In deze oefening gaat het om één soort linnen boodschappentas. Er zijn veel kleine kopers en verkopers. De prijs kan zich aanpassen. Q is tassen per week; P is euro per tas. Q v = 180 − 10P   (0 ≤ P ≤ 18) Q a,0 = 10P − 20   (2 ≤ P ≤ 18) Bron B · Linnen wordt duurder Alleen de prijs van het linnen stijgt. De koopplannen van consumenten veranderen niet. De aanbieders hebben voortaan deze aanbodfunctie: Q a,1 = 10P − 60   (6 ≤ P ≤ 18) Deze nieuwe situatie begint vanuit bron A. Er is geen andere vraag- of aanbodverandering. Bron C · Een afzonderlijke prijsvergelijking Bekijk daarna afzonderlijk de nieuwe situatie uit bron B bij een verkoopprijs van € 14 . Zolang deze prijs geldt, vindt iedere koper die volgens de vraagfunctie wil kopen een verkoper. Er zijn geen andere belemmeringen. Dit is een rekenvergelijking bij één prijs, geen wettelijke prijsregel. Bron D · Een uitspraak Een verkoper beweert: “Door de hogere marktprijs is de vraaglijn naar links verschoven. Het nieuwe evenwicht laat bovendien zien dat iedereen tevreden is.” De vormgeving van de tassen kreeg in een enquête 4,6 uit 5 punten; die beoordeling veranderde niet. Schrijf bij een berekening steeds welke situatie je gebruikt. Geef bij een conclusie aan welk getal, welke lijn of welke bron je argument ondersteunt. Opgave 37 · De linnen boodschappentas Gebruik bronnen A–D op de linkerpagina. Werk met tassen per week en euro per tas.",
+        "context_html": "<h2>Doeloefening</h2>\n<p><strong>Opgave 37 · De linnen boodschappentas</strong></p>\n<p>Gebruik deze vier bronnen bij de vragen op de rechterpagina. De gegevens zijn voor dit lesmodel gemaakt. Een deel van de informatie is niet nodig voor de berekeningen.</p>\n<div class=\"source\"><p><strong>Bron A · De oorspronkelijke markt</strong></p><p>In deze oefening gaat het om één soort linnen boodschappentas. Er zijn veel kleine kopers en verkopers. De prijs kan zich aanpassen. Q is tassen per week; P is euro per tas.</p>\n<div class=\"math\">Q<sub>v</sub> = 180 − 10P   (0 ≤ P ≤ 18)<br/>Q<sub>a,0</sub> = 10P − 20   (2 ≤ P ≤ 18)</div></div><div class=\"source\"><p><strong>Bron B · Linnen wordt duurder</strong></p><p>Alleen de prijs van het linnen stijgt. De koopplannen van consumenten veranderen niet. De aanbieders hebben voortaan deze aanbodfunctie:</p>\n<div class=\"math\">Q<sub>a,1</sub> = 10P − 60   (6 ≤ P ≤ 18)</div><p class=\"note\">Deze nieuwe situatie begint vanuit bron A. Er is geen andere vraag- of aanbodverandering.</p>\n</div><div class=\"source\"><p><strong>Bron C · Een afzonderlijke prijsvergelijking</strong></p><p>Bekijk daarna afzonderlijk de nieuwe situatie uit bron B bij een verkoopprijs van <strong>€ 14</strong>. Zolang deze prijs geldt, vindt iedere koper die volgens de vraagfunctie wil kopen een verkoper. Er zijn geen andere belemmeringen. Dit is een rekenvergelijking bij één prijs, geen wettelijke prijsregel.</p>\n</div><div class=\"source\"><p><strong>Bron D · Een uitspraak</strong></p><p>Een verkoper beweert: “Door de hogere marktprijs is de vraaglijn naar links verschoven. Het nieuwe evenwicht laat bovendien zien dat iedereen tevreden is.” De vormgeving van de tassen kreeg in een enquête 4,6 uit 5 punten; die beoordeling veranderde niet.</p>\n</div><p class=\"note\">Schrijf bij een berekening steeds welke situatie je gebruikt. Geef bij een conclusie aan welk getal, welke lijn of welke bron je argument ondersteunt.</p>\n<div class=\"exercise target\" id=\"ex37\"><h3>Opgave 37 · De linnen boodschappentas</h3><p>Gebruik bronnen A–D op de linkerpagina. Werk met tassen per week en euro per tas.</p>\n</div>",
+        "source_assets": [],
+        "answer_html": "<h3 id=\"answer37\">Opgave 37 · De linnen boodschappentas</h3><div class=\"answer-item\"><p><strong>a.</strong> 180 − 10P = 10P − 20 → 180 = 20P − 20 → 200 = 20P → <strong>P₀ = € 10 per tas</strong>. Q<sub>v</sub> = 180 − 10 × 10 = <strong>80</strong>; Q<sub>a,0</sub> = 10 × 10 − 20 = <strong>80 tassen per week</strong>. <strong>Waarom:</strong> alleen bron A beschrijft de beginmarkt.</p>\n</div><div class=\"answer-item\"><p><strong>b.</strong> <strong>A verschuift naar links</strong>, doordat linnen, een productiemiddel, duurder wordt. Bij € 10 nieuw: Q<sub>a,1</sub> = 10 × 10 − 60 = <strong>40</strong>; Q<sub>v</sub> = 180 − 10 × 10 = <strong>80</strong>. Vraagoverschot = <strong>40 tassen per week</strong>. <strong>Waarom:</strong> het nieuwe aanbod is bij dezelfde prijs lager; de vraagfunctie is niet veranderd.</p>\n</div><div class=\"answer-item\"><p><strong>c.</strong> 180 − 10P = 10P − 60 → 240 = 20P → <strong>P₁ = € 12</strong>. Q<sub>v</sub> = 180 − 120 = <strong>60</strong>; controle: Q<sub>a,1</sub> = 120 − 60 = <strong>60 tassen per week</strong>. Prijs: (12 − 10) / 10 × 100% = <strong>+20%</strong>. Hoeveelheid: (60 − 80) / 80 × 100% = <strong>−25%</strong>. <strong>Waarom:</strong> de percentages vergelijken de twee evenwichten, elk met zijn eigen oude waarde.</p>\n</div>\n PAGE {\"section\": \"Antwoorden\", \"title\": \"1.3.4 · De linnen tas: grafische onderbouwing\"} \n<h3 class=\"continuation\" id=\"answer37\">Opgave 37 · De linnen boodschappentas (vervolg)</h3><div class=\"answer-item\"><p><strong>d.</strong> V door <strong>(0; 18)</strong> en <strong>(180; 0)</strong>. A₀ door <strong>(0; 2)</strong> en <strong>(160; 18)</strong>. A₁ door <strong>(0; 6)</strong> en <strong>(120; 18)</strong>. E₀ = <strong>(80; 10)</strong> en E₁ = <strong>(60; 12)</strong>. Een horizontale pijl bij € 10 van 80 naar 40 toont de aanbodverschuiving; de stap E₀ → E₁ ligt langs V. <strong>Waarom:</strong> duurdere linnenproductie verandert A; kopers reageren op de hogere tasprijs langs dezelfde V.</p>\n</div><figure><img alt=\"Antwoordfiguur bij opgave 37 · Assen, lijnen en coördinaten volgen het lesmodel.\" src=\"_assets/1.3.4_ans_37.svg\"/><figcaption>Antwoordfiguur bij opgave 37 · Assen, lijnen en coördinaten volgen het lesmodel.</figcaption></figure><div class=\"box\"><p><strong>Coördinaten lezen</strong></p><p>De horizontale verschuiving bij € 10 vergelijkt aanbodplannen bij dezelfde prijs. De stap langs V van E₀ naar E₁ laat de reactie van kopers op de hogere prijs zien. De twee pijlen stellen dus verschillende veranderingen voor.</p>\n</div>\n PAGE {\"section\": \"Antwoorden\", \"title\": \"1.3.4 · Conclusies en rekengereedschap\"} \n<h3 class=\"continuation\" id=\"answer37\">Opgave 37 · De linnen boodschappentas (vervolg)</h3><div class=\"answer-item\"><p><strong>e.</strong> Bij € 14 in de nieuwe situatie: Q<sub>v</sub> = 180 − 140 = <strong>40</strong>; Q<sub>a,1</sub> = 140 − 60 = <strong>80</strong>. Aanbodoverschot: 80 − 40 = <strong>40 tassen per week</strong>. Verkoop: <strong>40 tassen per week</strong>. <strong>Waarom:</strong> volgens bron C vindt iedere koper een verkoper; de overige verkoopplannen worden niet gerealiseerd.</p>\n</div><div class=\"answer-item\"><p><strong>f.</strong> De vraaglijn is <strong>niet verschoven</strong>: zij blijft Q<sub>v</sub> = 180 − 10P. De prijsstijging leidt tot een beweging langs V van 80 naar 60. Het evenwicht bewijst ook <strong>geen algemene tevredenheid</strong>; koop- en verkoopplannen passen bij die prijs, maar behoeften kunnen onvervuld blijven. De <strong>enquêtewaardering van 4,6/5</strong> is niet nodig voor de berekening. <strong>Waarom:</strong> de functies en de veranderde linnenprijs leveren de relevante modelinformatie.</p>\n</div>",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Bereken uit bron A de evenwichtsprijs en -hoeveelheid. Controleer de hoeveelheid met beide functies.",
+            "answer": "180 − 10P = 10P − 20 → 180 = 20P − 20 → 200 = 20P → **P₀ = € 10 per tas**. Q<sub>v</sub> = 180 − 10 × 10 = **80**; Q<sub>a,0</sub> = 10 × 10 − 20 = **80 tassen per week**. **Waarom:** alleen bron A beschrijft de beginmarkt."
+          },
+          {
+            "label": "b",
+            "prompt": "Leg uit welke lijn door bron B verschuift en waarom. Bereken het nieuwe aanbod bij de oude evenwichtsprijs en vergelijk dit met de ongewijzigde vraag.",
+            "answer": "**A verschuift naar links**, doordat linnen, een productiemiddel, duurder wordt. Bij € 10 nieuw: Q<sub>a,1</sub> = 10 × 10 − 60 = **40**; Q<sub>v</sub> = 180 − 10 × 10 = **80**. Vraagoverschot = **40 tassen per week**. **Waarom:** het nieuwe aanbod is bij dezelfde prijs lager; de vraagfunctie is niet veranderd."
+          },
+          {
+            "label": "c",
+            "prompt": "Bereken het nieuwe evenwicht en controleer. Bereken de procentuele verandering van prijs én verhandelde hoeveelheid ten opzichte van bron A.",
+            "answer": "180 − 10P = 10P − 60 → 240 = 20P → **P₁ = € 12**. Q<sub>v</sub> = 180 − 120 = **60**; controle: Q<sub>a,1</sub> = 120 − 60 = **60 tassen per week**. Prijs: (12 − 10) / 10 × 100% = **+20%**. Hoeveelheid: (60 − 80) / 80 × 100% = **−25%**. **Waarom:** de percentages vergelijken de twee evenwichten, elk met zijn eigen oude waarde."
+          },
+          {
+            "label": "d",
+            "prompt": "Teken zelf V, A₀ en A₁ in één marktgrafiek. Geef assen, eenheden en schaal. Markeer E₀ en E₁ met coördinaten en hulplijnen. Laat ook een verschuiving bij de oude prijs en de beweging langs de ongewijzigde lijn zien.",
+            "answer": "V door **(0; 18)** en **(180; 0)**. A₀ door **(0; 2)** en **(160; 18)**. A₁ door **(0; 6)** en **(120; 18)**. E₀ = **(80; 10)** en E₁ = **(60; 12)**. Een horizontale pijl bij € 10 van 80 naar 40 toont de aanbodverschuiving; de stap E₀ → E₁ ligt langs V. **Waarom:** duurdere linnenproductie verandert A; kopers reageren op de hogere tasprijs langs dezelfde V."
+          },
+          {
+            "label": "e",
+            "prompt": "Gebruik nu uitsluitend de situatie van bron C. Bereken de vraag, het nieuwe aanbod, het type en de omvang van het overschot en de werkelijke verkoop volgens de gegeven afspraak.",
+            "answer": "Bij € 14 in de nieuwe situatie: Q<sub>v</sub> = 180 − 140 = **40**; Q<sub>a,1</sub> = 140 − 60 = **80**. Aanbodoverschot: 80 − 40 = **40 tassen per week**. Verkoop: **40 tassen per week**. **Waarom:** volgens bron C vindt iedere koper een verkoper; de overige verkoopplannen worden niet gerealiseerd."
+          },
+          {
+            "label": "f",
+            "prompt": "Beoordeel beide delen van de uitspraak in bron D. Gebruik je berekening en het model. Noem ook één gegeven uit bron D dat niet nodig was om de evenwichten te berekenen.",
+            "answer": "De vraaglijn is **niet verschoven**: zij blijft Q<sub>v</sub> = 180 − 10P. De prijsstijging leidt tot een beweging langs V van 80 naar 60. Het evenwicht bewijst ook **geen algemene tevredenheid**; koop- en verkoopplannen passen bij die prijs, maar behoeften kunnen onvervuld blijven. De **enquêtewaardering van 4,6/5** is niet nodig voor de berekening. **Waarom:** de functies en de veranderde linnenprijs leveren de relevante modelinformatie."
+          }
+        ]
+      },
+      "review_scope": "Current-file Part A review is recorded separately; no curriculum-authority promotion."
+    }
+  ]
+}

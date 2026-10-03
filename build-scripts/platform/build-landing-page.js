@@ -1969,6 +1969,12 @@ ${rows.map(renderLearningRow).join("\n\n")}
 // ═══════════════════════════════════════════════════════════════════════════
 
 function main() {
+  // The new textbook edition has its own source-owned entry builder. Legacy
+  // companion generation must never replace that entry with first-edition IDs.
+  const currentEdition=path.join(MODULE_BASE,'edities/tweede-editie-2026/manifest.json');
+  if (!ONLY_ID && fs.existsSync(currentEdition)) {
+    throw new Error('Book 1 second-edition entry: use build-scripts/books/book1_second_edition/publish.py. Legacy companion pages remain first edition.');
+  }
   console.log("Building landing pages...\n");
 
   // Step 1: Resolve every paragraaf's folder name on disk.

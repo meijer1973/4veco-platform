@@ -1,0 +1,2341 @@
+{
+  "revision": "book1-second-edition-20261002",
+  "platform_base": "6d010e98610b5f7d1288af322cd228e160d39ada",
+  "lessons_base": "10b2bab1ab1dc9592f2ea1e967b6cc2cd7c281c2",
+  "scope": "Book 1 second edition; first-edition history and Books 2–4 unchanged outside finite entry/instruction changes",
+  "approval": "Manifest is freshness evidence only; independent review and human merge authority are separate.",
+  "platform": [
+    {
+      "path": ".gitattributes",
+      "bytes": 14963,
+      "sha256": "606e18f0f3aa979dadaba2bcebb12f859da7f56c51421afa5864dccabe0d28cd"
+    },
+    {
+      "path": ".github/workflows/paired-book1-second-edition-ci.yml",
+      "bytes": 4544,
+      "sha256": "964df055450d1e0d00fb3801ed857f5f7b931229ae2bba94c41a48dbbb064cc1"
+    },
+    {
+      "path": ".github/workflows/paired-books34-signed-ci.yml",
+      "bytes": 5431,
+      "sha256": "8bee9eb33b5c0d9241c0528f8debfdbc7ced436784e2b5747a8f1a0e72b5e2ff"
+    },
+    {
+      "path": ".github/workflows/paired-exercise-route-ci.yml",
+      "bytes": 5082,
+      "sha256": "d80fee38c852c48c2570839f6554c85e4f5c2d76c3640efe33344fc6761d22e9"
+    },
+    {
+      "path": ".github/workflows/platform-ci.yml",
+      "bytes": 13904,
+      "sha256": "487b7644060f793516aca9180b4827d62444e2acef10aea7b8ccfbd719177ddb"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 7100,
+      "sha256": "cd610649c496fc61506507d3fea0afa8cda37616d920b52d4de54d6d2d6b73a3"
+    },
+    {
+      "path": "build-scripts/books/book-manifests/book-1-first-edition.json",
+      "bytes": 1858,
+      "sha256": "13a8b9d19106eb4e368016cfd840dc8f5220d275d22b141b93cdd1f174f8c84e"
+    },
+    {
+      "path": "build-scripts/books/book-manifests/book-1.json",
+      "bytes": 672,
+      "sha256": "cef56d29c55d44adf0e702dd032367f4e192cf053298590f141458a00209af6c"
+    },
+    {
+      "path": "build-scripts/books/book1-second-edition-revision.js",
+      "bytes": 12946,
+      "sha256": "6ea829f4e5f7b5dc2addf9cded16d72323bf82dfedce81c94e9c20a1771de7bf"
+    },
+    {
+      "path": "build-scripts/books/book1-second-edition-revision.test.js",
+      "bytes": 4889,
+      "sha256": "ccd117332676963f409f9904a3e90bf49be98bca2c3c7a6bfb7f42627819c228"
+    },
+    {
+      "path": "build-scripts/books/book1_second_edition/book/build_book.py",
+      "bytes": 32063,
+      "sha256": "f8fb85f7e501d8b1ca14ace82d0dde772e4d0e217ec4f92b4fcdc9ded08b367e"
+    },
+    {
+      "path": "build-scripts/books/book1_second_edition/book/cover.py",
+      "bytes": 3325,
+      "sha256": "91c54a124a5b2e64c232a047d88152f536cc44d70d272fe23122171620a43c5b"
+    },
+    {
+      "path": "build-scripts/books/book1_second_edition/book/export_manuscript.py",
+      "bytes": 4297,
+      "sha256": "d3e6f518478e3d20bbf4610296f428b857ad1abc70757564a176453624344c2a"
+    },
+    {
+      "path": "build-scripts/books/book1_second_edition/book/prepare_inputs.py",
+      "bytes": 4049,
+      "sha256": "ac66b23fc19fd22e4510d939c10da20b231dbcd0993733dd67e0768e08aacb67"
+    },
+    {
+      "path": "build-scripts/books/book1_second_edition/book/validate_book.py",
+      "bytes": 8154,
+      "sha256": "734db7125c7a77bcec3e14bb82acc55705b56f3f2b80c55ece6829e508fdae57"
+    },
+    {
+      "path": "build-scripts/books/book1_second_edition/chapters/H1/build.py",
+      "bytes": 5406,
+      "sha256": "c3c361ea3606088c76994b88aeb57f3439dd4c5950b686d8dbef820ff971ea70"
+    },
+    {
+      "path": "build-scripts/books/book1_second_edition/chapters/H1/make_assets.py",
+      "bytes": 14005,
+      "sha256": "55b850982ec55c234ae28146ff90fba70f808aa243e21fa8da72f41d6b4065af"
+    },
+    {
+      "path": "build-scripts/books/book1_second_edition/chapters/H1/validate.py",
+      "bytes": 9799,
+      "sha256": "01fda118d5dadca651d091dc1b6b81faf18c0d56d8bd9a0f454f2ff4876dae1b"
+    },
+    {
+      "path": "build-scripts/books/book1_second_edition/chapters/H2/build.py",
+      "bytes": 5330,
+      "sha256": "e5b812c72edb5d50bcb22d8006e2b192a89014428cb615e1963f7f33af065618"
+    },
+    {
+      "path": "build-scripts/books/book1_second_edition/chapters/H2/make_assets.py",
+      "bytes": 18940,
+      "sha256": "4871d3f18d139fb40dfb4e7e7599b7e16fcc0c6ceb66cfadc0aeb934c72a8990"
+    },
+    {
+      "path": "build-scripts/books/book1_second_edition/chapters/H2/validate.py",
+      "bytes": 12627,
+      "sha256": "b31577d3085b940143f5957cb76187f32c6bdb32c7b5be974d1a8f97f79ab9da"
+    },
+    {
+      "path": "build-scripts/books/book1_second_edition/chapters/H3/build.py",
+      "bytes": 5377,
+      "sha256": "ab2f84485434421a960f4149063a39898867d0639502b58304c957a644c910bf"
+    },
+    {
+      "path": "build-scripts/books/book1_second_edition/chapters/H3/make_assets.py",
+      "bytes": 17788,
+      "sha256": "20a23db6b6896a147e374a159d40dacc9c1a001f432f19495f2f0261aa74a86e"
+    },
+    {
+      "path": "build-scripts/books/book1_second_edition/chapters/H3/validate.py",
+      "bytes": 10922,
+      "sha256": "61f5c7a1059b3ff0d407bfd12e6d52e8c6a8d61e72cb97811c6ba5d957d63233"
+    },
+    {
+      "path": "build-scripts/books/book1_second_edition/export_paragraphs.py",
+      "bytes": 3809,
+      "sha256": "ceabcfd8ed4b81980b8960afb5efbe43250818b935f31ea851eb69b190524ce8"
+    },
+    {
+      "path": "build-scripts/books/book1_second_edition/publish.py",
+      "bytes": 4932,
+      "sha256": "0f4ee7b35783503c94ba59fec770c688721c56874fc7a0c0fffcca90cfadacbf"
+    },
+    {
+      "path": "build-scripts/books/book1_second_edition/rebuild.py",
+      "bytes": 2696,
+      "sha256": "3cdd8d040d2baafa37bf215144d3232e6911253ef43d338066a8587660d179b6"
+    },
+    {
+      "path": "build-scripts/books/book1_second_edition/requirements.txt",
+      "bytes": 52,
+      "sha256": "425e064a4c094917cca840b5e7594a4947313365c7ea61c7e0d4517e1c912b60"
+    },
+    {
+      "path": "build-scripts/books/book1_second_edition/review_snapshots.py",
+      "bytes": 2942,
+      "sha256": "171aa5f09bf7bdf55601c4368194fc1554c627cf0c2b8663d8514ac965399418"
+    },
+    {
+      "path": "build-scripts/books/book1_second_edition/targets.py",
+      "bytes": 6404,
+      "sha256": "adddf9b09984aa7966dbddbd4f4272e25b0135cf185c49c26fdcccb2d3e68eb1"
+    },
+    {
+      "path": "build-scripts/books/book1_second_edition/test_book1.py",
+      "bytes": 1308,
+      "sha256": "7967694a9972030a8e3dd84d16ba55e87e4fda097dbcc68c87447900212fdc9c"
+    },
+    {
+      "path": "build-scripts/books/book1_second_edition/verify.py",
+      "bytes": 9161,
+      "sha256": "dec2ea3c701823e382f9eeef97729c79df6abf19bbc407967d016dedc55c3fa2"
+    },
+    {
+      "path": "build-scripts/books/build-book.py",
+      "bytes": 2712,
+      "sha256": "d66aec851ef141b7266cca2f69934473141ab3fe0d18d6477110413bead8d0b6"
+    },
+    {
+      "path": "build-scripts/ci/check-y1-product-evidence.js",
+      "bytes": 7184,
+      "sha256": "1436a0e61a7de9ececa825c074ab88fccea2a8fa660f2e638c6a051620a61854"
+    },
+    {
+      "path": "build-scripts/ci/check-y1-product-evidence.test.js",
+      "bytes": 11046,
+      "sha256": "b1fdcc735e13516196635240df1c41735f7b99e2dc785b3648fe09a30e669125"
+    },
+    {
+      "path": "build-scripts/ci/install-libreoffice.ps1",
+      "bytes": 1567,
+      "sha256": "2138a810e8dacb12881184c23b73b1efcb3fe4deab08e2281f61a66bda24ec77"
+    },
+    {
+      "path": "build-scripts/ci/libreoffice-installer.js",
+      "bytes": 4749,
+      "sha256": "f803319c68dc1b7fa790284cbff4107629b55284aa2e15f469e03d8ed313cbf4"
+    },
+    {
+      "path": "build-scripts/ci/libreoffice-installer.json",
+      "bytes": 823,
+      "sha256": "fbe48cd27b0ffd799428d0ac3ef33e18e6c4775152064a9690e53bb514e40719"
+    },
+    {
+      "path": "build-scripts/ci/libreoffice-installer.test.js",
+      "bytes": 4841,
+      "sha256": "aebceb0d9963d9fd92e3ecf1513ff4178d4f8e8faa6a8d74da5e72d54065137a"
+    },
+    {
+      "path": "build-scripts/ci/maintenance-ci.js",
+      "bytes": 16844,
+      "sha256": "209c3a56ddf8aeef2e517871061a06c2d41c6e76d715ef3747888be0c9071a8b"
+    },
+    {
+      "path": "build-scripts/ci/maintenance-ci.test.js",
+      "bytes": 21750,
+      "sha256": "5525bd9529d7d251c9107cbd05d97f73c83c4e63c54a14b0f4e565b12b6b6023"
+    },
+    {
+      "path": "build-scripts/ci/paired-paragraph-ci.test.js",
+      "bytes": 8544,
+      "sha256": "8baac0785b5d18d78e187a57055d136e95f87ab0afdc328ff74c49b56c85b30b"
+    },
+    {
+      "path": "build-scripts/content/book-1/presentation-v2-registry.js",
+      "bytes": 4442,
+      "sha256": "af79dfc4b28800f072fcdb2d27dd9cb58871e4b1636653ab10b5f2fbfe544a79"
+    },
+    {
+      "path": "build-scripts/maintenance/check-books34-v3-import.js",
+      "bytes": 8728,
+      "sha256": "8c467fb5e8612969c1ce34781d6efa61066f326284a4701e3daa0e833fdc717a"
+    },
+    {
+      "path": "build-scripts/maintenance/check-classroom-edition.js",
+      "bytes": 14224,
+      "sha256": "cf0d8c51d414370acd4958079b9382a3fb1e89cf1bebc261e85a5d60e2ab4e4a"
+    },
+    {
+      "path": "build-scripts/maintenance/check-classroom-edition.test.js",
+      "bytes": 10648,
+      "sha256": "69d6b7b43429cb301b2ff989dd005fa807796654aac085340f6b3bcd829ffdae"
+    },
+    {
+      "path": "build-scripts/maintenance/check-classroom-notation.test.js",
+      "bytes": 10656,
+      "sha256": "21547da61cb1bdba805d078e2309cd5b573f8210f20324b55058fd6f1ea080da"
+    },
+    {
+      "path": "build-scripts/platform/build-landing-page.js",
+      "bytes": 85638,
+      "sha256": "61975625af6aee453e7d7255671355fd437b69cfa5749dddd3c15e726d9e3d58"
+    },
+    {
+      "path": "build-scripts/rag/build-chunks.js",
+      "bytes": 14105,
+      "sha256": "dbcc2f892771a39fa6815629d7ba0255eeaad2f50ee65e660747a0dba37274a3"
+    },
+    {
+      "path": "build-scripts/references/book1-authority-transition.js",
+      "bytes": 767,
+      "sha256": "7822dda8822c74ade7d37b6b4837824c84a67038c368430fe57cfed0868c57a2"
+    },
+    {
+      "path": "build-scripts/references/book1-edition.js",
+      "bytes": 1622,
+      "sha256": "c7553b282a22a8d65c9f80964e867d94ce4613cbc9dfc7de2e8af6b5cddd6d65"
+    },
+    {
+      "path": "build-scripts/references/book1-edition.test.js",
+      "bytes": 3938,
+      "sha256": "c84197b209dd52ff1387edd2544b2000b713bf533f188601ef4bb1abb8fe99fb"
+    },
+    {
+      "path": "build-scripts/references/books34-v3.test.js",
+      "bytes": 8440,
+      "sha256": "3413c32a2e48ac388d4f2796d24bc2caa8bd726d635b7af2dfc59d0b1c9555b3"
+    },
+    {
+      "path": "build-scripts/references/build-owned-content-graph.js",
+      "bytes": 24090,
+      "sha256": "26d9b9cf39608bceb88129b07a6d516c2cb1e5eb89073abf1664254e3267561a"
+    },
+    {
+      "path": "build-scripts/workflows/check-book-outline-currentness.js",
+      "bytes": 57730,
+      "sha256": "d0b151f4dc9c26f2ca95fdc2f279ab6ecd84ac5044acd6a482db2fdee3a942b5"
+    },
+    {
+      "path": "build-scripts/workflows/check-paragraph-lane-scope.js",
+      "bytes": 23122,
+      "sha256": "bd3d7eb4cf1b93aab8b1ef185e051038468aafb388d9826a8a8cc8a5a8e4b0bb"
+    },
+    {
+      "path": "build-scripts/workflows/check-part-a-exercise-authoring-contract.js",
+      "bytes": 20126,
+      "sha256": "1b4b8730ae37f30b9d480de2330d7e0b0e94db4a27f89b3c0a73efad1584009d"
+    },
+    {
+      "path": "build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js",
+      "bytes": 15851,
+      "sha256": "332a988bf7ca03e3845a4796c13b52e992de7f7928412c03bd0d207fab7627b6"
+    },
+    {
+      "path": "build-scripts/workflows/paragraph-records.js",
+      "bytes": 7890,
+      "sha256": "ead06a77a21426a1f76d6aadb761cde54e128ad1a9df4f604e9db3b336c32db5"
+    },
+    {
+      "path": "build-scripts/workflows/paragraph-records.test.js",
+      "bytes": 4626,
+      "sha256": "a8107d78e306a3ae09cb392826819e09beaaa35fe3e622a78ae68c32e8bc71d5"
+    },
+    {
+      "path": "docs/workflows/book1-second-edition.md",
+      "bytes": 3061,
+      "sha256": "c64079d7944a9318e9904c4ceb29897e6b038fd17732fb1856c70872df0e5e99"
+    },
+    {
+      "path": "docs/workflows/part-a-start.md",
+      "bytes": 5780,
+      "sha256": "1d4a7468ddef6511c0c5ad9ff031acb2d49a39809ad3da7776b8527954171e6c"
+    },
+    {
+      "path": "docs/workflows/textbook-paragraph-lane.md",
+      "bytes": 8005,
+      "sha256": "b11c2b2975450255908f380895d4f757c9029f484da7851baa89d6da3ad9deca"
+    },
+    {
+      "path": "references/authored/didactiek-principes.md",
+      "bytes": 62003,
+      "sha256": "80707c70ada0be1e57f18b2d00c8552eefb7526e189ce129197e72cf0ebf29f2"
+    },
+    {
+      "path": "references/authored/vraagtypen-en-opgaveontwerp.md",
+      "bytes": 24123,
+      "sha256": "b1c6e8df75b131ff245973448be3d26ddceb448633b353294231eff68e5a1ccf"
+    },
+    {
+      "path": "references/data/owned-content-graph.json",
+      "bytes": 1002733,
+      "sha256": "94097e45f8a020836e81d5ef0bb80d904f3931ce8eef508ccf38a6d69649bf96"
+    },
+    {
+      "path": "references/data/rag/chunk_index.jsonl",
+      "bytes": 3056851,
+      "sha256": "cceaaa1850aac2aa2daddfe2fe3f24c98ea5cf4a4fa8bfe71e1789410e5170e0"
+    },
+    {
+      "path": "references/owned/book1-second-edition-2026/lane-scope.json",
+      "bytes": 1383,
+      "sha256": "fd5adb16b42b125c1c646f9715d985331d728680906d0d2210c2e910da7d1f73"
+    },
+    {
+      "path": "references/owned/book1-second-edition-2026/received/Boek_1_Compleet_Tweede_editie_Bronpakket(1).zip",
+      "bytes": 17569469,
+      "sha256": "511d95fdbba6185594a74f183e66f4777f32dd3824739a8924510e0bb2499a0b"
+    },
+    {
+      "path": "references/owned/book1-second-edition-2026/received/Boek_1_onderzoeksdossier.zip",
+      "bytes": 212430,
+      "sha256": "57825f68fe6ab586af60bedd3cdefb0b3d2853a1d49af83615c9b506401729e3"
+    },
+    {
+      "path": "references/owned/book1-second-edition-2026/received/receipt.json",
+      "bytes": 658,
+      "sha256": "df0a559dfc8186ca7497a6485d4c790e43fc6ee7c30e2991e7cb3f75809b8396"
+    },
+    {
+      "path": "references/owned/book1-second-edition-2026/targets.json",
+      "bytes": 146217,
+      "sha256": "3ee165784ee930d204d440ccad958da8c10a07202951d94fbf6757caffd1d553"
+    },
+    {
+      "path": "reports/json/owned-content-coverage.json",
+      "bytes": 2040,
+      "sha256": "68f1f1ab2a19449873d6ccf6e2ab0736de81780972c70e66d4dfd0ccd3ddd3d7"
+    },
+    {
+      "path": "reports/owned-content-coverage.md",
+      "bytes": 963,
+      "sha256": "cd135da820b6dc80185180a4a4a13cc5dec5882ddee1eac3741424e816460baa"
+    },
+    {
+      "path": "reports/review-gates/book1-second-edition-20261002/1.1.1-review.md",
+      "bytes": 6351,
+      "sha256": "f6776c104aac38b7ee7012a9a016f38051753e182000d9a87a522efc79bdad2f"
+    },
+    {
+      "path": "reports/review-gates/book1-second-edition-20261002/1.1.2-review.md",
+      "bytes": 6365,
+      "sha256": "ec9363ac7ff4482936f0a9e5af31b00bfbf68d4f6ba4a5e71b6d769ccf18ce93"
+    },
+    {
+      "path": "reports/review-gates/book1-second-edition-20261002/1.1.3-review.md",
+      "bytes": 6322,
+      "sha256": "f09bee8441f5ff17e6fc014a420be7f469cad50bbb24a1d226a140f2aae713cf"
+    },
+    {
+      "path": "reports/review-gates/book1-second-edition-20261002/1.1.4-review.md",
+      "bytes": 6262,
+      "sha256": "14d1ea9ad8b7557db46870035022837d6abefa16e27e9a41843cfa959d5d7776"
+    },
+    {
+      "path": "reports/review-gates/book1-second-edition-20261002/1.2.1-review.md",
+      "bytes": 6291,
+      "sha256": "e169bf6e26d1d2f37ab700aa6d6186012177e6ab2aa8fc3339d96e194a45a0ef"
+    },
+    {
+      "path": "reports/review-gates/book1-second-edition-20261002/1.2.2-review.md",
+      "bytes": 6976,
+      "sha256": "b57b2c18112a4d5514e67f2f881882974bc6a217e10824bcdfed6b8fd43d8197"
+    },
+    {
+      "path": "reports/review-gates/book1-second-edition-20261002/1.2.3-review.md",
+      "bytes": 6296,
+      "sha256": "5a04d6a044bbac6d918f60f977850b064df2355d67bc6ad2c1b4dedc7448de69"
+    },
+    {
+      "path": "reports/review-gates/book1-second-edition-20261002/1.2.4-review.md",
+      "bytes": 6196,
+      "sha256": "0953d97f5d83512b061f634b04c945c3544225f529266e7e3bd9df6deb81c69d"
+    },
+    {
+      "path": "reports/review-gates/book1-second-edition-20261002/1.3.1-review.md",
+      "bytes": 6349,
+      "sha256": "77e242f0a25ba54726d00729a41dc86e736f617c3c04d6db181280ef2b675dbc"
+    },
+    {
+      "path": "reports/review-gates/book1-second-edition-20261002/1.3.2-review.md",
+      "bytes": 6267,
+      "sha256": "610f078a4bd847684c6debca7b809e2203e6450063d1f1a660abf3c2338135bf"
+    },
+    {
+      "path": "reports/review-gates/book1-second-edition-20261002/1.3.3-review.md",
+      "bytes": 6316,
+      "sha256": "ddbe11bed2b97533a24b1e03db1d07a1f011d3af3ddc96da8dd0d758031954fd"
+    },
+    {
+      "path": "reports/review-gates/book1-second-edition-20261002/1.3.4-review.md",
+      "bytes": 6240,
+      "sha256": "a588fed3d7a6061cd2878ed5cc8121eaccab400a209e195821c411bafd7208a1"
+    },
+    {
+      "path": "skills/econ-didactiek.md",
+      "bytes": 20665,
+      "sha256": "2363d76958e98861c1d1b158f442c9096eff16ae87e5f1b6b63a869bb34c3b21"
+    },
+    {
+      "path": "skills/econ-exercise-builder.md",
+      "bytes": 21143,
+      "sha256": "83f07c86db1b0634cec6fecda43281588ea8acf7f4bdc2e46eb8cf5fc0df83ff"
+    },
+    {
+      "path": "skills/econ-paragraph-review.md",
+      "bytes": 10974,
+      "sha256": "2d97d73f4d1328d8fc649150359e9d0babfc491910fbaf9db6c07aa281fef159"
+    },
+    {
+      "path": "skills/econ-textbook-paragraph.md",
+      "bytes": 16843,
+      "sha256": "7cff3b4496e07449fa8d62192eb24a5d97573dd4007918e2b3a61acdc45cb519"
+    }
+  ],
+  "lessons": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 2920,
+      "sha256": "91bb45f79b7f5ff45361643ae8fa485c8f13b2e3bfd8d329e0af6d144d62499d"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/Boek 1 Grondslagen, vraag en aanbod – boek.html",
+      "bytes": 765,
+      "sha256": "4585747bb1591aa2d706169b18060a8eb5eae661ebca11945b19ec3b5985cafe"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/Boek 1 Grondslagen, vraag en aanbod – boek.md",
+      "bytes": 334,
+      "sha256": "69ef88e1b7161bb8bc214153c353cc6aae575181b7802b228da3cb877e4cb325"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/Boek 1 Grondslagen, vraag en aanbod – boek.pdf",
+      "bytes": 4082464,
+      "sha256": "2a2261b98f4a1c0a186a119120ae1b8c70e8d7860712e03eb711d1ab07efc676"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/README.md",
+      "bytes": 530,
+      "sha256": "979932001fcf956b60dd953bba4bcab45589504ea95a96a1bcf9190094b2ef40"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/.gitattributes",
+      "bytes": 422,
+      "sha256": "25228da26b6ecdd96a216d55899fd5531be761f1c10f7ddd679262e260470317"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/Boek 1 Grondslagen, vraag en aanbod – boek.md",
+      "bytes": 239085,
+      "sha256": "a6cd24bd7cb2314a7a13c974a02d1a89850f89f4516ef51daa479bd72aadf91f"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/README.md",
+      "bytes": 3579,
+      "sha256": "c17923491bd2e07ca0ea1830308b5c983598a26bfd45a3eac460eb74ccb10d00"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/boek/Boek_1_Compleet_Antwoorden_Tweede_editie.pdf",
+      "bytes": 491815,
+      "sha256": "dfe7fec72004712845ea55a71417cb241f5d01fde4e9ca1a8bb0a0f8e5cbfa2b"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/boek/Boek_1_Compleet_Docenteninformatie_Tweede_editie.pdf",
+      "bytes": 238973,
+      "sha256": "99861e11e4e0f4e045802418cad47beb61cdb5f138094a4806142ed79a6fdd3e"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/boek/Boek_1_Compleet_Tweede_editie.pdf",
+      "bytes": 4082464,
+      "sha256": "2a2261b98f4a1c0a186a119120ae1b8c70e8d7860712e03eb711d1ab07efc676"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/book_matter/Begrippenlijst.md",
+      "bytes": 6289,
+      "sha256": "7cac65aead8197a64f6670e2e1e7db81e9f7190817b8bb3a6226a4365b491997"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/book_matter/Colofon.md",
+      "bytes": 1360,
+      "sha256": "df0f8d22ee7090355361e0cc5f9be1578e404a77eedb5c57251cbf10bc8cae1d"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/book_matter/Formule_en_aanpakoverzicht.md",
+      "bytes": 5956,
+      "sha256": "3d7adf3627f0d35beac4a740b48b61155d6ce94395cd1dec7b8ced5d992de277"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/book_matter/Inhoud.md",
+      "bytes": 922,
+      "sha256": "2db3542ab4eed378e3f79542c2e9c38c9c946cabbffc4b679148b65f8baba941"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/book_matter/Voorwoord.md",
+      "bytes": 1799,
+      "sha256": "b917b12d0aa85186f2abfe3f79ad472a3ae82798e80e78c6fa25474bf7561e5f"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/book_matter/formulas.json",
+      "bytes": 9588,
+      "sha256": "1a6d4ed99195216b93084e90c11c8a94622474b04a01144763665fda8ce304a5"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/book_matter/glossary.json",
+      "bytes": 13863,
+      "sha256": "d636bd55e712084199d16c6340cebc33d9dbb66bd82724d8eea4a114949a39aa"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/book_matter/page_map.json",
+      "bytes": 1581,
+      "sha256": "f76682d211356ec81ca59ef50af9dd74ec3cad44ab84295213111a5e2220dc4b"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/1.1 Economisch denken en rekenen – hoofdstuk.md",
+      "bytes": 76414,
+      "sha256": "d6f6671e5b769c85f06a43d8d942ef9f8935b8e8c83b721697c578a04a7c2858"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/1.1.1 Schaarste, keuzes en alternatieve kosten – paragraaf.md",
+      "bytes": 14658,
+      "sha256": "249ad3b06b6e717c1a0f1c3c0c1174fd99d1df45e751807c5ac0b4d8b7d2a492"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/1.1.2 Verhoudingen, percentages en indexcijfers – paragraaf.md",
+      "bytes": 20759,
+      "sha256": "e10b272612bb096e6b2e2628f67198eaa3f4f123c4b6f7c420eb006312059335"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/1.1.3 Tabellen, grafieken en formules – paragraaf.md",
+      "bytes": 24544,
+      "sha256": "989672f574c9454c3bf44bcea4ec061e68bb9336efa9b2a93c2a8ab581daa206"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/1.1.4 Gemengde opgaven – opgaven.md",
+      "bytes": 9851,
+      "sha256": "8da28b45850637e4bc586832116c67ec34b3b15e6df47124a7d8b1ec51b082ef"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/Antwoorden.md",
+      "bytes": 36188,
+      "sha256": "dc89980240843ea5fa1d01fe68d33e7d3621ce5938fd7314f7e234bd204facd0"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/Docenteninformatie.md",
+      "bytes": 19238,
+      "sha256": "4b0b2fbe814f202ff8e81fdd8837d0ef882b2adb98ccb0957088f6849ede6c93"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/Hoofdstukoverzicht.md",
+      "bytes": 4786,
+      "sha256": "d6c9a5283971c5abeba2e24b586d4ad86b31b065cfe3a0576f2831d64e6bdc67"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/QA/Boek_1_H1_Antwoorden_Tweede_editie_page_map.json",
+      "bytes": 1344,
+      "sha256": "12e5dfa13b593177248fe74ecf64e0db4febfd349fa79bf5732f23d11316380c"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/QA/Boek_1_H1_Docenteninformatie_Tweede_editie_page_map.json",
+      "bytes": 530,
+      "sha256": "2b987751afa05e612858a8f7203389dfe8792374a961d7ffb74550ea6e5ef169"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/QA/Boek_1_H1_Economisch_denken_en_rekenen_Tweede_editie_page_map.json",
+      "bytes": 2704,
+      "sha256": "40725cd67a68090c767c6cbf1b9ea3d5b03135729309ae63fc100047496a0d11"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/QA/exercises.json",
+      "bytes": 45551,
+      "sha256": "9e5bf2df607c112dc1895d099f89ca8b7bbf7608725847fc4f3784a93904ed38"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/QA/figures.json",
+      "bytes": 15351,
+      "sha256": "5c8849958f5a51bb30d37d333b3a309e52de25a0f77c3a18b8717532161e4341"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/QA/lesson_minutes.json",
+      "bytes": 2291,
+      "sha256": "e3d201a9ccc94d01c95161dc010fe61b657ff8accf86d21d690f33434e78bc75"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/QA/numerical_cases.json",
+      "bytes": 8393,
+      "sha256": "5914560e2eaf48d190d748094b384da493d55424dd3504209935166a83b29eb3"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/QA/paragraph_exports.json",
+      "bytes": 4178,
+      "sha256": "7c4338d0a3a51db217a8fa9797cdec5b43d3f64326c9263a5199c12992afc132"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/QA/target_exercises.json",
+      "bytes": 10929,
+      "sha256": "77af06b3a7dc85f75101eda3d9a290881787613c3178b20ce42ff58ad5a108fa"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/QA/validation_report.json",
+      "bytes": 116506,
+      "sha256": "118d52fab31499f623402f5987199843c4e0a11716415e5c633cfaebc3ae03e1"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/README.md",
+      "bytes": 1023,
+      "sha256": "3696ceff8bea126b7700bfd4a70f6a30c2e6d1da84bfa526ee94ae9ed8991633"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/Voorblad.md",
+      "bytes": 2353,
+      "sha256": "e31e9d8b64fea26952c5199b99cecb8462d1f3c53ded00bea922b6a176331dd3"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.1_ex_3.png",
+      "bytes": 74309,
+      "sha256": "66c85c719f862cf04ec54c40da1e796b14b94a331823b4f0db0f2f362b113cde"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.1_ex_3.svg",
+      "bytes": 3138,
+      "sha256": "c1482d904aa0a806340f415a1451763afc672dfafc223de138798491cf1fcb56"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.1_fig_1.png",
+      "bytes": 46192,
+      "sha256": "c7cb65cc00812c67e3069c49ff932af307ecfd25302ccd2d11a328974f5cadb8"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.1_fig_1.svg",
+      "bytes": 2329,
+      "sha256": "1ebf9586d6871b24576fbf5e4ec598d437dea9182eec89efd3040d7380f79c06"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.1_fig_2.png",
+      "bytes": 76872,
+      "sha256": "0bdfdd37980cee5ea4c8d2181bd4b1e60c5ed7464432c79915485ae0bd531c59"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.1_fig_2.svg",
+      "bytes": 3160,
+      "sha256": "c786ee1a9f6e14f6664152b89925487d7853fbc90ea591ea52d6a9bb80193d4d"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.1_we_1.png",
+      "bytes": 53331,
+      "sha256": "f7689067dd0bb8b21793041b68716753a9a1ff0605088c7f012f4f24f3c63567"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.1_we_1.svg",
+      "bytes": 2346,
+      "sha256": "27d183f07ffa00030ebebeaa60903a44606edc22178a5195d2ae228d5f02daae"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.2_ex_12.png",
+      "bytes": 41802,
+      "sha256": "28344dd7f613349fc4d50c64466bfbcf8b9e5bf51c64047e0f5897f9f31c4abc"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.2_ex_12.svg",
+      "bytes": 1703,
+      "sha256": "ab002b87ee4446b7137386e73e136e0f5b89ca9864efcf9bfd49e065253403ae"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.2_fig_1.png",
+      "bytes": 55573,
+      "sha256": "fa66a3ab1fca8a7865b1fa48657850faaeb3beca3553f54349cc9e60d7edd222"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.2_fig_1.svg",
+      "bytes": 2065,
+      "sha256": "11652c4f3649c764f96d941048212848a43a8b0e7814fed9efc9b47ddf3fec2d"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.2_fig_2.png",
+      "bytes": 37524,
+      "sha256": "4c32e7ab1d6b03c958cd860bde0d1b788f06d303c1d5031bed7dfe3d531023cc"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.2_fig_2.svg",
+      "bytes": 1703,
+      "sha256": "3c866fabc3c5820d8640831830c881b581f458157e71674b9acb9e34f11c3b84"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.2_fig_3.png",
+      "bytes": 47790,
+      "sha256": "19e44ee147a2d6c1f5735bbf9d0825c65677945c32234cfa8d844be95d7fdc66"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.2_fig_3.svg",
+      "bytes": 1888,
+      "sha256": "f866e18199269dee12d0e5391cae1054469964634ac23de17df7bde3127ecf6b"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.2_fig_4.png",
+      "bytes": 45235,
+      "sha256": "aea8b8e422bfe196722297a08a31277800f67bbb88501ed1c5fed1045b921e3a"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.2_fig_4.svg",
+      "bytes": 2730,
+      "sha256": "27ec7a2c628862ee35afc7f24be15af783a6f6340c6f6026fb4418c5ba6174ef"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_ans_25.png",
+      "bytes": 66761,
+      "sha256": "f104d20a124466b26fd78ea1d6f8eb90efd8eb353285d697c7370346d1acb1c3"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_ans_25.svg",
+      "bytes": 6387,
+      "sha256": "57b0d555278dd7804d8a8d24f33fd57c12fc91a7a8f6984615d6bd45f3150adb"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_ans_27.png",
+      "bytes": 62251,
+      "sha256": "17524a997771dfd8ca411f08da5decff5053b2ba2f1c2547314d029c932b1a9e"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_ans_27.svg",
+      "bytes": 5790,
+      "sha256": "117adc20f7e501632f4366b318d8f66db2cf993e2ed20cdd167d1ca6c024ecd0"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_ans_29.png",
+      "bytes": 48318,
+      "sha256": "5cb7dd3c00a4bab860aa780dc9be788579b12b779776bda4c84295bbc38d05e3"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_ans_29.svg",
+      "bytes": 5234,
+      "sha256": "e32432951e20865f415658dac1a38eb95baf7e40bb3af458abd91d3222afdb07"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_ans_30.png",
+      "bytes": 64245,
+      "sha256": "af16af1de504d6aa3a8d957109675f5be48f9d4c8d55125e81903a2bcbc65d58"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_ans_30.svg",
+      "bytes": 6511,
+      "sha256": "a865ff7231cfa7e88e62d97e2b10e62b6231f57af5196bc8d92abb5cde1c4275"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_ans_30_area.png",
+      "bytes": 46640,
+      "sha256": "9fb1c43b7f4676f787023431165cb7873b3df99f65892c73f49413a05dd3aa4d"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_ans_30_area.svg",
+      "bytes": 5232,
+      "sha256": "c267b8643e5394f2111414ed44e43bcb98f76df966a9913a9056059cf948d1bd"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_ex_24.png",
+      "bytes": 51686,
+      "sha256": "a5dc0521b5b0277e23ecbd75fef76e4dea0a82c70ba32239f793d710d04fe658"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_ex_24.svg",
+      "bytes": 5410,
+      "sha256": "6e07cb79fe30272d4a8d12f858f5c4542474f8c8041812f371f15cfa33030623"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_ex_25.png",
+      "bytes": 43198,
+      "sha256": "c806795cc17ac1acb4e80c60db52754433a85f05344ba3f772211fd4ad12db04"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_ex_25.svg",
+      "bytes": 5063,
+      "sha256": "61c4c468a6bf9a00da2af1d1b332d7139ed968d604aee204fd8933d43ab36528"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_ex_29.png",
+      "bytes": 43052,
+      "sha256": "88a2b13b848906fe74337258c6a0497a261526fa491bacf5b61ddad231d4718f"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_ex_29.svg",
+      "bytes": 4920,
+      "sha256": "3b222b223551d290e893eb47b541c107f7760066f0e7441daeb326df4982102c"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_ex_30.png",
+      "bytes": 42379,
+      "sha256": "58d237d164bfd2d48bc957cf0bbd84ea1870d04d9ce2d48d81e585e6aed85ebb"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_ex_30.svg",
+      "bytes": 4918,
+      "sha256": "2e3747d21f896628239147323f6e7fd296fa4d3a09ce3b55a0546d5165bdd9b7"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_fig_1.png",
+      "bytes": 46355,
+      "sha256": "9a201c536218676936ee380ead6165b53c27481761b758b53c7b7d2d7426c12e"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_fig_1.svg",
+      "bytes": 4737,
+      "sha256": "21d7334811cdb26e4e3192ab40d6023b597c1e1880e24a08c8244fca8e47c17a"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_fig_2.png",
+      "bytes": 56940,
+      "sha256": "f82c272d409f1f586888c48164a8022af250363a361a9a63b88e3a5a760f8938"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_fig_2.svg",
+      "bytes": 5306,
+      "sha256": "4ad31d65e0ee050443c07f2f36bd3dc7f114539f48b90eb465ba54055c759d8e"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_fig_3.png",
+      "bytes": 65676,
+      "sha256": "1dafaab8769bac782efb3153591d1b8d92643bee210b0a94cc080dc9780010cd"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_fig_3.svg",
+      "bytes": 5820,
+      "sha256": "b72565c21e317c5523e01c7376b25eefca8e20cd27d734b6af990d2ed3fde357"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_fig_4.png",
+      "bytes": 42500,
+      "sha256": "6649eca9bc98731e643e1cfd7b586442ce334d503156e348190f69042078456e"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_fig_4.svg",
+      "bytes": 2284,
+      "sha256": "968a7dcd16b4496e826d2303b7c235b08d077ee76c56084b32ebd8212506de79"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_fig_5.png",
+      "bytes": 46546,
+      "sha256": "74fa014f6c05d53de0078c7cb93dbe55f0d5ef1ad68deadd76d1d757c07ff9d2"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_fig_5.svg",
+      "bytes": 5232,
+      "sha256": "72e2f632ded96a556b17d0bfef444b8746f65ec9b5d74b7922680d6684265f23"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_fig_6.png",
+      "bytes": 68761,
+      "sha256": "e0b90f38a31486d063f1c026b1912a9dc4b459374e5588bd354ad56e5f9f74b3"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_fig_6.svg",
+      "bytes": 7249,
+      "sha256": "1c0fdbebbbd9d60809e13c7a40b8f5fae6cde5ef78b665a6532608cdb5259372"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_we_1.png",
+      "bytes": 63834,
+      "sha256": "c6601d5f18e01cbc14d1720fa159b5f83c0fad24e7f4a90bff19653310744f4d"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_we_1.svg",
+      "bytes": 5446,
+      "sha256": "ed4abf21dc55178c3d7f0b2f6bba913dacefdcbc6b9618b14d286dd1f5093ab6"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_we_2.png",
+      "bytes": 46033,
+      "sha256": "8bb318533790403a193efa1c2c2e338a1f5ac56e88b2c079fe478da8f778a00d"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_we_2.svg",
+      "bytes": 5224,
+      "sha256": "ca223ba6d0ddcbe469dd7499e035f695c1d8e17edf441302253492dbcf6551ef"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.4_ans_36.png",
+      "bytes": 66505,
+      "sha256": "1364c61829c19bf91320627d806165f510af3b07dc2149a62944f3b249797ae3"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.4_ans_36.svg",
+      "bytes": 6158,
+      "sha256": "1af1ccd8268aa595638d56f56453d745a3240e4d48be1fac257e5f9d1c2f1533"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.4_ans_37.png",
+      "bytes": 46207,
+      "sha256": "7a7973d9abcefa8a8a3c7f1a14903a24ca1e61ac135b9ba0d8e5a98db6f45e59"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.4_ans_37.svg",
+      "bytes": 5224,
+      "sha256": "d0b6ffb98515c4a43b2cef15b49a5c9794be38cbe62a7ebde40947ff72d57213"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.4_ex_37.png",
+      "bytes": 42051,
+      "sha256": "4c064217d858de683f0522e0efd00ac7e8dc6b8e2327b85ff20b239c88158b06"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.4_ex_37.svg",
+      "bytes": 4911,
+      "sha256": "8d6444e4b92176503c04fbdba3e34f780ac38ecbb4edf3485147482bfb350ae6"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/chapter-order.json",
+      "bytes": 288,
+      "sha256": "216b9190728eddfcbeb848b2ca46c6a1393b8df80753cc08e21b20bc0572448c"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/design.md",
+      "bytes": 731,
+      "sha256": "80f1a80a5a5c95a8f0ede9efe3b6fdd6313301513751e213933c4c21cd920d4c"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/print.css",
+      "bytes": 7009,
+      "sha256": "254cbd2b9dc52229dce7f253c9c9698641046c78a6bd3c6acb4deee0c01dc3d0"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/requirements.txt",
+      "bytes": 109,
+      "sha256": "af900cd54c4b8d13703a447430ab730cd7d9797ce1d9cfe57c279f472d846399"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/sources/book-1-outline-second-edition-v1.md",
+      "bytes": 58199,
+      "sha256": "ab51a92b2be4a37e87317c32ac4d2a14174a3689e469b1f104e02c2c85668022"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/sources/source-register.json",
+      "bytes": 3145,
+      "sha256": "c31fab8126cb31df29b61414d4ccc54a2ca6248a42536fccdc86c7765001c5af"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2 Vraag – hoofdstuk.md",
+      "bytes": 72362,
+      "sha256": "6cb2e10216519dd68327ef55840c94008d3aed566b0068cf1aa5484631334505"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.1 Betalingsbereidheid en individuele vraag – paragraaf.md",
+      "bytes": 19752,
+      "sha256": "bcfa8e2586e1fed8c7a7aa5b1f6c571a800e0ee5da5d278e5c0ef2b349484e88"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.2 Vraagfactoren – paragraaf.md",
+      "bytes": 19266,
+      "sha256": "57fe7dacb96f888b82d170bd55060c129fcd8effbae8fbed89c8a4eacd8f6c7a"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.3 Van individuele naar collectieve vraag – paragraaf.md",
+      "bytes": 17154,
+      "sha256": "133078fafc4d48401e9c232786c82296a970053f92363d9a71c33c897ca16064"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.4 Gemengde opgaven – opgaven.md",
+      "bytes": 8944,
+      "sha256": "f3f8afc64a17d8552b5f67708c4bc6a908254e707cd71aa3ef6cb0c7a01367a9"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/Antwoorden.md",
+      "bytes": 40040,
+      "sha256": "f84d1a278537a2f3d8318c7b59f689a139421a631762c5926ffcbc3ad1690827"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/Docenteninformatie.md",
+      "bytes": 20633,
+      "sha256": "e3646b257412ad67beaae17591d62706f5ff29fe9ac0ffc944fe3254168b4ff2"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/Hoofdstukoverzicht.md",
+      "bytes": 5304,
+      "sha256": "2b83460cf742878a7583a5bebc11b3e03467f1be963e72f13cf113cb6859b5ac"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/QA/Boek_1_H2_Antwoorden_Tweede_editie_page_map.json",
+      "bytes": 1480,
+      "sha256": "9cd418186dd9bef0ae28a14bd2cb6009c9a909895bd17b00f46e2bbbcb35ea9b"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/QA/Boek_1_H2_Docenteninformatie_Tweede_editie_page_map.json",
+      "bytes": 530,
+      "sha256": "2b987751afa05e612858a8f7203389dfe8792374a961d7ffb74550ea6e5ef169"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/QA/Boek_1_H2_Vraag_Tweede_editie_page_map.json",
+      "bytes": 2704,
+      "sha256": "40725cd67a68090c767c6cbf1b9ea3d5b03135729309ae63fc100047496a0d11"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/QA/exercises.json",
+      "bytes": 47306,
+      "sha256": "3bf6548fd5bfaa342d95e1004bae7214c9495a2cb4ec0e7e92a1b4c8a3b8a9dd"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/QA/figures.json",
+      "bytes": 23188,
+      "sha256": "a48220cfc6979d58818b9f17dee7175bf872b5202451d5f2583fd0533cb49ec5"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/QA/lesson_minutes.json",
+      "bytes": 2300,
+      "sha256": "f082c872446e31a4c4d2db5d2685e0c1aa387151ae3c59503cf2ef95695d4364"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/QA/numerical_cases.json",
+      "bytes": 3921,
+      "sha256": "2222e6b401551cd5741854f614209229f721e9c80c228ffeaa0e05936670df0f"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/QA/paragraph_exports.json",
+      "bytes": 4048,
+      "sha256": "b75bfc719f54144068601935b4e361ba852b82f4fbd8381cfd353e0089e40390"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/QA/target_exercises.json",
+      "bytes": 10725,
+      "sha256": "6ea62331c98871022b77e6be853e0224ee79000f344ce501cd95caa5ed451e27"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/QA/validation.json",
+      "bytes": 119815,
+      "sha256": "67885baab542d56d69ea3324f7282357e006ade9c0b9b48af6d26a16e24c01c6"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/README.md",
+      "bytes": 1023,
+      "sha256": "f4399cf3919e4003b11e7ef3fdadbd7f24f04e27c4db3572b5a678be87739b33"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/Voorblad.md",
+      "bytes": 2276,
+      "sha256": "a463806518e13e1aa39ecaeb26111ce85fa069e3701b867b88655769f2af0167"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.1_ans_4.png",
+      "bytes": 61532,
+      "sha256": "031e5940bb62e859644d030f2ba73cd51033421b97b7c76682f40b9199764d62"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.1_ans_4.svg",
+      "bytes": 7207,
+      "sha256": "e4bd5faf0d6e60011a653252dad37e30ce6a09ad2bd547ae12025bf59c8735d3"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.1_ans_6.png",
+      "bytes": 59217,
+      "sha256": "b216d31c49bfa2751a390ef1f956987030b39e229d991b0da3cebb9ade958094"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.1_ans_6.svg",
+      "bytes": 7218,
+      "sha256": "51c6decc68add5274a271f0df4c56ea8d997e9a78d1a38e1b4e70d3752bf1d40"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.1_ans_8.png",
+      "bytes": 59670,
+      "sha256": "d7bb3f691354baeafdff2735fa7e56c21212e61b49e1a0957dcfbbdf3cc8e91d"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.1_ans_8.svg",
+      "bytes": 7077,
+      "sha256": "57823d5db7576e7782dad2990daa46ab07860a467ab036a9dfb71b7033cf0cc9"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.1_ex_3.png",
+      "bytes": 60542,
+      "sha256": "95de8e8a49fd2deb36dc5d9622c333957299165bc849ed9d55cad8c90c623a23"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.1_ex_3.svg",
+      "bytes": 7218,
+      "sha256": "2abf0f7be4e8590b5fc03a377d953b5213a8374f7b64975519b1bb44664d19d1"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.1_ex_4.png",
+      "bytes": 37466,
+      "sha256": "8256ce83315edb8d3a10c93bc134055f00d2ee40919a57f3ebda28c718b7268b"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.1_ex_4.svg",
+      "bytes": 4589,
+      "sha256": "4558fa46d5e463061735a2f761c2d6c0a2dbd51fec31c833e4ce095988d52c17"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.1_fig_1.png",
+      "bytes": 57046,
+      "sha256": "3e3ab95cfc44c702e7a5bd617b7c548c6e4adf9ef58873b896f0a036367afaa0"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.1_fig_1.svg",
+      "bytes": 4857,
+      "sha256": "0be24dba6abc38f21aea2489a6af4d86da045d86c98d40bd407b2711cf627d36"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.1_fig_2.png",
+      "bytes": 51574,
+      "sha256": "9f5b3dbadf518a216438e598f3804fc645280758f3ad6800c5f95e3b229067e7"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.1_fig_2.svg",
+      "bytes": 4407,
+      "sha256": "f44db5d5bf4290f4384cc6248c02fbb5e9d21d050bd7d0b6809e4f8d07ac6a6a"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.1_fig_3.png",
+      "bytes": 43462,
+      "sha256": "fa752f635159f8d25a8d9cd07d89114bd7269885731ec3bd4ae98bf5f105e966"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.1_fig_3.svg",
+      "bytes": 6034,
+      "sha256": "28321ca84ade3eb516a16ca8884b8a102720d3209599e6bc97d5085d495a72b8"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.1_fig_4.png",
+      "bytes": 65223,
+      "sha256": "2fe94f4164d69f02c9024f2169941e0f5c48491381a9ba91921562d2932814bf"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.1_fig_4.svg",
+      "bytes": 7251,
+      "sha256": "58f3fa8ed14ec34bb3db594a2286ad0107a6185ed06ec5fe4f821e1291cc4a4b"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.1_we_1.png",
+      "bytes": 66928,
+      "sha256": "82ad40ad12b55d97e36928337765a05b47b6c9b5c1c071a65c423b9ed819fc8f"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.1_we_1.svg",
+      "bytes": 7819,
+      "sha256": "2a46943a270741dbd2d2905f23e9dea7855c51bac4caf00cd5b424c8857de83e"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.2_ans_15.png",
+      "bytes": 89029,
+      "sha256": "9e71ff828b0e1f37c41ac76501ebdec59a3255f2820b52b85bef28b13eb897c3"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.2_ans_15.svg",
+      "bytes": 8087,
+      "sha256": "2e044be84ee38f717167dd1c9b29d0fd3ff41807a283c46f844c5d2526f56379"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.2_ans_18.png",
+      "bytes": 85555,
+      "sha256": "c6395e5683f346b922a1aea70d7917dd566e0a1c32494dd13c8df300ef80f00f"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.2_ans_18.svg",
+      "bytes": 7363,
+      "sha256": "318fa54f30d84a7bc0da083e436f4f953fb099e98cf01731d9eae160580e4213"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.2_ans_19.png",
+      "bytes": 86792,
+      "sha256": "439fbe7e15f40d71773081acc0b19b190a18f995d1b0eafc4ab71047a3d4c718"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.2_ans_19.svg",
+      "bytes": 8079,
+      "sha256": "3978a9ad23827e2098743390066021110277b469db2aab3bf25decbbd86c1d78"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.2_ex_14.png",
+      "bytes": 66650,
+      "sha256": "3b33aa8bbda8d332b4d332725b783e570bd1cad899da017fb6d1133ebedcdb09"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.2_ex_14.svg",
+      "bytes": 6074,
+      "sha256": "3c76b6c0765fa70cfd68504de192269d1a6c4bb34b4820248c8526d749391b3a"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.2_ex_15.png",
+      "bytes": 66229,
+      "sha256": "183e63edc653a5ae95a5230e2c2f40275bb2bcbe4ed7474777eae22841b2b63e"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.2_ex_15.svg",
+      "bytes": 6105,
+      "sha256": "a5fed758cdef1f46bf61f1cbd8a786d7167cb13799ee1b4f16fbeb73db5d850c"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.2_ex_18.png",
+      "bytes": 54666,
+      "sha256": "0e7eae2856193afc7986f6e2fc0a3898814d5a63231150ba2d348011d25ae20b"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.2_ex_18.svg",
+      "bytes": 5347,
+      "sha256": "618d482c52de6010ffebe023639d98976809e86839ef3d33ad13b5e158c5d6ea"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.2_ex_19.png",
+      "bytes": 58661,
+      "sha256": "09c8abafa7bc389a05486b6fe74e562a8a11fae722781f5aa05ff6a848472a85"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.2_ex_19.svg",
+      "bytes": 6080,
+      "sha256": "9f789d70118a14434d0aaa1303db6151e7d77737653807603fb88f278967e038"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.2_fig_1.png",
+      "bytes": 62510,
+      "sha256": "79718ae6572f6890f584bd998e8955a162de2e1919e9130d7c3b5bda6bc20ea1"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.2_fig_1.svg",
+      "bytes": 6651,
+      "sha256": "eed5e1cc695193fcb5450a55fd76dbca5030d3394627f566c721868184b986c9"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.2_fig_2.png",
+      "bytes": 87112,
+      "sha256": "bf45e9354ed8b6ce742dca89dd02f0295c528b79043d8ff0ee4ca896e006d450"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.2_fig_2.svg",
+      "bytes": 6931,
+      "sha256": "7b5a10dee0848bdc99178805b53d5410baddef14b4e3b87ffcbdc96eeff199f1"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.2_fig_3.png",
+      "bytes": 55877,
+      "sha256": "3d0d79e6ce4427f7d24c66f57a59b9d64e5611ee599272edef28e0a4a03e43de"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.2_fig_3.svg",
+      "bytes": 2409,
+      "sha256": "846481d505b22bd3093bbb646fd46eb2a80e2d570cf18bb6a42ab6ff7cf87dc7"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.2_fig_4.png",
+      "bytes": 55456,
+      "sha256": "8314122f7bcff7e39db662d7e708b22c12c813e1819ac5aa246edc0a03828d1e"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.2_fig_4.svg",
+      "bytes": 2397,
+      "sha256": "23427f3b3275f39a70b805e589b23139a7600be9b0fbfd26155b8ff1d0b0fbe4"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.2_we_1.png",
+      "bytes": 84440,
+      "sha256": "772145eb0d5f0c521c342af24e8ef05ef4bb5574c8dbc80361feff08dbfabc80"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.2_we_1.svg",
+      "bytes": 7345,
+      "sha256": "2afeb9e0accf294f92723089684250b203fc57c3035161db0383df979e7755c4"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.3_ans_26.png",
+      "bytes": 56765,
+      "sha256": "6f8a5514b28081454c491fed7688fb805c0ee887ff44162397451b0339a68bfd"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.3_ans_26.svg",
+      "bytes": 6531,
+      "sha256": "26560d685604701f2dd6c522c1394bce0ff6172ac28062635a958bf92286ebe4"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.3_ans_28.png",
+      "bytes": 58041,
+      "sha256": "fbea6fe444879d4da567884846474b94a52348b54686d2c179d307cf2014be2a"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.3_ans_28.svg",
+      "bytes": 7219,
+      "sha256": "ae9f17a1cdebf37589faa4865938e33028621d008c10f8afb47e70dda6b714f6"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.3_ans_30.png",
+      "bytes": 64201,
+      "sha256": "5a5abc9301df00dde3ce498cf75d512a2c8be7eda345a3c3fe97e4d319626dc7"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.3_ans_30.svg",
+      "bytes": 7099,
+      "sha256": "1671849a4ce67a7d6be3ef8cc7d7e0fac40910fe30c2ec0369023baad1ac84f3"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.3_ex_25.png",
+      "bytes": 74372,
+      "sha256": "d71c658a3d1a8092a61dd4ce3644c3bca14b848ecfa6463118aeac010d7bd144"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.3_ex_25.svg",
+      "bytes": 7837,
+      "sha256": "a73b4879acf49d58fb66c7bdab37e5eddff92b43a69cf3da2db97525767de39d"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.3_ex_26.png",
+      "bytes": 38567,
+      "sha256": "0f6167e34df2f7791a636951c8959d1be02ef8eb84e4ce3a55e0f02f1796a2ba"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.3_ex_26.svg",
+      "bytes": 5224,
+      "sha256": "8bb182f25d659d6af1a1bd6b62333c9800d31bc6eae00cb52d72657da68e34cd"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.3_fig_1.png",
+      "bytes": 76156,
+      "sha256": "d276bd0146c8bfa862f5d2d4ffbf0080700c6f78a698e928ab6d772523f8009b"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.3_fig_1.svg",
+      "bytes": 7852,
+      "sha256": "1cabbce4d427969c4574dce83d36b96e8e71729327b06acea51179a7ea4be581"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.3_fig_2.png",
+      "bytes": 77130,
+      "sha256": "60c2e6dfba3e4dd9eeed842714c9da7333396e30c367254b9a0b805acf1f89d2"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.3_fig_2.svg",
+      "bytes": 4857,
+      "sha256": "3c8afbc233d83ead8bafe816d783e456e58b3c9f72cc2154a9fd35fc47b2b7d9"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.3_we_1.png",
+      "bytes": 51824,
+      "sha256": "fbf47744874a7e37898cf44b7af192fd074546936f0cb858b1304621383ad85e"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.3_we_1.svg",
+      "bytes": 6168,
+      "sha256": "2f4ef5ce605f8cbe355918f0ca112cb2b971a00c2e3a0b0131ae3edea7d868ed"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.4_ans_36.png",
+      "bytes": 66453,
+      "sha256": "c5b6a25dcbe140178bb138d1f4ccb61e595b418a0790705bf93c9dd3a0355da6"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.4_ans_36.svg",
+      "bytes": 7955,
+      "sha256": "e0c3dadd5b8b2f47cf21a961680b763ccb86fd292e8597f90290bf4839653116"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.4_ans_37.png",
+      "bytes": 77674,
+      "sha256": "ec52e4b5b562c4c13aecc81aefc274e6eb1a4e8e60369d34ca86fa9157df217e"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.4_ans_37.svg",
+      "bytes": 8090,
+      "sha256": "e3fb53bf0d26a3ab0635a84b347d4b409c752f4a1657c611d262529599c4260c"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.4_ex_37.png",
+      "bytes": 56721,
+      "sha256": "45bd05ebd512cd0bce43462c58fe576edd577bae948ddfdb5c49fa9d9b1adb77"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.4_ex_37.svg",
+      "bytes": 6094,
+      "sha256": "be1ed31cb8c88a7e41b87426273817acd7b97bf32d9775faa3718f730821b860"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/chapter-order.json",
+      "bytes": 267,
+      "sha256": "0eb88622e515c8f50e5bcbdeae2ae3fe808c78895131f828a914a7ec4192febc"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/design.md",
+      "bytes": 731,
+      "sha256": "e20ed2535c55b837ffc03b50678ec909baf050326be29bcf689e9fc97361c22b"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/print.css",
+      "bytes": 7138,
+      "sha256": "e3ae09377d67e50c4aa544bf2902fddb19578795f109186e10a0b9d2ffb4f7b7"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/requirements.txt",
+      "bytes": 109,
+      "sha256": "e7bdf487698dec20f716b04da974cccea68d1dd25f6df23d94779df847a02c4f"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/sources/1.1.1 Schaarste, keuzes en alternatieve kosten – paragraaf.md",
+      "bytes": 14434,
+      "sha256": "03176ea3287ff7e15773d2caacf2191c1ad2a0b3ce9c655b29d8332f85225d21"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/sources/1.1.2 Verhoudingen, percentages en indexcijfers – paragraaf.md",
+      "bytes": 20473,
+      "sha256": "b09ac6bf7ea213f6b88ea9f9e1e823a71ceb4cf60fd9ecf732dd654f74c3afc0"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/sources/1.1.3 Tabellen, grafieken en formules – paragraaf.md",
+      "bytes": 24247,
+      "sha256": "0b8630d0929a1d1d4dfc065fae1e6ae3666e67feaf80e9b96f50bf23332e2654"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/sources/book-1-outline-second-edition-v1.md",
+      "bytes": 58199,
+      "sha256": "ab51a92b2be4a37e87317c32ac4d2a14174a3689e469b1f104e02c2c85668022"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/sources/source-register.json",
+      "bytes": 3270,
+      "sha256": "ea6ec92dbe9ac4a1e27361789207daba40fe4c7d0ff978e09f16082d907a277f"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/1.3 Aanbod en marktevenwicht – hoofdstuk.md",
+      "bytes": 72505,
+      "sha256": "8ca93e1ed9501b25e809c9ed5352a80d5a7314c1b3a91830726b35bcff02a958"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/1.3.1 Aanbod en aanbodfactoren – paragraaf.md",
+      "bytes": 17615,
+      "sha256": "a877af4743b94775279f04bda37a1956e5aa19d36ed4dac1de031b43733f458d"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/1.3.2 Marktevenwicht – paragraaf.md",
+      "bytes": 21124,
+      "sha256": "454d8aaf6aabd7d220fdc4969a033e9037b2dca5be066d80ca8c62374de2860a"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/1.3.3 Verschuivingen en nieuw evenwicht – paragraaf.md",
+      "bytes": 17555,
+      "sha256": "b73b16fbf10b8a71613a407befa819bdab1551592c50d78ef558150a696b0f68"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/1.3.4 Gemengde opgaven – opgaven.md",
+      "bytes": 9289,
+      "sha256": "cba21bfe1a43659226670996a603dc6d2e3ca17865f1d3cab0487c0ffebd2d7e"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/Antwoorden.md",
+      "bytes": 39206,
+      "sha256": "1cb6fce9da344dff9e98ea826b6e89e5d61ade745116c9b0ddef7bd0c68d2540"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/Docenteninformatie.md",
+      "bytes": 20659,
+      "sha256": "854e7e555300b8bc0eff5a7dc8e549171c899ba2098523c1b665a98e6ceb8847"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/Hoofdstukoverzicht.md",
+      "bytes": 5280,
+      "sha256": "c75d513bdabb8acbb844430396a478033c0a4d4f9f7aaec6736be80e9feee894"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/ONTWERP.md",
+      "bytes": 731,
+      "sha256": "3e461b45a2080a734a1a0f189326913f2ccdee713fe6c121b6a270208d76f449"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/QA/Boek_1_H3_Aanbod_en_marktevenwicht_Tweede_editie_page_map.json",
+      "bytes": 2704,
+      "sha256": "40725cd67a68090c767c6cbf1b9ea3d5b03135729309ae63fc100047496a0d11"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/QA/Boek_1_H3_Antwoorden_Tweede_editie_page_map.json",
+      "bytes": 1412,
+      "sha256": "8dfbbcecdbe0ca2a882057f73240bd8480661ee95ebf66b445257b5ff7db1d1f"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/QA/Boek_1_H3_Docenteninformatie_Tweede_editie_page_map.json",
+      "bytes": 596,
+      "sha256": "15c941dbef84b2c26e8f92228b752df044deb5501a5f83f8ed80c243a9f4a0e5"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/QA/exercises.json",
+      "bytes": 49259,
+      "sha256": "105b7cbdc173f94fac521fff562d734f4802fd178a2a5825a67e37a7b8e20200"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/QA/figures.json",
+      "bytes": 33729,
+      "sha256": "33704ba62faf435d4ed6c996c20f62724e280f0616e6e88f299678cad78048f1"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/QA/lesson_minutes.json",
+      "bytes": 2269,
+      "sha256": "aef21389ecd43c87c1cc47d8087c7417d8e5569585f945f2b43726ab508e56d7"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/QA/market_models.json",
+      "bytes": 2101,
+      "sha256": "5fe8a40941dbca26fcbd9ea64755a08e115389d7e693f0f831517fe26c57e30a"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/QA/numerical_cases.json",
+      "bytes": 4776,
+      "sha256": "bf2e0c402d2e9c0519418a0513183d66b9bdb0e8dac1eb13bdebc0dc07144c4e"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/QA/paragraph_exports.json",
+      "bytes": 4082,
+      "sha256": "ee87cc431e02c490ee212c94fabf91f03c4fe8d79e7d6a83166dff043b870829"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/QA/target_exercises.json",
+      "bytes": 12384,
+      "sha256": "a62b04c9b9bff5044c42894da741f4dd5481b57f24c9bfb6ffdd960cb73e0f67"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/QA/validation.json",
+      "bytes": 147976,
+      "sha256": "8079c4f464c2f14f72ff7e310f0b092f934e2cb75dd650a17370ca74deaee429"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/README.md",
+      "bytes": 1023,
+      "sha256": "4c35fe9d538843837494157f9561156a79b4c81b8c5e0c2cbf462ce155880673"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/Voorblad.md",
+      "bytes": 2086,
+      "sha256": "2acdf6ba9a757cb1a69753c0b818bb57a5fc022745594dcf64299c363a51a023"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.1_ans_4.png",
+      "bytes": 57773,
+      "sha256": "19a5256598c5c49f39d4f354bc63670e6f56b3c40cd1c543cba6f528976cb797"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.1_ans_4.svg",
+      "bytes": 6308,
+      "sha256": "69944919280b2759d4df92224ca7315642f40a07dbce1e1bb54209608924df01"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.1_ans_8.png",
+      "bytes": 62068,
+      "sha256": "5b5b78119194458ccdfe5f5eae8d577562a7e5887790a00cd1f69a2049a8fa25"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.1_ans_8.svg",
+      "bytes": 5962,
+      "sha256": "52648732909aeb8f00e462469ead2ccd9c71b0a33447639a73381613525477f8"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.1_ans_9.png",
+      "bytes": 57932,
+      "sha256": "ae9fe9e64030e6523e2c4b8042e7d06c31d0af8bfb5b1bf9d2ed332b94d28c41"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.1_ans_9.svg",
+      "bytes": 6477,
+      "sha256": "5cd63a624507477742c8f0ead23bb0581273c2071da8868691ba21203db0f489"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.1_ex_3.png",
+      "bytes": 47209,
+      "sha256": "9e799769c4faa53377f7d78df8ffd396f28b0b552fbe28818eddb90a3fdabfe7"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.1_ex_3.svg",
+      "bytes": 6015,
+      "sha256": "63cc66e1ce00d5b9aed88b5096db8ca0fc41311d18f8260584947bc9a161f8d3"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.1_ex_4.png",
+      "bytes": 47028,
+      "sha256": "c8a94994dddef751a3da8bd106640e42a823afcf5b0b7364fc62c1627e0c3de7"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.1_ex_4.svg",
+      "bytes": 4990,
+      "sha256": "1f80f8c2f6e396843e3fe7b3ba50137e2850772786dccf103296c695ccf7f72b"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.1_ex_8.png",
+      "bytes": 50457,
+      "sha256": "aa7b4110e7a21cfc871568a308e503f1cbdbe5b99b0415cb3aae8fbb21ba1625"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.1_ex_8.svg",
+      "bytes": 4637,
+      "sha256": "67841215881e7faa6dfc9e2b7c51350f4bacf9d5770a5f85591db0fc3686a868"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.1_ex_9.png",
+      "bytes": 38799,
+      "sha256": "54131b05abbc8d198560f89e9728904defc554bc710a72e229b82de35fbbfcf8"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.1_ex_9.svg",
+      "bytes": 4640,
+      "sha256": "bfb09916f6e213516b5a4751fd230235248499cd3ea6d1d1f11123182b874b3a"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.1_fig_1.png",
+      "bytes": 56307,
+      "sha256": "012bf9678b72296f457c1ee574ef674193f443474bd1cf7c0e21a37d588e0fec"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.1_fig_1.svg",
+      "bytes": 2115,
+      "sha256": "ec0680d85d83fceae5842f3df9c8d38686318cb12a38daf9b2b4630aaca27866"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.1_fig_2.png",
+      "bytes": 50232,
+      "sha256": "b69bde52f36e0454b9ca28ca0a45cfeaef0c29bd3d09fc719ad4952e15065865"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.1_fig_2.svg",
+      "bytes": 6888,
+      "sha256": "4d129e041e1ac357a2122d99d63a19d4b7b411f62b523fbb256bfbda9f859491"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.1_fig_3.png",
+      "bytes": 61463,
+      "sha256": "521537cddc83f1d6ca0f50a8de9cdb56122ca9d5050937659c7b697c78b935ac"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.1_fig_3.svg",
+      "bytes": 6806,
+      "sha256": "33d18c71939f493a80e2e37299eb7f004acf7ed32fb0865c8f91489c668de67e"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.1_we_1.png",
+      "bytes": 64514,
+      "sha256": "599959e53b7657ffe6d62f0e4707100c88ac86f9990638f103a2f09876bec495"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.1_we_1.svg",
+      "bytes": 7559,
+      "sha256": "95b28cfd2b2481216539e5dc19cac95fbcc925996ec88b62c5b7e9ec70634a9e"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.2_ans_15.png",
+      "bytes": 61728,
+      "sha256": "0d7b2b553f9b441f64d7bc17a80960bf97740778573fd59c8739ca520bb85c97"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.2_ans_15.svg",
+      "bytes": 6467,
+      "sha256": "3f437894e9611e79b27e8972a804ee45542638f569d34f03dfe1e05bcb3a76cc"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.2_ans_17.png",
+      "bytes": 75831,
+      "sha256": "f241e0c9a3d3eec585fcde2214cec01e032a4f0cf91d79d2fa57f49839cb7055"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.2_ans_17.svg",
+      "bytes": 7547,
+      "sha256": "54efdd38edaeec68cf2502b5eacdfa61df3faad10491a616a26120536d40b29a"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.2_ans_20.png",
+      "bytes": 53836,
+      "sha256": "86df67581be00343646915c9965fad77b0f7bcd96d40992b9e701c9ce18c7545"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.2_ans_20.svg",
+      "bytes": 5750,
+      "sha256": "808a7743145d79906fdffeb23fba52534bb05428a9121ea008273d16a9cee787"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.2_ex_14.png",
+      "bytes": 76260,
+      "sha256": "95223e1f997f842e7028cc1edba636d5400f58e022d9b7636055d147d0b588f6"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.2_ex_14.svg",
+      "bytes": 7876,
+      "sha256": "43e8d401490267dc72fd0e6aab284e46dd3d526d95016c38199820971fcba5ae"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.2_ex_15.png",
+      "bytes": 42531,
+      "sha256": "aeb0473c30119478c2cd5f0fd2859486ad8581e7fb5142237ffa9c68e3fd01ca"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.2_ex_15.svg",
+      "bytes": 5709,
+      "sha256": "cff3f07b516f42132b6d36809e5910a8f52fd78c501f77cf1bba1f0c3e1bf02e"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.2_fig_1.png",
+      "bytes": 57068,
+      "sha256": "f0e4af15210b464c2b72ae0675c6e3e077cf79fd68071dd0132df1f61502b50b"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.2_fig_1.svg",
+      "bytes": 6067,
+      "sha256": "2ec1c37dcd66fc0d47aea833e2d73db23c81c9cbdd927f0d149a37ae4cf02754"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.2_fig_2.png",
+      "bytes": 59188,
+      "sha256": "98c043bba1c9709fd2b716eaca1c2e83564d8fcf1d56183932d1a6d23b19873b"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.2_fig_2.svg",
+      "bytes": 6857,
+      "sha256": "478bfc183c2d86d9b0b92b86da5a163963de3857f80b13d7ad3f6d77f0a599db"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.2_fig_3.png",
+      "bytes": 91611,
+      "sha256": "aae63cf4c4b46cdab0546883d07a25ed758dbb954132f32f8a0e93c8ad43709e"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.2_fig_3.svg",
+      "bytes": 7701,
+      "sha256": "dd0c815544f5470574c9c66e1f3ffab7d61263df8f75ee8615f4eeb093ba3638"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.2_fig_4.png",
+      "bytes": 92787,
+      "sha256": "83b76bdba9743f7a70589334cd244a82d3a35160b9411b93cb66e90b555137c1"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.2_fig_4.svg",
+      "bytes": 7945,
+      "sha256": "7541b9dab3f2e07a7ed654f5983262647a213782f56a9ce72653e1e70e20da14"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.2_fig_5.png",
+      "bytes": 52095,
+      "sha256": "beda8858a3988ddf6533970de2fb5f49d71204ab1bcfd8f66c8a9ed3177e79ca"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.2_fig_5.svg",
+      "bytes": 2758,
+      "sha256": "43a3670761ab0016b12003f32d845ad02d0b27cc8cfb75a4b50e4073ea94278c"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.2_we_1.png",
+      "bytes": 42987,
+      "sha256": "38867a03368131899cbd0a5a4667b993acc077b7de1e23ecef0ee157688c7da0"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.2_we_1.svg",
+      "bytes": 5399,
+      "sha256": "62d6ea245b32395005d46c36b8939c8f5a875bd9c65d614529d6007263b89769"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.3_ans_26.png",
+      "bytes": 71105,
+      "sha256": "efcc3edf0597f62c413ffc83f3eaa5118343a29387819ee22a0fc987f4289e3b"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.3_ans_26.svg",
+      "bytes": 6969,
+      "sha256": "f50bf868ec2fda10786b0623900aabc6fbc609cb7760faf8e4411a3dd4663667"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.3_ans_29.png",
+      "bytes": 83051,
+      "sha256": "8ddf6505aeec35b75e0cddf7b2f23e48facf7def6d196d68423fe6f904e83822"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.3_ans_29.svg",
+      "bytes": 6968,
+      "sha256": "98dbcf88ba431aba8e31fec07f1d5cd9e5ce1318890dddae90b3d33811d6f0e8"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.3_ans_31.png",
+      "bytes": 83928,
+      "sha256": "9a03d9718a7604866915132ab73d0faa1a43ee1a832559c62b017ceb9cba0646"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.3_ans_31.svg",
+      "bytes": 7942,
+      "sha256": "c1ba2144ebe5d1d39d3e4185497543a1d56df5749e846d92bac9f41a041f2ad1"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.3_ex_25.png",
+      "bytes": 79735,
+      "sha256": "15b0ff419c1d847840b78839f4077189c72daa3829f4c2ea138162b2b8505df5"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.3_ex_25.svg",
+      "bytes": 7678,
+      "sha256": "ef59bf0555688cb8916bb9a3d11b5660ebb4db0357073af347be1695a6caa77a"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.3_ex_26.png",
+      "bytes": 69195,
+      "sha256": "dbaa7cbd8e26e2473fa4a925c8c5fdcf195bc9220e8040e61ee0d5d18b26b3b0"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.3_ex_26.svg",
+      "bytes": 5633,
+      "sha256": "30df31698d2562c19f585bfddaa702d24cf3046e6d3550c07471123e27683d17"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.3_ex_29.png",
+      "bytes": 51012,
+      "sha256": "b51cbc66eb20061b03b18dd00dc005f7d69abec43cee83bb632fa082d6abf78b"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.3_ex_29.svg",
+      "bytes": 5631,
+      "sha256": "120f1187635e1a82223c29db04d4ffd5e222db790467dc5c2b74fc009020614d"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.3_ex_31.png",
+      "bytes": 60028,
+      "sha256": "f26c1b1654b7db2574ff99386414bed0e1e529775a80d1f08393ff51c375d7ff"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.3_ex_31.svg",
+      "bytes": 6347,
+      "sha256": "6366429d2e8501ebfd67868b0ee8d67d50c5d384525bb9771932b0a22ac87d20"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.3_fig_1.png",
+      "bytes": 90144,
+      "sha256": "0e657be12cd01b2b21eb912d854d71dfe3f2c84b70c3287d1644fb3fb212a5ec"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.3_fig_1.svg",
+      "bytes": 7809,
+      "sha256": "f08312ba30c17ca221367b64d7d5f26e72610fb6452f7b6a42d89716fa1a6e48"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.3_fig_2.png",
+      "bytes": 92814,
+      "sha256": "1f438e128e544f9fa59c4c793d273429f59b0ce7786d8ee140630d96bfd547eb"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.3_fig_2.svg",
+      "bytes": 7804,
+      "sha256": "9ba98a80f36c127fa1c35d2c71caadc5e63dba2e8b8cd9dbcced32ae6ac756fd"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.3_fig_3.png",
+      "bytes": 68221,
+      "sha256": "ff5ffbec393ecac186f330e3223c4f467950dd0679862f5fee03c381e23626b2"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.3_fig_3.svg",
+      "bytes": 7794,
+      "sha256": "2ab5d69a332e0e36c576e7ddaafda5b216708205b59d2dbd176805bd9bb08a32"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.3_fig_4.png",
+      "bytes": 48808,
+      "sha256": "ae8ea37671259ca67c723022afe4db819f33a5f61128c4ec7be7179216407261"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.3_fig_4.svg",
+      "bytes": 2705,
+      "sha256": "90ecb2f863612b9e2097a67c0cf30df75975bef93a085fa9d36648d6e2a9b789"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.3_we_1.png",
+      "bytes": 73074,
+      "sha256": "cbc1f9b4d2cef7b46eb72e49bfcbb4d63cc84edf6ed770330c6ba0dd6e1a7f02"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.3_we_1.svg",
+      "bytes": 7066,
+      "sha256": "c587b8cfe3f56e2b10819a5fa17412a652d62685ca5eb9fd55246439573fcf6f"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.4_ans_36.png",
+      "bytes": 66928,
+      "sha256": "6a9a99e5b148e3d0f6b15eb290cc591fe6ebcd451ba59f5cd38716eaea1b3da7"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.4_ans_36.svg",
+      "bytes": 6951,
+      "sha256": "19172a8afecb5016b81aec3146b9f27da6809a771ca6632f24e9b89dfb942a0b"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.4_ans_37.png",
+      "bytes": 87765,
+      "sha256": "e3289b08c91e0597f3cb6aa31038a08fe2c5a8c4929abe687aa7206bdb8f2c52"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.4_ans_37.svg",
+      "bytes": 7923,
+      "sha256": "38cb153892b00427cd676d59ea7df3609467c38ca77006ed7ab46f35e3c05aa6"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.4_ex_38.png",
+      "bytes": 47379,
+      "sha256": "2da1d5faa0fee0a9ddfd6ddd82756eb2544c320ea77f46e2b986f6c9ad842eda"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/_assets/1.3.4_ex_38.svg",
+      "bytes": 4290,
+      "sha256": "150f92f097c42bf801a11c56069d95274101ab49c8dd3777cd2fb3215d0c9ccd"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/chapter-order.json",
+      "bytes": 247,
+      "sha256": "b897137e86b4ed5083b13e6f5895ee395140cb80b3f7d040d6ce59b5b2846737"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/print.css",
+      "bytes": 7157,
+      "sha256": "9036ff1c2410eea68eb492fb510b1458e78b3fb3128ac8e0e3a320d6669013bd"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/requirements.txt",
+      "bytes": 90,
+      "sha256": "918d96557d01f790ecf286e443e373ca68024dbf2a834d58044dce25b1cf0e00"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/sources/book-1-outline-second-edition-v1.md",
+      "bytes": 58199,
+      "sha256": "ab51a92b2be4a37e87317c32ac4d2a14174a3689e469b1f104e02c2c85668022"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/sources/source-register.json",
+      "bytes": 3694,
+      "sha256": "1cf5556aee6bdd4a2e8128c95c91cbbe1d3ee2db291845073d75cd9d7e3236c1"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/omslag/achtergrond.png",
+      "bytes": 1739942,
+      "sha256": "762ce2c63491d43b4d4740a645049395837f4412d07c7c2dd5ff287f50e5d979"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/omslag/data.json",
+      "bytes": 409,
+      "sha256": "ba6d2c2357c3cf596cc5a6414184cb2da924acf835c72bf0f32275bb7132e254"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H1/Boek_1_H1_Antwoorden_Tweede_editie.html",
+      "bytes": 4522779,
+      "sha256": "dc30246fe18084a7a0752ff914ddddd5a6b4e59ec39f8b03285b37b72177787b"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H1/Boek_1_H1_Antwoorden_Tweede_editie.pdf",
+      "bytes": 115211,
+      "sha256": "246be24912314367b9d103b0f21278d69ff3b5676dfae01b092a31135e0fa35c"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H1/Boek_1_H1_Docenteninformatie_Tweede_editie.html",
+      "bytes": 4450649,
+      "sha256": "554ed63402650304e7616d978465386cdd731f0317d9b914d336159a79e4ec4c"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H1/Boek_1_H1_Docenteninformatie_Tweede_editie.pdf",
+      "bytes": 52120,
+      "sha256": "4405d423fd317cc35480eade330322a9bc71a4b41cf3dd51a0486adddb04803b"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H1/Boek_1_H1_Economisch_denken_en_rekenen_Tweede_editie.html",
+      "bytes": 4625425,
+      "sha256": "3bb1f9a41ca9b0cb25c6c16e91142b45db07b71535af0eb5fd8564a423094aac"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H1/Boek_1_H1_Economisch_denken_en_rekenen_Tweede_editie.pdf",
+      "bytes": 243189,
+      "sha256": "c8bdded08cf6a35eff13373eb483216f6f5f4479a441ec12a7cffc67312254bf"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H2/Boek_1_H2_Antwoorden_Tweede_editie.html",
+      "bytes": 4582072,
+      "sha256": "ff1c6295e192582682548ae3f3e571c5f979bea0214b0d16273e0609a47f0dd9"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H2/Boek_1_H2_Antwoorden_Tweede_editie.pdf",
+      "bytes": 143412,
+      "sha256": "fde66954ffff0a20671c951758230558c0a4374d52b6ce25d14d50ecb601f4c9"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H2/Boek_1_H2_Docenteninformatie_Tweede_editie.html",
+      "bytes": 4452045,
+      "sha256": "70e13644bb2cc29a045c39532271321ca93dd4c7bf7d57d1f2d83f96767cbb0e"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H2/Boek_1_H2_Docenteninformatie_Tweede_editie.pdf",
+      "bytes": 57937,
+      "sha256": "c9a4dddd22e2abcc4e194e88941aeee7f615624a26727cb5736c8791629dab39"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H2/Boek_1_H2_Vraag_Tweede_editie.html",
+      "bytes": 4677492,
+      "sha256": "3d852d9b7f37bb9c848ade9e52f10e5b388d12734ae250d09baecd8370cfa387"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H2/Boek_1_H2_Vraag_Tweede_editie.pdf",
+      "bytes": 255207,
+      "sha256": "0e070cd91771cae6f2d29d7849b48c8d2cf61260d8a30ee980cc31ccf5249016"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H3/Boek_1_H3_Aanbod_en_marktevenwicht_Tweede_editie.html",
+      "bytes": 4713990,
+      "sha256": "606974cd8ac4953118eaa8087429b70f66cbe01defa001ead242618a46d6bd83"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H3/Boek_1_H3_Aanbod_en_marktevenwicht_Tweede_editie.pdf",
+      "bytes": 303411,
+      "sha256": "dae97868a765e052de6cf72987287790959b6153a9e2b46785b82dfd937ddfaa"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H3/Boek_1_H3_Antwoorden_Tweede_editie.html",
+      "bytes": 4572328,
+      "sha256": "61e91aae7548870878bf95b9ef54341e0cba3843b4fa7e042770cddb8db81bf8"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H3/Boek_1_H3_Antwoorden_Tweede_editie.pdf",
+      "bytes": 157099,
+      "sha256": "8f9508ed216e63fa8608dbcdbbbbd790b616d2de64b53c40e5184ead8890ec7c"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H3/Boek_1_H3_Docenteninformatie_Tweede_editie.html",
+      "bytes": 4452080,
+      "sha256": "469c32c33ae267428ff24cdc62c4f6ad4fcacf6b9a70c4ee327b39decbebdffa"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H3/Boek_1_H3_Docenteninformatie_Tweede_editie.pdf",
+      "bytes": 56437,
+      "sha256": "d63b769bdb91a5917eb012e7b4f4397c4f76dfd99de6459bf6e202931a760abc"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/index.html",
+      "bytes": 5544,
+      "sha256": "16984906d19eed4e59855ff4bfeb8df198ed1fe7c677afaa425e205d01f80c28"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/manifest.json",
+      "bytes": 13287,
+      "sha256": "3192a7e90b4e33effa941532626d7605a07e0a2af0f1acaed4b7b3a0d5cf892c"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H1/1.1.1 Schaarste, keuzes en alternatieve kosten – antwoorden.pdf",
+      "bytes": 67185,
+      "sha256": "ee11e79ae0a0c5cae10d0992574ef084bd4227bbda51609794ae251179414f7f"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H1/1.1.1 Schaarste, keuzes en alternatieve kosten – paragraaf.pdf",
+      "bytes": 140420,
+      "sha256": "1db48f51a4aa2d05f9d5f6d382d40f21b87dcb3d369e45fcc02b86425591178d"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H1/1.1.2 Verhoudingen, percentages en indexcijfers – antwoorden.pdf",
+      "bytes": 70568,
+      "sha256": "e55cd18ee3ba4c65af9d2633e0e7e045b7397368bca417509fb3feb92f14a982"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H1/1.1.2 Verhoudingen, percentages en indexcijfers – paragraaf.pdf",
+      "bytes": 149092,
+      "sha256": "63d3c6f6969b69d94374a039c9cb86476e56e57937d2319ab6de7ef9889d4610"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H1/1.1.3 Tabellen, grafieken en formules – antwoorden.pdf",
+      "bytes": 78196,
+      "sha256": "05e2665dc68691aa0d9939ca84e8ee1ebe99416450931f7b4e29d21f8f2d8a99"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H1/1.1.3 Tabellen, grafieken en formules – paragraaf.pdf",
+      "bytes": 160939,
+      "sha256": "fa487d2f113910b6a60c32e22097a2b7f0c7d4896b11ef094fb13d24ba77e9c1"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H1/1.1.4 Gemengde opgaven – antwoorden.pdf",
+      "bytes": 69198,
+      "sha256": "1bf7f15015aa6d796b69f8a354b8471f332fd742cc60f9460992705b79f33eb6"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H1/1.1.4 Gemengde opgaven – opgaven.pdf",
+      "bytes": 131741,
+      "sha256": "2213eb33cc7b97a6a6e103ceaf9fd53bea605bec15b713f4bff629b2bedb0539"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H2/1.2.1 Betalingsbereidheid en individuele vraag – antwoorden.pdf",
+      "bytes": 92327,
+      "sha256": "e8f342c46371e27b8a406da59836525d233dc8a567f228e0f46fdf7d60642ded"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H2/1.2.1 Betalingsbereidheid en individuele vraag – paragraaf.pdf",
+      "bytes": 164507,
+      "sha256": "a0363feb7866d1ab99fabd01c9141b5e803620b44e6b3e45009a6f91394b3a09"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H2/1.2.2 Vraagfactoren – antwoorden.pdf",
+      "bytes": 93857,
+      "sha256": "f4fd18168325c402e1c97a9601b4659e7985eb0be24eed144f890dbdb203af03"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H2/1.2.2 Vraagfactoren – paragraaf.pdf",
+      "bytes": 163362,
+      "sha256": "f88b764cf3bbc360f8209b6e53633ac26ebf073abcffd03ff378d9ab539f23a7"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H2/1.2.3 Van individuele naar collectieve vraag – antwoorden.pdf",
+      "bytes": 92018,
+      "sha256": "bfa28c9f4f8fc23e678463714d84ac3fd0618b3fc45c1a2f2731224180b2972b"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H2/1.2.3 Van individuele naar collectieve vraag – paragraaf.pdf",
+      "bytes": 160898,
+      "sha256": "8e1a4069f158ddc91d124c94316162b539b829e01886b4fce6e0626bf443f811"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H2/1.2.4 Gemengde opgaven – antwoorden.pdf",
+      "bytes": 89759,
+      "sha256": "bbba160e05813d40fe0ad1570a3893ce575b961e7f40ea41dd397671e723beb0"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H2/1.2.4 Gemengde opgaven – opgaven.pdf",
+      "bytes": 144191,
+      "sha256": "7dbabb063657aad691ddfe34bd3dbcda627882dd37f98f921fb8b64d0e731e94"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H3/1.3.1 Aanbod en aanbodfactoren – antwoorden.pdf",
+      "bytes": 108777,
+      "sha256": "f79baae5fdc003e788bde42c00b1c33781fc476e5dd90e8bda1571730608b403"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H3/1.3.1 Aanbod en aanbodfactoren – paragraaf.pdf",
+      "bytes": 206940,
+      "sha256": "e099a3f491adc090303690b1c894593b7d5db00ba63e171b88afd47ed2fa6b13"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H3/1.3.2 Marktevenwicht – antwoorden.pdf",
+      "bytes": 109622,
+      "sha256": "70b6e1607a773651b237fd5643f7a48366bb9e6eeb5b897b0f589784503aa3ec"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H3/1.3.2 Marktevenwicht – paragraaf.pdf",
+      "bytes": 211969,
+      "sha256": "16a832ba9834f1a6c72a2644b46078b5d957aba7effdcb6079b51ba5d762aacc"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H3/1.3.3 Verschuivingen en nieuw evenwicht – antwoorden.pdf",
+      "bytes": 109356,
+      "sha256": "e7500008364396456cfc67e780304f8fd27c2f44d8b077ab80c77adc8306d7aa"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H3/1.3.3 Verschuivingen en nieuw evenwicht – paragraaf.pdf",
+      "bytes": 207708,
+      "sha256": "535640c1ce6cde0d9101a1d76ec56a4ca1b48ef3ceb212eb385bf15e2dc67edf"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H3/1.3.4 Gemengde opgaven – antwoorden.pdf",
+      "bytes": 103942,
+      "sha256": "0df5674063f3bc199369a384d960df9fb9a299f4c1127402bb5512d0136efcbc"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H3/1.3.4 Gemengde opgaven – opgaven.pdf",
+      "bytes": 189191,
+      "sha256": "cefa5871cb2b945d6b48b66e42d5216740c023f5c5f034aa057eee22b52c3c71"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/answers_links.json",
+      "bytes": 3089,
+      "sha256": "e465fed4292c589f9d5639e30e01fdc6e45b332ae46b9c46a77c5346e008c899"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/answers_page_map.json",
+      "bytes": 43346,
+      "sha256": "09cf5cf29c9de8cae9a63e372bbaa0a941bbc62c23a558a69ef357150e0c1f35"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/assembly_manifest.json",
+      "bytes": 1773,
+      "sha256": "e1434d78d48213b0371453d486da7704cd49771a5f00f2ded910983f06b42a9d"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/input_hashes.json",
+      "bytes": 1407,
+      "sha256": "655916927e89422cbef601b558f7a7105ad2e79de344460f7b80e8e61c81ebc5"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/page_conversion.csv",
+      "bytes": 15812,
+      "sha256": "366f2a78edf928dabd6ea6f31be6b59beb84d52817c3d02aa9cf1405952cc4af"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.1.1-textbook-review-manifest.json",
+      "bytes": 27994,
+      "sha256": "60ff727e1fcd00f5d8051396e4469b7574acd795d8528a05e508d0452a644d04"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.1.2-textbook-review-manifest.json",
+      "bytes": 27996,
+      "sha256": "4cb9a74de64544e78e41da6857fe6cbf109a8435ad13879a221a89de0e658746"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.1.3-textbook-review-manifest.json",
+      "bytes": 27976,
+      "sha256": "2c07097b78b9377e7b8f94ce504b3271c568c47420520d568f7a187981309537"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.1.4-textbook-review-manifest.json",
+      "bytes": 27944,
+      "sha256": "46685781b397b395524a958f0404b929523c7c2ff56654ce0b8275e69a86f3a4"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.2.1-textbook-review-manifest.json",
+      "bytes": 30125,
+      "sha256": "9eb80ad20cec0ccc95434621056ed21deabe9a299a65414fceff2eed073f6668"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.2.2-textbook-review-manifest.json",
+      "bytes": 30071,
+      "sha256": "8837486745ed4001deaeacb727b4bce7b750a201ed7d692c6a6ca02f6607a481"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.2.3-textbook-review-manifest.json",
+      "bytes": 30121,
+      "sha256": "ad77b178d329327c223e0cedc6fd9fb13cb1138e97aba26a1c0a655f0e0bea49"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.2.4-textbook-review-manifest.json",
+      "bytes": 30075,
+      "sha256": "cc9de3e29c3e8be068e6396c993cc2dcd2ffbc676057161ba304541ec3ae40de"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.3.1-textbook-review-manifest.json",
+      "bytes": 32316,
+      "sha256": "43a84fa30dc27de41340ef43d4774caf8297c12d8036f00ea0dae2767428b16b"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.3.2-textbook-review-manifest.json",
+      "bytes": 32296,
+      "sha256": "5d4de6c9c35105923fb0168984abd102afbd9b2fa6214bb2803e51f5f9597f4d"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.3.3-textbook-review-manifest.json",
+      "bytes": 32334,
+      "sha256": "95bc4468acfc6eedeba8337f7aef39f62141fbef03afc57bad3faa763e0d596a"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.3.4-textbook-review-manifest.json",
+      "bytes": 32298,
+      "sha256": "badcddff4c59206c329a0cba82d2b86f62bbc713abf09c6fde6598c9748e6b11"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/source_hashes.json",
+      "bytes": 26345,
+      "sha256": "433b43ebcd894ad1aabe3aa4ad9b04c9d61eb71b20dfe9d2c38fc0db35f3c3b9"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/student_links.json",
+      "bytes": 18299,
+      "sha256": "e35973cf1d0268d99791e92b5be0ec392652b884cb6dd97c6527e679c0e7d389"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/student_page_map.json",
+      "bytes": 83903,
+      "sha256": "58eb9bf1d50227226e284099357e33e59a10bd433aa86f9bc7f3bf5c03b26691"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/teacher_links.json",
+      "bytes": 400,
+      "sha256": "49c56c7636039aa7f14dd13d5dd5261142de7f9ba3776805d3cbdc148ccce318"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/teacher_page_map.json",
+      "bytes": 15706,
+      "sha256": "fa74a523b46080d83ae7fe9777eca2a1a4587eef17854d2e0e5cff2c2fffecb1"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/validation.json",
+      "bytes": 144103,
+      "sha256": "23edcc122df77a8eb7b8724c57552b8f527e17e750af8de7ebee78986fc20881"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/sources/Boek_1_Tweede_editie_Boekopzet.pdf",
+      "bytes": 105012,
+      "sha256": "74d2e2a75bf733b38e941138dca40e3f024026af7ed02a0b51a426c6a94a97fe"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/sources/book-1-outline-second-edition-v1.md",
+      "bytes": 58199,
+      "sha256": "ab51a92b2be4a37e87317c32ac4d2a14174a3689e469b1f104e02c2c85668022"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/sources/repository_guidance.json",
+      "bytes": 1911,
+      "sha256": "4eda9825cdbf273aa504e300726058f448ab65a5afe7f09910e52a14036c7754"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/eerste-editie.html",
+      "bytes": 1315,
+      "sha256": "f15a2dba8fa1a795011cf9c0ae53833433b55840fcc3a7c2eba20ea0736e6922"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/historisch/eerste-editie-20261002.zip",
+      "bytes": 51261492,
+      "sha256": "4e342ce8c6c5f5f7bf705b6389ae9db800628b2317d3ac178097e104ad150cca"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/historisch/eerste-editie-inventaris.json",
+      "bytes": 269899,
+      "sha256": "5537b48d814e0c096c5026060f150cffb979b2d0de46b8ec08634df9b0f2e5a8"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/index.html",
+      "bytes": 6543,
+      "sha256": "27a2c8256d0989ef85d35ad86c3556a7670f2b535377858d8b68255b1aa51c49"
+    },
+    {
+      "path": "index.html",
+      "bytes": 4198,
+      "sha256": "afbc29792bcc846f398a31bf24b02704ec8893a15e4bc0ecc72e978b651bf770"
+    }
+  ]
+}

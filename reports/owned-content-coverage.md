@@ -1,56 +1,38 @@
 # Owned Content Coverage
 
-Generated: 2026-06-17T11:04:50Z
+Generated: 2026-10-02T16:50:24Z
 Status: INFO
 
 ## Summary
 
-- Nodes: 915
-- Edges: 1386
-- Paragraphs linked: 54
-- Units linked: 116
-- Terms linked: 46
-- Owned exercise evidence edges: 375
-- Generated-artifact warning edges: 602
+- Nodes: 459
+- Edges: 568
+- Paragraphs linked: 55
+- Units linked: 25
+- Terms linked: 14
+- Owned exercise evidence edges: 119
+- Generated-artifact warning edges: 169
 - Generated artifacts are primary evidence: false
 
 ## By Edge Type
 
-- implementation_trace: 411
-- owned_exercise_evidence: 375
-- projection: 600
+- implementation_trace: 123
+- owned_exercise_evidence: 119
+- projection: 326
 
 ## By Source Surface Type
 
-- answer_model_html: 12
-- answer_model_markdown: 12
 - answer_model_pdf: 12
-- companion_docx: 7
-- course_blueprint: 108
-- generated_html_surface: 21
-- generated_js_surface: 6
-- guided_practice_surface: 6
-- local_build_helper: 12
-- machine_unit_term_projection: 191
-- nieuws_met_visual: 9
-- opgaven_html: 12
-- opgaven_markdown: 79
-- opgaven_pdf: 12
-- other_owned_lesson_file: 3
-- owned_markdown_surface: 3
-- paragraph_html: 9
-- paragraph_markdown: 9
+- course_blueprint: 86
+- machine_unit_term_projection: 46
+- opgaven_markdown: 3
+- opgaven_pdf: 3
+- owned_edition_structure: 24
+- paragraph_markdown: 12
 - paragraph_pdf: 9
-- presentation_surface: 14
-- quality_reference_yaml: 12
-- review_note: 16
-- summary_surface: 5
-- target_exercise_index: 360
-- vaardigheden_surface: 8
-- visual_png_projection: 216
-- visual_svg_source: 216
-- voorkennis_surface: 4
-- youtube_videos: 3
+- target_exercise_index: 175
+- visual_png_projection: 99
+- visual_svg_source: 99
 
 ## Authority Boundary
 

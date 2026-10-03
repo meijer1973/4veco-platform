@@ -258,7 +258,7 @@ function buildGraph() {
   const generatedOn = new Date().toISOString().replace(/\.\d{3}Z$/, 'Z');
   const activeBlueprint = activeBlueprintInfo(REPO_ROOT);
   const registry = readJson(REGISTRY_PATH);
-  const targets = readJson(TARGETS_PATH);
+  const targets = require('./book1-edition').selectedTargets(readJson(TARGETS_PATH));
   const units = readJson(UNITS_PATH);
   const termsData = readJson(TERMS_PATH);
   const cp2 = readJson(CP2_CLOSURE_PATH);
@@ -285,9 +285,15 @@ function buildGraph() {
     const paragraphId = exercise.id;
     const requiredUnits = exercise.required_skills || [];
     const relatedTerms = termsForUnits(requiredUnits, unitById).filter((term) => termIds.has(term));
-    const chapterId = chapterNodeId(exercise);
-    const paragraphNode = paragraphNodeId(paragraphId);
-    const targetNode = targetNodeId(paragraphId);
+    const identity=exercise.edition_id ? exercise.edition_id+':'+paragraphId : paragraphId;
+    const targetSource=exercise.source_path || TARGETS_PATH;
+    const structureSource=exercise.edition_id ? targetSource : activeBlueprint.blueprintPath;
+    const structureType=exercise.edition_id ? 'owned_edition_structure' : 'course_blueprint';
+    const structureNode=exercise.edition_id ? 'edition:'+exercise.edition_id : blueprintNodeId;
+    if(exercise.edition_id)node(structureNode,'owned_edition',exercise.edition_id,{source_path:targetSource,curriculum_authority:false});
+    const chapterId = exercise.edition_id ? exercise.edition_id+':'+chapterNodeId(exercise) : chapterNodeId(exercise);
+    const paragraphNode = paragraphNodeId(identity);
+    const targetNode = targetNodeId(identity);
 
     node(chapterId, 'blueprint_chapter', `${exercise.module}.${exercise.chapter}`);
     node(paragraphNode, 'paragraph', `${paragraphId} ${exercise.paragraph_title}`, {
@@ -296,16 +302,17 @@ function buildGraph() {
     });
     node(targetNode, 'target_exercise', `${paragraphId} target exercise`, {
       paragraph_id: paragraphId,
-      source_path: TARGETS_PATH,
+      source_path: targetSource,
+      ...(exercise.edition_id ? {edition_id:exercise.edition_id,approval_inherited:false,curriculum_authority:false} : {}),
     });
 
     addEdge(edges, baseEdge({
-      from: blueprintNodeId,
+      from: structureNode,
       to: chapterId,
-      relation: 'blueprint_projects_to_chapter',
+      relation: exercise.edition_id ? 'edition_projects_to_chapter' : 'blueprint_projects_to_chapter',
       edgeType: 'projection',
-      sourcePath: activeBlueprint.blueprintPath,
-      sourceSurfaceType: 'course_blueprint',
+      sourcePath: structureSource,
+      sourceSurfaceType: structureType,
       sourceStatus: 'authored_source',
       authorityLevel: 'owned_curriculum_design',
       authorityWeight: 70,
@@ -313,7 +320,7 @@ function buildGraph() {
       recordId: paragraphId,
       unitIds: requiredUnits,
       termIds: relatedTerms,
-      notes: 'Owned blueprint projection; not external authority.',
+      notes: exercise.edition_id ? 'Structure from the new owned edition; no inherited blueprint approval.' : 'Owned blueprint projection; not external authority.',
     }));
 
     addEdge(edges, baseEdge({
@@ -321,8 +328,8 @@ function buildGraph() {
       to: paragraphNode,
       relation: 'chapter_projects_to_paragraph',
       edgeType: 'projection',
-      sourcePath: activeBlueprint.blueprintPath,
-      sourceSurfaceType: 'course_blueprint',
+      sourcePath: structureSource,
+      sourceSurfaceType: structureType,
       sourceStatus: 'authored_source',
       authorityLevel: 'owned_curriculum_design',
       authorityWeight: 70,
@@ -330,7 +337,7 @@ function buildGraph() {
       recordId: paragraphId,
       unitIds: requiredUnits,
       termIds: relatedTerms,
-      notes: 'Owned blueprint paragraph projection; not a sequencing authority edge.',
+      notes: exercise.edition_id ? 'Paragraph structure from the new owned edition; no first-edition equivalence.' : 'Owned blueprint paragraph projection; not a sequencing authority edge.',
     }));
 
     addEdge(edges, baseEdge({
@@ -338,7 +345,7 @@ function buildGraph() {
       to: targetNode,
       relation: 'paragraph_has_target_exercise',
       edgeType: 'owned_exercise_evidence',
-      sourcePath: TARGETS_PATH,
+      sourcePath: targetSource,
       sourceSurfaceType: 'target_exercise_index',
       sourceStatus: 'exercise_evidence',
       authorityLevel: 'owned_curriculum_design',
@@ -412,6 +419,7 @@ function buildGraph() {
     }
 
     for (const file of filesByParagraph.get(paragraphId) || []) {
+      if(exercise.edition_id && !require('./book1-edition').isCurrentSource(file.source_path))continue;
       const sourceNode = sourceNodeId(file.source_path);
       node(sourceNode, 'owned_source', file.rel_path, {
         paragraph_id: paragraphId,
@@ -479,6 +487,7 @@ function buildGraph() {
     source_files: [
       REGISTRY_PATH,
       TARGETS_PATH,
+      require('./book1-edition').SOURCE,
       activeBlueprint.blueprintPath,
       UNITS_PATH,
       TERMS_PATH,

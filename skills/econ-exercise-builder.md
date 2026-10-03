@@ -32,7 +32,7 @@ rule. Changed source/action evidence must be revalidated; scope reduction grants
 no authority to alter a target, bypass a hold or retrofit frozen material.
 
 **Scope boundary:** this is the operational source of truth for newly authored
-Book 2 and later Part A theory paragraphs. Book 1 output is frozen: do not
+Book 2 and later Part A theory paragraphs. Book 1 first-edition output is frozen: do not
 retrofit it and do not treat this contract as a retroactive Book 1 check. The
 Part B companion route `Start -> Leer -> Check -> Oefen -> Exit ticket` is a
 different product contract and must not replace the printed Part A headings.
@@ -404,3 +404,9 @@ Resolve every referenced image and retain the required SVG/PNG pairs and naming.
 A missing referenced asset makes that deliverable incomplete. Re-render affected
 outputs and use [Part A review](../docs/workflows/part-a-review.md) when claiming
 current paragraph acceptance; preserve existing valid review of unchanged work.
+
+The owner-authorized Book 1 second edition (2026) follows the current Part A
+contract, including the normal supported route. Its source ownership, edition
+identity and bounded integration are documented in
+[Book 1 second edition](../docs/workflows/book1-second-edition.md). This does not retrofit first-edition outputs or
+transfer their review status to reused paragraph numbers.
