@@ -15,6 +15,7 @@ const REVIEW='reports/review-gates/book1-second-edition-20261002/independent-rev
 const HEAD='build-scripts/books/book1-second-edition-lesson-head.txt';
 const P_EXACT=new Set(['.gitattributes','AGENTS.md','docs/workflows/part-a-start.md','docs/workflows/textbook-paragraph-lane.md','skills/econ-paragraph-review.md','skills/econ-didactiek.md','skills/econ-exercise-builder.md','skills/econ-textbook-paragraph.md','references/authored/didactiek-principes.md','references/authored/vraagtypen-en-opgaveontwerp.md',
  '.github/workflows/platform-ci.yml','build-scripts/ci/install-libreoffice.ps1','build-scripts/ci/libreoffice-installer.js','build-scripts/ci/libreoffice-installer.json','build-scripts/ci/libreoffice-installer.test.js','build-scripts/ci/maintenance-ci.js','build-scripts/ci/maintenance-ci.test.js',
+ 'build-scripts/ci/check-y1-product-evidence.js','build-scripts/ci/check-y1-product-evidence.test.js',
  'build-scripts/workflows/check-part-a-exercise-authoring-contract.js','build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js',
  'build-scripts/rag/build-chunks.js','build-scripts/references/build-owned-content-graph.js','build-scripts/references/book1-edition.js','build-scripts/references/book1-edition.test.js','build-scripts/references/book1-authority-transition.js','build-scripts/workflows/check-book-outline-currentness.js',
  'build-scripts/content/book-1/presentation-v2-registry.js','build-scripts/books/build-book.py','build-scripts/platform/build-landing-page.js',

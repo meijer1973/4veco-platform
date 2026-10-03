@@ -47,8 +47,8 @@
     },
     {
       "path": "build-scripts/books/book1-second-edition-revision.js",
-      "bytes": 12843,
-      "sha256": "310ce5fb5e3ec3202c28d42bb64a350a90c92da0ec71ab11810fdc6d7e1b33db"
+      "bytes": 12946,
+      "sha256": "6ea829f4e5f7b5dc2addf9cded16d72323bf82dfedce81c94e9c20a1771de7bf"
     },
     {
       "path": "build-scripts/books/book1-second-edition-revision.test.js",
@@ -169,6 +169,16 @@
       "path": "build-scripts/books/build-book.py",
       "bytes": 2712,
       "sha256": "d66aec851ef141b7266cca2f69934473141ab3fe0d18d6477110413bead8d0b6"
+    },
+    {
+      "path": "build-scripts/ci/check-y1-product-evidence.js",
+      "bytes": 7184,
+      "sha256": "1436a0e61a7de9ececa825c074ab88fccea2a8fa660f2e638c6a051620a61854"
+    },
+    {
+      "path": "build-scripts/ci/check-y1-product-evidence.test.js",
+      "bytes": 11046,
+      "sha256": "b1fdcc735e13516196635240df1c41735f7b99e2dc785b3648fe09a30e669125"
     },
     {
       "path": "build-scripts/ci/install-libreoffice.ps1",
