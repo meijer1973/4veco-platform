@@ -216,7 +216,10 @@ For current Book 1 the existing exports share
 `Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H*/`.
 Put each `1.M.K Title – presentatie.pptx` and matching `.pdf` beside its
 sealed student paragraph PDF, with `evidence/1.M.K-presentation.md` in the same
-chapter export folder. Use the current paragraph title from the manuscript.
+chapter export folder. Derive the filename stem from that existing student PDF
+(remove only ` – paragraaf.pdf` or ` – opgaven.pdf`); a fuller manuscript heading
+may still be used on slides. This keeps the companion filenames aligned with
+the sealed export names, including the mixed paragraphs.
 Keep builders/manifests in platform `build-scripts/content/book-1/`, using
 `presentation-1MK.mjs` and an edition-qualified manifest; do not overwrite the
 historical web-companion author sources. Keep the textbook PDFs, manuscripts,
