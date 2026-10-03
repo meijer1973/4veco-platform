@@ -1,0 +1,109 @@
+{
+  "paragraph": "1.1.1",
+  "verdict": "PASS",
+  "reviewer": "root coordinator, independent of cold author",
+  "source_hash_checks": [
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/1.1.1 Schaarste, keuzes en alternatieve kosten – paragraaf.md",
+      "sha256": "249ad3b06b6e717c1a0f1c3c0c1174fd99d1df45e751807c5ac0b4d8b7d2a492",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/Antwoorden.md",
+      "sha256": "dc89980240843ea5fa1d01fe68d33e7d3621ce5938fd7314f7e234bd204facd0",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/Docenteninformatie.md",
+      "sha256": "4b0b2fbe814f202ff8e81fdd8837d0ef882b2adb98ccb0957088f6849ede6c93",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/boek/Boek_1_Compleet_Tweede_editie.pdf",
+      "sha256": "2a2261b98f4a1c0a186a119120ae1b8c70e8d7860712e03eb711d1ab07efc676",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/student_page_map.json",
+      "sha256": "58eb9bf1d50227226e284099357e33e59a10bd433aa86f9bc7f3bf5c03b26691",
+      "passed": true
+    }
+  ],
+  "slides_reviewed_individually": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "notes_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "pdf_visual_sample": [
+    1,
+    11,
+    16,
+    21
+  ],
+  "pdf_text_checked_all_pages": true,
+  "overview_parity": [
+    1,
+    10,
+    21
+  ],
+  "native_tables": 12,
+  "native_charts": 0,
+  "note_minimum_pt": 14,
+  "artifact_pptx_sha256": "71b1826bf24a21482556a1e4283741fb23ac1ccb454ebcd49ddd34bd4e49ce2f",
+  "artifact_pdf_sha256": "4db4c9c03dd87affdfd46f2a1a7b1fd682fb414dccc15a48004a203a2799c274",
+  "cold_output_repaired": false,
+  "findings": [],
+  "instructional_review": [
+    "First paragraph assumes no prior economics. General multiplication and units retrieved and explicitly checked.",
+    "Supported start 2 directs to p6–8 and notes require return before basis work.",
+    "Separate atelier and Lina examples teach opportunity cost as best feasible foregone alternative, not payment/difference/sum; comparable time and criterion explicit.",
+    "Actual target context, all table values, financial conditions and all five questions precede any answer.",
+    "Independent target recalculation: 210/270; foregone music210; difference60; changed goal music90 vs60.",
+    "New target data and three-hour time window are explicit. Next paragraph bridge to ratios/percentages does not assume those operations already taught."
+  ],
+  "limits": [
+    "Rendering and planned instructional sequence verified; classroom timing and student mastery not measured.",
+    "Series continuity remains pending other eleven final presentations."
+  ]
+}
