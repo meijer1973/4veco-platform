@@ -221,7 +221,9 @@ chapter export folder. Derive the filename stem from that existing student PDF
 may still be used on slides. This keeps the companion filenames aligned with
 the sealed export names, including the mixed paragraphs.
 Keep builders/manifests in platform `build-scripts/content/book-1/`, using
-`presentation-1MK.mjs` and an edition-qualified manifest; do not overwrite the
+`presentation-1MK.mjs` and `presentation-1MK.tweede-editie-2026.manifest.json`.
+Use that exact manifest naming pattern so the classroom scope check can identify
+the artifact's source record. Do not overwrite the
 historical web-companion author sources. Keep the textbook PDFs, manuscripts,
 answer books, archive and their historical receipts unchanged. Link the new
 classroom series from `RESEARCH_AGENT_MAP.md`; generated edition pages remain
