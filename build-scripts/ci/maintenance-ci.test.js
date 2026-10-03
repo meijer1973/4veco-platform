@@ -232,6 +232,7 @@ describe('affected tests survive missing import edges and file-based inputs', ()
     ['.github/workflows/authorized-pr-integration.yml', 'build-scripts/review-gates/authorized-pr-integration-workflow.test.js'],
     ['.github/workflows/authorized-bundle-integration.yml', 'build-scripts/review-gates/cross-repo-bundle-workflow.test.js'],
     ['.github/workflows/platform-ci.yml', 'build-scripts/ci/platform-ci-evidence.test.js'],
+    ['.github/workflows/platform-ci.yml', 'build-scripts/ci/libreoffice-installer.test.js'],
     ['docs/review/pr-readiness-decision.schema.json', 'build-scripts/review-gates/pr-readiness-router.test.js'],
     ['build-scripts/ci/fixtures/branch-protection-activated.json', 'build-scripts/ci/check-branch-protection.test.js'],
     ['AGENTS.md', 'build-scripts/workflows/check-paragraph-workflow-wording.test.js'],

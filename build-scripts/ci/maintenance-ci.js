@@ -167,7 +167,7 @@ function jestArgs(paths, root = ROOT) {
   if (paths.some(file => /\.[cm]?js$/.test(file) && !fs.existsSync(path.join(root, file)))) return args;
   const tests = new Set(CORE_TESTS);
   const workflowTests = {
-    'platform-ci.yml': ['ci/platform-ci-evidence', 'review-gates/cross-repo-bundle-workflow',
+    'platform-ci.yml': ['ci/platform-ci-evidence', 'ci/libreoffice-installer', 'review-gates/cross-repo-bundle-workflow',
       'workflows/check-book-outline-currentness', 'workflows/check-book2-target-authority-remediation',
       'workflows/check-part-a-exercise-authoring-contract', 'workflows/check-blueprint-pedagogical-boundaries'],
     'authorized-pr-integration.yml': ['review-gates/authorized-pr-integration-workflow'],

@@ -179,6 +179,8 @@ build-scripts/books/books34-followups-revision-pin.json -text
 references/data/procedure-visual/procedure-templates.json -text
 
 # Exact Book 1 successor inputs: retain committed bytes on Windows and Linux.
+build-scripts/ci/install-libreoffice.ps1 -text
+build-scripts/ci/libreoffice-installer.json -text
 build-scripts/books/book1_second_edition/** -text
 references/owned/book1-second-edition-2026/** -text
 reports/review-gates/book1-second-edition-20261002/** -text

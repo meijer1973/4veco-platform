@@ -7,8 +7,8 @@
   "platform": [
     {
       "path": ".gitattributes",
-      "bytes": 14866,
-      "sha256": "2077c30f711d7f48d57c2d713fefd2842a72ce02e7ca73cf111fc588af8665c4"
+      "bytes": 14963,
+      "sha256": "606e18f0f3aa979dadaba2bcebb12f859da7f56c51421afa5864dccabe0d28cd"
     },
     {
       "path": ".github/workflows/paired-book1-second-edition-ci.yml",
@@ -24,6 +24,11 @@
       "path": ".github/workflows/paired-exercise-route-ci.yml",
       "bytes": 5082,
       "sha256": "d80fee38c852c48c2570839f6554c85e4f5c2d76c3640efe33344fc6761d22e9"
+    },
+    {
+      "path": ".github/workflows/platform-ci.yml",
+      "bytes": 13904,
+      "sha256": "487b7644060f793516aca9180b4827d62444e2acef10aea7b8ccfbd719177ddb"
     },
     {
       "path": "AGENTS.md",
@@ -42,8 +47,8 @@
     },
     {
       "path": "build-scripts/books/book1-second-edition-revision.js",
-      "bytes": 12544,
-      "sha256": "f907c7783f7507066d20b1edd2cc59ba5296475c1749b26741e76547bfba5824"
+      "bytes": 12843,
+      "sha256": "310ce5fb5e3ec3202c28d42bb64a350a90c92da0ec71ab11810fdc6d7e1b33db"
     },
     {
       "path": "build-scripts/books/book1-second-edition-revision.test.js",
@@ -157,13 +162,43 @@
     },
     {
       "path": "build-scripts/books/book1_second_edition/verify.py",
-      "bytes": 8901,
-      "sha256": "d68c5cd79773af68d9645bc0e02c85143bb6dd3ac042c4d38e794d24f924b4ec"
+      "bytes": 9161,
+      "sha256": "dec2ea3c701823e382f9eeef97729c79df6abf19bbc407967d016dedc55c3fa2"
     },
     {
       "path": "build-scripts/books/build-book.py",
       "bytes": 2712,
       "sha256": "d66aec851ef141b7266cca2f69934473141ab3fe0d18d6477110413bead8d0b6"
+    },
+    {
+      "path": "build-scripts/ci/install-libreoffice.ps1",
+      "bytes": 1567,
+      "sha256": "2138a810e8dacb12881184c23b73b1efcb3fe4deab08e2281f61a66bda24ec77"
+    },
+    {
+      "path": "build-scripts/ci/libreoffice-installer.js",
+      "bytes": 4749,
+      "sha256": "f803319c68dc1b7fa790284cbff4107629b55284aa2e15f469e03d8ed313cbf4"
+    },
+    {
+      "path": "build-scripts/ci/libreoffice-installer.json",
+      "bytes": 823,
+      "sha256": "fbe48cd27b0ffd799428d0ac3ef33e18e6c4775152064a9690e53bb514e40719"
+    },
+    {
+      "path": "build-scripts/ci/libreoffice-installer.test.js",
+      "bytes": 4841,
+      "sha256": "aebceb0d9963d9fd92e3ecf1513ff4178d4f8e8faa6a8d74da5e72d54065137a"
+    },
+    {
+      "path": "build-scripts/ci/maintenance-ci.js",
+      "bytes": 16844,
+      "sha256": "209c3a56ddf8aeef2e517871061a06c2d41c6e76d715ef3747888be0c9071a8b"
+    },
+    {
+      "path": "build-scripts/ci/maintenance-ci.test.js",
+      "bytes": 21750,
+      "sha256": "5525bd9529d7d251c9107cbd05d97f73c83c4e63c54a14b0f4e565b12b6b6023"
     },
     {
       "path": "build-scripts/ci/paired-paragraph-ci.test.js",
@@ -318,7 +353,7 @@
     {
       "path": "references/owned/book1-second-edition-2026/targets.json",
       "bytes": 146217,
-      "sha256": "f3ce0c0e840a823574b596e11162c403e739b28926908b1bfe5c11469bece95d"
+      "sha256": "3ee165784ee930d204d440ccad958da8c10a07202951d94fbf6757caffd1d553"
     },
     {
       "path": "reports/json/owned-content-coverage.json",
@@ -332,63 +367,63 @@
     },
     {
       "path": "reports/review-gates/book1-second-edition-20261002/1.1.1-review.md",
-      "bytes": 4898,
-      "sha256": "6557676221e5925b59c34900445f77edfcaa67e5861675df3bfe7e741cbc1423"
+      "bytes": 6351,
+      "sha256": "f6776c104aac38b7ee7012a9a016f38051753e182000d9a87a522efc79bdad2f"
     },
     {
       "path": "reports/review-gates/book1-second-edition-20261002/1.1.2-review.md",
-      "bytes": 4912,
-      "sha256": "7febb029aeb82a489784a26cf86d482b39ddd02f2a4785bc91a5a10457eb9997"
+      "bytes": 6365,
+      "sha256": "ec9363ac7ff4482936f0a9e5af31b00bfbf68d4f6ba4a5e71b6d769ccf18ce93"
     },
     {
       "path": "reports/review-gates/book1-second-edition-20261002/1.1.3-review.md",
-      "bytes": 4869,
-      "sha256": "e644abb99cc636389ca787b7a1098747f72cda38bb40bb1c98aff2189cbbf77e"
+      "bytes": 6322,
+      "sha256": "f09bee8441f5ff17e6fc014a420be7f469cad50bbb24a1d226a140f2aae713cf"
     },
     {
       "path": "reports/review-gates/book1-second-edition-20261002/1.1.4-review.md",
-      "bytes": 4809,
-      "sha256": "09ab1ef2e820be0ec7804ea349df8dc73115c3b2dbed978e62bb72baba18e7f0"
+      "bytes": 6262,
+      "sha256": "14d1ea9ad8b7557db46870035022837d6abefa16e27e9a41843cfa959d5d7776"
     },
     {
       "path": "reports/review-gates/book1-second-edition-20261002/1.2.1-review.md",
-      "bytes": 4838,
-      "sha256": "ecb8d5a5455c98beab0bd9d7e5cae0603f7c884ebe3ad3fe4a884c10d9fb01a7"
+      "bytes": 6291,
+      "sha256": "e169bf6e26d1d2f37ab700aa6d6186012177e6ab2aa8fc3339d96e194a45a0ef"
     },
     {
       "path": "reports/review-gates/book1-second-edition-20261002/1.2.2-review.md",
-      "bytes": 4913,
-      "sha256": "3d21f9b2c8a828bde149311ef447ca0521c373920b7d3e143b9e97a5078335f7"
+      "bytes": 6976,
+      "sha256": "b57b2c18112a4d5514e67f2f881882974bc6a217e10824bcdfed6b8fd43d8197"
     },
     {
       "path": "reports/review-gates/book1-second-edition-20261002/1.2.3-review.md",
-      "bytes": 4843,
-      "sha256": "051787d20a30385a4480f1a411bc62fa2f58b05ffcec9b48a5a6a1586a741d80"
+      "bytes": 6296,
+      "sha256": "5a04d6a044bbac6d918f60f977850b064df2355d67bc6ad2c1b4dedc7448de69"
     },
     {
       "path": "reports/review-gates/book1-second-edition-20261002/1.2.4-review.md",
-      "bytes": 4743,
-      "sha256": "3de36c1f181ec7811bc887dbaa5102124f273030529577f357fe0e0082dfbb82"
+      "bytes": 6196,
+      "sha256": "0953d97f5d83512b061f634b04c945c3544225f529266e7e3bd9df6deb81c69d"
     },
     {
       "path": "reports/review-gates/book1-second-edition-20261002/1.3.1-review.md",
-      "bytes": 4896,
-      "sha256": "f246d290b130e3b7f21919ba313704591591cbef21be060902d7530794541d6b"
+      "bytes": 6349,
+      "sha256": "77e242f0a25ba54726d00729a41dc86e736f617c3c04d6db181280ef2b675dbc"
     },
     {
       "path": "reports/review-gates/book1-second-edition-20261002/1.3.2-review.md",
-      "bytes": 4814,
-      "sha256": "6bdd1437e54959b1ec3bda14425f3f3a53971e88a1a788cb88b78aa974e8cbfb"
+      "bytes": 6267,
+      "sha256": "610f078a4bd847684c6debca7b809e2203e6450063d1f1a660abf3c2338135bf"
     },
     {
       "path": "reports/review-gates/book1-second-edition-20261002/1.3.3-review.md",
-      "bytes": 4863,
-      "sha256": "691a2eda66a8e2498ecb1e5968459ad0bfa8be758428980d35aba50481c5db35"
+      "bytes": 6316,
+      "sha256": "ddbe11bed2b97533a24b1e03db1d07a1f011d3af3ddc96da8dd0d758031954fd"
     },
     {
       "path": "reports/review-gates/book1-second-edition-20261002/1.3.4-review.md",
-      "bytes": 4787,
-      "sha256": "72efd4713cc7f6e1ae20fcf1f65bdf3cdeb6d7958f158d4ff0dc40a217f11b12"
+      "bytes": 6240,
+      "sha256": "a588fed3d7a6061cd2878ed5cc8121eaccab400a209e195821c411bafd7208a1"
     },
     {
       "path": "skills/econ-didactiek.md",
@@ -429,8 +464,8 @@
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/Boek 1 Grondslagen, vraag en aanbod – boek.pdf",
-      "bytes": 4082446,
-      "sha256": "380ac7559545ff823c35e28b75562ca9f39311ef527540241d8f34a612b2826d"
+      "bytes": 4082464,
+      "sha256": "2a2261b98f4a1c0a186a119120ae1b8c70e8d7860712e03eb711d1ab07efc676"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/README.md",
@@ -444,8 +479,8 @@
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/Boek 1 Grondslagen, vraag en aanbod – boek.md",
-      "bytes": 239034,
-      "sha256": "8b68cba6c53abe1b099324901ecef8934e357ae16a33e9fbabf9db16649f7c93"
+      "bytes": 239085,
+      "sha256": "a6cd24bd7cb2314a7a13c974a02d1a89850f89f4516ef51daa479bd72aadf91f"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/README.md",
@@ -455,17 +490,17 @@
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/boek/Boek_1_Compleet_Antwoorden_Tweede_editie.pdf",
       "bytes": 491815,
-      "sha256": "d346bfa0cb5b97bda4674ee24b4540a841ed122fb1a243624e8245ab3ad228c2"
+      "sha256": "dfe7fec72004712845ea55a71417cb241f5d01fde4e9ca1a8bb0a0f8e5cbfa2b"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/boek/Boek_1_Compleet_Docenteninformatie_Tweede_editie.pdf",
       "bytes": 238973,
-      "sha256": "f7bad01835b75632cac5a440383548ef3242f28fe1a3513fae3371b1f9e98e72"
+      "sha256": "99861e11e4e0f4e045802418cad47beb61cdb5f138094a4806142ed79a6fdd3e"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/boek/Boek_1_Compleet_Tweede_editie.pdf",
-      "bytes": 4082446,
-      "sha256": "380ac7559545ff823c35e28b75562ca9f39311ef527540241d8f34a612b2826d"
+      "bytes": 4082464,
+      "sha256": "2a2261b98f4a1c0a186a119120ae1b8c70e8d7860712e03eb711d1ab07efc676"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/book_matter/Begrippenlijst.md",
@@ -929,8 +964,8 @@
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2 Vraag – hoofdstuk.md",
-      "bytes": 72311,
-      "sha256": "9127b9c558f3386fa643f29f904a9e12612f8e6f868e3570896fe9752f627f28"
+      "bytes": 72362,
+      "sha256": "6cb2e10216519dd68327ef55840c94008d3aed566b0068cf1aa5484631334505"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.1 Betalingsbereidheid en individuele vraag – paragraaf.md",
@@ -939,8 +974,8 @@
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.2 Vraagfactoren – paragraaf.md",
-      "bytes": 19215,
-      "sha256": "e0573715e6e956ed47e30e10db1e7f262e4062b79b8898cadea8d85431cea3f9"
+      "bytes": 19266,
+      "sha256": "57fe7dacb96f888b82d170bd55060c129fcd8effbae8fbed89c8a4eacd8f6c7a"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.3 Van individuele naar collectieve vraag – paragraaf.md",
@@ -1015,7 +1050,7 @@
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/QA/validation.json",
       "bytes": 119815,
-      "sha256": "0aa9ac5951ae8d555cff8241a082dc185edf05b4f956b17b458076e0a270bdd7"
+      "sha256": "67885baab542d56d69ea3324f7282357e006ade9c0b9b48af6d26a16e24c01c6"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/README.md",
@@ -1925,7 +1960,7 @@
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H1/Boek_1_H1_Antwoorden_Tweede_editie.pdf",
       "bytes": 115211,
-      "sha256": "c2370fc0b7e3e8fdb2e1433bfde3e810c2d8c639c61bac0d70688fc3bd4c4869"
+      "sha256": "246be24912314367b9d103b0f21278d69ff3b5676dfae01b092a31135e0fa35c"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H1/Boek_1_H1_Docenteninformatie_Tweede_editie.html",
@@ -1935,7 +1970,7 @@
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H1/Boek_1_H1_Docenteninformatie_Tweede_editie.pdf",
       "bytes": 52120,
-      "sha256": "ffdae703795acdd8cd5125c070f02492d5b0c4080f58800b3f2009fb6592e241"
+      "sha256": "4405d423fd317cc35480eade330322a9bc71a4b41cf3dd51a0486adddb04803b"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H1/Boek_1_H1_Economisch_denken_en_rekenen_Tweede_editie.html",
@@ -1945,7 +1980,7 @@
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H1/Boek_1_H1_Economisch_denken_en_rekenen_Tweede_editie.pdf",
       "bytes": 243189,
-      "sha256": "f5c7a57b2b8d1bc084e3219d642eea3bf17fbad93a6fbfa6ccf264c0f2ac6a9d"
+      "sha256": "c8bdded08cf6a35eff13373eb483216f6f5f4479a441ec12a7cffc67312254bf"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H2/Boek_1_H2_Antwoorden_Tweede_editie.html",
@@ -1955,7 +1990,7 @@
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H2/Boek_1_H2_Antwoorden_Tweede_editie.pdf",
       "bytes": 143412,
-      "sha256": "7783f148903e275283ef85b05d8645044e006c88b07a8e7469c4ea96189f1b23"
+      "sha256": "fde66954ffff0a20671c951758230558c0a4374d52b6ce25d14d50ecb601f4c9"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H2/Boek_1_H2_Docenteninformatie_Tweede_editie.html",
@@ -1965,17 +2000,17 @@
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H2/Boek_1_H2_Docenteninformatie_Tweede_editie.pdf",
       "bytes": 57937,
-      "sha256": "fca0813359c12ebfb4f5eac98e59abf1faa4b16e47f3e75501aedb1d9cbc74f4"
+      "sha256": "c9a4dddd22e2abcc4e194e88941aeee7f615624a26727cb5736c8791629dab39"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H2/Boek_1_H2_Vraag_Tweede_editie.html",
-      "bytes": 4677441,
-      "sha256": "104b94b334d8f5ac0737a3763e2e6fb744dc2c5aae76291ff601ab0fd5d80f85"
+      "bytes": 4677492,
+      "sha256": "3d852d9b7f37bb9c848ade9e52f10e5b388d12734ae250d09baecd8370cfa387"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H2/Boek_1_H2_Vraag_Tweede_editie.pdf",
-      "bytes": 255189,
-      "sha256": "9beecb35083969c828991ad7003a9907f3a92482a3ba98ac7817887b2830d9cf"
+      "bytes": 255207,
+      "sha256": "0e070cd91771cae6f2d29d7849b48c8d2cf61260d8a30ee980cc31ccf5249016"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H3/Boek_1_H3_Aanbod_en_marktevenwicht_Tweede_editie.html",
@@ -1985,7 +2020,7 @@
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H3/Boek_1_H3_Aanbod_en_marktevenwicht_Tweede_editie.pdf",
       "bytes": 303411,
-      "sha256": "e602cdc90949abb50da90e2bc6d56312cd3ac719a128b88c593837248471b8fb"
+      "sha256": "dae97868a765e052de6cf72987287790959b6153a9e2b46785b82dfd937ddfaa"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H3/Boek_1_H3_Antwoorden_Tweede_editie.html",
@@ -1995,7 +2030,7 @@
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H3/Boek_1_H3_Antwoorden_Tweede_editie.pdf",
       "bytes": 157099,
-      "sha256": "36517adb94316bd1f96dcb3560d2804809aaa26084ebb3d6587f46850e3b9aa2"
+      "sha256": "8f9508ed216e63fa8608dbcdbbbbd790b616d2de64b53c40e5184ead8890ec7c"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H3/Boek_1_H3_Docenteninformatie_Tweede_editie.html",
@@ -2005,7 +2040,7 @@
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H3/Boek_1_H3_Docenteninformatie_Tweede_editie.pdf",
       "bytes": 56437,
-      "sha256": "373d990e738b7cbec708f5b96e4472508ff215f15f7fad4f8410c2c45904b4c6"
+      "sha256": "d63b769bdb91a5917eb012e7b4f4397c4f76dfd99de6459bf6e202931a760abc"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/index.html",
@@ -2020,122 +2055,122 @@
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H1/1.1.1 Schaarste, keuzes en alternatieve kosten – antwoorden.pdf",
       "bytes": 67185,
-      "sha256": "17ead8e723d2f9094bc445098da80e9cccabcb844e1e50ac23270422fa8cdc3f"
+      "sha256": "ee11e79ae0a0c5cae10d0992574ef084bd4227bbda51609794ae251179414f7f"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H1/1.1.1 Schaarste, keuzes en alternatieve kosten – paragraaf.pdf",
       "bytes": 140420,
-      "sha256": "da0981ca5e9abd6233f8145cac32220a1b89832b5f9cefb017fd75b93d79715a"
+      "sha256": "1db48f51a4aa2d05f9d5f6d382d40f21b87dcb3d369e45fcc02b86425591178d"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H1/1.1.2 Verhoudingen, percentages en indexcijfers – antwoorden.pdf",
       "bytes": 70568,
-      "sha256": "3aad9641eb96f3b2b9e39da33bc3d7161268cf1af4874b4bccbf0f1a5c196c86"
+      "sha256": "e55cd18ee3ba4c65af9d2633e0e7e045b7397368bca417509fb3feb92f14a982"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H1/1.1.2 Verhoudingen, percentages en indexcijfers – paragraaf.pdf",
       "bytes": 149092,
-      "sha256": "7e3769394db797cf2951fdbbb486a1b0166c8e5d61431556ebde00ce20977a45"
+      "sha256": "63d3c6f6969b69d94374a039c9cb86476e56e57937d2319ab6de7ef9889d4610"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H1/1.1.3 Tabellen, grafieken en formules – antwoorden.pdf",
       "bytes": 78196,
-      "sha256": "66b3bd9a2e59594115cd1bdccad7a2bb371a0d3fa0faa911415c7906e965a6e3"
+      "sha256": "05e2665dc68691aa0d9939ca84e8ee1ebe99416450931f7b4e29d21f8f2d8a99"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H1/1.1.3 Tabellen, grafieken en formules – paragraaf.pdf",
       "bytes": 160939,
-      "sha256": "430bee97b8e87cc9fbe9cf13c37caa4e3ff245210fa0150ac521e49f7e09515b"
+      "sha256": "fa487d2f113910b6a60c32e22097a2b7f0c7d4896b11ef094fb13d24ba77e9c1"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H1/1.1.4 Gemengde opgaven – antwoorden.pdf",
       "bytes": 69198,
-      "sha256": "75bbc9d98e1397d93483c55e79f4ecb11e4cf44037c877f415bd51a8ac86209f"
+      "sha256": "1bf7f15015aa6d796b69f8a354b8471f332fd742cc60f9460992705b79f33eb6"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H1/1.1.4 Gemengde opgaven – opgaven.pdf",
       "bytes": 131741,
-      "sha256": "9c4c5739bb36a12dbabd1a1cac0670d2e6a3cb85b530192b4862c068a12c249e"
+      "sha256": "2213eb33cc7b97a6a6e103ceaf9fd53bea605bec15b713f4bff629b2bedb0539"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H2/1.2.1 Betalingsbereidheid en individuele vraag – antwoorden.pdf",
       "bytes": 92327,
-      "sha256": "7bb8590951c2c65eb29faf20f2c634075ef7bc1c3d2fcdb9944c78ac103ec5a6"
+      "sha256": "e8f342c46371e27b8a406da59836525d233dc8a567f228e0f46fdf7d60642ded"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H2/1.2.1 Betalingsbereidheid en individuele vraag – paragraaf.pdf",
       "bytes": 164507,
-      "sha256": "19a2aec5dc01f6610f80a9fc5cd607bc4ac2ade3f3771607d4ce1481d6e9b4f4"
+      "sha256": "a0363feb7866d1ab99fabd01c9141b5e803620b44e6b3e45009a6f91394b3a09"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H2/1.2.2 Vraagfactoren – antwoorden.pdf",
       "bytes": 93857,
-      "sha256": "7cbf9d5ef9768f98e46aa05c6d29e7036d0a381bfdb59d6719364219596fc24c"
+      "sha256": "f4fd18168325c402e1c97a9601b4659e7985eb0be24eed144f890dbdb203af03"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H2/1.2.2 Vraagfactoren – paragraaf.pdf",
-      "bytes": 163344,
-      "sha256": "c10e79268d701ac05331808cf214423466ed28a4b9202b78d56cb21496ea8647"
+      "bytes": 163362,
+      "sha256": "f88b764cf3bbc360f8209b6e53633ac26ebf073abcffd03ff378d9ab539f23a7"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H2/1.2.3 Van individuele naar collectieve vraag – antwoorden.pdf",
       "bytes": 92018,
-      "sha256": "4f689b4cdcd6b7e59f0177a9d29037f748cef23644b80f3b37dde07cc39787ab"
+      "sha256": "bfa28c9f4f8fc23e678463714d84ac3fd0618b3fc45c1a2f2731224180b2972b"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H2/1.2.3 Van individuele naar collectieve vraag – paragraaf.pdf",
       "bytes": 160898,
-      "sha256": "30f336d3ea0d6080d8e4f430e4f11f4bbfd0eb7581c2cdbdf52c548fe6b0d12b"
+      "sha256": "8e1a4069f158ddc91d124c94316162b539b829e01886b4fce6e0626bf443f811"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H2/1.2.4 Gemengde opgaven – antwoorden.pdf",
       "bytes": 89759,
-      "sha256": "41169205496109865fce3f9e9c6cb0ac0aec2a481d3fb1c8ebf37b5070ef5481"
+      "sha256": "bbba160e05813d40fe0ad1570a3893ce575b961e7f40ea41dd397671e723beb0"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H2/1.2.4 Gemengde opgaven – opgaven.pdf",
       "bytes": 144191,
-      "sha256": "ed838a2379377a19de4aa8969fe327e92e8db4678cbde4d723d1afd69abc859f"
+      "sha256": "7dbabb063657aad691ddfe34bd3dbcda627882dd37f98f921fb8b64d0e731e94"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H3/1.3.1 Aanbod en aanbodfactoren – antwoorden.pdf",
       "bytes": 108777,
-      "sha256": "3c83d57f8621cf216cba15bcb161b8a00d4fb9ee68d093f2bef774d6784d0420"
+      "sha256": "f79baae5fdc003e788bde42c00b1c33781fc476e5dd90e8bda1571730608b403"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H3/1.3.1 Aanbod en aanbodfactoren – paragraaf.pdf",
       "bytes": 206940,
-      "sha256": "de6dd932be9d58dd573eb200d838095d1cb96aa2b0ff9ff3f8e05c4201fab9d3"
+      "sha256": "e099a3f491adc090303690b1c894593b7d5db00ba63e171b88afd47ed2fa6b13"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H3/1.3.2 Marktevenwicht – antwoorden.pdf",
       "bytes": 109622,
-      "sha256": "f8f69a7944b0a398f3e3e7147f2f77aa0b282aca4faa69cbfe408566cd9986b7"
+      "sha256": "70b6e1607a773651b237fd5643f7a48366bb9e6eeb5b897b0f589784503aa3ec"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H3/1.3.2 Marktevenwicht – paragraaf.pdf",
       "bytes": 211969,
-      "sha256": "4352d46384d2105ac1b9bdec857e2a2081deda45061447485a3b15edf0a29043"
+      "sha256": "16a832ba9834f1a6c72a2644b46078b5d957aba7effdcb6079b51ba5d762aacc"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H3/1.3.3 Verschuivingen en nieuw evenwicht – antwoorden.pdf",
       "bytes": 109356,
-      "sha256": "3c17194a0971c1eff39d955a95ec893028ab2f28928134d6807ee40e56ec3837"
+      "sha256": "e7500008364396456cfc67e780304f8fd27c2f44d8b077ab80c77adc8306d7aa"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H3/1.3.3 Verschuivingen en nieuw evenwicht – paragraaf.pdf",
       "bytes": 207708,
-      "sha256": "496c668c68cdead9ff3b830b106b9e054efc858ff7e63772e5d682af3129ad72"
+      "sha256": "535640c1ce6cde0d9101a1d76ec56a4ca1b48ef3ceb212eb385bf15e2dc67edf"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H3/1.3.4 Gemengde opgaven – antwoorden.pdf",
       "bytes": 103942,
-      "sha256": "ab05d45c573ebf34ae7b9c8910e6d260481b64ab0a72489fbb93b894ea534e34"
+      "sha256": "0df5674063f3bc199369a384d960df9fb9a299f4c1127402bb5512d0136efcbc"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H3/1.3.4 Gemengde opgaven – opgaven.pdf",
       "bytes": 189191,
-      "sha256": "66323932ab5fda4a2f22860592d6b559945e5621290dd9615eeacf88aa036574"
+      "sha256": "cefa5871cb2b945d6b48b66e42d5216740c023f5c5f034aa057eee22b52c3c71"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/answers_links.json",
@@ -2155,7 +2190,7 @@
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/input_hashes.json",
       "bytes": 1407,
-      "sha256": "ed2ed4a5bd0cfce17f2b40cd38fa443e174aa19c66601ce4818e132328d09124"
+      "sha256": "655916927e89422cbef601b558f7a7105ad2e79de344460f7b80e8e61c81ebc5"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/page_conversion.csv",
@@ -2165,67 +2200,67 @@
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.1.1-textbook-review-manifest.json",
       "bytes": 27994,
-      "sha256": "da14821a205e04494d9bbe01e85881438e59854088790f74e87a4f94f4990946"
+      "sha256": "60ff727e1fcd00f5d8051396e4469b7574acd795d8528a05e508d0452a644d04"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.1.2-textbook-review-manifest.json",
       "bytes": 27996,
-      "sha256": "3cfea6bad9110db0e5ac70fa2cab9a4ddca74495655f32c7daa65630c0b42aea"
+      "sha256": "4cb9a74de64544e78e41da6857fe6cbf109a8435ad13879a221a89de0e658746"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.1.3-textbook-review-manifest.json",
       "bytes": 27976,
-      "sha256": "faa1991ab79fc2fb92643488e7ff31e07eadeec21420fda2d657cdbcf71c0a62"
+      "sha256": "2c07097b78b9377e7b8f94ce504b3271c568c47420520d568f7a187981309537"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.1.4-textbook-review-manifest.json",
       "bytes": 27944,
-      "sha256": "d74848b3df3ba66fc276c018150aad17e06f7c70b6ecef19767c2dcae14dbe1d"
+      "sha256": "46685781b397b395524a958f0404b929523c7c2ff56654ce0b8275e69a86f3a4"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.2.1-textbook-review-manifest.json",
       "bytes": 30125,
-      "sha256": "e9ac04ceb9cbc427fa07081469e86b62a7ef5763c2d1b7f4cd9bc9a9d4150a90"
+      "sha256": "9eb80ad20cec0ccc95434621056ed21deabe9a299a65414fceff2eed073f6668"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.2.2-textbook-review-manifest.json",
       "bytes": 30071,
-      "sha256": "d4529288dee1f3eddd73111ee6777a902e4b7d447931887e2e47c5b7fa55f240"
+      "sha256": "8837486745ed4001deaeacb727b4bce7b750a201ed7d692c6a6ca02f6607a481"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.2.3-textbook-review-manifest.json",
       "bytes": 30121,
-      "sha256": "4a4eba4c18b7b3a05574774a353397674dae87744b8264e87cbce840f78ab6b1"
+      "sha256": "ad77b178d329327c223e0cedc6fd9fb13cb1138e97aba26a1c0a655f0e0bea49"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.2.4-textbook-review-manifest.json",
       "bytes": 30075,
-      "sha256": "248bf584ed3c66b2f45f84615c4ea8ede51c2da68ad611af4c19de532833449d"
+      "sha256": "cc9de3e29c3e8be068e6396c993cc2dcd2ffbc676057161ba304541ec3ae40de"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.3.1-textbook-review-manifest.json",
       "bytes": 32316,
-      "sha256": "806d1795cd7d57c99e4d0e3e4898a169862b8e8810041698ea014193039622da"
+      "sha256": "43a84fa30dc27de41340ef43d4774caf8297c12d8036f00ea0dae2767428b16b"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.3.2-textbook-review-manifest.json",
       "bytes": 32296,
-      "sha256": "b4eb41f342cc912369c00289a9c40307e308d25397cbaa2a1cb256473f4dd817"
+      "sha256": "5d4de6c9c35105923fb0168984abd102afbd9b2fa6214bb2803e51f5f9597f4d"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.3.3-textbook-review-manifest.json",
       "bytes": 32334,
-      "sha256": "881ef359141801f6706c546a35123788a59f8877354f91507a5984df55e8bfa1"
+      "sha256": "95bc4468acfc6eedeba8337f7aef39f62141fbef03afc57bad3faa763e0d596a"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.3.4-textbook-review-manifest.json",
       "bytes": 32298,
-      "sha256": "5a469946e140ef49cfe66856c4408acab022be8d322c97a02fa2adf968b23626"
+      "sha256": "badcddff4c59206c329a0cba82d2b86f62bbc713abf09c6fde6598c9748e6b11"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/source_hashes.json",
       "bytes": 26345,
-      "sha256": "e88f70d04bcc6d71909f240996d65dd9ebe608a948487bbdc1a61b4fbc3335d4"
+      "sha256": "433b43ebcd894ad1aabe3aa4ad9b04c9d61eb71b20dfe9d2c38fc0db35f3c3b9"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/student_links.json",
@@ -2250,7 +2285,7 @@
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/validation.json",
       "bytes": 144103,
-      "sha256": "01f1ae43de4cf32f8cc8dd0efc44b8424c203316fa9dcc49bb20b1593ce8a19e"
+      "sha256": "23edcc122df77a8eb7b8724c57552b8f527e17e750af8de7ebee78986fc20881"
     },
     {
       "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/sources/Boek_1_Tweede_editie_Boekopzet.pdf",

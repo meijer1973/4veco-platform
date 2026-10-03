@@ -24,6 +24,9 @@ def revised_student(text,name):
     s=s.replace('De berekende 64 kilo is aangeboden kaas','De berekende hoeveelheid is aangeboden kaas')
     s=s.replace('Herhaling / Herhaling en interleaving','Herhaling en combineren')
     for old in DOMAIN_SENTENCES:s=s.replace(old,old+ASSUMPTION)
+    if name=='1.2.2 Vraagfactoren – paragraaf.md':
+        s=s.replace('Die prijsstijging gaf juist een beweging met minder vraag.',
+            'Die prijsstijging veroorzaakte een beweging langs dezelfde vraaglijn naar een kleinere gevraagde hoeveelheid.')
     if name=='Voorblad.md' and 'Begeleide inoefening is voor de meeste' not in s:s+='\n<p class="note">'+NOTE+' Herhaling is aanvullend bij beide routes.</p>\n'
     return s
 def main():

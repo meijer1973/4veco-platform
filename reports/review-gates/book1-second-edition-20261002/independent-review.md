@@ -1,4 +1,4 @@
-# Independent review · Book 1 second edition · 2026-10-02
+# Independent review · Book 1 second edition · 2026-10-02; revised 2026-10-03
 
 ## 1. Assignment and evidence
 
@@ -6,9 +6,9 @@ Reviewer: independent agent `/root/review_b34_followups`, separate from the impl
 
 Reviewed the supplied source/research package, all twelve current owning manuscripts, all 114 exercises and their answers/continuations, worked teaching and preparation, figures, teacher plans, all chapter PDFs and complete-book assembly, target retrieval, archive/navigation and the finite integration boundary. Reviewer-authored files are confined to this review directory and external scratch; the reviewer did not author lesson or implementation changes.
 
-Accepted bases after the ordinary main synchronization are Platform `6d010e98610b5f7d1288af322cd228e160d39ada` and Lessons `10b2bab1ab1dc9592f2ea1e967b6cc2cd7c281c2`. The exact paired lesson candidate is `4aa0ef410e9a39f928861dc6582430446c85e169`. The final receipt covers 81 platform and 376 lesson changed paths, with full accepted-repository preservation outside its finite scope.
+Accepted bases after the ordinary main synchronization are Platform `6d010e98610b5f7d1288af322cd228e160d39ada` and Lessons `10b2bab1ab1dc9592f2ea1e967b6cc2cd7c281c2`. The exact paired lesson candidate is `33bfcdb945df5bdb7db020434102ce716bd53c1c`. The final receipt covers 88 platform and 376 lesson changed paths, with full accepted-repository preservation outside its finite scope.
 
-Review manifest SHA256: `6e82912d5bcb0777810d57ea16e7484804eaba5a5706003768f5687d7a2348d5`
+Review manifest SHA256: `d733b25145cdc66d3b5d54e0408a363e1f8c45efc72d1d285c2ca11c0649557a`
 
 Each linked paragraph report below has its own verified current-file snapshot. Those reports are included in the overall receipt; this overall report is excluded to avoid a circular hash.
 
@@ -51,9 +51,9 @@ Complete PDFs in the lesson edition’s `boek/` directory:
 
 | File | Pages | SHA256 |
 |---|---:|---|
-| Boek_1_Compleet_Tweede_editie.pdf | 132 | `380ac7559545ff823c35e28b75562ca9f39311ef527540241d8f34a612b2826d` |
-| Boek_1_Compleet_Antwoorden_Tweede_editie.pdf | 66 | `d346bfa0cb5b97bda4674ee24b4540a841ed122fb1a243624e8245ab3ad228c2` |
-| Boek_1_Compleet_Docenteninformatie_Tweede_editie.pdf | 28 | `f7bad01835b75632cac5a440383548ef3242f28fe1a3513fae3371b1f9e98e72` |
+| Boek_1_Compleet_Tweede_editie.pdf | 132 | `2a2261b98f4a1c0a186a119120ae1b8c70e8d7860712e03eb711d1ab07efc676` |
+| Boek_1_Compleet_Antwoorden_Tweede_editie.pdf | 66 | `dfe7fec72004712845ea55a71417cb241f5d01fde4e9ca1a8bb0a0f8e5cbfa2b` |
+| Boek_1_Compleet_Docenteninformatie_Tweede_editie.pdf | 28 | `99861e11e4e0f4e045802418cad47beb61cdb5f138094a4806142ed79a6fdd3e` |
 
 Independent link checks: 125 student, 23 answer and 3 teacher links all resolve internally; all 51 original chapter clickable rectangles and destinations are preserved with their assembly offsets. Main/chapter contents, continuous printed numbers and the two H3 internal references were checked. The mixed targets retain facing spreads 40–41,80–81 and120–121. The corrected native cover uses the same price/index data in graph and table, distinguishes own-price movement from a demand shift and gives equilibrium P=3,Q=30.
 
@@ -151,3 +151,20 @@ The final helper now checks HEAD/base and staged/base differences for all four a
 The reviewer inspected the failed Linux CI log and the exact two-file repair. Eighteen focused live/boundary tests passed independently, covering both `core.filemode=false` and `true`. A separate reviewer fixture independently demonstrated the old-versus-new behaviour under both settings: working `git diff base` was empty, the staged content differed, the original `07ddfac1` verifier accepted it, and the current verifier rejected it. The authored regression also rejects committed content cancelled by index/working bytes. Evidence: external `ci-07dd-book1-failed.log`, `final-counterbalanced-tests.log` and `independent-linux-cancellation-recheck.json`.
 
 The current receipt differs from the preceding review only in `book1-second-edition-revision.js` and its test. All 376 lesson rows, all paragraph evidence and inspected PDF bytes are unchanged. The final tracked current-review gate passes locally. Refreshed remote exact-pair, required platform and platform-first/final bundle results remain necessary; this local repair PASS does not relabel the previous failed CI run.
+
+
+## 7. Owner-requested precision correction and CI repair · 2026-10-03
+
+The owner’s review of Platform `a6319278` / Lessons `4aa0ef410e9a39f928861dc6582430446c85e169` requested one exact wording correction in §1.2.2. The worked example now reads: “Die prijsstijging veroorzaakte een beweging langs dezelfde vraaglijn naar een kleinere gevraagde hoeveelheid.” The independent source audit found exactly this substitution in the owning paragraph, generated chapter manuscript and generated book manuscript. The saved HTML/PDFs carry it. The source reconstruction verifier permits only the same paragraph-specific substitution and retains its other checks. The target registry changes only this manuscript’s source hash; target payloads and learning operations remain unchanged.
+
+The wording correctly distinguishes an own-price movement from the substitute-price demand shift. The reviewer rechecked the unchanged 42→36→48 wrap calculation and A=(42,6), B=(36,8), C=(48,8). Full H2 student pages 16–18 and complete-book page 61 were visually inspected; the corrected sentence, graph, caption and summary are readable without clipping or overlap. Independent saved-file comparison covered all 37 rebuilt PDFs / 740 page instances (including repeated chapter/export publications and the duplicate complete-book delivery). Only H2 student p.17, paragraph-export p.4, and complete student p.61 plus its root alias differ in text/pixels, by exactly the requested sentence. All other compared pages, page counts and all hyperlink rectangles/destinations are unchanged. The complete books remain 132/66/28 pages; the table above records their current exact hashes.
+
+All twelve paragraph snapshots were independently verified against current inputs, with identical file sets. Their changed shared inputs are the narrow source/verifier/target-hash revision and regenerated publication bytes. Each paragraph report now binds its new snapshot and explicitly reuses unchanged complete content, teacher/student and rendered-page coverage. This is not a new curriculum/target approval or a hash-only renewal. The independent PDFs’ hashes were checked again immediately before the final overall binding.
+
+The CI repair pins LibreOffice 26.2.6, the same release selected in the failed Chocolatey runs. The reviewer independently obtained the [official MSI SHA-256](https://download.documentfoundation.org/libreoffice/stable/26.2.6/win/x86_64/LibreOffice_26.2.6_Win_x86-64.msi.sha256), matching `f9877032fd908beb9c0ddf06df4af5c2e85f419c42e14876c4cce5aae5fb2660`, and ran the actual helper against the cached full installer: hashing passed. Three bounded HTTPS mirror attempts replace the unreliable package-download route. Cache and downloaded bytes are always checked; wrong or incomplete bytes cannot become an accepted installer. The PowerShell wrapper bounds installation time, accepts only success/reboot-success exit codes, and requires both installed launchers and the pinned runtime version. Installation evidence is saved. No actual local MSI installation or successful final Windows run is claimed by this review.
+
+The workflow retains all full Jest, presentation build/HTML/PPTX, golden-render and downstream checks without a new continue-on-error path. Its cache key is bound to the pin, with no broad restore prefix. Maintenance CI additionally selects the installer regression suite when the owning workflow changes. Reviewer-run installer/maintenance suites passed 115/115; PowerShell parsing passed. The author reports 130 focused JS tests, four Python tests and 2,527 bounded checks, with twelve target/snapshot freshness checks passing. Those author results remain distinct from independent review.
+
+The revision allowlist adds only the seven owning CI paths; explicit exact-byte rules cover the new PS1 and JSON, while existing LF rules cover the JS/workflow inputs. All 92 current input/receipt/review/head paths have appropriate checkout protection. Books 2–4, first-edition history and Part B remain outside the mutation scope. The existing shared-instruction/textbook scope partition remains explicit. The final receipt binds 88 platform and 376 lesson content rows; the complete Git scope includes the four excluded receipt/review/head files and the lesson receipt.
+
+Current review evidence is in external `revision-20261003/`: `independent-source-delta.json`, `independent-pdf-delta.json`, `independent-snapshot-delta.json`, H2 page images and `independent-complete-p61.png`, together with the author’s focused checks and bounded report. The final verdict remains PASS WITH FLAGS. Timing, authority, legacy-companion and browser limits are unchanged. Final exact-pair/full-platform/platform-first bundle CI remains pending; the installer repair is not proof of a completed Windows install. No merge authorization was granted for this follow-up.
