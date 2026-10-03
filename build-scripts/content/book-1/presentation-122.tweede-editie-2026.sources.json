@@ -1,0 +1,219 @@
+{
+  "paragraph": "1.2.2",
+  "title": "Vraagfactoren: bewegen of verschuiven?",
+  "type": "theory",
+  "edition": "Boek 1, tweede editie 2026",
+  "lessonCommit": "173aa9a803897965c572df2c4e7f83cdb135eb1c",
+  "platformCommit": "27536dc220657c657665d013d4f9c7bed9c06231",
+  "sources": [
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.2 Vraagfactoren – paragraaf.md",
+      "sha256": "57fe7dacb96f888b82d170bd55060c129fcd8effbae8fbed89c8a4eacd8f6c7a"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/Antwoorden.md",
+      "sha256": "f84d1a278537a2f3d8318c7b59f689a139421a631762c5926ffcbc3ad1690827"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/Docenteninformatie.md",
+      "sha256": "e3646b257412ad67beaae17591d62706f5ff29fe9ac0ffc944fe3254168b4ff2"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.1 Betalingsbereidheid en individuele vraag – paragraaf.md",
+      "sha256": "bcfa8e2586e1fed8c7a7aa5b1f6c571a800e0ee5da5d278e5c0ef2b349484e88"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/1.1.2 Verhoudingen, percentages en indexcijfers – paragraaf.md",
+      "sha256": "e10b272612bb096e6b2e2628f67198eaa3f4f123c4b6f7c420eb006312059335"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/boek/Boek_1_Compleet_Tweede_editie.pdf",
+      "sha256": "2a2261b98f4a1c0a186a119120ae1b8c70e8d7860712e03eb711d1ab07efc676"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/student_page_map.json",
+      "sha256": "58eb9bf1d50227226e284099357e33e59a10bd433aa86f9bc7f3bf5c03b26691"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.2_ex_19.svg",
+      "sha256": "9f789d70118a14434d0aaa1303db6151e7d77737653807603fb88f278967e038"
+    }
+  ],
+  "goals": [
+    "Eigen prijs onderscheiden van andere vraagfactoren",
+    "Specifieke oorzaak, richting en grafische verandering uitleggen",
+    "Nieuwe vraaglijn en punten tekenen",
+    "Twee veranderingen afzonderlijk en samen analyseren"
+  ],
+  "assignment": {
+    "independent": {
+      "printedPages": [
+        64,
+        65
+      ],
+      "exercises": [
+        17,
+        18
+      ]
+    },
+    "extras": [
+      20,
+      21,
+      22
+    ],
+    "homework": {
+      "instruction": "Maken en nakijken",
+      "exercises": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    "target": {
+      "title": "Filmhuis Lumi",
+      "exercise": 19,
+      "subquestions": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "printedPage": 66
+    },
+    "basis": {
+      "printedPages": [
+        62,
+        63,
+        64
+      ],
+      "exercises": [
+        14,
+        15,
+        16
+      ]
+    },
+    "start": {
+      "newContentSupport": "13: verkennen met theorie p. 58–59; opnieuw beantwoorden voor basiswerk",
+      "printedPage": 62,
+      "exercises": [
+        12,
+        13
+      ]
+    }
+  },
+  "prerequisiteTrace": [
+    {
+      "priorTeaching": "1.1.2, gedrukte p. 14, formule en drie rekenstappen",
+      "refresh": "Overzichtsnotities noemen de formule, haakjes en minteken",
+      "operation": "Procentuele daling met juiste oude basis en teken",
+      "source": "bronnen/H1/1.1.2 Verhoudingen, percentages en indexcijfers – paragraaf.md",
+      "neededBy": "12a"
+    },
+    {
+      "priorTeaching": "1.2.1, gedrukte p. 48–49, Ravi-model en invullen",
+      "lesson": "Stadfiets oude hoeveelheid en eigen prijs, dia 4–5",
+      "operation": "Invullen in een vraagfunctie, domein en eenheden",
+      "neededBy": "12b, 15a, 18a, 19a/d"
+    },
+    {
+      "priorTeaching": "1.2.1 p. 48–49, expliciete snijpunten en grafiek",
+      "lesson": "q naar Q toegelicht op dia 2; snijpunten herhaald dia 4 en nieuwe lijn dia 7",
+      "operation": "Coordinaten (Q; P), assen en snijpunten; rechte lijn tekenen",
+      "neededBy": "15b, 18b, 19c"
+    },
+    {
+      "priorTeaching": "Nog niet als nieuw onderscheid verondersteld",
+      "lesson": "Verkennen met p. 58–59 bij start 13; dia 5–6; terugkeer naar 13 op dia 13",
+      "operation": "Eigen-prijsbeweging versus lijnverschuiving",
+      "neededBy": "13, 14, 15, 18, 19"
+    },
+    {
+      "priorTeaching": "Nieuwe leerstof p. 59–60",
+      "lesson": "Dia 6, 8–9, specifieke oorzaken met eigen prijs constant",
+      "operation": "Substituut, complement, brongegeven inkomensgedrag, voorkeuren, aantal kopers en verwachtingen",
+      "neededBy": "14–17, 18b, 19b/e"
+    },
+    {
+      "priorTeaching": "1.2.1 p. 48–49 algebra en snijpunten; verschuiving nieuw p. 59",
+      "lesson": "Dia 6–7, +18 fietsen op Q en behoud coefficient −3, nieuwe geldigheid",
+      "operation": "Van uniforme extra hoeveelheid naar functie, domein en snijpunten",
+      "neededBy": "15b, 18b, 19c"
+    },
+    {
+      "priorTeaching": "Nieuwe leerstof, uitgewerkt voorbeeld p. 61",
+      "lesson": "Dia 5–6, 10–12; scenariowissel expliciet en versterkende variant in dia 12",
+      "operation": "B als analytische tussenstap; effecten combineren; tegenwerken zonder bekende groottes",
+      "neededBy": "16, 18c, 19d/e"
+    }
+  ],
+  "teachingExample": {
+    "otherFactor": "Duurdere scooterverhuur, substituut, +18 fietsen bij elke prijs",
+    "context": "Stadfiets, groepsvraag naar huurfietsen per dag",
+    "oldFunction": "Q = 90 − 3P, 0 ≤ P ≤ 30",
+    "independentVariant": "Afzonderlijke situatie zonder formule of effectgroottes, niet dezelfde getallen",
+    "authored": true,
+    "net": 6,
+    "newFunction": "Q = 108 − 3P, 0 ≤ P ≤ 36",
+    "price": "10 to 14 euro per fiets per dag",
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "points": {
+      "A": [
+        60,
+        10
+      ],
+      "C": [
+        66,
+        14
+      ],
+      "B": [
+        48,
+        14
+      ]
+    },
+    "assignedExerciseAnswersUsedForInstruction": false
+  },
+  "targetAnswers": {
+    "a": "60 and 50 visits per week, movement along V0",
+    "c": "Q = 120 − 5P, 0 ≤ P ≤ 24; A(60;8), B(50;10), C(70;10)",
+    "d": "70 visits per week; +10; −10 +20 counteracting",
+    "b": "Price of substitute, right shift",
+    "e": "False: own price is movement, substitute price shifts"
+  },
+  "pageVerification": {
+    "method": "Complete student PDF renders and printed footers",
+    "physicalEqualsPrintedForCitedPages": true,
+    "verified": [
+      14,
+      48,
+      49,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66
+    ]
+  },
+  "reference": {
+    "visualReference": "White 1600x900, Arial, blue/green/orange, native tables and XY charts",
+    "inspectedPdfSlides": [
+      1,
+      5
+    ],
+    "builder": "build-scripts/content/book-2/presentation-211.mjs",
+    "deck": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – presentatie.pptx"
+  },
+  "output": {
+    "folder": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H2",
+    "stem": "1.2.2 Vraagfactoren"
+  },
+  "sourceConflicts": [],
+  "timing": "No classroom timing or pupil mastery claim"
+}
