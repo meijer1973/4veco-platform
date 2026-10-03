@@ -6,7 +6,7 @@ import path from 'node:path';
 import {execFileSync} from 'node:child_process';
 import {Presentation, PresentationFile, finalizePresentation, PYTHON, SKILL, TOOLS, workspace} from '../../presentations/runtime.mjs';
 
-const provenance=JSON.parse(await fs.readFile(new URL('./presentation-112-tweede-editie-2026.manifest.json',import.meta.url),'utf8'));
+const provenance=JSON.parse(await fs.readFile(new URL('./presentation-112.tweede-editie-2026.manifest.json',import.meta.url),'utf8'));
 const {root:ROOT,build:BUILD,final:FINAL}=await workspace('112');
 const p=Presentation.create({slideSize:{width:1600,height:900}});
 const C={ink:'#183247',blue:'#17658A',green:'#20665B',orange:'#A94D16',paper:'#FFFFFF',pale:'#EFF4F7',muted:'#445B6B',line:'#C6D2DB'};

@@ -1,0 +1,31 @@
+{
+  "status": "local shared-code verification PASS; final pair CI pending",
+  "command": "npm run check:platform -- --maxWorkers=2 --json --outputFile=C:/wt/ppt/.book1/jest-current.json",
+  "exit_code": 0,
+  "results": {
+    "success": true,
+    "numTotalTestSuites": 149,
+    "numPassedTestSuites": 143,
+    "numFailedTestSuites": 0,
+    "numPendingTestSuites": 6,
+    "numTotalTests": 2336,
+    "numPassedTests": 2328,
+    "numFailedTests": 0,
+    "numPendingTests": 8
+  },
+  "raw_result_sha256": "6a3c61f2d454d3742df5dfde5055cfb1f5e23085e855f94e13823079e636b13b",
+  "started_platform_head": "208a9bfd",
+  "scope": "Full platform tests at shared implementation unchanged since this run. Subsequent builders and review records do not alter these tools. Final PR/pair CI still required.",
+  "independent_reviews": [
+    {
+      "reviewer": "book1_scope_adapter agent",
+      "reviewed": "6a7356eb routing, dbaf16bf renderer mutex, 27536dc2 filename guidance",
+      "result": "no blocking finding reported"
+    },
+    {
+      "reviewer": "root coordinator",
+      "reviewed": "scope adapter and bounded retirement/legacy fixture changes in ead13b6d and6604f8b7",
+      "result": "no blocking finding; finite paths, sealed376bindings and historical provenance retained"
+    }
+  ]
+}
