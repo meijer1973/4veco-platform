@@ -1,6 +1,6 @@
 {
-  "status": "local shared-code verification PASS; final pair CI pending",
-  "command": "npm run check:platform -- --maxWorkers=2 --json --outputFile=C:/wt/ppt/.book1/jest-current.json",
+  "status": "Final shared-code local suite PASS; remote published-pair CI recorded separately",
+  "command": "npm run check:platform -- --maxWorkers=2 --json --outputFile=C:/wt/ppt/.book1/jest-final-r2.json",
   "exit_code": 0,
   "results": {
     "success": true,
@@ -8,14 +8,14 @@
     "numPassedTestSuites": 143,
     "numFailedTestSuites": 0,
     "numPendingTestSuites": 6,
-    "numTotalTests": 2336,
-    "numPassedTests": 2328,
+    "numTotalTests": 2337,
+    "numPassedTests": 2329,
     "numFailedTests": 0,
     "numPendingTests": 8
   },
-  "raw_result_sha256": "6a3c61f2d454d3742df5dfde5055cfb1f5e23085e855f94e13823079e636b13b",
-  "started_platform_head": "208a9bfd",
-  "scope": "Full platform tests at shared implementation unchanged since this run. Subsequent builders and review records do not alter these tools. Final PR/pair CI still required.",
+  "raw_result_sha256": "26b02a8d8c4a10dab42525a9ebe9acc8565a51e98b3eb2701f3802b19c2507da",
+  "started_platform_head": "cc678ddd",
+  "scope": "All shared implementation, including the finite retirement classifier, is unchanged since run start. Later additions are paragraph builders/manifests/review records. Remote CI must bind final published heads.",
   "independent_reviews": [
     {
       "reviewer": "book1_scope_adapter agent",
@@ -27,5 +27,26 @@
       "reviewed": "scope adapter and bounded retirement/legacy fixture changes in ead13b6d and6604f8b7",
       "result": "no blocking finding; finite paths, sealed376bindings and historical provenance retained"
     }
+  ],
+  "earlier_full_run": {
+    "command": "npm run check:platform -- --maxWorkers=2 --json --outputFile=C:/wt/ppt/.book1/jest-current.json",
+    "exit_code": 0,
+    "results": {
+      "success": true,
+      "numTotalTestSuites": 149,
+      "numPassedTestSuites": 143,
+      "numFailedTestSuites": 0,
+      "numPendingTestSuites": 6,
+      "numTotalTests": 2336,
+      "numPassedTests": 2328,
+      "numFailedTests": 0,
+      "numPendingTests": 8
+    },
+    "raw_result_sha256": "6a3c61f2d454d3742df5dfde5055cfb1f5e23085e855f94e13823079e636b13b",
+    "started_platform_head": "208a9bfd"
+  },
+  "intermediate_failure_and_resolution": [
+    "First rerun exposed an import of the full scope adapter from the small lane classifier, which broke a minimal CI fixture. cc678ddd makes the exact six support-path classification self-contained; 51 focused tests passed.",
+    "An overlapping navigation-generation command dirtied archive/index.json while the first rerun inspected scope. Its task-generated files were restored; no test suppression. The clean second full run passed."
   ]
 }

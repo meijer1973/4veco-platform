@@ -1,0 +1,89 @@
+{
+  "lessons_base": "173aa9a803897965c572df2c4e7f83cdb135eb1c",
+  "changes": [
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – presentatie.html",
+      "sha256": "7dbb3d280ea0e01c5b27bf6d9bd6fbfc3cbbb6741849642992751f46078b01cd",
+      "action": "delete active first-edition presentation"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – presentatie.pptx",
+      "sha256": "23d40c0a12076bf02fecab9b889163df5b767ef557851c3cc6405f89d1bc7d5c",
+      "action": "delete active first-edition presentation"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/presentatie-slide3-img-14fd6f67e28c.png",
+      "sha256": "5c7bac102424ae79d59efb6cbd9f2f9dba5e3c0414c69b3bf7b3f7d8fb78701c",
+      "action": "delete active first-edition presentation"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/presentatie-slide4-img-69532d597fca.png",
+      "sha256": "9f131ab6d19b711e4a8ab4f283ee99146d6216963a7bbbe1886a2cc3ac854dbf",
+      "action": "delete active first-edition presentation"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/presentatie-slide5-img-db6ea92cebd7.png",
+      "sha256": "c2918919008f9ccd2c81185905f9b266a7cbece22e8377045ff3244575ffc7fe",
+      "action": "delete active first-edition presentation"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/presentatie-slide6-img-a0d089c4fdbb.png",
+      "sha256": "e2c571a9bb0e5c12e90b6464272b06624646eef0d65096672291ba8303f9dc9b",
+      "action": "delete active first-edition presentation"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – presentatie.html",
+      "sha256": "5ae4794db82721313606cb18736fac9fbfadbafc76103a52b292319e9b496986",
+      "action": "delete active first-edition presentation"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – presentatie.pptx",
+      "sha256": "1be5052cbb7b19827d1a849b1980fd6615de60bfe3080ccf806409d159b699b1",
+      "action": "delete active first-edition presentation"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – presentatie.html",
+      "sha256": "6407331043ef2c3ba6fdebd4989b573ba9b2a30fedfec7cd185ac4d23730a540",
+      "action": "delete active first-edition presentation"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – presentatie.pptx",
+      "sha256": "341ea2cbfb084d6674685a19730de89ea8974a3fa19eade4b227773168c7b0a4",
+      "action": "delete active first-edition presentation"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/presentation-v2.css",
+      "sha256": "bd3b27e90b8a39e9c3b7f75ea5490a75b0d5e69f8323a7a90d91f0e20dadd883",
+      "action": "delete active first-edition presentation"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/presentation-v2.js",
+      "sha256": "313528524fc944afd1b0f65fb689e901f4772bafa12362af6323e628b1730d9c",
+      "action": "delete active first-edition presentation"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – uitleg voorkennis.html",
+      "sha256_before": "bde2b95dfbe0cd9587b6c0ac4f6064f8d293d53474dcc26f89b062394a896559",
+      "sha256_after": "a67fa47c257683b0166b26c520d442d858e14eaa04690fb0c7b1a7b78c44b5ce",
+      "action": "remove retired presentation link"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/index.html",
+      "sha256_before": "3c37663ccb1a93aaedca4cd1b19c32ee9322a2cf8288b877e201af2660b5d728",
+      "sha256_after": "abc503965012cd4a9bd894e979a0723632aea0d973cf7e49fa1580791438476e",
+      "action": "remove retired presentation link"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/index.html",
+      "sha256_before": "63055fdcfce119b319f1e5ddf188e4a72cf3d35c598b50121e737041fe002e4b",
+      "sha256_after": "5b540d0e77974f1dccf66b68a30874883931ece57de63f8f93531a53208b3d5e",
+      "action": "remove retired presentation link"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/index.html",
+      "sha256_before": "afb07388a7f29ee7df86903632420106c53dc899ddcdc900964dbe5b378b8a5f",
+      "sha256_after": "ada28e909e99cdfdb86eaa9e372ab700851dafbf8caeb7d10d8c73ef052f374e",
+      "action": "remove retired presentation link"
+    }
+  ]
+}

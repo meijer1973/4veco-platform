@@ -1,0 +1,373 @@
+{
+  "platform_payload_snapshot": "2a865dce93582a7eaa4635153da55339f4953352",
+  "lessons_payload_snapshot": "4cf51ddbd033c26fe99a3c7f44bba6174a5024c4",
+  "source_lesson_commit": "173aa9a803897965c572df2c4e7f83cdb135eb1c",
+  "review_scope": "Every final native slide render and all teacher notes reviewed by coordinator; every PDF page checked for text/count, additional individual PDF visual samples in paragraph records. Separate independent series review recorded separately.",
+  "total_slides": 305,
+  "total_native_tables": 114,
+  "total_native_charts": 53,
+  "completed_cold_handoffs_retained": 12,
+  "coordinator_deck_repairs_after_handoff": 0,
+  "decks": [
+    {
+      "paragraph": "1.1.1",
+      "slides": 21,
+      "notes": 21,
+      "native_tables": 12,
+      "native_charts": 0,
+      "artifacts": [
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H1/1.1.1 Schaarste, keuzes en alternatieve kosten – presentatie.pptx",
+          "sha256": "71b1826bf24a21482556a1e4283741fb23ac1ccb454ebcd49ddd34bd4e49ce2f",
+          "byte_identical_to_completed_author_commit": true
+        },
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H1/1.1.1 Schaarste, keuzes en alternatieve kosten – presentatie.pdf",
+          "sha256": "4db4c9c03dd87affdfd46f2a1a7b1fd682fb414dccc15a48004a203a2799c274",
+          "byte_identical_to_completed_author_commit": true
+        }
+      ],
+      "builder": {
+        "path": "build-scripts/content/book-1/presentation-111.mjs",
+        "sha256": "02382d54c68a99903e26c984ebf89754f9cb5473b0052514887fbea635668adf"
+      },
+      "manifest": {
+        "path": "build-scripts/content/book-1/presentation-111.tweede-editie-2026.manifest.json",
+        "sha256": "b7cd5e77527a4418dec3e153c0eb7050f45791e247d4a1c8a6e308e05d0b9757"
+      },
+      "individual_review": "111-review.json",
+      "author_platform_commit": "5cdbe48af672bf8b246258d946b4a2cba4d4678b",
+      "author_lesson_commit": "5710eab4def4857385f2fd2228d492bfb571a947"
+    },
+    {
+      "paragraph": "1.1.2",
+      "slides": 29,
+      "notes": 29,
+      "native_tables": 15,
+      "native_charts": 0,
+      "artifacts": [
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H1/1.1.2 Verhoudingen, percentages en indexcijfers – presentatie.pptx",
+          "sha256": "561cb2bb29407878efeea482730e1f6e695f38e8aff8b44b663c24c070afe5fe",
+          "byte_identical_to_completed_author_commit": true
+        },
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H1/1.1.2 Verhoudingen, percentages en indexcijfers – presentatie.pdf",
+          "sha256": "8889a458efa232fbe025615504380bc26b00d22fbe676b065c5968df2cb1f1e1",
+          "byte_identical_to_completed_author_commit": true
+        }
+      ],
+      "builder": {
+        "path": "build-scripts/content/book-1/presentation-112.mjs",
+        "sha256": "3af25b7be5e3f021d736d3edb38c3e22a781dd059650173329b2a475cc3f1693"
+      },
+      "manifest": {
+        "path": "build-scripts/content/book-1/presentation-112.tweede-editie-2026.manifest.json",
+        "sha256": "167d8b01c99c778cdc5205c779113dd9dfc852f536ab30ece23b905e8921466f"
+      },
+      "individual_review": "112-review.json",
+      "author_platform_commit": "01f0fd4eddf257ff1d8e354d7a37477c61856859",
+      "author_lesson_commit": "8f44a6705837a89b16494630c7bcbde16c432f4b"
+    },
+    {
+      "paragraph": "1.1.3",
+      "slides": 29,
+      "notes": 29,
+      "native_tables": 11,
+      "native_charts": 7,
+      "artifacts": [
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H1/1.1.3 Tabellen, grafieken en formules – presentatie.pptx",
+          "sha256": "fb7c7bb48a6a089bba4a94ed106ae05a15fa82fccefb363c9acd8a415bfc7255",
+          "byte_identical_to_completed_author_commit": true
+        },
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H1/1.1.3 Tabellen, grafieken en formules – presentatie.pdf",
+          "sha256": "ab765d3adcc809d40311a2ee1b7b3689d2ac3b28d3733d7c84e9fcb8286b7a77",
+          "byte_identical_to_completed_author_commit": true
+        }
+      ],
+      "builder": {
+        "path": "build-scripts/content/book-1/presentation-113.mjs",
+        "sha256": "4692d3b72e01165648b605cfada7dd8339c13b798f59bfd2e7f5530f2473f423"
+      },
+      "manifest": {
+        "path": "build-scripts/content/book-1/presentation-113.tweede-editie-2026.manifest.json",
+        "sha256": "73873e69f689cff6adfa4be5a2463b8ce80e60b34ba10a36af244fc22e87d407"
+      },
+      "individual_review": "113-review.json",
+      "author_platform_commit": "eb309cd8d1ccb59617445cd83acd810bed4691d9",
+      "author_lesson_commit": "3245b6c20a1b8f2d961a45b63e9949ae109339cc"
+    },
+    {
+      "paragraph": "1.1.4",
+      "slides": 22,
+      "notes": 22,
+      "native_tables": 8,
+      "native_charts": 3,
+      "artifacts": [
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H1/1.1.4 Gemengde opgaven – presentatie.pptx",
+          "sha256": "e9f9e00bd130e635247d3db83a8bf0a5fc237e3c28a2420201406f00665f0878",
+          "byte_identical_to_completed_author_commit": true
+        },
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H1/1.1.4 Gemengde opgaven – presentatie.pdf",
+          "sha256": "7dffcd2d28ea3cd2fc6c48d323799b3ee21674772d332f1b1877c36f90f98995",
+          "byte_identical_to_completed_author_commit": true
+        }
+      ],
+      "builder": {
+        "path": "build-scripts/content/book-1/presentation-114.mjs",
+        "sha256": "cee36bbb4d53e15833f9258ed1979222e9c3bf2ca735511dd620c059525d6d08"
+      },
+      "manifest": {
+        "path": "build-scripts/content/book-1/presentation-114.tweede-editie-2026.manifest.json",
+        "sha256": "74bec44579e65f833cfc8608213de793c2ef5de98d82a07eced73037d8d3d306"
+      },
+      "individual_review": "114-review.json",
+      "author_platform_commit": "12cce20e18041c4e50c003e6c16e1caffe64841b",
+      "author_lesson_commit": "4f4aa8a9811789118a530a30f86c2c58b6cd5063"
+    },
+    {
+      "paragraph": "1.2.1",
+      "slides": 25,
+      "notes": 25,
+      "native_tables": 9,
+      "native_charts": 4,
+      "artifacts": [
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H2/1.2.1 Betalingsbereidheid en individuele vraag – presentatie.pptx",
+          "sha256": "e0b4374fd7c1f1d0c8eb006e9489c953d636e6bef6627dab945424d32464df9b",
+          "byte_identical_to_completed_author_commit": true
+        },
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H2/1.2.1 Betalingsbereidheid en individuele vraag – presentatie.pdf",
+          "sha256": "e46cea4597db32167065442be1183ff766181a1036ca9cf66dc88d3d5196444f",
+          "byte_identical_to_completed_author_commit": true
+        }
+      ],
+      "builder": {
+        "path": "build-scripts/content/book-1/presentation-121.mjs",
+        "sha256": "ce390a4c0a816255bafe00712fb2d50147a5776b2e712c38432e17fe0c768d4a"
+      },
+      "manifest": {
+        "path": "build-scripts/content/book-1/presentation-121.tweede-editie-2026.manifest.json",
+        "sha256": "d1e4fe9f255bb287de438718262fbae45b024c8523cce83cc1b07c540e3e9b98"
+      },
+      "individual_review": "121-review.json",
+      "author_platform_commit": "7e70d6860a8928e252901081e938068fdec641ec",
+      "author_lesson_commit": "a4b084eda2deeaff018c73094379ff6fd9086d94"
+    },
+    {
+      "paragraph": "1.2.2",
+      "slides": 25,
+      "notes": 25,
+      "native_tables": 8,
+      "native_charts": 6,
+      "artifacts": [
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H2/1.2.2 Vraagfactoren – presentatie.pptx",
+          "sha256": "59ae14681ad39dc3e0af0567e5a5131a6ff1b88f0593902f2af4359e1a1629b6",
+          "byte_identical_to_completed_author_commit": true
+        },
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H2/1.2.2 Vraagfactoren – presentatie.pdf",
+          "sha256": "9775ed7b77b7ea967334db2d61ad74ea4e2242a197c12555e229a44fc85c8fbb",
+          "byte_identical_to_completed_author_commit": true
+        }
+      ],
+      "builder": {
+        "path": "build-scripts/content/book-1/presentation-122.mjs",
+        "sha256": "56a07a3b3902f57dced0e961c3dae3d815d3bba93e7bba7e8b7cf486236f0b45"
+      },
+      "manifest": {
+        "path": "build-scripts/content/book-1/presentation-122.tweede-editie-2026.manifest.json",
+        "sha256": "1f736feb2953a9194ad1501e9179eaf2e1a0df9c3d2ac486b180ae0983f7dd69"
+      },
+      "individual_review": "122-review.json",
+      "author_platform_commit": "c941eb39e4e749dcebc72168a0bfe3115224d809",
+      "author_lesson_commit": "240ee980b24df6f938ac0dae867eb511e5da33b6"
+    },
+    {
+      "paragraph": "1.2.3",
+      "slides": 25,
+      "notes": 25,
+      "native_tables": 10,
+      "native_charts": 6,
+      "artifacts": [
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H2/1.2.3 Van individuele naar collectieve vraag – presentatie.pptx",
+          "sha256": "1142d0d59f9f85697c3e306dbfb963e72e0a561ac245bd5223d9981f1636abef",
+          "byte_identical_to_completed_author_commit": true
+        },
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H2/1.2.3 Van individuele naar collectieve vraag – presentatie.pdf",
+          "sha256": "84ad64b80b89f66242eb5df16eec7dc859dc17de5565aee123d36a59cf2c20d0",
+          "byte_identical_to_completed_author_commit": true
+        }
+      ],
+      "builder": {
+        "path": "build-scripts/content/book-1/presentation-123.mjs",
+        "sha256": "b2a635c1d13ff54e681f1eb63d5ede371f064de6894d494ac28c2cf6635808bc"
+      },
+      "manifest": {
+        "path": "build-scripts/content/book-1/presentation-123.tweede-editie-2026.manifest.json",
+        "sha256": "c89242f27e357a3ae0ea200a22386b49550904d420fe3512146483201a5061dc"
+      },
+      "individual_review": "123-review.json",
+      "author_platform_commit": "14e1bfaac3cdd44f14291a86cc08f3a42537dc9d",
+      "author_lesson_commit": "98ceb211a125d995967e4ab0f354e353623f78a3"
+    },
+    {
+      "paragraph": "1.2.4",
+      "slides": 23,
+      "notes": 23,
+      "native_tables": 7,
+      "native_charts": 5,
+      "artifacts": [
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H2/1.2.4 Gemengde opgaven – presentatie.pptx",
+          "sha256": "03b317c1e42975db0129b621a4a955a6ecd4548cce9d6c4e5bd543813a808e04",
+          "byte_identical_to_completed_author_commit": true
+        },
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H2/1.2.4 Gemengde opgaven – presentatie.pdf",
+          "sha256": "10782a81065b084cc7b20bbb21d6525335c765ab60b318b8ca1581bf058f8ff7",
+          "byte_identical_to_completed_author_commit": true
+        }
+      ],
+      "builder": {
+        "path": "build-scripts/content/book-1/presentation-124.mjs",
+        "sha256": "304bb0c7511b1e6e2b6dba0d4d3513ca82828340845a1f7c0f4fb90dedd6b377"
+      },
+      "manifest": {
+        "path": "build-scripts/content/book-1/presentation-124.tweede-editie-2026.manifest.json",
+        "sha256": "238d89cfe3fdccb84769ef6d4434db668f3475b95f7c1c4bb93e74699e0d4dbf"
+      },
+      "individual_review": "124-review.json",
+      "author_platform_commit": "14b3df152cf2bd90e2c1f4c108ed95d765fbf825",
+      "author_lesson_commit": "b55d767641403aa6fea9a623810a7a1ddb25a0ff"
+    },
+    {
+      "paragraph": "1.3.1",
+      "slides": 26,
+      "notes": 26,
+      "native_tables": 8,
+      "native_charts": 7,
+      "artifacts": [
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H3/1.3.1 Aanbod en aanbodfactoren – presentatie.pptx",
+          "sha256": "99b4a3cc7cc81ce8e657c7e1701d26d3c8510ad2d09f56bf83f55bc362c464c4",
+          "byte_identical_to_completed_author_commit": true
+        },
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H3/1.3.1 Aanbod en aanbodfactoren – presentatie.pdf",
+          "sha256": "a108622b9960ef529fbb9140cbc93cd5040553da20c6795bee048b436c0ce894",
+          "byte_identical_to_completed_author_commit": true
+        }
+      ],
+      "builder": {
+        "path": "build-scripts/content/book-1/presentation-131.mjs",
+        "sha256": "9e7df825b8ade0d0d332a0e9d0736142ed6ef484f77f3d7accda91ada490d981"
+      },
+      "manifest": {
+        "path": "build-scripts/content/book-1/presentation-131.tweede-editie-2026.manifest.json",
+        "sha256": "af086d1cf1230be61575d6730e80ead01e926762bd7305c496048017cbb16552"
+      },
+      "individual_review": "131-review.json",
+      "author_platform_commit": "726eafc8ca295d8fa90d12e76cca0d025524c6a3",
+      "author_lesson_commit": "264d68af129c523d7b2ac6d106f8fe6db088e286"
+    },
+    {
+      "paragraph": "1.3.2",
+      "slides": 30,
+      "notes": 30,
+      "native_tables": 10,
+      "native_charts": 6,
+      "artifacts": [
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H3/1.3.2 Marktevenwicht – presentatie.pptx",
+          "sha256": "29006ef0d4c9a053532608c3f4f7f70ae2cfe74efcac65737a3653631f981586",
+          "byte_identical_to_completed_author_commit": true
+        },
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H3/1.3.2 Marktevenwicht – presentatie.pdf",
+          "sha256": "e1fbdca288d91e105500299aff80d84a828ca1b3d853c6d1b19df417118445e9",
+          "byte_identical_to_completed_author_commit": true
+        }
+      ],
+      "builder": {
+        "path": "build-scripts/content/book-1/presentation-132.mjs",
+        "sha256": "5c802c26a39299a6f1d7f6f19875cfb29aec85f1737eb868e049f0255b306041"
+      },
+      "manifest": {
+        "path": "build-scripts/content/book-1/presentation-132.tweede-editie-2026.manifest.json",
+        "sha256": "e56554e39ea59dccba1133f98554758513f3fee1016921ceb741909aa2a43a69"
+      },
+      "individual_review": "132-review.json",
+      "author_platform_commit": "87b1083d7568e6d6a449a9d450ab46f4db2eaf3e",
+      "author_lesson_commit": "3de060f11f98a09feb2d4490f1917f045842cb73"
+    },
+    {
+      "paragraph": "1.3.3",
+      "slides": 27,
+      "notes": 27,
+      "native_tables": 10,
+      "native_charts": 7,
+      "artifacts": [
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H3/1.3.3 Verschuivingen en nieuw evenwicht – presentatie.pptx",
+          "sha256": "e902d66a69c1f60afdc8ca642662ebb77c8c97270248c4591cdde7ca6c2722ed",
+          "byte_identical_to_completed_author_commit": true
+        },
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H3/1.3.3 Verschuivingen en nieuw evenwicht – presentatie.pdf",
+          "sha256": "6903cfddbfffaa0bec1bca25b7bad556c37beba0a448363e7f3a56f13da91212",
+          "byte_identical_to_completed_author_commit": true
+        }
+      ],
+      "builder": {
+        "path": "build-scripts/content/book-1/presentation-133.mjs",
+        "sha256": "0bd40e83d619ca53a43f907b963cbb8e789ae311284d24496a2a9f1a1571d831"
+      },
+      "manifest": {
+        "path": "build-scripts/content/book-1/presentation-133.tweede-editie-2026.manifest.json",
+        "sha256": "677490a9390b69258b44484d26675a815f7ea2e45a3ea660ebbca2ea5a683992"
+      },
+      "individual_review": "133-review.json",
+      "author_platform_commit": "306cbda704df4b018393ea57078a014ecb7f236a",
+      "author_lesson_commit": "99cc92f407f3cef02e6d7fb0718238c6e2558b8e"
+    },
+    {
+      "paragraph": "1.3.4",
+      "slides": 23,
+      "notes": 23,
+      "native_tables": 6,
+      "native_charts": 2,
+      "artifacts": [
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H3/1.3.4 Gemengde opgaven – presentatie.pptx",
+          "sha256": "f1247d6a64574958d358d28f909df36edc495206a1dec77b27ab7792b06e3b6e",
+          "byte_identical_to_completed_author_commit": true
+        },
+        {
+          "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H3/1.3.4 Gemengde opgaven – presentatie.pdf",
+          "sha256": "e8126e6089e3dc7ab8ed6f94628a39fb29b16a5a7f95705a1d83968936621169",
+          "byte_identical_to_completed_author_commit": true
+        }
+      ],
+      "builder": {
+        "path": "build-scripts/content/book-1/presentation-134.mjs",
+        "sha256": "c8e79a07ef58eba09d875bc22325aa0b3564557573902c51e262201056b715d4"
+      },
+      "manifest": {
+        "path": "build-scripts/content/book-1/presentation-134.tweede-editie-2026.manifest.json",
+        "sha256": "416dfe9e96a1bbaf78f0dfbbc4bc986d73ee7d628fafc943dba5310251927291"
+      },
+      "individual_review": "134-review.json",
+      "author_platform_commit": "046c968277530a49ccfb46ebb995e0bbc3362faa",
+      "author_lesson_commit": "1e6f8ea6dae0bf12db1a2547394d371090bff973"
+    }
+  ]
+}
