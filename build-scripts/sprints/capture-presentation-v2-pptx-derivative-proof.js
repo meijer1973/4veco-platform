@@ -7,14 +7,14 @@ const { execFileSync } = require('child_process');
 const JSZip = require('jszip');
 
 const { mapPqPoint } = require('../lib/pq-plot-mapper');
-const { PRESENTATION_V2_DECKS } = require('../content/book-1/presentation-v2-registry');
+const { PRESENTATION_V2_DECKS, moduleRootFrom } = require('../content/book-1/presentation-v2-registry');
 
 const SPRINT_ID = 'PRESENTATION-V2-PPTX-DERIVATIVE-111-112-113-1';
 const ROOT = path.resolve(__dirname, '..', '..');
 const BOOK_ROOT = path.resolve(
   process.env.PRESENTATION_V2_BOOK_ROOT ||
   process.env.LESSON_BOOK_ROOT ||
-  path.join(ROOT, '..', '4veco-lessen', 'Boek 1 - Grondslagen, vraag en aanbod')
+  moduleRootFrom()
 );
 const DEFAULT_OUT_DIR = path.join(ROOT, 'reports', 'sprints', SPRINT_ID);
 const CHECK_GENERATED_AT = '1970-01-01T00:00:00.000Z';

@@ -91,7 +91,7 @@ describeOrSkip('L1.6R §1.1.3 semantic dual-coding surfaces', () => {
   });
 
   test('presentation web deck includes required table and graph visuals', () => {
-    const html = read('1.1.3 Grafieken en tabellen – presentatie.html');
+    const html = require('../../build-scripts/content/book-1/historical-presentation-test-fixtures').fixture('1.1.3').html;
     for (const id of [
       'slide_start_table_graph',
       'slide_ice_table',

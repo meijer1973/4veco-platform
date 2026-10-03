@@ -18,7 +18,8 @@ const {
 } = require(path.resolve(__dirname, '..', '..', 'build-scripts', 'lib', 'pq-plot-mapper.js'));
 
 const exists = fs.existsSync(HTML) && fs.existsSync(CSS) && fs.existsSync(JS);
-const describeOrSkip = exists ? describe : describe.skip;
+const describeOrSkip = describe;
+const frozen = require('../../build-scripts/content/book-1/historical-presentation-test-fixtures').fixture('1.1.3');
 
 describeOrSkip('section 1.1.3 graph/table web presentation transfer', () => {
   let html;
@@ -28,9 +29,9 @@ describeOrSkip('section 1.1.3 graph/table web presentation transfer', () => {
   let richSkillsHtml;
 
   beforeAll(() => {
-    html = fs.readFileSync(HTML, 'utf8');
-    css = fs.readFileSync(CSS, 'utf8');
-    js = fs.readFileSync(JS, 'utf8');
+    html = frozen.html;
+    css = frozen.css;
+    js = frozen.js;
     richSkillsHtml = fs.existsSync(RICH_SKILLS_HTML) ? fs.readFileSync(RICH_SKILLS_HTML, 'utf8') : '';
     jest.resetModules();
     deck = require(MODEL);
