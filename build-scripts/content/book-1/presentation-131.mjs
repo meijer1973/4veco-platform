@@ -9,7 +9,7 @@ import {Presentation, PresentationFile, finalizePresentation, applyPresentationC
 // retain one shared overview and separate authored instruction from target feedback.
 // Current teaching authority: Book 1, second edition 2026, not the legacy 1.3.1.
 const HERE=path.dirname(fileURLToPath(import.meta.url));
-const provenance=JSON.parse(await fs.readFile(path.join(HERE,'presentation-131-second-edition-2026-manifest.json'),'utf8'));
+const provenance=JSON.parse(await fs.readFile(path.join(HERE,'presentation-131.tweede-editie-2026.manifest.json'),'utf8'));
 const {root:ROOT,build:BUILD,final:FINAL}=await workspace('131');
 const p=Presentation.create({slideSize:{width:1600,height:900}});
 const C={ink:'#183247',blue:'#17658A',green:'#20665B',orange:'#A94D16',paper:'#FFFFFF',pale:'#EFF4F7',muted:'#445B6B',line:'#C6D2DB'};
