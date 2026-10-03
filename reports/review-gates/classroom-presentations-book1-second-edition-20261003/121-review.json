@@ -1,0 +1,129 @@
+{
+  "paragraph": "1.2.1",
+  "verdict": "PASS",
+  "reviewer": "root coordinator, independent of cold author",
+  "source_hash_checks": [
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.1 Betalingsbereidheid en individuele vraag – paragraaf.md",
+      "sha256": "bcfa8e2586e1fed8c7a7aa5b1f6c571a800e0ee5da5d278e5c0ef2b349484e88",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/Antwoorden.md",
+      "sha256": "f84d1a278537a2f3d8318c7b59f689a139421a631762c5926ffcbc3ad1690827",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/Docenteninformatie.md",
+      "sha256": "e3646b257412ad67beaae17591d62706f5ff29fe9ac0ffc944fe3254168b4ff2",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/1.1.3 Tabellen, grafieken en formules – paragraaf.md",
+      "sha256": "989672f574c9454c3bf44bcea4ec061e68bb9336efa9b2a93c2a8ab581daa206",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/boek/Boek_1_Compleet_Tweede_editie.pdf",
+      "sha256": "2a2261b98f4a1c0a186a119120ae1b8c70e8d7860712e03eb711d1ab07efc676",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/student_page_map.json",
+      "sha256": "58eb9bf1d50227226e284099357e33e59a10bd433aa86f9bc7f3bf5c03b26691",
+      "passed": true
+    }
+  ],
+  "slides_reviewed_individually": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "notes_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "pdf_visual_sample": [
+    23
+  ],
+  "saved_file_audit": {
+    "pptxSha256": "e0b4374fd7c1f1d0c8eb006e9489c953d636e6bef6627dab945424d32464df9b",
+    "pdfSha256": "e46cea4597db32167065442be1183ff766181a1036ca9cf66dc88d3d5196444f",
+    "slideCount": 25,
+    "pdfPageCount": 25,
+    "notesCount": 25,
+    "minimumExplicitNotesFontPt": 14.0,
+    "nativeTableCount": 9,
+    "nativeChartCount": 4,
+    "overviewSlides": [
+      1,
+      15,
+      25
+    ],
+    "overviewContentGeometryParity": true,
+    "pdfTextMismatches": []
+  },
+  "cold_handoff_repaired": false,
+  "author_self_review_repairs": [
+    "Label V and A/B direct labels, overview text bounds before completed handoff; preserved author v1–v4 workspaces."
+  ],
+  "findings": [],
+  "visual_inspection_diagnostic": "App image previews appeared to omit repeated label bands. Fresh PowerPoint render was pixel-identical on all 25 slides; original resolution inspection and exact label-band pixel equality on slides 3–14 confirmed no file defect. No artifact repair.",
+  "instructional_review": [
+    "Two independent scenarios: discrete Lotte purchase thresholds, separate divisible-tea linear model. No unjustified straight line derived from a short willingness-to-pay list.",
+    "Formula substitution and inverse use same operations both sides; exact 1/3 preserved; intercepts/domain/coordinate order explicit.",
+    "Graph progression 11–13 uses constant scales and correct points (18,2),(6,6). Native cached coordinates inspected. Target (12,2),(8,3) satisfies q20−4P.",
+    "Actual target sources A/B and six questions shown on 16–18 before any answers on 19–24.",
+    "Independent arithmetic:3 prints including equality; q12/8; P3.50; intercepts (20,0),(0,5);4 liters/month less demand does not establish actual sales.",
+    "Supported start 2a cites p46 and is returned to before practice; formula/coordinateprerequisites traced to 1.1.3 pp24–27, with refresher."
+  ],
+  "limits": [
+    "Series acceptance pending the earlier 1.1.3 deck and the remaining series.",
+    "No measured student mastery or timing claim."
+  ]
+}
