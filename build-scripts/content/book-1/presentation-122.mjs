@@ -1,5 +1,5 @@
 // Classroom presentation for Book 1, second edition 2026. Sources and prerequisite
-// trace are in presentation-122.tweede-editie-2026.sources.json.
+// trace are in presentation-122.tweede-editie-2026.manifest.json.
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import assert from 'node:assert/strict';
@@ -8,7 +8,7 @@ import {Presentation, PresentationFile, finalizePresentation, applyPresentationC
   PYTHON, SKILL, TOOLS, workspace} from '../../presentations/runtime.mjs';
 
 const {root:ROOT,build:BUILD,final:FINAL}=await workspace('122');
-const provenance=JSON.parse(await fs.readFile(new URL('./presentation-122.tweede-editie-2026.sources.json',import.meta.url),'utf8'));
+const provenance=JSON.parse(await fs.readFile(new URL('./presentation-122.tweede-editie-2026.manifest.json',import.meta.url),'utf8'));
 const p=Presentation.create({slideSize:{width:1600,height:900}});
 const C={ink:'#183247',blue:'#1A5276',green:'#20665B',orange:'#A94D16',paper:'#FFFFFF',pale:'#EFF4F7',muted:'#445B6B',line:'#C6D2DB'};
 const FONT='Arial', TITLE='§1.2.2 Vraagfactoren';
