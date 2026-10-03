@@ -66,6 +66,26 @@ function verifyEventScope(options, delta, policy) {
     scope_attestation_triggered: scope.triggered, changed_paths: scope.changed_paths };
 }
 
+function verifyCurrentLesson() {
+  try { return current.validateLesson('HEAD'); }
+  catch (original) {
+    const classroom = require('../books/book1-classroom-scope');
+    const scope = classroom.verify({root: current.ROOT, lessons: current.LESSON_ROOT, requireTracked: true});
+    // A historical capture does not attest today's deliberately retired links.
+    // Admit only the separately checked finite retirement, then retain the
+    // unchanged original proof at the accepted pre-retirement lesson commit.
+    if (!scope.passed || !scope.removals.length || !scope.entry_changes.length) throw original;
+    const baseline = current.validateLesson(classroom.LESSON_BASE);
+    return {historical_lesson_validation: baseline, current_lesson_sha: execFileSync('git', ['rev-parse', 'HEAD'],
+      {cwd: current.LESSON_ROOT, encoding: 'utf8'}).trim(),
+      historical_capture_attests_current_retired_pages: false,
+      rendered_inputs_unchanged: false, new_capture_performed: false,
+      retirement_successor: {revision: classroom.REVISION, lesson_base: classroom.LESSON_BASE,
+        removals: scope.removals, entry_changes: scope.entry_changes,
+        scope_verified: true, textbook_and_historical_evidence_unchanged: true}};
+  }
+}
+
 function run(argv) {
   const options = current.parseArgs(argv);
   const git = args => execFileSync('git', args, { cwd: current.ROOT, maxBuffer: 40 * 1024 * 1024 });
@@ -98,7 +118,7 @@ function run(argv) {
     const tail = historical.validateEvidenceTail(proof.exact_head_delta.platform_payload_sha, head);
     eventValidation.evidence_tail_paths = tail.entries.flatMap(historical.entryPaths);
   }
-  return { ok: true, current_platform_sha: head, current_lesson_validation: current.validateLesson('HEAD'),
+  return { ok: true, current_platform_sha: head, current_lesson_validation: verifyCurrentLesson(),
     historical_validation: { passed: true, platform_payload_sha: proof.exact_head_delta.platform_payload_sha,
       verified_through_platform_sha: proof.exact_head_delta.platform_exact_head_sha,
       first_viewport_only: true, below_fold_exercises_attested: false },
@@ -112,4 +132,4 @@ if (require.main === module) {
   try { console.log(JSON.stringify(run(process.argv.slice(2)), null, 2)); }
   catch (error) { console.error(error.message); process.exitCode = 1; }
 }
-module.exports = { BOOK1, verifyBook1Review, verifyBindings, verifyEventScope, run };
+module.exports = { BOOK1, verifyBook1Review, verifyBindings, verifyEventScope, verifyCurrentLesson, run };

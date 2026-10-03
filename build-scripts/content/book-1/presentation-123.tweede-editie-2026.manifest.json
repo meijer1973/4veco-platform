@@ -1,0 +1,318 @@
+{
+  "paragraph": "1.2.3",
+  "title": "Van individuele naar collectieve vraag",
+  "type": "theory",
+  "sourceEdition": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026",
+  "sourceCommit": "173aa9a803897965c572df2c4e7f83cdb135eb1c",
+  "platformBaseline": "04a549d40cbc2937bff29344b6ac2155894c4c3e",
+  "sourceFiles": {
+    "bronnen/H2/1.2.3 Van individuele naar collectieve vraag – paragraaf.md": "133078fafc4d48401e9c232786c82296a970053f92363d9a71c33c897ca16064",
+    "bronnen/H2/Antwoorden.md": "f84d1a278537a2f3d8318c7b59f689a139421a631762c5926ffcbc3ad1690827",
+    "bronnen/H2/Docenteninformatie.md": "e3646b257412ad67beaae17591d62706f5ff29fe9ac0ffc944fe3254168b4ff2",
+    "bronnen/H2/1.2.1 Betalingsbereidheid en individuele vraag – paragraaf.md": "bcfa8e2586e1fed8c7a7aa5b1f6c571a800e0ee5da5d278e5c0ef2b349484e88",
+    "bronnen/H1/1.1.2 Verhoudingen, percentages en indexcijfers – paragraaf.md": "e10b272612bb096e6b2e2628f67198eaa3f4f123c4b6f7c420eb006312059335",
+    "bronnen/H1/1.1.3 Tabellen, grafieken en formules – paragraaf.md": "989672f574c9454c3bf44bcea4ec061e68bb9336efa9b2a93c2a8ab581daa206",
+    "boek/Boek_1_Compleet_Tweede_editie.pdf": "2a2261b98f4a1c0a186a119120ae1b8c70e8d7860712e03eb711d1ab07efc676",
+    "qa/student_page_map.json": "58eb9bf1d50227226e284099357e33e59a10bd433aa86f9bc7f3bf5c03b26691"
+  },
+  "goals": [
+    "Hoeveelheden bij dezelfde prijs optellen",
+    "Vraagfuncties binnen de gegeven grenzen samenvoegen",
+    "De gezamenlijke vraag tekenen binnen het interval",
+    "Nulbijdragen en ongeldige extrapolatie uitleggen"
+  ],
+  "assignment": {
+    "start": [
+      23,
+      24
+    ],
+    "basis": [
+      25,
+      26,
+      27
+    ],
+    "independent": [
+      28,
+      29
+    ],
+    "target": 30,
+    "homework": [
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "homeworkAction": "Maken en nakijken",
+    "extra": [
+      31,
+      32,
+      33
+    ]
+  },
+  "sourcePrintedPages": {
+    "theory": [
+      68,
+      69,
+      70,
+      71,
+      72
+    ],
+    "start": 72,
+    "basis": [
+      73,
+      74
+    ],
+    "independent": 75,
+    "target": 76
+  },
+  "printedPageVerification": {
+    "method": "Complete-book PDF text and visible printed footers, including target question page; physical PDF page equals printed page in this edition.",
+    "date": "2026-10-03"
+  },
+  "startPrerequisites": {
+    "23a": {
+      "status": "retrieval",
+      "priorTeaching": "§1.1.3 p.27: eerst vermenigvuldigen, dan optellen; §1.2.1 p.48–49: invullen in vraagfunctie, q=0 en geldigheid",
+      "refresh": "overview notes and slide 3"
+    },
+    "23b": {
+      "status": "retrieval",
+      "priorTeaching": "§1.1.2 p.14: (nieuw-oud)/oud × 100%, oude waarde als basis",
+      "refresh": "overview notes and slide 3"
+    },
+    "24": {
+      "status": "supported exploration",
+      "supportPrintedPages": [
+        68
+      ],
+      "reason": "Collectieve vraag is nieuw. Theorie definieert optellen bij gelijke prijs en verschil met gemiddelde.",
+      "visibleSupport": "24: verkennen met theorie p. 68",
+      "returnBeforePractice": "shared second overview after instruction"
+    }
+  },
+  "operationTrace": [
+    {
+      "operation": "same-price sum with product/unit/period and no double counting",
+      "priorTeaching": "new §1.2.3 p.68",
+      "lesson": "authored ice-tea example, table and horizontal addition",
+      "practice": [
+        24,
+        25,
+        26,
+        28,
+        30
+      ]
+    },
+    {
+      "operation": "add constants and P terms; intersect valid domains",
+      "priorTeaching": "new §1.2.3 p.69, worked p.71",
+      "lesson": "authored algebra with both rules valid through P=5",
+      "practice": [
+        26,
+        28,
+        30
+      ]
+    },
+    {
+      "operation": "read/write coordinates (Q;P) and plot restricted segment",
+      "priorTeaching": "§1.2.1 p.48–49 teaches orientation/points/straight line; §1.2.3 p.69,71–72 teaches restricted sum segment",
+      "lesson": "endpoint calculation followed by native XY chart",
+      "practice": [
+        25,
+        26,
+        28,
+        30
+      ]
+    },
+    {
+      "operation": "zero contribution above cutoff and reject invalid extension",
+      "priorTeaching": "§1.2.1 p.49 prohibits negative purchases; §1.2.3 p.70–71 develops sum implications",
+      "lesson": "own P=6 example plus changed curve segment",
+      "practice": [
+        27,
+        29,
+        30
+      ]
+    }
+  ],
+  "teachingExample": {
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "context": "Two individual buyers of ice tea, liter per week, price euro per liter, all other circumstances constant.",
+    "data": {
+      "qA": "15 - 3P, 0 <= P <= 5",
+      "qB": "14 - 2P, 0 <= P <= 7",
+      "sum": "29 - 5P, 0 <= P <= 5",
+      "aboveLimit": "individual contribution zero"
+    },
+    "samePrice": 2,
+    "highPrice": 6,
+    "sourceStatus": "Authored context/data. Book cited only for methods. No assigned exercise worked before independent practice."
+  },
+  "targetCoverage": {
+    "a": "all 12 table cells, with example substitution",
+    "b": "sum function, domain, control at P=4",
+    "c": "endpoint calculations, native XY segment (42;0) to (12;6), marked (22;4)",
+    "d": "A=0, B=8, total8 at P=8",
+    "e": "invalid sum includes A=-6; cannot subtract non-existing demand"
+  },
+  "timing": "No one-lesson fit or measured mastery claimed. Teacher source estimates normal route at 137 minutes. Continue guided work/homework as required.",
+  "retrievalExample": {
+    "slide": 3,
+    "status": "Authored arithmetic refresher, separate from the later ice-tea scenario",
+    "formula": "q = 20 - 4P at P = 3, q in liter per week, P in euro per liter, 0 <= P <= 5",
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "sourceMethods": [
+      14,
+      27,
+      48,
+      49
+    ]
+  },
+  "slides": [
+    {
+      "number": 1,
+      "title": "Deze les: §1.2.3 Van individuele naar collectieve vraag"
+    },
+    {
+      "number": 2,
+      "title": "Wat kun je na deze les?"
+    },
+    {
+      "number": 3,
+      "title": "Bekende rekenstappen"
+    },
+    {
+      "number": 4,
+      "title": "Twee kopers van ijsthee"
+    },
+    {
+      "number": 5,
+      "title": "Collectieve vraag bij één prijs"
+    },
+    {
+      "number": 6,
+      "title": "Horizontaal optellen bij dezelfde prijs"
+    },
+    {
+      "number": 7,
+      "title": "De gezamenlijke vraagfunctie"
+    },
+    {
+      "number": 8,
+      "title": "De tabel controleert de somfunctie"
+    },
+    {
+      "number": 9,
+      "title": "De eindpunten van het geldige lijnstuk"
+    },
+    {
+      "number": 10,
+      "title": "De gezamenlijke vraag binnen 0 ≤ P ≤ 5"
+    },
+    {
+      "number": 11,
+      "title": "Boven de koopgrens rekent iedere koper apart"
+    },
+    {
+      "number": 12,
+      "title": "De gezamenlijke lijn verandert boven € 5"
+    },
+    {
+      "number": 13,
+      "title": "Deze les: §1.2.3 Van individuele naar collectieve vraag"
+    },
+    {
+      "number": 14,
+      "title": "Opgave 30 · Reserveringen bij een spellenclub"
+    },
+    {
+      "number": 15,
+      "title": "Opgave 30 · Vragen a en b"
+    },
+    {
+      "number": 16,
+      "title": "Opgave 30 · Vragen c, d en e"
+    },
+    {
+      "number": 17,
+      "title": "Opgave 30a · Eén tabelrij berekenen"
+    },
+    {
+      "number": 18,
+      "title": "Opgave 30a · De volledige tabel"
+    },
+    {
+      "number": 19,
+      "title": "Opgave 30b · Somfunctie en controle"
+    },
+    {
+      "number": 20,
+      "title": "Opgave 30c · De punten voor de grafiek"
+    },
+    {
+      "number": 21,
+      "title": "Opgave 30c · Alleen het gevraagde lijnstuk"
+    },
+    {
+      "number": 22,
+      "title": "Opgave 30d · De vraag bij € 8"
+    },
+    {
+      "number": 23,
+      "title": "Opgave 30e · Waarom de verlenging faalt"
+    },
+    {
+      "number": 24,
+      "title": "Controle van je antwoord"
+    },
+    {
+      "number": 25,
+      "title": "Deze les: §1.2.3 Van individuele naar collectieve vraag"
+    }
+  ],
+  "overviewSlides": [
+    1,
+    13,
+    25
+  ],
+  "tableSlides": [
+    4,
+    5,
+    8,
+    9,
+    11,
+    14,
+    15,
+    18,
+    20,
+    22
+  ],
+  "chartSlides": [
+    6,
+    10,
+    12,
+    21
+  ],
+  "outputs": {
+    ".pptx": {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H2/1.2.3 Van individuele naar collectieve vraag – presentatie.pptx",
+      "sha256": "1142d0d59f9f85697c3e306dbfb963e72e0a561ac245bd5223d9981f1636abef"
+    },
+    ".pdf": {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H2/1.2.3 Van individuele naar collectieve vraag – presentatie.pdf",
+      "sha256": "84ad64b80b89f66242eb5df16eec7dc859dc17de5565aee123d36a59cf2c20d0"
+    }
+  },
+  "authorReview": {
+    "status": "author QA complete; independent batch review and integration are separate",
+    "slides": 25,
+    "nativeTables": 10,
+    "nativeCharts": 6,
+    "renderer": "Microsoft PowerPoint COM",
+    "notes": "25 slides, minimum 14 pt",
+    "overviewParity": "exact content and geometry, aside from phase marker, emphasis and slide number",
+    "sourceBookUnchanged": true
+  }
+}

@@ -21,12 +21,12 @@ const FILE = path.resolve(
 );
 
 const exists = fs.existsSync(FILE);
-const describeOrSkip = exists ? describe : describe.skip;
+const describeOrSkip = describe;
 
 describeOrSkip('§1.1.1 presentatie.html implemented web shape', () => {
   let html;
   beforeAll(() => {
-    html = fs.readFileSync(FILE, 'utf8');
+    html = require('../../build-scripts/content/book-1/historical-presentation-test-fixtures').fixture('1.1.1').html;
   });
 
   test('renders the production presentation-v2 route with 11 slides', () => {

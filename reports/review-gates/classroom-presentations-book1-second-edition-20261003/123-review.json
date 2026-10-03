@@ -1,0 +1,286 @@
+{
+  "paragraph": "1.2.3",
+  "verdict": "PASS",
+  "reviewer": "root coordinator, independent of cold author",
+  "source_hash_checks": [
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.3 Van individuele naar collectieve vraag – paragraaf.md",
+      "sha256": "133078fafc4d48401e9c232786c82296a970053f92363d9a71c33c897ca16064",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/Antwoorden.md",
+      "sha256": "f84d1a278537a2f3d8318c7b59f689a139421a631762c5926ffcbc3ad1690827",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/Docenteninformatie.md",
+      "sha256": "e3646b257412ad67beaae17591d62706f5ff29fe9ac0ffc944fe3254168b4ff2",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.1 Betalingsbereidheid en individuele vraag – paragraaf.md",
+      "sha256": "bcfa8e2586e1fed8c7a7aa5b1f6c571a800e0ee5da5d278e5c0ef2b349484e88",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/1.1.2 Verhoudingen, percentages en indexcijfers – paragraaf.md",
+      "sha256": "e10b272612bb096e6b2e2628f67198eaa3f4f123c4b6f7c420eb006312059335",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/1.1.3 Tabellen, grafieken en formules – paragraaf.md",
+      "sha256": "989672f574c9454c3bf44bcea4ec061e68bb9336efa9b2a93c2a8ab581daa206",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/boek/Boek_1_Compleet_Tweede_editie.pdf",
+      "sha256": "2a2261b98f4a1c0a186a119120ae1b8c70e8d7860712e03eb711d1ab07efc676",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/student_page_map.json",
+      "sha256": "58eb9bf1d50227226e284099357e33e59a10bd433aa86f9bc7f3bf5c03b26691",
+      "passed": true
+    }
+  ],
+  "slides_reviewed_individually": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "notes_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "saved_file_audit": {
+    "pptxSha256": "1142d0d59f9f85697c3e306dbfb963e72e0a561ac245bd5223d9981f1636abef",
+    "pdfSha256": "84ad64b80b89f66242eb5df16eec7dc859dc17de5565aee123d36a59cf2c20d0",
+    "slideCount": 25,
+    "pdfPageCount": 25,
+    "notesCount": 25,
+    "minimumExplicitNotesFontPt": 14.0,
+    "nativeTableCount": 10,
+    "nativeChartCount": 6,
+    "overviewSlides": [
+      1,
+      13,
+      25
+    ],
+    "overviewContentGeometryParity": true,
+    "pdfTextMismatches": []
+  },
+  "native_render_hashes": [
+    {
+      "slide": 1,
+      "sha256": "6036d5a9f6b9dededbe21d4e03cd59da1af649d940da0615447c3c1583bc87e9"
+    },
+    {
+      "slide": 2,
+      "sha256": "1e47bddf85d097c41363504508301b0535186e8afad71edbbf2f3065eecc25be"
+    },
+    {
+      "slide": 3,
+      "sha256": "547d7d6219083603e58fa5bef73de235da4bb0e6c3b5587049421d4844a1a8ba"
+    },
+    {
+      "slide": 4,
+      "sha256": "acccface026b68d42344a5ceaa323f845f03aab9ceaa9982fcb35d057025e0a6"
+    },
+    {
+      "slide": 5,
+      "sha256": "a3364c3db2728b299704dde6aeab3488e19daffa9660b9fa35158b0d533f67c1"
+    },
+    {
+      "slide": 6,
+      "sha256": "e537cf57796db076215de47766bc123f4e79215619ccd878a99d317f70e042ed"
+    },
+    {
+      "slide": 7,
+      "sha256": "50340a7524f1dd599033c136ccb344529520f355a54f600ccc172afa4807a030"
+    },
+    {
+      "slide": 8,
+      "sha256": "08a14c8b81802eff499c42536d3fe1a8bd8c509a626eda11f131edd0db68cef9"
+    },
+    {
+      "slide": 9,
+      "sha256": "0b5e2b312310d60565094d5565dc9850317e5ccd452c3cfcf68093967ae19ddc"
+    },
+    {
+      "slide": 10,
+      "sha256": "517ccd3360f4bd97d501d771a49b8adf757d43a281e6aa3241b0c29e6db0bee2"
+    },
+    {
+      "slide": 11,
+      "sha256": "ab612e8b18e9758bd427a6a5de672096a62ab3d700bc51c990212cb341b521ca"
+    },
+    {
+      "slide": 12,
+      "sha256": "628d3707896c9b12ce50dd3dfae9346f44a1becbaab2c63a9edde81a5b7a3227"
+    },
+    {
+      "slide": 13,
+      "sha256": "06e9b6aee45a02ab084bb78e858f4ea60c6333e5cde586cf88ce7996f85f9833"
+    },
+    {
+      "slide": 14,
+      "sha256": "8532c233aeb19f1caf2bd2b3c7ea30d260f264c94aa46dc0ac230097a08a0462"
+    },
+    {
+      "slide": 15,
+      "sha256": "98bd0b649b70f07e216fbec3b8f5d653ddf93691f4fa3e0be7cb7e9dea79b2ec"
+    },
+    {
+      "slide": 16,
+      "sha256": "24233556cfe456b5c169d6a1cbb7fe2633b3d064fe469eeb36e8ee93e8f88e90"
+    },
+    {
+      "slide": 17,
+      "sha256": "f3bd6ca497faa4173c81f0d55557f4f1a92019a7bc0e13cb2c157b6f3e9400a3"
+    },
+    {
+      "slide": 18,
+      "sha256": "a2875dc3135b88f9677d6fa443fabfc32996961bfc28b8a3a189c3a8a0ac7bcd"
+    },
+    {
+      "slide": 19,
+      "sha256": "5dbed4335db052a021a1bef25303c7763c88b43e236f451d4055e0d73bbfaf7b"
+    },
+    {
+      "slide": 20,
+      "sha256": "28e08f728bac47b7b0e17d0b879f9818db93241288a8079246ec156c9f43c785"
+    },
+    {
+      "slide": 21,
+      "sha256": "668dcbd97ae189c59890b3cb7e50a35aff52a9f364a6b9e14b958567b07a48bf"
+    },
+    {
+      "slide": 22,
+      "sha256": "a813a3bbfa1ab4367fc3c720a60f71ece6da833e66d778e10d745ab8aae6fbbe"
+    },
+    {
+      "slide": 23,
+      "sha256": "c685bbed133a771709bd02d39387aa4f59b7a631b9d4d0ec0f829230e8187231"
+    },
+    {
+      "slide": 24,
+      "sha256": "2f71f5f7c37788f526291d9f47258aa4329cf3c69bac60c9886b1f9f7a0e9a55"
+    },
+    {
+      "slide": 25,
+      "sha256": "ac2fa7e72901edac2a64c2c817b71910a1ec645f91dd36b1edb1b43f4cfa5fe2"
+    }
+  ],
+  "changes_after_handoff": "None. Final v3 PPTX/PDF unchanged; manifest already follows corrected filename instruction.",
+  "limits": "Individual artifact and planned-teaching review only. Complete serialized series review remains pending; no classroom timing or learning-effect measurement.",
+  "pdf_visual_samples": [
+    1,
+    6,
+    21
+  ],
+  "target_review": "Actual printed complete-book p76 and manuscript checked. Full context/functions/domains/units/zero-above-limit/constant circumstances on14; empty table and a,b15; all c,d,e16; only then answers17-23. The value2 on16 is the actual question's erroneous student result, not a premature answer.",
+  "independent_arithmetic": {
+    "authored_A_at_P_0_2_4_5": [
+      15,
+      9,
+      3,
+      0
+    ],
+    "authored_B_at_P_0_2_4_5": [
+      14,
+      10,
+      6,
+      4
+    ],
+    "authored_sum_at_P_0_2_4_5": [
+      29,
+      19,
+      9,
+      4
+    ],
+    "authored_at_P6_A_B_sum": [
+      0,
+      2,
+      2
+    ],
+    "target_A_at_P_0_2_4_6": [
+      18,
+      12,
+      6,
+      0
+    ],
+    "target_B_at_P_0_2_4_6": [
+      24,
+      20,
+      16,
+      12
+    ],
+    "target_sum_at_P_0_2_4_6": [
+      42,
+      32,
+      22,
+      12
+    ],
+    "target_at_P8_A_B_sum": [
+      0,
+      8,
+      8
+    ],
+    "invalid_target_extension_at_P8": 2
+  },
+  "chart_review": "All6 actual chart caches read. Three panels on6 use identical scales, summing9+10 atP2 to19 without prematurely drawing a sum line. Restricted endpoints29/0 and4/5; separate orange continuation4/5->2/6->0/7. Target line42/0->12/6, marked22/4, stops within stated interval. Workbook consistency independently passes6charts/36references/84cells.",
+  "teaching_review": [
+    "Start23 retrieves substitution and old-base percentages from earlier teaching;3 offers distinct arithmetic refresh. New start24 visibly supported with theoryp68 and explicitly revisited12/13 before basis25.",
+    "Slides4-6 explicitly fix product, units, period, price and non-overlapping buyers; distinguish total19 from average9.5 and sum quantities horizontally at the same price.",
+    "Slides7-10 collect constants and P terms, then intersect validity and calculate endpoints. Explicitly explains why this restricted segment need not reach the price axis.",
+    "Slides11-12 independently check each buyer above the lower bound; zero replaces invalid negative purchases without subtracting from the remaining buyer. No formal piecewise notation assumed.",
+    "Target switches visibly from individual liters to separate groups' reservations, retains units and domains, explains negative contribution error, and does not infer actual sales from demand."
+  ],
+  "author_self_review": "Before completed handoff, author added authored-example label and explicit units/domain to slide3 and enlarged overview containers. Reported other render pixels unchanged. Parent reviewed all25 final native renders and notes, sampled finalPDF, read source and recalculated values; no parent artifact repair."
+}

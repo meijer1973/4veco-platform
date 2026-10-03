@@ -1,0 +1,71 @@
+{
+  "status": "Recorded full-suite PASS before the later historical dependency-bridge repair; repair independently reviewed with16/16 focused tests; final remote published-pair CI recorded separately",
+  "command": "npm run check:platform -- --maxWorkers=2 --json --outputFile=C:/wt/ppt/.book1/jest-final-r2.json",
+  "exit_code": 0,
+  "results": {
+    "success": true,
+    "numTotalTestSuites": 149,
+    "numPassedTestSuites": 143,
+    "numFailedTestSuites": 0,
+    "numPendingTestSuites": 6,
+    "numTotalTests": 2337,
+    "numPassedTests": 2329,
+    "numFailedTests": 0,
+    "numPendingTests": 8
+  },
+  "raw_result_sha256": "26b02a8d8c4a10dab42525a9ebe9acc8565a51e98b3eb2701f3802b19c2507da",
+  "started_platform_head": "cc678ddd",
+  "scope": "Full-suite result covers the recorded shared implementation except the later historical dependency-bridge repair. The repair has independent focused validation in ci-repair-review.json. Final exact-head remote CI must include all changes.",
+  "independent_reviews": [
+    {
+      "reviewer": "book1_scope_adapter agent",
+      "reviewed": "6a7356eb routing, dbaf16bf renderer mutex, 27536dc2 filename guidance",
+      "result": "no blocking finding reported"
+    },
+    {
+      "reviewer": "root coordinator",
+      "reviewed": "scope adapter and bounded retirement/legacy fixture changes in ead13b6d and6604f8b7",
+      "result": "no blocking finding; finite paths, sealed376bindings and historical provenance retained"
+    }
+  ],
+  "earlier_full_run": {
+    "command": "npm run check:platform -- --maxWorkers=2 --json --outputFile=C:/wt/ppt/.book1/jest-current.json",
+    "exit_code": 0,
+    "results": {
+      "success": true,
+      "numTotalTestSuites": 149,
+      "numPassedTestSuites": 143,
+      "numFailedTestSuites": 0,
+      "numPendingTestSuites": 6,
+      "numTotalTests": 2336,
+      "numPassedTests": 2328,
+      "numFailedTests": 0,
+      "numPendingTests": 8
+    },
+    "raw_result_sha256": "6a3c61f2d454d3742df5dfde5055cfb1f5e23085e855f94e13823079e636b13b",
+    "started_platform_head": "208a9bfd"
+  },
+  "intermediate_failure_and_resolution": [
+    "First rerun exposed an import of the full scope adapter from the small lane classifier, which broke a minimal CI fixture. cc678ddd makes the exact six support-path classification self-contained; 51 focused tests passed.",
+    "An overlapping navigation-generation command dirtied archive/index.json while the first rerun inspected scope. Its task-generated files were restored; no test suppression. The clean second full run passed."
+  ],
+  "late_y1_verification": {
+    "full_wrapper_rerun": "Not passing proof: the run overlapped creation of untracked/staged final review reports and exited with a changed landing-input error. The strict tracked-scope fallback could not certify that changing workspace. No implementation changed in response.",
+    "clean_current_lesson_fallback": {
+      "command": "verifyCurrentLesson() from build-scripts/ci/check-y1-product-evidence.js",
+      "platform": "eeaa364f8de5118d4aa788bccd916556db85c308",
+      "lessons": "4cf51ddbd033c26fe99a3c7f44bba6174a5024c4",
+      "exit_code": 0,
+      "scope_verified": true,
+      "historical_capture_attests_current_retired_pages": false
+    },
+    "publication_requirement": "Full wrapper at the final published pair remains a separate remote-CI check."
+  },
+  "historical_dependency_bridge_repair": {
+    "reason": "Linux top-level node_modules symlink was visible to original historical Git inventory",
+    "change": "Real ignored node_modules directory with links to package directories; no historical source/pin/allowlist edits",
+    "independent_review": "ci-repair-review.md",
+    "focused_tests_passed": 16,
+    "remote_validation": "pending on final published head"
+  }
+}

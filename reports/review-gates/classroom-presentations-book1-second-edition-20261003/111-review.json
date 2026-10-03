@@ -1,0 +1,196 @@
+{
+  "paragraph": "1.1.1",
+  "verdict": "PASS",
+  "reviewer": "root coordinator, independent of cold author",
+  "source_hash_checks": [
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/1.1.1 Schaarste, keuzes en alternatieve kosten – paragraaf.md",
+      "sha256": "249ad3b06b6e717c1a0f1c3c0c1174fd99d1df45e751807c5ac0b4d8b7d2a492",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/Antwoorden.md",
+      "sha256": "dc89980240843ea5fa1d01fe68d33e7d3621ce5938fd7314f7e234bd204facd0",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/Docenteninformatie.md",
+      "sha256": "4b0b2fbe814f202ff8e81fdd8837d0ef882b2adb98ccb0957088f6849ede6c93",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/boek/Boek_1_Compleet_Tweede_editie.pdf",
+      "sha256": "2a2261b98f4a1c0a186a119120ae1b8c70e8d7860712e03eb711d1ab07efc676",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/student_page_map.json",
+      "sha256": "58eb9bf1d50227226e284099357e33e59a10bd433aa86f9bc7f3bf5c03b26691",
+      "passed": true
+    }
+  ],
+  "slides_reviewed_individually": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "notes_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "pdf_visual_sample": [
+    1,
+    11,
+    16,
+    21
+  ],
+  "pdf_text_checked_all_pages": true,
+  "overview_parity": [
+    1,
+    10,
+    21
+  ],
+  "native_tables": 12,
+  "native_charts": 0,
+  "note_minimum_pt": 14,
+  "artifact_pptx_sha256": "71b1826bf24a21482556a1e4283741fb23ac1ccb454ebcd49ddd34bd4e49ce2f",
+  "artifact_pdf_sha256": "4db4c9c03dd87affdfd46f2a1a7b1fd682fb414dccc15a48004a203a2799c274",
+  "cold_output_repaired": false,
+  "findings": [],
+  "instructional_review": [
+    "First paragraph assumes no prior economics. General multiplication and units retrieved and explicitly checked.",
+    "Supported start 2 directs to p6–8 and notes require return before basis work.",
+    "Separate atelier and Lina examples teach opportunity cost as best feasible foregone alternative, not payment/difference/sum; comparable time and criterion explicit.",
+    "Actual target context, all table values, financial conditions and all five questions precede any answer.",
+    "Independent target recalculation: 210/270; foregone music210; difference60; changed goal music90 vs60.",
+    "New target data and three-hour time window are explicit. Next paragraph bridge to ratios/percentages does not assume those operations already taught."
+  ],
+  "limits": [
+    "Rendering and planned instructional sequence verified; classroom timing and student mastery not measured.",
+    "Series continuity remains pending other eleven final presentations."
+  ],
+  "render_binding": [
+    {
+      "slide": 1,
+      "png_sha256": "f484b9eb9c459a4436aa7ac5efa6f3fd7a05a33e6ffa43c73ff861ed7f3da697"
+    },
+    {
+      "slide": 2,
+      "png_sha256": "400ba5c976fa1c9411900127528311b05cf02f2e5562d4d56f5ddeac56d23a6e"
+    },
+    {
+      "slide": 3,
+      "png_sha256": "b83dcda2d791beb1ac6ac9f7a6b6be75bbfc737ca660f28eb76b1ae82f38a474"
+    },
+    {
+      "slide": 4,
+      "png_sha256": "b04e3620e0a53a61b0e6302fb4a20217ed7de913857f01ac28fb81394c5142bb"
+    },
+    {
+      "slide": 5,
+      "png_sha256": "fa941953036b530d3d5fef1cd349d5efdf78c5275c0beead3ed6257cee97d523"
+    },
+    {
+      "slide": 6,
+      "png_sha256": "6402447cb17ceda30bc864e6fbf9227b653555cac07763d277720cefc12032ad"
+    },
+    {
+      "slide": 7,
+      "png_sha256": "47b469528a8d5b2d259d2194c75f7dd1dbc0ca7bf25e7c808c5af1e89e30643d"
+    },
+    {
+      "slide": 8,
+      "png_sha256": "abf6c1b3996acec3411a96af3489479e50629dbce887f503a96c58f61cda883d"
+    },
+    {
+      "slide": 9,
+      "png_sha256": "a547fae55493ca0c9a5419cd8aa64e9dfd6408a0131a109e756dec6d00cbc471"
+    },
+    {
+      "slide": 10,
+      "png_sha256": "66a2886b486a33560b9963e379df85df8000fbb0f61868d04bf7bb0c2b6269fa"
+    },
+    {
+      "slide": 11,
+      "png_sha256": "41fb680ce5e726ff378bfe1b1d5c4d48d8eb49c84732d1e6a1d91a231c3e174a"
+    },
+    {
+      "slide": 12,
+      "png_sha256": "ea16af214223030f97540d1aafdd27c7d25aac43e06f8b157dd21e87a0a4b704"
+    },
+    {
+      "slide": 13,
+      "png_sha256": "25b0e3f575f87e3b6dd9649d2f6de02fdb9db69391c837c873b7134588a05400"
+    },
+    {
+      "slide": 14,
+      "png_sha256": "d178e2cd7c6e09133c851379c77303b8851de80e5c20a1d028e39b0bf7dc5155"
+    },
+    {
+      "slide": 15,
+      "png_sha256": "56c81e9f8a1bfa60744d709a0c44d61ecfafeaae2d069dd656f652b159a4c67e"
+    },
+    {
+      "slide": 16,
+      "png_sha256": "f898b2832669df620b6401e3b97524a401ca47b512562511d6fd1dafd211d225"
+    },
+    {
+      "slide": 17,
+      "png_sha256": "ee9fddaae57b5d1785fc9937fd6210ad5a6d5ba08c2fbf0e0ca5e26ef566b715"
+    },
+    {
+      "slide": 18,
+      "png_sha256": "49b599b735ecd474f693487b07e093dbaa560ecdba15efc7c21b02cbdd618545"
+    },
+    {
+      "slide": 19,
+      "png_sha256": "e2dc284919545284e578a15ff680c8bad2a904ba126b08449964df18e8b592c1"
+    },
+    {
+      "slide": 20,
+      "png_sha256": "daff1d2ae10b94ee525753ff9a451450552cef4523d9d73924406e67a612f95e"
+    },
+    {
+      "slide": 21,
+      "png_sha256": "c6b1ccb2035b384e02ef29e18ac812c35da88b6941b138279df586b557de3769"
+    }
+  ],
+  "render_count_matches": true
+}

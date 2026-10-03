@@ -1,0 +1,376 @@
+{
+  "paragraph": "1.3.2",
+  "title": "Marktevenwicht: prijs en hoeveelheid",
+  "type": "theory",
+  "edition": "Book 1 tweede-editie-2026",
+  "lessonCommit": "173aa9a803897965c572df2c4e7f83cdb135eb1c",
+  "platformBase": "27536dc220657c657665d013d4f9c7bed9c06231",
+  "sources": [
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/1.3.1 Aanbod en aanbodfactoren – paragraaf.md",
+      "sha256": "a877af4743b94775279f04bda37a1956e5aa19d36ed4dac1de031b43733f458d"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/1.3.2 Marktevenwicht – paragraaf.md",
+      "sha256": "454d8aaf6aabd7d220fdc4969a033e9037b2dca5be066d80ca8c62374de2860a"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/Antwoorden.md",
+      "sha256": "1cb6fce9da344dff9e98ea826b6e89e5d61ade745116c9b0ddef7bd0c68d2540"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/Docenteninformatie.md",
+      "sha256": "854e7e555300b8bc0eff5a7dc8e549171c899ba2098523c1b665a98e6ceb8847"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/1.1.3 Tabellen, grafieken en formules – paragraaf.md",
+      "sha256": "989672f574c9454c3bf44bcea4ec061e68bb9336efa9b2a93c2a8ab581daa206"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.1 Betalingsbereidheid en individuele vraag – paragraaf.md",
+      "sha256": "bcfa8e2586e1fed8c7a7aa5b1f6c571a800e0ee5da5d278e5c0ef2b349484e88"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.3 Van individuele naar collectieve vraag – paragraaf.md",
+      "sha256": "133078fafc4d48401e9c232786c82296a970053f92363d9a71c33c897ca16064"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/boek/Boek_1_Compleet_Tweede_editie.pdf",
+      "sha256": "2a2261b98f4a1c0a186a119120ae1b8c70e8d7860712e03eb711d1ab07efc676"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/student_page_map.json",
+      "sha256": "58eb9bf1d50227226e284099357e33e59a10bd433aa86f9bc7f3bf5c03b26691"
+    }
+  ],
+  "assignment": {
+    "start": [
+      12,
+      13
+    ],
+    "basis": [
+      14,
+      15,
+      16
+    ],
+    "independent": [
+      17,
+      18,
+      19
+    ],
+    "target": 20,
+    "homework": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "homeworkInstruction": "Maken en nakijken",
+    "extraOnly": [
+      21,
+      22
+    ]
+  },
+  "printedPages": {
+    "start": 102,
+    "supportForStart13": [
+      96,
+      97
+    ],
+    "basis": [
+      103,
+      104
+    ],
+    "independent": 105,
+    "target": 106,
+    "theory": [
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102
+    ]
+  },
+  "goals": [
+    "Evenwicht als gelijke collectieve plannen uitleggen",
+    "Qv = Qa met P aan beide kanten oplossen",
+    "Q in beide functies controleren en interpreteren",
+    "Zelf V en A tekenen met assen, eenheden, schalen, E en hulplijnen",
+    "Overschot en voorwaardelijke verkoop berekenen",
+    "Prijsdruk en bewegingen langs ongewijzigde lijnen verklaren"
+  ],
+  "teachingExample": {
+    "status": "Uitlegvoorbeeld — niet uit het boek",
+    "context": "Eén soort pennenetui op een markt",
+    "demand": "Qv = 72 - 4P; 0 <= P <= 18",
+    "supply": "Qa = 4P - 8; 2 <= P <= 18",
+    "units": {
+      "P": "euro per etui",
+      "Q": "etuis per week"
+    },
+    "equilibrium": {
+      "P": 10,
+      "Q": 32
+    },
+    "lowPrice": {
+      "P": 8,
+      "Qv": 40,
+      "Qa": 24,
+      "shortage": 16,
+      "sales": 24
+    },
+    "highPrice": {
+      "P": 12,
+      "Qv": 24,
+      "Qa": 40,
+      "surplus": 16,
+      "sales": 24
+    },
+    "transactionRule": "Alle deelnemers aan de kleinste kant vinden een partner; geen andere voorraad of belemmeringen.",
+    "relationToAssignedWork": "Afzonderlijk authored scenario and coefficients; no practice question is worked before independent practice."
+  },
+  "prerequisiteTrace": [
+    {
+      "operation": "Start 12: terugrekenen in q = a - bP en substitutiecontrole",
+      "priorTeaching": "1.1.3 p.27: gelijke bewerkingen en controle; 1.2.1 p.48-49: negatieve prijscoefficient en terugrekenen",
+      "status": "retrieval; short refresh after start"
+    },
+    {
+      "operation": "Start 13: tweezijdig evenwicht en dezelfde transacties",
+      "lessonTeaching": "1.3.2 p.96-97, slides 3-6",
+      "status": "new; exploration using pages 96-97 on every overview; revisit before basis"
+    },
+    {
+      "operation": "Collectieve hoeveelheden versus individueel q",
+      "priorTeaching": "1.2.3 p.68-69 and 1.3.2 p.96",
+      "lessonTeaching": "Explicitly name Qv and Qa as market totals"
+    },
+    {
+      "operation": "Lineaire grafiek uit twee punten, (Q; P), scale and domains",
+      "priorTeaching": "1.1.3 p.24-25 and 1.2.1 p.48-49; aanbod 1.3.1 p.87",
+      "lessonTeaching": "Explicit point calculations, V first then A, E and guides"
+    },
+    {
+      "operation": "Gelijkheid met P aan beide kanten",
+      "priorTeaching": "Not assumed mastered",
+      "lessonTeaching": "1.3.2 p.98; full both-sides steps in separate authored example"
+    },
+    {
+      "operation": "Overschot, transactieregel en prijsdruk",
+      "priorTeaching": "Vraag is geen verkoop p.49; aanbod is een plan p.86-87; eigen prijs p.88",
+      "lessonTeaching": "1.3.2 p.99-100; separate low and high price cases; new operation taught before basis"
+    }
+  ],
+  "pageVerification": "Complete student PDF, physical pages equal printed pages for cited pages. Footer and teaching content inspected; H3 chapter offset 84 is not reused for H1/H2.",
+  "slides": [
+    {
+      "number": 1,
+      "title": "Deze les: §1.3.2 Marktevenwicht"
+    },
+    {
+      "number": 2,
+      "title": "Wat kun je na deze les?"
+    },
+    {
+      "number": 3,
+      "title": "Koopplannen en verkoopplannen"
+    },
+    {
+      "number": 4,
+      "title": "Evenwicht: dezelfde hoeveelheid bij dezelfde prijs"
+    },
+    {
+      "number": 5,
+      "title": "De evenwichtsprijs berekenen"
+    },
+    {
+      "number": 6,
+      "title": "De hoeveelheid berekenen en controleren"
+    },
+    {
+      "number": 7,
+      "title": "Twee punten per rechte lijn"
+    },
+    {
+      "number": 8,
+      "title": "De vraaglijn tekenen"
+    },
+    {
+      "number": 9,
+      "title": "De aanbodlijn toevoegen"
+    },
+    {
+      "number": 10,
+      "title": "Het snijpunt en de hulplijnen"
+    },
+    {
+      "number": 11,
+      "title": "Bij € 8 ontstaat een vraagoverschot"
+    },
+    {
+      "number": 12,
+      "title": "Verkoop vraagt een transactieregel"
+    },
+    {
+      "number": 13,
+      "title": "Kopers concurreren bij een tekort"
+    },
+    {
+      "number": 14,
+      "title": "Bij € 12 ontstaat een aanbodoverschot"
+    },
+    {
+      "number": 15,
+      "title": "Verkopers concurreren om kopers"
+    },
+    {
+      "number": 16,
+      "title": "Korte controle bij het uitlegvoorbeeld"
+    },
+    {
+      "number": 17,
+      "title": "Deze les: §1.3.2 Marktevenwicht"
+    },
+    {
+      "number": 18,
+      "title": "Opgave 20 · Herbruikbare bekers"
+    },
+    {
+      "number": 19,
+      "title": "Opgave 20 · Deelvragen a, b en c"
+    },
+    {
+      "number": 20,
+      "title": "Opgave 20 · Deelvragen d en e"
+    },
+    {
+      "number": 21,
+      "title": "Opgave 20a · De evenwichtsprijs"
+    },
+    {
+      "number": 22,
+      "title": "Opgave 20b · Hoeveelheid en controle"
+    },
+    {
+      "number": 23,
+      "title": "Opgave 20c · Punten voor de tekening"
+    },
+    {
+      "number": 24,
+      "title": "Opgave 20c · De vraaglijn"
+    },
+    {
+      "number": 25,
+      "title": "Opgave 20c · Beide lijnen en evenwicht"
+    },
+    {
+      "number": 26,
+      "title": "Opgave 20d · De plannen bij € 10"
+    },
+    {
+      "number": 27,
+      "title": "Opgave 20d · De werkelijke verkoop"
+    },
+    {
+      "number": 28,
+      "title": "Opgave 20e · Opwaartse prijsdruk"
+    },
+    {
+      "number": 29,
+      "title": "Antwoordcontrole bij opgave 20"
+    },
+    {
+      "number": 30,
+      "title": "Deze les: §1.3.2 Marktevenwicht"
+    }
+  ],
+  "overviewSlides": [
+    1,
+    17,
+    30
+  ],
+  "nativeObjects": {
+    "tableSlides": [
+      3,
+      4,
+      7,
+      13,
+      14,
+      15,
+      18,
+      23,
+      26,
+      28
+    ],
+    "chartSlides": [
+      8,
+      9,
+      10,
+      11,
+      24,
+      25
+    ]
+  },
+  "teachingTrace": {
+    "equilibriumConcept": [
+      3,
+      4
+    ],
+    "bothSidesAlgebra": [
+      5
+    ],
+    "quantityAndControl": [
+      6
+    ],
+    "graphConstruction": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "shortage": [
+      11
+    ],
+    "conditionalSales": [
+      12
+    ],
+    "upwardPressure": [
+      13
+    ],
+    "surplusAndConditionalSales": [
+      14
+    ],
+    "downwardPressure": [
+      15
+    ],
+    "check": [
+      16
+    ],
+    "returnToStart13": "notes on overview 17",
+    "targetQuestionSlides": [
+      18,
+      19,
+      20
+    ],
+    "targetAnswerSlides": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ]
+  },
+  "finalArtifactSha256": {
+    "1.3.2 Marktevenwicht – presentatie.pptx": "29006ef0d4c9a053532608c3f4f7f70ae2cfe74efcac65737a3653631f981586",
+    "1.3.2 Marktevenwicht – presentatie.pdf": "e1fbdca288d91e105500299aff80d84a828ca1b3d853c6d1b19df417118445e9"
+  }
+}

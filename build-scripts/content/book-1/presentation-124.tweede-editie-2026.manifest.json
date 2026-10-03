@@ -1,0 +1,147 @@
+{
+  "paragraph": "1.2.4",
+  "title": "Gemengde opgaven: vraag",
+  "type": "gemengde opgaven",
+  "edition": "tweede-editie-2026",
+  "sourceCommit": "173aa9a803897965c572df2c4e7f83cdb135eb1c",
+  "platformCommit": "04a549d40cbc2937bff29344b6ac2155894c4c3e",
+  "sources": [
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.4 Gemengde opgaven – opgaven.md",
+      "sha256": "f3f8afc64a17d8552b5f67708c4bc6a908254e707cd71aa3ef6cb0c7a01367a9"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/Antwoorden.md",
+      "sha256": "f84d1a278537a2f3d8318c7b59f689a139421a631762c5926ffcbc3ad1690827"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/Docenteninformatie.md",
+      "sha256": "e3646b257412ad67beaae17591d62706f5ff29fe9ac0ffc944fe3254168b4ff2"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.1 Betalingsbereidheid en individuele vraag – paragraaf.md",
+      "sha256": "bcfa8e2586e1fed8c7a7aa5b1f6c571a800e0ee5da5d278e5c0ef2b349484e88"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.2 Vraagfactoren – paragraaf.md",
+      "sha256": "57fe7dacb96f888b82d170bd55060c129fcd8effbae8fbed89c8a4eacd8f6c7a"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.3 Van individuele naar collectieve vraag – paragraaf.md",
+      "sha256": "133078fafc4d48401e9c232786c82296a970053f92363d9a71c33c897ca16064"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.4_ex_37.svg",
+      "sha256": "be1ed31cb8c88a7e41b87426273817acd7b97bf32d9775faa3718f730821b860"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.4_ans_37.svg",
+      "sha256": "e3fb53bf0d26a3ab0635a84b347d4b409c752f4a1657c611d262529599c4260c"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/boek/Boek_1_Compleet_Tweede_editie.pdf",
+      "sha256": "2a2261b98f4a1c0a186a119120ae1b8c70e8d7860712e03eb711d1ab07efc676"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/student_page_map.json",
+      "sha256": "58eb9bf1d50227226e284099357e33e59a10bd433aa86f9bc7f3bf5c03b26691"
+    }
+  ],
+  "assignment": {
+    "start": [
+      34
+    ],
+    "basis": [],
+    "independent": [
+      35,
+      36
+    ],
+    "target": 37,
+    "homework": [
+      34,
+      35,
+      36,
+      37,
+      38
+    ],
+    "bonus": [
+      38
+    ],
+    "homeworkAction": "Maken en nakijken",
+    "mixedRoute": "34–36, daarna 37. 38 behoudt het bonuslabel, en is opgenomen in het volledige gemengde huiswerk."
+  },
+  "printedPages": {
+    "start": 78,
+    "exercise35": 78,
+    "exercise36": 79,
+    "targetSources": 80,
+    "targetQuestions": 81,
+    "bonus": 82
+  },
+  "goals": [
+    "Vraagfuncties combineren en terugrekenen binnen het geldige interval.",
+    "Eigen-prijsreactie en verschuiving afzonderlijk verklaren en tekenen.",
+    "Koopbeslissingen zonder dubbeltelling onderbouwen en conclusies begrenzen."
+  ],
+  "prerequisites": [
+    {
+      "operation": "Start 34: prijs met betalingsbereidheid per eenheid vergelijken, inclusief gelijkheid",
+      "teaching": "§1.2.1 p. 46–47, Sara-voorbeeld, gelijkheidsafspraak",
+      "lessonRefresh": "dia 2, eigen voorbeeld losse stickers"
+    },
+    {
+      "operation": "Start 34b: procentuele prijsverandering met oude prijs als basis",
+      "teaching": "§1.1.2 p. 14, formule en uitgewerkt voorbeeld",
+      "lessonRefresh": "docentnotitie dia 2, optioneel eigen voorbeeld € 5 naar € 6"
+    },
+    {
+      "operation": "Tabel per prijs sommeren, gemeenschappelijke eenheid/periode en geen dubbeltelling",
+      "teaching": "§1.2.3 p. 68, tabel en drie controles",
+      "lessonRefresh": "dia 3 en 21"
+    },
+    {
+      "operation": "Functies sommeren en geldigheidsinterval controleren",
+      "teaching": "§1.2.3 p. 69–71",
+      "lessonRefresh": "dia 3"
+    },
+    {
+      "operation": "P = a − bq terugrekenen; snijpunten en coördinaten (q; P)",
+      "teaching": "§1.2.1 p. 48–51, dezelfde relatie met P links en tekenvoorbeeld",
+      "lessonRefresh": "dia 4"
+    },
+    {
+      "operation": "Eigen prijs versus substituut, tussenstap en netto-effect",
+      "teaching": "§1.2.2 p. 58–61, eigen prijs, andere goederen en wrapsvoorbeeld",
+      "lessonRefresh": "dia 5–6"
+    },
+    {
+      "operation": "Lijnstuk begrenzen in gemeenschappelijk prijsinterval",
+      "teaching": "§1.2.3 p. 70–72, grenzen en eindpunten, niet verlengen naar P-as",
+      "lessonRefresh": "dia 5–6, met endpoints expliciet in notities"
+    },
+    {
+      "operation": "Collectieve vraag kan veranderen zonder veranderde vraag van bestaande koper",
+      "teaching": "§1.2.2 p. 60, aantal kopers",
+      "lessonRefresh": "docentsteun bij 36d in overzichtnotities"
+    },
+    {
+      "operation": "Vraag is geen gerealiseerde verkoop",
+      "teaching": "§1.2.1 p. 49, waarschuwing; §1.2.4 p. 79–81",
+      "lessonRefresh": "dia 22"
+    }
+  ],
+  "teachingExamples": {
+    "authored": true,
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "discrete": "Losse stickers: betalingsbereidheden 8, 5, 1 euro, prijs 5 euro, gelijkheid toegestaan. Een afzonderlijk voorbeeld, geen afleiding van het lineaire model.",
+    "linear": "Rondvaart: QA=18−2P (0≤P≤9), QB=30−2P (0≤P≤15). Q in kaartjes/week, P euro/kaartje. Bij P=3 is Q=36. Q=28 geeft P=5. Eigen prijs 3 naar 4: Q=32. Waterfietsen zijn substituut en worden duurder; gegeven verschuiving +8 kaartjes/week voor 0≤P≤9, Qnieuw=56−4P. Bij P=4 is Qnieuw=40."
+  },
+  "targetSelection": "De echte doeloefening 37 combineert alle vraagbewerkingen van het hoofdstuk, met drie bronnen, zes deelvragen en een gegeven grafiek. Daarom representatief voor bespreking.",
+  "timing": "Geen gemeten lestijd. Boek schat normale gemengde route op 63 minuten; spreiden en huiswerk zijn mogelijk.",
+  "outputStem": "1.2.4 Gemengde opgaven – presentatie",
+  "acceptedReference": {
+    "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – presentatie.pptx",
+    "sha256": "c89759165a2ecf24fbfadcff12eeab5c3b1b96eee5821e8ecf099bb93b225c84",
+    "use": "Visual family and Arial fonts. Content and slide count derive from 1.2.4."
+  }
+}

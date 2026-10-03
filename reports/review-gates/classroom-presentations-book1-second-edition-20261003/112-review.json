@@ -1,0 +1,273 @@
+{
+  "paragraph": "1.1.2",
+  "verdict": "PASS",
+  "reviewer": "root coordinator, independent of cold author",
+  "source_hash_checks": [
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/1.1.2 Verhoudingen, percentages en indexcijfers – paragraaf.md",
+      "sha256": "e10b272612bb096e6b2e2628f67198eaa3f4f123c4b6f7c420eb006312059335",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/Antwoorden.md",
+      "sha256": "dc89980240843ea5fa1d01fe68d33e7d3621ce5938fd7314f7e234bd204facd0",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/Docenteninformatie.md",
+      "sha256": "4b0b2fbe814f202ff8e81fdd8837d0ef882b2adb98ccb0957088f6849ede6c93",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/1.1.1 Schaarste, keuzes en alternatieve kosten – paragraaf.md",
+      "sha256": "249ad3b06b6e717c1a0f1c3c0c1174fd99d1df45e751807c5ac0b4d8b7d2a492",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/boek/Boek_1_Compleet_Tweede_editie.pdf",
+      "sha256": "2a2261b98f4a1c0a186a119120ae1b8c70e8d7860712e03eb711d1ab07efc676",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/student_page_map.json",
+      "sha256": "58eb9bf1d50227226e284099357e33e59a10bd433aa86f9bc7f3bf5c03b26691",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H1/1.1.2 Verhoudingen, percentages en indexcijfers – paragraaf.pdf",
+      "sha256": "63d3c6f6969b69d94374a039c9cb86476e56e57937d2319ab6de7ef9889d4610",
+      "passed": true
+    }
+  ],
+  "slides_reviewed_individually": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "notes_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "saved_file_audit": {
+    "pptxSha256": "561cb2bb29407878efeea482730e1f6e695f38e8aff8b44b663c24c070afe5fe",
+    "pdfSha256": "8889a458efa232fbe025615504380bc26b00d22fbe676b065c5968df2cb1f1e1",
+    "slideCount": 29,
+    "pdfPageCount": 29,
+    "notesCount": 29,
+    "minimumExplicitNotesFontPt": 14.0,
+    "nativeTableCount": 15,
+    "nativeChartCount": 0,
+    "overviewSlides": [
+      1,
+      16,
+      29
+    ],
+    "overviewContentGeometryParity": true,
+    "pdfTextMismatches": []
+  },
+  "pdf_visual_samples": [
+    13,
+    18,
+    26
+  ],
+  "target_review": "All context and nine table values on17, questions a-g on18-20, solutions21-27. Checked against current manuscript. Target uses printed complete-book p22.",
+  "independent_arithmetic": {
+    "a": 6.0,
+    "b_absolute": 2,
+    "b_percent": 20.0,
+    "c": 16.200000000000003,
+    "d": [
+      120.0,
+      150.0
+    ],
+    "e_index_points": 30,
+    "e_percent": 25.0,
+    "f_shares": [
+      20.0,
+      24.0
+    ],
+    "f_points": 4.0,
+    "g_percent": 20.0
+  },
+  "teaching_review": [
+    "Start10 elementary division/subtraction is refreshed on3; start11 new rules are explicitly exploratory with pp13-15 support and reattempt on15/16 before basis12-14.",
+    "Authored Filmclub examples on3-15 are separate from all assigned exercises. Per-unit and reverse share on3-4; old-value denominator and reversal on5-6; separate percentage-factor proposals on7.",
+    "Fixed-base indices on8, non100 comparison on9, inverse index on10 support independent16b; group-specific denominators on11, percentage points vs relative growth on12.",
+    "Slide13 isolates group and share changes before combining; intermediate rows explicitly hypothetical. 160*0.25=40; 160*0.30=48; 200*0.25=50; 200*0.30=60. Count growth50%, share growth20%, change5points.",
+    "No CPI, purchasing power or elasticity knowledge assumed. New arithmetic is taught; earlier per-hour multiplication is accurately anchored to1.1.1 printedp7."
+  ],
+  "native_render_hashes": [
+    {
+      "slide": 1,
+      "sha256": "11c5b067c9228e5d39e83108e4de3e388e20b39785b4da9b8e3b0b30c91a2eb6"
+    },
+    {
+      "slide": 2,
+      "sha256": "7ecfae8e0e9fdb88a3756c41253691e331b73909cb511c09eaed5b9fe3a86425"
+    },
+    {
+      "slide": 3,
+      "sha256": "10d0db2688e7bacd5efd1fb1e46a7df1858048e8fc74503e79f1a6ef3b9ae8a8"
+    },
+    {
+      "slide": 4,
+      "sha256": "e07e0b69d437c89954749beb23bd31013018b4d5ae042190bed9b23000f06fce"
+    },
+    {
+      "slide": 5,
+      "sha256": "a70ffcdbcc220e74468a8d8475fef2e4d284580464fcf92389fa6f7de959b717"
+    },
+    {
+      "slide": 6,
+      "sha256": "53346d24da94d39da54b624d88850be14e154c4659233eb39abf29e265d5ef59"
+    },
+    {
+      "slide": 7,
+      "sha256": "ffcec529a8c2c9f0388a6540548e9fe4b9ade55ab77da740d35f625b25026803"
+    },
+    {
+      "slide": 8,
+      "sha256": "1c50afab4e6bc9a088f30cee5bc0d49197086ebf158c99af56b424ec3ebb2e57"
+    },
+    {
+      "slide": 9,
+      "sha256": "80b7a8d4f78147aecf4f4b02e0b936c1eaabccfb317faee4eb69ba4cf773c118"
+    },
+    {
+      "slide": 10,
+      "sha256": "abef48bebfb2ab6912db488ba4a29517583c8e7a56d6942bf53a729e9b3cb166"
+    },
+    {
+      "slide": 11,
+      "sha256": "e03fdcd0cc73fad7ef5723fcb38ba9fee4cd90475af0dee114a0bd22373e1e56"
+    },
+    {
+      "slide": 12,
+      "sha256": "89801cca3a4ae64de5ff726151bbbfc8b6ca9f64433b5a7a5696964e4310741e"
+    },
+    {
+      "slide": 13,
+      "sha256": "d3a64412cd2fc799788640707de57dd961f27b57a29ce5aa61bfd676d60da0f8"
+    },
+    {
+      "slide": 14,
+      "sha256": "d68ae4f1b9abf23e08ab3cef714a14e11cf6a812d732cfb7afa539ec3d4bb4c9"
+    },
+    {
+      "slide": 15,
+      "sha256": "eb738cb7363ca61ae2cc9b9683f849d9aa3886e9ffdd46b016a18ea43ca1aaf0"
+    },
+    {
+      "slide": 16,
+      "sha256": "e798d286897c21212233ed1b495acce2a099af2f5e42b763854d87129bd45288"
+    },
+    {
+      "slide": 17,
+      "sha256": "85e5ed98f850b7cfe99f3b6835c767de8aee9590228ad1190a649cc224a8bd38"
+    },
+    {
+      "slide": 18,
+      "sha256": "1e1ab35b2759f05927e55a21fab27b2fcb9a759d7ae6a70656d3afa5a6064f76"
+    },
+    {
+      "slide": 19,
+      "sha256": "f4fc8bbdedcbac88a0f316f64369d00e51a6e228e3c14ac02adbd2b05f8d7ad8"
+    },
+    {
+      "slide": 20,
+      "sha256": "c6ca0b4bbf22961743b20aebe34e0f08fd1e79bf6860862cb89178f869b16299"
+    },
+    {
+      "slide": 21,
+      "sha256": "62113eb6935bb8549571a2ae7c3e344e0facafe8148adfbc724ed2d4e9dfb9d2"
+    },
+    {
+      "slide": 22,
+      "sha256": "2729c0a9cfe18de5b7baffa4100663234b18134eb709152bfd20e1d14d535a7c"
+    },
+    {
+      "slide": 23,
+      "sha256": "e2c99e1a2d97c299e55e2984a85785034a79ad54c109cb162ed67ab6b2b267dd"
+    },
+    {
+      "slide": 24,
+      "sha256": "fa95f2993fb76da2aff9727a39e9cc9389afb1a9ba667585a00750d18db1fc27"
+    },
+    {
+      "slide": 25,
+      "sha256": "d2354e10ae2e6aba97b1fc9d4534a656626bb94e848d248dc0de4fb9ff83909c"
+    },
+    {
+      "slide": 26,
+      "sha256": "e3793b98c592403475c08db9fa1ab604bc3251fcd1210aef238e93eef9db63aa"
+    },
+    {
+      "slide": 27,
+      "sha256": "fbfb05e7c2deb522a40540f0bbc15f01a7302d57e6439b67a52d31f9fb912c8f"
+    },
+    {
+      "slide": 28,
+      "sha256": "8c3dd60f242a1db0c0d8cb0a8a505a4fd5962f2cc3b9c55152732a050c0581f5"
+    },
+    {
+      "slide": 29,
+      "sha256": "c7dba8ce44bb136edc6f9a9e287abfb03de8bf8b0734b16dce69b69e7b10cc80"
+    }
+  ],
+  "changes_after_handoff": "Manifest filename and references normalized only; final presentation and PDF hashes unchanged.",
+  "author_self_review": "Author repaired question18b line wrap and slide2 header before completed handoff. This was not an untouched first-build success claim.",
+  "limits": "Individual artifact and planned-teaching review only. Complete serialized series review remains pending; no measured classroom timing or learning-effect claim."
+}

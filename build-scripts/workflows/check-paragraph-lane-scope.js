@@ -27,6 +27,17 @@ const BOOKS34_FOLLOWUP_FILES = new Set(require('../books/books34-followups-revis
 const BOOK2_NOTATION_FILES = new Set(require('../books/book2-notation-revision-pin.json').revision_paths.map(p => p.toLowerCase()));
 const BOOK1_EDITION_FILES = new Set(require('../../references/owned/book1-second-edition-2026/revision.json').lessons.map(row => row.path.toLowerCase()));
 BOOK1_EDITION_FILES.add('book1-second-edition-20261002.json');
+// Ownership of the finite retired classroom surface only. The separate
+// Book 1 scope adapter still requires deletion and protects sealed source bytes.
+// Keep this classifier self-contained: paired CI copies it into a minimal
+// fixture checkout without loading the edition verifier implementation.
+const BOOK1_OLD_PRESENTATION_ROOT = 'boek 1 - grondslagen, vraag en aanbod/';
+const BOOK1_RETIRED_PRESENTATIONS = new Set([
+  ...['slide3-img-14fd6f67e28c', 'slide4-img-69532d597fca', 'slide5-img-db6ea92cebd7', 'slide6-img-a0d089c4fdbb']
+    .map(name => BOOK1_OLD_PRESENTATION_ROOT + '1.1 hoofdstuk economisch denken en rekenen/1.1.1 schaarste en economisch denken/_assets/presentatie-' + name + '.png'),
+  BOOK1_OLD_PRESENTATION_ROOT + 'shared/presentation-v2.css',
+  BOOK1_OLD_PRESENTATION_ROOT + 'shared/presentation-v2.js',
+]);
 const CATEGORY_LABELS = {
   partA_textbook: 'Part A textbook',
   partB_companion: 'Part B companion',
@@ -177,6 +188,7 @@ function isSharedPlatformPath(filePath) {
 
 function isPartBCompanionPath(filePath) {
   const p = normalizedLower(filePath);
+  if (BOOK1_RETIRED_PRESENTATIONS.has(p)) return true;
   const base = basenameLower(filePath);
   if (base === '_paragraph-plan.md') return true;
   if (base === 'index.html') return true;

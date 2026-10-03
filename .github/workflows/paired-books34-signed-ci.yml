@@ -94,7 +94,7 @@ jobs:
           node - <<'JS'
           const fs=require('fs');
           if(fs.existsSync('build-scripts/books/book1-second-edition-pin.json')){
-            const result=require('./build-scripts/books/book1-second-edition-revision').verify({requireTracked:true});
+            const result=require('./build-scripts/maintenance/check-classroom-edition').verify({requireTracked:true});
             if(!result.passed||result.lesson_state!=='books34-signed-retrieval-20260926'||result.historical_review?.paragraphs!==6)throw Error(JSON.stringify(result));
             fs.writeFileSync('../signed-ci-evidence/historical-review.json',JSON.stringify(result,null,2)+'\n');
           }else{

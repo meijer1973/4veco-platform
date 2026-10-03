@@ -1,0 +1,8 @@
+{
+  "fixture": "C:\\wt\\ppt\\.book1\\ci-diagnosis\\dependency-layout-asWLiF\\repo",
+  "container_is_real_directory": true,
+  "untracked": "",
+  "ignored_by": ".gitignore:1:node_modules/\tnode_modules/plain/index.js",
+  "plain": "plain-ok",
+  "scoped": "scoped-ok"
+}

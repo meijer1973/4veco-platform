@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "reviewer": "review_ci_recovery",
+  "reviewed_at": "2026-10-03T15:25:14.526Z",
+  "result": "PASS",
+  "blocking_findings": [],
+  "review_scope": "Read-only diagnosis and review of the historical dependency bridge repair; remote CI completion remains required.",
+  "repository": "meijer1973/4veco-platform",
+  "pr_number": 304,
+  "base_head_sha": "d6683ee2b4ee450b45ccd36f318c0a8f645946ef",
+  "lesson_head_sha": "4cf51ddbd033c26fe99a3c7f44bba6174a5024c4",
+  "reviewed_files": [
+    {
+      "path": "build-scripts/books/book1-classroom-scope.js",
+      "sha256": "aa9f820227c9e3d2644bf10ffd82ff8d2492f41118a78dea42cab18a7baa4f1b"
+    },
+    {
+      "path": "build-scripts/books/book1-classroom-scope.test.js",
+      "sha256": "8c4098c66d0738c6db85d714c87457c727d2ed5e42919e63b5b3cfa34af74dfe"
+    }
+  ],
+  "diagnosis": {
+    "classification": "Regression in the new historical-checkout dependency bridge, not stale historic source pins.",
+    "first_failure": "All five historical pair jobs stop in Bind the exact repository pair with Unreviewed platform changed-path inventory.",
+    "cause": "historicalPredecessor creates node_modules as a top-level symlink on Linux. The preserved node_modules/ directory-only ignore does not ignore that symlink. Immutable predecessor checkRows sees the extra untracked path before historicalPair can validate the requested old lesson.",
+    "affected_runs": [
+      37132726929,
+      37132726900,
+      37132726894,
+      37132726851,
+      37132726839
+    ],
+    "previous_green_head": "e4e17a1e8608f8e8c0f5ae2e27eb7f8de2166ed8",
+    "previous_green_runs": [
+      37112577714,
+      37112577717,
+      37112577709,
+      37112577686,
+      37112577699
+    ],
+    "book1_pair_run": 37132726937,
+    "book1_pair_conclusion": "success"
+  },
+  "repair_assessment": "A real ignored node_modules directory containing per-package directory links preserves the nested verifier dependency path without changing historical source bytes, .gitignore, sealed inventories, pins, routing, or scope allowances. Scope directories are linked as single entries. Cleanup only unlinks verified symlinks and removes the empty newly created container; source dependency packages remain intact.",
+  "validation": [
+    {
+      "check": "node --check both changed JavaScript files",
+      "result": "PASS"
+    },
+    {
+      "check": "classroom-scope Jest suite",
+      "result": "PASS",
+      "suites": 1,
+      "tests": 16
+    },
+    {
+      "check": "Independent real-directory dependency layout fixture with plain and scoped resolution and Git ignore",
+      "result": "PASS",
+      "evidence": "dependency-layout-proof.json"
+    }
+  ],
+  "required_followup": "Commit the reviewed byte-identical repair and rerun the five historical-pair workflows plus required platform CI and exact-pair compatibility on the resulting head. This record does not claim those new remote runs passed.",
+  "path": "C:/wt/ppt/.book1/ci-diagnosis/diagnosis-review.md"
+}

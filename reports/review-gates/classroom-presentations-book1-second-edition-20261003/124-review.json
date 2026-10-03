@@ -1,0 +1,255 @@
+{
+  "paragraph": "1.2.4",
+  "verdict": "PASS",
+  "reviewer": "root coordinator, independent of cold author",
+  "source_hash_checks": [
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.4 Gemengde opgaven – opgaven.md",
+      "sha256": "f3f8afc64a17d8552b5f67708c4bc6a908254e707cd71aa3ef6cb0c7a01367a9",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/Antwoorden.md",
+      "sha256": "f84d1a278537a2f3d8318c7b59f689a139421a631762c5926ffcbc3ad1690827",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/Docenteninformatie.md",
+      "sha256": "e3646b257412ad67beaae17591d62706f5ff29fe9ac0ffc944fe3254168b4ff2",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.1 Betalingsbereidheid en individuele vraag – paragraaf.md",
+      "sha256": "bcfa8e2586e1fed8c7a7aa5b1f6c571a800e0ee5da5d278e5c0ef2b349484e88",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.2 Vraagfactoren – paragraaf.md",
+      "sha256": "57fe7dacb96f888b82d170bd55060c129fcd8effbae8fbed89c8a4eacd8f6c7a",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/1.2.3 Van individuele naar collectieve vraag – paragraaf.md",
+      "sha256": "133078fafc4d48401e9c232786c82296a970053f92363d9a71c33c897ca16064",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.4_ex_37.svg",
+      "sha256": "be1ed31cb8c88a7e41b87426273817acd7b97bf32d9775faa3718f730821b860",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/_assets/1.2.4_ans_37.svg",
+      "sha256": "e3fb53bf0d26a3ab0635a84b347d4b409c752f4a1657c611d262529599c4260c",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/boek/Boek_1_Compleet_Tweede_editie.pdf",
+      "sha256": "2a2261b98f4a1c0a186a119120ae1b8c70e8d7860712e03eb711d1ab07efc676",
+      "passed": true
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/student_page_map.json",
+      "sha256": "58eb9bf1d50227226e284099357e33e59a10bd433aa86f9bc7f3bf5c03b26691",
+      "passed": true
+    }
+  ],
+  "slides_reviewed_individually": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "notes_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "saved_file_audit": {
+    "pptxSha256": "03b317c1e42975db0129b621a4a955a6ecd4548cce9d6c4e5bd543813a808e04",
+    "pdfSha256": "10782a81065b084cc7b20bbb21d6525335c765ab60b318b8ca1581bf058f8ff7",
+    "slideCount": 23,
+    "pdfPageCount": 23,
+    "notesCount": 23,
+    "minimumExplicitNotesFontPt": 14.0,
+    "nativeTableCount": 7,
+    "nativeChartCount": 5,
+    "overviewSlides": [
+      1,
+      7,
+      23
+    ],
+    "overviewContentGeometryParity": true,
+    "pdfTextMismatches": []
+  },
+  "native_render_hashes": [
+    {
+      "slide": 1,
+      "sha256": "63b8284437809a816b8853a046b417e67752b907774af10a42d76651e3a88b0b"
+    },
+    {
+      "slide": 2,
+      "sha256": "b81e9229483d70dea8508d3296a0c6b429e9187fed5548b87889f49907ef686a"
+    },
+    {
+      "slide": 3,
+      "sha256": "7a76c189dfea67b1a3c1ca3286a8affae8af3c79667ba2e5aedf1725649ee65c"
+    },
+    {
+      "slide": 4,
+      "sha256": "cb7ba4d5090a88666f2b8f0ce7821350a3da3a8c8d0c2eab3465d84141c7c888"
+    },
+    {
+      "slide": 5,
+      "sha256": "a52eafac1cb756d9295018457c49c8a824850a53a978c4de6d360d4817812111"
+    },
+    {
+      "slide": 6,
+      "sha256": "112afbc21c9b85ff86651ab11e87872fe646b8e2113522dcc209ae9a3b7c14a7"
+    },
+    {
+      "slide": 7,
+      "sha256": "a9b65a166568b2935c2d6948f30d65236b1d7b2f0ac59e4ab9da382394adbacc"
+    },
+    {
+      "slide": 8,
+      "sha256": "150aa971562f6aa079771af543b8538ca41f3340d3e9d648aaaf5f521844e2aa"
+    },
+    {
+      "slide": 9,
+      "sha256": "623e1bea55cb10ac6462808df4640ce57b71ddedb3bfd786300fbc12f16096aa"
+    },
+    {
+      "slide": 10,
+      "sha256": "e4ac12c7169326ba67a7b8b212f5b23ddb0132f40db8a4b4cb1bfd6c2140f672"
+    },
+    {
+      "slide": 11,
+      "sha256": "dbc8d81d838d71f59c6f9de045ed7d764d8b35702520d1adbd361d341ea24d83"
+    },
+    {
+      "slide": 12,
+      "sha256": "1febb0efe7063eb59dfc727cda6a1e5e57c514bb6ef1df9e8f54cdd484c92ecb"
+    },
+    {
+      "slide": 13,
+      "sha256": "4654c6a5bf98188a3f880a36990c30fa164386f9fbd256537454ce9e60a7a175"
+    },
+    {
+      "slide": 14,
+      "sha256": "25a49c889cfe27a6ef335e0590053efcfc229222fe4c585d02b039409eecbebc"
+    },
+    {
+      "slide": 15,
+      "sha256": "45e029e384b1d9476c1eec4fe721bb5e64951bccd47027e304a9e53d06e0bbd6"
+    },
+    {
+      "slide": 16,
+      "sha256": "bb3574ebd8c9b3d7521c616588842d8ad939a943a8affb1e8991c41835c4da68"
+    },
+    {
+      "slide": 17,
+      "sha256": "75e54e6bf3362c6997ceb2340c43591b73ab0c3e75d74b2509fde4e2e1f1b0b1"
+    },
+    {
+      "slide": 18,
+      "sha256": "bcf7c507c981ed003295250ee448a10749856177a04e83e0dc5ae73c2409257a"
+    },
+    {
+      "slide": 19,
+      "sha256": "0cf87a2b03a0053f18bcddf5f3c5c56d606677080a95d9c50dd2038231a38d34"
+    },
+    {
+      "slide": 20,
+      "sha256": "d60e2e621dca4fe9643eb7b28cea41cc738e08043a5c5195919e01c551b952f7"
+    },
+    {
+      "slide": 21,
+      "sha256": "b6391df0a5ea203a3a16bdc44344f1404cdaf7d1fed0861b036a4b120804f2d2"
+    },
+    {
+      "slide": 22,
+      "sha256": "fcae5aa4180649e6b6aec5928ba15e861bd4dda19726f155825875999b0b7f85"
+    },
+    {
+      "slide": 23,
+      "sha256": "3f244d587e47cd8dee3eba821af17d256d489fd7f5c69b021229b296514328b2"
+    }
+  ],
+  "changes_after_handoff": "None. Final r3 artifact bytes and canonical manifest retained.",
+  "limits": "Individual artifact and planned-teaching review only. Complete serialized series review remains pending; no classroom timing or learning-effect measurement.",
+  "pdf_visual_samples": [
+    8,
+    13,
+    19
+  ],
+  "target_review": "Read current manuscript and printed complete-book78,80-82. All target37 sources A-C, units/periods, zero-above-own-limit, simultaneous changes, model-only/demand-only restrictions and Sem already inA are preserved8-10. Source figure11 contains only given initial line. All actual a-f questions12-13 precede first answer14.",
+  "independent_arithmetic": {
+    "authored_Q_P3": 36,
+    "authored_P_for_Q28": 5,
+    "authored_own_price_P4_Q": 32,
+    "authored_both_P4_Q": 40,
+    "target_old_group_A_B_total_at_P4": [
+      12,
+      24,
+      36
+    ],
+    "target_P_for_Q30": 5,
+    "target_P6_own_price_only_Q": 24,
+    "target_P6_both_Q": 36,
+    "target_effects_and_net": [
+      -12,
+      12,
+      0
+    ],
+    "target_Sem_halfhours_already_in_A": 2
+  },
+  "chart_review": "Read all5 saved caches. Authored V0=(12,9)-(48,0), A36/3 B32/4; V1=(20,9)-(56,0), C40/4. Target source curve=(12,8)-(60,0), no answers11;18 addsA36/4 B24/6;19 adds new(24,8)-(72,0),C36/6 and horizontalB-C. Domain0-8 retained; no extrapolated price intercept. Quantity-axis extension72-to84 explicitly recorded, consistent across target sequence; units/scales/labels clear. Workbook5charts/38references/56cells PASS.",
+  "teaching_review": [
+    "Start34p78 retrieves per-unit willingness/equality from121 and old-base percentages112, with support pages and revisit in overview notes. All34-38 homework with38bonus. No invented basis or measured lesson-duration claim.",
+    "Discrete Lina sticker example2 is explicitly separate from linear boat-ticket model3-6. Same product/price/week and disjoint groups are stated; raw sum limited to common domain and zero after own limit recalled from123.",
+    "Slide4 recalls inverse calculation with same operation on both sides and checks. Alternate P-left notation is explained in notes, including a separate worked substitution, to support mixed36 without solving it in advance.",
+    "122 taught substitution/eigen-price versus named other factor and analytical decomposition. Here boat-price increase then dearer substitute is a separate authored example; B is explicitly analytical, not claimed observed intermediate event.",
+    "Target uses constant12 only within source interval. Equal final demand36 follows offsetting nonzero effects, not no price effect. Sem2 is already insideA and must not be added to36. Demand-only scope remains explicit until131-132 introduce supply/transactions."
+  ],
+  "author_self_review": "Author changed group labels to editable Latin native subscripts and restored explicit target-source caveats before completed handoff; final reference-font-policy render reportedly pixel-identical to r2. Root independently inspected every final r3 render/notes and fresh PDF samples. No coordinator repair or content guidance."
+}
