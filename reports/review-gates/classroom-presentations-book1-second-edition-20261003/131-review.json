@@ -148,5 +148,112 @@
   "limits": [
     "Final serialized continuity remains pending the other paragraphs.",
     "No measured classroom timing or student mastery claim."
-  ]
+  ],
+  "render_binding": [
+    {
+      "slide": 1,
+      "png_sha256": "81ba5d1e20a099c259adcefb811e9c450144ecaf9dc3cd0312a89a0c8ae24f0c"
+    },
+    {
+      "slide": 2,
+      "png_sha256": "3e75ed8a1c89e0f69950f4a9ba1c166b8d36888f5b75fd895e22f18329ebd97e"
+    },
+    {
+      "slide": 3,
+      "png_sha256": "9abacde33edc78454e332e839cefa15c7e9a9d5c3f436ae4a26e1291a6c6e267"
+    },
+    {
+      "slide": 4,
+      "png_sha256": "c197cef3032ff4ace4e4d13e5e966efbc5197de329334011fc9f17d04c364a33"
+    },
+    {
+      "slide": 5,
+      "png_sha256": "101992a1958aa1515d3a2183ccdb17720d125e2114ef5a19dcd89750c6f02e31"
+    },
+    {
+      "slide": 6,
+      "png_sha256": "f5674e63e19381c8a139c25abc16910061912c206abc7b911199139977b58d72"
+    },
+    {
+      "slide": 7,
+      "png_sha256": "dfe7834371d45f71b1f6b152f368ccc9631a68887c2fee7118e279c3b0f2f735"
+    },
+    {
+      "slide": 8,
+      "png_sha256": "44e603f7fa209a0982fa8c46a7e60c2ee320fbef6aa68ecc19298e74e7e90b9a"
+    },
+    {
+      "slide": 9,
+      "png_sha256": "60073c899e994aef7de07eb950288f4c87aaa1614186477e260bf1d3783c4ca8"
+    },
+    {
+      "slide": 10,
+      "png_sha256": "ff3d6b09513350e451e846c85a762b29b2ea546fb9a583b315c713d0a6d90e30"
+    },
+    {
+      "slide": 11,
+      "png_sha256": "d9579f1293a6214c9ae7840e4cf81f5f63f2b3b677c412e0970bd79f3ddf44b4"
+    },
+    {
+      "slide": 12,
+      "png_sha256": "f5ebf42e526825a0bcca7e45a65cacd0a65cc9e65929f763c862ebad1f8cbf0e"
+    },
+    {
+      "slide": 13,
+      "png_sha256": "23c6ce4e5c93772abd9578ef16f6e45e78a80f35d3258e2a7c45cb174aef9e47"
+    },
+    {
+      "slide": 14,
+      "png_sha256": "d37c3bcee76368476114682453f53103ce581268722955bb5dd1dc1c261f9b9d"
+    },
+    {
+      "slide": 15,
+      "png_sha256": "cef13f0da08862f9d8e4c3d87a12a6bdf607dd20bde63b783665459c5a988963"
+    },
+    {
+      "slide": 16,
+      "png_sha256": "a24bea0e9cc690c37111181d072b6e90e85a1160ff18cb3b633573a153a7f186"
+    },
+    {
+      "slide": 17,
+      "png_sha256": "ff161074ebfacff2978a7d00129a0655d6b6bcc845187e1a81ff3e8dbd29148d"
+    },
+    {
+      "slide": 18,
+      "png_sha256": "34b71054f3421955938a0be600f509bac6476793ee5de9e78697344bed22f7dc"
+    },
+    {
+      "slide": 19,
+      "png_sha256": "7264795984f38c50f848ef93b76f9f2401e1129ce3cab03d18643b0206f1dc8a"
+    },
+    {
+      "slide": 20,
+      "png_sha256": "e04e33fbaa351c67ab3b9c9b11c6b907223b30ee0c61b097c25a641fa7767fb0"
+    },
+    {
+      "slide": 21,
+      "png_sha256": "539395b46477266e33a1f451f7288640d1f16a5942294b6b958cb1fd2bd558eb"
+    },
+    {
+      "slide": 22,
+      "png_sha256": "6b7da00a8aabcb3960c6ef2e048e01b6e1aff5abda9b00f737ca8e638ef2dfb8"
+    },
+    {
+      "slide": 23,
+      "png_sha256": "37cca7df5567b0a91816c823af61c807c605c5c279ba699a9d0ab641e1b37e08"
+    },
+    {
+      "slide": 24,
+      "png_sha256": "73b21154f7b879fdeba36b7ecb44532d14f9552a6183dac05e648f28d6fc25c1"
+    },
+    {
+      "slide": 25,
+      "png_sha256": "1f3577389f7be1f032feef91a3a342a5ad27b947af566943e85ba172dfe87dbc"
+    },
+    {
+      "slide": 26,
+      "png_sha256": "c6d40d718aa6f8bc2e487c6e6c1c3b1047d95c229fe601655232e17687826cf9"
+    }
+  ],
+  "render_count_matches": true
 }
