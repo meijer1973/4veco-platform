@@ -48,5 +48,17 @@
   "intermediate_failure_and_resolution": [
     "First rerun exposed an import of the full scope adapter from the small lane classifier, which broke a minimal CI fixture. cc678ddd makes the exact six support-path classification self-contained; 51 focused tests passed.",
     "An overlapping navigation-generation command dirtied archive/index.json while the first rerun inspected scope. Its task-generated files were restored; no test suppression. The clean second full run passed."
-  ]
+  ],
+  "late_y1_verification": {
+    "full_wrapper_rerun": "Not passing proof: the run overlapped creation of untracked/staged final review reports and exited with a changed landing-input error. The strict tracked-scope fallback could not certify that changing workspace. No implementation changed in response.",
+    "clean_current_lesson_fallback": {
+      "command": "verifyCurrentLesson() from build-scripts/ci/check-y1-product-evidence.js",
+      "platform": "eeaa364f8de5118d4aa788bccd916556db85c308",
+      "lessons": "4cf51ddbd033c26fe99a3c7f44bba6174a5024c4",
+      "exit_code": 0,
+      "scope_verified": true,
+      "historical_capture_attests_current_retired_pages": false
+    },
+    "publication_requirement": "Full wrapper at the final published pair remains a separate remote-CI check."
+  }
 }
