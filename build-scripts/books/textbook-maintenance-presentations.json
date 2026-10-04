@@ -1,0 +1,61 @@
+{
+  "revision": "textbook-maintenance-20261004",
+  "lesson_base": "99c5eb4127bebfd9892b19dc0d35789d05b6344b",
+  "source_commit": "0356afb6cac2dd43adbe9f63b872aaf423efc914",
+  "prior_source_commit": "e734532a42b27732ac25ce990fc9448b12309d28",
+  "presentations": [
+    {
+      "id": "411",
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.1 Toetreding, uittreding en langetermijnevenwicht – presentatie.pptx",
+      "notes": [
+        {
+          "old": "Ongewijzigde oorspronkelijke bronfiguur uit het boek",
+          "new": "Actuele bronfiguur uit het boek, begrensd op de capaciteit van de oorspronkelijke groep bedrijven"
+        },
+        {
+          "old": "De bronfiguur trekt de beginlijn door boven de afgeleide totale capaciteit van 25.000 kg. Dat verlengde deel is geen uitvoerbaar aanbod bij 100 bedrijven met elk maximaal 250 kg. Hier eindigt de beginlijn bij die grens; beide benodigde evenwichten liggen eronder.",
+          "new": "De beginlijn in het boek en deze presentatie eindigt bij de totale capaciteit van 25.000 kg voor de oorspronkelijke 100 bedrijven. Beide benodigde evenwichten liggen eronder. Na toetreding geldt de gezamenlijke capaciteit van de nieuwe groep bedrijven."
+        }
+      ],
+      "image": {
+        "slide": 18,
+        "source": "edities/books34-v3/books/book-4/chapters/4.1/_assets/3.2.3_target.svg",
+        "width": 1800,
+        "height": 830
+      }
+    },
+    {
+      "id": "432",
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.2 Arbeidsaanbod, participatie en evenwicht – presentatie.pptx",
+      "notes": [
+        {
+          "old": "De boekfiguur trekt de lijnen daarbuiten door; gebruik uitsluitend 4≤w≤24.",
+          "new": "De boekfiguur en deze presentatie gebruiken uitsluitend het geldige bereik 4≤w≤24."
+        }
+      ]
+    },
+    {
+      "id": "435",
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.5 Gemengde opgaven arbeidsmarkt – presentatie.pptx",
+      "notes": [
+        {
+          "old": "Oorspronkelijke figuur 24 ongewijzigd overgenomen uit mixed_base.svg.",
+          "new": "Actuele figuur 24 overgenomen uit mixed_base.svg, met lijnstukken binnen de modelgrenzen."
+        },
+        {
+          "old": "Bronbevinding 435-S2: de boekfiguur tekent lijnen door buiten de expliciete geldigheid €4–€24. Benoem daarom de geldigheidsgrens op de dia. De latere bewerkbare antwoordgrafiek toont alleen de geldige lijnstukken en markeert beide evenwichten. De bron zelf is niet gewijzigd.",
+          "new": "De boekfiguur en de latere bewerkbare antwoordgrafiek gebruiken hetzelfde geldige bereik €4–€24. Benoem de modelgrenzen op de dia; de antwoordgrafiek markeert daarna beide evenwichten."
+        },
+        {
+          "old": "De oorspronkelijke boekfiguur loopt buiten het modelbereik door (bevinding 435-S2). Deze bewerkbare antwoordgrafiek beperkt de lijnstukken expliciet tot €4–€24, behoudt de functies en gebruikt dezelfde hoeveelheidsgrens 280 en loongrens 32.",
+          "new": "De boekfiguur en deze bewerkbare antwoordgrafiek beperken de lijnstukken tot €4–€24. Functies en assenschalen blijven gelijk: de hoeveelheidsgrens is 280 en de loongrens 32."
+        }
+      ],
+      "image": {
+        "slide": 8,
+        "source": "edities/books34-v3/books/book-4/chapters/4.3/_assets/mixed_base.svg",
+        "width": 2200
+      }
+    }
+  ]
+}

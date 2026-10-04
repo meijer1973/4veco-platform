@@ -180,6 +180,8 @@ function verifyNotation(lessons, {root = ROOT, requireTracked = false} = {}) {
 
 function verify(options = {}) {
   const editionRoot=options.root || ROOT;
+  if(fs.existsSync(path.join(editionRoot,'build-scripts/books/textbook-maintenance-contract.json')))
+    return require('../books/textbook-maintenance-revision').verify({...options,root:editionRoot});
   if(fs.existsSync(path.join(editionRoot,'build-scripts/books/book1-classroom-scope.js')))
     return require('../books/book1-classroom-scope').verify({...options,root:editionRoot});
   if(fs.existsSync(path.join(editionRoot,'build-scripts/books/book1-second-edition-pin.json')))

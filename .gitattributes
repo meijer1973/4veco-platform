@@ -289,3 +289,28 @@ reports/review-gates/classroom-presentations-book1-second-edition-20261003/scope
 reports/review-gates/classroom-presentations-book1-second-edition-20261003/serialized-teaching-review.md -text
 reports/review-gates/classroom-presentations-book1-second-edition-20261003/technical-local-checks.json -text
 reports/review-gates/classroom-presentations-book1-second-edition-20261003/textbook-follow-up.md -text
+
+# Exact-byte inputs for the bounded October textbook maintenance.
+build-scripts/books/rebuild_textbook_maintenance.py -text
+build-scripts/books/repair_textbook_maintenance_presentations.py -text
+build-scripts/books/test_textbook_maintenance.py -text
+build-scripts/books/textbook-maintenance-contract.json -text
+build-scripts/books/textbook-maintenance-lesson-head.txt -text
+build-scripts/books/textbook-maintenance-presentations.json -text
+build-scripts/books/textbook-maintenance-revision.js -text
+build-scripts/books/textbook-maintenance-revision.test.js -text
+build-scripts/books/verify_textbook_maintenance.py -text
+build-scripts/books/verify_textbook_maintenance_presentations.py -text
+build-scripts/content/book-4/presentation-411.manifest.json -text
+build-scripts/content/book-4/presentation-411.mjs -text
+build-scripts/content/book-4/presentation-432.manifest.json -text
+build-scripts/content/book-4/presentation-432.mjs -text
+build-scripts/content/book-4/presentation-435.manifest.json -text
+build-scripts/content/book-4/presentation-435.mjs -text
+docs/workflows/textbook-maintenance-20261004.md -text
+reports/review-gates/textbook-maintenance-20261004/independent-review.md -text
+reports/review-gates/textbook-maintenance-20261004/pin.json -text
+reports/review-gates/textbook-maintenance-20261004/presentations.json -text
+reports/review-gates/textbook-maintenance-20261004/render-comparison.json -text
+reports/review-gates/textbook-maintenance-20261004/revision.json -text
+reports/review-gates/textbook-maintenance-20261004/saved-book-checks.json -text

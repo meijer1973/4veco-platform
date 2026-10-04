@@ -1,14 +1,12 @@
-name: paired-book1-second-edition-ci
+name: paired-textbook-maintenance-ci
 
 on:
   pull_request:
     paths:
-      - 'build-scripts/books/book1*'
-      - 'build-scripts/books/book1_second_edition/**'
-      - 'build-scripts/references/book1-edition*'
-      - 'references/owned/book1-second-edition-2026/**'
-      - 'reports/review-gates/book1-second-edition-20261002/**'
-      - '.github/workflows/paired-book1-second-edition-ci.yml'
+      - 'build-scripts/books/*textbook_maintenance*'
+      - 'build-scripts/books/textbook-maintenance*'
+      - 'reports/review-gates/textbook-maintenance-20261004/**'
+      - '.github/workflows/paired-textbook-maintenance-ci.yml'
   workflow_dispatch:
     inputs:
       lesson_sha:
@@ -20,9 +18,9 @@ permissions:
   contents: read
 
 jobs:
-  verify-book1-pair:
+  verify-maintenance-pair:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v6
         with:
@@ -38,7 +36,7 @@ jobs:
         run: |
           node - <<'JS'
           const fs=require('fs');
-          const sha=process.env.REQUESTED||fs.readFileSync('build-scripts/books/book1-second-edition-lesson-head.txt','utf8').trim();
+          const sha=process.env.REQUESTED||fs.readFileSync('build-scripts/books/textbook-maintenance-lesson-head.txt','utf8').trim();
           if(!/^[a-f0-9]{40}$/.test(sha))throw Error('Exact lesson SHA required');
           fs.appendFileSync(process.env.GITHUB_OUTPUT,'sha='+sha+'\n');
           JS
@@ -55,53 +53,47 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
-      - name: Install verification tools
+      - name: Install verification dependencies
         working-directory: 4veco-platform
         run: |
           npm ci
           sudo apt-get update -qq
           sudo apt-get install -y -qq libpango-1.0-0 libpangoft2-1.0-0 libcairo2
           python -m pip install -r build-scripts/books/book1_second_edition/requirements.txt
-      - name: Authenticate exact pair and independent review
+      - name: Authenticate current pair and independent review
         working-directory: 4veco-platform
         env:
           PLATFORM_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
           LESSON_SHA: ${{ steps.pair.outputs.sha }}
         run: |
-          mkdir -p ../book1-ci-evidence
+          mkdir -p ../maintenance-ci-evidence
           node - <<'JS'
           const fs=require('fs'),{execFileSync}=require('child_process');
           const head=cwd=>execFileSync('git',['rev-parse','HEAD'],{cwd,encoding:'utf8'}).trim();
           if(head('.')!==process.env.PLATFORM_SHA||head('../4veco-lessen')!==process.env.LESSON_SHA)throw Error('Unexpected checkout pair');
-          const result=require('./build-scripts/maintenance/check-classroom-edition').verify({requireTracked:true,requireReview:true});
-          if(!result.passed||!['book1-second-edition-20261002','book1-second-edition-classroom-20261003'].includes(result.lesson_state))throw Error(JSON.stringify(result));
-          fs.writeFileSync('../book1-ci-evidence/pair.json',JSON.stringify({platform:head('.'),lessons:head('../4veco-lessen'),verification:result},null,2)+'\n');
+          const r=require('./build-scripts/books/textbook-maintenance-revision');
+          const result=r.verify({requireTracked:true,requireReview:true});
+          if(!result.passed||result.lesson_state!==r.REVISION)throw Error(JSON.stringify(result));
+          fs.writeFileSync('../maintenance-ci-evidence/pair.json',JSON.stringify({platform:head('.'),lessons:head('../4veco-lessen'),verification:result},null,2)+'\n');
           JS
-      - name: Verify saved sources, history, targets and all PDF navigation
+      - name: Check saved publications, native presentations and regressions
         working-directory: 4veco-platform
         env:
-          BOOK1_EDITION_ROOT: ../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026
           PYTHONDONTWRITEBYTECODE: '1'
+          BOOK1_EDITION_ROOT: ../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026
         run: |
-          # A later bounded repair has its own current-pair workflow. Keep this
-          # named historical Book 1 run checking its original projection and
-          # review snapshots with the actual accepted tools, not today's hashes.
-          if test -f build-scripts/books/textbook-maintenance-contract.json; then
-            git worktree add --detach ../book1-historical-tools 7f924b57767838557b2dff96243e0b3ad7cbff2c
-            ln -s "$PWD/node_modules" ../book1-historical-tools/node_modules
-            cd ../book1-historical-tools
-          fi
-          python -m unittest discover -s build-scripts/books/book1_second_edition -p test_book1.py -v
-          python build-scripts/books/book1_second_edition/verify.py --lessons ../4veco-lessen --report ../book1-ci-evidence/bounded.json
+          python -m unittest discover -s build-scripts/books -p test_textbook_maintenance.py -v
+          python build-scripts/books/verify_textbook_maintenance.py --lessons ../4veco-lessen --report ../maintenance-ci-evidence/books.json
+          python build-scripts/books/verify_textbook_maintenance_presentations.py --lessons ../4veco-lessen
           python build-scripts/books/book1_second_edition/targets.py --lessons ../4veco-lessen --check
           python build-scripts/books/book1_second_edition/review_snapshots.py --lessons ../4veco-lessen --check
           python build-scripts/books/book1_second_edition/book/validate_book.py
-          cp "$BOOK1_EDITION_ROOT/qa/validation.json" ../book1-ci-evidence/assembly.json
-          npx jest build-scripts/references/book1-edition.test.js build-scripts/books/book1-second-edition-revision.test.js build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js --runInBand
+          cp "$BOOK1_EDITION_ROOT/qa/validation.json" ../maintenance-ci-evidence/book1-assembly.json
+          npx jest build-scripts/books/textbook-maintenance-revision.test.js build-scripts/books/book1-classroom-scope.test.js build-scripts/ci/check-y1-product-evidence.test.js --runInBand
           git diff --check
           git -C ../4veco-lessen diff --check
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: book1-second-edition-pair-evidence
-          path: book1-ci-evidence/
+          name: textbook-maintenance-pair-evidence
+          path: maintenance-ci-evidence/

@@ -10,9 +10,16 @@ const content = Buffer.from('sealed historical evidence\n');
 const binding = { path: 'capture.json', sha256: crypto.createHash('sha256').update(content).digest('hex') };
 const record = { successor_sources: [{ ...binding, path: 'verifier.js' }], retained_historical_artifacts: [binding] };
 
-describe('explicit current lesson retirement does not inherit historical screenshots', () => {
+describe.each(['classroom', 'maintenance'])('%s successor does not inherit historical screenshots', lane => {
   const classroom = require('../books/book1-classroom-scope');
+  const maintenance = require('../books/textbook-maintenance-revision');
+  const successor = lane === 'maintenance' ? maintenance : classroom;
   const previousLessonRoot = current.LESSON_ROOT;
+  beforeEach(() => {
+    const exists = fs.existsSync;
+    jest.spyOn(fs, 'existsSync').mockImplementation(file =>
+      file === path.join(current.ROOT, maintenance.CONTRACT) ? lane === 'maintenance' : exists(file));
+  });
   afterEach(() => { current.LESSON_ROOT = previousLessonRoot; jest.restoreAllMocks(); });
   test('bounded retirement authenticates the accepted predecessor and reports changed current pages honestly', () => {
     current.LESSON_ROOT = current.ROOT; // Git fixture for the current SHA lookup only.
@@ -21,24 +28,30 @@ describe('explicit current lesson retirement does not inherit historical screens
       if (ref === classroom.LESSON_BASE) return {rendered_inputs_unchanged: true};
       throw Error('unexpected historical ref');
     });
-    jest.spyOn(classroom, 'verify').mockReturnValue({passed: true, removals: ['retired.pptx'], entry_changes: ['old-index.html']});
+    jest.spyOn(successor, 'verify').mockReturnValue({passed: true, removals: ['retired.pptx'], entry_changes: ['old-index.html']});
     const result = verifyCurrentLesson();
     expect(result.historical_capture_attests_current_retired_pages).toBe(false);
     expect(result.rendered_inputs_unchanged).toBe(false);
     expect(result.new_capture_performed).toBe(false);
     expect(result.retirement_successor.scope_verified).toBe(true);
+    expect(result.retirement_successor.textbook_and_historical_evidence_unchanged).toBe(lane === 'classroom');
+    if (lane === 'maintenance') {
+      expect(result.retirement_successor.textbook_successor).toBe(maintenance.REVISION);
+      expect(result.retirement_successor.historical_evidence_unchanged).toBe(true);
+    }
+    expect(successor.verify).toHaveBeenCalledWith({root: current.ROOT, lessons: current.LESSON_ROOT, requireTracked: true});
     expect(current.validateLesson).toHaveBeenCalledWith(classroom.LESSON_BASE);
   });
   test.each([{passed: false}, {passed: true, removals: [], entry_changes: []}])('an unrelated failure never becomes historical acceptance %#', scope => {
     jest.spyOn(current, 'validateLesson').mockImplementation(() => {throw Error('unexpected current bytes');});
-    jest.spyOn(classroom, 'verify').mockReturnValue(scope);
+    jest.spyOn(successor, 'verify').mockReturnValue(scope);
     expect(verifyCurrentLesson).toThrow('unexpected current bytes');
     expect(current.validateLesson).toHaveBeenCalledTimes(1);
   });
   test('reports the rejected scope without concealing the original historical mismatch', () => {
     const original = Error('retired lesson routes');
     jest.spyOn(current, 'validateLesson').mockImplementation(() => {throw original;});
-    jest.spyOn(classroom, 'verify').mockReturnValue({passed: false,
+    jest.spyOn(successor, 'verify').mockReturnValue({passed: false,
       failures: ['Stale staged classroom bytes: builder.js']});
     try { verifyCurrentLesson(); throw Error('expected rejection'); }
     catch (error) {

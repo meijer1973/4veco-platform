@@ -206,7 +206,7 @@ overview('Zelfstandig werken',4);
  text(s,'Lₐ = −40 + 10w',1150,383,390,76,35,{bold:true,color:C.green});
  text(s,'Markeer E met loon en hoeveelheid.',1150,527,390,145,38,{bold:true});
  text(s,'€ 4 ≤ w ≤ € 24',1150,719,390,73,34);
- notes(s,'130','Basisgrafiek bij de volledige opgave16. Dezelfde functies, eenheden en assenschaal als de boekfiguur. De getekende lijnstukken zijn begrensd op het expliciete geldigheidsgebied uit bronB. De boekfiguur trekt de lijnen daarbuiten door; gebruik uitsluitend4≤w≤24. Dit verandert geen brongegeven of gevraagde bewerking. Laat het berekende punt en hulplijnen eerst door leerlingen aanwijzen, zonder oplossing te tonen.','Hoe zet je straks een berekend loon en aantal personen in deze grafiek?','De functies zijn buiten het aangegeven domein geen geldige voorspelling.','Begin nu de antwoorden bij bron A.');
+ notes(s,'130','Basisgrafiek bij de volledige opgave16. Dezelfde functies, eenheden en assenschaal als de boekfiguur. De getekende lijnstukken zijn begrensd op het expliciete geldigheidsgebied uit bronB. De boekfiguur en deze presentatie gebruiken uitsluitend het geldige bereik 4≤w≤24. Dit verandert geen brongegeven of gevraagde bewerking. Laat het berekende punt en hulplijnen eerst door leerlingen aanwijzen, zonder oplossing te tonen.','Hoe zet je straks een berekend loon en aantal personen in deze grafiek?','De functies zijn buiten het aangegeven domein geen geldige voorspelling.','Begin nu de antwoorden bij bron A.');
 }
 {
  const s=slide('Opgave 16a · De beroepsbevolking','target-answer');
