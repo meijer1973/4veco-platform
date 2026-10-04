@@ -1,0 +1,650 @@
+{
+  "revision": "textbook-maintenance-20261004",
+  "platform_base": "7f924b57767838557b2dff96243e0b3ad7cbff2c",
+  "lessons_base": "99c5eb4127bebfd9892b19dc0d35789d05b6344b",
+  "note": "Freshness only. Independent review, target authority and human merge approval are distinct.",
+  "platform": [
+    {
+      "path": ".gitattributes",
+      "bytes": 21779,
+      "sha256": "89373b4f3bab360df0073777fc5ddf56091ec083ce4c911a4b16771770ebf1d4"
+    },
+    {
+      "path": ".github/workflows/paired-book1-second-edition-ci.yml",
+      "bytes": 5160,
+      "sha256": "1934954b6b563feb298ed7dee5e2fee8e23663505e3fb0ad9936478953d8c72d"
+    },
+    {
+      "path": ".github/workflows/paired-textbook-maintenance-ci.yml",
+      "bytes": 4592,
+      "sha256": "75d4a61f23dbc4c572887fd925a604fe3a505fe59aa3dff4b4cd9734e57deb55"
+    },
+    {
+      "path": "build-scripts/books/book1-classroom-scope.test.js",
+      "bytes": 9831,
+      "sha256": "b013971a2b3098d5c18e2770a005ab80ff19685a3e16b0600c95ccd69b474c3b"
+    },
+    {
+      "path": "build-scripts/books/rebuild_textbook_maintenance.py",
+      "bytes": 3154,
+      "sha256": "fe740838da33b7c3279dba89cb09b6a63f41a798d5a0a01f0fd03bbd35575cbf"
+    },
+    {
+      "path": "build-scripts/books/repair_textbook_maintenance_presentations.py",
+      "bytes": 6039,
+      "sha256": "0b0a589fbeb760b02a06d76ba8cd2d8226a9a38bc0dfbbc87143401f4a143ff4"
+    },
+    {
+      "path": "build-scripts/books/test_textbook_maintenance.py",
+      "bytes": 2367,
+      "sha256": "4fb2153d5454e83bce34db5be89249ea285ed1b0ddf26d5ebe95a6b00c9634c8"
+    },
+    {
+      "path": "build-scripts/books/textbook-maintenance-contract.json",
+      "bytes": 12804,
+      "sha256": "bc406a40d5f934266ef4233573fa763259fdb620df15574ed4b52c8e1b9e97bf"
+    },
+    {
+      "path": "build-scripts/books/textbook-maintenance-presentations.json",
+      "bytes": 3461,
+      "sha256": "10905e7353d037ca836ef0e01d602653dc3a13f36eb5782fcaaf34ad6fc7a199"
+    },
+    {
+      "path": "build-scripts/books/textbook-maintenance-revision.js",
+      "bytes": 10387,
+      "sha256": "b6cf02750f0517c2aae4fe04d03a14b41ef1bf3631cef06fe7847739669232ab"
+    },
+    {
+      "path": "build-scripts/books/textbook-maintenance-revision.test.js",
+      "bytes": 3775,
+      "sha256": "08dfe51ff07863b226692050f84d0c70d71ca037a02bb9e268b284de43131d84"
+    },
+    {
+      "path": "build-scripts/books/verify_textbook_maintenance.py",
+      "bytes": 10219,
+      "sha256": "d8c7a0b34e4314808f98ac5c38769cfa223ebcf7720d3fddd64dc7cf4d52ce0c"
+    },
+    {
+      "path": "build-scripts/books/verify_textbook_maintenance_presentations.py",
+      "bytes": 2071,
+      "sha256": "9f22e924ab19836a55014059d4bb9bc8bac1596da4f7dd571d7d48052dbd9de8"
+    },
+    {
+      "path": "build-scripts/ci/check-y1-product-evidence.js",
+      "bytes": 8991,
+      "sha256": "e639b1b472889a43a4cdae1c4b13c6a257c2f4f78ff8e959d27d935a26eb5367"
+    },
+    {
+      "path": "build-scripts/ci/check-y1-product-evidence.test.js",
+      "bytes": 16521,
+      "sha256": "acbaf81f78cf490f19707117e9cea7a32617d1989eb4ea991a8109fe55b18684"
+    },
+    {
+      "path": "build-scripts/content/book-4/presentation-411.manifest.json",
+      "bytes": 6491,
+      "sha256": "2e4e584844d6e0fc4dbf7ab779fc6fbc5ff9a1bf9e68adf98c87d4f3c09267fb"
+    },
+    {
+      "path": "build-scripts/content/book-4/presentation-411.mjs",
+      "bytes": 36192,
+      "sha256": "c20df13be1f7e9adebce41448759c91ac56cd6940503fe20341e0491b141add7"
+    },
+    {
+      "path": "build-scripts/content/book-4/presentation-432.manifest.json",
+      "bytes": 7644,
+      "sha256": "b932bfe143cc9dc8682c045e7aa190e6927ca94f37421ca5f747693e0b1e00ab"
+    },
+    {
+      "path": "build-scripts/content/book-4/presentation-432.mjs",
+      "bytes": 31400,
+      "sha256": "a84bd0b1c1862e810367c69dba45e090e8883b7f5e84acab33f1d31d27a5ad6b"
+    },
+    {
+      "path": "build-scripts/content/book-4/presentation-435.manifest.json",
+      "bytes": 7181,
+      "sha256": "50bf06a855e1214217bdc36297816f2a1ed49a888fe71232565c9640bfac1b39"
+    },
+    {
+      "path": "build-scripts/content/book-4/presentation-435.mjs",
+      "bytes": 29339,
+      "sha256": "a680db032e9778859faf4f12e53ecac66e6ec28648042d65673821394de37dde"
+    },
+    {
+      "path": "build-scripts/maintenance/check-books34-v3-import.js",
+      "bytes": 9074,
+      "sha256": "743e26016ed021ccbe01f9b0daadb8cde96f4d4cad8d9b0de12e09fffce186e3"
+    },
+    {
+      "path": "build-scripts/maintenance/check-classroom-edition.js",
+      "bytes": 14608,
+      "sha256": "b108f85db30bc1042a6704825dacb412645a377fd045acf6784d6c7c3865333a"
+    },
+    {
+      "path": "build-scripts/maintenance/check-classroom-notation.test.js",
+      "bytes": 10840,
+      "sha256": "42765f87e98f43945e6ec72d7f080686641f35b6afedb09fb47860020b67e2b5"
+    },
+    {
+      "path": "docs/workflows/book1-second-edition.md",
+      "bytes": 3613,
+      "sha256": "214569fa5870060cdfffea04fb5937b3fcf97485fee35082198af01e7eda7b32"
+    },
+    {
+      "path": "docs/workflows/textbook-maintenance-20261004.md",
+      "bytes": 8967,
+      "sha256": "7e3ae21a9a78c7e3d2b56cfa68f39af721b835507fd6489c627b27966879e276"
+    },
+    {
+      "path": "references/owned/book1-second-edition-2026/targets.json",
+      "bytes": 146217,
+      "sha256": "5e05caf8b1a7e1936f343517f128e00cc915f57cc22d3a2ffe91e1cda2f889cc"
+    },
+    {
+      "path": "reports/review-gates/textbook-maintenance-20261004/presentations.json",
+      "bytes": 5411,
+      "sha256": "00e80d99a390e9e43457c71eea477ca157cc5dda2768f9b37b6dbe2179ec5462"
+    },
+    {
+      "path": "reports/review-gates/textbook-maintenance-20261004/render-comparison.json",
+      "bytes": 60218,
+      "sha256": "ef09a1fd24cbc834c153fef7b9ae0d1ea61b531ccc07b0af5a048ca4d343f12c"
+    },
+    {
+      "path": "reports/review-gates/textbook-maintenance-20261004/saved-book-checks.json",
+      "bytes": 9132,
+      "sha256": "dc3596d930eb3d1fd13fdded09fc935cced4bdc2ebe7a7c9dae510f94edf88d7"
+    }
+  ],
+  "lessons": [
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/Boek 1 Grondslagen, vraag en aanbod – boek.pdf",
+      "bytes": 4083648,
+      "sha256": "e86fb5ecce7973b760e1cc8b1b1ad44cf52d2bc573c032a73ebc19d63e83c260"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/Boek 1 Grondslagen, vraag en aanbod – boek.md",
+      "bytes": 240345,
+      "sha256": "05c50b7d70bf1c1bffb2d91f4d1c83069293d84d989f25f0f987c6c180ecfe81"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/README.md",
+      "bytes": 4716,
+      "sha256": "afed60676749fafa6acb72093bb259a06fdf6c627db1353c3a01314d2178d4b6"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/boek/Boek_1_Compleet_Docenteninformatie_Tweede_editie.pdf",
+      "bytes": 239287,
+      "sha256": "734dd4253d8389902ea10207d3029fe6bcd9f0d07a1d59c3f0258cb0ca35b0f6"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/boek/Boek_1_Compleet_Tweede_editie.pdf",
+      "bytes": 4083648,
+      "sha256": "e86fb5ecce7973b760e1cc8b1b1ad44cf52d2bc573c032a73ebc19d63e83c260"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H2/QA/validation.json",
+      "bytes": 119815,
+      "sha256": "4a35b30146a3ae707b4a1f37718046d9321745994dce12ad274a2f002831a69a"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/1.3 Aanbod en marktevenwicht – hoofdstuk.md",
+      "bytes": 73765,
+      "sha256": "b83d167f31aee5725dcfd7e52082b68139961f1a85d286962632f7c5d9b4e66e"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/1.3.3 Verschuivingen en nieuw evenwicht – paragraaf.md",
+      "bytes": 18699,
+      "sha256": "8c3d46243338d1d2ecb24985433862075b46b022119b5d8e1130b6427d7f2f4c"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/Docenteninformatie.md",
+      "bytes": 21064,
+      "sha256": "a8e1bf2df94b5d9aa0b2a9aeaf36f87b0b73fd0d465d67660920b71ddf4ac2e7"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H3/QA/lesson_minutes.json",
+      "bytes": 2269,
+      "sha256": "754f3fb5340464651cecdf33b9cc7ad1a09725f4067c1ddbc640f2dc088834b9"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H3/Boek_1_H3_Aanbod_en_marktevenwicht_Tweede_editie.html",
+      "bytes": 4715249,
+      "sha256": "19f15de39924200ae57345f4cab929ade27f6c64e700782f67e3bb71dece4b27"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H3/Boek_1_H3_Aanbod_en_marktevenwicht_Tweede_editie.pdf",
+      "bytes": 304597,
+      "sha256": "e4399837544f028bfde97d7268aef0e59a117982536e782fece99be21312d9fb"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H3/Boek_1_H3_Docenteninformatie_Tweede_editie.html",
+      "bytes": 4452485,
+      "sha256": "36bc87f4f5d8620cb49ea1c7db6b3642ab75f941836caf821bdf319eb02be306"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/hoofdstukken/H3/Boek_1_H3_Docenteninformatie_Tweede_editie.pdf",
+      "bytes": 56750,
+      "sha256": "05f0aae5c5e0e0fb39f0efa5e4fa44867d1afaaf452cde2d5bf084ff7cbeed7d"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H3/1.3.3 Verschuivingen en nieuw evenwicht – paragraaf.pdf",
+      "bytes": 208893,
+      "sha256": "246accce009fff1f2326d19d438b122152d29e1b1408ee9232dd58f3aa093c02"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/input_hashes.json",
+      "bytes": 1407,
+      "sha256": "375a1a2d42d56af4f66e9f7926b51de6a5ff5c3e5c351f5c11f20246f1025093"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.1.1-textbook-review-manifest.json",
+      "bytes": 27994,
+      "sha256": "cb1371dcb6e593ab29864bc8381a4cf03ada6d849e6f06e6478b9da2b854fe8e"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.1.2-textbook-review-manifest.json",
+      "bytes": 27996,
+      "sha256": "7965195dbc80a0e2908eaed8840c4181d3f0aa7ee811140b0c58eb82b1d57882"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.1.3-textbook-review-manifest.json",
+      "bytes": 27976,
+      "sha256": "43c646528527b1025e25dc9d39f413b95c1a5efdf9301086b9ffe2ccb77d2f17"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.1.4-textbook-review-manifest.json",
+      "bytes": 27944,
+      "sha256": "7ba6cbd59696b2e51703bc52a8f350d5e2a97288f30948ad27ffe382f66dadfd"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.2.1-textbook-review-manifest.json",
+      "bytes": 30125,
+      "sha256": "b542d7adc5498a06acefac4cf68a92fab0c32c19d07e2043666fa9e4d339642e"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.2.2-textbook-review-manifest.json",
+      "bytes": 30071,
+      "sha256": "95d275f38ebef23aad54fb73fb49104cc1b5e8bc456cc4dd38226ab634b3e984"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.2.3-textbook-review-manifest.json",
+      "bytes": 30121,
+      "sha256": "0da50d311655aa198a3d1b12945b180b519862b3a3c7c91df4c9a10dd58d3d64"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.2.4-textbook-review-manifest.json",
+      "bytes": 30075,
+      "sha256": "9972c7cee1e07d5b19cb812dec9719ec8fbd9e83a98bb36773ae127ac2616328"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.3.1-textbook-review-manifest.json",
+      "bytes": 32316,
+      "sha256": "4fd3f000e01e4303c276c8e2270a6fa57e9a1e26623211c1c93c8820c2963e3c"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.3.2-textbook-review-manifest.json",
+      "bytes": 32296,
+      "sha256": "2bd3048132af5c040e5737308e3a45d9427134e704f3cca267ec056010d4404b"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.3.3-textbook-review-manifest.json",
+      "bytes": 32334,
+      "sha256": "d34f044b9e1a1f46a2e8a0187440e6c6b3f7ef47e2f7d8536b3f149537352be7"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/reviews/1.3.4-textbook-review-manifest.json",
+      "bytes": 32298,
+      "sha256": "5cd59429afd6200bddc59a686627e2df662fec416aba3a2c1e1469accc41e107"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/source_hashes.json",
+      "bytes": 26345,
+      "sha256": "b91e941484a35fed68c0e6fea991d4991cbc4fbb0bc4a6de562bf5c252074766"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/validation.json",
+      "bytes": 144103,
+      "sha256": "6aab5cc216ad5af316f635f4a29f03961cbd0e58266e954fe7361c2d2fd50517"
+    },
+    {
+      "path": "edities/books34-v3/README.md",
+      "bytes": 5815,
+      "sha256": "a5826fecdd8faefa8925a9426d00df941ed9ee45042f9cdf82728b2a6bfa1c6f"
+    },
+    {
+      "path": "edities/books34-v3/SOURCE_OWNERSHIP.md",
+      "bytes": 4860,
+      "sha256": "422be4c35379fc358fc616a52bd8f6ca272d8d6b66bbd26bec23d3f10da64f2a"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/back.md",
+      "bytes": 10611,
+      "sha256": "db6a2b3e35d57bd373745d7dc38e1b9e523212b6b487498c6bd9c975b100c8bd"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/output/back.html",
+      "bytes": 16269,
+      "sha256": "fc436c440e898dd194d160dee100dcb482a817e7854fcf1ad736eba0c6260a25"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/output/back.pdf",
+      "bytes": 40650,
+      "sha256": "987e13e4d49d70b1d00ce4708416241d502102989112f380f04a0da52b79994c"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/3.3.1 manuscript.md",
+      "bytes": 18482,
+      "sha256": "697839c11d13e85e81cc486efc6ebbdab08f5cc4f878e837d9c396af5610451c"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/output/Boek_3_H3_Leerling_v3.html",
+      "bytes": 260308,
+      "sha256": "c7eeacce2e69d22eff9d1f27f64ce9a789e27db34c6f09da4c6d276fde48c1fa"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/output/Boek_3_H3_Leerling_v3.pdf",
+      "bytes": 286912,
+      "sha256": "a0a46ef40a45792530252b013bd25d103f4036585b8994bab6b6ef3cc2b59cb4"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/output/Boek_3_H3_Leerling_v3_bookpages.html",
+      "bytes": 260349,
+      "sha256": "75b844c49e4efc64ce2096fc641be6126a45bb6f1b5e5467b69c51751804cd1a"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/output/Boek_3_H3_Leerling_v3_bookpages.pdf",
+      "bytes": 287037,
+      "sha256": "3191326d89debf685c459b1457e3e5959011424126ca910ee18c070a64b8f576"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.1-leerling-v3.pdf",
+      "bytes": 178425,
+      "sha256": "8c7fb63d564282ec9539d6fe0fe0900b2a6ba08573de14e9d44c5285c161aaa6"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.2-leerling-v3.pdf",
+      "bytes": 183930,
+      "sha256": "664f8b105ad2c43d5262ae772e4826cf518e9a32de489e270533238203698271"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.3-leerling-v3.pdf",
+      "bytes": 186126,
+      "sha256": "c720f9f25ae7c5cbf7009ac69efb9d3ed02d6834142193729b717dfbc9a2881f"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.4-leerling-v3.pdf",
+      "bytes": 174044,
+      "sha256": "3cbcec2e7bb1d0688532fb2bb535efd9ecf96657f57884cdab9fef666774dcfd"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+      "bytes": 4386185,
+      "sha256": "509041d0419f93cb707e259b493b30d19bd27f7a0ec784e2586e052bdb9ca54f"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/_assets/3.2.3_ans_2.svg",
+      "bytes": 59334,
+      "sha256": "351135a14b4cef063d462fa88387f12c57b84635838ee50cf9602b898a9cf911"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/_assets/3.2.3_target.svg",
+      "bytes": 42918,
+      "sha256": "30200d658307fb7da85b85bc7e62a5486e6d6ac5d09d9c69b4467a4d30a44646"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/output/Boek_4_H1_Antwoorden_v3.html",
+      "bytes": 784201,
+      "sha256": "30882a9b9f40724cf24919882e8976866ba742ef8498ca6bae20c514a7779ecd"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/output/Boek_4_H1_Antwoorden_v3.pdf",
+      "bytes": 297205,
+      "sha256": "7abd6a2821deb8bc5487ef61f55ed90e1f78b0cfdc8433a3c5f5271718811f7e"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/output/Boek_4_H1_Leerling_v3.html",
+      "bytes": 1445587,
+      "sha256": "a81022d1465ac1d38dcf64c1a1f860dcefb3a977a791719cad0514e4ac205591"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/output/Boek_4_H1_Leerling_v3.pdf",
+      "bytes": 589404,
+      "sha256": "557ef0d5559fdfac4295031c0f4ff9e42e41d606c74e4d1dc45ebceccc1fb9df"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/output/Boek_4_H1_Leerling_v3_bookpages.html",
+      "bytes": 1445621,
+      "sha256": "afa5cc57285fb06ec5cca1d9e33c1f30a0ed2ec4976a929a093111eb5548611d"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/output/Boek_4_H1_Leerling_v3_bookpages.pdf",
+      "bytes": 589417,
+      "sha256": "f9b20b02f913a31d9fd474004d74a71362e97077d414fd76eb17cc6ee2462c35"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.1 Toetreding, uittreding en langetermijnevenwicht – presentatie.pdf",
+      "bytes": 313937,
+      "sha256": "641292c62f3ff271ea3e1f1286345312f85ddf2120509732160e1ef4d842ee41"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.1 Toetreding, uittreding en langetermijnevenwicht – presentatie.pptx",
+      "bytes": 282354,
+      "sha256": "080cb88063b1572bfd86ee84aafe7de338f9b63c6f6eab51953b9446a0abacc9"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.1-leerling-v3.pdf",
+      "bytes": 273573,
+      "sha256": "0950d635faf176e2f923ef9168c15959346753bf970436ddfd13a2c14f03baf7"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/Antwoorden.md",
+      "bytes": 33850,
+      "sha256": "d98abc0feee38b289bf1a5189684bd4d58e70a7ba9dbaecc3724272e4d2c5013"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/eq_target.png",
+      "bytes": 61321,
+      "sha256": "f84d9d0dc31c8f40ecc373ecbf344073c957c8af09c2559103c40163aaf42a92"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/eq_target.svg",
+      "bytes": 5120,
+      "sha256": "77659af656b7cbd6a52f747bcef101b164515441bea8b3a417a0f379cb58aef5"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/eq_target_answer.png",
+      "bytes": 67000,
+      "sha256": "2b1da738256917c539401f2bf6bd9e356de7fb1e20a83401124cdea5ac6aa120"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/eq_target_answer.svg",
+      "bytes": 5853,
+      "sha256": "8b44887648c0c8687916c2332a5d25ca866eb914e5a706df6c8c29cc956e65a9"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/floor_target.png",
+      "bytes": 62406,
+      "sha256": "796293f8f38b053b79e99b8ac5ed32994294b4d8b0234d3149a0402636b870c8"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/floor_target.svg",
+      "bytes": 5113,
+      "sha256": "b24fb3346d0cfd11f9717e9efd393d268da06a6f4c27386a6663548bb750e498"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/floor_target_answer.png",
+      "bytes": 74472,
+      "sha256": "750fffdc6e3d262193b2635864168221637d377fd99c5f8ca769ad9c15e5c0cd"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/floor_target_answer.svg",
+      "bytes": 6838,
+      "sha256": "8034cbe168894662117eb0cd5ffc6fdb9535b549b1128fd251bd64d90ab39f89"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/mixed_answer.png",
+      "bytes": 76972,
+      "sha256": "fdf57dd9c5da22df7152fd5ab8c67116d969e94730466300ab82b36ce5339405"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/mixed_answer.svg",
+      "bytes": 7487,
+      "sha256": "c24da19d24deb7e5bd8297d39909a196dab7ef94b4ad7be5555f3000e5153d62"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/mixed_base.png",
+      "bytes": 70047,
+      "sha256": "ee7932b3ac4282069aceef31dbbc4e96b6c1b51a6ab979c04c0f425da7796b37"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/mixed_base.svg",
+      "bytes": 6046,
+      "sha256": "d43639ee84b1255bbd7a266851ec606a3a82d0b6daad047bfb182a8f76aa353c"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/shift_target.png",
+      "bytes": 75022,
+      "sha256": "3ce77b59c3857f23b8054a48497a0d3529bcf0f0a8a32b08904cf870afbcd5c3"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/shift_target.svg",
+      "bytes": 5287,
+      "sha256": "ffdc5e879e34e68329917f60144c9fb8a4b93f11df42357bfedc0598524f7a32"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/shift_target_answer.png",
+      "bytes": 78737,
+      "sha256": "3f9fa017cf1724bbd96777569015e95e3f06690ee80a5dff5ab568be392985a9"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/shift_target_answer.svg",
+      "bytes": 6728,
+      "sha256": "b4d9a6debb045a04df339c8ce24a4d5b01772f913f935ac92df17719909b07d6"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/output/Boek_4_H3_Antwoorden_v3.html",
+      "bytes": 109113,
+      "sha256": "51c0f17f81e08c58833b47dd3990d789abe1af43e6431f2180dc3b5506961924"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/output/Boek_4_H3_Antwoorden_v3.pdf",
+      "bytes": 122437,
+      "sha256": "f7d77ec7933a4c6f2d4db63bcf2ba0470fdb499160e823c661acad2703adc9de"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/output/Boek_4_H3_Leerling_v3.html",
+      "bytes": 238441,
+      "sha256": "c316ebac689a99ece70ba80db55f6501fa27d39a0ff2ba9961c87a7474518f34"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/output/Boek_4_H3_Leerling_v3.pdf",
+      "bytes": 286135,
+      "sha256": "5f50665b83f25588881cd0fcdd4bf747c7851ab7474b12ca1e0333eca96f9c4e"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/output/Boek_4_H3_Leerling_v3_bookpages.html",
+      "bytes": 238484,
+      "sha256": "0f0c104bac7cfef2626595aef690372bc45924154f81891354f6a3e6386c1564"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/output/Boek_4_H3_Leerling_v3_bookpages.pdf",
+      "bytes": 286237,
+      "sha256": "1bd1d6ec56cc13663f339bd884c3a8cb4d57bf29fe676468d93f1fb82e9b638c"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.2 Arbeidsaanbod, participatie en evenwicht – presentatie.pptx",
+      "bytes": 124557,
+      "sha256": "2608c5ca3ee182faac0dd8a61f084bae1aaeac6787e12dda63d14928820ac14c"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.2-leerling-v3.pdf",
+      "bytes": 134304,
+      "sha256": "1b182f6e2f011436d64ef3c9bf030965fa37c73a621b9f4d28dc294f09c1b966"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.3-leerling-v3.pdf",
+      "bytes": 137947,
+      "sha256": "4620d0123cacfed8c07237de3c5097e46a3c52475c46d975562a5934fb284973"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.4-leerling-v3.pdf",
+      "bytes": 135286,
+      "sha256": "4f1a0476420aee9c79047c2c1c5b957355bda8cbc275926ff73b57a9054dc0a3"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.5 Gemengde opgaven arbeidsmarkt – presentatie.pdf",
+      "bytes": 288702,
+      "sha256": "1bbc0e849ecf3c004c50345acafe0e0522626772a7fdd004c5be2f9bbd4f06db"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.5 Gemengde opgaven arbeidsmarkt – presentatie.pptx",
+      "bytes": 195708,
+      "sha256": "e70bee888ded9b9ea1681fac37a62e3db4fadc8ca3bafc4a88fdcc2f23ed42b2"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.5-leerling-v3.pdf",
+      "bytes": 125282,
+      "sha256": "cf1b483d3c1160c6f884db6857919ec7e05448109c03016f96453f180a46ab72"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_Antwoorden_v3.pdf",
+      "bytes": 623851,
+      "sha256": "1e127e889f364f161c1a5d69f253261b6db8a733935aa23f446d9dcd754afda1"
+    },
+    {
+      "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+      "bytes": 4774387,
+      "sha256": "f753081d9fcaa92577242b71404fd46303de500e0f93389a6d7e4ff6c5d76736"
+    },
+    {
+      "path": "edities/books34-v3/checks/target-consumer-preview.html",
+      "bytes": 573131,
+      "sha256": "74be50e93c29f5593e77265c8e4d7fbd1674138fb261285dbc13b0dd969e2870"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/course-target-exercises-books34-v3.json",
+      "bytes": 485866,
+      "sha256": "d6d67c69731c3e1c5a25864d9c0304854a827b4df8d5c7d5e3c817d76e3666ec"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-catalog-v3.csv",
+      "bytes": 7250,
+      "sha256": "14b400ab4faf346f6ec8e06c666a99d853dffba65622d769344a2329dd352b4d"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.3.1.json",
+      "bytes": 15847,
+      "sha256": "8600a0612cb66b19535cba6cdaf502c5ead1805de3ea09542d39091987e84842"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.1.1.json",
+      "bytes": 14830,
+      "sha256": "a08616d29382e0c2ef6d189ee1012fafed9faef5752d22b1fafbe2961e371dd2"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.3.1.json",
+      "bytes": 12713,
+      "sha256": "580517fe467caa53b8940633e1f9f4e7e06969227e741ce0366190a901c2a573"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.3.2.json",
+      "bytes": 11686,
+      "sha256": "222fa16df1f2ff477c805ae4e6d71de3b4d7cce5ea3100ea4ab1bb825fcdec9d"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.3.3.json",
+      "bytes": 12066,
+      "sha256": "db441e2dbadb2f7e5a3de98d355a8c2655f8e47a34ee94a3cd40da1c5573da2e"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.3.4.json",
+      "bytes": 12421,
+      "sha256": "ef97bf14ed468d7959eae7fa1283897a23b2de35f86373e96b2a54b6dc9149bd"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.3.5.json",
+      "bytes": 19339,
+      "sha256": "6c3ca287fa72d42db5178ceeb3b03c0750f42b5174c0197836838321cb95b52a"
+    }
+  ]
+}

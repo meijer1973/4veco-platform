@@ -52,7 +52,9 @@ test.each(['accepted', 'changed rule', 'hidden index', 'hidden HEAD'])('checkout
   const f = fixture();
   try {
     const before = execFileSync('git', ['show', r.PLATFORM_BASE + ':.gitattributes'], {cwd: r.ROOT});
-    const after = fs.readFileSync(path.join(r.ROOT, '.gitattributes'));
+    // Test this historical adapter's accepted policy, not a later successor's
+    // separately reviewed append. The new gate tests its own finite rules.
+    const after = execFileSync('git', ['show', '7f924b57767838557b2dff96243e0b3ad7cbff2c:.gitattributes'], {cwd: r.ROOT});
     f.write('.gitattributes', before); f.git('add', '.'); f.git('commit', '-qm', 'existing attribute policy');
     const base = f.git('rev-parse', 'HEAD');
     f.write('.gitattributes', kind === 'accepted' ? after : Buffer.concat([after, Buffer.from('*.html -text\n')]));

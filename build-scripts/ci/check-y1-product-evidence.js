@@ -70,7 +70,10 @@ function verifyCurrentLesson() {
   try { return current.validateLesson('HEAD'); }
   catch (original) {
     const classroom = require('../books/book1-classroom-scope');
-    const scope = classroom.verify({root: current.ROOT, lessons: current.LESSON_ROOT, requireTracked: true});
+    const fs = require('fs'), path = require('path');
+    const maintenance = fs.existsSync(path.join(current.ROOT,'build-scripts/books/textbook-maintenance-contract.json'))
+      ? require('../books/textbook-maintenance-revision') : null;
+    const scope = (maintenance || classroom).verify({root: current.ROOT, lessons: current.LESSON_ROOT, requireTracked: true});
     // A historical capture does not attest today's deliberately retired links.
     // Admit only the separately checked finite retirement, then retain the
     // unchanged original proof at the accepted pre-retirement lesson commit.
@@ -84,7 +87,8 @@ function verifyCurrentLesson() {
       rendered_inputs_unchanged: false, new_capture_performed: false,
       retirement_successor: {revision: classroom.REVISION, lesson_base: classroom.LESSON_BASE,
         removals: scope.removals, entry_changes: scope.entry_changes,
-        scope_verified: true, textbook_and_historical_evidence_unchanged: true}};
+        scope_verified: true, textbook_and_historical_evidence_unchanged: !maintenance,
+        ...(maintenance ? {textbook_successor: maintenance.REVISION, historical_evidence_unchanged: true} : {})}};
   }
 }
 

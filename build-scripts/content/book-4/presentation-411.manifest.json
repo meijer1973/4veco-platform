@@ -4,7 +4,7 @@
   "displayTitle": "Hoe lang blijft de winst?",
   "type": "theory",
   "edition": "books34-v3",
-  "lessonCommit": "e734532a42b27732ac25ce990fc9448b12309d28",
+  "lessonCommit": "0356afb6cac2dd43adbe9f63b872aaf423efc914",
   "platformBaseline": "d1cb1fe3db3a70dc86682491771ed68a67f45526",
   "sources": [
     {
@@ -21,7 +21,7 @@
     },
     {
       "path": "edities/books34-v3/books/book-4/chapters/4.1/_assets/3.2.3_target.svg",
-      "sha256": "fb7c50589eac2ff53e993d5a044c72539d2a4b42f89e02f122e85406f71a84a7"
+      "sha256": "30200d658307fb7da85b85bc7e62a5486e6d6ac5d09d9c69b4467a4d30a44646"
     },
     {
       "path": "edities/books34-v3/books/book-3/chapters/3.2/3.2.2 manuscript.md",
@@ -33,11 +33,11 @@
     },
     {
       "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
-      "sha256": "4ad8548531dccde67507b3c1d94f8c2e7a050156423cab2f41174bd4d1ba8d39"
+      "sha256": "509041d0419f93cb707e259b493b30d19bd27f7a0ec784e2586e052bdb9ca54f"
     },
     {
       "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
-      "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+      "sha256": "f753081d9fcaa92577242b71404fd46303de500e0f93389a6d7e4ff6c5d76736"
     }
   ],
   "assignment": {

@@ -147,13 +147,14 @@ test('standalone CLI publishes partitionInventory before a receipt requires it r
   const original = require.resolve('./check-books34-v3-import');
   const script = `const Module=require('module');const adapter=${JSON.stringify(adapter)};
     // Isolate the historical adapter under test from an installed successor.
-    const fs=require('fs'),exists=fs.existsSync;fs.existsSync=file=>String(file).endsWith('book1-second-edition-pin.json')?false:exists(file);
+    const fs=require('fs'),exists=fs.existsSync;fs.existsSync=file=>['book1-second-edition-pin.json','book1-classroom-scope.js','textbook-maintenance-contract.json'].some(name=>String(file).endsWith(name))?false:exists(file);
     require.cache[${JSON.stringify(original)}]={exports:{verify(){
       const api=require(adapter); if(typeof api.partitionInventory!=='function') throw Error('Incomplete recursive export');
-      return {passed:true,failures:[]};}}};
+      return {passed:true,failures:[],recursiveExportVerified:true};}}};
     const main=new Module(adapter);main.filename=adapter;main.paths=Module._nodeModulePaths(require('path').dirname(adapter));
     require.cache[adapter]=main;process.mainModule=main;main.load(adapter);`;
   const result = spawnSync(process.execPath, ['-e', script], {encoding: 'utf8'});
   expect(result.status).toBe(0); expect(JSON.parse(result.stdout).passed).toBe(true);
+  expect(JSON.parse(result.stdout).recursiveExportVerified).toBe(true);
   expect(result.stderr).not.toMatch(/circular|Incomplete recursive export/);
 });

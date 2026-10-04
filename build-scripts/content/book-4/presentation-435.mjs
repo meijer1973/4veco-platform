@@ -12,7 +12,7 @@ const {root:ROOT,build:BUILD,final:FINAL}=await workspace('435');
 const p=Presentation.create({slideSize:{width:1600,height:900}});
 const C={ink:'#183247',blue:'#17658A',green:'#20665B',orange:'#A94D16',paper:'#FFFFFF',pale:'#EFF4F7',muted:'#445B6B',line:'#C6D2DB'};
 const FONT='Arial', title='4.3.5 Gemengde opgaven arbeidsmarkt';
-const commit='e734532a42b27732ac25ce990fc9448b12309d28';
+const commit='0356afb6cac2dd43adbe9f63b872aaf423efc914';
 const source=`https://github.com/meijer1973/4veco-lessen/blob/${commit}/edities/books34-v3/books/book-4/`;
 const chapter=path.resolve(PLATFORM,'../4veco-lessen/edities/books34-v3/books/book-4/chapters/4.3');
 const tables=[],charts=[],slides=[],overviews=[];
@@ -137,7 +137,7 @@ overview('Zelfstandig werken',4);
  const bytes=await sharp(await fs.readFile(path.join(chapter,'_assets/mixed_base.svg'))).resize({width:2200}).png().toBuffer();
  s.images.add({blob:bytes,contentType:'image/png',alt:'Oorspronkelijke basisgrafiek bij opgave 40 met oude arbeidsvraag, nieuwe arbeidsvraag en arbeidsaanbod, zonder gemarkeerde evenwichten.',fit:'contain',position:{left:175,top:178,width:1250,height:608}});
  text(s,'Markeer beide evenwichten. Gebruik alleen het bereik € 4 ≤ w ≤ € 24.',60,793,1480,43,30,{bold:true});
- notes(s,targetNotes,'Oorspronkelijke figuur 24 ongewijzigd overgenomen uit mixed_base.svg. De verschuiving is gegeven; de evenwichten zijn nog niet gemarkeerd. Bronbevinding 435-S2: de boekfiguur tekent lijnen door buiten de expliciete geldigheid €4–€24. Benoem daarom de geldigheidsgrens op de dia. De latere bewerkbare antwoordgrafiek toont alleen de geldige lijnstukken en markeert beide evenwichten. De bron zelf is niet gewijzigd.','Welke as toont personen en welke euro per uur?','De getekende verlenging van een lijn verruimt de geldigheid van het model niet.','Lees het afzonderlijke bedrijf in bron C.');
+ notes(s,targetNotes,'Actuele figuur 24 overgenomen uit mixed_base.svg, met lijnstukken binnen de modelgrenzen. De verschuiving is gegeven; de evenwichten zijn nog niet gemarkeerd. De boekfiguur en de latere bewerkbare antwoordgrafiek gebruiken hetzelfde geldige bereik €4–€24. Benoem de modelgrenzen op de dia; de antwoordgrafiek markeert daarna beide evenwichten.','Welke as toont personen en welke euro per uur?','De getekende verlenging van een lijn verruimt de geldigheid van het model niet.','Lees het afzonderlijke bedrijf in bron C.');
 }
 {
  const s=slide('Opgave 40 · Bron C: een nieuw werkproces',targetPage);
@@ -194,7 +194,7 @@ overview('Zelfstandig werken',4);
  text(s,'Horizontaal: personen\nVerticaal: € per uur',1165,490,375,113,29);
  text(s,'Lₐ blijft gelijk.\nBeide punten liggen\nop de aanbodlijn.',1165,661,375,129,32,{bold:true,color:C.green});
  await fs.writeFile(path.join(BUILD,'graph-data.json'),JSON.stringify(data,null,2));
- notes(s,targetNotes,'E0=(100,14), E1=(120,16), dus horizontaal personen en verticaal euro per uur. Geleidelijnen sluiten op de punten aan. De juiste hoeveelheid en prijs volgen uit de berekeningen. De oorspronkelijke boekfiguur loopt buiten het modelbereik door (bevinding 435-S2). Deze bewerkbare antwoordgrafiek beperkt de lijnstukken expliciet tot €4–€24, behoudt de functies en gebruikt dezelfde hoeveelheidsgrens 280 en loongrens 32.','Waarom blijft de aanbodlijn op dezelfde plaats?','Een ander snijpunt op de aanbodlijn betekent geen verschuiving van die lijn.','Verklaar welke verandering de oorzaak is.');
+ notes(s,targetNotes,'E0=(100,14), E1=(120,16), dus horizontaal personen en verticaal euro per uur. Geleidelijnen sluiten op de punten aan. De juiste hoeveelheid en prijs volgen uit de berekeningen. De boekfiguur en deze bewerkbare antwoordgrafiek beperken de lijnstukken tot €4–€24. Functies en assenschalen blijven gelijk: de hoeveelheidsgrens is 280 en de loongrens 32.','Waarom blijft de aanbodlijn op dezelfde plaats?','Een ander snijpunt op de aanbodlijn betekent geen verschuiving van die lijn.','Verklaar welke verandering de oorzaak is.');
 }
 {
  const s=slide('Opgave 40d · Extra orders verschuiven de vraag',targetPage);

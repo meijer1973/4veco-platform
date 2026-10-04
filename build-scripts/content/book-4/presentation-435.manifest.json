@@ -4,7 +4,7 @@
   "type": "gemengde opgaven",
   "edition": "books34-v3",
   "platformCommit": "7e258769e98cf4c7bee46fe3a7fe8673b3696aba",
-  "lessonCommit": "e734532a42b27732ac25ce990fc9448b12309d28",
+  "lessonCommit": "0356afb6cac2dd43adbe9f63b872aaf423efc914",
   "sources": [
     {
       "path": "edities/books34-v3/books/book-4/chapters/4.3/4.3.1 manuscript.md",
@@ -28,7 +28,7 @@
     },
     {
       "path": "edities/books34-v3/books/book-4/chapters/4.3/Antwoorden.md",
-      "sha256": "e602feba92be7245eeb349393f6787a2eac044e8c12a956712f3ac507f658f9f"
+      "sha256": "d98abc0feee38b289bf1a5189684bd4d58e70a7ba9dbaecc3724272e4d2c5013"
     },
     {
       "path": "edities/books34-v3/books/book-4/chapters/4.3/Docenteninformatie.md",
@@ -36,15 +36,15 @@
     },
     {
       "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/mixed_base.svg",
-      "sha256": "ab75cd59d5c8a2707969a9f81601ca664893d9d3efe87dd646de65fbad6660da"
+      "sha256": "d43639ee84b1255bbd7a266851ec606a3a82d0b6daad047bfb182a8f76aa353c"
     },
     {
       "path": "edities/books34-v3/books/book-4/chapters/4.3/_assets/mixed_answer.svg",
-      "sha256": "1b90f1f8d32ad60bf22982a15b483325d7a50c99ef005570d42c20447eb4ccf9"
+      "sha256": "c24da19d24deb7e5bd8297d39909a196dab7ef94b4ad7be5555f3000e5153d62"
     },
     {
       "path": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
-      "sha256": "55a0ca01eac545ac409ee1d8d371659a80282eaaa8ae65d346d5fd40a15fb7f8"
+      "sha256": "f753081d9fcaa92577242b71404fd46303de500e0f93389a6d7e4ff6c5d76736"
     }
   ],
   "assignment": {

@@ -11,7 +11,7 @@ const {root:ROOT,build:BUILD,final:FINAL}=await workspace('411');
 const p=Presentation.create({slideSize:{width:1600,height:900}});
 const C={ink:'#183247',blue:'#17658A',green:'#20665B',orange:'#A94D16',purple:'#7B2D8E',red:'#A93232',muted:'#445B6B',line:'#C6D2DB',pale:'#EFF4F7'};
 const FONT='Arial', title='Toetreding, uittreding en langetermijnevenwicht';
-const lessonCommit='e734532a42b27732ac25ce990fc9448b12309d28';
+const lessonCommit='0356afb6cac2dd43adbe9f63b872aaf423efc914';
 const base=`https://github.com/meijer1973/4veco-lessen/blob/${lessonCommit}/edities/books34-v3/books/`;
 const lessonRoot=path.resolve(PLATFORM,'../4veco-lessen/edities/books34-v3/books');
 const tables=[],charts=[],slides=[],overviewSlides=[],graphContracts=[];
@@ -211,7 +211,7 @@ const targetFooter='§4.1.1 · Doelopgave 7 · Boekpagina 14';
  const require=createRequire(path.join(process.env.RUNTIME_NODE_MODULES,'_loader.cjs'));
  const blob=await require('sharp')(path.join(lessonRoot,'book-4/chapters/4.1/_assets/3.2.3_target.svg')).resize(1800,830).png().toBuffer();
  s.images.add({blob,contentType:'image/png',alt:'Oorspronkelijke figuur 7: markt met V en A en één onderneming met MK, GTK en P = GO = MO.',fit:'contain',position:{left:60,top:184,width:1480,height:620}});
- notes(s,'14','Ongewijzigde oorspronkelijke bronfiguur uit het boek, met historische assetnaam 3.2.3_target.svg. Alle labels, schalen en gegevens blijven zichtbaar. Links staat Q in duizend kg per week; rechts q in kg per week. Geef hier nog geen oplossingen.','Welke grootheid staat op elke horizontale as?','Een waarde 15 links betekent 15.000 kg, niet 15 kg.','Toon eerst deelvragen a, b en c.');
+ notes(s,'14','Actuele bronfiguur uit het boek, begrensd op de capaciteit van de oorspronkelijke groep bedrijven, met historische assetnaam 3.2.3_target.svg. Alle labels, schalen en gegevens blijven zichtbaar. Links staat Q in duizend kg per week; rechts q in kg per week. Geef hier nog geen oplossingen.','Welke grootheid staat op elke horizontale as?','Een waarde 15 links betekent 15.000 kg, niet 15 kg.','Toon eerst deelvragen a, b en c.');
 }
 {
  const s=slide('Opgave 7 · Deelvragen a, b en c',targetFooter);
@@ -248,7 +248,7 @@ const targetFooter='§4.1.1 · Doelopgave 7 · Boekpagina 14';
  text(s,'Minimum GTK = € 8',1070,221,465,62,36,{bold:true,color:C.blue});
  text(s,'A₁ ligt rechts van A₀\nE₁ ligt op V bij P = 8\n\nQ: 15.000 naar\n     20.000 kg per week',1070,350,465,267,34);
  text(s,'Vraaglijn V blijft staan.',1070,732,465,82,34,{bold:true});
- notes(s,'14','Lees de langetermijnprijs 8 uit het gegeven minimum GTK. Teken A₁ door het punt op V met P=8: Q=20 duizend kg/week. De oorspronkelijke grafiek bevat V: P=16−0,4Q en A₀: P=4+0,4Q. Met MK=0,04q+4 geeft dit 100 bedrijven aanvankelijk. In de eindsituatie zijn 200 bedrijven met q=100 nodig. Hun gezamenlijke aanbod is A₁: P=4+0,2Q, op het getoonde domein binnen capaciteit. Deze afleiding controleert de getekende lijn; leerlingen hoeven het aantal bedrijven niet te berekenen. Bij P=8 neemt aanbod toe van 10.000 naar 20.000 kg. De bronfiguur trekt de beginlijn door boven de afgeleide totale capaciteit van 25.000 kg. Dat verlengde deel is geen uitvoerbaar aanbod bij 100 bedrijven met elk maximaal 250 kg. Hier eindigt de beginlijn bij die grens; beide benodigde evenwichten liggen eronder.','Waar op de bestaande vraaglijn moet E₁ liggen?','A₁ parallel verschuiven zou hier bij identieke bedrijven de aggregatie veranderen. Kies de getoonde kosten-consistente lijn.','Neem de prijs 8 over in de rechtergrafiek.');
+ notes(s,'14','Lees de langetermijnprijs 8 uit het gegeven minimum GTK. Teken A₁ door het punt op V met P=8: Q=20 duizend kg/week. De oorspronkelijke grafiek bevat V: P=16−0,4Q en A₀: P=4+0,4Q. Met MK=0,04q+4 geeft dit 100 bedrijven aanvankelijk. In de eindsituatie zijn 200 bedrijven met q=100 nodig. Hun gezamenlijke aanbod is A₁: P=4+0,2Q, op het getoonde domein binnen capaciteit. Deze afleiding controleert de getekende lijn; leerlingen hoeven het aantal bedrijven niet te berekenen. Bij P=8 neemt aanbod toe van 10.000 naar 20.000 kg. De beginlijn in het boek en deze presentatie eindigt bij de totale capaciteit van 25.000 kg voor de oorspronkelijke 100 bedrijven. Beide benodigde evenwichten liggen eronder. Na toetreding geldt de gezamenlijke capaciteit van de nieuwe groep bedrijven.','Waar op de bestaande vraaglijn moet E₁ liggen?','A₁ parallel verschuiven zou hier bij identieke bedrijven de aggregatie veranderen. Kies de getoonde kosten-consistente lijn.','Neem de prijs 8 over in de rechtergrafiek.');
 }
 {
  const s=slide('Opgave 7c–d · De onderneming volgt de prijs',targetFooter);firm(s,{target:true,prices:[10,8],chosen:100,showMin:true});

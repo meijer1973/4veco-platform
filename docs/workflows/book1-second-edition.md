@@ -27,13 +27,22 @@ must select the second-edition projection and must not reuse the old Book 1
 The ordinary independent Part A review covers all twelve paragraphs, preparation,
 answers and saved output, with current file hashes. Rendering/CI and content
 review remain separate from official exam alignment, measured lesson timing and
-Part B acceptance. Existing presentations/quiz models are explicitly first edition;
-this task does not silently rewrite or approve them for the new edition.
+Part B acceptance. Twelve second-edition classroom presentations were delivered
+separately through platform #304 and lessons #100. They live beside the current
+paragraph PDFs. Legacy quiz/web models remain first-edition material; a matching
+paragraph number does not establish compatibility.
 
 The bounded successor verifier preserves the accepted Book 2–4 repository pair
 and historical evidence. It permits only the reviewed Book 1 edition, its finite
 entry changes and the corresponding platform integration. A refreshed manifest
 alone cannot confer a new independent PASS. No merge is authorized by this page.
+
+The [October maintenance revision](textbook-maintenance-20261004.md) adds one
+worked combination example before exercise 27 in §1.3.3. It preserves exercise
+content, pagination and the facing source/question spreads. Its separate
+successor validates the new Book 1/3/4 bytes while retaining the edition and
+presentation receipts as historical evidence. Do not refresh those old receipts
+to accept a new manuscript.
 
 The trusted bundle workflow regenerates four advisory agent-navigation indexes
 and checks their freshness before validation. Only in that named compatibility
