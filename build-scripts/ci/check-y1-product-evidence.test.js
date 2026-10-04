@@ -1,4 +1,8 @@
 const crypto = require('crypto');
+const fs = require('fs');
+const os = require('os');
+const path = require('path');
+const yaml = require('js-yaml');
 const { execFileSync } = require('child_process');
 const current = require('../sprints/check-y1-golden-rollout-wave-1-current');
 const historical = require('../sprints/check-y1-golden-rollout-wave-1');
@@ -32,6 +36,52 @@ describe('explicit current lesson retirement does not inherit historical screens
     expect(verifyCurrentLesson).toThrow('unexpected current bytes');
     expect(current.validateLesson).toHaveBeenCalledTimes(1);
   });
+  test('reports the rejected scope without concealing the original historical mismatch', () => {
+    const original = Error('retired lesson routes');
+    jest.spyOn(current, 'validateLesson').mockImplementation(() => {throw original;});
+    jest.spyOn(classroom, 'verify').mockReturnValue({passed: false,
+      failures: ['Stale staged classroom bytes: builder.js']});
+    try { verifyCurrentLesson(); throw Error('expected rejection'); }
+    catch (error) {
+      expect(error.cause).toBe(original);
+      expect(error.message).toContain('retired lesson routes');
+      expect(error.message).toContain('Stale staged classroom bytes: builder.js');
+    }
+    expect(current.validateLesson).toHaveBeenCalledTimes(1);
+  });
+});
+
+test('the live workflow disables checkout conversion before either repository is materialized', () => {
+  const workflow = yaml.load(fs.readFileSync(path.join(current.ROOT, '.github/workflows/platform-ci.yml'), 'utf8'));
+  const steps = workflow.jobs['validate-platform'].steps;
+  const configure = steps.findIndex(step => step.run === 'git config --global core.autocrlf false');
+  const checkouts = steps.flatMap((step, index) => step.uses?.startsWith('actions/checkout@') ? [index] : []);
+  expect(configure).toBeGreaterThanOrEqual(0);
+  expect(checkouts).toHaveLength(2);
+  expect(checkouts.every(index => configure < index)).toBe(true);
+  expect(steps[configure]['working-directory']).toBe('${{ github.workspace }}');
+
+  // Exercise the actual setup command in an isolated Git configuration, starting
+  // with the Windows conversion default. Source hashes must survive checkout.
+  const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'y1-checkout-bytes-'));
+  const env = {...process.env, GIT_CONFIG_GLOBAL: path.join(temp, 'global.gitconfig'), GIT_CONFIG_NOSYSTEM: '1'};
+  const git = (cwd, args) => execFileSync('git', args, {cwd, env, stdio: ['ignore', 'pipe', 'pipe']});
+  try {
+    const source = path.join(temp, 'source'), checkout = path.join(temp, 'checkout');
+    fs.mkdirSync(source);
+    git(temp, ['config', '--global', 'core.autocrlf', 'true']);
+    git(source, ['init', '-q']);
+    git(source, ['config', 'user.name', 'Checkout fixture']);
+    git(source, ['config', 'user.email', 'fixture@example.invalid']);
+    const content = Buffer.from('exact\nsource\n');
+    fs.writeFileSync(path.join(source, 'builder.js'), content);
+    git(source, ['-c', 'core.autocrlf=false', 'add', 'builder.js']);
+    git(source, ['commit', '-qm', 'LF source']);
+    git(temp, steps[configure].run.split(' ').slice(1));
+    git(temp, ['clone', '--quiet', '--no-hardlinks', source, checkout]);
+    expect(fs.readFileSync(path.join(checkout, 'builder.js'))).toEqual(content);
+    expect(git(checkout, ['show', 'HEAD:builder.js'])).toEqual(content);
+  } finally { fs.rmSync(temp, {recursive: true, force: true}); }
 });
 test('current product validation verifies every bound source and historical artifact', () => {
   const seen = [];

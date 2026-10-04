@@ -74,7 +74,9 @@ function verifyCurrentLesson() {
     // A historical capture does not attest today's deliberately retired links.
     // Admit only the separately checked finite retirement, then retain the
     // unchanged original proof at the accepted pre-retirement lesson commit.
-    if (!scope.passed || !scope.removals.length || !scope.entry_changes.length) throw original;
+    if (!scope.passed) throw new Error(`${original.message}; classroom retirement verification failed: ${
+      scope.failures?.join('; ') || 'no scope diagnostic returned'}`, {cause: original});
+    if (!scope.removals.length || !scope.entry_changes.length) throw original;
     const baseline = current.validateLesson(classroom.LESSON_BASE);
     return {historical_lesson_validation: baseline, current_lesson_sha: execFileSync('git', ['rev-parse', 'HEAD'],
       {cwd: current.LESSON_ROOT, encoding: 'utf8'}).trim(),

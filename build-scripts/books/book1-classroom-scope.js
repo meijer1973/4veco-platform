@@ -29,6 +29,7 @@ const P_EXACT = new Set([
   'build-scripts/sprints/capture-presentation-v2-pptx-derivative-proof.js',
   'build-scripts/platform/check-paragraph-landing-v2.js',
   '.github/workflows/paired-book1-second-edition-ci.yml', '.github/workflows/paired-books34-signed-ci.yml', '.github/workflows/paired-exercise-route-ci.yml',
+  '.github/workflows/platform-ci.yml',
   'engines/tests/presentation-v2-111-production.test.js', 'engines/tests/presentation-v2-113-graph-transfer.test.js',
   'engines/tests/presentatie-html-shape.test.js', 'engines/tests/l1-5d-v2-mobile-fixes.test.js', 'engines/tests/l1-6r-dual-coding.test.js',
   'build-scripts/content/book-1/historical-presentation-test-fixtures.js',
