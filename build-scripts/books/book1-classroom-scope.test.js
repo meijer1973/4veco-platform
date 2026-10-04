@@ -48,6 +48,23 @@ test('finite deletion/link retirement and actual paragraph additions pass, stage
   }finally{f.close();}
 });
 
+test.each(['accepted', 'changed rule', 'hidden index', 'hidden HEAD'])('checkout attribute policy is byte-bounded: %s', kind => {
+  const f = fixture();
+  try {
+    const before = execFileSync('git', ['show', r.PLATFORM_BASE + ':.gitattributes'], {cwd: r.ROOT});
+    const after = fs.readFileSync(path.join(r.ROOT, '.gitattributes'));
+    f.write('.gitattributes', before); f.git('add', '.'); f.git('commit', '-qm', 'existing attribute policy');
+    const base = f.git('rev-parse', 'HEAD');
+    f.write('.gitattributes', kind === 'accepted' ? after : Buffer.concat([after, Buffer.from('*.html -text\n')]));
+    f.git('add', '.');
+    if (kind === 'hidden HEAD') f.git('commit', '-qm', 'unreviewed attribute rule');
+    if (kind.startsWith('hidden')) f.write('.gitattributes', after);
+    const check = () => r.verifyChanges({root: f.root, base, repo: 'platform', requireTracked: false});
+    if (kind === 'accepted') expect(check().platform_changes).toEqual(['.gitattributes']);
+    else expect(check).toThrow(/Unreviewed/);
+  } finally { f.close(); }
+});
+
 test.each(['source','receipt','archive','other book','compensated index','compensated HEAD','compensated link index','compensated link HEAD','extra link','retired replacement'])('%s mutation fails',kind=>{
   const f=fixture();try{
     if(kind==='source')f.write(f.source,'mutated textbook');

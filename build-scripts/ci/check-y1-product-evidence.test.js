@@ -1,4 +1,7 @@
 const crypto = require('crypto');
+const fs = require('fs');
+const os = require('os');
+const path = require('path');
 const { execFileSync } = require('child_process');
 const current = require('../sprints/check-y1-golden-rollout-wave-1-current');
 const historical = require('../sprints/check-y1-golden-rollout-wave-1');
@@ -32,7 +35,54 @@ describe('explicit current lesson retirement does not inherit historical screens
     expect(verifyCurrentLesson).toThrow('unexpected current bytes');
     expect(current.validateLesson).toHaveBeenCalledTimes(1);
   });
+  test('reports the rejected scope without concealing the original historical mismatch', () => {
+    const original = Error('retired lesson routes');
+    jest.spyOn(current, 'validateLesson').mockImplementation(() => {throw original;});
+    jest.spyOn(classroom, 'verify').mockReturnValue({passed: false,
+      failures: ['Stale staged classroom bytes: builder.js']});
+    try { verifyCurrentLesson(); throw Error('expected rejection'); }
+    catch (error) {
+      expect(error.cause).toBe(original);
+      expect(error.message).toContain('retired lesson routes');
+      expect(error.message).toContain('Stale staged classroom bytes: builder.js');
+    }
+    expect(current.validateLesson).toHaveBeenCalledTimes(1);
+  });
 });
+
+test('classroom attributes retain exact bytes under Windows checkout defaults without changing legacy fixtures', () => {
+  const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'y1-checkout-bytes-'));
+  const env = {...process.env, GIT_CONFIG_GLOBAL: path.join(temp, 'global.gitconfig'), GIT_CONFIG_NOSYSTEM: '1'};
+  const git = (cwd, args) => execFileSync('git', args, {cwd, env, stdio: ['ignore', 'pipe', 'pipe']});
+  try {
+    const source = path.join(temp, 'source'), checkout = path.join(temp, 'checkout');
+    fs.mkdirSync(source);
+    git(temp, ['config', '--global', 'core.autocrlf', 'true']);
+    git(source, ['init', '-q']);
+    git(source, ['config', 'user.name', 'Checkout fixture']);
+    git(source, ['config', 'user.email', 'fixture@example.invalid']);
+    fs.copyFileSync(path.join(current.ROOT, '.gitattributes'), path.join(source, '.gitattributes'));
+    const content = Buffer.from('exact\nsource\n');
+    const classroomFiles = ['build-scripts/books/book1-classroom-scope.js',
+      'build-scripts/content/book-1/presentation-111.mjs',
+      'reports/review-gates/classroom-presentations-book1-second-edition-20261003/review.md'];
+    const legacy = 'build-scripts/sprints/fixtures/golden-ticket-reference.html';
+    for (const file of [...classroomFiles, legacy]) {
+      fs.mkdirSync(path.dirname(path.join(source, file)), {recursive: true});
+      fs.writeFileSync(path.join(source, file), content);
+    }
+    git(source, ['-c', 'core.autocrlf=false', 'add', '.']);
+    git(source, ['commit', '-qm', 'LF source']);
+    git(temp, ['clone', '--quiet', '--no-hardlinks', source, checkout]);
+    for (const file of classroomFiles) {
+      expect(fs.readFileSync(path.join(checkout, file))).toEqual(content);
+      expect(git(checkout, ['show', 'HEAD:' + file])).toEqual(content);
+    }
+    // The earlier global checkout change broke this historical hash convention.
+    expect(fs.readFileSync(path.join(checkout, legacy))).toEqual(Buffer.from('exact\r\nsource\r\n'));
+  } finally { fs.rmSync(temp, {recursive: true, force: true}); }
+});
+
 test('current product validation verifies every bound source and historical artifact', () => {
   const seen = [];
   verifyBindings(record, file => { seen.push(file); return content; });
