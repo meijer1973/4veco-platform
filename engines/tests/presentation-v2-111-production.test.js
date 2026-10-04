@@ -18,7 +18,8 @@ const JS = path.join(BOOK, 'shared', 'presentation-v2.js');
 const MODEL = path.resolve(__dirname, '..', '..', 'build-scripts', 'content', 'book-1', 'b1-111-presentation-v2-model.js');
 
 const exists = fs.existsSync(HTML) && fs.existsSync(CSS) && fs.existsSync(JS);
-const describeOrSkip = exists ? describe : describe.skip;
+const describeOrSkip = describe;
+const frozen = require('../../build-scripts/content/book-1/historical-presentation-test-fixtures').fixture('1.1.1');
 
 describeOrSkip('§1.1.1 implemented Golden web presentation', () => {
   let html;
@@ -27,9 +28,9 @@ describeOrSkip('§1.1.1 implemented Golden web presentation', () => {
   let deck;
 
   beforeAll(() => {
-    html = fs.readFileSync(HTML, 'utf8');
-    css = fs.readFileSync(CSS, 'utf8');
-    js = fs.readFileSync(JS, 'utf8');
+    html = frozen.html;
+    css = frozen.css;
+    js = frozen.js;
     jest.resetModules();
     deck = require(MODEL);
   });

@@ -79,9 +79,9 @@ const htmlExists = fs.existsSync(PRESENTATIE_HTML);
     });
 });
 
-(htmlExists ? describe : describe.skip)('L1.5D v2 B7 — Figuur 3 caption out of card 4 subtitle', () => {
+describe('L1.5D v2 B7 — Figuur 3 caption out of card 4 subtitle', () => {
     let html;
-    beforeAll(() => { html = fs.readFileSync(PRESENTATIE_HTML, 'utf8'); });
+    beforeAll(() => { html = require('../../build-scripts/content/book-1/historical-presentation-test-fixtures').fixture('1.1.1').html; });
 
     test('active §1.1.1 presentation route is no longer the legacy converter surface', () => {
         expect(html).toMatch(/data-layout="presentation-v2"/);

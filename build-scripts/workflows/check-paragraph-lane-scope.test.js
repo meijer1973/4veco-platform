@@ -13,6 +13,20 @@ const {
 } = require('./check-paragraph-lane-scope');
 
 const FIXTURE_DIR = path.join(__dirname, 'fixtures', 'paragraph-lane-scope');
+test('finite retired Book 1 presentation support retains companion ownership', () => {
+  const files = [...require('../books/book1-classroom-scope').RETIRED];
+  expect(files).toHaveLength(12);
+  expect(checkLaneScope({lane: 'companion', changedPaths: files}).ok).toBe(true);
+  expect(checkLaneScope({lane: 'textbook', changedPaths: files}).ok).toBe(false);
+  expect(checkLaneScope({lane: 'shared', changedPaths: files}).ok).toBe(false);
+  const book = 'Boek 1 - Grondslagen, vraag en aanbod/';
+  for (const file of [book + 'shared/other.js', book + 'shared/presentation-v3.js',
+    book + '1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/presentatie-slide99.png',
+    'Boek 2/shared/presentation-v2.js']) {
+    expect(classifyPath(file).category).toBe('unknown');
+    expect(checkLaneScope({lane: 'companion', changedPaths: [...files, file]}).ok).toBe(false);
+  }
+});
 test('slide PDF belongs to companion without admitting textbook or arbitrary PDFs', () => {
   const dir = 'Boek 2/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/';
   const slidePdf = dir + '2.1.1 Kostenstructuren – presentatie.pdf';

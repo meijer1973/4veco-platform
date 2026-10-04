@@ -10,6 +10,22 @@ presentation skill supplies current tool APIs; this recipe supplies the lesson.
 
 Use the adjacent `../4veco-lessen/` repository. Its map identifies the current
 edition; inspect actual files rather than trusting an old generated inventory.
+For current Book 1 use
+`Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/`.
+Its twelve current paragraphs are ordered by `bronnen/H1/chapter-order.json`
+through `bronnen/H3/chapter-order.json`. Editable paragraph manuscripts,
+`Antwoorden.md` and `Docenteninformatie.md` are directly in those chapter
+source folders. `sources/` contains historical design material, not the current
+teaching authority. The complete student PDF is
+`boek/Boek_1_Compleet_Tweede_editie.pdf`; `qa/student_page_map.json` maps chapter
+pages to complete-book pages. Verify its cited printed footers and teaching
+content in the complete PDF. A paragraph number reused from the first edition
+does not inherit that edition's examples, pages, targets or acceptance.
+The old `b1-*-presentation-v2*` builders are historical first-edition web
+companions, not classroom templates or current content. Read the current
+manuscript and answers from this edition before adapting the accepted classroom
+reference. Record the edition in both builder provenance and slide notes.
+
 For Book 2 use `Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/`:
 editable student text under `bronnen/H*/manuscript/`, chapter answers and teacher
 guidance under `bronnen/H*/`, complete current student PDF under `boek/`.
@@ -52,7 +68,7 @@ knowledge briefly; do not require pupils to infer a new procedure unaided.
 
 ### Exercise mapping: durable teacher preference
 
-In the current Book 2 edition, **Startopgaven** are the start assignment,
+In current Book 1 (second edition) and Book 2, **Startopgaven** are the start assignment,
 **Begeleide inoefening** is basis work, followed by **Zelfstandige oefening**
 and **Doeloefening**. Include all actual guided exercises, whose count varies.
 Homework is basis + independent + target, explicitly numbered, **Maken en
@@ -195,6 +211,23 @@ For current Book 2 the destination is
 writes named files without deleting these presentation files. Its generated
 `LEESMIJ.md` must not hold persistent presentation instructions. Link new decks
 from the lesson repository map.
+
+For current Book 1 the existing exports share
+`Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H*/`.
+Put each `1.M.K Title – presentatie.pptx` and matching `.pdf` beside its
+sealed student paragraph PDF, with `evidence/1.M.K-presentation.md` in the same
+chapter export folder. Derive the filename stem from that existing student PDF
+(remove only ` – paragraaf.pdf` or ` – opgaven.pdf`); a fuller manuscript heading
+may still be used on slides. This keeps the companion filenames aligned with
+the sealed export names, including the mixed paragraphs.
+Keep builders/manifests in platform `build-scripts/content/book-1/`, using
+`presentation-1MK.mjs` and `presentation-1MK.tweede-editie-2026.manifest.json`.
+Use that exact manifest naming pattern so the classroom scope check can identify
+the artifact's source record. Do not overwrite the
+historical web-companion author sources. Keep the textbook PDFs, manuscripts,
+answer books, archive and their historical receipts unchanged. Link the new
+classroom series from `RESEARCH_AGENT_MAP.md`; generated edition pages remain
+owned by the textbook publisher.
 
 For current Books 3 and 4 the existing paragraph PDFs share
 `edities/books34-v3/books/book-N/chapters/N.M/paragraph-pdfs/`. Put each named

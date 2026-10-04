@@ -246,7 +246,7 @@ function assertDisabledPlaceholdersHaveNoHref(html, context, { requireAtLeastOne
   });
 }
 
-function verifyParagraphHtml(html, context, { requireDisabledPlaceholder = false } = {}) {
+function verifyParagraphHtml(html, context, { requireDisabledPlaceholder = false, retiredPresentation = false } = {}) {
   requireIncludes(html, REQUIRED_HTML_MARKERS, context);
   requireExcludes(html, FORBIDDEN_HTML_MARKERS, context);
 
@@ -275,9 +275,11 @@ function verifyParagraphHtml(html, context, { requireDisabledPlaceholder = false
   }
 
   const tileCount = countMatches(html, /data-tile-id="/g);
-  if (tileCount !== 16) fail(`${context} must render 16 tile IDs; found ${tileCount}`);
+  const expectedTiles = retiredPresentation ? 15 : 16;
+  if (tileCount !== expectedTiles) fail(`${context} must render ${expectedTiles} tile IDs; found ${tileCount}`);
 
   for (const tileId of REQUIRED_TILE_IDS) {
+    if (retiredPresentation && tileId === 'presentatie') continue;
     if (!html.includes(`data-tile-id="${tileId}"`)) fail(`${context} missing tile ID ${tileId}`);
   }
 
@@ -387,7 +389,17 @@ function checkLessonOutput() {
 
   for (const relativePath of BOOK_1_PARAGRAPHS) {
     const filePath = path.join(LESSON_ROOT, relativePath);
-    verifyParagraphHtml(readText(filePath), relativePath.replace(/\\/g, "/"));
+    const normalized = relativePath.replace(/\\/g, "/");
+    const classroom = require('../books/book1-classroom-scope');
+    const html = readText(filePath);
+    const retiredPresentation = classroom.LEGACY_ENTRIES.has(normalized) && !html.includes('data-tile-id="presentatie"');
+    if (retiredPresentation) {
+      // Removing a tile is not a general exemption from the landing contract.
+      const baseline = require('child_process').execFileSync('git', ['show', classroom.LESSON_BASE + ':' + normalized], {cwd: LESSON_ROOT});
+      if (html.replace(/\r\n/g, '\n') !== classroom.retireLinks(normalized, baseline))
+        fail(normalized + ' has changes beyond the finite presentation retirement');
+    }
+    verifyParagraphHtml(html, normalized, {retiredPresentation});
   }
 }
 

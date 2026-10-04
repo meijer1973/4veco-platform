@@ -73,8 +73,8 @@ jobs:
           const fs=require('fs'),{execFileSync}=require('child_process');
           const head=cwd=>execFileSync('git',['rev-parse','HEAD'],{cwd,encoding:'utf8'}).trim();
           if(head('.')!==process.env.PLATFORM_SHA||head('../4veco-lessen')!==process.env.LESSON_SHA)throw Error('Unexpected checkout pair');
-          const result=require('./build-scripts/books/book1-second-edition-revision').verify({requireTracked:true,requireReview:true});
-          if(!result.passed||result.state!=='book1-second-edition-20261002')throw Error(JSON.stringify(result));
+          const result=require('./build-scripts/maintenance/check-classroom-edition').verify({requireTracked:true,requireReview:true});
+          if(!result.passed||!['book1-second-edition-20261002','book1-second-edition-classroom-20261003'].includes(result.lesson_state))throw Error(JSON.stringify(result));
           fs.writeFileSync('../book1-ci-evidence/pair.json',JSON.stringify({platform:head('.'),lessons:head('../4veco-lessen'),verification:result},null,2)+'\n');
           JS
       - name: Verify saved sources, history, targets and all PDF navigation

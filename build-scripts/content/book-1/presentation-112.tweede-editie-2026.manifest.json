@@ -1,0 +1,223 @@
+{
+  "paragraph": "1.1.2",
+  "title": "Verhoudingen, percentages en indexcijfers",
+  "paragraphType": "theory",
+  "edition": "Boek 1, Tweede editie 2026",
+  "editionPath": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026",
+  "lessonCommit": "173aa9a803897965c572df2c4e7f83cdb135eb1c",
+  "platformCommit": "27536dc220657c657665d013d4f9c7bed9c06231",
+  "sourceFiles": [
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/1.1.2 Verhoudingen, percentages en indexcijfers – paragraaf.md",
+      "sha256": "e10b272612bb096e6b2e2628f67198eaa3f4f123c4b6f7c420eb006312059335"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/Antwoorden.md",
+      "sha256": "dc89980240843ea5fa1d01fe68d33e7d3621ce5938fd7314f7e234bd204facd0"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/Docenteninformatie.md",
+      "sha256": "4b0b2fbe814f202ff8e81fdd8837d0ef882b2adb98ccb0957088f6849ede6c93"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/1.1.1 Schaarste, keuzes en alternatieve kosten – paragraaf.md",
+      "sha256": "249ad3b06b6e717c1a0f1c3c0c1174fd99d1df45e751807c5ac0b4d8b7d2a492"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/boek/Boek_1_Compleet_Tweede_editie.pdf",
+      "sha256": "2a2261b98f4a1c0a186a119120ae1b8c70e8d7860712e03eb711d1ab07efc676"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/student_page_map.json",
+      "sha256": "58eb9bf1d50227226e284099357e33e59a10bd433aa86f9bc7f3bf5c03b26691"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H1/1.1.2 Verhoudingen, percentages en indexcijfers – paragraaf.pdf",
+      "sha256": "63d3c6f6969b69d94374a039c9cb86476e56e57937d2319ab6de7ef9889d4610"
+    }
+  ],
+  "assignment": {
+    "start": [
+      10,
+      11
+    ],
+    "basis": [
+      12,
+      13,
+      14
+    ],
+    "independent": [
+      15,
+      16,
+      17
+    ],
+    "target": 18,
+    "homework": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "homeworkAction": "Maken en nakijken",
+    "unassignedExtra": [
+      19,
+      20,
+      21
+    ]
+  },
+  "printedPages": {
+    "previousTeaching": 7,
+    "theory": [
+      13,
+      14,
+      15,
+      16
+    ],
+    "workedExample": [
+      17,
+      18
+    ],
+    "start": 19,
+    "basis": [
+      19,
+      20
+    ],
+    "independent": 21,
+    "target": 22
+  },
+  "pageVerification": "Complete student PDF inspected at physical/printed pages 7 and 13–22; footers match. Chapter-local H1 pages 9–18 map to book pages 13–22. No chapter-local page number is used as a book citation.",
+  "learningGoals": [
+    "Calculate amounts per unit and shares; reverse share to count.",
+    "Calculate absolute and relative changes with the old value as denominator.",
+    "Use increase/decrease factors to obtain a new value.",
+    "Calculate and interpret indices, compare non-100 indices and reverse index to amount.",
+    "Distinguish percentage points, index points and percent change; separate share and group-size effects."
+  ],
+  "prerequisites": [
+    {
+      "operation": "Multiplying an amount per unit to recover a total",
+      "status": "Earlier explicit teaching",
+      "source": "§1.1.1, complete book p. 7, Vergelijk gelijke hoeveelheden; refreshed slide 3 with inverse check."
+    },
+    {
+      "operation": "Division/subtraction and unit reading in start 10",
+      "status": "Elementary arithmetic; mastery not assumed and per-unit meaning taught in current paragraph",
+      "source": "Start 10 p. 19; support p. 13–14. Refresh slide 3 and hernemen before basis work."
+    },
+    {
+      "operation": "Old-value denominator, percentage points and factor in start 11",
+      "status": "New content; supported exploration before instruction",
+      "source": "Current theory p. 14–15. Visible opening support p. 13–15, reattempt 11 at second overview before independent work."
+    },
+    {
+      "operation": "Share to decimal to count; isolate group size and share changes",
+      "status": "Taught this lesson before guided 14",
+      "source": "p. 13,15,18; slides 4,11–13."
+    },
+    {
+      "operation": "Common-base indices, non-100 index comparison, inverse index",
+      "status": "Taught this lesson",
+      "source": "p. 16; slides 8–10; required by basis 13, independent 16 and target 18d–e."
+    }
+  ],
+  "authoredTeachingExample": {
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "context": "Filmclub",
+    "data": {
+      "materials": {
+        "totalEuro": 168,
+        "participants": 24
+      },
+      "passPricesEuro": [
+        16,
+        20,
+        22
+      ],
+      "separatePriceProposals": {
+        "baseEuro": 22,
+        "increasePercent": 6,
+        "discountPercent": 15
+      },
+      "participation": {
+        "year1": {
+          "group": 160,
+          "members": 40
+        },
+        "year3": {
+          "group": 200,
+          "members": 60
+        }
+      }
+    },
+    "distinction": "All authored explanation data are separate from assigned textbook questions 10–18. The full real target 18 follows only after independent practice. Midpoint comparisons are hypothetical controls, not observations."
+  },
+  "target": {
+    "context": "Een workshop voor scholieren",
+    "printedPage": 22,
+    "materialEuro": 216,
+    "participantsYear3": 36,
+    "announcedIncreasePercent": 8,
+    "priceEuro": [
+      10,
+      12,
+      15
+    ],
+    "eligible": [
+      120,
+      150,
+      150
+    ],
+    "participants": [
+      24,
+      30,
+      36
+    ],
+    "subquestions": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f",
+      "g"
+    ],
+    "questionSlides": [
+      17,
+      18,
+      19,
+      20
+    ],
+    "answerSlides": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "answers": {
+      "a": "€ 6 per deelnemer",
+      "b": "+€ 2 per workshop; +20%",
+      "c": "€ 16,20",
+      "d": [
+        120,
+        150
+      ],
+      "e": "30 indexpunten; 25%",
+      "f": "20%; 24%; 4 procentpunten",
+      "g": "Onjuist: (24−20)/20 × 100% = 20% relatieve stijging"
+    }
+  },
+  "overviewSlides": [
+    1,
+    16,
+    29
+  ],
+  "timing": "Complete normal exercise route retained; no one-lesson fit or learning-effectiveness claim.",
+  "visualReference": "Current accepted §2.1.1 classroom PPTX/PDF, actual PDF slides 1,3,4,13 inspected; white 16:9, Arial, blue/green/orange, native editable tables.",
+  "sourceConflicts": []
+}

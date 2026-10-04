@@ -1,0 +1,309 @@
+{
+  "paragraph": "1.3.4",
+  "title": "Gemengde opgaven: aanbod en marktevenwicht",
+  "exportStem": "1.3.4 Gemengde opgaven",
+  "type": "gemengde opgaven",
+  "sourceEdition": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026",
+  "sourceCommit": "173aa9a803897965c572df2c4e7f83cdb135eb1c",
+  "platformBaseline": "04a549d40cbc2937bff29344b6ac2155894c4c3e",
+  "sourceFiles": {
+    "bronnen/H3/1.3.4 Gemengde opgaven – opgaven.md": "cba21bfe1a43659226670996a603dc6d2e3ca17865f1d3cab0487c0ffebd2d7e",
+    "bronnen/H3/Antwoorden.md": "1cb6fce9da344dff9e98ea826b6e89e5d61ade745116c9b0ddef7bd0c68d2540",
+    "bronnen/H3/Docenteninformatie.md": "854e7e555300b8bc0eff5a7dc8e549171c899ba2098523c1b665a98e6ceb8847",
+    "bronnen/H3/1.3.1 Aanbod en aanbodfactoren – paragraaf.md": "a877af4743b94775279f04bda37a1956e5aa19d36ed4dac1de031b43733f458d",
+    "bronnen/H3/1.3.2 Marktevenwicht – paragraaf.md": "454d8aaf6aabd7d220fdc4969a033e9037b2dca5be066d80ca8c62374de2860a",
+    "bronnen/H3/1.3.3 Verschuivingen en nieuw evenwicht – paragraaf.md": "b73b16fbf10b8a71613a407befa819bdab1551592c50d78ef558150a696b0f68",
+    "bronnen/H1/1.1.2 Verhoudingen, percentages en indexcijfers – paragraaf.md": "e10b272612bb096e6b2e2628f67198eaa3f4f123c4b6f7c420eb006312059335",
+    "bronnen/H1/1.1.3 Tabellen, grafieken en formules – paragraaf.md": "989672f574c9454c3bf44bcea4ec061e68bb9336efa9b2a93c2a8ab581daa206",
+    "boek/Boek_1_Compleet_Tweede_editie.pdf": "2a2261b98f4a1c0a186a119120ae1b8c70e8d7860712e03eb711d1ab07efc676",
+    "qa/student_page_map.json": "58eb9bf1d50227226e284099357e33e59a10bd433aa86f9bc7f3bf5c03b26691"
+  },
+  "goals": [
+    "Passende bron en functie kiezen",
+    "Oud en nieuw evenwicht berekenen, controleren en tekenen",
+    "Veranderingen en verkoop met de bron onderbouwen"
+  ],
+  "sourcePrintedPages": {
+    "start": 118,
+    "independent": [
+      118,
+      119
+    ],
+    "target": [
+      120,
+      121
+    ],
+    "additionalReview": 122
+  },
+  "printedToPhysicalPdfOffset": 0,
+  "assignment": {
+    "start": [
+      34
+    ],
+    "basis": [],
+    "basisReason": "Gemengde paragraaf zonder afzonderlijke begeleide sectie",
+    "independent": [
+      34,
+      35,
+      36
+    ],
+    "target": 37,
+    "targetName": "De linnen boodschappentas",
+    "homework": [
+      34,
+      35,
+      36,
+      37,
+      38
+    ],
+    "homeworkInstruction": "Maken en nakijken",
+    "labels": {
+      "38": "Korte terugblik op hoofdstuk 1.1"
+    },
+    "bonus": []
+  },
+  "selectionReason": "De werkelijke doeloefening 37 combineert selectie uit vier bronnen, twee evenwichten met controles, percentages, zelfstandige grafiekconstructie, verkoop bij een afzonderlijke prijs en twee modelclaims.",
+  "scope": "Classroom PowerPoint only; scoped Part B",
+  "reference": "Accepted 2.1.1 classroom PDF: slides 1, 3 and 5 visually inspected. Arial 1600x900 family reused.",
+  "teachingExample": {
+    "role": "authored teaching example",
+    "label": "Uitlegvoorbeeld — niet uit het boek",
+    "context": "Eenvoudige vouwkrukjes, veel kleine kopers en verkopers. Betere techniek, vraag en overige omstandigheden gelijk.",
+    "data": {
+      "Qv": "72 - 4P",
+      "Qa0": "8P - 24",
+      "Qa1": "8P - 12",
+      "domains": {
+        "Qv": [
+          0,
+          18
+        ],
+        "Qa0": [
+          3,
+          18
+        ],
+        "Qa1": [
+          1.5,
+          18
+        ]
+      },
+      "units": "Q krukjes per week; P euro per krukje"
+    },
+    "oldEquilibrium": {
+      "P": 8,
+      "Q": 40
+    },
+    "newSupplyAtOldPrice": 52,
+    "newEquilibrium": {
+      "P": 7,
+      "Q": 44
+    },
+    "notAssignedPractice": true
+  },
+  "prerequisiteTrace": [
+    {
+      "operation": "34: q invullen, techniekfactor, verschuiving bij gelijke prijs, één maker is geen markt",
+      "taughtAt": [
+        {
+          "paragraph": "1.3.1",
+          "printedPages": [
+            86,
+            87,
+            88,
+            89
+          ],
+          "anchor": "Aanboddefinitie, formule q=5P−20, techniekfactor en basilicumvoorbeeld"
+        }
+      ],
+      "lessonSupport": "Start is ophalen. Bij twijfel hernemen p. 87–88. Bespreek bronkeuze op dia 2 zonder 34 uit te werken."
+    },
+    {
+      "operation": "35–37: gelijkheid met P aan beide kanten, invullen en tweede controle",
+      "taughtAt": [
+        {
+          "paragraph": "1.3.2",
+          "printedPages": [
+            98,
+            101
+          ],
+          "anchor": "Een gelijkheid stap voor stap oplossen; uitgewerkt flessenvoorbeeld"
+        }
+      ],
+      "lessonSupport": "Aparte vouwkrukjesberekening op dia 3 en 5."
+    },
+    {
+      "operation": "36–37: juiste nieuwe functie, plannen bij oude prijs en reactie langs ongewijzigde lijn",
+      "taughtAt": [
+        {
+          "paragraph": "1.3.3",
+          "printedPages": [
+            110,
+            111
+          ],
+          "anchor": "Afzonderlijk materiaalprijsscenario en aardbeienvoorbeeld"
+        }
+      ],
+      "lessonSupport": "Vouwkrukjes op dia 4–5; eigen oorzaak en gegevens."
+    },
+    {
+      "operation": "36–37d: zelf assen, schaal, twee punten per lijn en evenwicht/hulplijnen tekenen",
+      "taughtAt": [
+        {
+          "paragraph": "1.3.2",
+          "printedPages": [
+            101
+          ],
+          "anchor": "Stap 3 Tekenen: V en A uit twee formulepunten, E en hulplijnen"
+        },
+        {
+          "paragraph": "1.3.3",
+          "printedPages": [
+            110,
+            111
+          ],
+          "anchor": "Derde lijn en beweging op V, figuren 19–20"
+        }
+      ],
+      "lessonSupport": "Korte methodeherinnering dia 2 en stapsgewijze bespreking van 37d na zelfstandig werk."
+    },
+    {
+      "operation": "35,37e: overschot, voorwaardelijke verkoop en prijsdruk",
+      "taughtAt": [
+        {
+          "paragraph": "1.3.2",
+          "printedPages": [
+            99,
+            100,
+            102
+          ],
+          "anchor": "Vraagoverschot, aanbodoverschot en expliciete transactieregel"
+        }
+      ],
+      "lessonSupport": "Bronregel ophalen dia 2. Bij oude prijs vouwkrukjes: aanbodoverschot, druk omlaag."
+    },
+    {
+      "operation": "37c en 38c: procentuele verandering met eigen oude waarde, indexverandering",
+      "taughtAt": [
+        {
+          "paragraph": "1.1.2",
+          "printedPages": [
+            14,
+            16
+          ],
+          "anchor": "(nieuw−oud)/oud; index 120 naar 132"
+        }
+      ],
+      "lessonSupport": "Herinnering in docentnotities dia 5; volledige toepassing doel 37c."
+    },
+    {
+      "operation": "37f: modelclaims begrenzen",
+      "taughtAt": [
+        {
+          "paragraph": "1.3.2",
+          "printedPages": [
+            100
+          ],
+          "anchor": "Een model, geen belofte: geen verdelingsoordeel"
+        },
+        {
+          "paragraph": "1.3.3",
+          "printedPages": [
+            110,
+            111
+          ],
+          "anchor": "Ongewijzigde V en oorzaakuitleg"
+        }
+      ],
+      "lessonSupport": "Bronkeuze dia 2; bespreking beide claims na vragen."
+    },
+    {
+      "operation": "38a–b: totaal of extra bedrag delen door bijbehorend aantal",
+      "taughtAt": [
+        {
+          "paragraph": "1.1.2",
+          "printedPages": [
+            13,
+            17
+          ],
+          "anchor": "Per eenheid en het uitgewerkte materiaalbedrag"
+        }
+      ],
+      "lessonSupport": "Notities zelfstandige fase wijzen op bijbehorende extra eenheden, geen nieuwe kostentheorie."
+    },
+    {
+      "operation": "38d: basis en loodrechte hoogte als afstanden, rechthoek en driehoek",
+      "taughtAt": [
+        {
+          "paragraph": "1.1.3",
+          "printedPages": [
+            28
+          ],
+          "anchor": "Vormen beginnen boven nul, hoogte is een verschil"
+        }
+      ],
+      "lessonSupport": "Notities zelfstandige fase met gerichte terugverwijzing, geen surplusleer."
+    }
+  ],
+  "sourceConflicts": [],
+  "timing": "Geen claim dat deze complete route één les past. Hoofdstukhandleiding geeft alleen ontwerpschattingen.",
+  "slides": {
+    "total": 23,
+    "overviews": [
+      1,
+      6,
+      23
+    ],
+    "methodRecall": [
+      2
+    ],
+    "authoredExample": [
+      3,
+      4,
+      5
+    ],
+    "targetSources": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "targetQuestions": [
+      11,
+      12,
+      13
+    ],
+    "targetAnswers": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "nativeTables": [
+      2,
+      4,
+      15,
+      17,
+      18,
+      21
+    ],
+    "nativeCharts": [
+      19,
+      20
+    ]
+  },
+  "artifacts": {
+    "pptx": {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H3/1.3.4 Gemengde opgaven – presentatie.pptx",
+      "sha256": "f1247d6a64574958d358d28f909df36edc495206a1dec77b27ab7792b06e3b6e"
+    },
+    "pdf": {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H3/1.3.4 Gemengde opgaven – presentatie.pdf",
+      "sha256": "e8126e6089e3dc7ab8ed6f94628a39fb29b16a5a7f95705a1d83968936621169"
+    }
+  }
+}

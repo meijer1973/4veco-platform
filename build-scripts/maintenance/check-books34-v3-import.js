@@ -63,6 +63,8 @@ function verifyHistoricalImport({root = m.ROOT, lessons = path.resolve(root, '..
 }
 function verify(options = {}) {
   const root = options.root || m.ROOT;
+  if(fs.existsSync(path.join(root,'build-scripts/books/book1-classroom-scope.js')))
+    return require('../books/book1-classroom-scope').verify({...options,root});
   if(fs.existsSync(path.join(root,'build-scripts/books/book1-second-edition-pin.json')))
     return require('../books/book1-second-edition-revision').verify({...options,root});
   const meta = JSON.parse(fs.readFileSync(path.join(root, m.OUTLINES, 'book-3-outline.meta.json')));

@@ -1,0 +1,132 @@
+{
+  "paragraph": "1.1.1",
+  "title": "Schaarste, keuzes en alternatieve kosten",
+  "type": "theory",
+  "edition": "Boek 1, tweede editie 2026",
+  "platformCommit": "dbaf16bf02db94e27ba418dd4dd0684a1a29e0bb",
+  "lessonCommit": "173aa9a803897965c572df2c4e7f83cdb135eb1c",
+  "sources": [
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/1.1.1 Schaarste, keuzes en alternatieve kosten – paragraaf.md",
+      "sha256": "249ad3b06b6e717c1a0f1c3c0c1174fd99d1df45e751807c5ac0b4d8b7d2a492"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/Antwoorden.md",
+      "sha256": "dc89980240843ea5fa1d01fe68d33e7d3621ce5938fd7314f7e234bd204facd0"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/Docenteninformatie.md",
+      "sha256": "4b0b2fbe814f202ff8e81fdd8837d0ef882b2adb98ccb0957088f6849ede6c93"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/boek/Boek_1_Compleet_Tweede_editie.pdf",
+      "sha256": "2a2261b98f4a1c0a186a119120ae1b8c70e8d7860712e03eb711d1ab07efc676"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/student_page_map.json",
+      "sha256": "58eb9bf1d50227226e284099357e33e59a10bd433aa86f9bc7f3bf5c03b26691"
+    }
+  ],
+  "goals": [
+    "Beperkt middel en haalbare mogelijkheden aanwijzen",
+    "Totale uitkomsten voor hetzelfde tijdvak of dezelfde ruimte vergelijken",
+    "Alternatieve kosten verklaren",
+    "Een keuze bij een expliciet doel beoordelen"
+  ],
+  "assignment": {
+    "start": [
+      1,
+      2
+    ],
+    "basis": [
+      3,
+      4
+    ],
+    "independent": [
+      5,
+      6
+    ],
+    "target": 7,
+    "homework": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "homeworkInstruction": "Maken en nakijken",
+    "extraNotAssigned": [
+      8,
+      9
+    ]
+  },
+  "printedPages": {
+    "theory": [
+      6,
+      7,
+      8
+    ],
+    "start": 9,
+    "basis": [
+      9,
+      10
+    ],
+    "independent": 10,
+    "target": 11
+  },
+  "pageVerification": "Complete student PDF pages 6–11 visually inspected, including printed footers; physical index equals printed page for these pages. Teacher source uses chapter-local pages, converted by +4 and verified.",
+  "startSupport": {
+    "exercise1": "Retrieval of multiplication, subtraction and units; no earlier economics paragraph. Revisit if arithmetic is fragile.",
+    "exercise2": "New scarcity and foregone alternative, supported exploration using theory printed p. 6–8. Overview support line visible on all three copies. Return to exercise 2 after explanation, before basis work."
+  },
+  "prerequisiteTrace": [
+    {
+      "operation": "Vermenigvuldigen en aftrekken met eenheden",
+      "earlierTeaching": "General arithmetic only; current teacher guidance explicitly does not assume mastery.",
+      "instruction": "Worked example total calculation and total-versus-difference comparison; confirm start 1 before practice."
+    },
+    {
+      "operation": "Beperkt middel, haalbaarheid en onverenigbaarheid",
+      "earlierTeaching": "None, first economics paragraph.",
+      "instruction": "Definition, atelier scenario and excluded unavailable option; book p. 6–8."
+    },
+    {
+      "operation": "Per uur naar vergelijkbaar totaal; table representation",
+      "earlierTeaching": "None assumed.",
+      "instruction": "Multiply each table row by same two hours and preserve units; book p. 7–8."
+    },
+    {
+      "operation": "Best remaining feasible option; not sum, difference or payment",
+      "earlierTeaching": "None.",
+      "instruction": "Atelier worked example, comparison table, Lina multiple-alternative example; book p. 7–8."
+    },
+    {
+      "operation": "Explicit monetary or nonmonetary criterion",
+      "earlierTeaching": "None.",
+      "instruction": "Atelier money criterion then participant criterion, book p. 7–8."
+    }
+  ],
+  "authoredTeachingExamples": [
+    {
+      "name": "Atelier op zaterdag",
+      "label": "Uitlegvoorbeeld — niet uit het boek",
+      "data": "One room for two hours, both workshops use all two hours; free room, amounts after expenditure. Papieratelier € 25 per hour / 24 participants; textielatelier € 40 per hour / 16 participants. Houtatelier unavailable because trainer absent.",
+      "outcome": "€ 50 versus € 80, choose textile for money, foregone paper € 50; difference € 30; choose paper for participation."
+    },
+    {
+      "name": "Lina heeft twee uur",
+      "label": "Uitlegvoorbeeld — niet uit het boek",
+      "data": "Chosen walk; two feasible mutually exclusive whole-two-hour jobs give € 22 and € 18; € 30 theatre job unavailable.",
+      "outcome": "€ 22 best forgone income, not € 40 sum. No monetary value invented for walking."
+    }
+  ],
+  "targetCoverage": {
+    "a": "Scarce aula during the same three hours; individually feasible, incompatible.",
+    "b": "3 × 70 = 210; 3 × 90 = 270, choose ruilmarkt.",
+    "c": "Muziekmiddag € 210; € 60 is difference only.",
+    "d": "Rent € 0; foregone music can yield € 210.",
+    "e": "Choose music for 90 versus 60 expected participants."
+  },
+  "reference": "Accepted classroom presentation 2.1.1, native white 1600×900, Arial, blue/green/orange, inspected PDF slides 1–3.",
+  "scope": "Scoped classroom Part B. No textbook, answer book, archive or signed receipts changed. Parent coordinates independent and series review/integration."
+}

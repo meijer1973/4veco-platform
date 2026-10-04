@@ -4,10 +4,9 @@ const { writeDeckHtml } = require('../../lib/render-presentation-v2-html');
 const { writeDeckPptx } = require('../../lib/render-presentation-v2-pptx');
 
 const PLATFORM_ROOT = path.resolve(__dirname, '../../..');
-const DEFAULT_MODULE_ROOT = path.resolve(
-  __dirname,
-  '../../../../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod',
-);
+// These historical models remain regression fixtures, not current lesson
+// material. Keep their generated compatibility proofs outside both repositories.
+const DEFAULT_MODULE_ROOT = path.resolve(PLATFORM_ROOT, '../.presentation-v2-first-edition');
 
 const ACTIVE_PRESENTATION_V2_DECK_SLUGS = ['b1-111', 'b1-112', 'b1-113'];
 
@@ -37,6 +36,19 @@ function moduleRootFrom(options = {}) {
     throw new Error('These companion models belong to Book 1 first edition; no second-edition acceptance is inherited.');
   }
   return options.moduleRoot || process.env.MODULE_ROOT || DEFAULT_MODULE_ROOT;
+}
+
+function assertHistoricalBuildDestination(moduleRoot) {
+  // Also catch an explicitly supplied old paragraph/subdirectory, not only the
+  // default root. Rebuilding deleted files in the active book is not supported.
+  let current = path.resolve(moduleRoot);
+  while (true) {
+    if (fs.existsSync(path.join(current, 'edities/tweede-editie-2026/manifest.json')))
+      throw new Error('First-edition presentation regeneration is retired in active lessons; use a separate historical proof directory.');
+    const parent = path.dirname(current);
+    if (parent === current) break;
+    current = parent;
+  }
 }
 
 function loadDeck(entry) {
@@ -93,6 +105,7 @@ async function buildPresentationDeck(slugOrId, options = {}) {
     htmlOut,
     pptxOut,
   } = presentationOutputPaths(deck, options);
+  assertHistoricalBuildDestination(moduleRoot);
   const sharedDir = path.join(moduleRoot, 'shared');
 
   fs.mkdirSync(paragraphOutDir, { recursive: true });
@@ -137,9 +150,11 @@ async function buildPresentationDecks(options = {}) {
 
 module.exports = {
   ACTIVE_PRESENTATION_V2_DECK_SLUGS,
+  DEFAULT_MODULE_ROOT,
   PRESENTATION_V2_DECKS,
   buildPresentationDeck,
   buildPresentationDecks,
+  assertHistoricalBuildDestination,
   getPresentationDeck,
   loadDeck,
   moduleRootFrom,

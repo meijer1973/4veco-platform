@@ -1,0 +1,300 @@
+{
+  "paragraph": "1.1.3",
+  "verdict": "PASS",
+  "reviewer": "root coordinator, independent of cold author",
+  "source_hash_checks": [
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/1.1.3 Tabellen, grafieken en formules – paragraaf.md",
+      "sha256": "989672f574c9454c3bf44bcea4ec061e68bb9336efa9b2a93c2a8ab581daa206",
+      "passed": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/1.1.2 Verhoudingen, percentages en indexcijfers – paragraaf.md",
+      "sha256": "e10b272612bb096e6b2e2628f67198eaa3f4f123c4b6f7c420eb006312059335",
+      "passed": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/Antwoorden.md",
+      "sha256": "dc89980240843ea5fa1d01fe68d33e7d3621ce5938fd7314f7e234bd204facd0",
+      "passed": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/Docenteninformatie.md",
+      "sha256": "4b0b2fbe814f202ff8e81fdd8837d0ef882b2adb98ccb0957088f6849ede6c93",
+      "passed": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/chapter-order.json",
+      "sha256": "216b9190728eddfcbeb848b2ca46c6a1393b8df80753cc08e21b20bc0572448c",
+      "passed": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/bronnen/H1/_assets/1.1.3_ex_30.svg",
+      "sha256": "2e3747d21f896628239147323f6e7fd296fa4d3a09ce3b55a0546d5165bdd9b7",
+      "passed": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/boek/Boek_1_Compleet_Tweede_editie.pdf",
+      "sha256": "2a2261b98f4a1c0a186a119120ae1b8c70e8d7860712e03eb711d1ab07efc676",
+      "passed": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/qa/student_page_map.json",
+      "sha256": "58eb9bf1d50227226e284099357e33e59a10bd433aa86f9bc7f3bf5c03b26691",
+      "passed": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/edities/tweede-editie-2026/paragrafen/H1/1.1.3 Tabellen, grafieken en formules – paragraaf.pdf",
+      "sha256": "fa487d2f113910b6a60c32e22097a2b7f0c7d4896b11ef094fb13d24ba77e9c1",
+      "passed": true
+    }
+  ],
+  "slides_reviewed_individually": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "notes_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "saved_file_audit": {
+    "pptxSha256": "fb7c7bb48a6a089bba4a94ed106ae05a15fa82fccefb363c9acd8a415bfc7255",
+    "pdfSha256": "ab765d3adcc809d40311a2ee1b7b3689d2ac3b28d3733d7c84e9fcb8286b7a77",
+    "slideCount": 29,
+    "pdfPageCount": 29,
+    "notesCount": 29,
+    "minimumExplicitNotesFontPt": 14.0,
+    "nativeTableCount": 11,
+    "nativeChartCount": 7,
+    "overviewSlides": [
+      1,
+      16,
+      29
+    ],
+    "overviewContentGeometryParity": true,
+    "pdfTextMismatches": []
+  },
+  "native_render_hashes": [
+    {
+      "slide": 1,
+      "sha256": "719898ea95facd9c2ef2d391bd5222176a2cfd22e073c846bc4d9227361611c6"
+    },
+    {
+      "slide": 2,
+      "sha256": "d86fef10871f9abbc22c8db97ebc43a3dca3c3a27d8a20071de2decb1f2cac04"
+    },
+    {
+      "slide": 3,
+      "sha256": "47a4673150d181a5fadd15836f0c2f02fbd80dc0d053c32a56ab4a6ae0a4bd03"
+    },
+    {
+      "slide": 4,
+      "sha256": "4c8da4c895fbfc6e8f339a077bb0ecd523b5e3470907d37d5959b75f821f1480"
+    },
+    {
+      "slide": 5,
+      "sha256": "650c1a279af4bdaf3dbc122f76cd3ecb2b615c6842ac5b621dfe583ad6846129"
+    },
+    {
+      "slide": 6,
+      "sha256": "88a67d6141807f0ef5044b642e2a26feff185329df455210da26349dff9b2157"
+    },
+    {
+      "slide": 7,
+      "sha256": "bbec17450f1c36907a6932cf6c0a11ca9a6a9837542e8f3fe34a909356675630"
+    },
+    {
+      "slide": 8,
+      "sha256": "2829b670140242c872766442404438865363aaf789280285d1fc4c560f3f678d"
+    },
+    {
+      "slide": 9,
+      "sha256": "266efeb9a75acda06f93aeaa136dfaf8941c06f542b6950b70e9a1135be23650"
+    },
+    {
+      "slide": 10,
+      "sha256": "336d5272abb665eb26d23f5cc9d93b6c521a83a7908c87c0cd46e04f51e6d038"
+    },
+    {
+      "slide": 11,
+      "sha256": "31f1148fdfbdd609a4cb09330372654d855875d4923b86fb19fd1f4fa92dc63c"
+    },
+    {
+      "slide": 12,
+      "sha256": "93512cf7a6ddf7f78ef866682e2ca7c2f83c4e122e42e27365962474f1946dd3"
+    },
+    {
+      "slide": 13,
+      "sha256": "bfdb0e9c39088fdbb7a71de7f5520010f807cddbae9140237c290c0502ec1e28"
+    },
+    {
+      "slide": 14,
+      "sha256": "5620a86f8474c8cccf520eab794a7dd7bd18aaa582683d09b0221ee3ef221ed1"
+    },
+    {
+      "slide": 15,
+      "sha256": "798cae219bb8231de7aed25611032776bc466bed240ba0f4906d15bf145a7636"
+    },
+    {
+      "slide": 16,
+      "sha256": "4f49ddbc6a49da308b5c3738221d3ff6d8be3100ef9c564c9f5768fb877ed3dc"
+    },
+    {
+      "slide": 17,
+      "sha256": "a0147cef825aec46ed4490198a32be4d564d48cbc7c0c9114c5b49be2249b76c"
+    },
+    {
+      "slide": 18,
+      "sha256": "4480f6471897f56a6a575f8dd200905a4cb9811ca73bdc4a24f2e72312df1633"
+    },
+    {
+      "slide": 19,
+      "sha256": "6d63674e1022a8943bcea2d2419ffc3434ac40a48424728f1134fe5d192633d3"
+    },
+    {
+      "slide": 20,
+      "sha256": "c11757128d2ea573a13a382f5f514ea59ab4e6afb69475ec8bc5537191cef23c"
+    },
+    {
+      "slide": 21,
+      "sha256": "b4ee1b4480ed4f720b01417605a7622c3f5e70b0753d56775361c50b77d01f85"
+    },
+    {
+      "slide": 22,
+      "sha256": "2158af534addadabca7fd4efc1a0f3065d891709eaf39a05692b879137ef872d"
+    },
+    {
+      "slide": 23,
+      "sha256": "74e1b8791fcc94056db16058f4a04d8454117187fe44094d784010d83028362d"
+    },
+    {
+      "slide": 24,
+      "sha256": "6d30a96450b9c4eb09f886cdcd3007ec7d1d8e8a5418b3defe0b8f4cc484afd9"
+    },
+    {
+      "slide": 25,
+      "sha256": "fa14d5c19e3c18e5f65b713ede3da0555ef0e5ccb878c54a37d7dd14eaf46a17"
+    },
+    {
+      "slide": 26,
+      "sha256": "c92e02adab0d0d69f8fdc7fa910aff199bda434dc2ce0b051fd66b19757e1326"
+    },
+    {
+      "slide": 27,
+      "sha256": "23af0526785b5ef28160cab3fc1415801439cbdb3ee14e71e46099d9517de77c"
+    },
+    {
+      "slide": 28,
+      "sha256": "06c60473f8f91939f8cc156118d023f70e80b2442ce89c8da50a736c83722e5d"
+    },
+    {
+      "slide": 29,
+      "sha256": "f6a04289d772fa8a06ce65bf4d87a93b78caa5e5336fdb6a05c568de2504207c"
+    }
+  ],
+  "changes_after_handoff": "Manifest filename/references normalized only; final PPTX/PDF bytes unchanged.",
+  "limits": "Individual artifact and planned-teaching review only. Complete serialized series review remains pending; no classroom timing or learning-effect measurement.",
+  "pdf_visual_samples": [
+    6,
+    20,
+    22,
+    27
+  ],
+  "target_review": "All three separate sources and every actual a-g question on17-20 precede answers21-27. Checked current manuscript and actual printed p36, including unmarked source geometry. Start22-23 on32, homework24-30, bonus31/repetition32-33 supplementary.",
+  "independent_arithmetic": {
+    "authored_interpolation_P6_Q": 150,
+    "authored_percent_change": -22.2222222222,
+    "authored_T_n3": 24,
+    "authored_n_T44": 8,
+    "authored_area_rectangle_triangle": [
+      21,
+      10.5
+    ],
+    "authored_time_interval_rates": [
+      6,
+      6
+    ],
+    "authored_decrease_per_euro": 10,
+    "target_interpolation_P4_Q": 80,
+    "target_percent_change": -30,
+    "target_T_n6": 20,
+    "target_n_T32": 12,
+    "target_area_rectangle_triangle": [
+      24,
+      12
+    ]
+  },
+  "chart_review": "Inspected all seven saved native chart caches: progressively empty frame, points then line then guides; source/target points and interpolation guides exact. Unequal time intervals are XY-scaled. Workbook checker passed7charts/22references/52cells. Inspected actual native polygon geometry visually and author checker source for eight polygons.",
+  "teaching_review": [
+    "Coordinate order and scale are taught before plotting. Q horizontal/P vertical is specific to price-quantity; time horizontal separately taught on13. No general demand law or surplus interpretation is prematurely assumed.",
+    "Interpolation applies only inside stated linear model endpoints. Slide15 separates this model from measured time series, whose intermediate daily course and cause remain unknown.",
+    "Percentage old-base method explicitly retrieves1.1.2p14. Formula substitution8 precedes inverse9 with same operations both sides and domain/back-substitution checks; doubling quantity does not double the start amount10.",
+    "Area11-12 uses coordinate differences for base/height, perpendicular height and square units. Target source20 retains no answer annotation.",
+    "Unequal-interval rate13 and per-euro decrease14 explicitly select the denominator by the requested unit; this supports27d before practice.",
+    "Start23 visibly supported bypp24-25, explicit return15/16 before basis. The complete route may span multiple lesson moments; no timing or mastery claim."
+  ],
+  "author_self_review": "Author corrected an early reveal of the line, source question spacing and independently added a rate-per-euro scaffold after coverage review before final handoff. Final29-slide cold handoff is unchanged by coordinator."
+}

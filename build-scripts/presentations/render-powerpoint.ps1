@@ -12,6 +12,13 @@ if ((Test-Path -LiteralPath $RenderDir) -and (Get-ChildItem -LiteralPath $Render
  throw "Use an empty render directory: $RenderDir"
 }
 New-Item -ItemType Directory -Path (Split-Path -Parent $Pdf), $RenderDir -Force | Out-Null
+# PowerPoint COM attaches callers to a shared application. Serialize complete
+# render/export lifetimes across paired author worktrees in this Windows session.
+$renderMutex = [Threading.Mutex]::new($false, 'Local\4veco-classroom-powerpoint-render')
+$ownsRenderMutex = $false
+try {
+ try { $ownsRenderMutex = $renderMutex.WaitOne() }
+ catch [Threading.AbandonedMutexException] { $ownsRenderMutex = $true }
 $powerPointWasRunning = $null -ne (Get-Process -Name POWERPNT -ErrorAction SilentlyContinue | Select-Object -First 1)
 $app = New-Object -ComObject PowerPoint.Application
 $previousAlerts = $app.DisplayAlerts
@@ -46,4 +53,8 @@ try {
  # Close only our deck; preserve an existing app or presentations opened meanwhile.
  if (-not $powerPointWasRunning -and $app.Presentations.Count -eq 0) { $app.Quit() }
  [Runtime.InteropServices.Marshal]::ReleaseComObject($app) | Out-Null
+}
+} finally {
+ if ($ownsRenderMutex) { $renderMutex.ReleaseMutex() }
+ $renderMutex.Dispose()
 }
