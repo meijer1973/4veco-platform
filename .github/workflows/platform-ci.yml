@@ -44,11 +44,6 @@ jobs:
         working-directory: 4veco-platform
 
     steps:
-      - name: Preserve source bytes before checkout
-        working-directory: ${{ github.workspace }}
-        # A later reset can leave CRLF checkout bytes cached as clean by Git.
-        run: git config --global core.autocrlf false
-
       - name: Checkout platform repository
         uses: actions/checkout@v6
         with:

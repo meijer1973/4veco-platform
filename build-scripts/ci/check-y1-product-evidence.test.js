@@ -2,7 +2,6 @@ const crypto = require('crypto');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const yaml = require('js-yaml');
 const { execFileSync } = require('child_process');
 const current = require('../sprints/check-y1-golden-rollout-wave-1-current');
 const historical = require('../sprints/check-y1-golden-rollout-wave-1');
@@ -51,18 +50,7 @@ describe('explicit current lesson retirement does not inherit historical screens
   });
 });
 
-test('the live workflow disables checkout conversion before either repository is materialized', () => {
-  const workflow = yaml.load(fs.readFileSync(path.join(current.ROOT, '.github/workflows/platform-ci.yml'), 'utf8'));
-  const steps = workflow.jobs['validate-platform'].steps;
-  const configure = steps.findIndex(step => step.run === 'git config --global core.autocrlf false');
-  const checkouts = steps.flatMap((step, index) => step.uses?.startsWith('actions/checkout@') ? [index] : []);
-  expect(configure).toBeGreaterThanOrEqual(0);
-  expect(checkouts).toHaveLength(2);
-  expect(checkouts.every(index => configure < index)).toBe(true);
-  expect(steps[configure]['working-directory']).toBe('${{ github.workspace }}');
-
-  // Exercise the actual setup command in an isolated Git configuration, starting
-  // with the Windows conversion default. Source hashes must survive checkout.
+test('classroom attributes retain exact bytes under Windows checkout defaults without changing legacy fixtures', () => {
   const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'y1-checkout-bytes-'));
   const env = {...process.env, GIT_CONFIG_GLOBAL: path.join(temp, 'global.gitconfig'), GIT_CONFIG_NOSYSTEM: '1'};
   const git = (cwd, args) => execFileSync('git', args, {cwd, env, stdio: ['ignore', 'pipe', 'pipe']});
@@ -73,16 +61,28 @@ test('the live workflow disables checkout conversion before either repository is
     git(source, ['init', '-q']);
     git(source, ['config', 'user.name', 'Checkout fixture']);
     git(source, ['config', 'user.email', 'fixture@example.invalid']);
+    fs.copyFileSync(path.join(current.ROOT, '.gitattributes'), path.join(source, '.gitattributes'));
     const content = Buffer.from('exact\nsource\n');
-    fs.writeFileSync(path.join(source, 'builder.js'), content);
-    git(source, ['-c', 'core.autocrlf=false', 'add', 'builder.js']);
+    const classroomFiles = ['build-scripts/books/book1-classroom-scope.js',
+      'build-scripts/content/book-1/presentation-111.mjs',
+      'reports/review-gates/classroom-presentations-book1-second-edition-20261003/review.md'];
+    const legacy = 'build-scripts/sprints/fixtures/golden-ticket-reference.html';
+    for (const file of [...classroomFiles, legacy]) {
+      fs.mkdirSync(path.dirname(path.join(source, file)), {recursive: true});
+      fs.writeFileSync(path.join(source, file), content);
+    }
+    git(source, ['-c', 'core.autocrlf=false', 'add', '.']);
     git(source, ['commit', '-qm', 'LF source']);
-    git(temp, steps[configure].run.split(' ').slice(1));
     git(temp, ['clone', '--quiet', '--no-hardlinks', source, checkout]);
-    expect(fs.readFileSync(path.join(checkout, 'builder.js'))).toEqual(content);
-    expect(git(checkout, ['show', 'HEAD:builder.js'])).toEqual(content);
+    for (const file of classroomFiles) {
+      expect(fs.readFileSync(path.join(checkout, file))).toEqual(content);
+      expect(git(checkout, ['show', 'HEAD:' + file])).toEqual(content);
+    }
+    // The earlier global checkout change broke this historical hash convention.
+    expect(fs.readFileSync(path.join(checkout, legacy))).toEqual(Buffer.from('exact\r\nsource\r\n'));
   } finally { fs.rmSync(temp, {recursive: true, force: true}); }
 });
+
 test('current product validation verifies every bound source and historical artifact', () => {
   const seen = [];
   verifyBindings(record, file => { seen.push(file); return content; });

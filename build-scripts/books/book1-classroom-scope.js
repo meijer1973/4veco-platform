@@ -8,6 +8,9 @@ const ROOT = path.resolve(__dirname, '../..');
 const PLATFORM_BASE = '926ada14850d30a87b1b1812ecbf78f486c3c15a';
 const LESSON_BASE = '173aa9a803897965c572df2c4e7f83cdb135eb1c';
 const REVISION = 'book1-second-edition-classroom-20261003';
+// Only the reviewed exact-path checkout append is admitted. Existing attribute
+// rules, including historical fixture behavior, cannot change through this path.
+const CLASSROOM_ATTRIBUTES_SHA256 = '7ee527cd02b6d45114efb6e5de1d24a1f63a309b87d94817959751397347687c';
 const BOOK = edition.BOOK, EDITION = edition.EDITION;
 const OLD_CHAPTER = BOOK + '/1.1 Hoofdstuk Economisch denken en rekenen';
 const OLD_TITLES = ['1.1.1 Schaarste en economisch denken', '1.1.2 Percentages en indexcijfers', '1.1.3 Grafieken en tabellen'];
@@ -29,7 +32,7 @@ const P_EXACT = new Set([
   'build-scripts/sprints/capture-presentation-v2-pptx-derivative-proof.js',
   'build-scripts/platform/check-paragraph-landing-v2.js',
   '.github/workflows/paired-book1-second-edition-ci.yml', '.github/workflows/paired-books34-signed-ci.yml', '.github/workflows/paired-exercise-route-ci.yml',
-  '.github/workflows/platform-ci.yml',
+  '.gitattributes',
   'engines/tests/presentation-v2-111-production.test.js', 'engines/tests/presentation-v2-113-graph-transfer.test.js',
   'engines/tests/presentatie-html-shape.test.js', 'engines/tests/l1-5d-v2-mobile-fixes.test.js', 'engines/tests/l1-6r-dual-coding.test.js',
   'build-scripts/content/book-1/historical-presentation-test-fixtures.js',
@@ -163,6 +166,10 @@ function verifyChanges({root, base, repo, sealed = new Set(), requireTracked = f
     const bytes = fs.readFileSync(safeFile(root, file));
     if (repo === 'platform') {
       assert(platformPath(file), 'Outside Book 1 classroom platform scope: ' + file);
+      if (file === '.gitattributes') {
+        assert.equal(edition.sha(bytes), CLASSROOM_ATTRIBUTES_SHA256, 'Unreviewed classroom checkout attributes');
+        checkRetirementVersions(root, file, git(root, ['show', base + ':' + file]), lf(bytes));
+      }
       result.platform_changes.push(file);
     } else if (file === 'RESEARCH_AGENT_MAP.md') {
       const before = git(root, ['show', base + ':' + file]), after = lessonMap(before, sealed);
